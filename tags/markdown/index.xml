@@ -23,7 +23,8 @@
 Rmarkdown 的官网上有这样几段介绍：
  Turn your analyses into high quality documents, reports, presentations and dashboards. Use a productive notebook interface to weave together narrative text and code to produce elegantly formatted output. Use multiple languages including R, Python, and SQL.
  简单来说，就是 Rmarkdown 能够使用 markdown 的语法，支持多种语言代码的运行和输出（R, Python 和 SQL），输出高质量的文档。
-这个所谓的「高质量」的文档到底是怎么样的呢？可以这么说，有不少的人都认为 Rmarkdown 可以成为科技写作的主流： - 为什么 Markdown + R 有叫大概率成为科技写作主流 - 数据文档的革命</description>
+这个所谓的「高质量」的文档到底是怎么样的呢？可以这么说，有不少的人都认为 Rmarkdown 可以成为科技写作的主流：
+ 为什么 Markdown + R 有叫大概率成为科技写作主流</description>
     </item>
     
   </channel>
