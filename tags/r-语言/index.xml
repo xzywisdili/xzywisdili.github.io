@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R 语言 on xzy&#39;s blog</title>
+    <link>https://xzywisdili.github.io/tags/r-%E8%AF%AD%E8%A8%80/</link>
+    <description>Recent content in R 语言 on xzy&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 23 Dec 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://xzywisdili.github.io/tags/r-%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>轻松愉快地开始使用 Rmarkdown</title>
+      <link>https://xzywisdili.github.io/post/2017/12/23/%E8%BD%BB%E6%9D%BE%E6%84%89%E5%BF%AB%E5%9C%B0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8-rmarkdown/</link>
+      <pubDate>Sat, 23 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.github.io/post/2017/12/23/%E8%BD%BB%E6%9D%BE%E6%84%89%E5%BF%AB%E5%9C%B0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8-rmarkdown/</guid>
+      <description>R 语言世界里的一个大杀器。
+我想，在所有接触和学习 R 语言的初学者（当然包括我）眼里，有两个东西是相当酷的。一个是 shiny，可以轻松做出交互式的图表；而另一个就是 Rmarkdown 了。
+现如今我想 markdown 是何物已经不用过多介绍了，它语法简洁，门槛很低，已经到了一种是个人就会的地步。那 Rmarkdown 到底是什么呢？
+Rmarkdown 的官网上有这样几段介绍：
+ Turn your analyses into high quality documents, reports, presentations and dashboards. Use a productive notebook interface to weave together narrative text and code to produce elegantly formatted output. Use multiple languages including R, Python, and SQL.
+ 简单来说，就是 Rmarkdown 能够使用 markdown 的语法，支持多种语言代码的运行和输出（R, Python 和 SQL），输出高质量的文档。
+这个所谓的「高质量」的文档到底是怎么样的呢？可以这么说，有不少的人都认为 Rmarkdown 可以成为科技写作的主流： - 为什么 Markdown + R 有叫大概率成为科技写作主流 - 数据文档的革命</description>
+    </item>
+    
+    <item>
+      <title>dplyr 包里面必会的处理数据方法</title>
+      <link>https://xzywisdili.github.io/post/2017/12/19/dplyr-%E5%8C%85%E9%87%8C%E9%9D%A2%E5%BF%85%E4%BC%9A%E7%9A%84%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.github.io/post/2017/12/19/dplyr-%E5%8C%85%E9%87%8C%E9%9D%A2%E5%BF%85%E4%BC%9A%E7%9A%84%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE%E6%96%B9%E6%B3%95/</guid>
+      <description>最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看。最近学习的很简单，就是 dplyr 包里面最基础的 5 种数据处理方法。
+所用的数据集 这次我们所有数据处理的用法范例都是建立在 flights 数据集上的，先来看看这个数据集：
+library(nycflights13) library(tidyverse) head(flights)  可以看到，每一条数据代表的是一次航班飞行记录的相关信息：
+# A tibble: 6 x 19 year month day dep_time sched_dep_time dep_delay arr_time sched_arr_time &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; 1 2013 1 1 517 515 2 830 819 2 2013 1 1 533 529 4 850 830 3 2013 1 1 542 540 2 923 850 4 2013 1 1 544 545 -1 1004 1022 5 2013 1 1 554 600 -6 812 837 6 2013 1 1 554 558 -4 740 728 # .</description>
+    </item>
+    
+    <item>
+      <title>R 语言的那些最最最基础</title>
+      <link>https://xzywisdili.github.io/post/2017/11/21/r-%E8%AF%AD%E8%A8%80%E7%9A%84%E9%82%A3%E4%BA%9B%E6%9C%80%E6%9C%80%E6%9C%80%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Tue, 21 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.github.io/post/2017/11/21/r-%E8%AF%AD%E8%A8%80%E7%9A%84%E9%82%A3%E4%BA%9B%E6%9C%80%E6%9C%80%E6%9C%80%E5%9F%BA%E7%A1%80/</guid>
+      <description>在 R 语言的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么就一定不能错过 R。本文只总结了 R 语言里面的那些最最最基础，想用好 R 必须要背过的内容。话不多说，赶紧上车。
+基本算数 直接进行算数运算：
+&amp;gt; 4 + 6 [1] 10  将值保存在对象中进行运算：
+&amp;gt; x &amp;lt;- 6 &amp;gt; y &amp;lt;- 4 &amp;gt; z &amp;lt;- x + y &amp;gt; z [1] 10  显示我们已经创建的对象：
+&amp;gt; ls() [1] &amp;quot;x&amp;quot; &amp;quot;y&amp;quot; &amp;quot;z&amp;quot;  清除一些对象：
+&amp;gt; rm(x, y) &amp;gt; ls() [1] &amp;quot;z&amp;quot;  创建向量（vector）：
+&amp;gt; z &amp;lt;- c(5, 9, 1, 0)  使用函数 c(x, y) 可以做到向量的连接：</description>
+    </item>
+    
+  </channel>
+</rss>

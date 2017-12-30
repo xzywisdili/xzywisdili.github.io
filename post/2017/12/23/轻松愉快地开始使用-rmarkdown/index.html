@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>轻松愉快地开始使用 Rmarkdown - xzy&#39;s blog</title>
+    <meta property="og:title" content="轻松愉快地开始使用 Rmarkdown - xzy&#39;s blog">
+    
+
+    
+      
+    
+
+    
+
+    
+    
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      <h1><a href="/">xzy&#39;s blog</a></h1>
+
+<p class="tagline">A Hugo theme ported from the static site generator Ivy.</p>
+
+      <nav class="menu">
+        <input id="menu-check" type="checkbox" />
+        <label id="menu-label" for="menu-check" class="unselectable">
+          <span class="icon close-icon">✕</span>
+          <span class="icon open-icon">☰</span>
+          <span class="text">Menu</span>
+        </label>
+        <ul>
+        
+        
+        <li><a href="/">Home</a></li>
+        
+        <li><a href="/about/">About</a></li>
+        
+        <li><a href="/categories/">Categories</a></li>
+        
+        <li><a href="/tags/">Tags</a></li>
+        
+        <li><a href="/index.xml">Subscribe</a></li>
+        
+        
+        </ul>
+      </nav>
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>轻松愉快地开始使用 Rmarkdown</h1>
+
+<h3>
+  2017-12-23</h3>
+<hr>
+
+
+      </header>
+
+
+
+
+
+<p>R 语言世界里的一个大杀器。</p>
+
+<p>我想，在所有接触和学习 R 语言的初学者（当然包括我）眼里，有两个东西是相当酷的。一个是 <a href="http://shiny.rstudio.com/tutorial/">shiny</a>，可以轻松做出交互式的图表；而另一个就是 <a href="http://rmarkdown.rstudio.com/">Rmarkdown</a> 了。</p>
+
+<p>现如今我想 markdown 是何物已经不用过多介绍了，它语法简洁，门槛很低，已经到了一种是个人就会的地步。那 Rmarkdown 到底是什么呢？</p>
+
+<p>Rmarkdown 的<a href="http://rmarkdown.rstudio.com/">官网</a>上有这样几段介绍：</p>
+
+<blockquote>
+<p>Turn your analyses into high quality documents, reports, presentations and dashboards.
+Use a productive notebook interface to weave together narrative text and code to produce elegantly formatted output.
+Use multiple languages including R, Python, and SQL.</p>
+</blockquote>
+
+<p>简单来说，就是 Rmarkdown 能够使用 markdown 的语法，支持多种语言代码的运行和输出（R, Python 和 SQL），输出高质量的文档。</p>
+
+<p>这个所谓的「高质量」的文档到底是怎么样的呢？可以这么说，有不少的人都认为 Rmarkdown 可以成为科技写作的主流：
+- <a href="https://www.douban.com/group/topic/30623908/">为什么 Markdown + R 有叫大概率成为科技写作主流</a>
+- <a href="https://zhuanlan.zhihu.com/p/21285821?refer=harryzhustudio">数据文档的革命</a></p>
+
+<p>既然说了这么多，我们就来简单看一看 Rmarkdown 的真正表现。我会将 markdown 里使用的大多数常用语法在 Rmarkdown 里展示出来。</p>
+
+<h2 id="新建一个-rmarkdown-文件">新建一个 Rmarkdown 文件</h2>
+
+<p>我使用的是 Rstudio，可以在 <code>File &gt;&gt; New File &gt;&gt; R Markdown...</code> 里新建一个 Rmarkdown 文档。</p>
+
+<p><img src="/rmarkdown/newRmarkdown.png" alt="新建 Rmarkdown" /></p>
+
+<p>填入文档标题和作者名即可，下面的可以选择默认选项（在后来可以轻松改变）。</p>
+
+<h2 id="如何使-rmarkdown-完美支持中文">如何使 Rmarkdown 完美支持中文</h2>
+
+<ol>
+<li>我的环境是 Mac OSX 系统，安装 MacTex</li>
+<li>在 RStudio 的 Preferences 中的 「Sweave」 里把 「Weave Rnw files using」改为 「knitr」，「Type LaTeX into PDF using」 改为 「XeLaTeX」</li>
+
+<li><p>在 Rmarkdown 文档的同路径下创建一个 <code>header.tex</code>，内容是<code>\usepackage{ctex}</code>，然后把 Rmarkdown 文档 yaml 栏内的内容改为如下：</p>
+
+<pre><code class="language-Markdown">title: &quot;我的第一个 Rmarkdown 文档&quot;
+author: &quot;anthor&quot;
+output:
+pdf_document:
+includes:
+  in_header: header.tex
+keep_tex: yes
+latex_engine: xelatex
+html_document: default
+</code></pre>
+
+<p>测试一下：
+```markdown</p>
+
+<h2 id="中文显示">中文显示</h2></li>
+</ol>
+
+<p>测试中文的显示效果。</p>
+
+<p>这里先输入一段文字，我们这段文字的目的是测试在 Rmarkdown 中中文的显示效果：
+* 列表项目 1
+* 列表项目 2
+* 列表项目 3</p>
+
+<pre><code>输出的 pdf 显示为：
+![中文输出](/rmarkdown/chinese.png)
+
+完美！
+
+## 加粗，链接和行内代码块
+
+一段常见的 Markdown 语法：
+
+```Markdown
+## Start with a cool section
+
+You can use traditional **Markdown** syntax, such as [links](http://yihui.name/knitr) and `code`. Here is a quote:
+
+&gt; A girl phoned me the other day and said &quot;Come on over, there's nobody home.&quot; I went over. Nobody was home. -- Rodney Dangerfield
+</code></pre>
+
+<p>显示为：
+<img src="/rmarkdown/quote.png" alt="显示一" /></p>
+
+<h2 id="运行-r-代码">运行 R 代码</h2>
+
+<p>写入一段 R 语言代码，会在编译时自动运行：
+<img src="/rmarkdown/code.png" alt="code" /></p>
+
+<p>在 pdf 中显示为：
+<img src="/rmarkdown/codepdf.png" alt="codepdf" /></p>
+
+<p>还可以使用 R 语言强大的画图功能：
+<img src="/rmarkdown/plot.png" alt="plot" /></p>
+
+<p>在 pdf 中显示为：
+<img src="/rmarkdown/plotpdf.png" alt="plotpdf" /></p>
+
+<h2 id="数学公式">数学公式</h2>
+
+<p>Rmarkdown 中同样完美支持数学公式的书写：</p>
+
+<pre><code class="language-Markdown">## A little bit math
+
+Our regression equation is $Y=`r b[1]` + `r b[2]`x$, and the model is:
+
+$$ Y = \beta_0 + \beta_1 x + \epsilon$$
+</code></pre>
+
+<p>显示为：
+<img src="/rmarkdown/equation.png" alt="equation" /></p>
+
+<h2 id="表格">表格</h2>
+
+<p>使用 Markdown 提供的表格语法：</p>
+
+<pre><code class="language-Markdown">Table: Demonstration of simple table syntax.
+
+Right Left Center  Default
+----- ---- ------  -------
+   12 12     12        12  
+  123 123   123       123
+    1 1      1          1
+</code></pre>
+
+<p>我们得到的是我们希望的三线图格式：
+<img src="/rmarkdown/table.png" alt="table" /></p>
+
+<p>其他的比如脚注，有序列表，无序列表，定义等等不再做过多展示，上面提到的内容已经足以证明 Rmarkdown 的强大。而这些东西的学习成本几乎为零，这太令人不可思议了。</p>
+
+
+  <footer>
+  
+  
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+  
+  <hr>
+  <div class="copyright">&copy; <a href="https://xzywisdili.github.io">Zhouyang Xu</a> 2017 | <a href="https://github.com/xzywisdili">Github</a> | <a href="https://www.zhihu.com/people/xu-zhou-yang-68/activities">Zhihu</a></div>
+  
+  </footer>
+  </article>
+  
+  </body>
+</html>
+

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on xzy&#39;s blog</title>
+    <link>https://xzywisdili.github.io/post/</link>
+    <description>Recent content in Posts on xzy&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 23 Dec 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://xzywisdili.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>轻松愉快地开始使用 Rmarkdown</title>
+      <link>https://xzywisdili.github.io/post/2017/12/23/%E8%BD%BB%E6%9D%BE%E6%84%89%E5%BF%AB%E5%9C%B0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8-rmarkdown/</link>
+      <pubDate>Sat, 23 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.github.io/post/2017/12/23/%E8%BD%BB%E6%9D%BE%E6%84%89%E5%BF%AB%E5%9C%B0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8-rmarkdown/</guid>
+      <description>R 语言世界里的一个大杀器。
+我想，在所有接触和学习 R 语言的初学者（当然包括我）眼里，有两个东西是相当酷的。一个是 shiny，可以轻松做出交互式的图表；而另一个就是 Rmarkdown 了。
+现如今我想 markdown 是何物已经不用过多介绍了，它语法简洁，门槛很低，已经到了一种是个人就会的地步。那 Rmarkdown 到底是什么呢？
+Rmarkdown 的官网上有这样几段介绍：
+ Turn your analyses into high quality documents, reports, presentations and dashboards. Use a productive notebook interface to weave together narrative text and code to produce elegantly formatted output. Use multiple languages including R, Python, and SQL.
+ 简单来说，就是 Rmarkdown 能够使用 markdown 的语法，支持多种语言代码的运行和输出（R, Python 和 SQL），输出高质量的文档。
+这个所谓的「高质量」的文档到底是怎么样的呢？可以这么说，有不少的人都认为 Rmarkdown 可以成为科技写作的主流： - 为什么 Markdown + R 有叫大概率成为科技写作主流 - 数据文档的革命</description>
+    </item>
+    
+    <item>
+      <title>dplyr 包里面必会的处理数据方法</title>
+      <link>https://xzywisdili.github.io/post/2017/12/19/dplyr-%E5%8C%85%E9%87%8C%E9%9D%A2%E5%BF%85%E4%BC%9A%E7%9A%84%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.github.io/post/2017/12/19/dplyr-%E5%8C%85%E9%87%8C%E9%9D%A2%E5%BF%85%E4%BC%9A%E7%9A%84%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE%E6%96%B9%E6%B3%95/</guid>
+      <description>最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看。最近学习的很简单，就是 dplyr 包里面最基础的 5 种数据处理方法。
+所用的数据集 这次我们所有数据处理的用法范例都是建立在 flights 数据集上的，先来看看这个数据集：
+library(nycflights13) library(tidyverse) head(flights)  可以看到，每一条数据代表的是一次航班飞行记录的相关信息：
+# A tibble: 6 x 19 year month day dep_time sched_dep_time dep_delay arr_time sched_arr_time &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; 1 2013 1 1 517 515 2 830 819 2 2013 1 1 533 529 4 850 830 3 2013 1 1 542 540 2 923 850 4 2013 1 1 544 545 -1 1004 1022 5 2013 1 1 554 600 -6 812 837 6 2013 1 1 554 558 -4 740 728 # .</description>
+    </item>
+    
+    <item>
+      <title>R 语言的那些最最最基础</title>
+      <link>https://xzywisdili.github.io/post/2017/11/21/r-%E8%AF%AD%E8%A8%80%E7%9A%84%E9%82%A3%E4%BA%9B%E6%9C%80%E6%9C%80%E6%9C%80%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Tue, 21 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.github.io/post/2017/11/21/r-%E8%AF%AD%E8%A8%80%E7%9A%84%E9%82%A3%E4%BA%9B%E6%9C%80%E6%9C%80%E6%9C%80%E5%9F%BA%E7%A1%80/</guid>
+      <description>在 R 语言的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么就一定不能错过 R。本文只总结了 R 语言里面的那些最最最基础，想用好 R 必须要背过的内容。话不多说，赶紧上车。
+基本算数 直接进行算数运算：
+&amp;gt; 4 + 6 [1] 10  将值保存在对象中进行运算：
+&amp;gt; x &amp;lt;- 6 &amp;gt; y &amp;lt;- 4 &amp;gt; z &amp;lt;- x + y &amp;gt; z [1] 10  显示我们已经创建的对象：
+&amp;gt; ls() [1] &amp;quot;x&amp;quot; &amp;quot;y&amp;quot; &amp;quot;z&amp;quot;  清除一些对象：
+&amp;gt; rm(x, y) &amp;gt; ls() [1] &amp;quot;z&amp;quot;  创建向量（vector）：
+&amp;gt; z &amp;lt;- c(5, 9, 1, 0)  使用函数 c(x, y) 可以做到向量的连接：</description>
+    </item>
+    
+    <item>
+      <title>光棍节初探 TensorFlow（一）：数据集的预处理</title>
+      <link>https://xzywisdili.github.io/post/2017/11/12/%E5%85%89%E6%A3%8D%E8%8A%82%E5%88%9D%E6%8E%A2-tensorflow%E4%B8%80%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E9%A2%84%E5%A4%84%E7%90%86/</link>
+      <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.github.io/post/2017/11/12/%E5%85%89%E6%A3%8D%E8%8A%82%E5%88%9D%E6%8E%A2-tensorflow%E4%B8%80%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E9%A2%84%E5%A4%84%E7%90%86/</guid>
+      <description>11 月 11 日这天注定对我具有了一定的意义。不是因为它是购物狂欢节或光棍节，而是因为在这一天，我第一次尝试使用 TensorFlow 搭建了一个简单的神经网络。我希望用几篇文章记录这个过程。
+最近在读 Fundamentals of Deep Learning 这本书。我选择它的原因是讲解得通俗易懂，又会直白地点出重点内容。然而当我读到第三章「Implementing Neural Networks in TensorFlow」时，整个人就好像懵了一样。对于一个从来没接触过 TensorFlow 的人来说，是难以通过看代码直接理解 Graph, Session 等等这些新概念的。于是联想到程序员的思维修炼里面提到的「SQ3R 阅读法」，赶紧先放下这本书，到网上找其他关于 TensorFlow 的资料，值得推荐的是： - TensorFlow 官方文档中文版 - TF Girls「TensorFlow Tutorial」修炼指南（这老师很幽默） - youtube 地址 - bilibili 地址
+没想到我居然也能一天完成了一个基础的神经网络（虽然是从下午 1 点到晚上 2 点）。现在到了「SQ3R 阅读法」中的很重要的 Recite（复述）这步———把这个过程写成文章发布到博客里。
+所使用的数据集来自 The Street View House Numbers (SVHN) Dataset，这是一个关于识别街景照片中出现的数字的数据集。
+读取数据 首先下载 Format 2 格式的数据，即 .mat 格式的数据。我们先在 iPython 里面探索一下数据：
+In[1]: from scipy.io import loadmat as load In[2]: train_data = load(&#39;data/train_32x32.</description>
+    </item>
+    
+    <item>
+      <title>为什么要使用 LaTeX 呢？</title>
+      <link>https://xzywisdili.github.io/post/2017/10/23/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8-latex-%E5%91%A2/</link>
+      <pubDate>Mon, 23 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.github.io/post/2017/10/23/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8-latex-%E5%91%A2/</guid>
+      <description>这个标题其实不是我对我自己的诘问。作为一个医学生，在习惯使用 LaTeX 完成日常的作业或是论文时，总会有几个同学凑上前来，好奇地问这是个什么样的写作工具。在我做一番简要的介绍后，他们或许会表露出感兴趣，或称赞的神情，然后问下一个重复了很多遍的问题：为什么要使用 LaTeX 呢？
+小众？看起来很高深？这些当然不是使用 LaTeX 的理由了。
+说起开始使用 LaTeX 的缘起，也有点人云亦云的意味。在刷知乎的时候看到了相关问题，了解这样一种排版工具是学术界的「标配」的时候，我想着那为什么不试试呢？
+我在面对一些新东西的时候，喜欢自己亲自上手试试。于是当即就在 Atom 里配置好了 Latex 的环境。从最早的数学建模竞赛的论文到这次的小作业，我总共使用 Latex 完成了 6 篇文章了，也想谈谈自己的体会：
+ 易于上手的难度
+在学习新东西的时候，总有人叫难。我觉得真的难的是对自然领域新规则的探索，比如物理定律，生物化学反应等。像 Latex，编程语言这些由人自己创造出来的工具，难度和上面提到差一个量级。在互联网大量入门教程，相关文章和工具包的储备下，我觉得只要半小时就可以完成自己的第一篇文档了。
+参考链接：
+ 自学 LaTeX 可以读什么书入门？ LaTeX 开源小屋  美观
+LaTeX 是诞生于 20 世纪 70 年代末到 80 年代初的一款计算机排版软件。计算机科学家高德纳教授在修订其巨著《计算机程序设计艺术》时，为了排版这本书产生的。他曾这样说： &amp;gt; 我不知道怎么办。我花了整整 15 年写这些书，可要是这么难看，我就再也不写了。我怎么能对这样的作品引以为豪呢？
+我一想象到他在说这段话的神情和样貌的时候就想笑，同时也能部分体会到他的感受。谁不希望写着自己名字的东西能够无比精致美观呢？
+也就是说，LaTeX 从诞生之初的定位就是排版。它就好像一个负责排版的管家，让你可以更加关注内容本身，其他东西统统不用你在意。LaTeX 有其内在的排版哲学，初次使用的时候会觉得编译出来的 pdf 是经过精心设计的艺术品。
+ 自动化工具
+还有一点让我心动的就是诸如自动化管理参考文献这样的工具。在使用 LaTeX 之前，无论是在 Word 里文献管理还是格式排版，但疲惫不堪。我们不应把大量时间花在排版和格式上，而是应该专注于内容。这也是我倍加推崇 Markdown 的原因。
+创作是一件快乐的事情，让创作出来的东西呈现出美观和整洁的一种状态也应该是简单而清晰的。使用 LaTeX 会给我一种省心的感觉。
+  这篇博文并没有立体地，或是深度地讲解 LaTeX 的方方面面。我只是想象我的一些同学会是这篇文章的可能受众，谈谈我的一些浅显的想法而已。在使用过 LaTeX 完成文章后实在有一种无比舒畅的感觉，这值得使用一篇博文来分享。</description>
+    </item>
+    
+    <item>
+      <title>「翻译」如何用 Python 画出像 FiveThirtyEight 那么棒的图表</title>
+      <link>https://xzywisdili.github.io/post/2017/10/15/%E7%BF%BB%E8%AF%91%E5%A6%82%E4%BD%95%E7%94%A8-python-%E7%94%BB%E5%87%BA%E5%83%8F-fivethirtyeight-%E9%82%A3%E4%B9%88%E6%A3%92%E7%9A%84%E5%9B%BE%E8%A1%A8/</link>
+      <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.github.io/post/2017/10/15/%E7%BF%BB%E8%AF%91%E5%A6%82%E4%BD%95%E7%94%A8-python-%E7%94%BB%E5%87%BA%E5%83%8F-fivethirtyeight-%E9%82%A3%E4%B9%88%E6%A3%92%E7%9A%84%E5%9B%BE%E8%A1%A8/</guid>
+      <description>如果你经常读数据科学领域的文章的话，你可能会偶然发现 FiveThirtyEight 上的内容，然后被他们惊艳的图表迷住。于是你自己也想制作如此出色的可视化作品，于是去 Quora 和 Reddit 上问怎么做。你收到了几个回答，但是这些回答都很模糊。你还是不知道怎么搞定这样的图表。
+在这篇博文中，我会手把手地帮你。通过使用 Python 的 matplotlib 和 pandas 库，我们会发现复制出 FTE 可视化作品的核心部分是多么轻松写意。
+这是我们最初的图：
+在这篇文章的结束，我们会做到这样：
+为了跟上，你需要至少了解一些 Python 的基础知识。如果你知道方法和属性之间的区别，那我们就可以开始了。
+介绍数据集 我们将要处理的数据集展现的事从 1970 年到 2011 年在美国授予女性的学位比例。我们使用的数据集是数据科学家 Randal Olson 从国家教育统计中心采集的。
+如果你想通过自己写代码来学习，你可以从 Randal 的博客下载数据集。如果想节省时间的话，你可以跳过下载文件，直接把链接甩给 pandas 的 read_csv() 函数。在下面的代码中，我们做了： - 导入 pandas 模块 - 把数据集的链接通过字符串保存在变量 direct_link 中 - 通过 read_csv() 读取数据，并把内容保存在 women_majors - 使用 info() 方法展示数据集的基本信息，了解行数和列数，同时找一找有没有缺失的值 - 使用 head() 方法显示出数据集的前 5 行可以帮助我们更好地理解数据集的结构
+import pandas as pd direct_link = &#39;http://www.randalolson.com/wp-content/uploads/percent-bachelors-degrees-women-usa.csv&#39; women_majors = pd.</description>
+    </item>
+    
+    <item>
+      <title>用 Python 解决数据结构与算法题 01</title>
+      <link>https://xzywisdili.github.io/post/2017/10/05/%E7%94%A8-python-%E8%A7%A3%E5%86%B3%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E9%A2%98-01/</link>
+      <pubDate>Thu, 05 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.github.io/post/2017/10/05/%E7%94%A8-python-%E8%A7%A3%E5%86%B3%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E9%A2%98-01/</guid>
+      <description>这是 Python 解决算法问题的第一期。我想以后每期写出三道题。本人是医学生，没有上过任何数据结构和算法课，对于解决算法题也纯属个人的课余兴趣爱好。还希望各位真正的大牛不吝赐教。我会继续坚持下去的。
+设计一个有 getMin 功能的栈 题目：实现一个特殊的栈，在实现栈的基本功能的基础上，再实现返回栈中最小元素的操作。 要求： 1. pop，push，get_min 操作的时间复杂度都是$O(1)$。 2. 设计的栈类型可以使用线程的栈结构。
+首先先使用 Python 实现一个简单的栈：
+class Stack: __slots__ = (&#39;__items&#39;) def __init__(self): self.__items = [] def is_empty(self): return self.__items == [] def peek(self): return self.__items[-1] def size(self): return len(self.__items) def push(self, new_value): self.__items.append(new_value) def pop(self): return self.__items.pop()  这个问题很简单，解决方法就是使用两个栈，一个用来存放数据，一个用来记录最小值即可。 在 push 新数据的时候，需要和存放最小值的栈 stack_min 栈顶的数据相比较。如果新数据比它小或者等于它，那么也把新数据 push 进 stack_min 的栈顶就可以了。 在 pop 的时候，需要检查输出的数据是否也存在在 stack_min 的栈顶，如果也存在的话，说明这个数据是栈内的最小值，也需要把它从 stack_min 中 pop 出去。
+class MyStack(object): def __init__(self): self.</description>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://xzywisdili.github.io/post/2017/10/04/hello-world/</link>
+      <pubDate>Wed, 04 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.github.io/post/2017/10/04/hello-world/</guid>
+      <description>在国庆放假的期间，花了大概半个晚上的时间，使用 hexo 配置好了自己的个人博客。我觉得博客是一个很好的刺激自己不断学习和保持记录习惯的帮手。我也是在身边同学里第一个开通博客的。
+在这个过程中也产生了两点感想： - 科技不停进步，就计算机和互联网方面完成一件事是越来越简单了。以前如果想写网页，建网站，不可能不去学习 HTML 语言，CSS 以及 JavaScript 等等，而现在越来越多新工具的出现能让你在半个晚上就制作出美观的网页了。 - 以前看到别人精美的博客的时候，总觉得是一件特别了不起的事情，同时也是一件很难办到的事情。但在基于很多前辈写博客的建议，自己也尝试去网上查找教程搭建，之后觉得这件事其实也没有那么难。很多看起来困难的事情，真正动手去做也许没有那么难。
+这个博客会不定期更新自己的学习笔记，成长过程和生活感悟等等。我更期待多年之后自己回看时候吃惊的那一刻。
+使用 Hexo 进行博客创作的流程 创建一个草稿 $ hexo new draft &amp;quot;new artical&amp;quot;  或者，在 _config.yml 的 Writing 下找到 default_layout，将 post 改为 draft，然后直接使用：
+$ hexo new &amp;quot;new artical&amp;quot;  这样 Hexo 就会自动在 source 文件夹下的 draft 中创建一个等待你编辑的 Markdown 文件了。我个人习惯先在草稿内完成创作，所以使用的是后者。如果想要在生成的页面上看到自己的草稿的话，可以键入命令：
+$ hexo server --draft  完成创作后发表 当在草稿中完成文章后，只需要一行命令：
+$ hexo publish &amp;quot;new artical&amp;quot;  这样 Hexo 会自动把 draft 文件夹里面的 Markdown 文件移动到 post 文件夹里面。随后使用那几个大家都知道的命令生成静态网页，更新到博客里面就好了。</description>
+    </item>
+    
+  </channel>
+</rss>

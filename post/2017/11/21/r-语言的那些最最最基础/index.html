@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>R 语言的那些最最最基础 - xzy&#39;s blog</title>
+    <meta property="og:title" content="R 语言的那些最最最基础 - xzy&#39;s blog">
+    
+
+    
+      
+    
+
+    
+
+    
+    
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      <h1><a href="/">xzy&#39;s blog</a></h1>
+
+<p class="tagline">A Hugo theme ported from the static site generator Ivy.</p>
+
+      <nav class="menu">
+        <input id="menu-check" type="checkbox" />
+        <label id="menu-label" for="menu-check" class="unselectable">
+          <span class="icon close-icon">✕</span>
+          <span class="icon open-icon">☰</span>
+          <span class="text">Menu</span>
+        </label>
+        <ul>
+        
+        
+        <li><a href="/">Home</a></li>
+        
+        <li><a href="/about/">About</a></li>
+        
+        <li><a href="/categories/">Categories</a></li>
+        
+        <li><a href="/tags/">Tags</a></li>
+        
+        <li><a href="/index.xml">Subscribe</a></li>
+        
+        
+        </ul>
+      </nav>
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>R 语言的那些最最最基础</h1>
+
+<h3>
+  2017-11-21</h3>
+<hr>
+
+
+      </header>
+
+
+
+
+
+<p>在 <a href="https://www.r-project.org/">R 语言</a>的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么就一定不能错过 R。本文只总结了 R 语言里面的那些最最最基础，想用好 R 必须要背过的内容。话不多说，赶紧上车。</p>
+
+<h2 id="基本算数">基本算数</h2>
+
+<p>直接进行算数运算：</p>
+
+<pre><code class="language-r">&gt; 4 + 6
+[1] 10
+</code></pre>
+
+<p>将值保存在对象中进行运算：</p>
+
+<pre><code class="language-r">&gt; x &lt;- 6
+&gt; y &lt;- 4
+&gt; z &lt;- x + y
+&gt; z
+[1] 10
+</code></pre>
+
+<p>显示我们已经创建的对象：</p>
+
+<pre><code class="language-r">&gt; ls()
+[1] &quot;x&quot; &quot;y&quot; &quot;z&quot;
+</code></pre>
+
+<p>清除一些对象：</p>
+
+<pre><code class="language-r">&gt; rm(x, y)
+&gt; ls()
+[1] &quot;z&quot;
+</code></pre>
+
+<p>创建向量（vector）：</p>
+
+<pre><code class="language-R">&gt; z &lt;- c(5, 9, 1, 0)
+</code></pre>
+
+<p>使用函数 <code>c(x, y)</code> 可以做到向量的连接：</p>
+
+<pre><code class="language-R">&gt; x &lt;- c(1, 2)
+&gt; y &lt;- c(3, 4)
+&gt; z &lt;- c(x, y)
+&gt; z
+[1] 1 2 3 4
+</code></pre>
+
+<p>向量之间也可以完成运算，这些运算是按照元素之间发生（element-wise）的：</p>
+
+<pre><code class="language-R">&gt; x + y
+[1] 4 6
+&gt; x * y
+[1] 3 8
+[1] 3 8
+&gt; x ** 2
+[1] 1 4
+</code></pre>
+
+<p>我们可以使用多种方式生成一个序列，额外参数 <code>by</code> 代表公差，<code>length.out</code> 参数表示生成序列的长度：</p>
+
+<pre><code class="language-R">&gt; x &lt;- 1:4
+&gt; x
+[1] 1 2 3 4
+&gt; seq(1, 9, by=2)
+[1] 1 3 5 7 9
+&gt; seq(8, 20, length=6)
+[1]  8.0 10.4 12.8 15.2 17.6 20.0
+&gt; seq(8, 20, length.out=6)
+[1]  8.0 10.4 12.8 15.2 17.6 20.0
+</code></pre>
+
+<p>另一个可以生成含有重复元素的向量的方法是<code>rep()</code>：</p>
+
+<pre><code class="language-R">&gt; rep(0, 100)
+  [1] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ [38] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ [75] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+&gt; rep(1:3, 6)
+ [1] 1 2 3 1 2 3 1 2 3 1 2 3 1 2 3 1 2 3
+&gt; rep(1:3, c(4, 5, 6))
+ [1] 1 1 1 1 2 2 2 2 2 3 3 3 3 3 3
+</code></pre>
+
+<h2 id="简单统计与下标">简单统计与下标</h2>
+
+<p>算出一个向量的均值，方差和概要：</p>
+
+<pre><code class="language-R">&gt;  y &lt;- c(33, 44, 29, 16, 25, 45, 33, 19, 54, 22, 21, 59, 11, 24, 56)
+&gt; mean(y)
+[1] 32.73333
+&gt; var(y)
+[1] 236.0667
+&gt; summary(y)
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  11.00   21.50   29.00   32.73   44.50   59.00
+</code></pre>
+
+<p>可以只计算向量中的一部分：</p>
+
+<pre><code class="language-R">&gt; y[1:6]
+[1] 33 44 29 16 25 45
+&gt; summary(y[1:6])
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  16.00   26.00   31.00   32.00   41.25   45.00
+&gt; mean(y[c(1, 4, 6, 9)])
+[1] 37
+</code></pre>
+
+<p>有两个必须记住的函数<code>length()</code>和<code>sum()</code>：</p>
+
+<pre><code class="language-R">&gt; length(y)
+[1] 15
+&gt; sum(y)
+[1] 491
+</code></pre>
+
+<h2 id="矩阵">矩阵</h2>
+
+<p>在 R 中可以使用 <code>cbind()</code> 和 <code>rbind()</code> 来组合向量创建矩阵，使用 <code>dim()</code> 可以查看矩阵的维度：</p>
+
+<pre><code class="language-R">&gt; x &lt;- c(5, 7, 9)
+&gt; y &lt;- c(6, 3, 4)
+&gt; z &lt;- cbind(x, y)
+&gt; z
+     x y
+[1,] 5 6
+[2,] 7 3
+[3,] 9 4
+&gt; dim(z)
+[1] 3 2
+&gt; rbind(z, z)
+     x y
+[1,] 5 6
+[2,] 7 3
+[3,] 9 4
+[4,] 5 6
+[5,] 7 3
+[6,] 9 4
+</code></pre>
+
+<p>还可以通过 <code>matrix()</code> 来创建矩阵，参数 <code>nrow</code> 表示想要矩阵有几行，<code>byrow</code> 如果为真，则表示按行填充：</p>
+
+<pre><code class="language-R">&gt; z &lt;- matrix(c(5, 7, 9, 6, 3, 4), nrow=3)
+&gt; z
+     [,1] [,2]
+[1,]    5    6
+[2,]    7    3
+[3,]    9    4
+&gt; z &lt;- matrix(c(5, 7, 9, 6, 3, 4), nrow=3, byrow=T)
+&gt; z
+     [,1] [,2]
+[1,]    5    7
+[2,]    9    6
+[3,]    3    4
+&gt; z &lt;- matrix(c(5, 7, 9, 6, 3, 4), nrow=3, byrow=T)
+</code></pre>
+
+<p>矩阵和矩阵之间的运算（也是 element-wise），矩阵乘法使用 <code>%*%</code>：</p>
+
+<pre><code class="language-R">&gt; z
+     [,1] [,2]
+[1,]    5    7
+[2,]    9    6
+[3,]    3    4
+&gt; y &lt;- matrix(c(1, 3, 0, 9, 5, -1), nrow=3, byrow=T)
+&gt; y
+     [,1] [,2]
+[1,]    1    3
+[2,]    0    9
+[3,]    5   -1
+&gt; z + y
+     [,1] [,2]
+[1,]    6   10
+[2,]    9   15
+[3,]    8    3
+&gt; z * y
+     [,1] [,2]
+[1,]    5   21
+[2,]    0   54
+[3,]   15   -4
+&gt; x &lt;- matrix(c(3, 4, -2, 6), nrow=2, byrow=T)
+&gt; x
+     [,1] [,2]
+[1,]    3    4
+[2,]   -2    6
+&gt; y%*%x
+     [,1] [,2]
+[1,]   -3   22
+[2,]  -18   54
+[3,]   17   14
+</code></pre>
+
+<p>使用 <code>t()</code> 求矩阵的转置，使用 <code>solve()</code> 求矩阵的逆矩阵：</p>
+
+<pre><code class="language-R">&gt; t(z)
+     [,1] [,2] [,3]
+[1,]    5    9    3
+[2,]    7    6    4
+&gt; solve(x)
+           [,1]       [,2]
+[1,] 0.23076923 -0.1538462
+[2,] 0.07692308  0.1153846
+</code></pre>
+
+<p>使用合适的下标快速提取矩阵元素：</p>
+
+<pre><code class="language-R">&gt; z
+     [,1] [,2]
+[1,]    5    7
+[2,]    9    6
+[3,]    3    4
+&gt; z[1, 1]
+[1] 5
+&gt; z[c(2, 3), 2]
+[1] 6 4
+&gt; z[, 2]
+[1] 7 6 4
+&gt; z[1:2, ]
+     [,1] [,2]
+[1,]    5    7
+[2,]    9    6
+</code></pre>
+
+<h2 id="apply-函数">apply 函数</h2>
+
+<p>对于 R 内置的一个数据集 <code>trees</code>，如果我们想求数据集中每一个变量的均值，可能首先想到一个一个去求，但如果有很多变量就行不通了；可能会想写一个循环，虽然在 R 语言里可以做到，但是并不推荐循环；我们可以使用 <code>apply()</code> 函数简单解决：</p>
+
+<pre><code class="language-R">&gt; data(trees)
+&gt; head(trees)
+  Girth Height Volume
+1   8.3     70   10.3
+2   8.6     65   10.3
+3   8.8     63   10.2
+4  10.5     72   16.4
+5  10.7     81   18.8
+6  10.8     83   19.7
+&gt; apply(trees, 2, mean)
+   Girth   Height   Volume
+13.24839 76.00000 30.17097
+</code></pre>
+
+<h2 id="统计计算和模拟">统计计算和模拟</h2>
+
+<p>最开始我们说到 R 语言是用来做统计计算的，比如我们可以使用 <code>dnorm()</code>，<code>pnorm()</code> 和 <code>qnorm()</code>三板斧：</p>
+
+<pre><code class="language-R">&gt; dnorm(0, 3, 2)
+[1] 0.0647588
+&gt; dnorm(seq(-10, 10), 0, 2)
+ [1] 7.433598e-07 7.991871e-06 6.691511e-05 4.363413e-04 2.215924e-03
+ [6] 8.764150e-03 2.699548e-02 6.475880e-02 1.209854e-01 1.760327e-01
+[11] 1.994711e-01 1.760327e-01 1.209854e-01 6.475880e-02 2.699548e-02
+[16] 8.764150e-03 2.215924e-03 4.363413e-04 6.691511e-05 7.991871e-06
+[21] 7.433598e-07
+&gt; plot(dnorm(seq(-10, 10), 0, 2))
+</code></pre>
+
+<p>简单地画一个 <code>dnorm()</code> 函数生成的图，就可以看到它表示正态分布的密度函数：
+<img src="/Rbasic/dnorm.png" alt="dnorm" />
+<code>rnorm()</code> 可以生成符合某个分布的随机数，<code>pnorm()</code> 计算出正态分布的累积概率函数：</p>
+
+<pre><code class="language-R">&gt; rnorm(10, 3, 2)
+[1]  2.9455919  5.6487038  0.9341445  2.7948578 -1.5562341  1.6078429
+[7]  0.4516596  3.3077327  5.6856195  3.8256133
+&gt; pnorm(10, 3, 2)
+[1] 0.9997674
+</code></pre>
+
+<p>其他分布也同理，只需要加上<code>d</code>，<code>p</code>，<code>r</code>即可。</p>
+
+<h2 id="作图">作图</h2>
+
+<p>使用 <code>par()</code> 完成 subplot：</p>
+
+<pre><code class="language-R">&gt; par(mfrow=c(2,2))
+&gt; hist(trees$Height)
+&gt; boxplot(trees$Height)
+&gt; hist(trees$Volume)
+&gt; boxplot(trees$Volume)
+</code></pre>
+
+<p><img src="/Rbasic/par.png" alt="par" />
+使用 <code>plot()</code> 飞速做出一个最简陋的散点图：</p>
+
+<pre><code class="language-R">&gt; plot(trees$Height, trees$Volume)
+</code></pre>
+
+<p><img src="/Rbasic/scatter.png" alt="scatter" />
+使用 <code>pairs()</code> 飞速做出 <code>trees</code> 数据集中两两变量之间的关系：</p>
+
+<pre><code class="language-R">&gt; pairs(trees)
+</code></pre>
+
+<p><img src="/Rbasic/pairs.png" alt="pairs" /></p>
+
+<h2 id="编写函数">编写函数</h2>
+
+<p>如下方法编写自己的函数：</p>
+
+<pre><code class="language-R">&gt; sd &lt;- function(x) sqrt(var(x))
+&gt; x &lt;- c(9, 5, 2, 3, 7)
+&gt; sd(x)
+[1] 2.863564
+&gt; several.plots &lt;- function (x)
+{
+    par(mfrow=c(3, 1))
+    hist(x[ ,1])
+    hist(x[, 2])
+    plot(x[, 1], x[, 2])
+    par(mfrow=c(1, 1))
+    apply(x, 2, summary)
+}
+&gt; several.plots(faithful)
+        eruptions  waiting
+Min.     1.600000 43.00000
+1st Qu.  2.162750 58.00000
+Median   4.000000 76.00000
+Mean     3.487783 70.89706
+3rd Qu.  4.454250 82.00000
+Max.     5.100000 96.00000
+</code></pre>
+
+<p><img src="/Rbasic/func.png" alt="func" /></p>
+
+<h2 id="其他">其他</h2>
+
+<ul>
+<li>如果想退出 R 语言，可以使用<code>q()</code>；</li>
+<li>如果不明白某个函数的功能，使用<code>help(func)</code>即可；</li>
+<li>使用 <code>library(libraryname)</code> 来载入别的包。</li>
+</ul>
+
+
+  <footer>
+  
+  
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+  
+  <hr>
+  <div class="copyright">&copy; <a href="https://xzywisdili.github.io">Zhouyang Xu</a> 2017 | <a href="https://github.com/xzywisdili">Github</a> | <a href="https://www.zhihu.com/people/xu-zhou-yang-68/activities">Zhihu</a></div>
+  
+  </footer>
+  </article>
+  
+  </body>
+</html>
+

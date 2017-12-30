@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Hello World - xzy&#39;s blog</title>
+    <meta property="og:title" content="Hello World - xzy&#39;s blog">
+    
+
+    
+      
+    
+
+    
+
+    
+    
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      <h1><a href="/">xzy&#39;s blog</a></h1>
+
+<p class="tagline">A Hugo theme ported from the static site generator Ivy.</p>
+
+      <nav class="menu">
+        <input id="menu-check" type="checkbox" />
+        <label id="menu-label" for="menu-check" class="unselectable">
+          <span class="icon close-icon">✕</span>
+          <span class="icon open-icon">☰</span>
+          <span class="text">Menu</span>
+        </label>
+        <ul>
+        
+        
+        <li><a href="/">Home</a></li>
+        
+        <li><a href="/about/">About</a></li>
+        
+        <li><a href="/categories/">Categories</a></li>
+        
+        <li><a href="/tags/">Tags</a></li>
+        
+        <li><a href="/index.xml">Subscribe</a></li>
+        
+        
+        </ul>
+      </nav>
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>Hello World</h1>
+
+<h3>
+  2017-10-04</h3>
+<hr>
+
+
+      </header>
+
+
+
+
+
+<p>在国庆放假的期间，花了大概半个晚上的时间，使用 hexo 配置好了自己的个人博客。我觉得博客是一个很好的刺激自己不断学习和保持记录习惯的帮手。我也是在身边同学里第一个开通博客的。</p>
+
+<p>在这个过程中也产生了两点感想：
+- 科技不停进步，就计算机和互联网方面完成一件事是越来越简单了。以前如果想写网页，建网站，不可能不去学习 HTML 语言，CSS 以及 JavaScript 等等，而现在越来越多新工具的出现能让你在半个晚上就制作出美观的网页了。
+- 以前看到别人精美的博客的时候，总觉得是一件特别了不起的事情，同时也是一件很难办到的事情。但在基于很多前辈写博客的建议，自己也尝试去网上查找教程搭建，之后觉得这件事其实也没有那么难。<strong>很多看起来困难的事情，真正动手去做也许没有那么难。</strong></p>
+
+<p>这个博客会不定期更新自己的学习笔记，成长过程和生活感悟等等。我更期待多年之后自己回看时候吃惊的那一刻。</p>
+
+<h2 id="使用-hexo-进行博客创作的流程">使用 Hexo 进行博客创作的流程</h2>
+
+<h3 id="创建一个草稿">创建一个草稿</h3>
+
+<pre><code class="language-bash">$ hexo new draft &quot;new artical&quot;
+</code></pre>
+
+<p>或者，在 <code>_config.yml</code> 的 <code>Writing</code> 下找到 <code>default_layout</code>，将 <code>post</code> 改为 <code>draft</code>，然后直接使用：</p>
+
+<pre><code class="language-bash">$ hexo new &quot;new artical&quot;
+</code></pre>
+
+<p>这样 <a href="https://hexo.io/">Hexo</a> 就会自动在 <code>source</code> 文件夹下的 <code>draft</code> 中创建一个等待你编辑的 <code>Markdown</code> 文件了。我个人习惯先在草稿内完成创作，所以使用的是后者。如果想要在生成的页面上看到自己的草稿的话，可以键入命令：</p>
+
+<pre><code class="language-bash">$ hexo server --draft
+</code></pre>
+
+<h3 id="完成创作后发表">完成创作后发表</h3>
+
+<p>当在草稿中完成文章后，只需要一行命令：</p>
+
+<pre><code class="language-bash">$ hexo publish &quot;new artical&quot;
+</code></pre>
+
+<p>这样 <a href="https://hexo.io/">Hexo</a> 会自动把 <code>draft</code> 文件夹里面的 <code>Markdown</code> 文件移动到 <code>post</code> 文件夹里面。随后使用那几个大家都知道的命令生成静态网页，更新到博客里面就好了。</p>
+
+<p>更多信息推荐访问 <a href="https://hexo.io/docs/">文档</a>。</p>
+
+
+  <footer>
+  
+  
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+  
+  <hr>
+  <div class="copyright">&copy; <a href="https://xzywisdili.github.io">Zhouyang Xu</a> 2017 | <a href="https://github.com/xzywisdili">Github</a> | <a href="https://www.zhihu.com/people/xu-zhou-yang-68/activities">Zhihu</a></div>
+  
+  </footer>
+  </article>
+  
+  </body>
+</html>
+
