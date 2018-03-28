@@ -144,15 +144,15 @@ cha_vec &lt;- c('Li', 'Wang', 'Wu')
 
 <h3 id="lists">Lists</h3>
 
-<p>list 数据结构中可以保存不同类型的数据。使用 <code>is.list()</code>来检查是否为 list，使用 <code>as.list()</code>把变量转换为 list，使用<code>unlist()</code>把 list 转换为 atomic vector。</p>
+<p>list 数据结构中可以保存不同类型的数据。使用 <code>is.list()</code> 来检查是否为 list，使用 <code>as.list()</code> 把变量转换为 list，使用 <code>unlist()</code> 把 list 转换为 atomic vector。</p>
 
-<p>疑问：为什么可以使用 <code>unlist()</code> 而不用 <code>as.vector()</code> 来将列表转换为向量？查阅网上的资料，为什么大家喜欢写<code>as.vector(unlist(list_a))</code>？</p>
+<p>疑问：为什么可以使用 <code>unlist()</code> 而不用 <code>as.vector()</code> 来将列表转换为向量？查阅网上的资料，为什么大家喜欢写 <code>as.vector(unlist(list_a))</code> ？</p>
 
 <h2 id="特性-attribute">特性（attribute）</h2>
 
 <p>所有对象都可以有任意特性，用来保存一些关于对象的额外信息。</p>
 
-<p>可以使用 <code>attr()</code> 获得单独的一个特性，或者使用 <code>attributes()</code> 来获得所有特性，获得的是一个列表。</p>
+<p>使用 <code>attr()</code> 获得单独的一个特性，或者使用 <code>attributes()</code> 来获得所有特性，后者获得的是一个列表。</p>
 
 <pre><code class="language-R">y &lt;- 1:10
 attr(y, &quot;my_attribute&quot;) &lt;- &quot;This is a vector&quot;
@@ -160,18 +160,15 @@ attr(y, &quot;my_attribute&quot;)
 str(attributes(y))
 </code></pre>
 
-<p>使用<code>structure()</code>可以直接生成一个含有特性的对象：</p>
+<p>使用 <code>structure()</code> 可以直接生成一个含有特性的对象：</p>
 
 <pre><code class="language-R">structure(1:10, my_attribute=&quot;this is a vector&quot;)
 </code></pre>
 
-<p>当更改 vector 时，会有三个很重要的特性不会丢失：</p>
-
-<ul>
-<li>name，使用 <code>name(x)</code> 获取</li>
-<li>dimensions，使用 <code>dim(x)</code>获取</li>
-<li>class，使用<code>class(x)</code>获取</li>
-</ul>
+<p>当更改 vector 时，会有三个很重要的特性不会丢失：
+- name，使用 <code>name(x)</code> 获取
+- dimensions，使用 <code>dim(x)</code> 获取
+- class，使用 <code>class(x)</code> 获取</p>
 
 <h3 id="names">Names</h3>
 
@@ -183,11 +180,11 @@ str(attributes(y))
 <li>修改另一个 vector 得到：<code>x3 &lt;- setNames(1:3, c('a', 'b', 'c'))</code></li>
 </ul>
 
-<p>不需要所有值都有名字，如果不对其进行命名，<code>names(x)</code>会得到 <code>NULL</code>。想要移除 vector 的名字，使用 <code>unname(x)</code> 或 <code>names(x) &lt;- NULL</code>。</p>
+<p>不需要所有值都有名字，如果不对其进行命名，<code>names(x)</code> 会得到 <code>NULL</code>。想要移除 vector 的名字，使用 <code>unname(x)</code> 或 <code>names(x) &lt;- NULL</code>。</p>
 
 <h3 id="factors">Factors</h3>
 
-<p>factor 是一种特殊的 vector，里面的元素只能是预先定义好的值，专门用来描述分类变量。它基于 vector，额外有两个属性：<code>class</code> 和 <code>levels</code>，使用 <code>table</code> 可以快速查看各组的频数：</p>
+<p>factor 是一种特殊的 vector，里面的元素只能是预先定义好的值，专门用来描述分类变量。它基于 vector，但额外有两个属性：<code>class</code> 和 <code>levels</code>，使用 <code>table</code> 可以快速查看各组的频数：</p>
 
 <pre><code class="language-R">x &lt;- factor(c('M', 'F', 'F', 'M'))
 class(x)  # &quot;factor&quot;
@@ -223,7 +220,7 @@ dim(c) &lt;- c(2, 3)
 
 <h2 id="data-frame">Data frame</h2>
 
-<p>Data frame 本质上是一个由 vector 构成的 list 的二维数据结构，所以它兼具有 list 和 matrix 的一些属性，如 <code>names()</code>, <code>colnames()</code>, <code>rownames()</code>, <code>length()</code>,</p>
+<p>Data frame 本质上是一个由 vector 构成的 list 的二维数据结构，所以它兼具 list 和 matrix 的一些属性，如 <code>names()</code>, <code>colnames()</code>, <code>rownames()</code>, <code>length()</code>,</p>
 
 <p>使用 <code>data.frame()</code> 创建一个 Data frame：</p>
 
@@ -247,7 +244,7 @@ dim(c) &lt;- c(2, 3)
 <li>还有就是使用 <code>I()</code>：<code>data.frame(x=1:3, y=I(list(1:2, &quot;a&quot;, FALSE))</code></li>
 </ul>
 
-<p>另外还有个很有趣的一点是：使用 <code>df[FALSE, ]</code> 和 <code>df[, FALSE]</code> 可以得到 0 行的和 0 列的 data frame。</p>
+<p>另外还有个很有趣的一点是：使用 <code>df[FALSE, ]</code> 和 <code>df[, FALSE]</code> 可以分别得到 0 行的和 0 列的 data frame。</p>
 
 
   <footer>
