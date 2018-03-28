@@ -6,10 +6,24 @@
     <description>Recent content in Posts on xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 30 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Mar 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://xzywisdili.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>R 语言基础数据结构</title>
+      <link>https://xzywisdili.github.io/post/2018/03/28/r-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Wed, 28 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.github.io/post/2018/03/28/r-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
+      <description>R 的基础数据结构可以概括为：
+    相同元素 不同元素     一维（1d） Atomic vector List   二维（2d） Matrix Data frame   多维（nd） Array     R 实际上是没有标量，或者 0 维数据结构的。那些所谓的标量其实是长度为 1 的向量。
+R 的一维数据结构 R 语言中的一维数据结构向量（vector）有两种类型：atomic vector 和 list，它们有三个属性：
+ typeof() length() attributes()  这两者的区别是，atomic vector 所有元素相同种类，list 中的元素可以不同种类。
+注意：is.vector(x)并不能检查 x 是不是 vector，最好使用is.atomic(x) || is.list(x)。
+Atomic vectors  四种常见类型：logical, integer, double 和 character 两种少见类型：complex 和 raw  atomic vectors 使用 c() 来创建（c 是 combine 的简写）。</description>
+    </item>
     
     <item>
       <title>2017 读书印象</title>
