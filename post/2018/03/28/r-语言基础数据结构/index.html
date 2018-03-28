@@ -121,7 +121,7 @@
 
 <p>这两者的区别是，atomic vector 所有元素相同种类，list 中的元素可以不同种类。</p>
 
-<p>注意：<code>is.vector(x)</code>并不能检查 <code>x</code> 是不是 vector，最好使用<code>is.atomic(x) || is.list(x)</code>。</p>
+<p>注意：<code>is.vector(x)</code> 并不能检查 <code>x</code> 是不是 vector，最好使用 <code>is.atomic(x) || is.list(x)</code>。</p>
 
 <h3 id="atomic-vectors">Atomic vectors</h3>
 
@@ -138,9 +138,9 @@ log_vec &lt;- c(TRUE, FALSE)
 cha_vec &lt;- c('Li', 'Wang', 'Wu')
 </code></pre>
 
-<p>使用 <code>is.integer()</code>, <code>is.double()</code>, <code>is.logical()</code>, <code>is.character()</code>来判断各自的类型，想判断是否为 atomic vector，使用<code>is.atomic()</code>。对于<code>integer</code>和<code>double</code>类型的，<code>is.numeric()</code>均会返回 <code>TRUE</code>。</p>
+<p>使用 <code>is.integer()</code>, <code>is.double()</code>, <code>is.logical()</code>, <code>is.character()</code> 来判断各自的类型，想判断是否为 atomic vector，使用 <code>is.atomic()</code>。对于 <code>integer</code> 和 <code>double</code> 类型的，<code>is.numeric()</code> 均会返回 <code>TRUE</code>。</p>
 
-<p>由于 atomic vectors 要保证元素类型一样，所以会自动进行类型转换。如数值型和字符型在一起会转换为字符型，<code>TRUE</code>和 <code>FALSE</code> 会自动转换为 <code>1</code> 和 <code>0</code>。</p>
+<p>由于 atomic vectors 要保证元素类型一样，所以会自动进行类型转换。如数值型和字符型在一起会转换为字符型，<code>TRUE</code> 和 <code>FALSE</code> 会自动转换为 <code>1</code> 和 <code>0</code>。</p>
 
 <h3 id="lists">Lists</h3>
 

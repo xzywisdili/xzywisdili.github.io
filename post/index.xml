@@ -21,7 +21,7 @@
     相同元素 不同元素     一维（1d） Atomic vector List   二维（2d） Matrix Data frame   多维（nd） Array     R 实际上是没有标量，或者 0 维数据结构的。那些所谓的标量其实是长度为 1 的向量。
 R 的一维数据结构 R 语言中的一维数据结构向量（vector）有两种类型：atomic vector 和 list，它们有三个属性：
  typeof() length() attributes()  这两者的区别是，atomic vector 所有元素相同种类，list 中的元素可以不同种类。
-注意：is.vector(x)并不能检查 x 是不是 vector，最好使用is.atomic(x) || is.list(x)。
+注意：is.vector(x) 并不能检查 x 是不是 vector，最好使用 is.atomic(x) || is.list(x)。
 Atomic vectors  四种常见类型：logical, integer, double 和 character 两种少见类型：complex 和 raw  atomic vectors 使用 c() 来创建（c 是 combine 的简写）。</description>
     </item>
     
