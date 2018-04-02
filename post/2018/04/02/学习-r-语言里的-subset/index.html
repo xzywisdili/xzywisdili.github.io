@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>学习 R 语言里的 subset - xzy&#39;s blog</title>
+    <meta property="og:title" content="学习 R 语言里的 subset - xzy&#39;s blog">
+    
+
+    
+      
+    
+
+    
+
+    
+    
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      <h1><a href="/">xzy&#39;s blog</a></h1>
+
+<p class="tagline">Victory won&#39;t come to me unless I go to it.</p>
+
+      <nav class="menu">
+        <input id="menu-check" type="checkbox" />
+        <label id="menu-label" for="menu-check" class="unselectable">
+          <span class="icon close-icon">✕</span>
+          <span class="icon open-icon">☰</span>
+          <span class="text">Menu</span>
+        </label>
+        <ul>
+        
+        
+        <li><a href="/">首页</a></li>
+        
+        <li><a href="/index.xml">博客</a></li>
+        
+        <li><a href="/categories/">分类</a></li>
+        
+        <li><a href="/tags/">标签</a></li>
+        
+        <li><a href="/about/">关于</a></li>
+        
+        
+        </ul>
+      </nav>
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>学习 R 语言里的 subset</h1>
+
+<h3>
+  2018-04-02</h3>
+<hr>
+
+
+      </header>
+
+
+
+
+
+<p>主要内容：</p>
+
+<ul>
+<li>三种 subset 操作</li>
+<li>六类 subset</li>
+<li>不同对象的的重要区别</li>
+</ul>
+
+<p>众所周知，R 语言里面有几种不同的 subset 方法：<code>[]</code>，<code>[[]]</code>，<code>$</code>，但是有时候会产生混淆。所以这篇笔记主要分析理清 R 语言里面的 subset 操作。</p>
+
+<h2 id="来让我们用-来-subset">来让我们用 <code>[]</code> 来 subset！</h2>
+
+<p>对 atomic vector 进行 subset 操作时，通常使用 <code>[]</code>，总共有 6 种形式：</p>
+
+<ul>
+<li><p><strong>正数</strong>：简单，就是返回这个位置上的数（注意 R 语言从 1 开始计数）</p></li>
+
+<li><p><strong>负数</strong>：忽略这个位置上的数</p></li>
+
+<li><p><strong>逻辑值</strong>：只选择那些值为 <code>TRUE</code> 的数，所以基于此可以在 <code>[]</code> 中放入某些逻辑判断条件</p></li>
+</ul>
+
+<pre><code class="language-R">  x[c(TRUE, FALSE, TRUE)]
+  x[x &gt; 3]
+</code></pre>
+
+<ul>
+<li><p><strong>什么也没有</strong>：返回原始的 vector</p></li>
+
+<li><p><strong>0</strong>：返回一个长度为 0 的 vector</p></li>
+
+<li><p><strong>字符</strong>：如果 vector 设置好了 name，就可以使用字符型进行 subset</p></li>
+</ul>
+
+<pre><code class="language-R">  y &lt;- setNames(x, letters[1:4])
+  y[c(&quot;d&quot;, &quot;c&quot;, &quot;a&quot;)]
+</code></pre>
+
+<p>对于 list 来说，subset 可以有两种：使用 <code>[]</code> 往往会返回一个 list，使用 <code>[[]]</code> 和 <code>$</code> 则会得到 list 的组成部分。</p>
+
+<p>对于 data frame 来说，它兼具两种数据结构的特点：使用一个 vector 对其 subset，它就可以当做 list；使用两个 vector 对其 subset，它就可以当做 matrix。</p>
+
+<pre><code class="language-R">df &lt;- data.frame(
+  x = 1:3,
+  y = 3:1,
+  z = letters[1:3]
+)
+
+df[1:2]
+#   x y
+# 1 1 3
+# 2 2 2
+# 3 3 1
+df[1:2, ]
+#   x y z
+# 1 1 3 a
+# 2 2 2 b
+</code></pre>
+
+<h2 id="还有两种操作-和">还有两种操作：<code>[[]]</code> 和 <code>$</code></h2>
+
+<p>前面提到 <code>[[]]</code> 这种方式对于 list 来说，会从里面取出它的元素。这里可以引申出简化操作和保留操作的概念。</p>
+
+<p>顾名思义，保留操作会保证输出和输入的数据结构类型是一样的，而简化操作会对输入进行不同程度的简化：</p>
+
+<ul>
+<li>Atomic vector：移除变量名字</li>
+<li>List：返回的是 list 里的元素，而不是 list</li>
+<li>Factor： 舍弃没有出现的 level</li>
+<li>Matrix：如果某个维度长度是 1，舍弃这个维度</li>
+<li>Data frame：如果输出一个单变量，把它变成一个 vector</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Simplifying</th>
+<th>Preserving</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Vector</td>
+<td><code>x[[1]]</code></td>
+<td><code>x[1]</code></td>
+</tr>
+
+<tr>
+<td>List</td>
+<td><code>x[[1]]</code></td>
+<td><code>x[1]</code></td>
+</tr>
+
+<tr>
+<td>Factor</td>
+<td><code>x[1:4, drop=T]</code></td>
+<td><code>x[1:4]</code></td>
+</tr>
+
+<tr>
+<td>Array</td>
+<td><code>x[1, ] x[, 1]</code></td>
+<td><code>x[1, , drop=F] x[, 1, drop=F]</code></td>
+</tr>
+
+<tr>
+<td>Data frame</td>
+<td><code>x[, 1] x[[1]]</code></td>
+<td><code>x[, 1, drop=F] x[1]</code></td>
+</tr>
+</tbody>
+</table>
+
+<p><code>$</code> 在某种方面上和 <code>[[]]</code> 一样，它经常被用来从一个 data frame 种提取变量，如 <code>mtcars$cyl</code> 等。</p>
+
+<p><code>$</code> 和 <code>[[]]</code> 有一些区别：</p>
+
+<ul>
+<li>不能这样使用 <code>$</code>（但 <code>[[]]</code> 可以）：</li>
+</ul>
+
+<pre><code class="language-R">  var &lt;- cyl
+  mtcars$var
+</code></pre>
+
+<ul>
+<li><code>$</code> 可以进行名字检索：</li>
+</ul>
+
+<pre><code class="language-R">  mod &lt;- lm(mpg ~ wt, data = mtcars)
+  mod$df.r # 返回 mod$df.residual
+</code></pre>
+
+<h2 id="应用">应用</h2>
+
+<p>对字符缩写的转换（本质上是对分类变量设置了标签）：</p>
+
+<pre><code class="language-r">x &lt;- c(&quot;m&quot;, &quot;f&quot;, &quot;m&quot;, &quot;m&quot;, &quot;f&quot;, &quot;u&quot;)
+lookup &lt;- c(m=&quot;Male&quot;, f=&quot;Female&quot;, u=&quot;Unknown&quot;)
+lookup[x]
+#         m         f         m         m         f         u
+#    &quot;Male&quot;  &quot;Female&quot;    &quot;Male&quot;    &quot;Male&quot;  &quot;Female&quot; &quot;Unknown&quot;
+</code></pre>
+
+<p><code>info</code> 是关于成绩的相关信息，我们可以使用 integer subset 进行信息的匹配和合并：</p>
+
+<pre><code class="language-R">grades &lt;- c(1, 2, 3, 3, 1)
+info = data.frame(
+  grade = 1:3,
+  desc = c(&quot;Excellent&quot;, &quot;Good&quot;, &quot;Poor&quot;),
+  fail = c(F, F, T)
+)
+
+// 使用 match
+id &lt;- match(grades, info$grade)
+info[id, ]
+
+// 使用 rownames
+rownames(info) &lt;- info$grade
+info[grades, ]
+</code></pre>
+
+<p>Data frame 对行进行随机抽样：</p>
+
+<pre><code class="language-R">df &lt;- data.frame(
+  x = rep(1:3, each=2),
+  y = 6:1,
+  z = letters[1:6]
+)
+
+df[sample(nrow(df)), ]
+df[sample(nrow(df), 8, rep = T), ]
+</code></pre>
+
+<p><code>n</code> 列表示了每个观测重复几次，这里相当于把频数表转换为原始数据：</p>
+
+<pre><code class="language-R">df &lt;- data.frame(x = c(2, 4, 1), y = c(9, 11, 6), n = c(3, 5, 1))
+df[rep(1:nrow(df), df$n), ]
+</code></pre>
+
+<p>使用布尔值的 subset 可以让我们在 data frame 中进行条件筛选：</p>
+
+<ul>
+<li>注意和 <code>if</code> 中使用的 <code>&amp;&amp;</code> 和 <code>||</code> 不同，这里使用的是 <code>&amp;</code> 和 <code>|</code></li>
+<li>如果有很多条件，不想重复写 data frame 的名字，可以使用 <code>subset</code></li>
+</ul>
+
+<pre><code class="language-R">mtcars[mtcars$gear == 5 &amp; mtcars$cyl == 4, ]
+subset(mtcars, gear == 5 &amp; cyl == 4)
+</code></pre>
+
+
+  <footer>
+  
+  
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/tex.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+  
+  <hr>
+  <div class="copyright">&copy; <a href="https://xzywisdili.github.io">Zhouyang Xu</a> 2017 | <a href="https://github.com/xzywisdili">Github</a> | <a href="https://www.zhihu.com/people/xu-zhou-yang-68/activities">Zhihu</a></div>
+  
+  </footer>
+  </article>
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-111725069-2', 'auto');
+ga('send', 'pageview');
+</script>
+
+  </body>
+</html>
+
