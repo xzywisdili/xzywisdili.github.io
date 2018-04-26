@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>卫生统计学第九周作业 - xzy&#39;s blog</title>
+    <meta property="og:title" content="卫生统计学第九周作业 - xzy&#39;s blog">
+    
+
+    
+      
+    
+
+    
+
+    
+    
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      <h1><a href="/">xzy&#39;s blog</a></h1>
+
+<p class="tagline">Victory won&#39;t come to me unless I go to it.</p>
+
+      <nav class="menu">
+        <input id="menu-check" type="checkbox" />
+        <label id="menu-label" for="menu-check" class="unselectable">
+          <span class="icon close-icon">✕</span>
+          <span class="icon open-icon">☰</span>
+          <span class="text">Menu</span>
+        </label>
+        <ul>
+        
+        
+        <li><a href="/">首页</a></li>
+        
+        <li><a href="/posts/">博客</a></li>
+        
+        <li><a href="/categories/">分类</a></li>
+        
+        <li><a href="/tags/">标签</a></li>
+        
+        <li><a href="/about/">关于</a></li>
+        
+        
+        </ul>
+      </nav>
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>卫生统计学第九周作业</h1>
+
+<h3>
+  2018-04-25</h3>
+<hr>
+
+
+      </header>
+
+
+
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
+
+<h2 id="前言">前言</h2>
+
+<p>这几天读到一个观点，论文的发表在很久之前抛弃了写在纸上的模式，现在也到了抛弃 PDF 或 Word 格式的时候了。其实一直以来，论文核心呈现的，我们所关注的都是它的内容所在。既然这样，我们为什么不能把论文呈现为 HTML 格式呢？</p>
+
+<p>首先，现在的论文可能有一些交互式的展示或者动画展示，这些都是传统 PDF 格式文件所不能展示的。其次，互联网时代提倡信息共享和联通，HTML 放在网站上可以在浏览器里轻松点击不被获取。</p>
+
+<p>当我读到这些内容的时候，一拍大腿，觉得很有道理。所以这次我在博客上完成了我的统计学作业。当然上交的时候还是得灰溜溜的写到我的本子上，但这样至少表达了我的态度和想法。</p>
+
+<h2 id="problem-1">Problem #1</h2>
+
+<p>绘制下面这种检验方法的 ROC 曲线：</p>
+
+<table>
+   <tr>
+      <td></td>
+      <td colspan="5">Test Result</td>
+   </tr>
+   <tr>
+      <td>Surgery Result</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>Total</td>
+   </tr>
+   <tr>
+      <td>Disease Present</td>
+      <td>18</td>
+      <td>1</td>
+      <td>2</td>
+      <td>9</td>
+      <td>40</td>
+      <td>70</td>
+   </tr>
+   <tr>
+      <td>No Disease</td>
+      <td>23</td>
+      <td>1</td>
+      <td>2</td>
+      <td>0</td>
+      <td>1</td>
+      <td>27</td>
+   </tr>
+</table>
+
+<p>对于这种检验方法来说，如果取 cut-off 值为 2 时，我们认为 Surgery Result 值为 3，4，5 时检验结果为 positive(+)，取值为 1，2 时检验结果为 negative(-)。</p>
+
+<p><img src="/Statistichomework/roccurve.png" alt="ROC 曲线" /></p>
+
+<h2 id="problem-2">Problem #2</h2>
+
+<p>对这种肝脏疾病检验方法的统计数据如下：</p>
+
+<table>
+   <tr>
+      <td colspan="4" align="center">Hepatic Scintigraph Data</td>
+   </tr>
+   <tr>
+      <td></td>
+      <td></td>
+      <td colspan="2" align="center">Diagnostic Results</td>
+   </tr>
+   <tr>
+      <td></td>
+      <td></td>
+      <td align="center">T = 1</td>
+      <td align="center">T = 0</td>
+   </tr>
+   <tr>
+      <td rowspan="2" align="center">V = 1</td>
+      <td>D = 1</td>
+      <td align="center">231</td>
+      <td align="center">27</td>
+   </tr>
+   <tr>
+      <td align="center">D = 0</td>
+      <td align="center">32</td>
+      <td align="center">54</td>
+   </tr>
+   <tr>
+      <td colspan="2" align="center">V = 0</td>
+      <td align="center">166</td>
+      <td align="center">140</td>
+   </tr>
+   <tr>
+      <td colspan="2" align="center">Total</td>
+      <td align="center">429</td>
+      <td align="center">221</td>
+   </tr>
+</table>
+
+<p>计算出修正后的灵敏度和特异度：</p>
+
+<p>$$ sensitivity = \frac{\frac{231}{231+32} \times n_1}{\frac{231}{231+32} \times n_1 + \frac{27}{27 + 54} \times n_2} = 0.84 $$</p>
+
+<p>$$ specificity = \frac{\frac{54}{27+54} \times n_2}{\frac{54}{27+54} \times n_2 + \frac{32}{32 + 231} \times n_1} = 0.74 $$</p>
+
+<p>如果去掉所有没有经过金标准检测的病例，得到的灵敏度和特异度：</p>
+
+<p>$$ sensitivity = \frac{231}{231 + 27} = 0.90 $$</p>
+
+<p>$$ specificity = \frac{54}{32 + 54} = 0.63 $$</p>
+
+<p>可以看出不经过修正会出现明显的偏差。</p>
+
+
+  <footer>
+  
+  
+
+  
+  <hr>
+  <div class="copyright">&copy; <a href="https://xzywisdili.github.io">Zhouyang Xu</a> 2017 | <a href="https://github.com/xzywisdili">Github</a> | <a href="https://www.zhihu.com/people/xu-zhou-yang-68/activities">Zhihu</a></div>
+  
+  </footer>
+  </article>
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-111725069-2', 'auto');
+ga('send', 'pageview');
+</script>
+
+  </body>
+</html>
+
