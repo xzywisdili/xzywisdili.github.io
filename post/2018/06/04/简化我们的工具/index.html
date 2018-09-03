@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>简化我们的工具 - xzy&#39;s blog</title>
+    <meta property="og:title" content="简化我们的工具 - xzy&#39;s blog">
+    
+
+    
+      
+    
+
+    
+
+    
+    
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      <h1><a href="/">xzy&#39;s blog</a></h1>
+
+<p class="tagline">Victory won&#39;t come to me unless I go to it.</p>
+
+      <nav class="menu">
+        <input id="menu-check" type="checkbox" />
+        <label id="menu-label" for="menu-check" class="unselectable">
+          <span class="icon close-icon">✕</span>
+          <span class="icon open-icon">☰</span>
+          <span class="text">Menu</span>
+        </label>
+        <ul>
+        
+        
+        <li><a href="/">首页</a></li>
+        
+        <li><a href="/posts/">博客</a></li>
+        
+        <li><a href="/categories/">分类</a></li>
+        
+        <li><a href="/tags/">标签</a></li>
+        
+        <li><a href="/about/">关于</a></li>
+        
+        
+        </ul>
+      </nav>
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>简化我们的工具</h1>
+
+<h3>
+  2018-06-04</h3>
+<hr>
+
+
+      </header>
+
+
+
+
+
+<p>现在的大学生不像十几年前，必定是人手一台笔记本电脑（有的人甚至有两台）。只要在自习室稍微留神观察一下
+专注学习的同学们，就会发现几乎 100% 的同学的电脑上停留的软件不是微软家的 powerpoint，就是 PDF 阅读器。</p>
+
+<p>这其实不是个多么令人震惊的结论。现在老师讲课都用 ppt，学生下下来复习，或者把要看的论文存在电脑里用 PDF 看，
+实在是太稀松平常的事情了。但我细细想过之后，却觉得奇怪而又费解。</p>
+
+<h2 id="powerpoint-是否是制作幻灯片的不二选择">powerpoint 是否是制作幻灯片的不二选择？</h2>
+
+<p>这个问题肯定有人笑着回答，当然是了：Prezi 制作幻灯片的拉伸旋转机制只能让观看者头晕目眩，而 keynote 软件
+又是 mac OSX 系统的专属。在这个 windows 系统还是霸主的时代，大家当然更乐意看到 .pptx 格式的文件。</p>
+
+<p>毫无疑问，powerpoint 软件提供了大而全的无所不包的功能，花样百出的图片和文本效果，自由自在地拖动编辑模式，
+再加上看起来酷炫的动画，一切看起来那么美好。</p>
+
+<p>但这是我们真正需要的吗？</p>
+
+<p>纵观老师们上课使用的 ppt，无非用到的就是文本框，文字的加粗和标记，列表层级结构，添加图片和表格这几个内容。
+学生们的 Presentation 也是同理。而缺乏设计训练的老师同学们往往在 powerpoint 里放纵自己的随心所欲，让
+幻灯片的可读性奇差无比。使用模板带来的问题，就是难以找到一个 100% 和自己内容匹配的模板，而且又会事倍功半。</p>
+
+<p>当你电脑中安装着这样一个臃肿的大家伙，只常用它提供功能的 1%，而很多按钮可能一辈子都不会碰到的时候，你为什么
+还不丢掉它呢？</p>
+
+<p>另一个流派就是使用 LaTeX，打开 <a href="http://www.latexstudio.net/">LaTeX 开源小屋</a>搜索 beamer，你会得到：</p>
+
+<p><img src="/simpletools/latexbeamer.png" alt="latex-beamer" /></p>
+
+<p>这些是非常赏心悦目的幻灯片文件，但关于使用 LaTeX 的痛苦感受我放在下一节里讲。</p>
+
+<p>所以我觉得目前对于幻灯片的最好解决方案，就是 Markdown 制作转成 HTML 格式的幻灯片。</p>
+
+<p>Markdown 最早由 Aaron Swartz 这个天才发明出来（可以看看<a href="https://movie.douban.com/subject/25785114/">互联网之子</a>就知道这个人有多伟大），直到现在被无数人广泛使用，
+就是因为这个标记语言有着无数优点：
+- 足够简单，任何人（包括没学过编程的人）可以在 5 分钟之内上手
+- 提供一般人写文档需要的绝大多数功能
+- 不必为版式困扰，专注于内容
+- 配合合适的 css，输出相当漂亮的文档</p>
+
+<p>而谁能想到，是 Rmarkdown 让我们完成了从 Markdown 到幻灯片的完美转型：</p>
+
+<p><img src="/simpletools/Rmarkdown.png" alt="Rmarkdown" /></p>
+
+<p>可以看到，就是用左边的简单的 Markdown 语法，再加上每两页之间使用 <code>---</code> 进行分割，
+就能完成像右边这样简洁大方的幻灯片。</p>
+
+<p>而国外也已经有不少开源软件尝试实现了使用 Markdown 完成幻灯片，比如 <a href="https://yhatt.github.io/marp/">Marp</a>，
+使用它尝试复刻重制了一下统计课老师的 ppt，加上代码，数学符号和表格也完全 hold 得住：：</p>
+
+<p><img src="/simpletools/slide.png" alt="slide 2" /></p>
+
+<p>也许会觉得这样的格式有点单调，没关系，给你提供了几种绝对不乱来的主题：</p>
+
+<p><img src="/simpletools/themes.png" alt="themes" /></p>
+
+<p>这样的幻灯片传给任何人都没有问题，因为 HTML 格式的幻灯片只需要用浏览器打开就好了，任何人的电脑上都有
+浏览器！</p>
+
+
+  <footer>
+  
+  
+
+  
+  <hr>
+  <div class="copyright">&copy; <a href="https://xzywisdili.github.io">Zhouyang Xu</a> 2017 | <a href="https://github.com/xzywisdili">Github</a> | <a href="https://www.zhihu.com/people/xu-zhou-yang-68/activities">Zhihu</a></div>
+  
+  </footer>
+  </article>
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-111725069-2', 'auto');
+ga('send', 'pageview');
+</script>
+
+  </body>
+</html>
+

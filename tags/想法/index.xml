@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>想法 on xzy&#39;s blog</title>
+    <link>https://xzywisdili.github.io/tags/%E6%83%B3%E6%B3%95/</link>
+    <description>Recent content in 想法 on xzy&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 04 Jun 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://xzywisdili.github.io/tags/%E6%83%B3%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>简化我们的工具</title>
+      <link>https://xzywisdili.github.io/post/2018/06/04/%E7%AE%80%E5%8C%96%E6%88%91%E4%BB%AC%E7%9A%84%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.github.io/post/2018/06/04/%E7%AE%80%E5%8C%96%E6%88%91%E4%BB%AC%E7%9A%84%E5%B7%A5%E5%85%B7/</guid>
+      <description>现在的大学生不像十几年前，必定是人手一台笔记本电脑（有的人甚至有两台）。只要在自习室稍微留神观察一下 专注学习的同学们，就会发现几乎 100% 的同学的电脑上停留的软件不是微软家的 powerpoint，就是 PDF 阅读器。
+这其实不是个多么令人震惊的结论。现在老师讲课都用 ppt，学生下下来复习，或者把要看的论文存在电脑里用 PDF 看， 实在是太稀松平常的事情了。但我细细想过之后，却觉得奇怪而又费解。
+powerpoint 是否是制作幻灯片的不二选择？ 这个问题肯定有人笑着回答，当然是了：Prezi 制作幻灯片的拉伸旋转机制只能让观看者头晕目眩，而 keynote 软件 又是 mac OSX 系统的专属。在这个 windows 系统还是霸主的时代，大家当然更乐意看到 .pptx 格式的文件。
+毫无疑问，powerpoint 软件提供了大而全的无所不包的功能，花样百出的图片和文本效果，自由自在地拖动编辑模式， 再加上看起来酷炫的动画，一切看起来那么美好。
+但这是我们真正需要的吗？
+纵观老师们上课使用的 ppt，无非用到的就是文本框，文字的加粗和标记，列表层级结构，添加图片和表格这几个内容。 学生们的 Presentation 也是同理。而缺乏设计训练的老师同学们往往在 powerpoint 里放纵自己的随心所欲，让 幻灯片的可读性奇差无比。使用模板带来的问题，就是难以找到一个 100% 和自己内容匹配的模板，而且又会事倍功半。
+当你电脑中安装着这样一个臃肿的大家伙，只常用它提供功能的 1%，而很多按钮可能一辈子都不会碰到的时候，你为什么 还不丢掉它呢？
+另一个流派就是使用 LaTeX，打开 LaTeX 开源小屋搜索 beamer，你会得到：
+这些是非常赏心悦目的幻灯片文件，但关于使用 LaTeX 的痛苦感受我放在下一节里讲。
+所以我觉得目前对于幻灯片的最好解决方案，就是 Markdown 制作转成 HTML 格式的幻灯片。
+Markdown 最早由 Aaron Swartz 这个天才发明出来（可以看看互联网之子就知道这个人有多伟大），直到现在被无数人广泛使用， 就是因为这个标记语言有着无数优点： - 足够简单，任何人（包括没学过编程的人）可以在 5 分钟之内上手 - 提供一般人写文档需要的绝大多数功能 - 不必为版式困扰，专注于内容 - 配合合适的 css，输出相当漂亮的文档</description>
+    </item>
+    
+  </channel>
+</rss>
