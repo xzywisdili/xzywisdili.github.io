@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>统计学 on xzy&#39;s blog</title>
-    <link>https://xzywisdili.github.io/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/</link>
-    <description>Recent content in 统计学 on xzy&#39;s blog</description>
+    <title>统计学 on 中文博客 - xzy&#39;s blog</title>
+    <link>http://localhost:1313/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/</link>
+    <description>Recent content in 统计学 on 中文博客 - xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
+    <language>en</language>
     <lastBuildDate>Wed, 25 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://xzywisdili.github.io/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>卫生统计学第九周作业</title>
-      <link>https://xzywisdili.github.io/post/2018/04/25/%E5%8D%AB%E7%94%9F%E7%BB%9F%E8%AE%A1%E5%AD%A6%E7%AC%AC%E4%B9%9D%E5%91%A8%E4%BD%9C%E4%B8%9A/</link>
+      <link>http://localhost:1313/post/2018-04-25-statistichomework/</link>
       <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.github.io/post/2018/04/25/%E5%8D%AB%E7%94%9F%E7%BB%9F%E8%AE%A1%E5%AD%A6%E7%AC%AC%E4%B9%9D%E5%91%A8%E4%BD%9C%E4%B8%9A/</guid>
-      <description>前言 这几天读到一个观点，论文的发表在很久之前抛弃了写在纸上的模式，现在也到了抛弃 PDF 或 Word 格式的时候了。其实一直以来，论文核心呈现的，我们所关注的都是它的内容所在。既然这样，我们为什么不能把论文呈现为 HTML 格式呢？
-首先，现在的论文可能有一些交互式的展示或者动画展示，这些都是传统 PDF 格式文件所不能展示的。其次，互联网时代提倡信息共享和联通，HTML 放在网站上可以在浏览器里轻松点击不被获取。
-当我读到这些内容的时候，一拍大腿，觉得很有道理。所以这次我在博客上完成了我的统计学作业。当然上交的时候还是得灰溜溜的写到我的本子上，但这样至少表达了我的态度和想法。
-Problem #1 绘制下面这种检验方法的 ROC 曲线：
-   Test Result   Surgery Result 1 2 3 4 5 Total   Disease Present 18 1 2 9 40 70   No Disease 23 1 2 0 1 27   对于这种检验方法来说，如果取 cut-off 值为 2 时，我们认为 Surgery Result 值为 3，4，5 时检验结果为 positive(+)，取值为 1，2 时检验结果为 negative(-)。</description>
+      <guid>http://localhost:1313/post/2018-04-25-statistichomework/</guid>
+      <description>前言 这几天读到一个观点，论文的发表在很久之前抛弃了写在纸上的模式，现在也到了抛弃 PDF 或 Word 格式的时候了。其实一直以来，论文核心呈现的，我们所关注</description>
     </item>
     
   </channel>

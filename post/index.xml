@@ -1,284 +1,167 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on xzy&#39;s blog</title>
-    <link>https://xzywisdili.github.io/post/</link>
-    <description>Recent content in Posts on xzy&#39;s blog</description>
+    <title>Posts on 中文博客 - xzy&#39;s blog</title>
+    <link>http://localhost:1313/post/</link>
+    <description>Recent content in Posts on 中文博客 - xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
+    <language>en</language>
     <lastBuildDate>Mon, 03 Sep 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://xzywisdili.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>2018年，中国独立游戏，和他们</title>
-      <link>https://xzywisdili.github.io/post/2018/09/03/2018%E5%B9%B4%E4%B8%AD%E5%9B%BD%E7%8B%AC%E7%AB%8B%E6%B8%B8%E6%88%8F%E5%92%8C%E4%BB%96%E4%BB%AC/</link>
+      <link>http://localhost:1313/post/2018-9-3-indiagames/</link>
       <pubDate>Mon, 03 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.github.io/post/2018/09/03/2018%E5%B9%B4%E4%B8%AD%E5%9B%BD%E7%8B%AC%E7%AB%8B%E6%B8%B8%E6%88%8F%E5%92%8C%E4%BB%96%E4%BB%AC/</guid>
-      <description>强烈推荐《独行》。
-1 《独行》是关于中国独立游戏的一部纪录片。这会令人想到另一部纪录片——国外的《独立游戏大电影》。国外的《独立游戏大电影》主要讲述的是国外的三位开发者如何通过游戏来与玩家产生一种「联结」，核心在游戏上。而《独行》则更多聚焦于中国的开发者，他们是怎么样的人，在社会中的生活状态如何。一个明显的区别是，前者你可以牢记三部游戏的名字，而后者你只能知道他们在开发怎么样的游戏，却说不上游戏名字是什么。
-2 不过这并不妨碍《独行》也是一部非常优秀的纪录片。独立游戏本身不是一个赚钱的行业，却有不少人投身于此。这样一群特殊的人，鲜少出现在大家的视野里，我们或许会产生「逃避现实」「nerd」这样一些误解。《独行》通过介绍 5 个独立游戏开发团队，极其克制地讲述他们的日常工作和生活，让我们了解这样一群人，了解这个行业。
-3 在 5 组开发团队中，由于《蜡烛人》这款游戏的大火，来自清华的高鸣也许是最成功的。他眼见当年的同学或科研，或教学，或发财，自己在镜头面前豁达地讲：如果人生的最好状态是幸福而又快乐地度过，那我做游戏是一样的，甚至还更直接一些。
-4 不过最让我印象深刻和敬佩的是陈静。像他这样通晓程序，又对美术有极致追求，执行力又强的大才，一定可以选择这样一条路：进入腾讯网易这样的大公司，早就能在36岁这样的年纪实现财务自由。但可能也因为他那种难以抑制的创造欲，让待在大公司成为一件不太可能的事。不知道他看到朋友那份 3 天做好的略显粗糙的「进击的巨人」同人游戏爆火的时候，是怎样一种心情。他说他想在有生之年完成一款有《塞尔达传说》那样品质的游戏的时候，让我几度动容，甚至泪下。
-5 我想不少人都还记得几个细节：穆飞桌上的《新税法下企业纳税筹划》，李远扬和发行商、投资人之间的接洽，在联系到近期国家对于游戏审批的强硬态度。独立游戏本身的魅力是引力，这样的现实社会环境是斥力。他们就在这二力的拉扯之间，努力朝着自己梦想的方向前进，真的非常令人敬佩。
-6 《独行》也好，《独立游戏大电影》也好，都一次次向我们证明了游戏绝对是第九艺术的存在。他们，也是实打实的艺术家。
-《独行》现在可以在爱奇艺看到，不过需要会员。</description>
+      <guid>http://localhost:1313/post/2018-9-3-indiagames/</guid>
+      <description>强烈推荐《独行》。 1 《独行》是关于中国独立游戏的一部纪录片。这会令人想到另一部纪录片——国外的《独立游戏大电影》。国外的《独立游戏大电影》主</description>
     </item>
     
     <item>
       <title>简化我们的工具</title>
-      <link>https://xzywisdili.github.io/post/2018/06/04/%E7%AE%80%E5%8C%96%E6%88%91%E4%BB%AC%E7%9A%84%E5%B7%A5%E5%85%B7/</link>
+      <link>http://localhost:1313/post/2018-6-4-simplifytools/</link>
       <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.github.io/post/2018/06/04/%E7%AE%80%E5%8C%96%E6%88%91%E4%BB%AC%E7%9A%84%E5%B7%A5%E5%85%B7/</guid>
-      <description>现在的大学生不像十几年前，必定是人手一台笔记本电脑（有的人甚至有两台）。只要在自习室稍微留神观察一下 专注学习的同学们，就会发现几乎 100% 的同学的电脑上停留的软件不是微软家的 powerpoint，就是 PDF 阅读器。
-这其实不是个多么令人震惊的结论。现在老师讲课都用 ppt，学生下下来复习，或者把要看的论文存在电脑里用 PDF 看， 实在是太稀松平常的事情了。但我细细想过之后，却觉得奇怪而又费解。
-powerpoint 是否是制作幻灯片的不二选择？ 这个问题肯定有人笑着回答，当然是了：Prezi 制作幻灯片的拉伸旋转机制只能让观看者头晕目眩，而 keynote 软件 又是 mac OSX 系统的专属。在这个 windows 系统还是霸主的时代，大家当然更乐意看到 .pptx 格式的文件。
-毫无疑问，powerpoint 软件提供了大而全的无所不包的功能，花样百出的图片和文本效果，自由自在地拖动编辑模式， 再加上看起来酷炫的动画，一切看起来那么美好。
-但这是我们真正需要的吗？
-纵观老师们上课使用的 ppt，无非用到的就是文本框，文字的加粗和标记，列表层级结构，添加图片和表格这几个内容。 学生们的 Presentation 也是同理。而缺乏设计训练的老师同学们往往在 powerpoint 里放纵自己的随心所欲，让 幻灯片的可读性奇差无比。使用模板带来的问题，就是难以找到一个 100% 和自己内容匹配的模板，而且又会事倍功半。
-当你电脑中安装着这样一个臃肿的大家伙，只常用它提供功能的 1%，而很多按钮可能一辈子都不会碰到的时候，你为什么 还不丢掉它呢？
-另一个流派就是使用 LaTeX，打开 LaTeX 开源小屋搜索 beamer，你会得到：
-这些是非常赏心悦目的幻灯片文件，但关于使用 LaTeX 的痛苦感受我放在下一节里讲。
-所以我觉得目前对于幻灯片的最好解决方案，就是 Markdown 制作转成 HTML 格式的幻灯片。
-Markdown 最早由 Aaron Swartz 这个天才发明出来（可以看看互联网之子就知道这个人有多伟大），直到现在被无数人广泛使用， 就是因为这个标记语言有着无数优点： - 足够简单，任何人（包括没学过编程的人）可以在 5 分钟之内上手 - 提供一般人写文档需要的绝大多数功能 - 不必为版式困扰，专注于内容 - 配合合适的 css，输出相当漂亮的文档</description>
+      <guid>http://localhost:1313/post/2018-6-4-simplifytools/</guid>
+      <description>现在的大学生不像十几年前，必定是人手一台笔记本电脑（有的人甚至有两台）。只要在自习室稍微留神观察一下 专注学习的同学们，就会发现几乎 100% 的同学的</description>
     </item>
     
     <item>
       <title>卫生统计学第九周作业</title>
-      <link>https://xzywisdili.github.io/post/2018/04/25/%E5%8D%AB%E7%94%9F%E7%BB%9F%E8%AE%A1%E5%AD%A6%E7%AC%AC%E4%B9%9D%E5%91%A8%E4%BD%9C%E4%B8%9A/</link>
+      <link>http://localhost:1313/post/2018-04-25-statistichomework/</link>
       <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.github.io/post/2018/04/25/%E5%8D%AB%E7%94%9F%E7%BB%9F%E8%AE%A1%E5%AD%A6%E7%AC%AC%E4%B9%9D%E5%91%A8%E4%BD%9C%E4%B8%9A/</guid>
-      <description>前言 这几天读到一个观点，论文的发表在很久之前抛弃了写在纸上的模式，现在也到了抛弃 PDF 或 Word 格式的时候了。其实一直以来，论文核心呈现的，我们所关注的都是它的内容所在。既然这样，我们为什么不能把论文呈现为 HTML 格式呢？
-首先，现在的论文可能有一些交互式的展示或者动画展示，这些都是传统 PDF 格式文件所不能展示的。其次，互联网时代提倡信息共享和联通，HTML 放在网站上可以在浏览器里轻松点击不被获取。
-当我读到这些内容的时候，一拍大腿，觉得很有道理。所以这次我在博客上完成了我的统计学作业。当然上交的时候还是得灰溜溜的写到我的本子上，但这样至少表达了我的态度和想法。
-Problem #1 绘制下面这种检验方法的 ROC 曲线：
-   Test Result   Surgery Result 1 2 3 4 5 Total   Disease Present 18 1 2 9 40 70   No Disease 23 1 2 0 1 27   对于这种检验方法来说，如果取 cut-off 值为 2 时，我们认为 Surgery Result 值为 3，4，5 时检验结果为 positive(+)，取值为 1，2 时检验结果为 negative(-)。</description>
+      <guid>http://localhost:1313/post/2018-04-25-statistichomework/</guid>
+      <description>前言 这几天读到一个观点，论文的发表在很久之前抛弃了写在纸上的模式，现在也到了抛弃 PDF 或 Word 格式的时候了。其实一直以来，论文核心呈现的，我们所关注</description>
     </item>
     
     <item>
       <title>学了 R 语言函数</title>
-      <link>https://xzywisdili.github.io/post/2018/04/12/%E5%AD%A6%E4%BA%86-r-%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0/</link>
+      <link>http://localhost:1313/post/2018-04-12-rfunction/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.github.io/post/2018/04/12/%E5%AD%A6%E4%BA%86-r-%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0/</guid>
+      <guid>http://localhost:1313/post/2018-04-12-rfunction/</guid>
       <description>明天再写，累死了</description>
     </item>
     
     <item>
       <title>再吹一波 Rmarkdown</title>
-      <link>https://xzywisdili.github.io/post/2018/04/11/%E5%86%8D%E5%90%B9%E4%B8%80%E6%B3%A2-rmarkdown/</link>
+      <link>http://localhost:1313/post/2018-04-11-rmarkdown02/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.github.io/post/2018/04/11/%E5%86%8D%E5%90%B9%E4%B8%80%E6%B3%A2-rmarkdown/</guid>
-      <description>既上次写过一篇关于 Rmarkdown 的安利 之后，我在实际使用过程中遇到了一些难题，就是关于中文的问题。如果只使用英文写作的话，完全没有问题；但是一旦使用中文，各级标题，加粗强调和引用都会变得非常奇怪。这也使我暂时搁置下了 Rmarkdown 不用。
-但我多虑了，谢老师早已经提供了近乎完美的解决方案。
-前提准备  安装 Rstudio：地址 安装 Rmarkdown 包：install.packages(&amp;quot;rmarkdown&amp;quot;) 安装 Pandoc：地址 安装 CTeX：在 mac 下推荐 MacTeX 或 MiKTeX  具体细节按下不表。
-安装模板包 install.packages(&amp;quot;rticles&amp;quot;)  这个包中提供了 CTeX 相关模板，可以帮我们解决中文问题。在新建 Rmarkdown 中选择 「From Template」，再在其中选择「CTeX Documents」即可。
-这时候默认是一篇谢老师写好的文章，我们只需要在他的基础上修改就好了，点击 knit 按钮，或者使用快捷键 ctrl + shift + k 看一看生成的 PDF 文档：
-干净，整洁，看起来就像 LaTeX 写出来的！再附加 R 语言代码的强力加持，完美！
-所以我今天也迫不及待使用 Rmarkdown 完成了统计学作业：
-嘿嘿，虽然才学到方差分析，但我还是很骄傲，很膨胀地贴出来了。
-其余资源  关于 Rmarkdown 中的 chunk option Rmarkdown 语法和常用 chunk option 速查记录 使用 Rmarkdown 制作幻灯片的相关内容 使用谢老师完成的写轮眼包制作幻灯片  人们一直希望能够简便地完成一件事，并把它做得漂亮，这也是为什么 Markdown 如此火爆的原因。因为它够简单，够美。我觉得 R 语言也是一种简单而美的编程语言。把 R 和 Markdown 结合在一起，同时能够制作出使用 LaTeX 才能排版出来的文档，实在是令人难掩激动，再写一篇博客狂吹一波。</description>
+      <guid>http://localhost:1313/post/2018-04-11-rmarkdown02/</guid>
+      <description>既上次写过一篇关于 Rmarkdown 的安利 之后，我在实际使用过程中遇到了一些难题，就是关于中文的问题。如果只使用英文写作的话，完全没有问题；但是一旦使用中文</description>
     </item>
     
     <item>
       <title>R 语言基础入门</title>
-      <link>https://xzywisdili.github.io/post/2018/04/02/r-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</link>
+      <link>http://localhost:1313/post/2018-04-02-rlearningnote/</link>
       <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.github.io/post/2018/04/02/r-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</guid>
-      <description>这篇《R 语言基础入门》是我在别人的博客上看到的，完成时间不会晚于 2011 年。觉得总结得相当不错，于是搬运到我的博客上。需要提到，有些链接可能已经失效。
-引言 什么是 R 语言 R 语言是一个开源的数据分析环境，起初是由数位统计学家建立起来，以更好的进行统计计算和绘图，这篇 wiki 中包含了一些基本情况的介绍。由于 R 可以通过安装扩展包（Packages）而得到增强，所以其功能已经远远不限于统计分析，如果感兴趣的话可以到官方网站了解关于其功能的更多信息。
-至于 R 语言名称的由来则是根据两位主要作者的首字母 (Robert Gentleman and Ross Ihaka)，但过于简短的关键词也造成在搜索引擎中很不容易找到相关的资料。不过这个专门的搜索网站可以帮到你。
-为什么要学习 R 语言  R是免费开源软件： 现在很多学术期刊都对分析软件有版权要求，而免费的分析工具可以使你在这方面不会有什么担心。另一方面，如果学术界出现一种新的数据分析方法，那么要过很长一段时间才会出现在商业软件中。但开源软件的好处就在于，很快就会有人将这种方法编写成扩展包，或者你自己就可以做这件工作。 命令行工作方式： 许多人喜欢类似 SPSS 菜单式的操作，这对于初学者来说很方便入门，但对于数据分析来说，命令行操作会更加的灵活，更容易进行编程和自动化处理。而且命令行操作会更容易耍酷，不是嘛，一般人看到你在狂敲一推代码后得到一个分析结果，对你投来的目光是会不一样的。 小巧而精悍： R 语言的安装包更小，大约不到 40M，相比其它几个大家伙它算是非常小巧精悍了。目前 R 语言非常受到专业人士欢迎，根据对数据挖掘大赛胜出者的调查可以发现，他们用的工具基本上都是 R 语言。此外，从最近几次 R 语言大会上可以了解到，咨询业、金融业、医药业都在大量的使用 R 语言，包括 google / facebook 的大公司都在用它。因此，学习 R 语言对你的职业发展一定是有帮助的。  R 语言的下载和 GUI 界面 R 语言安装包可以在官方网站下载，windows 版可直接点击这个连接 在 ubuntu 下面安装 R 则更容易，在终端里头运行如下命令即可 sudo apt-get update sudo apt-get install r-base</description>
+      <guid>http://localhost:1313/post/2018-04-02-rlearningnote/</guid>
+      <description>这篇《R 语言基础入门》是我在别人的博客上看到的，完成时间不会晚于 2011 年。觉得总结得相当不错，于是搬运到我的博客上。需要提到，有些链接可能已经失</description>
     </item>
     
     <item>
       <title>学习 R 语言里的 subset</title>
-      <link>https://xzywisdili.github.io/post/2018/04/02/%E5%AD%A6%E4%B9%A0-r-%E8%AF%AD%E8%A8%80%E9%87%8C%E7%9A%84-subset/</link>
+      <link>http://localhost:1313/post/2018-04-02-rsubset/</link>
       <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.github.io/post/2018/04/02/%E5%AD%A6%E4%B9%A0-r-%E8%AF%AD%E8%A8%80%E9%87%8C%E7%9A%84-subset/</guid>
-      <description>主要内容：
- 三种 subset 操作 六类 subset 不同对象的的重要区别  众所周知，R 语言里面有几种不同的 subset 方法：[]，[[]]，$，但是有时候会产生混淆。所以这篇笔记主要分析理清 R 语言里面的 subset 操作。
-来让我们用 [] 来 subset！ 对 atomic vector 进行 subset 操作时，通常使用 []，总共有 6 种形式：
- 正数：简单，就是返回这个位置上的数（注意 R 语言从 1 开始计数）
- 负数：忽略这个位置上的数
- 逻辑值：只选择那些值为 TRUE 的数，所以基于此可以在 [] 中放入某些逻辑判断条件
-  x[c(TRUE, FALSE, TRUE)] x[x &amp;gt; 3]   什么也没有：返回原始的 vector
- 0：返回一个长度为 0 的 vector
- 字符：如果 vector 设置好了 name，就可以使用字符型进行 subset
-  y &amp;lt;- setNames(x, letters[1:4]) y[c(&amp;quot;d&amp;quot;, &amp;quot;c&amp;quot;, &amp;quot;a&amp;quot;)]  对于 list 来说，subset 可以有两种：使用 [] 往往会返回一个 list，使用 [[]] 和 $ 则会得到 list 的组成部分。</description>
+      <guid>http://localhost:1313/post/2018-04-02-rsubset/</guid>
+      <description>主要内容： 三种 subset 操作 六类 subset 不同对象的的重要区别 众所周知，R 语言里面有几种不同的 subset 方法：[]，[[]]，$，但是有时候会产生混淆。所以这篇笔记</description>
     </item>
     
     <item>
       <title>R 语言基础数据结构</title>
-      <link>https://xzywisdili.github.io/post/2018/03/28/r-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+      <link>http://localhost:1313/post/2018-03-28-rstructure/</link>
       <pubDate>Wed, 28 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.github.io/post/2018/03/28/r-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
-      <description>R 的基础数据结构可以概括为：
-    相同元素 不同元素     一维（1d） Atomic vector List   二维（2d） Matrix Data frame   多维（nd） Array     R 实际上是没有标量，或者 0 维数据结构的。那些所谓的标量其实是长度为 1 的向量。
-R 的一维数据结构 R 语言中的一维数据结构向量（vector）有两种类型：atomic vector 和 list，它们有三个属性：
- typeof() length() attributes()  这两者的区别是，atomic vector 所有元素相同种类，list 中的元素可以不同种类。
-注意：is.vector(x) 并不能检查 x 是不是 vector，最好使用 is.atomic(x) || is.list(x)。
-Atomic vectors  四种常见类型：logical, integer, double 和 character 两种少见类型：complex 和 raw  atomic vectors 使用 c() 来创建（c 是 combine 的简写）。</description>
+      <guid>http://localhost:1313/post/2018-03-28-rstructure/</guid>
+      <description>R 的基础数据结构可以概括为： 相同元素 不同元素 一维（1d） Atomic vector List 二维（2d） Matrix Data frame 多维（nd） Array R 实际上是没有标量，或者 0 维数据结构的。那些所</description>
     </item>
     
     <item>
       <title>2017 读书印象</title>
-      <link>https://xzywisdili.github.io/post/2017/12/30/2017-%E8%AF%BB%E4%B9%A6%E5%8D%B0%E8%B1%A1/</link>
+      <link>http://localhost:1313/post/2017-12-30-reading/</link>
       <pubDate>Sat, 30 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.github.io/post/2017/12/30/2017-%E8%AF%BB%E4%B9%A6%E5%8D%B0%E8%B1%A1/</guid>
-      <description>自从 2016 年起，我逼自己养成一个习惯，每年准备一个记录阅读情况的 Excel 表格。一开始的时候，满怀热情，又是搞了图表，又是自学了 VBA 编程，然后模仿 Github 代码记录写了一个玩意儿——365 天对应 365 个小方格，每天读的页数越多，这天就越绿。当时熬夜完成的时候还特兴奋，但后来证明，没多大蛋用。当然读书记录这方法成效斐然，我在 2016 年读完了整整 40 本书！（要知道我以前一年可能翻不完一本书）
-2017 年当然继续坚持我的读书记录，当然没有整那么多幺蛾子，只有一个阅读进度条。一年匆匆而过，在 kindle 的加持下，我读了 73 本书，简单算算比 16 年增长了 82.5%。——嗯，抛开不谈这些无聊枯燥的数字，我也不想一本一本把书单列出来。这次打算通过几个关键词来大概讲一讲今年的阅读之旅。
-逆天改命 什么是「逆天改命」？上天明明告诉你命数已尽，而偏偏有人把你从死神手中抢回来。而关于「逆天改命」的作品，自然就是关于医疗，或医学这个话题下的作品了。
-关于医学的作品，常常涉及生死的话题。而生死，是最具有阅读冲击力，也是最容易上升到哲学高度的话题了。所以，在我意料之中的，今年读过的不少医学主题的作品都无比优秀。《神经外科的黑色幽默》从一个神经外科医生的角度，讲述了在他职业生涯中经历过的大大小小的具有启发的病例，《病毒来袭》则把目光聚焦在非洲，那个许多病毒，包括埃博拉已经在肆虐的那片土地，《上帝的手术刀》则更加偏向实验室，以深入浅出的方式解释了基因疗法的原理和进展。
-我自己作为一名医学生，读到这方面作品的时候，心中无比向往，但又觉得重任在肩。通过读书可以提前接触面对生死的处境，也更能保持一种平和又不冷漠的心态。至于知识和方法，还是留到课堂上系统学习吧。
-伊坂幸太郎 能从茫茫书海和伊坂幸太郎相遇，也是一种幸运。我认为伊坂幸太郎最大的特点是他的作品充满了新奇古怪有想象力的点子，从《金色梦乡》的大型逃亡烟火秀，到《奥杜邦的祈祷》的会预言会说话的稻草人，再到《魔王》里会控制别人说话的超能力。再配上总有股悬疑味道的情节，至少你会被迷着一直读下去。
-当然，他还不止这些。伊坂幸太郎的作品绝不会仅流于表面，而是探讨一些关于社会，人物情感，艺术，甚至是政治的议题——很少有小说作家会围绕政治议题展开一本小说。虽然我不是完全认同伊坂幸太郎在书中流露出的一些观点，有些作品也在豆瓣没有打 5 星，但我还是对他的其他作品抱以无比期待。
-尤·奈斯博 尤·奈斯博是另一位我在 17 年无比崇拜的小说作家，他的作品风格被冠以「硬汉推理小说」。这个说法我举双手双脚赞成。四部小说《雪人》《猎豹》《幽灵》《警察》读下来，一部借着一部把主角哈利警探虐的死去活来。就说第四部《警察》里面，凶手是一名警察杀手，死几个警察不够，哈利的老搭档被残忍碎尸，小女孩烧焦，署长的打手被打成猪头三满脸绷带，署长一只眼睛挖掉，还有两人钻冰箱躲避密室定时炸弹的情节……
-当然，说到这里你可能以为这是一系列小说颇有些「重口味」的感觉，甚至觉得无比喜欢奈斯波的我血液中也有点变态的要素。其实真不是这样的。作为一个喜爱推理小说的读者，我只是被北欧一种粗犷，奔放，浓烈，极富有张力的情节和叙事所折服了。也很难在其他书本里找到像哈利这样的角色了（电影里面还是有的，比如《飓风营救》里面的爸爸）。
-人生 有这么一种说法，在将死之时，人的一生就好像放电影一样从眼前经过。今年读过的约翰·威廉斯的《斯通纳》和毛姆的《人性的枷锁》都如同放电影一般完整展示了人的一生。
-我们可以看到，无论是《斯通纳》里的斯通纳，还是《人性的枷锁》里的菲利普，都历经各种各样生活的磨难，事业的重重阻碍，也在爱情关系和家庭关系中饱受折磨。作者把人生描述成一杯喝不完的苦咖啡，并想告诉你人生是无奈的，是无意义的，是注定会耗光你的激情，让你败下阵来的。
-说实话，刚读完的时候，真的一度有被这种情绪感染到。我们不可能永远面对人生都是一种积极的态度，更何况「人生」和「积极」都是两个大词。我想，对于我自己，在以后每个时间点上做出最适合自己的选择，这就是我面对人生的态度。
-畅销 关于畅销书我一直想说几句。各大书商，什么亚马逊京东都喜欢在年底出一个年度书籍盘点的东西。当然，依据当然很大一部分程度上当然是在平台上的销量了。从排行榜上可以看到我们广大的人民群众喜欢看什么样的书。
-最火的当然是东野圭吾了，居然在前十里独占三席，《解忧杂货铺》《白夜行》《嫌疑人 X 的献身》都读过了。刘慈欣的《三体》，伍绮诗的《无声告白》（虽然不是今年畅销），马伯庸《长安十二时辰》等等。我发现畅销书的共通特点就是好读，你手里捧着可以一直一直读下去，中间不用休息，更不会困得合眼睡着。但我猜想大部分人读过就像读了一个故事，至于书籍深处的主题，不愿多去思考和讨论。我也是这大部分人中的一员，本来要读畅销书就是图个乐。但我觉得 18 年我还是离畅销书稍微远一点。
-一篇文章 这类书籍就更有意思了。「一篇文章」的意思是，本来用一篇文章就能说清的，硬是给抻成一本书，就好像拉面一样。《断舍离》兜售了一个「断舍离」的观点，《聪明人用方格笔记本》推销了「方格笔记本」的观点，《为什么精英都是清单控》全书也就是对「清单」的大力推荐。
-读这种书时，你总以为也许翻到下一页，也许会有新观点，新方法论，看惯了玫瑰，给我来一枝梅花也好。但直到翻到最后一页，才发现就这么些内容翻来覆去地讲，怒得把书一摔，愤而上豆瓣打个低分，却还觉得不解气。本来就是一篇博文的量，就按照一篇博文来写。我一定给你点赞转发，干嘛非要写本书呢？
-结语 离 2018 年也就一两天了，我也提前早早做好了 18 年的阅读记录表格。表格和去年没太大变化，但我的阅读理念变了，我不想再去追求量，而想真的沉下来读几本好书。少读几本小说，多看看社科方面的书籍。刚才打开知乎年度总结看了一眼，我居然一年在知乎上看了快 2 千万字。惋惜不已，总料想，这 2 千万转换成书，那得看多少本啊。但是这种转换意义怕也是不大，毕竟你要让我戒掉知乎恐怕也是一时半会儿戒不掉的。
-决定好了，第一本就从《娱乐至死》读起。</description>
+      <guid>http://localhost:1313/post/2017-12-30-reading/</guid>
+      <description>自从 2016 年起，我逼自己养成一个习惯，每年准备一个记录阅读情况的 Excel 表格。一开始的时候，满怀热情，又是搞了图表，又是自学了 VBA 编程，然后模仿 Github 代码记</description>
     </item>
     
     <item>
       <title>轻松愉快地开始使用 Rmarkdown</title>
-      <link>https://xzywisdili.github.io/post/2017/12/23/%E8%BD%BB%E6%9D%BE%E6%84%89%E5%BF%AB%E5%9C%B0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8-rmarkdown/</link>
+      <link>http://localhost:1313/post/2017-12-23-rmarkdown/</link>
       <pubDate>Sat, 23 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.github.io/post/2017/12/23/%E8%BD%BB%E6%9D%BE%E6%84%89%E5%BF%AB%E5%9C%B0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8-rmarkdown/</guid>
-      <description>R 语言世界里的一个大杀器。
-我想，在所有接触和学习 R 语言的初学者（当然包括我）眼里，有两个东西是相当酷的。一个是 shiny，可以轻松做出交互式的图表；而另一个就是 Rmarkdown 了。
-现如今我想 markdown 是何物已经不用过多介绍了，它语法简洁，门槛很低，已经到了一种是个人就会的地步。那 Rmarkdown 到底是什么呢？
-Rmarkdown 的官网上有这样几段介绍：
- Turn your analyses into high quality documents, reports, presentations and dashboards. Use a productive notebook interface to weave together narrative text and code to produce elegantly formatted output. Use multiple languages including R, Python, and SQL.
- 简单来说，就是 Rmarkdown 能够使用 markdown 的语法，支持多种语言代码的运行和输出（R, Python 和 SQL），输出高质量的文档。
-这个所谓的「高质量」的文档到底是怎么样的呢？可以这么说，有不少的人都认为 Rmarkdown 可以成为科技写作的主流：
- 为什么 Markdown + R 有叫大概率成为科技写作主流</description>
+      <guid>http://localhost:1313/post/2017-12-23-rmarkdown/</guid>
+      <description>R 语言世界里的一个大杀器。 我想，在所有接触和学习 R 语言的初学者（当然包括我）眼里，有两个东西是相当酷的。一个是 shiny，可以轻松做出交互式</description>
     </item>
     
     <item>
       <title>dplyr 包里面必会的处理数据方法</title>
-      <link>https://xzywisdili.github.io/post/2017/12/19/dplyr-%E5%8C%85%E9%87%8C%E9%9D%A2%E5%BF%85%E4%BC%9A%E7%9A%84%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE%E6%96%B9%E6%B3%95/</link>
+      <link>http://localhost:1313/post/2017-12-19-datatransform/</link>
       <pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.github.io/post/2017/12/19/dplyr-%E5%8C%85%E9%87%8C%E9%9D%A2%E5%BF%85%E4%BC%9A%E7%9A%84%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE%E6%96%B9%E6%B3%95/</guid>
-      <description>最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看。最近学习的很简单，就是 dplyr 包里面最基础的 5 种数据处理方法。
-所用的数据集 这次我们所有数据处理的用法范例都是建立在 flights 数据集上的，先来看看这个数据集：
-library(nycflights13) library(tidyverse) head(flights)  可以看到，每一条数据代表的是一次航班飞行记录的相关信息：
-# A tibble: 6 x 19 year month day dep_time sched_dep_time dep_delay arr_time sched_arr_time &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; 1 2013 1 1 517 515 2 830 819 2 2013 1 1 533 529 4 850 830 3 2013 1 1 542 540 2 923 850 4 2013 1 1 544 545 -1 1004 1022 5 2013 1 1 554 600 -6 812 837 6 2013 1 1 554 558 -4 740 728 # .</description>
+      <guid>http://localhost:1313/post/2017-12-19-datatransform/</guid>
+      <description>最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看</description>
     </item>
     
     <item>
       <title>R 语言的那些最最最基础</title>
-      <link>https://xzywisdili.github.io/post/2017/11/21/r-%E8%AF%AD%E8%A8%80%E7%9A%84%E9%82%A3%E4%BA%9B%E6%9C%80%E6%9C%80%E6%9C%80%E5%9F%BA%E7%A1%80/</link>
+      <link>http://localhost:1313/post/2017-11-21-rbasic/</link>
       <pubDate>Tue, 21 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.github.io/post/2017/11/21/r-%E8%AF%AD%E8%A8%80%E7%9A%84%E9%82%A3%E4%BA%9B%E6%9C%80%E6%9C%80%E6%9C%80%E5%9F%BA%E7%A1%80/</guid>
-      <description>在 R 语言的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么就一定不能错过 R。本文只总结了 R 语言里面的那些最最最基础，想用好 R 必须要背过的内容。话不多说，赶紧上车。
-基本算数 直接进行算数运算：
-&amp;gt; 4 + 6 [1] 10  将值保存在对象中进行运算：
-&amp;gt; x &amp;lt;- 6 &amp;gt; y &amp;lt;- 4 &amp;gt; z &amp;lt;- x + y &amp;gt; z [1] 10  显示我们已经创建的对象：
-&amp;gt; ls() [1] &amp;quot;x&amp;quot; &amp;quot;y&amp;quot; &amp;quot;z&amp;quot;  清除一些对象：
-&amp;gt; rm(x, y) &amp;gt; ls() [1] &amp;quot;z&amp;quot;  创建向量（vector）：
-&amp;gt; z &amp;lt;- c(5, 9, 1, 0)  使用函数 c(x, y) 可以做到向量的连接：</description>
+      <guid>http://localhost:1313/post/2017-11-21-rbasic/</guid>
+      <description>在 R 语言的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么</description>
     </item>
     
     <item>
       <title>光棍节初探 TensorFlow（一）：数据集的预处理</title>
-      <link>https://xzywisdili.github.io/post/2017/11/12/%E5%85%89%E6%A3%8D%E8%8A%82%E5%88%9D%E6%8E%A2-tensorflow%E4%B8%80%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E9%A2%84%E5%A4%84%E7%90%86/</link>
+      <link>http://localhost:1313/post/2017-11-12-tensorflow01/</link>
       <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.github.io/post/2017/11/12/%E5%85%89%E6%A3%8D%E8%8A%82%E5%88%9D%E6%8E%A2-tensorflow%E4%B8%80%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E9%A2%84%E5%A4%84%E7%90%86/</guid>
-      <description>11 月 11 日这天注定对我具有了一定的意义。不是因为它是购物狂欢节或光棍节，而是因为在这一天，我第一次尝试使用 TensorFlow 搭建了一个简单的神经网络。我希望用几篇文章记录这个过程。
-最近在读 Fundamentals of Deep Learning 这本书。我选择它的原因是讲解得通俗易懂，又会直白地点出重点内容。然而当我读到第三章「Implementing Neural Networks in TensorFlow」时，整个人就好像懵了一样。对于一个从来没接触过 TensorFlow 的人来说，是难以通过看代码直接理解 Graph, Session 等等这些新概念的。于是联想到程序员的思维修炼里面提到的「SQ3R 阅读法」，赶紧先放下这本书，到网上找其他关于 TensorFlow 的资料，值得推荐的是： - TensorFlow 官方文档中文版 - TF Girls「TensorFlow Tutorial」修炼指南（这老师很幽默） - youtube 地址 - bilibili 地址
-没想到我居然也能一天完成了一个基础的神经网络（虽然是从下午 1 点到晚上 2 点）。现在到了「SQ3R 阅读法」中的很重要的 Recite（复述）这步———把这个过程写成文章发布到博客里。
-所使用的数据集来自 The Street View House Numbers (SVHN) Dataset，这是一个关于识别街景照片中出现的数字的数据集。
-读取数据 首先下载 Format 2 格式的数据，即 .mat 格式的数据。我们先在 iPython 里面探索一下数据：
-In[1]: from scipy.io import loadmat as load In[2]: train_data = load(&#39;data/train_32x32.</description>
+      <guid>http://localhost:1313/post/2017-11-12-tensorflow01/</guid>
+      <description>11 月 11 日这天注定对我具有了一定的意义。不是因为它是购物狂欢节或光棍节，而是因为在这一天，我第一次尝试使用 TensorFlow 搭建了一个简单的神经网络。我希望用</description>
     </item>
     
     <item>
       <title>为什么要使用 LaTeX 呢？</title>
-      <link>https://xzywisdili.github.io/post/2017/10/23/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8-latex-%E5%91%A2/</link>
+      <link>http://localhost:1313/post/2017-10-23-why-latex/</link>
       <pubDate>Mon, 23 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.github.io/post/2017/10/23/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8-latex-%E5%91%A2/</guid>
-      <description>这个标题其实不是我对我自己的诘问。作为一个医学生，在习惯使用 LaTeX 完成日常的作业或是论文时，总会有几个同学凑上前来，好奇地问这是个什么样的写作工具。在我做一番简要的介绍后，他们或许会表露出感兴趣，或称赞的神情，然后问下一个重复了很多遍的问题：为什么要使用 LaTeX 呢？
-小众？看起来很高深？这些当然不是使用 LaTeX 的理由了。
-说起开始使用 LaTeX 的缘起，也有点人云亦云的意味。在刷知乎的时候看到了相关问题，了解这样一种排版工具是学术界的「标配」的时候，我想着那为什么不试试呢？
-我在面对一些新东西的时候，喜欢自己亲自上手试试。于是当即就在 Atom 里配置好了 Latex 的环境。从最早的数学建模竞赛的论文到这次的小作业，我总共使用 Latex 完成了 6 篇文章了，也想谈谈自己的体会：
- 易于上手的难度
-在学习新东西的时候，总有人叫难。我觉得真的难的是对自然领域新规则的探索，比如物理定律，生物化学反应等。像 Latex，编程语言这些由人自己创造出来的工具，难度和上面提到差一个量级。在互联网大量入门教程，相关文章和工具包的储备下，我觉得只要半小时就可以完成自己的第一篇文档了。
-参考链接：
- 自学 LaTeX 可以读什么书入门？ LaTeX 开源小屋  美观
-LaTeX 是诞生于 20 世纪 70 年代末到 80 年代初的一款计算机排版软件。计算机科学家高德纳教授在修订其巨著《计算机程序设计艺术》时，为了排版这本书产生的。他曾这样说： &amp;gt; 我不知道怎么办。我花了整整 15 年写这些书，可要是这么难看，我就再也不写了。我怎么能对这样的作品引以为豪呢？
-我一想象到他在说这段话的神情和样貌的时候就想笑，同时也能部分体会到他的感受。谁不希望写着自己名字的东西能够无比精致美观呢？
-也就是说，LaTeX 从诞生之初的定位就是排版。它就好像一个负责排版的管家，让你可以更加关注内容本身，其他东西统统不用你在意。LaTeX 有其内在的排版哲学，初次使用的时候会觉得编译出来的 pdf 是经过精心设计的艺术品。
- 自动化工具
-还有一点让我心动的就是诸如自动化管理参考文献这样的工具。在使用 LaTeX 之前，无论是在 Word 里文献管理还是格式排版，但疲惫不堪。我们不应把大量时间花在排版和格式上，而是应该专注于内容。这也是我倍加推崇 Markdown 的原因。
-创作是一件快乐的事情，让创作出来的东西呈现出美观和整洁的一种状态也应该是简单而清晰的。使用 LaTeX 会给我一种省心的感觉。
-  这篇博文并没有立体地，或是深度地讲解 LaTeX 的方方面面。我只是想象我的一些同学会是这篇文章的可能受众，谈谈我的一些浅显的想法而已。在使用过 LaTeX 完成文章后实在有一种无比舒畅的感觉，这值得使用一篇博文来分享。</description>
+      <guid>http://localhost:1313/post/2017-10-23-why-latex/</guid>
+      <description>这个标题其实不是我对我自己的诘问。作为一个医学生，在习惯使用 LaTeX 完成日常的作业或是论文时，总会有几个同学凑上前来，好奇地问这是个什么样的写作工</description>
     </item>
     
     <item>
       <title>「翻译」如何用 Python 画出像 FiveThirtyEight 那么棒的图表</title>
-      <link>https://xzywisdili.github.io/post/2017/10/15/%E7%BF%BB%E8%AF%91%E5%A6%82%E4%BD%95%E7%94%A8-python-%E7%94%BB%E5%87%BA%E5%83%8F-fivethirtyeight-%E9%82%A3%E4%B9%88%E6%A3%92%E7%9A%84%E5%9B%BE%E8%A1%A8/</link>
+      <link>http://localhost:1313/post/2017-10-15-trans01/</link>
       <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.github.io/post/2017/10/15/%E7%BF%BB%E8%AF%91%E5%A6%82%E4%BD%95%E7%94%A8-python-%E7%94%BB%E5%87%BA%E5%83%8F-fivethirtyeight-%E9%82%A3%E4%B9%88%E6%A3%92%E7%9A%84%E5%9B%BE%E8%A1%A8/</guid>
-      <description>如果你经常读数据科学领域的文章的话，你可能会偶然发现 FiveThirtyEight 上的内容，然后被他们惊艳的图表迷住。于是你自己也想制作如此出色的可视化作品，于是去 Quora 和 Reddit 上问怎么做。你收到了几个回答，但是这些回答都很模糊。你还是不知道怎么搞定这样的图表。
-在这篇博文中，我会手把手地帮你。通过使用 Python 的 matplotlib 和 pandas 库，我们会发现复制出 FTE 可视化作品的核心部分是多么轻松写意。
-这是我们最初的图：
-在这篇文章的结束，我们会做到这样：
-为了跟上，你需要至少了解一些 Python 的基础知识。如果你知道方法和属性之间的区别，那我们就可以开始了。
-介绍数据集 我们将要处理的数据集展现的事从 1970 年到 2011 年在美国授予女性的学位比例。我们使用的数据集是数据科学家 Randal Olson 从国家教育统计中心采集的。
-如果你想通过自己写代码来学习，你可以从 Randal 的博客下载数据集。如果想节省时间的话，你可以跳过下载文件，直接把链接甩给 pandas 的 read_csv() 函数。在下面的代码中，我们做了： - 导入 pandas 模块 - 把数据集的链接通过字符串保存在变量 direct_link 中 - 通过 read_csv() 读取数据，并把内容保存在 women_majors - 使用 info() 方法展示数据集的基本信息，了解行数和列数，同时找一找有没有缺失的值 - 使用 head() 方法显示出数据集的前 5 行可以帮助我们更好地理解数据集的结构
-import pandas as pd direct_link = &#39;http://www.randalolson.com/wp-content/uploads/percent-bachelors-degrees-women-usa.csv&#39; women_majors = pd.</description>
+      <guid>http://localhost:1313/post/2017-10-15-trans01/</guid>
+      <description>如果你经常读数据科学领域的文章的话，你可能会偶然发现 FiveThirtyEight 上的内容，然后被他们惊艳的图表迷住。于是你自己也想制作如此出色的可视化作品，于是去 Quora 和</description>
     </item>
     
     <item>
       <title>用 Python 解决数据结构与算法题 01</title>
-      <link>https://xzywisdili.github.io/post/2017/10/05/%E7%94%A8-python-%E8%A7%A3%E5%86%B3%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E9%A2%98-01/</link>
+      <link>http://localhost:1313/post/2017-10-05-algorithm01/</link>
       <pubDate>Thu, 05 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.github.io/post/2017/10/05/%E7%94%A8-python-%E8%A7%A3%E5%86%B3%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E9%A2%98-01/</guid>
-      <description>这是 Python 解决算法问题的第一期。我想以后每期写出三道题。本人是医学生，没有上过任何数据结构和算法课，对于解决算法题也纯属个人的课余兴趣爱好。还希望各位真正的大牛不吝赐教。我会继续坚持下去的。
-设计一个有 getMin 功能的栈 题目：实现一个特殊的栈，在实现栈的基本功能的基础上，再实现返回栈中最小元素的操作。 要求： 1. pop，push，get_min 操作的时间复杂度都是$O(1)$。 2. 设计的栈类型可以使用线程的栈结构。
-首先先使用 Python 实现一个简单的栈：
-class Stack: __slots__ = (&#39;__items&#39;) def __init__(self): self.__items = [] def is_empty(self): return self.__items == [] def peek(self): return self.__items[-1] def size(self): return len(self.__items) def push(self, new_value): self.__items.append(new_value) def pop(self): return self.__items.pop()  这个问题很简单，解决方法就是使用两个栈，一个用来存放数据，一个用来记录最小值即可。 在 push 新数据的时候，需要和存放最小值的栈 stack_min 栈顶的数据相比较。如果新数据比它小或者等于它，那么也把新数据 push 进 stack_min 的栈顶就可以了。 在 pop 的时候，需要检查输出的数据是否也存在在 stack_min 的栈顶，如果也存在的话，说明这个数据是栈内的最小值，也需要把它从 stack_min 中 pop 出去。
-class MyStack(object): def __init__(self): self.</description>
+      <guid>http://localhost:1313/post/2017-10-05-algorithm01/</guid>
+      <description>这是 Python 解决算法问题的第一期。我想以后每期写出三道题。本人是医学生，没有上过任何数据结构和算法课，对于解决算法题也纯属个人的课余兴趣爱好。还希</description>
     </item>
     
     <item>
       <title>Hello World</title>
-      <link>https://xzywisdili.github.io/post/2017/10/04/hello-world/</link>
+      <link>http://localhost:1313/post/2017-10-04-helloworld/</link>
       <pubDate>Wed, 04 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.github.io/post/2017/10/04/hello-world/</guid>
-      <description>在国庆放假的期间，花了大概半个晚上的时间，使用 hexo 配置好了自己的个人博客。我觉得博客是一个很好的刺激自己不断学习和保持记录习惯的帮手。我也是在身边同学里第一个开通博客的。
-在这个过程中也产生了两点感想：
- 科技不停进步，就计算机和互联网方面完成一件事是越来越简单了。以前如果想写网页，建网站，不可能不去学习 HTML 语言，CSS 以及 JavaScript 等等，而现在越来越多新工具的出现能让你在半个晚上就制作出美观的网页了。
- 以前看到别人精美的博客的时候，总觉得是一件特别了不起的事情，同时也是一件很难办到的事情。但在基于很多前辈写博客的建议，自己也尝试去网上查找教程搭建，之后觉得这件事其实也没有那么难。很多看起来困难的事情，真正动手去做也许没有那么难。
-  这个博客会不定期更新自己的学习笔记，成长过程和生活感悟等等。我更期待多年之后自己回看时候吃惊的那一刻。
-使用 Hexo 进行博客创作的流程 创建一个草稿 $ hexo new draft &amp;quot;new artical&amp;quot;  或者，在 _config.yml 的 Writing 下找到 default_layout，将 post 改为 draft，然后直接使用：
-$ hexo new &amp;quot;new artical&amp;quot;  这样 Hexo 就会自动在 source 文件夹下的 draft 中创建一个等待你编辑的 Markdown 文件了。我个人习惯先在草稿内完成创作，所以使用的是后者。如果想要在生成的页面上看到自己的草稿的话，可以键入命令：
-$ hexo server --draft  完成创作后发表 当在草稿中完成文章后，只需要一行命令：
-$ hexo publish &amp;quot;new artical&amp;quot;  这样 Hexo 会自动把 draft 文件夹里面的 Markdown 文件移动到 post 文件夹里面。随后使用那几个大家都知道的命令生成静态网页，更新到博客里面就好了。</description>
+      <guid>http://localhost:1313/post/2017-10-04-helloworld/</guid>
+      <description>在国庆放假的期间，花了大概半个晚上的时间，使用 hexo 配置好了自己的个人博客。我觉得博客是一个很好的刺激自己不断学习和保持记录习惯的帮手。我也是在</description>
     </item>
     
   </channel>

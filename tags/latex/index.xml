@@ -1,37 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>LaTeX on xzy&#39;s blog</title>
-    <link>https://xzywisdili.github.io/tags/latex/</link>
-    <description>Recent content in LaTeX on xzy&#39;s blog</description>
+    <title>LaTeX on 中文博客 - xzy&#39;s blog</title>
+    <link>http://localhost:1313/tags/latex/</link>
+    <description>Recent content in LaTeX on 中文博客 - xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
+    <language>en</language>
     <lastBuildDate>Mon, 23 Oct 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://xzywisdili.github.io/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/tags/latex/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>为什么要使用 LaTeX 呢？</title>
-      <link>https://xzywisdili.github.io/post/2017/10/23/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8-latex-%E5%91%A2/</link>
+      <link>http://localhost:1313/post/2017-10-23-why-latex/</link>
       <pubDate>Mon, 23 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.github.io/post/2017/10/23/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8-latex-%E5%91%A2/</guid>
-      <description>这个标题其实不是我对我自己的诘问。作为一个医学生，在习惯使用 LaTeX 完成日常的作业或是论文时，总会有几个同学凑上前来，好奇地问这是个什么样的写作工具。在我做一番简要的介绍后，他们或许会表露出感兴趣，或称赞的神情，然后问下一个重复了很多遍的问题：为什么要使用 LaTeX 呢？
-小众？看起来很高深？这些当然不是使用 LaTeX 的理由了。
-说起开始使用 LaTeX 的缘起，也有点人云亦云的意味。在刷知乎的时候看到了相关问题，了解这样一种排版工具是学术界的「标配」的时候，我想着那为什么不试试呢？
-我在面对一些新东西的时候，喜欢自己亲自上手试试。于是当即就在 Atom 里配置好了 Latex 的环境。从最早的数学建模竞赛的论文到这次的小作业，我总共使用 Latex 完成了 6 篇文章了，也想谈谈自己的体会：
- 易于上手的难度
-在学习新东西的时候，总有人叫难。我觉得真的难的是对自然领域新规则的探索，比如物理定律，生物化学反应等。像 Latex，编程语言这些由人自己创造出来的工具，难度和上面提到差一个量级。在互联网大量入门教程，相关文章和工具包的储备下，我觉得只要半小时就可以完成自己的第一篇文档了。
-参考链接：
- 自学 LaTeX 可以读什么书入门？ LaTeX 开源小屋  美观
-LaTeX 是诞生于 20 世纪 70 年代末到 80 年代初的一款计算机排版软件。计算机科学家高德纳教授在修订其巨著《计算机程序设计艺术》时，为了排版这本书产生的。他曾这样说： &amp;gt; 我不知道怎么办。我花了整整 15 年写这些书，可要是这么难看，我就再也不写了。我怎么能对这样的作品引以为豪呢？
-我一想象到他在说这段话的神情和样貌的时候就想笑，同时也能部分体会到他的感受。谁不希望写着自己名字的东西能够无比精致美观呢？
-也就是说，LaTeX 从诞生之初的定位就是排版。它就好像一个负责排版的管家，让你可以更加关注内容本身，其他东西统统不用你在意。LaTeX 有其内在的排版哲学，初次使用的时候会觉得编译出来的 pdf 是经过精心设计的艺术品。
- 自动化工具
-还有一点让我心动的就是诸如自动化管理参考文献这样的工具。在使用 LaTeX 之前，无论是在 Word 里文献管理还是格式排版，但疲惫不堪。我们不应把大量时间花在排版和格式上，而是应该专注于内容。这也是我倍加推崇 Markdown 的原因。
-创作是一件快乐的事情，让创作出来的东西呈现出美观和整洁的一种状态也应该是简单而清晰的。使用 LaTeX 会给我一种省心的感觉。
-  这篇博文并没有立体地，或是深度地讲解 LaTeX 的方方面面。我只是想象我的一些同学会是这篇文章的可能受众，谈谈我的一些浅显的想法而已。在使用过 LaTeX 完成文章后实在有一种无比舒畅的感觉，这值得使用一篇博文来分享。</description>
+      <guid>http://localhost:1313/post/2017-10-23-why-latex/</guid>
+      <description>这个标题其实不是我对我自己的诘问。作为一个医学生，在习惯使用 LaTeX 完成日常的作业或是论文时，总会有几个同学凑上前来，好奇地问这是个什么样的写作工</description>
     </item>
     
   </channel>

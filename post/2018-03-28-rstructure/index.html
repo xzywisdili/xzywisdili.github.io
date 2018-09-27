@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>R 语言基础数据结构 - 中文博客 - xzy&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="徐洲阳" />
+  <meta name="description" content="R 的基础数据结构可以概括为： 相同元素 不同元素 一维（1d） Atomic vector List 二维（2d） Matrix Data frame 多维（nd） Array R 实际上是没有标量，或者 0 维数据结构的。那些所" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.49" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/2018-03-28-rstructure/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="R 语言基础数据结构" />
+<meta property="og:description" content="R 的基础数据结构可以概括为： 相同元素 不同元素 一维（1d） Atomic vector List 二维（2d） Matrix Data frame 多维（nd） Array R 实际上是没有标量，或者 0 维数据结构的。那些所" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/2018-03-28-rstructure/" /><meta property="article:published_time" content="2018-03-28T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-03-28T00:00:00&#43;00:00"/>
+
+<meta itemprop="name" content="R 语言基础数据结构">
+<meta itemprop="description" content="R 的基础数据结构可以概括为： 相同元素 不同元素 一维（1d） Atomic vector List 二维（2d） Matrix Data frame 多维（nd） Array R 实际上是没有标量，或者 0 维数据结构的。那些所">
+
+
+<meta itemprop="datePublished" content="2018-03-28T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-03-28T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1542">
+
+
+
+<meta itemprop="keywords" content="R 语言," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="R 语言基础数据结构"/>
+<meta name="twitter:description" content="R 的基础数据结构可以概括为： 相同元素 不同元素 一维（1d） Atomic vector List 二维（2d） Matrix Data frame 多维（nd） Array R 实际上是没有标量，或者 0 维数据结构的。那些所"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">xzy&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">xzy&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">R 语言基础数据结构</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-03-28 </span>
+        <div class="post-category">
+            
+              <a href="/categories/r-%E8%AF%AD%E8%A8%80/"> R 语言 </a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#r-的一维数据结构">R 的一维数据结构</a>
+<ul>
+<li><a href="#atomic-vectors">Atomic vectors</a></li>
+<li><a href="#lists">Lists</a></li>
+</ul></li>
+<li><a href="#特性-attribute">特性（attribute）</a>
+<ul>
+<li><a href="#names">Names</a></li>
+<li><a href="#factors">Factors</a></li>
+</ul></li>
+<li><a href="#matrix-和-array">matrix 和 array</a></li>
+<li><a href="#data-frame">Data frame</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<p>R 的基础数据结构可以概括为：</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>相同元素</th>
+<th>不同元素</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>一维（1d）</td>
+<td>Atomic vector</td>
+<td>List</td>
+</tr>
+
+<tr>
+<td>二维（2d）</td>
+<td>Matrix</td>
+<td>Data frame</td>
+</tr>
+
+<tr>
+<td>多维（nd）</td>
+<td>Array</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<p>R 实际上是没有标量，或者 0 维数据结构的。那些所谓的标量其实是长度为 1 的向量。</p>
+
+<h2 id="r-的一维数据结构">R 的一维数据结构</h2>
+
+<p>R 语言中的一维数据结构向量（vector）有两种类型：atomic vector 和 list，它们有三个属性：</p>
+
+<ul>
+<li><code>typeof()</code></li>
+<li><code>length()</code></li>
+<li><code>attributes()</code></li>
+</ul>
+
+<p>这两者的区别是，atomic vector 所有元素相同种类，list 中的元素可以不同种类。</p>
+
+<p>注意：<code>is.vector(x)</code> 并不能检查 <code>x</code> 是不是 vector，最好使用 <code>is.atomic(x) || is.list(x)</code>。</p>
+
+<h3 id="atomic-vectors">Atomic vectors</h3>
+
+<ul>
+<li>四种常见类型：logical, integer, double 和 character</li>
+<li>两种少见类型：complex 和 raw</li>
+</ul>
+
+<p>atomic vectors 使用 <code>c()</code> 来创建（<code>c</code> 是 combine 的简写）。</p>
+
+<pre><code class="language-R">int_vec &lt;- c(1L, 2L, 5L)
+dbl_vec &lt;- c(1.2, 2, 3.4)
+log_vec &lt;- c(TRUE, FALSE)
+cha_vec &lt;- c('Li', 'Wang', 'Wu')
+</code></pre>
+
+<p>使用 <code>is.integer()</code>, <code>is.double()</code>, <code>is.logical()</code>, <code>is.character()</code> 来判断各自的类型，想判断是否为 atomic vector，使用 <code>is.atomic()</code>。对于 <code>integer</code> 和 <code>double</code> 类型的，<code>is.numeric()</code> 均会返回 <code>TRUE</code>。</p>
+
+<p>由于 atomic vectors 要保证元素类型一样，所以会自动进行类型转换。如数值型和字符型在一起会转换为字符型，<code>TRUE</code> 和 <code>FALSE</code> 会自动转换为 <code>1</code> 和 <code>0</code>。</p>
+
+<h3 id="lists">Lists</h3>
+
+<p>list 数据结构中可以保存不同类型的数据。使用 <code>is.list()</code> 来检查是否为 list，使用 <code>as.list()</code> 把变量转换为 list，使用 <code>unlist()</code> 把 list 转换为 atomic vector。</p>
+
+<p>疑问：为什么可以使用 <code>unlist()</code> 而不用 <code>as.vector()</code> 来将列表转换为向量？查阅网上的资料，为什么大家喜欢写 <code>as.vector(unlist(list_a))</code> ？</p>
+
+<h2 id="特性-attribute">特性（attribute）</h2>
+
+<p>所有对象都可以有任意特性，用来保存一些关于对象的额外信息。</p>
+
+<p>使用 <code>attr()</code> 获得单独的一个特性，或者使用 <code>attributes()</code> 来获得所有特性，后者获得的是一个列表。</p>
+
+<pre><code class="language-R">y &lt;- 1:10
+attr(y, &quot;my_attribute&quot;) &lt;- &quot;This is a vector&quot;
+attr(y, &quot;my_attribute&quot;)
+str(attributes(y))
+</code></pre>
+
+<p>使用 <code>structure()</code> 可以直接生成一个含有特性的对象：</p>
+
+<pre><code class="language-R">structure(1:10, my_attribute=&quot;this is a vector&quot;)
+</code></pre>
+
+<p>当更改 vector 时，会有三个很重要的特性不会丢失：
+- name，使用 <code>name(x)</code> 获取
+- dimensions，使用 <code>dim(x)</code> 获取
+- class，使用 <code>class(x)</code> 获取</p>
+
+<h3 id="names">Names</h3>
+
+<p>可以通过三种方式命名一个 atomic vector 变量：</p>
+
+<ul>
+<li>创建时命名：<code>x &lt;- c(a=1, b=2, c=3)</code></li>
+<li>设置 <code>names</code> 属性：<code>x2 &lt;- 1:3; names(x2) &lt;- c('a', 'b', 'c')</code></li>
+<li>修改另一个 vector 得到：<code>x3 &lt;- setNames(1:3, c('a', 'b', 'c'))</code></li>
+</ul>
+
+<p>不需要所有值都有名字，如果不对其进行命名，<code>names(x)</code> 会得到 <code>NULL</code>。想要移除 vector 的名字，使用 <code>unname(x)</code> 或 <code>names(x) &lt;- NULL</code>。</p>
+
+<h3 id="factors">Factors</h3>
+
+<p>factor 是一种特殊的 vector，里面的元素只能是预先定义好的值，专门用来描述分类变量。它基于 vector，但额外有两个属性：<code>class</code> 和 <code>levels</code>，使用 <code>table</code> 可以快速查看各组的频数：</p>
+
+<pre><code class="language-R">x &lt;- factor(c('M', 'F', 'F', 'M'))
+class(x)  # &quot;factor&quot;
+levels(x) # &quot;F&quot; &quot;M&quot;
+table(x)
+# x
+# F M
+# 2 2
+</code></pre>
+
+<p>很多加载数据的函数会把字符型的变量自动转化为 factor，设置参数 <code>stringsAsFactors = FALSE</code> 来制止转化行为。很多函数会把 factor 当做是 integer 类型的，会带来很多错误。如果想用 factor 原本的元素，先用 <code>as.character()</code> 把它转化为 character 型。</p>
+
+<h2 id="matrix-和-array">matrix 和 array</h2>
+
+<p>array 可以存放多维数据，matrix 只能是二维，是一种特殊的 array。</p>
+
+<p>创建 array 和 matrix：</p>
+
+<pre><code class="language-R">m &lt;- matrix(1:6, ncol = 3, nrow = 2)
+a &lt;- array(1:12, dim=c(2, 3, 2))
+c &lt;- 1:6
+dim(c) &lt;- c(2, 3)
+</code></pre>
+
+<p>有两类属性：</p>
+
+<ul>
+<li>长度和维度：<code>length()</code>，<code>dim()</code>，<code>nrow()</code>，<code>ncol()</code></li>
+<li>命名：<code>rownames()</code>，<code>colnames()</code>，<code>dimnames()</code></li>
+</ul>
+
+<p>还可以使用 <code>rbind()</code> 和 <code>cbinid()</code> 来生成矩阵。转置 matrix 使用 <code>t()</code>，转置 array 使用 <code>aperm()</code>。</p>
+
+<h2 id="data-frame">Data frame</h2>
+
+<p>Data frame 本质上是一个由 vector 构成的 list 的二维数据结构，所以它兼具 list 和 matrix 的一些属性，如 <code>names()</code>, <code>colnames()</code>, <code>rownames()</code>, <code>length()</code>,</p>
+
+<p>使用 <code>data.frame()</code> 创建一个 Data frame：</p>
+
+<pre><code class="language-R">df &lt;- data.frame(
+  x = 1:5,
+  y = c(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;),
+  stringsAsFactors = FALSE
+)
+</code></pre>
+
+<p>默认会把 character 型的 atomic vector 转换为 factor，需要参数 <code>stringsAsFactors=FALSE</code> 来禁止这一行为。</p>
+
+<p>检查和转换也很简单，和之前介绍的完全配套：<code>is.data.frame()</code>，<code>as.data.frame()</code>。</p>
+
+<p>可以使用 <code>rbind()</code> 和 <code>cbind()</code> 来对 data frame 进行合并，但要注意的是合并时对应的行和列必须配套。</p>
+
+<p>如果你把 list 或者 matrix 传入 <code>data.frame()</code> 中，想构建一列是 list 或者 matrix，它会报错。这时可以采用两种方法：</p>
+
+<ul>
+<li>使用 <code>cbind()</code> 将已有的 data frame 与之合并</li>
+<li>还有就是使用 <code>I()</code>：<code>data.frame(x=1:3, y=I(list(1:2, &quot;a&quot;, FALSE))</code></li>
+</ul>
+
+<p>另外还有个很有趣的一点是：使用 <code>df[FALSE, ]</code> 和 <code>df[, FALSE]</code> 可以分别得到 0 行的和 0 列的 data frame。</p>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">徐洲阳</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2018-03-28</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/r-%E8%AF%AD%E8%A8%80/">R 语言</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/2018-04-02-rsubset/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">学习 R 语言里的 subset</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/2017-12-30-reading/">
+            <span class="next-text nav-default">2017 读书印象</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">徐洲阳</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

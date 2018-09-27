@@ -1,74 +1,136 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <title>博客文章列表 - xzy&#39;s blog</title>
-    <meta property="og:title" content="博客文章列表 - xzy&#39;s blog">
-    
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>博客文章列表 - 中文博客 - xzy&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-    
-      
-    
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
 
-    
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
-    
-    
 
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/fonts.css" />
-    
-  </head>
+<meta name="author" content="Zhouyang Xu" />
+  <meta name="description" content="文章列表 2018 2018/09/03 2018年，中国独立游戏，和他们 2018/04/26 卫生统计学第九周作业 2018/04/11 再吹一波 Rmarkdown 2018/04/02 R 语言基础入门 2018/04/02 学习 R 语言里的 subset 2018/03/28 R 语言基础数据结构 2017 2017/12/30 2017 读" />
 
-  
-  <body class="posts">
-    <header class="masthead">
-      <h1><a href="/">xzy&#39;s blog</a></h1>
+  <meta name="keywords" content="Hugo, theme, even" />
 
-<p class="tagline">Victory won&#39;t come to me unless I go to it.</p>
 
-      <nav class="menu">
-        <input id="menu-check" type="checkbox" />
-        <label id="menu-label" for="menu-check" class="unselectable">
-          <span class="icon close-icon">✕</span>
-          <span class="icon open-icon">☰</span>
-          <span class="text">Menu</span>
-        </label>
-        <ul>
-        
-        
-        <li><a href="/">首页</a></li>
-        
-        <li class="active"><a href="/posts/">博客</a></li>
-        
-        <li><a href="/categories/">分类</a></li>
-        
-        <li><a href="/tags/">标签</a></li>
-        
-        <li><a href="/about/">关于</a></li>
-        
-        
-        </ul>
-      </nav>
+
+
+
+
+<meta name="generator" content="Hugo 0.49" />
+
+
+<link rel="canonical" href="http://localhost:1313/posts/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="博客文章列表" />
+<meta property="og:description" content="文章列表 2018 2018/09/03 2018年，中国独立游戏，和他们 2018/04/26 卫生统计学第九周作业 2018/04/11 再吹一波 Rmarkdown 2018/04/02 R 语言基础入门 2018/04/02 学习 R 语言里的 subset 2018/03/28 R 语言基础数据结构 2017 2017/12/30 2017 读" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/" /><meta property="article:published_time" content="2017-12-30T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2017-12-30T00:00:00&#43;00:00"/>
+
+<meta itemprop="name" content="博客文章列表">
+<meta itemprop="description" content="文章列表 2018 2018/09/03 2018年，中国独立游戏，和他们 2018/04/26 卫生统计学第九周作业 2018/04/11 再吹一波 Rmarkdown 2018/04/02 R 语言基础入门 2018/04/02 学习 R 语言里的 subset 2018/03/28 R 语言基础数据结构 2017 2017/12/30 2017 读">
+
+
+<meta itemprop="datePublished" content="2017-12-30T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2017-12-30T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="183">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="博客文章列表"/>
+<meta name="twitter:description" content="文章列表 2018 2018/09/03 2018年，中国独立游戏，和他们 2018/04/26 卫生统计学第九周作业 2018/04/11 再吹一波 Rmarkdown 2018/04/02 R 语言基础入门 2018/04/02 学习 R 语言里的 subset 2018/03/28 R 语言基础数据结构 2017 2017/12/30 2017 读"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">xzy&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">xzy&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
     </header>
 
-    <article class="main">
-      <header class="title">
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
       
-<h1>博客文章列表</h1>
-
-<h3>Zhouyang Xu
-  /  2017-12-30</h3>
-<hr>
-
-
-      </header>
-
-
-
-
 
 <p><a href="/post/"><strong>文章列表</strong></a></p>
 
@@ -97,28 +159,86 @@
 <li>2017/10/04 <a href="http://www.xzywisdili.com/post/2017/10/04/hello-world/">Hello World</a></li>
 </ul>
 
+  </div>
+</article>
+        </div>
+        
+  
 
-  <footer>
-  
   
 
-  
-  <hr>
-  <div class="copyright">&copy; <a href="https://xzywisdili.github.io">Zhouyang Xu</a> 2017 | <a href="https://github.com/xzywisdili">Github</a> | <a href="https://www.zhihu.com/people/xu-zhou-yang-68/activities">Zhihu</a></div>
-  
-  </footer>
-  </article>
-  
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      </div>
+    </main>
 
-ga('create', 'UA-111725069-2', 'auto');
-ga('send', 'pageview');
-</script>
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
 
-  </body>
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">徐洲阳</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+
+
+
+
+
+</body>
 </html>
-

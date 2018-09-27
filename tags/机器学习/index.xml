@@ -1,28 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>机器学习 on xzy&#39;s blog</title>
-    <link>https://xzywisdili.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
-    <description>Recent content in 机器学习 on xzy&#39;s blog</description>
+    <title>机器学习 on 中文博客 - xzy&#39;s blog</title>
+    <link>http://localhost:1313/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+    <description>Recent content in 机器学习 on 中文博客 - xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
+    <language>en</language>
     <lastBuildDate>Sun, 12 Nov 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://xzywisdili.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>光棍节初探 TensorFlow（一）：数据集的预处理</title>
-      <link>https://xzywisdili.github.io/post/2017/11/12/%E5%85%89%E6%A3%8D%E8%8A%82%E5%88%9D%E6%8E%A2-tensorflow%E4%B8%80%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E9%A2%84%E5%A4%84%E7%90%86/</link>
+      <link>http://localhost:1313/post/2017-11-12-tensorflow01/</link>
       <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.github.io/post/2017/11/12/%E5%85%89%E6%A3%8D%E8%8A%82%E5%88%9D%E6%8E%A2-tensorflow%E4%B8%80%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E9%A2%84%E5%A4%84%E7%90%86/</guid>
-      <description>11 月 11 日这天注定对我具有了一定的意义。不是因为它是购物狂欢节或光棍节，而是因为在这一天，我第一次尝试使用 TensorFlow 搭建了一个简单的神经网络。我希望用几篇文章记录这个过程。
-最近在读 Fundamentals of Deep Learning 这本书。我选择它的原因是讲解得通俗易懂，又会直白地点出重点内容。然而当我读到第三章「Implementing Neural Networks in TensorFlow」时，整个人就好像懵了一样。对于一个从来没接触过 TensorFlow 的人来说，是难以通过看代码直接理解 Graph, Session 等等这些新概念的。于是联想到程序员的思维修炼里面提到的「SQ3R 阅读法」，赶紧先放下这本书，到网上找其他关于 TensorFlow 的资料，值得推荐的是： - TensorFlow 官方文档中文版 - TF Girls「TensorFlow Tutorial」修炼指南（这老师很幽默） - youtube 地址 - bilibili 地址
-没想到我居然也能一天完成了一个基础的神经网络（虽然是从下午 1 点到晚上 2 点）。现在到了「SQ3R 阅读法」中的很重要的 Recite（复述）这步———把这个过程写成文章发布到博客里。
-所使用的数据集来自 The Street View House Numbers (SVHN) Dataset，这是一个关于识别街景照片中出现的数字的数据集。
-读取数据 首先下载 Format 2 格式的数据，即 .mat 格式的数据。我们先在 iPython 里面探索一下数据：
-In[1]: from scipy.io import loadmat as load In[2]: train_data = load(&#39;data/train_32x32.</description>
+      <guid>http://localhost:1313/post/2017-11-12-tensorflow01/</guid>
+      <description>11 月 11 日这天注定对我具有了一定的意义。不是因为它是购物狂欢节或光棍节，而是因为在这一天，我第一次尝试使用 TensorFlow 搭建了一个简单的神经网络。我希望用</description>
     </item>
     
   </channel>

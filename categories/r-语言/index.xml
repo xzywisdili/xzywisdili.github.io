@@ -1,127 +1,86 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R 语言 on xzy&#39;s blog</title>
-    <link>https://xzywisdili.github.io/categories/r-%E8%AF%AD%E8%A8%80/</link>
-    <description>Recent content in R 语言 on xzy&#39;s blog</description>
+    <title>R 语言 on 中文博客 - xzy&#39;s blog</title>
+    <link>http://localhost:1313/categories/r-%E8%AF%AD%E8%A8%80/</link>
+    <description>Recent content in R 语言 on 中文博客 - xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
+    <language>en</language>
     <lastBuildDate>Thu, 12 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://xzywisdili.github.io/categories/r-%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/categories/r-%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>学了 R 语言函数</title>
-      <link>https://xzywisdili.github.io/post/2018/04/12/%E5%AD%A6%E4%BA%86-r-%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0/</link>
+      <link>http://localhost:1313/post/2018-04-12-rfunction/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.github.io/post/2018/04/12/%E5%AD%A6%E4%BA%86-r-%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0/</guid>
+      <guid>http://localhost:1313/post/2018-04-12-rfunction/</guid>
       <description>明天再写，累死了</description>
     </item>
     
     <item>
       <title>再吹一波 Rmarkdown</title>
-      <link>https://xzywisdili.github.io/post/2018/04/11/%E5%86%8D%E5%90%B9%E4%B8%80%E6%B3%A2-rmarkdown/</link>
+      <link>http://localhost:1313/post/2018-04-11-rmarkdown02/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.github.io/post/2018/04/11/%E5%86%8D%E5%90%B9%E4%B8%80%E6%B3%A2-rmarkdown/</guid>
-      <description>既上次写过一篇关于 Rmarkdown 的安利 之后，我在实际使用过程中遇到了一些难题，就是关于中文的问题。如果只使用英文写作的话，完全没有问题；但是一旦使用中文，各级标题，加粗强调和引用都会变得非常奇怪。这也使我暂时搁置下了 Rmarkdown 不用。
-但我多虑了，谢老师早已经提供了近乎完美的解决方案。
-前提准备  安装 Rstudio：地址 安装 Rmarkdown 包：install.packages(&amp;quot;rmarkdown&amp;quot;) 安装 Pandoc：地址 安装 CTeX：在 mac 下推荐 MacTeX 或 MiKTeX  具体细节按下不表。
-安装模板包 install.packages(&amp;quot;rticles&amp;quot;)  这个包中提供了 CTeX 相关模板，可以帮我们解决中文问题。在新建 Rmarkdown 中选择 「From Template」，再在其中选择「CTeX Documents」即可。
-这时候默认是一篇谢老师写好的文章，我们只需要在他的基础上修改就好了，点击 knit 按钮，或者使用快捷键 ctrl + shift + k 看一看生成的 PDF 文档：
-干净，整洁，看起来就像 LaTeX 写出来的！再附加 R 语言代码的强力加持，完美！
-所以我今天也迫不及待使用 Rmarkdown 完成了统计学作业：
-嘿嘿，虽然才学到方差分析，但我还是很骄傲，很膨胀地贴出来了。
-其余资源  关于 Rmarkdown 中的 chunk option Rmarkdown 语法和常用 chunk option 速查记录 使用 Rmarkdown 制作幻灯片的相关内容 使用谢老师完成的写轮眼包制作幻灯片  人们一直希望能够简便地完成一件事，并把它做得漂亮，这也是为什么 Markdown 如此火爆的原因。因为它够简单，够美。我觉得 R 语言也是一种简单而美的编程语言。把 R 和 Markdown 结合在一起，同时能够制作出使用 LaTeX 才能排版出来的文档，实在是令人难掩激动，再写一篇博客狂吹一波。</description>
+      <guid>http://localhost:1313/post/2018-04-11-rmarkdown02/</guid>
+      <description>既上次写过一篇关于 Rmarkdown 的安利 之后，我在实际使用过程中遇到了一些难题，就是关于中文的问题。如果只使用英文写作的话，完全没有问题；但是一旦使用中文</description>
     </item>
     
     <item>
       <title>R 语言基础入门</title>
-      <link>https://xzywisdili.github.io/post/2018/04/02/r-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</link>
+      <link>http://localhost:1313/post/2018-04-02-rlearningnote/</link>
       <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.github.io/post/2018/04/02/r-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</guid>
-      <description>这篇《R 语言基础入门》是我在别人的博客上看到的，完成时间不会晚于 2011 年。觉得总结得相当不错，于是搬运到我的博客上。需要提到，有些链接可能已经失效。
-引言 什么是 R 语言 R 语言是一个开源的数据分析环境，起初是由数位统计学家建立起来，以更好的进行统计计算和绘图，这篇 wiki 中包含了一些基本情况的介绍。由于 R 可以通过安装扩展包（Packages）而得到增强，所以其功能已经远远不限于统计分析，如果感兴趣的话可以到官方网站了解关于其功能的更多信息。
-至于 R 语言名称的由来则是根据两位主要作者的首字母 (Robert Gentleman and Ross Ihaka)，但过于简短的关键词也造成在搜索引擎中很不容易找到相关的资料。不过这个专门的搜索网站可以帮到你。
-为什么要学习 R 语言  R是免费开源软件： 现在很多学术期刊都对分析软件有版权要求，而免费的分析工具可以使你在这方面不会有什么担心。另一方面，如果学术界出现一种新的数据分析方法，那么要过很长一段时间才会出现在商业软件中。但开源软件的好处就在于，很快就会有人将这种方法编写成扩展包，或者你自己就可以做这件工作。 命令行工作方式： 许多人喜欢类似 SPSS 菜单式的操作，这对于初学者来说很方便入门，但对于数据分析来说，命令行操作会更加的灵活，更容易进行编程和自动化处理。而且命令行操作会更容易耍酷，不是嘛，一般人看到你在狂敲一推代码后得到一个分析结果，对你投来的目光是会不一样的。 小巧而精悍： R 语言的安装包更小，大约不到 40M，相比其它几个大家伙它算是非常小巧精悍了。目前 R 语言非常受到专业人士欢迎，根据对数据挖掘大赛胜出者的调查可以发现，他们用的工具基本上都是 R 语言。此外，从最近几次 R 语言大会上可以了解到，咨询业、金融业、医药业都在大量的使用 R 语言，包括 google / facebook 的大公司都在用它。因此，学习 R 语言对你的职业发展一定是有帮助的。  R 语言的下载和 GUI 界面 R 语言安装包可以在官方网站下载，windows 版可直接点击这个连接 在 ubuntu 下面安装 R 则更容易，在终端里头运行如下命令即可 sudo apt-get update sudo apt-get install r-base</description>
+      <guid>http://localhost:1313/post/2018-04-02-rlearningnote/</guid>
+      <description>这篇《R 语言基础入门》是我在别人的博客上看到的，完成时间不会晚于 2011 年。觉得总结得相当不错，于是搬运到我的博客上。需要提到，有些链接可能已经失</description>
     </item>
     
     <item>
       <title>学习 R 语言里的 subset</title>
-      <link>https://xzywisdili.github.io/post/2018/04/02/%E5%AD%A6%E4%B9%A0-r-%E8%AF%AD%E8%A8%80%E9%87%8C%E7%9A%84-subset/</link>
+      <link>http://localhost:1313/post/2018-04-02-rsubset/</link>
       <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.github.io/post/2018/04/02/%E5%AD%A6%E4%B9%A0-r-%E8%AF%AD%E8%A8%80%E9%87%8C%E7%9A%84-subset/</guid>
-      <description>主要内容：
- 三种 subset 操作 六类 subset 不同对象的的重要区别  众所周知，R 语言里面有几种不同的 subset 方法：[]，[[]]，$，但是有时候会产生混淆。所以这篇笔记主要分析理清 R 语言里面的 subset 操作。
-来让我们用 [] 来 subset！ 对 atomic vector 进行 subset 操作时，通常使用 []，总共有 6 种形式：
- 正数：简单，就是返回这个位置上的数（注意 R 语言从 1 开始计数）
- 负数：忽略这个位置上的数
- 逻辑值：只选择那些值为 TRUE 的数，所以基于此可以在 [] 中放入某些逻辑判断条件
-  x[c(TRUE, FALSE, TRUE)] x[x &amp;gt; 3]   什么也没有：返回原始的 vector
- 0：返回一个长度为 0 的 vector
- 字符：如果 vector 设置好了 name，就可以使用字符型进行 subset
-  y &amp;lt;- setNames(x, letters[1:4]) y[c(&amp;quot;d&amp;quot;, &amp;quot;c&amp;quot;, &amp;quot;a&amp;quot;)]  对于 list 来说，subset 可以有两种：使用 [] 往往会返回一个 list，使用 [[]] 和 $ 则会得到 list 的组成部分。</description>
+      <guid>http://localhost:1313/post/2018-04-02-rsubset/</guid>
+      <description>主要内容： 三种 subset 操作 六类 subset 不同对象的的重要区别 众所周知，R 语言里面有几种不同的 subset 方法：[]，[[]]，$，但是有时候会产生混淆。所以这篇笔记</description>
     </item>
     
     <item>
       <title>R 语言基础数据结构</title>
-      <link>https://xzywisdili.github.io/post/2018/03/28/r-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+      <link>http://localhost:1313/post/2018-03-28-rstructure/</link>
       <pubDate>Wed, 28 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.github.io/post/2018/03/28/r-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
-      <description>R 的基础数据结构可以概括为：
-    相同元素 不同元素     一维（1d） Atomic vector List   二维（2d） Matrix Data frame   多维（nd） Array     R 实际上是没有标量，或者 0 维数据结构的。那些所谓的标量其实是长度为 1 的向量。
-R 的一维数据结构 R 语言中的一维数据结构向量（vector）有两种类型：atomic vector 和 list，它们有三个属性：
- typeof() length() attributes()  这两者的区别是，atomic vector 所有元素相同种类，list 中的元素可以不同种类。
-注意：is.vector(x) 并不能检查 x 是不是 vector，最好使用 is.atomic(x) || is.list(x)。
-Atomic vectors  四种常见类型：logical, integer, double 和 character 两种少见类型：complex 和 raw  atomic vectors 使用 c() 来创建（c 是 combine 的简写）。</description>
+      <guid>http://localhost:1313/post/2018-03-28-rstructure/</guid>
+      <description>R 的基础数据结构可以概括为： 相同元素 不同元素 一维（1d） Atomic vector List 二维（2d） Matrix Data frame 多维（nd） Array R 实际上是没有标量，或者 0 维数据结构的。那些所</description>
     </item>
     
     <item>
       <title>轻松愉快地开始使用 Rmarkdown</title>
-      <link>https://xzywisdili.github.io/post/2017/12/23/%E8%BD%BB%E6%9D%BE%E6%84%89%E5%BF%AB%E5%9C%B0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8-rmarkdown/</link>
+      <link>http://localhost:1313/post/2017-12-23-rmarkdown/</link>
       <pubDate>Sat, 23 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.github.io/post/2017/12/23/%E8%BD%BB%E6%9D%BE%E6%84%89%E5%BF%AB%E5%9C%B0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8-rmarkdown/</guid>
-      <description>R 语言世界里的一个大杀器。
-我想，在所有接触和学习 R 语言的初学者（当然包括我）眼里，有两个东西是相当酷的。一个是 shiny，可以轻松做出交互式的图表；而另一个就是 Rmarkdown 了。
-现如今我想 markdown 是何物已经不用过多介绍了，它语法简洁，门槛很低，已经到了一种是个人就会的地步。那 Rmarkdown 到底是什么呢？
-Rmarkdown 的官网上有这样几段介绍：
- Turn your analyses into high quality documents, reports, presentations and dashboards. Use a productive notebook interface to weave together narrative text and code to produce elegantly formatted output. Use multiple languages including R, Python, and SQL.
- 简单来说，就是 Rmarkdown 能够使用 markdown 的语法，支持多种语言代码的运行和输出（R, Python 和 SQL），输出高质量的文档。
-这个所谓的「高质量」的文档到底是怎么样的呢？可以这么说，有不少的人都认为 Rmarkdown 可以成为科技写作的主流：
- 为什么 Markdown + R 有叫大概率成为科技写作主流</description>
+      <guid>http://localhost:1313/post/2017-12-23-rmarkdown/</guid>
+      <description>R 语言世界里的一个大杀器。 我想，在所有接触和学习 R 语言的初学者（当然包括我）眼里，有两个东西是相当酷的。一个是 shiny，可以轻松做出交互式</description>
     </item>
     
     <item>
       <title>dplyr 包里面必会的处理数据方法</title>
-      <link>https://xzywisdili.github.io/post/2017/12/19/dplyr-%E5%8C%85%E9%87%8C%E9%9D%A2%E5%BF%85%E4%BC%9A%E7%9A%84%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE%E6%96%B9%E6%B3%95/</link>
+      <link>http://localhost:1313/post/2017-12-19-datatransform/</link>
       <pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.github.io/post/2017/12/19/dplyr-%E5%8C%85%E9%87%8C%E9%9D%A2%E5%BF%85%E4%BC%9A%E7%9A%84%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE%E6%96%B9%E6%B3%95/</guid>
-      <description>最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看。最近学习的很简单，就是 dplyr 包里面最基础的 5 种数据处理方法。
-所用的数据集 这次我们所有数据处理的用法范例都是建立在 flights 数据集上的，先来看看这个数据集：
-library(nycflights13) library(tidyverse) head(flights)  可以看到，每一条数据代表的是一次航班飞行记录的相关信息：
-# A tibble: 6 x 19 year month day dep_time sched_dep_time dep_delay arr_time sched_arr_time &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;int&amp;gt; &amp;lt;int&amp;gt; 1 2013 1 1 517 515 2 830 819 2 2013 1 1 533 529 4 850 830 3 2013 1 1 542 540 2 923 850 4 2013 1 1 544 545 -1 1004 1022 5 2013 1 1 554 600 -6 812 837 6 2013 1 1 554 558 -4 740 728 # .</description>
+      <guid>http://localhost:1313/post/2017-12-19-datatransform/</guid>
+      <description>最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看</description>
     </item>
     
     <item>
       <title>R 语言的那些最最最基础</title>
-      <link>https://xzywisdili.github.io/post/2017/11/21/r-%E8%AF%AD%E8%A8%80%E7%9A%84%E9%82%A3%E4%BA%9B%E6%9C%80%E6%9C%80%E6%9C%80%E5%9F%BA%E7%A1%80/</link>
+      <link>http://localhost:1313/post/2017-11-21-rbasic/</link>
       <pubDate>Tue, 21 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.github.io/post/2017/11/21/r-%E8%AF%AD%E8%A8%80%E7%9A%84%E9%82%A3%E4%BA%9B%E6%9C%80%E6%9C%80%E6%9C%80%E5%9F%BA%E7%A1%80/</guid>
-      <description>在 R 语言的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么就一定不能错过 R。本文只总结了 R 语言里面的那些最最最基础，想用好 R 必须要背过的内容。话不多说，赶紧上车。
-基本算数 直接进行算数运算：
-&amp;gt; 4 + 6 [1] 10  将值保存在对象中进行运算：
-&amp;gt; x &amp;lt;- 6 &amp;gt; y &amp;lt;- 4 &amp;gt; z &amp;lt;- x + y &amp;gt; z [1] 10  显示我们已经创建的对象：
-&amp;gt; ls() [1] &amp;quot;x&amp;quot; &amp;quot;y&amp;quot; &amp;quot;z&amp;quot;  清除一些对象：
-&amp;gt; rm(x, y) &amp;gt; ls() [1] &amp;quot;z&amp;quot;  创建向量（vector）：
-&amp;gt; z &amp;lt;- c(5, 9, 1, 0)  使用函数 c(x, y) 可以做到向量的连接：</description>
+      <guid>http://localhost:1313/post/2017-11-21-rbasic/</guid>
+      <description>在 R 语言的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么</description>
     </item>
     
   </channel>

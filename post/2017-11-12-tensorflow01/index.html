@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>光棍节初探 TensorFlow（一）：数据集的预处理 - 中文博客 - xzy&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="徐洲阳" />
+  <meta name="description" content="11 月 11 日这天注定对我具有了一定的意义。不是因为它是购物狂欢节或光棍节，而是因为在这一天，我第一次尝试使用 TensorFlow 搭建了一个简单的神经网络。我希望用" />
+
+  <meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.49" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/2017-11-12-tensorflow01/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="光棍节初探 TensorFlow（一）：数据集的预处理" />
+<meta property="og:description" content="11 月 11 日这天注定对我具有了一定的意义。不是因为它是购物狂欢节或光棍节，而是因为在这一天，我第一次尝试使用 TensorFlow 搭建了一个简单的神经网络。我希望用" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/2017-11-12-tensorflow01/" /><meta property="article:published_time" content="2017-11-12T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2017-11-12T00:00:00&#43;00:00"/>
+
+<meta itemprop="name" content="光棍节初探 TensorFlow（一）：数据集的预处理">
+<meta itemprop="description" content="11 月 11 日这天注定对我具有了一定的意义。不是因为它是购物狂欢节或光棍节，而是因为在这一天，我第一次尝试使用 TensorFlow 搭建了一个简单的神经网络。我希望用">
+
+
+<meta itemprop="datePublished" content="2017-11-12T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2017-11-12T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1922">
+
+
+
+<meta itemprop="keywords" content="Python,机器学习,TensorFlow," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="光棍节初探 TensorFlow（一）：数据集的预处理"/>
+<meta name="twitter:description" content="11 月 11 日这天注定对我具有了一定的意义。不是因为它是购物狂欢节或光棍节，而是因为在这一天，我第一次尝试使用 TensorFlow 搭建了一个简单的神经网络。我希望用"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">xzy&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">xzy&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">光棍节初探 TensorFlow（一）：数据集的预处理</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2017-11-12 </span>
+        <div class="post-category">
+            
+              <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"> 机器学习 </a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#读取数据">读取数据</a></li>
+<li><a href="#转换数据维度">转换数据维度</a></li>
+<li><a href="#压缩数据通道数-可视化数据">压缩数据通道数，可视化数据</a></li>
+<li><a href="#结语">结语</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<p>11 月 11 日这天注定对我具有了一定的意义。不是因为它是购物狂欢节或光棍节，而是因为在这一天，我第一次尝试使用 TensorFlow 搭建了一个简单的神经网络。我希望用几篇文章记录这个过程。</p>
+
+<p>最近在读 <a href="https://book.douban.com/subject/26425877/">Fundamentals of Deep Learning</a> 这本书。我选择它的原因是讲解得通俗易懂，又会直白地点出重点内容。然而当我读到第三章「Implementing Neural Networks in TensorFlow」时，整个人就好像懵了一样。对于一个从来没接触过 TensorFlow 的人来说，是难以通过看代码直接理解 Graph, Session 等等这些新概念的。于是联想到<a href="https://book.douban.com/subject/5372651/">程序员的思维修炼</a>里面提到的「SQ3R 阅读法」，赶紧先放下这本书，到网上找其他关于 TensorFlow 的资料，值得推荐的是：
+- <a href="http://wiki.jikexueyuan.com/project/tensorflow-zh/">TensorFlow 官方文档中文版</a>
+- TF Girls「TensorFlow Tutorial」修炼指南（这老师很幽默）
+    - <a href="https://www.youtube.com/watch?v=8X9QUwtRSs0&amp;list=PLwY2GJhAPWRcZxxVFpNhhfivuW0kX15yG">youtube 地址</a>
+    - <a href="https://www.bilibili.com/video/av11079460/?from=search&amp;seid=13313846105672125761">bilibili 地址</a></p>
+
+<p>没想到我居然也能一天完成了一个基础的神经网络（虽然是从下午 1 点到晚上 2 点）。现在到了「SQ3R 阅读法」中的很重要的 Recite（复述）这步———把这个过程写成文章发布到博客里。</p>
+
+<p>所使用的数据集来自 <a href="http://ufldl.stanford.edu/housenumbers/">The Street View House Numbers (SVHN) Dataset</a>，这是一个关于识别街景照片中出现的数字的数据集。</p>
+
+<p><img src="/tensorflow01/dataset.png" alt="Street View" /></p>
+
+<h2 id="读取数据">读取数据</h2>
+
+<p>首先下载 Format 2 格式的数据，即 <code>.mat</code> 格式的数据。我们先在 iPython 里面探索一下数据：</p>
+
+<pre><code class="language-Python">In[1]: from scipy.io import loadmat as load
+
+In[2]: train_data = load('data/train_32x32.mat')
+  ...: test_data = load('data/test_32x32.mat')
+
+In[3]: train_data.keys()
+Out[3]: dict_keys(['__header__', '__version__', '__globals__', 'X', 'y'])
+
+In[4]: train_data['X'].shape
+Out[4]: (32, 32, 3, 73257)
+
+In[5]: train_data['y'].shape
+Out[5]: (73257, 1)
+</code></pre>
+
+<p>我们把训练集和测试集的样本和标签提取出来。我不想让训练数据集的标签是一个二维数组，所以简单调整一下：</p>
+
+<pre><code class="language-Python">In[6]: train_samples = train_data['X']
+  ...: train_labels = train_data['y'].reshape(train_data['y'].shape[0])
+  ...: test_samples = test_data['X']
+  ...: test_labels = test_data['y'].reshape(test_data['y'].shape[0])
+
+In[7]: train_labels.shape
+Out[7]: (73257,)
+</code></pre>
+
+<h2 id="转换数据维度">转换数据维度</h2>
+
+<p>这时 <code>train_samples</code> 的维度是 <code>(32, 32, 3, 73257)</code>，即(图片高，图片宽，通道数，图片数)。很奇怪原始格式把图片数放在了第四个维度上。我们希望 <code>train_samples</code> 的维度是(图片数，图片高，图片宽，通道数)，即 <code>(73257, 32, 32, 3)</code> 的模式。而 <code>train_labels</code> 也需要一些变化。现在的 <code>train_labels</code> 中每个 <code>label</code> 都是图像上对应的数字，如 3，我们希望它变成 <code>[0, 0, 0, 1, 0, 0, 0, 0, 0, 0]</code> 的模式。其中麻烦一点的是 <code>.mat</code> 格式的数据中并没有 0，而是用 10 来表示 0，这需要我们做一点小小的调整：</p>
+
+<pre><code class="language-Python">import numpy as np
+
+def reformat(samples, labels):
+    # 改变原始数据的形状
+    # (图片高，图片宽，通道数，图片数) -&gt; (图片数，图片高，图片宽，通道数)
+    # labels 转换为 one-hot encoding [3] -&gt; [0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
+    samples = np.transpose(samples, (3, 0, 1, 2))
+
+    one_hot_labels = np.zeros((labels.shape[0], 10))
+    for i, label in enumerate(labels):
+        index = label if label != 10 else 0
+        one_hot_labels[i, index] = 1.0
+
+    return samples, one_hot_labels
+</code></pre>
+
+<h2 id="压缩数据通道数-可视化数据">压缩数据通道数，可视化数据</h2>
+
+<p>然后再把图片的 RGB 三通道压缩成一通道的灰度模式，同时压缩映射到 -1.0~1.0 上：</p>
+
+<pre><code class="language-Python">def normalize(samples):
+    &quot;&quot;&quot;
+    @ samples: numpy array
+    &quot;&quot;&quot;
+    samples = np.add.reduce(samples, keepdims=True, axis=3) / 3.0
+    return samples / 128.0 - 1.0
+</code></pre>
+
+<p>改变成灰度图之后，我们现在想看看最初的图片和灰度图。参数 <code>huidu</code> 是用来表示想要展示的是否是灰度图。如果是，则调用关于灰度图的相关函数：</p>
+
+<pre><code class="language-Python">import matplotlib.pyplot as plt
+
+def inspect(datasets, labels, i, huidu=False):
+    # 显示图片查看
+    print(labels[i])
+
+    if huidu:
+        huidu_shape = (datasets.shape[1], datasets.shape[2])
+        plt.imshow(datasets[i].reshape(huidu_shape), cmap=&quot;gray&quot;)
+    else:
+        plt.imshow(datasets[i])
+    plt.show()
+</code></pre>
+
+<p>我们对训练集和测试集进行调整维度和压缩通道的预处理：</p>
+
+<pre><code class="language-Python">In[8]: re_train_samples, re_train_labels = reformat(train_samples, train_labels)
+  ...: re_test_samples, re_test_labels = reformat(test_samples, test_labels)
+
+In[9]: final_train_samples = normalize(re_train_samples)
+  ...: final_train_labels = re_train_labels
+  ...: final_test_samples = normalize(re_test_samples)
+  ...: final_test_labels = re_test_labels
+</code></pre>
+
+<p>现在我们随便选择训练集中的一个样本，看看它的原始图片和灰度图：</p>
+
+<pre><code class="language-Python">inspect(re_train_samples, train_labels, 31960)
+</code></pre>
+
+<p><img src="/tensorflow01/inspect_color.png" alt="inspect color" /></p>
+
+<pre><code class="language-Python">inspect(final_train_samples, train_labels, 31960, huidu=True)
+</code></pre>
+
+<p>下面就是灰度图：
+<img src="/tensorflow01/inspect_huidu.png" alt="inspect huidu" />
+好了，一切完美运行！最后，我们想看看我们训练集和测试集的标签的分布情况，画出数字 0~9 的分布情况的直方图：</p>
+
+<pre><code class="language-Python">from collections import Counter
+
+def distribution(labels, name):
+    # 查看 labels 的分布，并画出统计图
+    count = Counter(labels)
+    y_pos = np.arange(len(count))
+    y_count = [count[i] if i != 0 else count[10] for i in y_pos]
+    plt.bar(y_pos, y_count, align='center', alpha=0.5)
+    plt.xticks(y_pos, y_pos)
+    plt.ylabel('Count')
+    plt.title(name + ' Label Distribution')
+    plt.show()
+</code></pre>
+
+<pre><code class="language-Python">In[10]: distribution(train_labels, 'Train')
+</code></pre>
+
+<p><img src="/tensorflow01/train_label_dist.png" alt="train labels distribution" /></p>
+
+<pre><code class="language-Python">In[11]: distribution(test_labels, 'Train')
+</code></pre>
+
+<p><img src="/tensorflow01/test_label_dist.png" alt="test labels distribution" /></p>
+
+<p>可以看到 <code>train_labels</code> 和 <code>test_labels</code> 具有相似的分布结构，说明训练集和测试集的划分还算合理，我们可以接下来继续用。</p>
+
+<p>至此，我们的预处理就结束了。我们把这里所有的代码整理为 <code>load.py</code> 以供接下来的神经网络使用：</p>
+
+<pre><code class="language-Python">from scipy.io import loadmat as load
+import matplotlib.pyplot as plt
+import numpy as np
+from collections import Counter
+
+
+# 使用 tensorflow 实现图像识别
+def load_data():
+    train_data = load('data/train_32x32.mat')
+    test_data = load('data/test_32x32.mat')
+    # extra_data = load('data/extra_32x32.mat')
+    return train_data, test_data
+
+
+def reformat(samples, labels):
+    # 改变原始数据的形状
+    # (图片高，图片宽，通道数，图片数) -&gt; (图片数，图片高，图片宽，通道数)
+    # labels 转换为 one-hot encoding [3] -&gt; [0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
+    samples = np.transpose(samples, (3, 0, 1, 2))
+
+    one_hot_labels = np.zeros((labels.shape[0], 10))
+    for i, label in enumerate(labels):
+        index = label if label != 10 else 0
+        one_hot_labels[i, index] = 1.0
+
+    return samples, one_hot_labels
+
+
+def normalize(samples):
+    &quot;&quot;&quot;
+    灰度化：(R + G + B) / 3（省内存，加快训练速度）
+    将图片从 0 ~ 255 映射到 -1.0 ~ 1.0
+    @ samples: numpy array
+    &quot;&quot;&quot;
+    samples = np.add.reduce(samples, keepdims=True, axis=3) / 3.0
+    return samples / 128.0 - 1.0
+
+
+def distribution(labels, name):
+    # 查看 labels 的分布，并画出统计图
+    count = Counter(labels)
+    y_pos = np.arange(len(count))
+    y_count = [count[i] if i != 0 else count[10] for i in y_pos]
+    plt.bar(y_pos, y_count, align='center', alpha=0.5)
+    plt.xticks(y_pos, y_pos)
+    plt.ylabel('Count')
+    plt.title(name + ' Label Distribution')
+    plt.show()
+
+
+def inspect(datasets, labels, i, huidu=False):
+    # 显示图片查看
+    print(labels[i])
+
+    if huidu:
+        huidu_shape = (datasets.shape[1], datasets.shape[2])
+        plt.imshow(datasets[i].reshape(huidu_shape), cmap=&quot;gray&quot;)
+    else:
+        plt.imshow(datasets[i])
+    plt.show()
+
+train_data, test_data = load_data()
+
+train_samples = train_data['X']
+train_labels = train_data['y'].reshape(train_data['y'].shape[0])
+test_samples = test_data['X']
+test_labels = test_data['y'].reshape(test_data['y'].shape[0])
+# test_samples = extra_data['X']
+# test_labels = extra_data['y']
+
+print('Train Data Samples Shape: ', train_samples.shape)
+print('Train Data Labels Shape: ', train_labels.shape)
+
+print('Test Data Samples Shape: ', test_samples.shape)
+print('Test Data Labels Shape: ', test_labels.shape)
+
+# print('Extra Data Samples Shape: ', extra_data['X'].shape)
+# print('Extra Data Labels Shape: ', extra_data['y'].shape)
+
+re_train_samples, re_train_labels = reformat(train_samples, train_labels)
+re_test_samples, re_test_labels = reformat(test_samples, test_labels)
+
+final_train_samples = normalize(re_train_samples)
+final_train_labels = re_train_labels
+final_test_samples = normalize(re_test_samples)
+final_test_labels = re_test_labels
+
+num_labels = final_train_labels.shape[1] # 10
+image_size = final_train_samples.shape[1] # 32
+num_channel = final_train_samples.shape[3] # 1
+
+if __name__ == '__main__':
+    # See some pictures
+    inspect(re_train_samples, train_labels, 1, huidu=False)
+
+    # See some gray pictures
+    inspect(final_train_samples, train_labels, 1, huidu=True)
+
+    # See the distribution of the labels
+    distribution(train_labels, 'Train')
+    distribution(test_labels, 'Test')
+</code></pre>
+
+<h2 id="结语">结语</h2>
+
+<p>你可能心里说：「骗子，你根本没写 TensorFlow 的内容」。嘿嘿，先别打我，我们接下来会把神经网络的相关代码写在另一个程序 <code>network.py</code> 里面，在那里就需要 TensorFlow 的内容了。碍于篇幅，不好在一篇文章中写完。关于使用 TensorFlow 构建基础的神经网络，我会在下一篇文章中介绍。</p>
+
+<p>顺带一提，在写日志的时候，把自己写过的代码再过一遍，我觉得是一种很好的学习方法：）为早日精通 TensorFlow 奋斗！</p>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">徐洲阳</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2017-11-12</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/python/">Python</a>
+          
+          <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
+          
+          <a href="/tags/tensorflow/">TensorFlow</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/2017-11-21-rbasic/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">R 语言的那些最最最基础</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/2017-10-23-why-latex/">
+            <span class="next-text nav-default">为什么要使用 LaTeX 呢？</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">徐洲阳</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
