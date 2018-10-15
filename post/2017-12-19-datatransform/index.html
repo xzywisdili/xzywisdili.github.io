@@ -17,7 +17,9 @@
 
 
 <meta name="author" content="徐洲阳" />
-  <meta name="description" content="最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看" />
+  <meta name="description" content="最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看。最近学习的很简单，就是 dplyr 包里面最基础的 5 种数据处理方法。
+
+" />
 
   <meta name="keywords" content="Hugo, theme, even" />
 
@@ -50,13 +52,17 @@
 
 
 <meta property="og:title" content="dplyr 包里面必会的处理数据方法" />
-<meta property="og:description" content="最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看" />
+<meta property="og:description" content="最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看。最近学习的很简单，就是 dplyr 包里面最基础的 5 种数据处理方法。
+
+" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/post/2017-12-19-datatransform/" /><meta property="article:published_time" content="2017-12-19T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2017-12-19T00:00:00&#43;00:00"/>
 
 <meta itemprop="name" content="dplyr 包里面必会的处理数据方法">
-<meta itemprop="description" content="最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看">
+<meta itemprop="description" content="最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看。最近学习的很简单，就是 dplyr 包里面最基础的 5 种数据处理方法。
+
+">
 
 
 <meta itemprop="datePublished" content="2017-12-19T00:00:00&#43;00:00" />
@@ -68,7 +74,9 @@
 <meta itemprop="keywords" content="R 语言,数据处理," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="dplyr 包里面必会的处理数据方法"/>
-<meta name="twitter:description" content="最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看"/>
+<meta name="twitter:description" content="最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看。最近学习的很简单，就是 dplyr 包里面最基础的 5 种数据处理方法。
+
+"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -173,9 +181,9 @@
 
     
     <div class="post-content">
-      
+      <p>最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看。最近学习的很简单，就是 <code>dplyr</code> 包里面最基础的 5 种数据处理方法。</p>
 
-<p>最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看。最近学习的很简单，就是 <code>dplyr</code> 包里面最基础的 5 种数据处理方法。</p>
+<p></p>
 
 <h2 id="所用的数据集">所用的数据集</h2>
 
@@ -413,7 +421,6 @@ head(flights)
 <p>我们先把 <code>dep_delay</code> 和 <code>arr_delay</code> 这两列里面包含 <code>na</code>值的观测移除掉，以航班尾号分组，查看每组的数量和到达延迟时间，并作图。</p>
 
 <p>这篇虽然只是相当基本地介绍了 5 种函数，但是博客也够长了，就先到这里打住吧。</p>
-
     </div>
 
     

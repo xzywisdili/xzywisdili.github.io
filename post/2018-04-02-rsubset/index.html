@@ -17,7 +17,9 @@
 
 
 <meta name="author" content="徐洲阳" />
-  <meta name="description" content="主要内容： 三种 subset 操作 六类 subset 不同对象的的重要区别 众所周知，R 语言里面有几种不同的 subset 方法：[]，[[]]，$，但是有时候会产生混淆。所以这篇笔记" />
+  <meta name="description" content="主要内容：
+ 三种 subset 操作 六类 subset 不同对象的的重要区别  
+" />
 
   <meta name="keywords" content="Hugo, theme, even" />
 
@@ -50,13 +52,29 @@
 
 
 <meta property="og:title" content="学习 R 语言里的 subset" />
-<meta property="og:description" content="主要内容： 三种 subset 操作 六类 subset 不同对象的的重要区别 众所周知，R 语言里面有几种不同的 subset 方法：[]，[[]]，$，但是有时候会产生混淆。所以这篇笔记" />
+<meta property="og:description" content="主要内容：
+
+
+三种 subset 操作
+六类 subset
+不同对象的的重要区别
+
+
+" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/post/2018-04-02-rsubset/" /><meta property="article:published_time" content="2018-04-02T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2018-04-02T00:00:00&#43;00:00"/>
 
 <meta itemprop="name" content="学习 R 语言里的 subset">
-<meta itemprop="description" content="主要内容： 三种 subset 操作 六类 subset 不同对象的的重要区别 众所周知，R 语言里面有几种不同的 subset 方法：[]，[[]]，$，但是有时候会产生混淆。所以这篇笔记">
+<meta itemprop="description" content="主要内容：
+
+
+三种 subset 操作
+六类 subset
+不同对象的的重要区别
+
+
+">
 
 
 <meta itemprop="datePublished" content="2018-04-02T00:00:00&#43;00:00" />
@@ -68,7 +86,15 @@
 <meta itemprop="keywords" content="R 语言," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="学习 R 语言里的 subset"/>
-<meta name="twitter:description" content="主要内容： 三种 subset 操作 六类 subset 不同对象的的重要区别 众所周知，R 语言里面有几种不同的 subset 方法：[]，[[]]，$，但是有时候会产生混淆。所以这篇笔记"/>
+<meta name="twitter:description" content="主要内容：
+
+
+三种 subset 操作
+六类 subset
+不同对象的的重要区别
+
+
+"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -169,15 +195,15 @@
 
     
     <div class="post-content">
-      
-
-<p>主要内容：</p>
+      <p>主要内容：</p>
 
 <ul>
 <li>三种 subset 操作</li>
 <li>六类 subset</li>
 <li>不同对象的的重要区别</li>
 </ul>
+
+<p></p>
 
 <p>众所周知，R 语言里面有几种不同的 subset 方法：<code>[]</code>，<code>[[]]</code>，<code>$</code>，但是有时候会产生混淆。所以这篇笔记主要分析理清 R 语言里面的 subset 操作。</p>
 
@@ -363,7 +389,6 @@ df[rep(1:nrow(df), df$n), ]
 <pre><code class="language-R">mtcars[mtcars$gear == 5 &amp; mtcars$cyl == 4, ]
 subset(mtcars, gear == 5 &amp; cyl == 4)
 </code></pre>
-
     </div>
 
     

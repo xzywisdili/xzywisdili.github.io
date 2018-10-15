@@ -6,19 +6,10 @@
     <description>Recent content in R 语言 on 中文博客 - xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 12 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Apr 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/r-%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>学了 R 语言函数</title>
-      <link>http://localhost:1313/post/2018-04-12-rfunction/</link>
-      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/post/2018-04-12-rfunction/</guid>
-      <description>明天再写，累死了</description>
-    </item>
     
     <item>
       <title>再吹一波 Rmarkdown</title>
@@ -26,7 +17,9 @@
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/post/2018-04-11-rmarkdown02/</guid>
-      <description>既上次写过一篇关于 Rmarkdown 的安利 之后，我在实际使用过程中遇到了一些难题，就是关于中文的问题。如果只使用英文写作的话，完全没有问题；但是一旦使用中文</description>
+      <description>&lt;p&gt;既上次写过一篇关于 &lt;a href=&#34;http://www.xzywisdili.com/post/2017/12/23/%E8%BD%BB%E6%9D%BE%E6%84%89%E5%BF%AB%E5%9C%B0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8-rmarkdown/&#34;&gt;Rmarkdown 的安利&lt;/a&gt; 之后，我在实际使用过程中遇到了一些难题，就是关于中文的问题。如果只使用英文写作的话，完全没有问题；但是一旦使用中文，各级标题，加粗强调和引用都会变得非常奇怪。这也使我暂时搁置下了 Rmarkdown 不用。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -35,7 +28,9 @@
       <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/post/2018-04-02-rlearningnote/</guid>
-      <description>这篇《R 语言基础入门》是我在别人的博客上看到的，完成时间不会晚于 2011 年。觉得总结得相当不错，于是搬运到我的博客上。需要提到，有些链接可能已经失</description>
+      <description>&lt;p&gt;这篇《R 语言基础入门》是我在别人的博客上看到的，完成时间不会晚于 2011 年。觉得总结得相当不错，于是搬运到我的博客上。需要提到，有些链接可能已经失效。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -44,7 +39,15 @@
       <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/post/2018-04-02-rsubset/</guid>
-      <description>主要内容： 三种 subset 操作 六类 subset 不同对象的的重要区别 众所周知，R 语言里面有几种不同的 subset 方法：[]，[[]]，$，但是有时候会产生混淆。所以这篇笔记</description>
+      <description>&lt;p&gt;主要内容：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;三种 subset 操作&lt;/li&gt;
+&lt;li&gt;六类 subset&lt;/li&gt;
+&lt;li&gt;不同对象的的重要区别&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -53,7 +56,9 @@
       <pubDate>Wed, 28 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/post/2018-03-28-rstructure/</guid>
-      <description>R 的基础数据结构可以概括为： 相同元素 不同元素 一维（1d） Atomic vector List 二维（2d） Matrix Data frame 多维（nd） Array R 实际上是没有标量，或者 0 维数据结构的。那些所</description>
+      <description>&lt;p&gt;介绍了 R 语言中的内置基础数据结构。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -62,7 +67,9 @@
       <pubDate>Sat, 23 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/post/2017-12-23-rmarkdown/</guid>
-      <description>R 语言世界里的一个大杀器。 我想，在所有接触和学习 R 语言的初学者（当然包括我）眼里，有两个东西是相当酷的。一个是 shiny，可以轻松做出交互式</description>
+      <description>&lt;p&gt;R 语言世界里的一个大杀器。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -71,7 +78,9 @@
       <pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/post/2017-12-19-datatransform/</guid>
-      <description>最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看</description>
+      <description>&lt;p&gt;最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看。最近学习的很简单，就是 &lt;code&gt;dplyr&lt;/code&gt; 包里面最基础的 5 种数据处理方法。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -80,7 +89,9 @@
       <pubDate>Tue, 21 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/post/2017-11-21-rbasic/</guid>
-      <description>在 R 语言的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么</description>
+      <description>&lt;p&gt;在 &lt;a href=&#34;https://www.r-project.org/&#34;&gt;R 语言&lt;/a&gt;的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么就一定不能错过 R。本文只总结了 R 语言里面的那些最最最基础，想用好 R 必须要背过的内容。话不多说，赶紧上车。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
