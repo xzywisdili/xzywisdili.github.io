@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>阅读 on 中文博客 - xzy&#39;s blog</title>
-    <link>http://localhost:1313/tags/%E9%98%85%E8%AF%BB/</link>
-    <description>Recent content in 阅读 on 中文博客 - xzy&#39;s blog</description>
+    <title>阅读 on xzy&#39;s blog</title>
+    <link>https://localhost:1313/tags/%E9%98%85%E8%AF%BB/</link>
+    <description>Recent content in 阅读 on xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-cn</language>
     <lastBuildDate>Sat, 30 Dec 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/%E9%98%85%E8%AF%BB/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://localhost:1313/tags/%E9%98%85%E8%AF%BB/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>2017 读书印象</title>
-      <link>http://localhost:1313/post/2017-12-30-reading/</link>
+      <link>https://localhost:1313/blog/2017-%E8%AF%BB%E4%B9%A6%E5%8D%B0%E8%B1%A1/</link>
       <pubDate>Sat, 30 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2017-12-30-reading/</guid>
+      <guid>https://localhost:1313/blog/2017-%E8%AF%BB%E4%B9%A6%E5%8D%B0%E8%B1%A1/</guid>
       <description>&lt;p&gt;自从 2016 年起，我逼自己养成一个习惯，每年准备一个记录阅读情况的 Excel 表格。一开始的时候，满怀热情，又是搞了图表，又是自学了 VBA 编程，然后模仿 Github 代码记录写了一个玩意儿——365 天对应 365 个小方格，每天读的页数越多，这天就越绿。当时熬夜完成的时候还特兴奋，但后来证明，没多大蛋用。当然读书记录这方法成效斐然，我在 2016 年读完了整整 40 本书！（要知道我以前一年可能翻不完一本书）&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>

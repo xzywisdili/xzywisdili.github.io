@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>统计学 on 中文博客 - xzy&#39;s blog</title>
-    <link>http://localhost:1313/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/</link>
-    <description>Recent content in 统计学 on 中文博客 - xzy&#39;s blog</description>
+    <title>统计学 on xzy&#39;s blog</title>
+    <link>https://localhost:1313/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/</link>
+    <description>Recent content in 统计学 on xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-cn</language>
     <lastBuildDate>Wed, 25 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://localhost:1313/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>卫生统计学第九周作业</title>
-      <link>http://localhost:1313/post/2018-04-25-statistichomework/</link>
+      <link>https://localhost:1313/blog/%E5%8D%AB%E7%94%9F%E7%BB%9F%E8%AE%A1%E5%AD%A6%E7%AC%AC%E4%B9%9D%E5%91%A8%E4%BD%9C%E4%B8%9A/</link>
       <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2018-04-25-statistichomework/</guid>
+      <guid>https://localhost:1313/blog/%E5%8D%AB%E7%94%9F%E7%BB%9F%E8%AE%A1%E5%AD%A6%E7%AC%AC%E4%B9%9D%E5%91%A8%E4%BD%9C%E4%B8%9A/</guid>
       <description>&lt;script src=&#39;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML&#39; async&gt;&lt;/script&gt;
 
 &lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;

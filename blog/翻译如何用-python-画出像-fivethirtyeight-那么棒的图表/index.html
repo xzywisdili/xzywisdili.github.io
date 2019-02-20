@@ -1,0 +1,1748 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="xzy&#39;s blog">
+
+
+    <meta property="twitter:site" content="@xzywisdili">
+
+<meta property="og:site_name" content="xzy&#39;s blog" />
+<meta property="og:locale" content="zh-cn" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://localhost:1313/blog/%E7%BF%BB%E8%AF%91%E5%A6%82%E4%BD%95%E7%94%A8-python-%E7%94%BB%E5%87%BA%E5%83%8F-fivethirtyeight-%E9%82%A3%E4%B9%88%E6%A3%92%E7%9A%84%E5%9B%BE%E8%A1%A8/" />
+<meta property="og:title" content="「翻译」如何用 Python 画出像 FiveThirtyEight 那么棒的图表" />
+<meta property="twitter:title" content="「翻译」如何用 Python 画出像 FiveThirtyEight 那么棒的图表">
+
+    <meta property="og:image" content="https://localhost:1313/logo.png">
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:image" content="https://localhost:1313/logo.png">
+
+<meta property="og:description" content="">
+<meta property="twitter:description" content="">
+
+<title>
+
+
+     xzy&#39;s blog - 「翻译」如何用 Python 画出像 FiveThirtyEight 那么棒的图表 
+
+</title>
+<link rel="canonical" href="https://localhost:1313/blog/%E7%BF%BB%E8%AF%91%E5%A6%82%E4%BD%95%E7%94%A8-python-%E7%94%BB%E5%87%BA%E5%83%8F-fivethirtyeight-%E9%82%A3%E4%B9%88%E6%A3%92%E7%9A%84%E5%9B%BE%E8%A1%A8/">
+
+
+<style media="screen">
+  @font-face {
+  font-family: 'Nexa Bold';
+  src: url('https://localhost:1313/fonts/Nexa Bold.otf');
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, div.column {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+a,
+a:visited,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+html {
+  height: 100%;
+  font-size: 16px;
+}
+body {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 100%;
+  font-weight: 400;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  color: #111111;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility !important;
+}
+.icon {
+  text-rendering: geometricPrecision !important;
+}
+section {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  width: 100%;
+}
+div.column {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  width: 100%;
+}
+.container {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  width: 100%;
+}
+div.header .container {
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+}
+div.header .content {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+div.header .container .logo {
+  
+  max-width: 100px;
+  
+  margin-left: -2em;
+}
+div.header .name {
+  padding-top: 20px;
+  font-size: 28px;
+  font-family: 'Nexa Bold', 'Helvetica Neue', 'Arial', sans-serif;
+  letter-spacing: -0.005rem;
+  
+  text-transform: uppercase;
+  
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  color: #333333;
+}
+div.header nav {
+  margin-bottom: 16px;
+}
+div.header nav ul {
+  list-style: none;
+  text-align: center;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flexbox;
+  display: -ms-inline-flex;
+  display: inline-flex;
+}
+div.header nav ul li {
+  margin-left: 6px;
+  margin-right: 6px;
+}
+div.header nav ul li:first-child {
+  margin-left: 0;
+}
+div.header nav ul li:last-child {
+  margin-right: 0;
+}
+div.header nav ul a {
+  color: #555555;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  -webkit-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -moz-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -ms-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -o-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+}
+div.header nav ul a:hover {
+  color: #111111;
+}
+div.footer .container {
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  width: 100%;
+  text-align: center;
+}
+div.footer .container a {
+  font-size: 14px;
+  margin-left: 6px;
+  margin-right: 6px;
+  opacity: 0.6;
+  -webkit-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -moz-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -ms-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -o-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+}
+div.footer .container a:first-child {
+  margin-left: 0;
+}
+div.footer .container a:last-child {
+  margin-right: 0;
+}
+div.footer .container a:hover {
+  opacity: 0.8;
+}
+div.footer .container a .icon {
+  width: 16px;
+  height: 16px;
+}
+div.footer .container .copyright {
+  flex-grow: 0.5;
+  text-align: start;
+}
+div.footer .container .icons {
+  flex-grow: 0.5;
+  text-align: end;
+}
+div.main .container {
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  justify-content: flex-start;
+}
+div.main .content {
+  color: #111111;
+  font-size: 16px;
+}
+div.main .content .title-container {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+}
+div.main .content .posts {
+  
+  
+}
+div.main .content .page-heading {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  letter-spacing: -0.005rem;
+  text-transform: uppercase;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  color: #333333;
+  margin-bottom: 16px;
+}
+div.main .content .front-matter .page-heading {
+  margin-bottom: 0;
+}
+div.main .content .front-matter .meta {
+  font-size: 14px;
+  color: #666666;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  margin-bottom: 32px;
+}
+div.main .content .front-matter .date,
+div.main .content .front-matter .author,
+div.main .content .front-matter .tags,
+div.main .content .front-matter .word-count,
+div.main .content .front-matter .middot:before {
+  display: none;
+}
+div.main .content .front-matter .middot:before {
+  font-size: 6px;
+  margin: 0 6px;
+  vertical-align: middle;
+  content: "•";
+}
+div.main .content .front-matter .tags ul {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+div.main .content .front-matter .tags ul li {
+  -webkit-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -moz-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -ms-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -o-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+}
+div.main .content .front-matter .tags ul li:hover {
+  opacity: 0.7;
+}
+div.main .content .front-matter .tags ul li a {
+  color: #666666;
+}
+div.main .container.f04 {
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+}
+div.main .container.f04 .content {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+div.main .container.f04 .content .num {
+  margin: 30px 0px 30px 0;
+  font-weight: 400;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  font-size: 50px;
+}
+div.main .container.f04 .content .detail {
+  margin-bottom: 40px;
+}
+div.main .container .content .groupby {
+  margin-top: 1em;
+  padding-left: 0.5em;
+}
+div.main .container .content .post-item {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  display: list-item;
+  list-style: disc inside;
+}
+div.main .container .content .post-item .meta {
+  font-size: 14px;
+  color: #666666;
+  display: none;
+  min-width: 100px;
+}
+div.main .container .content .see-more {
+  font-style: italic;
+  float: right;
+  font-size: 0.9em;
+  margin-top: 2em;
+  color: #313537;
+}
+div.main .container .content .see-more:hover {
+  color: #666;
+}
+section {
+  padding: 0 16px;
+}
+div.column {
+  padding: 0 16px;
+}
+div.header {
+  padding-top: 10px;
+}
+div.header-home {
+  padding-top: 36px;
+}
+div.main {
+  padding-top: 32px;
+}
+div.main .container .content .post-item .meta {
+    display: block;
+}
+div.main .container .content .post-item {
+    display: flex;
+    list-style: none;
+}
+a {
+  color: #428bca;
+  -webkit-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -moz-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -ms-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -o-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+}
+a:hover {
+  color: #2a6496;
+}
+img {
+  max-width: 100%;
+}
+div.main .content {
+    width: 100%;
+}
+div.main .content .markdown {
+  font-size: 1.1em;
+  line-height: 1.75em;
+  color: #313537;
+  font-family: serif;
+  font-weight: 300;
+}
+div.main .content .markdown h1,
+div.main .content .markdown h2,
+div.main .content .markdown h3,
+div.main .content .markdown h4,
+div.main .content .markdown h5,
+div.main .content .markdown h6 {
+  font-size: 22px;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  letter-spacing: -0.005rem;
+  font-weight: 700;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  color: #333333;
+  text-transform: none;
+  margin-top: 1.75rem;
+}
+div.main .content .markdown h1 {
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+div.main .content .markdown h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+div.main .content .markdown h3 {
+  font-size: 1em;
+  margin-bottom: 1rem;
+}
+div.main .content .markdown h4,
+div.main .content .markdown h5,
+div.main .content .markdown h6 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  letter-spacing: none;
+}
+div.main .content .markdown code,
+div.main .content .markdown pre {
+  font-family: 'Menlo', monospace;
+  font-size: 0.98rem;
+  background-color: #f7f7f7;
+}
+div.main .content .markdown code {
+  /* enclosed by single backtick (`) */
+  padding: .15em .5em;
+  border-radius: 2px;
+}
+div.main .content .markdown pre {
+  /* Hugo specific: consider using the 'highlight' shortcode */
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  line-height: 1.5em;
+  white-space: pre;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+div.main .content .markdown pre code {
+  /* enclosed by 4 backticks (````) */
+  padding: 0;
+  font-size: 0.9rem;
+}
+div.main .content .markdown a code {
+  color: #428bca !important;
+}
+div.main .content .markdown a code:hover {
+  text-decoration: underline;
+}
+div.main .content .markdown p {
+  
+  text-align: justify;
+  
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+div.main .content .markdown ul,
+div.main .content .markdown ol,
+div.main .content .markdown dl {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+div.main .content .markdown dt {
+  font-weight: bold;
+}
+div.main .content .markdown dd {
+  margin-bottom: .5rem;
+}
+div.main .content .markdown ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  margin-bottom: 1.25rem;
+}
+div.main .content .markdown ol {
+  list-style-type: decimal;
+  margin-bottom: 1.25rem;
+}
+div.main .content .markdown li {
+  margin-left: 2em;
+}
+div.main .content .markdown em {
+  font-style: italic;
+}
+div.main .content .markdown strong {
+  font-weight: 700;
+}
+div.main .content .markdown hr {
+  position: relative;
+  margin: 1.75rem 0;
+  border: 0;
+  border-top: 1px solid #808080;
+  border-top: 1px solid #999999;
+}
+div.main .content .markdown abbr {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #666666;
+  text-transform: uppercase;
+}
+div.main .content .markdown abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted #808080;
+}
+div.main .content .markdown blockquote {
+  padding: .5rem 1rem;
+  margin: .8rem 0;
+  color: #7a7a7a;
+  border-left: .25rem solid #e5e5e5;
+}
+div.main .content .markdown blockquote p:last-child {
+  margin-bottom: 0;
+}
+div.main .content .markdown figure {
+  width: 100%;
+  background: #fff;
+  margin-bottom: 1em;
+}
+div.main .content .markdown figure img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  position: static;
+  margin: auto;
+}
+div.main .content .markdown table {
+  margin-bottom: 1rem;
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  border-collapse: collapse;
+}
+div.main .content .markdown td,
+div.main .content .markdown th {
+  padding: .25rem .5rem;
+  border: 1px solid #e5e5e5;
+}
+div.main .content .markdown tbody tr:nth-child(odd) td,
+div.main .content .markdown tbody tr:nth-child(odd) th {
+  background-color: #f7f7f7;
+}
+div.main .content .markdown .footnotes ol {
+  list-style-type: decimal;
+  margin-left: 16px;
+}
+div.main .content .markdown .footnotes li {
+  list-style-type: unset;
+}
+div.main .content .markdown .footnote-ref {
+  font-size: 0.7em;
+}
+div.main .content .navigation {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  padding: 2em;
+}
+div.main .content .navigation div {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  margin-top: 1em;
+}
+div.main .content .navigation .icon {
+  width: 16px;
+  height: 16px;
+}
+div.main .content .navigation a {
+  width: 250px;
+  margin: 0 1em;
+  text-align: center;
+  font-style: italic;
+  color: #313537;
+}
+div.main .content .share, div.main .content .share div {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+}
+div.main .content .share {
+  background-color: rgba(152, 152, 152, 0.07);
+  padding: 1em 0;
+}
+div.main .content .share a {
+  margin: 0 6px;
+}
+kbd {
+  padding: 0.1em 0.6em;
+  border: 1px solid #ccc;
+  font-size: 11px;
+  font-family: Arial,Helvetica,sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  -moz-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
+  -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  display: inline-block;
+  margin: 0 0.1em;
+  text-shadow: 0 1px 0 #fff;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+/* Fonts */
+
+
+.wf-raleway-n4-active body, 
+.wf-raleway-n4-active div.header nav ul a,
+.wf-raleway-n7-active div.main .content .page-heading,
+.wf-raleway-n2-active div.main .container.f04 .content .num,
+.wf-raleway-n7-active div.main .content .markdown h1,
+.wf-raleway-n7-active div.main .content .markdown h2,
+.wf-raleway-n7-active div.main .content .markdown h3,
+.wf-raleway-n7-active div.main .content .markdown h4,
+.wf-raleway-n7-active div.main .content .markdown h5,
+.wf-raleway-n7-active div.main .content .markdown h6 {
+      font-family: 'Raleway';
+}
+
+.wf-merriweather-n3-active div.main .content .markdown {
+      font-family: 'Merriweather';
+}
+
+.wf-ubuntu-mono-n4-active div.main .content .markdown code,
+.wf-ubuntu-mono-n4-active div.main .content .markdown pre {
+      font-family: 'Ubuntu Mono';
+}
+
+
+</style>
+<style media="(min-width: 600px)">
+  body {
+-webkit-justify-content: center;
+-moz-justify-content: center;
+-ms-justify-content: center;
+justify-content: center;
+}
+.non-narrow.zero-top-spacing {
+padding-top: 0 !important;
+}
+section {
+padding: 0 16px;
+margin-left: 100px;
+margin-right: 100px;
+
+max-width: 750px;
+
+}
+div.column {
+padding: 0 16px;
+
+max-width: 750px;
+
+}
+div.header {
+background-color: transparent;
+}
+div.header .container {
+-webkit-justify-content: flex-start;
+-moz-justify-content: flex-start;
+-ms-justify-content: flex-start;
+justify-content: flex-start;
+}
+div.header .container .logo {
+margin: 0;
+}
+div.header-home .container .logo {
+max-width: 216px;
+margin-left: 24px;
+}
+div.header-home .name-home {
+padding-top: 30px;
+font-size: 40px;
+}
+div.header-home nav ul a {
+font-size: 18px;
+}
+div.header .content {
+-webkit-align-items: flex-start;
+-moz-align-items: flex-start;
+-ms-align-items: flex-start;
+align-items: flex-start;
+}
+div.header .name {
+color: #333333;
+}
+div.header nav {
+font-size: 14px;
+margin-bottom: 0;
+}
+div.header nav ul {
+text-align: left;
+}
+div.header nav ul a {
+color: #666666;
+}
+div.header nav ul a:hover {
+color: #333333;
+}
+div.footer {
+background-color: transparent;
+}
+div.footer .container {
+flex-direction: row;
+}
+div.footer .container a {
+margin-left: 3px;
+margin-right: 3px;
+color: #666666;
+}
+div.footer .container a:hover {
+color: #333333;
+}
+div.footer .container a .icon {
+font-size: 18px;
+}
+div.footer .container a .icon.larger {
+font-size: 20px;
+}
+div.main .content .front-matter .date,
+div.main .content .front-matter .author,
+div.main .content .front-matter .tags,
+div.main .content .front-matter .word-count,
+div.main .content .front-matter .middot:before {
+display: initial;
+}
+div.main .container.f04 {
+-webkit-justify-content: flex-start;
+-moz-justify-content: flex-start;
+-ms-justify-content: flex-start;
+justify-content: flex-start;
+}
+div.main .container.f04 .content {
+-webkit-align-items: flex-start;
+-moz-align-items: flex-start;
+-ms-align-items: flex-start;
+align-items: flex-start;
+}
+div.main .container.f04 .content .num {
+margin: 0 0 10px 0;
+font-size: 32px;
+}
+div.main .container.f04 .content .detail {
+margin-bottom: 30px;
+}
+.container {
+padding: 0 30px;
+}
+div.header {
+padding-top: 60px;
+padding-bottom: 60px;
+}
+div.footer {
+padding-top: 60px;
+padding-bottom: 60px;
+}
+div.main {
+padding-top: 0;
+}
+div.main .content {
+  
+  font-size: 16px;
+  
+}
+div.main .container .content .post-item {
+display: flex;
+list-style: none;
+padding-left: 1.5em;
+}
+div.main .container .content .post-item .meta {
+display: block;
+}
+div.main .content .markdown blockquote {
+padding-right: 5rem;
+padding-left: 1.25rem;
+}
+div.main .content .navigation {
+-webkit-flex-direction: row;
+-moz-flex-direction: row;
+-ms-flex-direction: row;
+flex-direction: row;
+}
+div.main .content .navigation div {
+margin-top: 0em;
+}
+
+</style>
+<style media="(min-width: 769px)">
+  div.main .content .markdown figure {
+width: 110%;
+margin-left: -4%;
+}
+div.main .content .markdown img {
+max-width: 110%;
+width: 110%;
+margin-left: -4%;
+}
+div.main .content .markdown pre {
+width: 110%;
+margin-left: -4%;
+}
+
+</style>
+
+<noscript>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet">
+</noscript>
+
+
+  <style type="text/css" media="screen">
+    .hljs{display:block;background:white;padding:0.5em;color:#333333;overflow-x:auto}.hljs-comment,.hljs-meta{color:#969896}.hljs-string,.hljs-variable,.hljs-template-variable,.hljs-strong,.hljs-emphasis,.hljs-quote{color:#df5000}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-literal,.hljs-symbol,.hljs-bullet,.hljs-attribute{color:#0086b3}.hljs-section,.hljs-name{color:#63a35c}.hljs-tag{color:#333333}.hljs-title,.hljs-attr,.hljs-selector-id,.hljs-selector-class,.hljs-selector-attr,.hljs-selector-pseudo{color:#795da3}.hljs-addition{color:#55a532;background-color:#eaffea}.hljs-deletion{color:#bd2c00;background-color:#ffecec}.hljs-link{text-decoration:underline}
+  </style>
+
+
+
+  <style type="text/css" media="screen">
+    .progressive{overflow:hidden;position:relative;background:#efefef}.progressive__img{width:100%;height:100%;position:absolute;-webkit-transform:translateZ(0);transform:translateZ(0)}.progressive--not-loaded{filter:blur(30px);-webkit-filter:blur(30px)}.progressive--is-loaded{filter:blur(20px);-webkit-filter:blur(20px);-webkit-animation:sharpen .5s both;animation:sharpen .5s both}@-webkit-keyframes sharpen{from{filter:blur(20px);-webkit-filter:blur(20px)}to{filter:blur(0);-webkit-filter:blur(0)}}@keyframes sharpen{from{filter:blur(20px);-webkit-filter:blur(20px)}to{filter:blur(0);-webkit-filter:blur(0)}}
+  </style>
+
+
+
+  <style type="text/css" media="screen">
+    /*!
+ * Social Share Kit v1.0.7 (http://socialsharekit.com)
+ * Copyright 2015 Social Share Kit / Kaspars Sprogis.
+ * Licensed under Creative Commons Attribution-NonCommercial 3.0 license:
+ * https://github.com/darklow/social-share-kit/blob/master/LICENSE
+ * ---
+ */@font-face{font-family:'social-share-kit';src:url('https://localhost:1313/fonts/social-share-kit.eot');src:url('https://localhost:1313/fonts/social-share-kit.eot?#iefix') format('embedded-opentype'),url('https://localhost:1313/fonts/social-share-kit.woff') format('woff'),url('https://localhost:1313/fonts/social-share-kit.ttf') format('truetype'),url('https://localhost:1313/fonts/social-share-kit.svg#social-share-kit') format('svg');font-weight:normal;font-style:normal}.ssk:before{display:inline-block;font-family:"social-share-kit" !important;font-style:normal !important;font-weight:normal !important;font-variant:normal !important;text-transform:none !important;speak:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.ssk-facebook:before{content:"a";text-indent:4px;margin-right:-4px}.ssk-twitter:before{content:"b"}.ssk-google-plus:before{content:"v"}.ssk-google-plus-old:before{content:"c"}.ssk-email:before{content:"d";top:-1px;position:relative}.ssk-pinterest:before{content:"e"}.ssk-tumblr:before{content:"f"}.ssk-linkedin:before{content:"g"}.ssk-github:before{content:"h"}.ssk-vk:before{content:"i"}.ssk-instagram:before{content:"j"}.ssk-amazon:before{content:"k"}.ssk-skype:before{content:"s"}.ssk-youtube:before{content:"x"}.ssk-vimeo:before{content:"u"}.ssk-ebay:before{content:"p"}.ssk-apple:before{content:"l"}.ssk-behance:before{content:"q"}.ssk-dribble:before{content:"n"}.ssk-android:before{content:"o"}.ssk-whatsapp:before{content:"m"}.ssk-reddit:before{content:"r"}.ssk-reddit2:before{content:"t"}.ssk-link:before{content:"w"}.ssk{background-color:#757575;color:white;display:inline-block;font-size:22px;line-height:1px;margin-right:2px;margin-bottom:2px;padding:7px;text-align:center;text-decoration:none;transition:background-color .1s;-webkit-transition:background-color .1s;-moz-transition:background-color .1s;-ms-transition:background-color .1s;-o-transition:background-color .1s}.ssk:before,.ssk .glyphicon,.ssk .fa{position:relative;font-size:22px;top:0;vertical-align:middle}.ssk.ssk-xs,.ssk-xs>.ssk{padding:4px}.ssk.ssk-xs:before,.ssk-xs>.ssk:before,.ssk.ssk-xs .glyphicon,.ssk-xs>.ssk .glyphicon,.ssk.ssk-xs .fa,.ssk-xs>.ssk .fa{font-size:15px}.ssk.ssk-sm,.ssk-sm>.ssk{padding:5px}.ssk.ssk-sm:before,.ssk-sm>.ssk:before,.ssk.ssk-sm .glyphicon,.ssk-sm>.ssk .glyphicon,.ssk.ssk-sm .fa,.ssk-sm>.ssk .fa{font-size:20px}.ssk.ssk-lg,.ssk-lg>.ssk{padding:9px}.ssk.ssk-lg:before,.ssk-lg>.ssk:before,.ssk.ssk-lg .glyphicon,.ssk-lg>.ssk .glyphicon,.ssk.ssk-lg .fa,.ssk-lg>.ssk .fa{font-size:28px}.ssk:last-child{margin-right:0}.ssk:hover{background-color:#424242}.ssk:hover,.ssk:focus{color:#fff;text-decoration:none}.ssk.ssk-round,.ssk-round .ssk{border-radius:50%}.ssk.ssk-round:before,.ssk-round .ssk:before{text-indent:0;margin-right:0}.ssk.ssk-rounded,.ssk-rounded .ssk{border-radius:15%}.ssk.ssk-icon{color:#757575;padding:2px;font-size:24px}.ssk.ssk-icon,.ssk.ssk-icon:hover{background-color:transparent}.ssk.ssk-icon:hover{color:#424242}.ssk.ssk-icon.ssk-xs,.ssk-xs>.ssk.ssk-icon{font-size:16px}.ssk.ssk-icon.ssk-sm,.ssk-sm>.ssk.ssk-icon{font-size:20px}.ssk.ssk-icon.ssk-lg,.ssk-lg>.ssk.ssk-icon{font-size:28px}.ssk.ssk-text{overflow:hidden;font-size:17px;line-height:normal;padding-right:10px}.ssk.ssk-text:before,.ssk.ssk-text .glyphicon,.ssk.ssk-text .fa{margin:-7px 10px -7px -7px;padding:7px;background-color:rgba(0,0,0,0.15);vertical-align:bottom;text-indent:0}.ssk-block .ssk.ssk-text{display:block;margin-right:0;text-align:left}.ssk.ssk-text.ssk-xs,.ssk-xs>.ssk.ssk-text{font-size:12px;padding-right:6px}.ssk.ssk-text.ssk-xs:before,.ssk-xs>.ssk.ssk-text:before,.ssk.ssk-text.ssk-xs .glyphicon,.ssk-xs>.ssk.ssk-text .glyphicon,.ssk.ssk-text.ssk-xs .fa,.ssk-xs>.ssk.ssk-text .fa{margin:-4px 6px -4px -4px;padding:4px}.ssk.ssk-text.ssk-sm,.ssk-sm>.ssk.ssk-text{font-size:16px;padding-right:7px}.ssk.ssk-text.ssk-sm:before,.ssk-sm>.ssk.ssk-text:before,.ssk.ssk-text.ssk-sm .glyphicon,.ssk-sm>.ssk.ssk-text .glyphicon,.ssk.ssk-text.ssk-sm .fa,.ssk-sm>.ssk.ssk-text .fa{margin:-5px 7px -5px -5px;padding:5px}.ssk.ssk-text.ssk-lg,.ssk-lg>.ssk.ssk-text{font-size:22px;padding-right:13px}.ssk.ssk-text.ssk-lg:before,.ssk-lg>.ssk.ssk-text:before,.ssk.ssk-text.ssk-lg .glyphicon,.ssk-lg>.ssk.ssk-text .glyphicon,.ssk.ssk-text.ssk-lg .fa,.ssk-lg>.ssk.ssk-text .fa{margin:-9px 13px -9px -9px;padding:9px}.ssk-group,.ssk-sticky{font-size:0}.ssk-sticky{top:0;position:fixed;z-index:2000}.ssk-sticky .ssk{transition:padding .1s ease-out;-webkit-transition:padding .1s ease-out;-moz-transition:padding .1s ease-out;-ms-transition:padding .1s ease-out;-o-transition:padding .1s ease-out;margin:0}@media (min-width:768px){.ssk-sticky.ssk-left .ssk,.ssk-sticky.ssk-right .ssk{display:block;clear:both}.ssk-sticky.ssk-left.ssk-center,.ssk-sticky.ssk-right.ssk-center{top:50%;transform:translateY(-50%);-webkit-transform:translateY(-50%);-moz-transform:translateY(-50%);-ms-transform:translateY(-50%);-o-transform:translateY(-50%)}.ssk-sticky.ssk-left{left:0}.ssk-sticky.ssk-left .ssk{float:left}.ssk-sticky.ssk-left .ssk:hover{padding-left:15px}.ssk-sticky.ssk-right{right:0}.ssk-sticky.ssk-right .ssk{float:right}.ssk-sticky.ssk-right .ssk:hover{padding-right:15px}}.ssk-sticky.ssk-bottom{font-size:0;top:auto;bottom:0}.ssk-sticky.ssk-bottom.ssk-center{left:50%;right:auto;transform:translateX(-50%);-webkit-transform:translateX(-50%);-moz-transform:translateX(-50%);-ms-transform:translateX(-50%);-o-transform:translateX(-50%)}.ssk-sticky.ssk-bottom .ssk{vertical-align:bottom}.ssk-sticky.ssk-bottom .ssk:hover{padding-bottom:15px}.ssk-sticky.ssk-round.ssk-xs .ssk:hover{padding:8px}.ssk-sticky.ssk-round.ssk-sm .ssk:hover{padding:9px}.ssk-sticky.ssk-round .ssk:hover{padding:11px}.ssk-sticky.ssk-round.ssk-lg .ssk:hover{padding:13px}@media (max-width:767px){.ssk-sticky{left:0;right:0;bottom:0;top:auto;width:100%;display:flex !important;flex-direction:row;flex-wrap:nowrap}.ssk-sticky.ssk-sticky-hide-xs{display:none !important}.ssk-sticky .ssk{flex:1;width:auto}.ssk-sticky .ssk .ssk-num{display:none}}.ssk-count{padding-top:20px}.ssk-count .ssk{position:relative}.ssk-count .ssk-num{border-radius:4px;color:#8f8f8f;background-color:rgba(50,50,50,0.03);display:block;font-size:12px;left:0;line-height:20px;position:absolute;right:0;text-align:center;top:-20px}@media (min-width:768px){.ssk-count.ssk-sticky{padding-top:0}.ssk-count.ssk-sticky.ssk-left .ssk-num,.ssk-count.ssk-sticky.ssk-right .ssk-num{top:20%;background-color:transparent}.ssk-count.ssk-sticky.ssk-left .ssk-num{left:100%;margin-left:5px}.ssk-count.ssk-sticky.ssk-right .ssk-num{right:115%;margin-left:-100%;text-align:right}}.ssk-facebook{background-color:#3B5998}.ssk-grayscale>.ssk-facebook{background-color:#757575}.ssk-facebook:hover{background-color:#2d4373}.ssk-facebook:hover{background-color:#2d4373}.ssk-grayscale>.ssk-facebook:hover{background-color:#3B5998}.ssk-facebook.ssk-icon{color:#3B5998}.ssk-facebook.ssk-icon:hover{color:#2d4373}.ssk-facebook.ssk-icon:before{text-indent:0;margin-right:0}.ssk-twitter{background-color:#1DA1F2}.ssk-grayscale>.ssk-twitter{background-color:#757575}.ssk-twitter:hover{background-color:#0c85d0}.ssk-twitter:hover{background-color:#0c85d0}.ssk-grayscale>.ssk-twitter:hover{background-color:#1DA1F2}.ssk-twitter.ssk-icon{color:#1DA1F2}.ssk-twitter.ssk-icon:hover{color:#0c85d0}.ssk-google-plus{background-color:#EA4335}.ssk-grayscale>.ssk-google-plus{background-color:#757575}.ssk-google-plus:hover{background-color:#d62516}.ssk-google-plus:hover{background-color:#d62516}.ssk-grayscale>.ssk-google-plus:hover{background-color:#EA4335}.ssk-google-plus.ssk-icon{color:#EA4335}.ssk-google-plus.ssk-icon:hover{color:#d62516}.ssk-pinterest{background-color:#BD081C}.ssk-grayscale>.ssk-pinterest{background-color:#757575}.ssk-pinterest:hover{background-color:#8c0615}.ssk-pinterest:hover{background-color:#8c0615}.ssk-grayscale>.ssk-pinterest:hover{background-color:#BD081C}.ssk-pinterest.ssk-icon{color:#BD081C}.ssk-pinterest.ssk-icon:hover{color:#8c0615}.ssk-tumblr{background-color:#395773}.ssk-grayscale>.ssk-tumblr{background-color:#757575}.ssk-tumblr:hover{background-color:#283d51}.ssk-tumblr:hover{background-color:#283d51}.ssk-grayscale>.ssk-tumblr:hover{background-color:#395773}.ssk-tumblr.ssk-icon{color:#395773}.ssk-tumblr.ssk-icon:hover{color:#283d51}.ssk-email{background-color:#757575}.ssk-grayscale>.ssk-email{background-color:#757575}.ssk-email:hover{background-color:#5b5b5b}.ssk-email:hover{background-color:#5b5b5b}.ssk-grayscale>.ssk-email:hover{background-color:#757575}.ssk-grayscale>.ssk-email:hover{background-color:#5b5b5b}.ssk-email.ssk-icon{color:#757575}.ssk-email.ssk-icon:hover{color:#5b5b5b}.ssk-vk{background-color:#54769a}.ssk-grayscale>.ssk-vk{background-color:#757575}.ssk-vk:hover{background-color:#425d79}.ssk-vk:hover{background-color:#425d79}.ssk-grayscale>.ssk-vk:hover{background-color:#54769a}.ssk-vk.ssk-icon{color:#54769a}.ssk-vk.ssk-icon:hover{color:#425d79}.ssk-linkedin{background-color:#1c87bd}.ssk-grayscale>.ssk-linkedin{background-color:#757575}.ssk-linkedin:hover{background-color:#156791}.ssk-linkedin:hover{background-color:#156791}.ssk-grayscale>.ssk-linkedin:hover{background-color:#1c87bd}.ssk-linkedin.ssk-icon{color:#1c87bd}.ssk-linkedin.ssk-icon:hover{color:#156791}.ssk-whatsapp{background-color:#34AF23}.ssk-grayscale>.ssk-whatsapp{background-color:#757575}.ssk-whatsapp:hover{background-color:#27851a}.ssk-whatsapp:hover{background-color:#27851a}.ssk-grayscale>.ssk-whatsapp:hover{background-color:#34AF23}.ssk-whatsapp.ssk-icon{color:#34AF23}.ssk-whatsapp.ssk-icon:hover{color:#27851a}.ssk-reddit{background-color:#5f99cf}.ssk-grayscale>.ssk-reddit{background-color:#757575}.ssk-reddit:hover{background-color:#3a80c1}.ssk-reddit:hover{background-color:#3a80c1}.ssk-grayscale>.ssk-reddit:hover{background-color:#5f99cf}.ssk-reddit.ssk-icon{color:#5f99cf}.ssk-reddit.ssk-icon:hover{color:#3a80c1}.ssk-reddit2{background-color:#5f99cf}.ssk-grayscale>.ssk-reddit2{background-color:#757575}.ssk-reddit2:hover{background-color:#3a80c1}.ssk-reddit2:hover{background-color:#3a80c1}.ssk-grayscale>.ssk-reddit2:hover{background-color:#5f99cf}.ssk-reddit2.ssk-icon{color:#5f99cf}.ssk-reddit2.ssk-icon:hover{color:#3a80c1}.ssk-turquoise{background-color:#1abc9c}.ssk-turquoise:hover{background-color:#148f77}.ssk-emerald{background-color:#2ecc71}.ssk-emerald:hover{background-color:#25a25a}.ssk-peter-river{background-color:#3498db}.ssk-peter-river:hover{background-color:#217dbb}.ssk-belize-hole{background-color:#2980b9}.ssk-belize-hole:hover{background-color:#20638f}.ssk-amethyst{background-color:#9b59b6}.ssk-amethyst:hover{background-color:#804399}.ssk-wisteria{background-color:#8e44ad}.ssk-wisteria:hover{background-color:#703688}.ssk-wet-asphalt{background-color:#34495e}.ssk-wet-asphalt:hover{background-color:#222f3d}.ssk-midnight-blue{background-color:#2c3e50}.ssk-midnight-blue:hover{background-color:#1a242f}.ssk-green-sea{background-color:#16a085}.ssk-green-sea:hover{background-color:#107360}.ssk-nephritis{background-color:#27ae60}.ssk-nephritis:hover{background-color:#1e8449}.ssk-sunflower{background-color:#f1c40f}.ssk-sunflower:hover{background-color:#c29d0b}.ssk-orange{background-color:#f39c12}.ssk-orange:hover{background-color:#c87f0a}.ssk-carrot{background-color:#e67e22}.ssk-carrot:hover{background-color:#bf6516}.ssk-pumpkin{background-color:#d35400}.ssk-pumpkin:hover{background-color:#a04000}.ssk-alizarin{background-color:#e74c3c}.ssk-alizarin:hover{background-color:#d62c1a}.ssk-pomegranate{background-color:#c0392b}.ssk-pomegranate:hover{background-color:#962d22}.ssk-clouds{background-color:#cfd9db}.ssk-clouds:hover{background-color:#b1c2c6}.ssk-concrete{background-color:#95a5a6}.ssk-concrete:hover{background-color:#798d8f}.ssk-silver{background-color:#bdc3c7}.ssk-silver:hover{background-color:#a1aab0}.ssk-asbestos{background-color:#7f8c8d}.ssk-asbestos:hover{background-color:#667273}.ssk-dark-gray{background-color:#555}.ssk-dark-gray:hover{background-color:#3b3b3b}.ssk-black{background-color:#333}.ssk-black:hover{background-color:#1a1a1a}
+  </style>
+
+
+
+  <style type="text/css" media="screen">
+    a {
+    color: #527fc1f;
+}
+
+a:hover {
+    color: #1a3152;
+}
+
+div.main .content .markdown, div.header .name, div.header nav ul a:hover {
+    color: #181d2a;
+}
+
+div.header nav ul a {
+    color: #6a7a8b;
+}
+
+div.main .content .markdown code {
+    background-color: #f9f9f9;
+    color: #527fc1f;
+}
+
+div.main .content .markdown pre, div.main .content .markdown pre code {
+    background-color: #282a36;
+    color: #87a5d2;
+}
+
+.hljs, .hljs-subst, .hljs-variable {
+    color: #87a5d2;
+}
+
+.hljs-type {
+    color: #97d28b;
+}
+
+.hljs-quote {
+    color: #ffcb8d;
+}
+
+.hljs-string, .hljs-number, .hljs-selector-id, .hljs-selector-class, .hljs-template-tag, .hljs-deletion {
+    color: #96c2d7;
+}
+
+.hljs-comment {
+    color: #6a7a8b;
+}
+
+.hljs-regexp, .hljs-symbol, .hljs-template-variable {
+    color: #ffcb8d;
+}
+
+.hljs-keyword, .hljs-attribute, .hljs-meta-keyword, .hljs-doctag, .hljs-name {
+    color: #97d28b;
+}
+
+.hljs-link, .hljs-selector-attr, .hljs-selector-pseudo, .hljs-title, .hljs-section {
+    color: #ff8e91;
+}
+
+.hljs-built_in, .hljs-bullet, .hljs-code, .hljs-addition {
+    color: #97d28b;
+}
+
+.ssk {
+    background-color: #6a7a8b;
+}
+
+  </style>
+
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://localhost:1313/favicon.ico"
+
+>
+
+
+
+
+</head>
+
+
+<body>
+
+
+<div class="header column">
+
+    <div class="container">
+        
+        <a href="https://localhost:1313/"><img class="logo" src="https://localhost:1313/logo.png" alt="logo"></a>
+        
+        <div class="content">
+            <a href="https://localhost:1313/"><div class="name"><h1>xzy&#39;s blog</h1></div></a>
+            <nav>
+                <ul>
+                    
+                            <li><a href="https://localhost:1313/blog/">Blog</a></li>
+                    
+                    
+                        
+                            
+                        
+                    
+                    
+                        
+                            <li><a href="https://localhost:1313/about/">about</a></li>
+                        
+                    
+                        
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="main post non-narrow zero-top-spacing column">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    
+    「翻译」如何用 Python 画出像 FiveThirtyEight 那么棒的图表
+    
+
+</div>
+
+                </div>
+                <div class="meta">
+                    <div class="date" title="Sun Oct 15 2017 00:00:00 UTC">Oct 15, 2017</div>
+                    
+                        
+                    
+                    
+                    <div class="reading-time middot">7 minute read</div>
+                    
+                    <div class="tags">
+                        <ul>
+                          
+                            <li class="middot"><a href="https://localhost:1313/tags/python">Python</a> </li>
+                          
+                            <li class="middot"><a href="https://localhost:1313/tags/matplotlib">matplotlib</a> </li>
+                          
+                            <li class="middot"><a href="https://localhost:1313/tags/python">Python</a> </li>
+                          
+                        </ul>
+                    </div>
+                    <div class="tags">
+                        <ul>
+                          
+                          
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="markdown">
+                
+    
+    <p>如果你经常读数据科学领域的文章的话，你可能会偶然发现 <a href="http://fivethirtyeight.com">FiveThirtyEight</a> 上的内容，然后被他们惊艳的图表迷住。于是你自己也想制作如此出色的可视化作品，于是去 Quora 和 Reddit 上问怎么做。你收到了几个回答，但是这些回答都很模糊。你还是不知道怎么搞定这样的图表。</p>
+
+<p></p>
+
+<p>在这篇博文中，我会手把手地帮你。通过使用 Python 的 matplotlib 和 pandas 库，我们会发现复制出 FTE 可视化作品的核心部分是多么轻松写意。</p>
+
+<p>这是我们最初的图：</p>
+
+<p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://localhost:1313/trans01/pic1.png" src="https://localhost:1313/trans01/low/pic1.png" alt="最初图片" /></p></figure>
+
+<p>在这篇文章的结束，我们会做到这样：</p>
+
+<p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://localhost:1313/trans01/fte09.png" src="https://localhost:1313/trans01/low/fte09.png" alt="最后图片" /></p></figure>
+
+<p>为了跟上，你需要至少了解一些 Python 的基础知识。如果你知道方法和属性之间的区别，那我们就可以开始了。</p>
+
+<h2 id="介绍数据集">介绍数据集</h2>
+
+<p>我们将要处理的数据集展现的事从 1970 年到 2011 年在美国授予女性的学位比例。我们使用的数据集是数据科学家 Randal Olson 从国家教育统计中心采集的。</p>
+
+<p>如果你想通过自己写代码来学习，你可以从 Randal 的博客下载数据集。如果想节省时间的话，你可以跳过下载文件，直接把链接甩给 pandas 的 <code>read_csv()</code> 函数。在下面的代码中，我们做了：
+- 导入 pandas 模块
+- 把数据集的链接通过字符串保存在变量 <code>direct_link</code> 中
+- 通过 <code>read_csv()</code> 读取数据，并把内容保存在 <code>women_majors</code>
+- 使用 <code>info()</code> 方法展示数据集的基本信息，了解行数和列数，同时找一找有没有缺失的值
+- 使用 <code>head()</code> 方法显示出数据集的前 5 行可以帮助我们更好地理解数据集的结构</p>
+
+<pre><code class="language-Python">import pandas as pd
+
+direct_link = 'http://www.randalolson.com/wp-content/uploads/percent-bachelors-degrees-women-usa.csv'
+women_majors = pd.read_csv(direct_link)
+
+print(women_majors.info())
+women_majors.head()
+</code></pre>
+
+<pre><code class="language-Python">&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 42 entries, 0 to 41
+Data columns (total 18 columns):
+Year                             42 non-null int64
+Agriculture                      42 non-null float64
+Architecture                     42 non-null float64
+Art and Performance              42 non-null float64
+Biology                          42 non-null float64
+Business                         42 non-null float64
+Communications and Journalism    42 non-null float64
+Computer Science                 42 non-null float64
+Education                        42 non-null float64
+Engineering                      42 non-null float64
+English                          42 non-null float64
+Foreign Languages                42 non-null float64
+Health Professions               42 non-null float64
+Math and Statistics              42 non-null float64
+Physical Sciences                42 non-null float64
+Psychology                       42 non-null float64
+Public Administration            42 non-null float64
+Social Sciences and History      42 non-null float64
+dtypes: float64(17), int64(1)
+memory usage: 6.0 KB
+None
+</code></pre>
+
+<p>除了 <code>Year</code> 这一列之外，其他每一列都指明了学士学位的具体科目。而在这些列之下的数据点代表了授予的学士学位中女性所占的百分比。当然每一行就表示的是在该行特指的年份之下，授予的学士学位中女性所占的百分比。</p>
+
+<p>正如之前讲过的，我们的数据是从 1970 年到 2011 年的。为了确认这个时间段无误，我们通过 <code>tail()</code> 方法来看看数据集的最后 5 行：</p>
+
+<pre><code class="language-Python">women_majors.tail()
+</code></pre>
+
+<h2 id="fivethirtyeight-插图的上下文">FiveThirtyEight 插图的上下文</h2>
+
+<p>几乎每一个 FTE 图表都是一篇文章的一部分。这些图表通过展示一个小故事或者一个新观点来补足文字内容。我们在复制我们的图表的时候需要牢记这一点。</p>
+
+<p>为了避免这篇教程跑题，我们就假装我们已经写了一篇关于在美国教育中性别地位演变的文章的绝大部分了。我们现在需要制作一张图标来让读者对美国教育中的学士学位授予关于性别差异的演变有一个直观的感受，并且告诉读者在 1970 年，女性的地位确实很低。我们把最低阈值设定在 20%，现在我们想画出每一个在 1970 年毕业学士中女性比例低于 20% 的那些学科。</p>
+
+<p>让我们先找到那些学科。在下面的代码中，我们要：
+- 使用 <code>.loc</code> 一个基于标签的索引利器来：
+    - 选择第一行（就是 1970 年对应的那行）
+    - 在第一行之中找到值小于 20 的那些列；<code>Year</code> 的部分也应该检查，但是显然不用和 20 相比较
+- 把选择出的部分保存在 <code>under_20</code></p>
+
+<pre><code class="language-Python">under_20 = women_majors.loc[0, women_majors.loc[0] &lt; 20]
+under_20
+</code></pre>
+
+<p>输出为：</p>
+
+<pre><code class="language-Python">Agriculture           4.229798
+Architecture         11.921005
+Business              9.064439
+Computer Science     13.600000
+Engineering           0.800000
+Physical Sciences    13.800000
+Name: 0, dtype: float64
+</code></pre>
+
+<h2 id="使用-matplotlib-的默认样式">使用 matplotlib 的默认样式</h2>
+
+<p>让我们开始制作曲线图。我们先看一看我们使用默认样式做出来是什么样子，在下面的代码中，我们会：
+- 在 Jupyter 中用 <code>%matplotlib</code> 来让 Jupyter 和 matplotlib 能够正常工作，在后面加上 <code>inline</code> 能让画出的图直接在 Jupyter notebook 中显示。
+- 使用 <code>plot()</code> 方法来画出 <code>women_majors</code> 的初始版本。我们将传入这些参数：
+    - <code>x</code> - 指明 <code>women_majors</code> 中用来做 x 轴的那一列；
+    - <code>y</code> - 指明 <code>women_majors</code> 中用来做 y 轴的那一列；我们将使用 <code>under_20</code> 下储存在 <code>.index</code> 中的下标索引；
+    - <code>figsize</code> - 设定图片的尺寸大小（设定格式是<code>(width, height)</code>，单位是英寸）。
+- 把画出来的图形对象存储进 <code>under_20_graph</code>，然后打印出这个对象的类型，可以发现 pandas 实际上使用的是 matplotlib 的对象。</p>
+
+<pre><code class="language-Python">%matplotlib inline
+under_20_graph = women_majors.plot(x = 'Year', y = under_20.index, figsize = (12,8))
+print('Type:', type(under_20_graph))
+</code></pre>
+
+<p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://localhost:1313/trans01/pic1.png" src="https://localhost:1313/trans01/low/pic1.png" alt="pic1" /></p></figure>
+
+<h2 id="使用-matplotlib-的-fte-样式">使用 matplotlib 的 FTE 样式</h2>
+
+<p>上面的图具有一定的特征，比如宽度和线条的颜色，字体大小和 y 轴的标签，不显示网格等等。matplotlib 的默认样式包括了所有这些特征。</p>
+
+<p>稍稍插入一段话，在这篇博文中我们将会使用一点术语。如果你有任何疑惑，可以去下面的网站找到解答。</p>
+
+<p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://localhost:1313/trans01/matplotlib.png" src="https://localhost:1313/trans01/low/matplotlib.png" alt="matplotlib" /></figure>
+Source: <a href="http://matplotlib.org/faq/usage_faq.html#parts-of-a-figure">Matplotlib.org</a></p>
+
+<p>除了默认样式之外，matplotlib 也提供了几种我们可以直接来用的内建样式。让我们看看可用的样式列表：
+- 导入 <code>matplotlib.style</code> 模块
+- 探索 <code>matplotlib.style.available</code> 的内容，里面包括了所有可用的内建样式</p>
+
+<pre><code class="language-Python">import matplotlib.style as style
+style.available
+</code></pre>
+
+<pre><code class="language-Python">['seaborn-deep',
+ 'seaborn-muted',
+ 'bmh',
+ 'seaborn-white',
+ 'dark_background',
+ 'seaborn-notebook',
+ 'seaborn-darkgrid',
+ 'grayscale',
+ 'seaborn-paper',
+ 'seaborn-talk',
+ 'seaborn-bright',
+ 'classic',
+ 'seaborn-colorblind',
+ 'seaborn-ticks',
+ 'ggplot',
+ 'seaborn',
+ '_classic_test',
+ 'fivethirtyeight',
+ 'seaborn-dark-palette',
+ 'seaborn-dark',
+ 'seaborn-whitegrid',
+ 'seaborn-pastel',
+ 'seaborn-poster']
+</code></pre>
+
+<p>你可能已经发现有一个样式名字叫「fivethirtyeight」。让我们使用它看看会得到什么效果。只需要从 <code>matplotlib.style</code> 模块下使用函数 <code>use()</code>，我们就可以生成我们想要的相同曲线图了。</p>
+
+<pre><code class="language-Python">style.use('fivethirtyeight')
+women_majors.plot(x = 'Year', y = under_20.index, figsize = (12,8))
+</code></pre>
+
+<p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://localhost:1313/trans01/fte01.png" src="https://localhost:1313/trans01/low/fte01.png" alt="fte01" /></p></figure>
+
+<p>确实改变了许多！对比我们的第一张图，我们可以发现这张曲线图的背景颜色不同，出现了网格线，没有明显的毛刺，字体大小和坐标轴刻度等等也有了很大的不同。</p>
+
+<p>你可以在<img src="https://github.com/matplotlib/matplotlib/blob/38be7aeaaac3691560aeadafe46722dda427ef47/lib/matplotlib/mpl-data/stylelib/fivethirtyeight.mplstyle" alt="这里" />读到 FTE 样式的更多介绍。里面会有使用这个样式时的具体代码讲解。在![这里]（<a href="https://dataorigami.net/blogs/napkin-folding/17543615-replicating-538s-plot-styles-in-matplotlib）可以看到这个样式作者">https://dataorigami.net/blogs/napkin-folding/17543615-replicating-538s-plot-styles-in-matplotlib）可以看到这个样式作者</a> Cameron David-Pilon 关于它的更多讨论。</p>
+
+<h2 id="matplotlib-的-fte-样式的限制">matplotlib 的 FTE 样式的限制</h2>
+
+<p>总而言之，使用 matplotlib 提供的 FTE 样式让我们离目标近了一步。然而，还有许多事需要我们完成。让我们检查一下一个简单的 FTE 图表示例，看看我们还需要补充什么。</p>
+
+<p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://localhost:1313/trans01/ftesample.png" src="https://localhost:1313/trans01/low/ftesample.png" alt="FTE sample" /></p></figure>
+
+<p>Source: <a href="https://fivethirtyeight.com/features/fandango-movies-ratings/">FiveThirtyEight</a></p>
+
+<p>通过比较上面的图示和我们所完成的那张图，我们还需要：
+- 增加一个标题和副标题
+- 移除那个方块型的图例，而在相关的曲线旁边增加标签，并且这些标签旁边的网格线变成透明的
+- 在图的底部增加一个签名，包括这张图的作者和数据源
+- 其他一些小调整：
+    - 增加刻度标记的字体大小
+    - 在 y 轴的某个主要刻度标记上增加「%」标志
+    - 移除 x 轴的标签
+    - 加粗 y = 0 的水平线
+    - 在 y 轴的刻度标记旁边增加一条额外的网格线
+    - 增加图的侧边距</p>
+
+<p>为了节省我们制图的时间，避免在开始的时候添加标题，副标题或者其他文字非常重要。在 matplotlib 中，一段文字是通过给定的 x 和 y 坐标放置的，我们会在之后的内容里看到。为了从细节上复制 FTE 的制图风格，我们需要把 y 轴刻度标记和标题与副标题竖直对齐。我们不希望看到当我们设定好对齐之后，却通过增加刻度标签字体大小的时候错乱了，到时候还得重新调整标题和副标题的位置。</p>
+
+<h2 id="定制刻度标记">定制刻度标记</h2>
+
+<p>我们先从增加刻度标记的字体大小开始，在下面的代码中，我们会：
+- 使用之前的代码画图，把图像对象保存在 <code>fte_graph</code> 中。这样可以帮助我们探知它的一些属性，并且重复使用和修改这个对象。
+- 使用 <code>tick_params()</code> 方法增加所有刻度标记的字体大小，各种参数如下：
+    - <code>axis</code> - 指明我们想要修改的坐标轴是哪条，在这里我们想要两条都改；
+    - <code>which</code> - 指明需要改哪里的刻度标记（主要的/次要的），如果不理解可以看上文给出的链接；
+    - <code>labelsize</code> - 设定刻度标记的字体大小</p>
+
+<pre><code class="language-Python">fte_graph = women_majors.plot(x = 'Year', y = under_20.index, figsize = (12,8))
+fte_graph.tick_params(axis = 'both', which = 'major', labelsize = 18)
+</code></pre>
+
+<p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://localhost:1313/trans01/fte02.png" src="https://localhost:1313/trans01/low/fte02.png" alt="fte02" /></p></figure>
+
+<p>你可能已经发现我们这次没有使用 <code>style.use('fivethirtyeight')</code>。这是因为 matplotlib 样式的首选项已经在上文第一次提到 <code>style</code> 的时候全局更改为 <code>fivethirtyeight</code> 了。之后的所有图都会继承这个样式。如果你想要回到默认的状态，可以使用 <code>style.use('default')</code>。</p>
+
+<p>我们现在在原有的基础上继续调整 y 轴的刻度标记：
+- 我们对 y 轴可以看到的最高标记 50 增加一个「%」标记
+- 我们还需要对其他的几个刻度标记增加一个空格字符，保证它们可以和「50%」完美对齐</p>
+
+<p>为了改变 y 轴的刻度标记，我们使用了 <code>set_yticklabels()</code> 这个方法。从下面的代码中，你可以看到 <code>label</code> 这个参数接受一个多种数据类型混合的列表，而并不要求固定数量或形式的标记。</p>
+
+<pre><code class="language-Python"># Customizing the tick labels of the y-axis
+fte_graph.set_yticklabels(labels = [-10, '0   ', '10   ', '20   ', '30   ', '40   ', '50%'])
+print('The tick labels of the y-axis:', fte_graph.get_yticks()) # -10 and 60 are not visible on the graph
+</code></pre>
+
+<p>输出结果：</p>
+
+<pre><code class="language-Python">The tick labels of the y-axis: [-10.   0.  10.  20.  30.  40.  50.  60.]
+</code></pre>
+
+<h2 id="对-y-0-处的水平线加粗">对 y = 0 处的水平线加粗</h2>
+
+<p>我们现在需要加粗 y 轴坐标为 0 时的水平线。使用 <code>axhline()</code> 方法可以增加一条新的水平网格线，覆盖住原有的水平轴。<code>axhline()</code> 的参数有：
+- <code>y</code> - 指明水平线的 y 坐标；
+- <code>color</code> - 指明线的颜色；
+- <code>linewidth</code> - 设定线的宽度；
+- <code>alpha</code> - 控制线的透明度，但我们在这里是用来控制黑色的强度；<code>alpha</code> 值的范围从 0 到 1（完全透明到完全不透明）</p>
+
+<pre><code class="language-Python"># Generate a bolded horizontal line at y = 0
+fte_graph.axhline(y = 0, color = 'black', linewidth = 1.3, alpha = .7)
+</code></pre>
+
+<p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://localhost:1313/trans01/fte03.png" src="https://localhost:1313/trans01/low/fte03.png" alt="fte03" /></p></figure>
+
+<h2 id="增加一个额外的垂直线">增加一个额外的垂直线</h2>
+
+<p>如我们之前所讲，我们需要在紧靠 y 轴刻度标记旁边增加一条竖直的网格线。要加一条线的话，就需要稍微修改一下 x 轴的数据范围，把区间稍微往左边扩大一点，这样才有空间添加我们想要的新线。</p>
+
+<p>在下面，我们使用 <code>set_xlim()</code> 方法，两个参数 <code>left</code> 和 <code>right</code> 的意义不言自明。</p>
+
+<pre><code class="language-Python"># Add an extra vertical line by tweaking the range of the x-axis
+fte_graph.set_xlim(left = 1969, right = 2011)
+</code></pre>
+
+<h2 id="生成一条签名栏">生成一条签名栏</h2>
+
+<p>FTE 图像示例的签名栏有着很明显的几个特征：
+- 位置位于图片底部
+- 作者的姓名位于签名栏的左边
+- 数据源位于签名栏的右边
+- 文字的颜色是浅灰色（和图片背景的颜色一样），背景是深灰色
+- 作者姓名和数据源之间的空间背景也是深灰色</p>
+
+<p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://localhost:1313/trans01/ftesample.png" src="https://localhost:1313/trans01/low/ftesample.png" alt="ftesample" /></p></figure>
+
+<p>增加这样一个签名栏好像很难，但我们稍微动动脑筋，就可以轻松地完成。</p>
+
+<p>我们增加一个单独的文字段，将其文字颜色和背景颜色分别设定为浅灰色和深灰色。我们可以把作者姓名和数据源放在一个文字段中，然后把它们间隔开，一个放在左边，一个放在右边。中间的空格是不会显示出来的，所以保持着背景颜色。</p>
+
+<p>我们还需要一些刻个来让作者姓名和数据源对齐，这些都会在下个代码块里面看到。</p>
+
+<p>也是时候移除 x 轴的刻度标记了！这样，我们可以看到签名栏在整体的曲线图中达到了什么样的视觉效果。在下一段代码中，我们要：
+- 对 <code>fte_graph.xaxis.label</code> 使用 <code>set_visible()</code> 方法移除 x 轴的刻度标记，把这个属性的值改成 <code>False</code>
+- 通过我们上面讨论过的方法增加一个文字片段。我们所使用的 <code>text()</code> 方法有以下几个参数：
+    - <code>x</code> - 指明文字段的 x 坐标；
+    - <code>y</code> - 指明文字段的 y 坐标；
+    - <code>s</code> - 指明要添加的文字；
+    - <code>fontsize</code> - 设定文字的字体大小；
+    - <code>color</code> - 指明文字的颜色；下面我们使用这个值的格式是 16 进制的，这个颜色和整张图的背景颜色完全一致；
+    - <code>backgroundcolor</code> - 设定文字段的背景颜色</p>
+
+<pre><code class="language-Python"># Remove the label of the x-axis
+fte_graph.xaxis.label.set_visible(False)
+
+# The signature bar
+fte_graph.text(x = 1965.8, y = -7,
+    s = '   ©DATAQUEST                                                                                 Source: National Center for Education Statistics   ',
+    fontsize = 14, color = '#f0f0f0', backgroundcolor = 'grey')
+</code></pre>
+
+<p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://localhost:1313/trans01/fte05.png" src="https://localhost:1313/trans01/low/fte05.png" alt="fte05" /></p></figure>
+
+<p>这块文字段的 x 和 y 坐标是通过了一段漫长的试验和错误之后才确定的。把坐标设定为浮点数能够让你更加精准地控制文字的位置。</p>
+
+<p>值得一提的是，我们通过调整签名栏的位置的同时，也在视觉上增加了侧边距。降低文字段的 x 坐标增加左边距，而在作者名字和数据源之间增加空格增加了右边距。</p>
+
+<h2 id="另一种签名栏">另一种签名栏</h2>
+
+<p>还有另一种类型的签名栏：</p>
+
+<p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://localhost:1313/trans01/ftesample02.png" src="https://localhost:1313/trans01/low/ftesample02.png" alt="ftesample02" /></p></figure>
+
+<p>Source: <a href="https://fivethirtyeight.com/features/old-olympians-ride-horses-young-ones-do-flips/">FiveThirtyEight</a></p>
+
+<p>这种签名栏也可以简单地复制出来，我们只需要改变一些文字颜色和背景颜色就行了。</p>
+
+<p>我们通过增加一块包括许多下划线的「_」文字段来达到一条线的视觉效果。你可能想问为什么我们不使用 <code>axhline()</code> 来画一条我们想要的水平线。那是因为添加一条新的线会让整体的网格也向下扩张，这不是我们想要的效果。</p>
+
+<p>我们还可以试着加一个箭头，然后把指针去掉获得一条线，但是明显，「下划线」方案更加简单。</p>
+
+<p>在下一段代码中，我们将实现这些元素。这里用到的方法和参数，相信读者朋友们已经很熟悉了。</p>
+
+<pre><code class="language-Python"># The other signature bar
+fte_graph.text(x = 1967.1, y = -6.5,
+    s = '________________________________________________________________________________________________________________',
+    color = 'grey', alpha = .7)
+
+fte_graph.text(x = 1966.1, y = -9,
+    s = '   ©DATAQUEST                                                                               Source: National Center for Education Statistics   ',
+    fontsize = 14, color = 'grey', alpha = .7)
+</code></pre>
+
+<p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://localhost:1313/trans01/fte06.png" src="https://localhost:1313/trans01/low/fte06.png" alt="fte06" /></p></figure>
+
+<h2 id="增加一个标题和副标题">增加一个标题和副标题</h2>
+
+<p>如果你检查许多 FTE 的图表，你会发现它们的标题和副标题遵循着这样的模式：
+- 标题文字几乎都需要一个副标题补充
+- 一副特定图示的标题需要考虑到上下文的角度。它不会太复杂，太技术性，而是简单地表达出一个清晰的观点。标题也从来不会出现一个中立的情绪。就如同上文中「Fandango」的那幅图，我们可以看到一个简单的，饱含情绪的标题：「Fandango LOVES Movies」，而不是一个苍白的「电影评分类型的分布情况」这样的标题
+- 副标题提供的事这幅图的技术性信息，它常常会使坐标轴的标签显得多余。我们在完成副标题时需要注意，因为我们已经把 x 轴的标签删掉了
+- 从视觉上讲，标题和副标题有不一样的字重，而且是左对齐的（不像大多数标题是居中的），并且和 y 轴的主要刻度标记左对齐</p>
+
+<p>让我们牢记以上几点，为这幅图增添一个标题和副标题。在下面的代码块中，我们将要：
+- 使用 <code>text()</code> 方法增添一个标题和副标题。如果你已经有使用 matplotlib 的经验的话，你可能好奇为什么我们不使用 <code>title()</code> 和 <code>suptitle()</code> 这两个方法。这是因为这两个方法在精确移动文字位置上显得无比笨拙。这次唯一的新参数是 <code>weight</code>，我们使用它来加粗标题。</p>
+
+<pre><code class="language-Python"># Adding a title and a subtitle
+fte_graph.text(x = 1966.65, y = 62.7, s = &quot;The gender gap is transitory - even for extreme cases&quot;,
+               fontsize = 26, weight = 'bold', alpha = .75)
+fte_graph.text(x = 1966.65, y = 57,
+               s = 'Percentage of Bachelors conferred to women from 1970 to 2011 in the US for\nextreme cases where the percentage was less than 20% in 1970',
+              fontsize = 19, alpha = .85)
+</code></pre>
+
+<p>如果你好奇的话，原本的 FTE 图示中使用的字体是一个付费字体「Decima Mono」。所以我们还是使用 matplotlib 的默认字体，看起来也不错。</p>
+
+<h2 id="增加对色盲友好的颜色">增加对色盲友好的颜色</h2>
+
+<p>现在，那块笨重的方形图例还在。我们需要彻底丢掉它，在每条曲线旁边增加相应的标签。每条曲线有一种特定的颜色，并且有一个对应于每条曲线的解释标签。</p>
+
+<p>首先，我们改变一下曲线的颜色，添加一些对色盲友好的颜色：</p>
+
+<p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://localhost:1313/trans01/colorblind.jpg" src="https://localhost:1313/trans01/low/colorblind.jpg" alt="colorblind" /></p></figure>
+
+<p>我们所编写的面向色盲友好的颜色的 RGB 值出自上面这张图。作为边注，我们要避免使用黄色，因为这种颜色在灰色背景下的可读性非常差。</p>
+
+<p>完成之后，我们把 RGB 传入 <code>plot()</code> 方法中的颜色参数。注意 matplotlib 要求 RGB 参数在 0-1 的范围之间，所以我们把每个值除以 255（最大的 RGB 值）。</p>
+
+<pre><code class="language-Python"># Colorblind-friendly colors
+colors = [[0,0,0], [230/255,159/255,0], [86/255,180/255,233/255], [0,158/255,115/255],
+          [213/255,94/255,0], [0,114/255,178/255]]
+
+# The previous code we modify
+fte_graph = women_majors.plot(x = 'Year', y = under_20.index, figsize = (12,8), color = colors)
+
+# The previous code that remains the same
+fte_graph.tick_params(axis = 'both', which = 'major', labelsize = 18)
+fte_graph.set_yticklabels(labels = [-10, '0   ', '10   ', '20   ', '30   ', '40   ', '50%'])
+fte_graph.axhline(y = 0, color = 'black', linewidth = 1.3, alpha = .7)
+fte_graph.xaxis.label.set_visible(False)
+fte_graph.set_xlim(left = 1969, right = 2011)
+fte_graph.text(x = 1965.8, y = -7,
+    s = '   ©DATAQUEST                                                                                 Source: National Center for Education Statistics   ',
+    fontsize = 14, color = '#f0f0f0', backgroundcolor = 'grey')
+fte_graph.text(x = 1966.65, y = 62.7, s = &quot;The gender gap is transitory - even for extreme cases&quot;,
+               fontsize = 26, weight = 'bold', alpha = .75)
+fte_graph.text(x = 1966.65, y = 57,
+               s = 'Percentage of Bachelors conferred to women from 1970 to 2011 in the US for\nextreme cases where the percentage was less than 20% in 1970',
+              fontsize = 19, alpha = .85)
+</code></pre>
+
+<p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://localhost:1313/trans01/fte08.png" src="https://localhost:1313/trans01/low/fte08.png" alt="fte08" /></p></figure>
+
+<h2 id="把图例样式变成线条边的标签">把图例样式变成线条边的标签</h2>
+
+<p>最后，我们通过 <code>text()</code> 方法在每条曲线旁边增加一个颜色一致的标签。唯一的新参数是 <code>rotation</code>，我们用它旋转每个标签，这样看起来更加优雅。</p>
+
+<p>这里还需要一点小技巧，只需要给每个图例标签设定好背景颜色，就可以让它们旁边的网格线变得透明了。</p>
+
+<p>我们只需要把先前代码 <code>plot()</code> 方法中的 <code>legend</code> 参数改为 <code>False</code> 就可以让默认的图例消失不见了。而由于已经存储过了颜色列表，我们也不用再费心了。</p>
+
+<pre><code class="language-Python"># The previous code we modify
+fte_graph = women_majors.plot(x = 'Year', y = under_20.index, figsize = (12,8), color = colors, legend = False)
+
+# The previous code that remains unchanged
+fte_graph.tick_params(axis = 'both', which = 'major', labelsize = 18)
+fte_graph.set_yticklabels(labels = [-10, '0   ', '10   ', '20   ', '30   ', '40   ', '50%'])
+fte_graph.axhline(y = 0, color = 'black', linewidth = 1.3, alpha = .7)
+fte_graph.xaxis.label.set_visible(False)
+fte_graph.set_xlim(left = 1969, right = 2011)
+fte_graph.text(x = 1965.8, y = -7,
+    s = '   ©DATAQUEST                                                                                 Source: National Center for Education Statistics   ',
+    fontsize = 14, color = '#f0f0f0', backgroundcolor = 'grey')
+fte_graph.text(x = 1966.65, y = 62.7, s = &quot;The gender gap is transitory - even for extreme cases&quot;,
+               fontsize = 26, weight = 'bold', alpha = .75)
+fte_graph.text(x = 1966.65, y = 57,
+               s = 'Percentage of Bachelors conferred to women from 1970 to 2011 in the US for\nextreme cases where the percentage was less than 20% in 1970',
+              fontsize = 19, alpha = .85)
+
+# Add colored labels
+fte_graph.text(x = 1994, y = 44, s = 'Agriculture', color = colors[0], weight = 'bold', rotation = 33,
+              backgroundcolor = '#f0f0f0')
+fte_graph.text(x = 1985, y = 42.2, s = 'Architecture', color = colors[1], weight = 'bold', rotation = 18,
+              backgroundcolor = '#f0f0f0')
+fte_graph.text(x = 2004, y = 51, s = 'Business', color = colors[2], weight = 'bold', rotation = -5,
+               backgroundcolor = '#f0f0f0')
+fte_graph.text(x = 2001, y = 30, s = 'Computer Science', color = colors[3], weight = 'bold', rotation = -42.5,
+              backgroundcolor = '#f0f0f0')
+fte_graph.text(x = 1987, y = 11.5, s = 'Engineering', color = colors[4], weight = 'bold',
+              backgroundcolor = '#f0f0f0')
+fte_graph.text(x = 1976, y = 25, s = 'Physical Sciences', color = colors[5], weight = 'bold', rotation = 27,
+              backgroundcolor = '#f0f0f0')
+</code></pre>
+
+<p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://localhost:1313/trans01/fte09.png" src="https://localhost:1313/trans01/low/fte09.png" alt="fte09" /></p></figure>
+
+<h2 id="下一步">下一步</h2>
+
+<p>这样，我们的图就可以发表了！
+That’s it, our graph is now ready for publication!</p>
+
+<p>做一个小总结，我们开始的时候使用 matplotlib 的默认样式，然后我们一步步把这张图修改成了 FTE 的官方水平：
+- 使用了 matplotlib 内建的 <code>fivethirtyeight</code> 样式
+- 增加了个性化的标题和副标题
+- 增加了一个标题栏
+- 去掉了默认的图例，增加了曲线旁边的图例
+- 其他的一些小调整：定制了刻度标记，加粗了 y = 0 的水平线，在刻度标记旁边增加了竖直线，去除了 x 轴的标签，同时增加了 y 轴的边距。</p>
+
+<p>你可以把下面这几件事作为学习之后的复习：
+- 使用其他科目学士数据生成一个相似的图表
+- 生成一个其他类型的 FTE 图表：直方图，散点图等等
+- 探索<a href="https://matplotlib.org/gallery.html">matplotlib gallery</a>，找到一些新的元素来丰富你的 FTE 图表（比如插入图片，增加箭头等等）。插入图片能让你的图表到达一个新的层次：</p>
+
+<p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://localhost:1313/trans01/ftesample03.png" src="https://localhost:1313/trans01/low/ftesample03.png" alt="ftesample03" /></p></figure>
+
+<p>原作者：Alexandru Olteanu
+原文链接：<a href="https://www.dataquest.io/blog/making-538-plots/">How to Generate FiveThirtyEight Graphs in Python</a></p>
+
+            </div>
+            
+            <br>
+            <div class="share">
+                  
+                  <a href="" class="ssk ssk-facebook"></a>
+                  
+                  
+                  <a href="" class="ssk ssk-twitter"></a>
+                  
+                  
+                  <a href="" class="ssk ssk-google-plus"></a>
+                  
+                  
+                  <a href="" class="ssk ssk-linkedin"></a>
+                  
+            </div>
+            
+            
+            <br>
+            <div class="navigation">
+                
+                <div>
+                    <img class="icon" src="https://localhost:1313/img/back.svg" alt="back" />
+                    <a href="https://localhost:1313/blog/%E7%94%A8-python-%E8%A7%A3%E5%86%B3%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E9%A2%98-01/">用 Python 解决数据结构与算法题 01</a>
+                </div>
+                
+                <div style="width: 100%;"></div>
+                
+                <div>
+                    <a href="https://localhost:1313/blog/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8-latex-%E5%91%A2/">为什么要使用 LaTeX 呢？</a>
+                    <img class="icon" src="https://localhost:1313/img/next.svg" alt="next" />
+                </div>
+                
+            </div>
+            
+            
+
+            
+
+            
+        </div>
+    </div>
+</div>
+
+
+
+<div class="footer column">
+    <div class="container">
+
+        
+
+        <div class="copyright">
+
+        
+            
+                <a href="https://localhost:1313/license">Copyright © 2019 xzywisdili</a>
+            
+        
+
+        </div>
+        <div class="icons">
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+            <a href="https://github.com/https://github.com/xzywisdili" rel=me target="_blank">
+                <img class="icon" src="https://localhost:1313/img/github.svg" alt="github" />
+            </a>
+        
+
+        
+            <a href="https://twitter.com/xzywisdili" rel=me target="_blank">
+                <img class="icon" src="https://localhost:1313/img/twitter.svg" alt="twitter" />
+            </a>
+        
+
+        
+
+        
+
+        
+            <a href="mailto:zhouyang.xu@outlook.com">
+                <img class="icon" src="https://localhost:1313/img/email.svg" alt="email" />
+            </a>
+        
+
+        
+            <a href="https://localhost:1313/index.xml">
+                <img class="icon" src="https://localhost:1313/img/rss.svg" alt="rss" />
+            </a>
+        
+
+        </div>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script>
+  WebFont.load({
+    google: {
+      families: ['Raleway:400,600,700', 'Merriweather:300,300i,700,700i', 'Ubuntu+Mono:400,700']
+    }
+  });
+</script>
+
+
+
+  <script src="https://localhost:1313/js/highlight.min.js" defer></script>
+  
+
+
+
+  <script src="https://localhost:1313/js/progressively.min.js" defer></script>
+
+
+
+  <script src="https://localhost:1313/js/social-share-kit.min.js" defer></script>
+
+
+
+
+
+
+<script>
+  window.onload = function() {
+    
+      hljs.initHighlighting();
+    
+    
+      progressively.init({delay: 30, throttle: 50});
+    
+    
+      SocialShareKit.init({
+        twitter: {
+            text: '',
+            via: 'xzywisdili'
+        }
+      });
+    
+  };
+</script>
+
+
+
+
+</body>
+</html>
+

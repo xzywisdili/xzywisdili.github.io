@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="xzy&#39;s blog">
+
+
+    <meta property="twitter:site" content="@xzywisdili">
+
+<meta property="og:site_name" content="xzy&#39;s blog" />
+<meta property="og:locale" content="zh-cn" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://localhost:1313/blog/r-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" />
+<meta property="og:title" content="R 语言基础入门" />
+<meta property="twitter:title" content="R 语言基础入门">
+
+    <meta property="og:image" content="https://localhost:1313/logo.png">
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:image" content="https://localhost:1313/logo.png">
+
+<meta property="og:description" content="">
+<meta property="twitter:description" content="">
+
+<title>
+
+
+     xzy&#39;s blog - R 语言基础入门 
+
+</title>
+<link rel="canonical" href="https://localhost:1313/blog/r-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">
+
+
+<style media="screen">
+  @font-face {
+  font-family: 'Nexa Bold';
+  src: url('https://localhost:1313/fonts/Nexa Bold.otf');
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, div.column {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+a,
+a:visited,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+html {
+  height: 100%;
+  font-size: 16px;
+}
+body {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 100%;
+  font-weight: 400;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  color: #111111;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility !important;
+}
+.icon {
+  text-rendering: geometricPrecision !important;
+}
+section {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  width: 100%;
+}
+div.column {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  width: 100%;
+}
+.container {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  width: 100%;
+}
+div.header .container {
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+}
+div.header .content {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+div.header .container .logo {
+  
+  max-width: 100px;
+  
+  margin-left: -2em;
+}
+div.header .name {
+  padding-top: 20px;
+  font-size: 28px;
+  font-family: 'Nexa Bold', 'Helvetica Neue', 'Arial', sans-serif;
+  letter-spacing: -0.005rem;
+  
+  text-transform: uppercase;
+  
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  color: #333333;
+}
+div.header nav {
+  margin-bottom: 16px;
+}
+div.header nav ul {
+  list-style: none;
+  text-align: center;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flexbox;
+  display: -ms-inline-flex;
+  display: inline-flex;
+}
+div.header nav ul li {
+  margin-left: 6px;
+  margin-right: 6px;
+}
+div.header nav ul li:first-child {
+  margin-left: 0;
+}
+div.header nav ul li:last-child {
+  margin-right: 0;
+}
+div.header nav ul a {
+  color: #555555;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  -webkit-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -moz-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -ms-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -o-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+}
+div.header nav ul a:hover {
+  color: #111111;
+}
+div.footer .container {
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  width: 100%;
+  text-align: center;
+}
+div.footer .container a {
+  font-size: 14px;
+  margin-left: 6px;
+  margin-right: 6px;
+  opacity: 0.6;
+  -webkit-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -moz-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -ms-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -o-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+}
+div.footer .container a:first-child {
+  margin-left: 0;
+}
+div.footer .container a:last-child {
+  margin-right: 0;
+}
+div.footer .container a:hover {
+  opacity: 0.8;
+}
+div.footer .container a .icon {
+  width: 16px;
+  height: 16px;
+}
+div.footer .container .copyright {
+  flex-grow: 0.5;
+  text-align: start;
+}
+div.footer .container .icons {
+  flex-grow: 0.5;
+  text-align: end;
+}
+div.main .container {
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  justify-content: flex-start;
+}
+div.main .content {
+  color: #111111;
+  font-size: 16px;
+}
+div.main .content .title-container {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+}
+div.main .content .posts {
+  
+  
+}
+div.main .content .page-heading {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  letter-spacing: -0.005rem;
+  text-transform: uppercase;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  color: #333333;
+  margin-bottom: 16px;
+}
+div.main .content .front-matter .page-heading {
+  margin-bottom: 0;
+}
+div.main .content .front-matter .meta {
+  font-size: 14px;
+  color: #666666;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  margin-bottom: 32px;
+}
+div.main .content .front-matter .date,
+div.main .content .front-matter .author,
+div.main .content .front-matter .tags,
+div.main .content .front-matter .word-count,
+div.main .content .front-matter .middot:before {
+  display: none;
+}
+div.main .content .front-matter .middot:before {
+  font-size: 6px;
+  margin: 0 6px;
+  vertical-align: middle;
+  content: "•";
+}
+div.main .content .front-matter .tags ul {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+div.main .content .front-matter .tags ul li {
+  -webkit-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -moz-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -ms-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -o-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+}
+div.main .content .front-matter .tags ul li:hover {
+  opacity: 0.7;
+}
+div.main .content .front-matter .tags ul li a {
+  color: #666666;
+}
+div.main .container.f04 {
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+}
+div.main .container.f04 .content {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+div.main .container.f04 .content .num {
+  margin: 30px 0px 30px 0;
+  font-weight: 400;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  font-size: 50px;
+}
+div.main .container.f04 .content .detail {
+  margin-bottom: 40px;
+}
+div.main .container .content .groupby {
+  margin-top: 1em;
+  padding-left: 0.5em;
+}
+div.main .container .content .post-item {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  display: list-item;
+  list-style: disc inside;
+}
+div.main .container .content .post-item .meta {
+  font-size: 14px;
+  color: #666666;
+  display: none;
+  min-width: 100px;
+}
+div.main .container .content .see-more {
+  font-style: italic;
+  float: right;
+  font-size: 0.9em;
+  margin-top: 2em;
+  color: #313537;
+}
+div.main .container .content .see-more:hover {
+  color: #666;
+}
+section {
+  padding: 0 16px;
+}
+div.column {
+  padding: 0 16px;
+}
+div.header {
+  padding-top: 10px;
+}
+div.header-home {
+  padding-top: 36px;
+}
+div.main {
+  padding-top: 32px;
+}
+div.main .container .content .post-item .meta {
+    display: block;
+}
+div.main .container .content .post-item {
+    display: flex;
+    list-style: none;
+}
+a {
+  color: #428bca;
+  -webkit-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -moz-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -ms-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -o-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+}
+a:hover {
+  color: #2a6496;
+}
+img {
+  max-width: 100%;
+}
+div.main .content {
+    width: 100%;
+}
+div.main .content .markdown {
+  font-size: 1.1em;
+  line-height: 1.75em;
+  color: #313537;
+  font-family: serif;
+  font-weight: 300;
+}
+div.main .content .markdown h1,
+div.main .content .markdown h2,
+div.main .content .markdown h3,
+div.main .content .markdown h4,
+div.main .content .markdown h5,
+div.main .content .markdown h6 {
+  font-size: 22px;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  letter-spacing: -0.005rem;
+  font-weight: 700;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  color: #333333;
+  text-transform: none;
+  margin-top: 1.75rem;
+}
+div.main .content .markdown h1 {
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+div.main .content .markdown h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+div.main .content .markdown h3 {
+  font-size: 1em;
+  margin-bottom: 1rem;
+}
+div.main .content .markdown h4,
+div.main .content .markdown h5,
+div.main .content .markdown h6 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  letter-spacing: none;
+}
+div.main .content .markdown code,
+div.main .content .markdown pre {
+  font-family: 'Menlo', monospace;
+  font-size: 0.98rem;
+  background-color: #f7f7f7;
+}
+div.main .content .markdown code {
+  /* enclosed by single backtick (`) */
+  padding: .15em .5em;
+  border-radius: 2px;
+}
+div.main .content .markdown pre {
+  /* Hugo specific: consider using the 'highlight' shortcode */
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  line-height: 1.5em;
+  white-space: pre;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+div.main .content .markdown pre code {
+  /* enclosed by 4 backticks (````) */
+  padding: 0;
+  font-size: 0.9rem;
+}
+div.main .content .markdown a code {
+  color: #428bca !important;
+}
+div.main .content .markdown a code:hover {
+  text-decoration: underline;
+}
+div.main .content .markdown p {
+  
+  text-align: justify;
+  
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+div.main .content .markdown ul,
+div.main .content .markdown ol,
+div.main .content .markdown dl {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+div.main .content .markdown dt {
+  font-weight: bold;
+}
+div.main .content .markdown dd {
+  margin-bottom: .5rem;
+}
+div.main .content .markdown ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  margin-bottom: 1.25rem;
+}
+div.main .content .markdown ol {
+  list-style-type: decimal;
+  margin-bottom: 1.25rem;
+}
+div.main .content .markdown li {
+  margin-left: 2em;
+}
+div.main .content .markdown em {
+  font-style: italic;
+}
+div.main .content .markdown strong {
+  font-weight: 700;
+}
+div.main .content .markdown hr {
+  position: relative;
+  margin: 1.75rem 0;
+  border: 0;
+  border-top: 1px solid #808080;
+  border-top: 1px solid #999999;
+}
+div.main .content .markdown abbr {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #666666;
+  text-transform: uppercase;
+}
+div.main .content .markdown abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted #808080;
+}
+div.main .content .markdown blockquote {
+  padding: .5rem 1rem;
+  margin: .8rem 0;
+  color: #7a7a7a;
+  border-left: .25rem solid #e5e5e5;
+}
+div.main .content .markdown blockquote p:last-child {
+  margin-bottom: 0;
+}
+div.main .content .markdown figure {
+  width: 100%;
+  background: #fff;
+  margin-bottom: 1em;
+}
+div.main .content .markdown figure img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  position: static;
+  margin: auto;
+}
+div.main .content .markdown table {
+  margin-bottom: 1rem;
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  border-collapse: collapse;
+}
+div.main .content .markdown td,
+div.main .content .markdown th {
+  padding: .25rem .5rem;
+  border: 1px solid #e5e5e5;
+}
+div.main .content .markdown tbody tr:nth-child(odd) td,
+div.main .content .markdown tbody tr:nth-child(odd) th {
+  background-color: #f7f7f7;
+}
+div.main .content .markdown .footnotes ol {
+  list-style-type: decimal;
+  margin-left: 16px;
+}
+div.main .content .markdown .footnotes li {
+  list-style-type: unset;
+}
+div.main .content .markdown .footnote-ref {
+  font-size: 0.7em;
+}
+div.main .content .navigation {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  padding: 2em;
+}
+div.main .content .navigation div {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  margin-top: 1em;
+}
+div.main .content .navigation .icon {
+  width: 16px;
+  height: 16px;
+}
+div.main .content .navigation a {
+  width: 250px;
+  margin: 0 1em;
+  text-align: center;
+  font-style: italic;
+  color: #313537;
+}
+div.main .content .share, div.main .content .share div {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+}
+div.main .content .share {
+  background-color: rgba(152, 152, 152, 0.07);
+  padding: 1em 0;
+}
+div.main .content .share a {
+  margin: 0 6px;
+}
+kbd {
+  padding: 0.1em 0.6em;
+  border: 1px solid #ccc;
+  font-size: 11px;
+  font-family: Arial,Helvetica,sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  -moz-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
+  -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  display: inline-block;
+  margin: 0 0.1em;
+  text-shadow: 0 1px 0 #fff;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+/* Fonts */
+
+
+.wf-raleway-n4-active body, 
+.wf-raleway-n4-active div.header nav ul a,
+.wf-raleway-n7-active div.main .content .page-heading,
+.wf-raleway-n2-active div.main .container.f04 .content .num,
+.wf-raleway-n7-active div.main .content .markdown h1,
+.wf-raleway-n7-active div.main .content .markdown h2,
+.wf-raleway-n7-active div.main .content .markdown h3,
+.wf-raleway-n7-active div.main .content .markdown h4,
+.wf-raleway-n7-active div.main .content .markdown h5,
+.wf-raleway-n7-active div.main .content .markdown h6 {
+      font-family: 'Raleway';
+}
+
+.wf-merriweather-n3-active div.main .content .markdown {
+      font-family: 'Merriweather';
+}
+
+.wf-ubuntu-mono-n4-active div.main .content .markdown code,
+.wf-ubuntu-mono-n4-active div.main .content .markdown pre {
+      font-family: 'Ubuntu Mono';
+}
+
+
+</style>
+<style media="(min-width: 600px)">
+  body {
+-webkit-justify-content: center;
+-moz-justify-content: center;
+-ms-justify-content: center;
+justify-content: center;
+}
+.non-narrow.zero-top-spacing {
+padding-top: 0 !important;
+}
+section {
+padding: 0 16px;
+margin-left: 100px;
+margin-right: 100px;
+
+max-width: 750px;
+
+}
+div.column {
+padding: 0 16px;
+
+max-width: 750px;
+
+}
+div.header {
+background-color: transparent;
+}
+div.header .container {
+-webkit-justify-content: flex-start;
+-moz-justify-content: flex-start;
+-ms-justify-content: flex-start;
+justify-content: flex-start;
+}
+div.header .container .logo {
+margin: 0;
+}
+div.header-home .container .logo {
+max-width: 216px;
+margin-left: 24px;
+}
+div.header-home .name-home {
+padding-top: 30px;
+font-size: 40px;
+}
+div.header-home nav ul a {
+font-size: 18px;
+}
+div.header .content {
+-webkit-align-items: flex-start;
+-moz-align-items: flex-start;
+-ms-align-items: flex-start;
+align-items: flex-start;
+}
+div.header .name {
+color: #333333;
+}
+div.header nav {
+font-size: 14px;
+margin-bottom: 0;
+}
+div.header nav ul {
+text-align: left;
+}
+div.header nav ul a {
+color: #666666;
+}
+div.header nav ul a:hover {
+color: #333333;
+}
+div.footer {
+background-color: transparent;
+}
+div.footer .container {
+flex-direction: row;
+}
+div.footer .container a {
+margin-left: 3px;
+margin-right: 3px;
+color: #666666;
+}
+div.footer .container a:hover {
+color: #333333;
+}
+div.footer .container a .icon {
+font-size: 18px;
+}
+div.footer .container a .icon.larger {
+font-size: 20px;
+}
+div.main .content .front-matter .date,
+div.main .content .front-matter .author,
+div.main .content .front-matter .tags,
+div.main .content .front-matter .word-count,
+div.main .content .front-matter .middot:before {
+display: initial;
+}
+div.main .container.f04 {
+-webkit-justify-content: flex-start;
+-moz-justify-content: flex-start;
+-ms-justify-content: flex-start;
+justify-content: flex-start;
+}
+div.main .container.f04 .content {
+-webkit-align-items: flex-start;
+-moz-align-items: flex-start;
+-ms-align-items: flex-start;
+align-items: flex-start;
+}
+div.main .container.f04 .content .num {
+margin: 0 0 10px 0;
+font-size: 32px;
+}
+div.main .container.f04 .content .detail {
+margin-bottom: 30px;
+}
+.container {
+padding: 0 30px;
+}
+div.header {
+padding-top: 60px;
+padding-bottom: 60px;
+}
+div.footer {
+padding-top: 60px;
+padding-bottom: 60px;
+}
+div.main {
+padding-top: 0;
+}
+div.main .content {
+  
+  font-size: 16px;
+  
+}
+div.main .container .content .post-item {
+display: flex;
+list-style: none;
+padding-left: 1.5em;
+}
+div.main .container .content .post-item .meta {
+display: block;
+}
+div.main .content .markdown blockquote {
+padding-right: 5rem;
+padding-left: 1.25rem;
+}
+div.main .content .navigation {
+-webkit-flex-direction: row;
+-moz-flex-direction: row;
+-ms-flex-direction: row;
+flex-direction: row;
+}
+div.main .content .navigation div {
+margin-top: 0em;
+}
+
+</style>
+<style media="(min-width: 769px)">
+  div.main .content .markdown figure {
+width: 110%;
+margin-left: -4%;
+}
+div.main .content .markdown img {
+max-width: 110%;
+width: 110%;
+margin-left: -4%;
+}
+div.main .content .markdown pre {
+width: 110%;
+margin-left: -4%;
+}
+
+</style>
+
+<noscript>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet">
+</noscript>
+
+
+  <style type="text/css" media="screen">
+    .hljs{display:block;background:white;padding:0.5em;color:#333333;overflow-x:auto}.hljs-comment,.hljs-meta{color:#969896}.hljs-string,.hljs-variable,.hljs-template-variable,.hljs-strong,.hljs-emphasis,.hljs-quote{color:#df5000}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-literal,.hljs-symbol,.hljs-bullet,.hljs-attribute{color:#0086b3}.hljs-section,.hljs-name{color:#63a35c}.hljs-tag{color:#333333}.hljs-title,.hljs-attr,.hljs-selector-id,.hljs-selector-class,.hljs-selector-attr,.hljs-selector-pseudo{color:#795da3}.hljs-addition{color:#55a532;background-color:#eaffea}.hljs-deletion{color:#bd2c00;background-color:#ffecec}.hljs-link{text-decoration:underline}
+  </style>
+
+
+
+  <style type="text/css" media="screen">
+    .progressive{overflow:hidden;position:relative;background:#efefef}.progressive__img{width:100%;height:100%;position:absolute;-webkit-transform:translateZ(0);transform:translateZ(0)}.progressive--not-loaded{filter:blur(30px);-webkit-filter:blur(30px)}.progressive--is-loaded{filter:blur(20px);-webkit-filter:blur(20px);-webkit-animation:sharpen .5s both;animation:sharpen .5s both}@-webkit-keyframes sharpen{from{filter:blur(20px);-webkit-filter:blur(20px)}to{filter:blur(0);-webkit-filter:blur(0)}}@keyframes sharpen{from{filter:blur(20px);-webkit-filter:blur(20px)}to{filter:blur(0);-webkit-filter:blur(0)}}
+  </style>
+
+
+
+  <style type="text/css" media="screen">
+    /*!
+ * Social Share Kit v1.0.7 (http://socialsharekit.com)
+ * Copyright 2015 Social Share Kit / Kaspars Sprogis.
+ * Licensed under Creative Commons Attribution-NonCommercial 3.0 license:
+ * https://github.com/darklow/social-share-kit/blob/master/LICENSE
+ * ---
+ */@font-face{font-family:'social-share-kit';src:url('https://localhost:1313/fonts/social-share-kit.eot');src:url('https://localhost:1313/fonts/social-share-kit.eot?#iefix') format('embedded-opentype'),url('https://localhost:1313/fonts/social-share-kit.woff') format('woff'),url('https://localhost:1313/fonts/social-share-kit.ttf') format('truetype'),url('https://localhost:1313/fonts/social-share-kit.svg#social-share-kit') format('svg');font-weight:normal;font-style:normal}.ssk:before{display:inline-block;font-family:"social-share-kit" !important;font-style:normal !important;font-weight:normal !important;font-variant:normal !important;text-transform:none !important;speak:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.ssk-facebook:before{content:"a";text-indent:4px;margin-right:-4px}.ssk-twitter:before{content:"b"}.ssk-google-plus:before{content:"v"}.ssk-google-plus-old:before{content:"c"}.ssk-email:before{content:"d";top:-1px;position:relative}.ssk-pinterest:before{content:"e"}.ssk-tumblr:before{content:"f"}.ssk-linkedin:before{content:"g"}.ssk-github:before{content:"h"}.ssk-vk:before{content:"i"}.ssk-instagram:before{content:"j"}.ssk-amazon:before{content:"k"}.ssk-skype:before{content:"s"}.ssk-youtube:before{content:"x"}.ssk-vimeo:before{content:"u"}.ssk-ebay:before{content:"p"}.ssk-apple:before{content:"l"}.ssk-behance:before{content:"q"}.ssk-dribble:before{content:"n"}.ssk-android:before{content:"o"}.ssk-whatsapp:before{content:"m"}.ssk-reddit:before{content:"r"}.ssk-reddit2:before{content:"t"}.ssk-link:before{content:"w"}.ssk{background-color:#757575;color:white;display:inline-block;font-size:22px;line-height:1px;margin-right:2px;margin-bottom:2px;padding:7px;text-align:center;text-decoration:none;transition:background-color .1s;-webkit-transition:background-color .1s;-moz-transition:background-color .1s;-ms-transition:background-color .1s;-o-transition:background-color .1s}.ssk:before,.ssk .glyphicon,.ssk .fa{position:relative;font-size:22px;top:0;vertical-align:middle}.ssk.ssk-xs,.ssk-xs>.ssk{padding:4px}.ssk.ssk-xs:before,.ssk-xs>.ssk:before,.ssk.ssk-xs .glyphicon,.ssk-xs>.ssk .glyphicon,.ssk.ssk-xs .fa,.ssk-xs>.ssk .fa{font-size:15px}.ssk.ssk-sm,.ssk-sm>.ssk{padding:5px}.ssk.ssk-sm:before,.ssk-sm>.ssk:before,.ssk.ssk-sm .glyphicon,.ssk-sm>.ssk .glyphicon,.ssk.ssk-sm .fa,.ssk-sm>.ssk .fa{font-size:20px}.ssk.ssk-lg,.ssk-lg>.ssk{padding:9px}.ssk.ssk-lg:before,.ssk-lg>.ssk:before,.ssk.ssk-lg .glyphicon,.ssk-lg>.ssk .glyphicon,.ssk.ssk-lg .fa,.ssk-lg>.ssk .fa{font-size:28px}.ssk:last-child{margin-right:0}.ssk:hover{background-color:#424242}.ssk:hover,.ssk:focus{color:#fff;text-decoration:none}.ssk.ssk-round,.ssk-round .ssk{border-radius:50%}.ssk.ssk-round:before,.ssk-round .ssk:before{text-indent:0;margin-right:0}.ssk.ssk-rounded,.ssk-rounded .ssk{border-radius:15%}.ssk.ssk-icon{color:#757575;padding:2px;font-size:24px}.ssk.ssk-icon,.ssk.ssk-icon:hover{background-color:transparent}.ssk.ssk-icon:hover{color:#424242}.ssk.ssk-icon.ssk-xs,.ssk-xs>.ssk.ssk-icon{font-size:16px}.ssk.ssk-icon.ssk-sm,.ssk-sm>.ssk.ssk-icon{font-size:20px}.ssk.ssk-icon.ssk-lg,.ssk-lg>.ssk.ssk-icon{font-size:28px}.ssk.ssk-text{overflow:hidden;font-size:17px;line-height:normal;padding-right:10px}.ssk.ssk-text:before,.ssk.ssk-text .glyphicon,.ssk.ssk-text .fa{margin:-7px 10px -7px -7px;padding:7px;background-color:rgba(0,0,0,0.15);vertical-align:bottom;text-indent:0}.ssk-block .ssk.ssk-text{display:block;margin-right:0;text-align:left}.ssk.ssk-text.ssk-xs,.ssk-xs>.ssk.ssk-text{font-size:12px;padding-right:6px}.ssk.ssk-text.ssk-xs:before,.ssk-xs>.ssk.ssk-text:before,.ssk.ssk-text.ssk-xs .glyphicon,.ssk-xs>.ssk.ssk-text .glyphicon,.ssk.ssk-text.ssk-xs .fa,.ssk-xs>.ssk.ssk-text .fa{margin:-4px 6px -4px -4px;padding:4px}.ssk.ssk-text.ssk-sm,.ssk-sm>.ssk.ssk-text{font-size:16px;padding-right:7px}.ssk.ssk-text.ssk-sm:before,.ssk-sm>.ssk.ssk-text:before,.ssk.ssk-text.ssk-sm .glyphicon,.ssk-sm>.ssk.ssk-text .glyphicon,.ssk.ssk-text.ssk-sm .fa,.ssk-sm>.ssk.ssk-text .fa{margin:-5px 7px -5px -5px;padding:5px}.ssk.ssk-text.ssk-lg,.ssk-lg>.ssk.ssk-text{font-size:22px;padding-right:13px}.ssk.ssk-text.ssk-lg:before,.ssk-lg>.ssk.ssk-text:before,.ssk.ssk-text.ssk-lg .glyphicon,.ssk-lg>.ssk.ssk-text .glyphicon,.ssk.ssk-text.ssk-lg .fa,.ssk-lg>.ssk.ssk-text .fa{margin:-9px 13px -9px -9px;padding:9px}.ssk-group,.ssk-sticky{font-size:0}.ssk-sticky{top:0;position:fixed;z-index:2000}.ssk-sticky .ssk{transition:padding .1s ease-out;-webkit-transition:padding .1s ease-out;-moz-transition:padding .1s ease-out;-ms-transition:padding .1s ease-out;-o-transition:padding .1s ease-out;margin:0}@media (min-width:768px){.ssk-sticky.ssk-left .ssk,.ssk-sticky.ssk-right .ssk{display:block;clear:both}.ssk-sticky.ssk-left.ssk-center,.ssk-sticky.ssk-right.ssk-center{top:50%;transform:translateY(-50%);-webkit-transform:translateY(-50%);-moz-transform:translateY(-50%);-ms-transform:translateY(-50%);-o-transform:translateY(-50%)}.ssk-sticky.ssk-left{left:0}.ssk-sticky.ssk-left .ssk{float:left}.ssk-sticky.ssk-left .ssk:hover{padding-left:15px}.ssk-sticky.ssk-right{right:0}.ssk-sticky.ssk-right .ssk{float:right}.ssk-sticky.ssk-right .ssk:hover{padding-right:15px}}.ssk-sticky.ssk-bottom{font-size:0;top:auto;bottom:0}.ssk-sticky.ssk-bottom.ssk-center{left:50%;right:auto;transform:translateX(-50%);-webkit-transform:translateX(-50%);-moz-transform:translateX(-50%);-ms-transform:translateX(-50%);-o-transform:translateX(-50%)}.ssk-sticky.ssk-bottom .ssk{vertical-align:bottom}.ssk-sticky.ssk-bottom .ssk:hover{padding-bottom:15px}.ssk-sticky.ssk-round.ssk-xs .ssk:hover{padding:8px}.ssk-sticky.ssk-round.ssk-sm .ssk:hover{padding:9px}.ssk-sticky.ssk-round .ssk:hover{padding:11px}.ssk-sticky.ssk-round.ssk-lg .ssk:hover{padding:13px}@media (max-width:767px){.ssk-sticky{left:0;right:0;bottom:0;top:auto;width:100%;display:flex !important;flex-direction:row;flex-wrap:nowrap}.ssk-sticky.ssk-sticky-hide-xs{display:none !important}.ssk-sticky .ssk{flex:1;width:auto}.ssk-sticky .ssk .ssk-num{display:none}}.ssk-count{padding-top:20px}.ssk-count .ssk{position:relative}.ssk-count .ssk-num{border-radius:4px;color:#8f8f8f;background-color:rgba(50,50,50,0.03);display:block;font-size:12px;left:0;line-height:20px;position:absolute;right:0;text-align:center;top:-20px}@media (min-width:768px){.ssk-count.ssk-sticky{padding-top:0}.ssk-count.ssk-sticky.ssk-left .ssk-num,.ssk-count.ssk-sticky.ssk-right .ssk-num{top:20%;background-color:transparent}.ssk-count.ssk-sticky.ssk-left .ssk-num{left:100%;margin-left:5px}.ssk-count.ssk-sticky.ssk-right .ssk-num{right:115%;margin-left:-100%;text-align:right}}.ssk-facebook{background-color:#3B5998}.ssk-grayscale>.ssk-facebook{background-color:#757575}.ssk-facebook:hover{background-color:#2d4373}.ssk-facebook:hover{background-color:#2d4373}.ssk-grayscale>.ssk-facebook:hover{background-color:#3B5998}.ssk-facebook.ssk-icon{color:#3B5998}.ssk-facebook.ssk-icon:hover{color:#2d4373}.ssk-facebook.ssk-icon:before{text-indent:0;margin-right:0}.ssk-twitter{background-color:#1DA1F2}.ssk-grayscale>.ssk-twitter{background-color:#757575}.ssk-twitter:hover{background-color:#0c85d0}.ssk-twitter:hover{background-color:#0c85d0}.ssk-grayscale>.ssk-twitter:hover{background-color:#1DA1F2}.ssk-twitter.ssk-icon{color:#1DA1F2}.ssk-twitter.ssk-icon:hover{color:#0c85d0}.ssk-google-plus{background-color:#EA4335}.ssk-grayscale>.ssk-google-plus{background-color:#757575}.ssk-google-plus:hover{background-color:#d62516}.ssk-google-plus:hover{background-color:#d62516}.ssk-grayscale>.ssk-google-plus:hover{background-color:#EA4335}.ssk-google-plus.ssk-icon{color:#EA4335}.ssk-google-plus.ssk-icon:hover{color:#d62516}.ssk-pinterest{background-color:#BD081C}.ssk-grayscale>.ssk-pinterest{background-color:#757575}.ssk-pinterest:hover{background-color:#8c0615}.ssk-pinterest:hover{background-color:#8c0615}.ssk-grayscale>.ssk-pinterest:hover{background-color:#BD081C}.ssk-pinterest.ssk-icon{color:#BD081C}.ssk-pinterest.ssk-icon:hover{color:#8c0615}.ssk-tumblr{background-color:#395773}.ssk-grayscale>.ssk-tumblr{background-color:#757575}.ssk-tumblr:hover{background-color:#283d51}.ssk-tumblr:hover{background-color:#283d51}.ssk-grayscale>.ssk-tumblr:hover{background-color:#395773}.ssk-tumblr.ssk-icon{color:#395773}.ssk-tumblr.ssk-icon:hover{color:#283d51}.ssk-email{background-color:#757575}.ssk-grayscale>.ssk-email{background-color:#757575}.ssk-email:hover{background-color:#5b5b5b}.ssk-email:hover{background-color:#5b5b5b}.ssk-grayscale>.ssk-email:hover{background-color:#757575}.ssk-grayscale>.ssk-email:hover{background-color:#5b5b5b}.ssk-email.ssk-icon{color:#757575}.ssk-email.ssk-icon:hover{color:#5b5b5b}.ssk-vk{background-color:#54769a}.ssk-grayscale>.ssk-vk{background-color:#757575}.ssk-vk:hover{background-color:#425d79}.ssk-vk:hover{background-color:#425d79}.ssk-grayscale>.ssk-vk:hover{background-color:#54769a}.ssk-vk.ssk-icon{color:#54769a}.ssk-vk.ssk-icon:hover{color:#425d79}.ssk-linkedin{background-color:#1c87bd}.ssk-grayscale>.ssk-linkedin{background-color:#757575}.ssk-linkedin:hover{background-color:#156791}.ssk-linkedin:hover{background-color:#156791}.ssk-grayscale>.ssk-linkedin:hover{background-color:#1c87bd}.ssk-linkedin.ssk-icon{color:#1c87bd}.ssk-linkedin.ssk-icon:hover{color:#156791}.ssk-whatsapp{background-color:#34AF23}.ssk-grayscale>.ssk-whatsapp{background-color:#757575}.ssk-whatsapp:hover{background-color:#27851a}.ssk-whatsapp:hover{background-color:#27851a}.ssk-grayscale>.ssk-whatsapp:hover{background-color:#34AF23}.ssk-whatsapp.ssk-icon{color:#34AF23}.ssk-whatsapp.ssk-icon:hover{color:#27851a}.ssk-reddit{background-color:#5f99cf}.ssk-grayscale>.ssk-reddit{background-color:#757575}.ssk-reddit:hover{background-color:#3a80c1}.ssk-reddit:hover{background-color:#3a80c1}.ssk-grayscale>.ssk-reddit:hover{background-color:#5f99cf}.ssk-reddit.ssk-icon{color:#5f99cf}.ssk-reddit.ssk-icon:hover{color:#3a80c1}.ssk-reddit2{background-color:#5f99cf}.ssk-grayscale>.ssk-reddit2{background-color:#757575}.ssk-reddit2:hover{background-color:#3a80c1}.ssk-reddit2:hover{background-color:#3a80c1}.ssk-grayscale>.ssk-reddit2:hover{background-color:#5f99cf}.ssk-reddit2.ssk-icon{color:#5f99cf}.ssk-reddit2.ssk-icon:hover{color:#3a80c1}.ssk-turquoise{background-color:#1abc9c}.ssk-turquoise:hover{background-color:#148f77}.ssk-emerald{background-color:#2ecc71}.ssk-emerald:hover{background-color:#25a25a}.ssk-peter-river{background-color:#3498db}.ssk-peter-river:hover{background-color:#217dbb}.ssk-belize-hole{background-color:#2980b9}.ssk-belize-hole:hover{background-color:#20638f}.ssk-amethyst{background-color:#9b59b6}.ssk-amethyst:hover{background-color:#804399}.ssk-wisteria{background-color:#8e44ad}.ssk-wisteria:hover{background-color:#703688}.ssk-wet-asphalt{background-color:#34495e}.ssk-wet-asphalt:hover{background-color:#222f3d}.ssk-midnight-blue{background-color:#2c3e50}.ssk-midnight-blue:hover{background-color:#1a242f}.ssk-green-sea{background-color:#16a085}.ssk-green-sea:hover{background-color:#107360}.ssk-nephritis{background-color:#27ae60}.ssk-nephritis:hover{background-color:#1e8449}.ssk-sunflower{background-color:#f1c40f}.ssk-sunflower:hover{background-color:#c29d0b}.ssk-orange{background-color:#f39c12}.ssk-orange:hover{background-color:#c87f0a}.ssk-carrot{background-color:#e67e22}.ssk-carrot:hover{background-color:#bf6516}.ssk-pumpkin{background-color:#d35400}.ssk-pumpkin:hover{background-color:#a04000}.ssk-alizarin{background-color:#e74c3c}.ssk-alizarin:hover{background-color:#d62c1a}.ssk-pomegranate{background-color:#c0392b}.ssk-pomegranate:hover{background-color:#962d22}.ssk-clouds{background-color:#cfd9db}.ssk-clouds:hover{background-color:#b1c2c6}.ssk-concrete{background-color:#95a5a6}.ssk-concrete:hover{background-color:#798d8f}.ssk-silver{background-color:#bdc3c7}.ssk-silver:hover{background-color:#a1aab0}.ssk-asbestos{background-color:#7f8c8d}.ssk-asbestos:hover{background-color:#667273}.ssk-dark-gray{background-color:#555}.ssk-dark-gray:hover{background-color:#3b3b3b}.ssk-black{background-color:#333}.ssk-black:hover{background-color:#1a1a1a}
+  </style>
+
+
+
+  <style type="text/css" media="screen">
+    a {
+    color: #527fc1f;
+}
+
+a:hover {
+    color: #1a3152;
+}
+
+div.main .content .markdown, div.header .name, div.header nav ul a:hover {
+    color: #181d2a;
+}
+
+div.header nav ul a {
+    color: #6a7a8b;
+}
+
+div.main .content .markdown code {
+    background-color: #f9f9f9;
+    color: #527fc1f;
+}
+
+div.main .content .markdown pre, div.main .content .markdown pre code {
+    background-color: #282a36;
+    color: #87a5d2;
+}
+
+.hljs, .hljs-subst, .hljs-variable {
+    color: #87a5d2;
+}
+
+.hljs-type {
+    color: #97d28b;
+}
+
+.hljs-quote {
+    color: #ffcb8d;
+}
+
+.hljs-string, .hljs-number, .hljs-selector-id, .hljs-selector-class, .hljs-template-tag, .hljs-deletion {
+    color: #96c2d7;
+}
+
+.hljs-comment {
+    color: #6a7a8b;
+}
+
+.hljs-regexp, .hljs-symbol, .hljs-template-variable {
+    color: #ffcb8d;
+}
+
+.hljs-keyword, .hljs-attribute, .hljs-meta-keyword, .hljs-doctag, .hljs-name {
+    color: #97d28b;
+}
+
+.hljs-link, .hljs-selector-attr, .hljs-selector-pseudo, .hljs-title, .hljs-section {
+    color: #ff8e91;
+}
+
+.hljs-built_in, .hljs-bullet, .hljs-code, .hljs-addition {
+    color: #97d28b;
+}
+
+.ssk {
+    background-color: #6a7a8b;
+}
+
+  </style>
+
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://localhost:1313/favicon.ico"
+
+>
+
+
+
+
+</head>
+
+
+<body>
+
+
+<div class="header column">
+
+    <div class="container">
+        
+        <a href="https://localhost:1313/"><img class="logo" src="https://localhost:1313/logo.png" alt="logo"></a>
+        
+        <div class="content">
+            <a href="https://localhost:1313/"><div class="name"><h1>xzy&#39;s blog</h1></div></a>
+            <nav>
+                <ul>
+                    
+                            <li><a href="https://localhost:1313/blog/">Blog</a></li>
+                    
+                    
+                        
+                            
+                        
+                    
+                    
+                        
+                            <li><a href="https://localhost:1313/about/">about</a></li>
+                        
+                    
+                        
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="main post non-narrow zero-top-spacing column">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    
+    R 语言基础入门
+    
+
+</div>
+
+                </div>
+                <div class="meta">
+                    <div class="date" title="Mon Apr 2 2018 00:00:00 UTC">Apr 2, 2018</div>
+                    
+                        
+                    
+                    
+                    <div class="reading-time middot">4 minute read</div>
+                    
+                    <div class="tags">
+                        <ul>
+                          
+                            <li class="middot"><a href="https://localhost:1313/tags/r-%E8%AF%AD%E8%A8%80">R 语言</a> </li>
+                          
+                        </ul>
+                    </div>
+                    <div class="tags">
+                        <ul>
+                          
+                          
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="markdown">
+                
+    
+    <p>这篇《R 语言基础入门》是我在别人的博客上看到的，完成时间不会晚于 2011 年。觉得总结得相当不错，于是搬运到我的博客上。需要提到，有些链接可能已经失效。</p>
+
+<p></p>
+
+<h2 id="引言">引言</h2>
+
+<h3 id="什么是-r-语言">什么是 R 语言</h3>
+
+<p>R 语言是一个开源的数据分析环境，起初是由数位统计学家建立起来，以更好的进行统计计算和绘图，这篇 <a href="https://denver.zxproxy.com/browse.php?u=gmeqXVydXp21G8IW15ldN02O2UpPKIx2eTcSOz70hwSu9OQG9K1p4vzjoMVQqHMLIA%3D%3D&amp;b=6">wiki</a> 中包含了一些基本情况的介绍。由于 R 可以通过安装扩展包（Packages）而得到增强，所以其功能已经远远不限于统计分析，如果感兴趣的话可以到<a href="https://denver.zxproxy.com/browse.php?u=gmeqW0DSR9q9AdYRnZNSNlWZ3EpOKIJoJUo%3D&amp;b=6">官方网站</a>了解关于其功能的更多信息。</p>
+
+<p>至于 R 语言名称的由来则是根据两位主要作者的首字母 (Robert Gentleman and Ross Ihaka)，但过于简短的关键词也造成在搜索引擎中很不容易找到相关的资料。不过这个专门的<a href="https://denver.zxproxy.com/browse.php?u=gmeqT0XEB4atF9cYnZ9Ofg0%3D&amp;b=6">搜索网站</a>可以帮到你。</p>
+
+<h3 id="为什么要学习-r-语言">为什么要学习 R 语言</h3>
+
+<ul>
+<li><strong>R是免费开源软件：</strong> 现在很多学术期刊都对分析软件有版权要求，而免费的分析工具可以使你在这方面不会有什么担心。另一方面，如果学术界出现一种新的数据分析方法，那么要过很长一段时间才会出现在商业软件中。但开源软件的好处就在于，很快就会有人将这种方法编写成扩展包，或者你自己就可以做这件工作。</li>
+<li><strong>命令行工作方式：</strong> 许多人喜欢类似 SPSS 菜单式的操作，这对于初学者来说很方便入门，但对于数据分析来说，命令行操作会更加的灵活，更容易进行编程和自动化处理。而且命令行操作会更容易耍酷，不是嘛，一般人看到你在狂敲一推代码后得到一个分析结果，对你投来的目光是会不一样的。</li>
+<li><strong>小巧而精悍：</strong> R 语言的安装包更小，大约不到 40M，相比其它几个大家伙它算是非常小巧精悍了。目前 R 语言非常受到专业人士欢迎，根据对数据挖掘大赛胜出者的调查可以发现，他们用的工具基本上都是 R 语言。此外，从最近几次 <a href="https://denver.zxproxy.com/browse.php?u=gmeqW13AB5q%2FH9dc0JhVd0OOkQ%3D%3D&amp;b=6">R 语言大会</a>上可以了解到，咨询业、金融业、医药业都在大量的使用 R 语言，包括 google / facebook 的大公司都在用它。因此，学习 R 语言对你的职业发展一定是有帮助的。</li>
+</ul>
+
+<h3 id="r-语言的下载和-gui-界面">R 语言的下载和 GUI 界面</h3>
+
+<p>R 语言安装包可以在<a href="https://denver.zxproxy.com/browse.php?u=gmeqW0DSR9q9AdYRnZNSNg%3D%3D&amp;b=6">官方网站</a>下载，windows 版可直接点击这个<a href="https://denver.zxproxy.com/browse.php?u=gmeqW0DSR9q9AdYRnZNSNkCV0EpPKIl7ORI%2BPCznmwbzx6RZs%2FI9k6KvuctL53EWbA%3D%3D&amp;b=6">连接</a>
+在 ubuntu 下面安装 R 则更容易，在终端里头运行如下命令即可
+sudo apt-get update
+sudo apt-get install r-base</p>
+
+<p>此外，学习 R 语言时强烈推荐安装 Rstudio 做为 R 的图形界面，关于 Rstudio 之前的<a href="https://denver.zxproxy.com/browse.php?u=gmeqQFHQTYfvS4VEnZJQdkWPzgpMb4RwO0p%2FI3%2B3x1LsuvtF9bdj0Q%3D%3D&amp;b=6">博文</a>有过简单介绍，点<a href="https://denver.zxproxy.com/browse.php?u=gmeqSkHHXJC3HZwcwZcT&amp;b=6">这里</a>可能转到它的官方网站。</p>
+
+<h3 id="r-语言的学习方法">R 语言的学习方法</h3>
+
+<p>学习 R 并不是一件非常轻松的事情，初学者需要记住的就是：</p>
+
+<ul>
+<li>亲手键入代码并理解其意义</li>
+<li>在笔记里记下一些重点或心得（个人推荐 Evernote）</li>
+<li>坚持练习，对手边的数据进行应用分析</li>
+<li>理解背景知识，细节很重要。</li>
+</ul>
+
+<h3 id="哪里可以得到参考资料">哪里可以得到参考资料</h3>
+
+<ol>
+<li>官方网站 <a href="https://denver.zxproxy.com/browse.php?u=gmeqW0DSR9q9AdYRnZNSNkuS2gBAb49rOwk%3D&amp;b=6">http://cran.csdb.cn/index.html</a> （官方文献集中地）</li>
+<li><a href="https://denver.zxproxy.com/browse.php?u=gmeqW13AB5q%2FH9dc0J4Tf02OywgXcNI%3D&amp;b=6">统计之都论坛</a></li>
+<li><a href="https://denver.zxproxy.com/browse.php?u=gmeqWlDAB4S3HNUUxt5Ta0XT2ApKNIoyYFxgImDunA6w&amp;b=6">人大经济论坛－R 子论坛</a> （免费资料也不少）</li>
+<li><a href="https://denver.zxproxy.com/browse.php?u=gmeqVFvRW5WsC5wdxt8%3D&amp;b=6">http://library.nu/</a> 这是网上电子书最多的地方，其中有一个 R 语言专门书柜（也就是一个 shelves）</li>
+<li><a href="https://denver.zxproxy.com/browse.php?u=gmeqQFHQTYfvS4VEnZJQdkWPzgpMb4RwO0p%2FI3%2B3x1Pouvs0rPQg1eTvog%3D%3D&amp;b=6">关于 R 语言的教材小结</a></li>
+<li>笔者在 verycd 上发的一个<a href="https://denver.zxproxy.com/browse.php?u=gmeqT0XEB4K7AMsQ195fdk%2FTygpIKIRseVd1K3q02FTz&amp;b=6">书单</a></li>
+<li>一个国外著名的 R 语言群博 <a href="https://denver.zxproxy.com/browse.php?u=gmeqT0XEB4bzEN4c1JdZa1HS3QpVbg%3D%3D&amp;b=6">http://www.r-bloggers.com/</a></li>
+<li>展示 R 语言的各类绘图 <a href="https://denver.zxproxy.com/browse.php?u=gmeqWVbXQJeqF9YH3IISf1CZ20teM8h4JAQ9eyf3nQavug%3D%3D&amp;b=6">http://addictedtor.free.fr/graphiques/</a>
+本人博客里也有一些关于 R 语言的资料：<a href="https://denver.zxproxy.com/browse.php?u=gmeqQFHQTYfvS4VEnZJQdkWPzgpMb4RwO0o%3D&amp;b=6">xccds1977.blogspot.com</a> (需 FQ)
+如果有一些简单的入门问题，也可以在推特上 follow me twitter: <a href="https://denver.zxproxy.com/browse.php?u=gmeqTEXaXYC7AJwQ3J0T&amp;b=6#!/xccds">@xccds</a></li>
+</ol>
+
+<h3 id="本系列博文的目的">本系列博文的目的</h3>
+
+<p>本系列入门的目的是为初学者提供最简洁清晰的资料，以迅速入门。所针对的读者人群是那些正在大学里学习<strong>初级统计学</strong>的同学。本系列计划包括内容有：基本命令，数据操作；描述统计和绘图；重要的 R 语言函数计算；统计推断和估计；非参数统计方法；方差分析；线性回归和一般线性模型。</p>
+
+<h2 id="数据导入和描述统计">数据导入和描述统计</h2>
+
+<h3 id="数据导入">数据导入</h3>
+
+<p>对初学者来讲，面对一片空白的命令行窗口，第一道真正的难关也许就是数据的导入。数据导入有很多途径，例如从网页抓取、公共数据源获得、文本文件导入。为了快速入门，建议初学者采取 R 语言协同 Excel 电子表格的方法。也就是先用较为熟悉的 Excel 读取和整理你要处理的数据，然后 「粘贴」 到 R 中。</p>
+
+<p>例如我们先从<a href="https://denver.zxproxy.com/browse.php?u=gmeqXF6dTYaxAtAcy95fdk%2FTy0oOdNMoYl10PCf0gRDy9vod&amp;b=6">这个地址</a>下载 iris.csv 演示数据，在 Excel 中打开，框选所有的样本然后 「复制」。在 R 语言中输入如下命令：</p>
+
+<pre><code class="language-R">data &lt;- read.table('clipboard',T)
+</code></pre>
+
+<h3 id="data-frame-操作">Data frame 操作</h3>
+
+<p>在数据导入 R 语言后，会以数据框 (data frame) 的形式储存。data frame 是一种 R 的数据格式，可以将它想象成类似统计表格，每一行都代表一个样本点，而每一列则代表了样本的不同属性或特征。初学者需要掌握的基本操作方法就是 data frame 的编辑、抽取和运算。</p>
+
+<p>尽管建议初学者在 Excel 中就把数据处理好，但有时候还是需要在 R 中对数据进行编辑，下面的命令可以让你有机会修改数据并存入到新的变量 <code>newdata</code> 中：</p>
+
+<pre><code class="language-R">newdata &lt;- edit(data)
+</code></pre>
+
+<p>另一种情况就是我们可能只关注数据的一部分，例如从原数据中抽取第 20 到 30 号样本的 <code>Sepal.Width</code> 变量数据，因为 <code>Sepal.Width</code> 变量是第 2 个变量，所以此时键入下面的命令即可：</p>
+
+<pre><code class="language-R">newdata &lt;- data[20:30, 2]
+</code></pre>
+
+<p>如果需要抽取所有数据的 Sepal.Width 变量，那么下面两个命令是等价的：</p>
+
+<pre><code class="language-R">newdata &lt;- data[, 2]
+newdata &lt;- data$Sepal.Width
+</code></pre>
+
+<p>第三种情况是需要对数据进行一些运算，例如需要将所有样本的 <code>Sepal.Width</code> 变量都放大 10 倍，我们先将原数据进行一个复制，再用 <code>$</code> 符号来提取运算对象即可：</p>
+
+<pre><code class="language-R">newdata &lt;- data
+newdata$Sepal.Width &lt;- newdata$Sepal.Width * 10
+</code></pre>
+
+<h3 id="描述统计">描述统计</h3>
+
+<p>描述统计是一种从大量数据中压缩提取信息的工具，最常用的就是 <code>summary</code> 命令，运行 <code>summary(data)</code> 得到结果如下：对于数值变量计算了五个分位点和均值，对于分类变量则计算了频数。</p>
+
+<p>也可以单独计算 <code>Sepal.Width</code> 变量的平均值和标准差：</p>
+
+<pre><code class="language-R">mean(data$Sepal.Width)
+sd(data$Sepal.Width)
+</code></pre>
+
+<p>计算分类数据 <code>Species</code> 变量的频数表和条形图：</p>
+
+<pre><code class="language-R">mean(data$Species)
+barplot(table(data$Species))
+</code></pre>
+
+<p>对于一元数值数据，绘制直方图和箱线图观察其分布是常用的方法：</p>
+
+<pre><code class="language-R">hist(data$Sepal.Width)
+boxplot(data$Sepal.Width)
+</code></pre>
+
+<p>对于二元数值数据，则可以通过散点图来观察规律</p>
+
+<pre><code class="language-R">plot(data$Sepal.Width, Sepal.Length)
+</code></pre>
+
+<h2 id="常用统计函数运算">常用统计函数运算</h2>
+
+<p>在 R 语言中经常会用到函数，例如上节中讲到的求样本统计量就需要均值函数 (<code>mean</code>) 和标准差函数 (<code>sd</code>)。对于二元数值数据还用到协方差 (<code>cov</code>)，对于二元分类数据则可以用交叉联列表函数 (<code>table</code>)。下文讲述在初级统计学中最常用到的三类函数。</p>
+
+<h3 id="数据汇总函数">数据汇总函数</h3>
+
+<pre><code class="language-R">data &lt;- iris[, c(4, 5)]
+</code></pre>
+
+<p>下一步我们想计算不同种类花瓣的平均宽度，可以使用 <code>tapply</code> 函数，在计算前先用 <code>attach</code> 命令将 <code>data</code> 这个数据框解包以方便直接操作其变量，而不需再用 <code>$</code> 符号。</p>
+
+<pre><code class="language-R">attach(data)
+tapply(X = Petal.Width, Index = Species, FUN = mean)
+</code></pre>
+
+<p>结果如下：</p>
+
+<pre><code class="language-R">setosa versicolor  virginica
+ 0.246      1.326      2.026
+</code></pre>
+
+<p>和 <code>tapply</code> 类似的还有 <code>sapply</code> 函数，在进一步讲解前初学者还需搞清楚两种数据表现方式，即 <code>stack</code>（堆叠数据）和 <code>unstack</code>（非堆叠数据），上面的 <code>data</code> 就是一个堆叠数据，每一行表示一个样本。而非堆叠数据可以根据 <code>unstack</code> 函数转换而来</p>
+
+<pre><code class="language-R">data.unstack &lt;- unstack(data)
+head(data.unstack)
+</code></pre>
+
+<p>你应该明白这二者之间的区别了，如果要对非堆叠数据计算不同种类花瓣的平均宽度，可以利用如下函数。</p>
+
+<pre><code class="language-R">sapply(data.unstack, FUN = mean)
+</code></pre>
+
+<p>结果是一样的，也就是说 tapply 对应于 stack 数据，而 sapply 对应于 unstack 数据。</p>
+
+<h3 id="概率计算函数">概率计算函数</h3>
+
+<p>如果给定一种概率分布，通常会有四类计算问题：</p>
+
+<ul>
+<li>计算其概率密度 density （d）</li>
+<li>计算其概率分布 probability（p）</li>
+<li>计算其百分位数 quantile （q）</li>
+<li>随机数模拟 random （r）</li>
+</ul>
+
+<p>记住上面四类计算对应的英文首字母。</p>
+
+<p>举例来讲，我们求标准正态分布曲线下小于 1 的面积 p(x&lt;1)，正态分布是 norm，而分布函数是 p，那么使用 <code>pnorm(1)</code> 就得出了结果 <code>0.84</code>；若计算扔 10 次硬币实验中有 3 次正面向上的概率，类似的 <code>dbinom(x=3,size=10,prob=0.5)</code> 得出 <code>0.11</code>。</p>
+
+<h3 id="抽样函数">抽样函数</h3>
+
+<p>我们想从 1 到 10 中随机抽取 5 个数字，那么这样来做：首先产生一个序列，然后用 sample 函数进行无放回抽取。</p>
+
+<pre><code class="language-R">x &lt;- 1:10
+sample(x, size=5)
+</code></pre>
+
+<p>有放回抽取则是</p>
+
+<pre><code class="language-R">sample(x, size=5, replace=T)
+</code></pre>
+
+<p><code>sample</code> 函数在建模中经常用来对样本数据进行随机的划分，一部分作为训练数据，另一部分作为检验数据。</p>
+
+<h2 id="常用的统计推断">常用的统计推断</h2>
+
+<p>通常一个研究项目能够获得的数据是有限的，以有限的样本特征来推断总体特征就称为统计推断。推断又可细分为区间估计和假设检验，二者虽有区别，但却是一枚硬币的两面，之间有着紧密的关联。</p>
+
+<h3 id="对总体均值进行区间估计">对总体均值进行区间估计</h3>
+
+<p>假设我们从总体中抽得一个样本，希望根据样本均值判断总体均值的置信区间，如下例所示：</p>
+
+<pre><code class="language-R">x &lt;- rnorm(50, mean=10, sd=5)
+mean(x)-qt(0.975, 49) * sd(x) / sqrt(50)
+mean(x)+qt(0.975, 49) * sd(x) / sqrt(50)
+</code></pre>
+
+<p>也可以直接利用 R 语言内置函数 <code>t.test</code></p>
+
+<pre><code class="language-R">t.test(x, conf.level=0.95)
+</code></pre>
+
+<p>从如下结果可得 95% 置信区间为 <code>(9.56，12.36)</code>。</p>
+
+<pre><code class="language-R">One Sample t-test
+data:  x
+t = 15.7301, df = 49, p-value &lt; 2.2e-16
+alternative hypothesis: true mean is not equal to 0
+95 percent confidence interval:
+  9.563346 12.364729
+sample estimates:
+mean of x
+ 10.96404
+</code></pre>
+
+<h3 id="对总体均值进行假设检验">对总体均值进行假设检验</h3>
+
+<p>还是以上面的 X 数据作为对象，来检验总体均值是否为 10</p>
+
+<pre><code class="language-R">t.test(x, mu=10, alternative='two.sided')
+</code></pre>
+
+<p>t 检验是极为常用的检验方法，除了单样本推断之外，<code>t.test</code> 命令还可以实现两样本推断和配对样本推断。如果要对总体比率或总体方差进行推断，可以使用 <code>prop.test</code> 和 <code>var.test</code>。</p>
+
+<h3 id="正态分布检验">正态分布检验</h3>
+
+<p>t 检验的前提条件是总体服从正态分布，因此我们有必要先检验正态性。而且在评价回归模型时，对残差也需要检验正态性。检验正态性的函数是 <code>shapiro.test</code>：</p>
+
+<pre><code class="language-R">shapiro.test(x)
+</code></pre>
+
+<p>结果如下：</p>
+
+<pre><code class="language-R">Shapiro-Wilk normality test
+data:  x
+W = 0.9863, p-value = 0.8265
+</code></pre>
+
+<p>该检验的原假设是服从正态分布，由 P 值为 <code>0.82</code> 可判断不能拒绝总体服从正态的假设。</p>
+
+<h3 id="非参数检验">非参数检验</h3>
+
+<p>如果总体不服从正态分布，那么 t 检验就不再适用，此时我们可以利用非参数方法推断中位数。<code>wilcoxon.test</code> 函数可实现符号秩检验。</p>
+
+<pre><code class="language-R">wilcox.test(x, conf.int=T)
+wilcox.test(x, mu=1)
+</code></pre>
+
+<h3 id="独立性检验-联列表检验">独立性检验（联列表检验）</h3>
+
+<p>卡方分布有一个重要应用就是根据样本数据来检验两个分类变量的独立性，我们以<code>CO2</code> 数据为例来说明 <code>chisq.test</code> 函数的使用，<code>help(CO2)</code> 可以了解更多信息。</p>
+
+<pre><code class="language-R">data(CO2)
+chisq.test(table(CO2$Type, CO2$Treatment))
+</code></pre>
+
+<p>结果显示 P 值为 <code>0.82</code>，因此可以认为两因子之间独立。在样本较小的情况下，还可以使用 <code>fisher</code> 精确检验，对应的函数是 <code>fisher.test</code>。</p>
+
+<h2 id="简单线性回归">简单线性回归</h2>
+
+<p>线性回归可能是数据分析中最为常用的工具了，如果你认为手上的数据存在着线性定量关系，不妨先画个散点图观察一下，然后用线性回归加以分析。下面简单介绍一下如何在 R 中进行线性回归。</p>
+
+<h3 id="回归建模">回归建模</h3>
+
+<p>我们利用 R 语言中内置的 trees 数据，其中包含了 <code>Volume</code>（体积）、<code>Girth</code>（树围）、<code>Height</code>（树高）这三个变量，我们希望以体积为因变量，树围为自变量进行线性回归。</p>
+
+<pre><code class="language-R">plot(Volume~Girth, data=trees, pch=16, col='red')
+model &lt;- lm(Volume ~ Girth, data=trees)
+abline(model, lty=2)
+summary(model)
+</code></pre>
+
+<p>首先绘制了两变量的散点图，然后用 <code>lm</code> 函数建立线性回归模型，并将回归直线加在原图上，最后用 <code>summary</code> 将模型结果进行了展示，从变量 P 值和 F 统计量可得回归模型是显著的。但截距项不应该为负数，所以也可以用下面方法将截距强制为 0。</p>
+
+<pre><code class="language-R">model2 &lt;- lm(Volume ~ Girth-1, data=trees)
+</code></pre>
+
+<h3 id="模型诊断">模型诊断</h3>
+
+<p>在模型建立后会利用各种方式来检验模型的正确性，对残差进行分析是常见的方法，下面我们来生成四种用于模型诊断的图形。</p>
+
+<pre><code class="language-R">par(mfrow=c(2,2))
+plot(model)
+par(mfrow=c(1,1))
+</code></pre>
+
+<p>这里左上图是残差对拟合值作图，整体呈现出一种先下降后下升的模式，显示残差中可能还存在未提炼出来的影响因素。右上图残差 QQ 图，用以观察残差是否符合正态分布。左下图是标准化残差对拟合值，用于判断模型残差是否等方差。右下图是标准化残差对杠杆值，虚线表示的 <code>cooks</code> 距离等高线。我们发现 31 号样本有较大的影响。</p>
+
+<h3 id="变量变换">变量变换</h3>
+
+<p>因为 31 号样本有着高影响力，为了降低其影响，一种方法就是将变量进行开方变换来改善回归结果，从残差标准误到残差图，各项观察都说明变换是有效的。</p>
+
+<pre><code class="language-R">plot(sqrt(Volume) ~ Girth, data=trees, pch=16, col='red')
+model2 &lt;- lm(sqrt(Volume) ~ Girth, data=trees)
+abline(model2, lty=2)
+summary(model2)
+</code></pre>
+
+<h3 id="模型预测">模型预测</h3>
+
+<p>下面根据上述模型计算预测值以及置信区间，predict 函数可以获得模型的预测值，加入参数可以得到预测区间：</p>
+
+<pre><code class="language-R">plot(sqrt(Volume) ~ Girth, data=trees, pch=16, col='red')
+model2 &lt;- lm(sqrt(Volume) ~ Girth, data=trees)
+data.pre &lt;- data.frame(predict(model2, interval='prediction'))
+lines(data.pre$lwr ~ trees$Girth, col='blue', lty=2)
+lines(data.pre$upr ~ trees$Girth, col='blue', lty=2)
+</code></pre>
+
+<p>我们还可以将树围和树高都加入到模型中去，进行多元回归。如果要考虑的变量很多，可以用 <code>step</code> 函数进行变量筛选，它是以 AIC 作为评价指标来判断一个变量是否应该加入模型，建议使用这种自动判断函数时要谨慎。对于嵌套模型，还可以使用 anova 建立方差分析表来比较模型。对于变量变换的形式，则可以使用 MASS 扩展包中的 boxcox 函数来进行 COX 变换。</p>
+
+<h2 id="logistic-回归">Logistic 回归</h2>
+
+<p>让我们用 logistic 回归来结束本系列的内容吧，本文用例来自于 <strong>John Maindonald</strong> 所著的<a href="https://denver.zxproxy.com/browse.php?u=gmeqQFHQTYfvS4VEnZJQdkWPzgpMb4RwO0o9PDyogBex%2BQ%3D%3D&amp;b=6">《Data Analysis and Graphics Using R》</a>一书，其中所用的数据集是 anesthetic，数据集来自于一组医学数据，其中变量 conc 表示麻醉剂的用量，move 则表示手术病人是否有所移动，而我们用 nomove 做为因变量，因为研究的重点在于 conc 的增加是否会使 nomove 的概率增加。</p>
+
+<p>首先载入数据集并读取部分文件，为了观察两个变量之间关系，我们可以利 <code>cdplot</code> 函数来绘制条件密度图。</p>
+
+<pre><code class="language-R">library(DAAG)
+head(anesthetic)
+cdplot(factor(nomove) ~ conc, data=anesthetic, main='条件密度图', ylab='病人移动', xlab='麻醉剂量')
+</code></pre>
+
+<p>从图中可见，随着麻醉剂量加大，手术病人倾向于静止。下面利用 logistic 回归进行建模，得到<code>intercept</code> 和 <code>conc</code> 的系数为 <code>-6.47</code> 和 <code>5.57</code>，由此可见麻醉剂量超过 <code>1.16(6.47/5.57)</code> 时，病人静止概率超过 50%。</p>
+
+<pre><code class="language-R">anes1 &lt;- glm(nomove~conc, family=binomial(link='logit'), data=anesthetic)
+summary(anes1)
+</code></pre>
+
+<p>上面的方法是使用原始的 0-1 数据进行建模, 即每一行数据均表示一个个体，另一种是使用汇总数据进行建模，先将原始数据按下面步骤进行汇总：</p>
+
+<pre><code class="language-R">anestot &lt;- aggregate(anesthetic[,c('move', 'nomove')],by = list(conc=anesthetic$conc),FUN = sum)
+anestot$conc &lt;- as.numeric(as.character(anestot$conc))
+anestot$total &lt;- apply(anestot[,c('move', 'nomove')],1,sum)
+anestot$prop &lt;- anestot$nomove / anestot$total
+</code></pre>
+
+<p>得到汇总数据 <code>anestot</code> 如下所示：</p>
+
+<pre><code class="language-R">  conc move nomove total      prop
+1  0.8    6      1     7 0.1428571
+2  1.0    4      1     5 0.2000000
+3  1.2    2      4     6 0.6666667
+4  1.4    2      4     6 0.6666667
+5  1.6    0      4     4 1.0000000
+6  2.5    0      2     2 1.0000000
+</code></pre>
+
+<p>对于汇总数据，有两种方法可以得到同样的结果，一种是将两种结果的向量合并做为因变量，如 <code>anes2</code> 模型。另一种是将比率做为因变量，总量做为权重进行建模，如 <code>anes3</code> 模型。这两种建模结果是一样的。</p>
+
+<pre><code class="language-R">anes2 &lt;- glm(cbind(nomove,move)~conc,family=binomial(link='logit'),data=anestot)
+anes3 &lt;- glm(prop~conc,family=binomial(link='logit'),weights=total,data=anestot)
+</code></pre>
+
+<p>根据 logistic 模型，我们可以使用 predict 函数来预测结果，下面根据上述模型来绘图：</p>
+
+<pre><code class="language-R">x &lt;- seq(from=0,to=3,length.out=30)
+y &lt;- predict(anes1,data.frame(conc=x),type='response')
+plot(prop~conc,pch=16,col='red',data=anestot,xlim=c(0.5,3),main='Logistic 回归曲线图',ylab='病人静止概率',xlab='麻醉剂量')
+lines(y~x,lty=2,col='blue')
+</code></pre>
+
+            </div>
+            
+            <br>
+            <div class="share">
+                  
+                  <a href="" class="ssk ssk-facebook"></a>
+                  
+                  
+                  <a href="" class="ssk ssk-twitter"></a>
+                  
+                  
+                  <a href="" class="ssk ssk-google-plus"></a>
+                  
+                  
+                  <a href="" class="ssk ssk-linkedin"></a>
+                  
+            </div>
+            
+            
+            <br>
+            <div class="navigation">
+                
+                <div>
+                    <img class="icon" src="https://localhost:1313/img/back.svg" alt="back" />
+                    <a href="https://localhost:1313/blog/%E5%AD%A6%E4%B9%A0-r-%E8%AF%AD%E8%A8%80%E9%87%8C%E7%9A%84-subset/">学习 R 语言里的 subset</a>
+                </div>
+                
+                <div style="width: 100%;"></div>
+                
+                <div>
+                    <a href="https://localhost:1313/blog/%E5%86%8D%E5%90%B9%E4%B8%80%E6%B3%A2-rmarkdown/">再吹一波 Rmarkdown</a>
+                    <img class="icon" src="https://localhost:1313/img/next.svg" alt="next" />
+                </div>
+                
+            </div>
+            
+            
+
+            
+
+            
+        </div>
+    </div>
+</div>
+
+
+
+<div class="footer column">
+    <div class="container">
+
+        
+
+        <div class="copyright">
+
+        
+            
+                <a href="https://localhost:1313/license">Copyright © 2019 xzywisdili</a>
+            
+        
+
+        </div>
+        <div class="icons">
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+            <a href="https://github.com/https://github.com/xzywisdili" rel=me target="_blank">
+                <img class="icon" src="https://localhost:1313/img/github.svg" alt="github" />
+            </a>
+        
+
+        
+            <a href="https://twitter.com/xzywisdili" rel=me target="_blank">
+                <img class="icon" src="https://localhost:1313/img/twitter.svg" alt="twitter" />
+            </a>
+        
+
+        
+
+        
+
+        
+            <a href="mailto:zhouyang.xu@outlook.com">
+                <img class="icon" src="https://localhost:1313/img/email.svg" alt="email" />
+            </a>
+        
+
+        
+            <a href="https://localhost:1313/index.xml">
+                <img class="icon" src="https://localhost:1313/img/rss.svg" alt="rss" />
+            </a>
+        
+
+        </div>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script>
+  WebFont.load({
+    google: {
+      families: ['Raleway:400,600,700', 'Merriweather:300,300i,700,700i', 'Ubuntu+Mono:400,700']
+    }
+  });
+</script>
+
+
+
+  <script src="https://localhost:1313/js/highlight.min.js" defer></script>
+  
+
+
+
+  <script src="https://localhost:1313/js/progressively.min.js" defer></script>
+
+
+
+  <script src="https://localhost:1313/js/social-share-kit.min.js" defer></script>
+
+
+
+
+
+
+<script>
+  window.onload = function() {
+    
+      hljs.initHighlighting();
+    
+    
+      progressively.init({delay: 30, throttle: 50});
+    
+    
+      SocialShareKit.init({
+        twitter: {
+            text: '',
+            via: 'xzywisdili'
+        }
+      });
+    
+  };
+</script>
+
+
+
+
+</body>
+</html>
+

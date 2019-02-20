@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on 中文博客 - xzy&#39;s blog</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content in Home on 中文博客 - xzy&#39;s blog</description>
+    <title>Home on xzy&#39;s blog</title>
+    <link>https://localhost:1313/</link>
+    <description>Recent content in Home on xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-cn</language>
     <lastBuildDate>Fri, 07 Dec 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>我们怎么知道自己学会了？</title>
-      <link>http://localhost:1313/post/2018-12-8-learnthoughts/</link>
+      <link>https://localhost:1313/blog/%E6%88%91%E4%BB%AC%E6%80%8E%E4%B9%88%E7%9F%A5%E9%81%93%E8%87%AA%E5%B7%B1%E5%AD%A6%E4%BC%9A%E4%BA%86/</link>
       <pubDate>Fri, 07 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2018-12-8-learnthoughts/</guid>
+      <guid>https://localhost:1313/blog/%E6%88%91%E4%BB%AC%E6%80%8E%E4%B9%88%E7%9F%A5%E9%81%93%E8%87%AA%E5%B7%B1%E5%AD%A6%E4%BC%9A%E4%BA%86/</guid>
       <description>&lt;p&gt;本科生活即将结束了。最后的一周日子里，主要在复习职业病学和精神病学，准备考试，一边又不想落下 SAS 的学习，当然还有其他杂七杂八的任务。在学习的时候，自然会想到一个问题就是：我们怎么知道自己学会了？&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>2018年，中国独立游戏，和他们</title>
-      <link>http://localhost:1313/post/2018-9-3-indiagames/</link>
+      <link>https://localhost:1313/blog/2018%E5%B9%B4%E4%B8%AD%E5%9B%BD%E7%8B%AC%E7%AB%8B%E6%B8%B8%E6%88%8F%E5%92%8C%E4%BB%96%E4%BB%AC/</link>
       <pubDate>Mon, 03 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2018-9-3-indiagames/</guid>
+      <guid>https://localhost:1313/blog/2018%E5%B9%B4%E4%B8%AD%E5%9B%BD%E7%8B%AC%E7%AB%8B%E6%B8%B8%E6%88%8F%E5%92%8C%E4%BB%96%E4%BB%AC/</guid>
       <description>&lt;p&gt;强烈推荐纪录片《独行》。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -35,10 +35,10 @@
     
     <item>
       <title>简化我们的工具</title>
-      <link>http://localhost:1313/post/2018-6-4-simplifytools/</link>
+      <link>https://localhost:1313/blog/%E7%AE%80%E5%8C%96%E6%88%91%E4%BB%AC%E7%9A%84%E5%B7%A5%E5%85%B7/</link>
       <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2018-6-4-simplifytools/</guid>
+      <guid>https://localhost:1313/blog/%E7%AE%80%E5%8C%96%E6%88%91%E4%BB%AC%E7%9A%84%E5%B7%A5%E5%85%B7/</guid>
       <description>&lt;p&gt;现在的大学生不像十几年前，必定是人手一台笔记本电脑（有的人甚至有两台）。只要在自习室稍微留神观察一下
 专注学习的同学们，就会发现几乎 100% 的同学的电脑上停留的软件不是微软家的 powerpoint，就是 PDF 阅读器。&lt;/p&gt;
 
@@ -47,10 +47,10 @@
     
     <item>
       <title>卫生统计学第九周作业</title>
-      <link>http://localhost:1313/post/2018-04-25-statistichomework/</link>
+      <link>https://localhost:1313/blog/%E5%8D%AB%E7%94%9F%E7%BB%9F%E8%AE%A1%E5%AD%A6%E7%AC%AC%E4%B9%9D%E5%91%A8%E4%BD%9C%E4%B8%9A/</link>
       <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2018-04-25-statistichomework/</guid>
+      <guid>https://localhost:1313/blog/%E5%8D%AB%E7%94%9F%E7%BB%9F%E8%AE%A1%E5%AD%A6%E7%AC%AC%E4%B9%9D%E5%91%A8%E4%BD%9C%E4%B8%9A/</guid>
       <description>&lt;script src=&#39;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML&#39; async&gt;&lt;/script&gt;
 
 &lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
@@ -62,10 +62,10 @@
     
     <item>
       <title>再吹一波 Rmarkdown</title>
-      <link>http://localhost:1313/post/2018-04-11-rmarkdown02/</link>
+      <link>https://localhost:1313/blog/%E5%86%8D%E5%90%B9%E4%B8%80%E6%B3%A2-rmarkdown/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2018-04-11-rmarkdown02/</guid>
+      <guid>https://localhost:1313/blog/%E5%86%8D%E5%90%B9%E4%B8%80%E6%B3%A2-rmarkdown/</guid>
       <description>&lt;p&gt;既上次写过一篇关于 &lt;a href=&#34;http://www.xzywisdili.com/post/2017/12/23/%E8%BD%BB%E6%9D%BE%E6%84%89%E5%BF%AB%E5%9C%B0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8-rmarkdown/&#34;&gt;Rmarkdown 的安利&lt;/a&gt; 之后，我在实际使用过程中遇到了一些难题，就是关于中文的问题。如果只使用英文写作的话，完全没有问题；但是一旦使用中文，各级标题，加粗强调和引用都会变得非常奇怪。这也使我暂时搁置下了 Rmarkdown 不用。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -73,10 +73,10 @@
     
     <item>
       <title>R 语言基础入门</title>
-      <link>http://localhost:1313/post/2018-04-02-rlearningnote/</link>
+      <link>https://localhost:1313/blog/r-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</link>
       <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2018-04-02-rlearningnote/</guid>
+      <guid>https://localhost:1313/blog/r-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</guid>
       <description>&lt;p&gt;这篇《R 语言基础入门》是我在别人的博客上看到的，完成时间不会晚于 2011 年。觉得总结得相当不错，于是搬运到我的博客上。需要提到，有些链接可能已经失效。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -84,10 +84,10 @@
     
     <item>
       <title>学习 R 语言里的 subset</title>
-      <link>http://localhost:1313/post/2018-04-02-rsubset/</link>
+      <link>https://localhost:1313/blog/%E5%AD%A6%E4%B9%A0-r-%E8%AF%AD%E8%A8%80%E9%87%8C%E7%9A%84-subset/</link>
       <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2018-04-02-rsubset/</guid>
+      <guid>https://localhost:1313/blog/%E5%AD%A6%E4%B9%A0-r-%E8%AF%AD%E8%A8%80%E9%87%8C%E7%9A%84-subset/</guid>
       <description>&lt;p&gt;主要内容：&lt;/p&gt;
 
 &lt;ul&gt;
@@ -101,10 +101,10 @@
     
     <item>
       <title>R 语言基础数据结构</title>
-      <link>http://localhost:1313/post/2018-03-28-rstructure/</link>
+      <link>https://localhost:1313/blog/r-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
       <pubDate>Wed, 28 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2018-03-28-rstructure/</guid>
+      <guid>https://localhost:1313/blog/r-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
       <description>&lt;p&gt;介绍了 R 语言中的内置基础数据结构。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -112,39 +112,36 @@
     
     <item>
       <title>2017 读书印象</title>
-      <link>http://localhost:1313/post/2017-12-30-reading/</link>
+      <link>https://localhost:1313/blog/2017-%E8%AF%BB%E4%B9%A6%E5%8D%B0%E8%B1%A1/</link>
       <pubDate>Sat, 30 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2017-12-30-reading/</guid>
+      <guid>https://localhost:1313/blog/2017-%E8%AF%BB%E4%B9%A6%E5%8D%B0%E8%B1%A1/</guid>
       <description>&lt;p&gt;自从 2016 年起，我逼自己养成一个习惯，每年准备一个记录阅读情况的 Excel 表格。一开始的时候，满怀热情，又是搞了图表，又是自学了 VBA 编程，然后模仿 Github 代码记录写了一个玩意儿——365 天对应 365 个小方格，每天读的页数越多，这天就越绿。当时熬夜完成的时候还特兴奋，但后来证明，没多大蛋用。当然读书记录这方法成效斐然，我在 2016 年读完了整整 40 本书！（要知道我以前一年可能翻不完一本书）&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>关于我</title>
-      <link>http://localhost:1313/about/</link>
+      <title>about</title>
+      <link>https://localhost:1313/about/</link>
       <pubDate>Sat, 30 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/about/</guid>
-      <description>我是谁 一个在北京求学的陕西西安人，就读于北京大学医学部公共卫生学院。平时喜欢研究自己感兴趣的事物，真正沉迷的时候，甚至会耽误自己的大学学业，</description>
-    </item>
-    
-    <item>
-      <title>博客文章列表</title>
-      <link>http://localhost:1313/posts/</link>
-      <pubDate>Sat, 30 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/posts/</guid>
-      <description>文章列表 2018 2018/09/03 2018年，中国独立游戏，和他们 2018/04/26 卫生统计学第九周作业 2018/04/11 再吹一波 Rmarkdown 2018/04/02 R 语言基础入门 2018/04/02 学习 R 语言里的 subset 2018/03/28 R 语言基础数据结构 2017 2017/12/30 2017 读</description>
+      <guid>https://localhost:1313/about/</guid>
+      <description> 我是谁 一个在北京求学的陕西西安人，就读于北京大学医学部公共卫生学院。平时喜欢研究自己感兴趣的事物，真正沉迷的时候，甚至会耽误自己的大学学业，还好 4 年过去，暂无一门挂科。喜爱编程和统计。在 2017 年末把博客从 hexo 迁移到了 hugo 框架之下。
+我的特点 描述一个人可以通过许多维度，但让人印象深刻的总是那些最鲜明的特点。
+我热爱阅读和电影。2017 年阅读了 73 本书，最喜欢的电影是大卫芬奇的《社交网络》。所有读过的书和看过的电影都在豆瓣上有标注。关于阅读和电影，我有非常严重的松鼠症，在硬盘里囤积了无数的书籍和电影，还没有来得及去看，这可能也是我无法改正的毛病。
+我热爱设计和美。设计包括软件的 UI 设计，海报设计，电子产品的工业设计，文档的排版设计等等等等。我会因为美而容忍其他的一些缺点。再比如我几乎是我的同学中唯一率先离开 Word，尽力使用 Markdown 和 LaTeX，已经多次使用 LaTeX 完成作业、实验报告和论文综述等。
+我的目标  在我热爱的统计领域持续阅读学习，并通过博客的方式记录我自己的成长
+ 宁愿使用碎片化的时间阅读收藏的博客，而非刷微信和朋友圈
+  附：个人简历 </description>
     </item>
     
     <item>
       <title>轻松愉快地开始使用 Rmarkdown</title>
-      <link>http://localhost:1313/post/2017-12-23-rmarkdown/</link>
+      <link>https://localhost:1313/blog/%E8%BD%BB%E6%9D%BE%E6%84%89%E5%BF%AB%E5%9C%B0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8-rmarkdown/</link>
       <pubDate>Sat, 23 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2017-12-23-rmarkdown/</guid>
+      <guid>https://localhost:1313/blog/%E8%BD%BB%E6%9D%BE%E6%84%89%E5%BF%AB%E5%9C%B0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8-rmarkdown/</guid>
       <description>&lt;p&gt;R 语言世界里的一个大杀器。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -152,10 +149,10 @@
     
     <item>
       <title>dplyr 包里面必会的处理数据方法</title>
-      <link>http://localhost:1313/post/2017-12-19-datatransform/</link>
+      <link>https://localhost:1313/blog/dplyr-%E5%8C%85%E9%87%8C%E9%9D%A2%E5%BF%85%E4%BC%9A%E7%9A%84%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE%E6%96%B9%E6%B3%95/</link>
       <pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2017-12-19-datatransform/</guid>
+      <guid>https://localhost:1313/blog/dplyr-%E5%8C%85%E9%87%8C%E9%9D%A2%E5%BF%85%E4%BC%9A%E7%9A%84%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE%E6%96%B9%E6%B3%95/</guid>
       <description>&lt;p&gt;最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看。最近学习的很简单，就是 &lt;code&gt;dplyr&lt;/code&gt; 包里面最基础的 5 种数据处理方法。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -163,10 +160,10 @@
     
     <item>
       <title>R 语言的那些最最最基础</title>
-      <link>http://localhost:1313/post/2017-11-21-rbasic/</link>
+      <link>https://localhost:1313/blog/r-%E8%AF%AD%E8%A8%80%E7%9A%84%E9%82%A3%E4%BA%9B%E6%9C%80%E6%9C%80%E6%9C%80%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Tue, 21 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2017-11-21-rbasic/</guid>
+      <guid>https://localhost:1313/blog/r-%E8%AF%AD%E8%A8%80%E7%9A%84%E9%82%A3%E4%BA%9B%E6%9C%80%E6%9C%80%E6%9C%80%E5%9F%BA%E7%A1%80/</guid>
       <description>&lt;p&gt;在 &lt;a href=&#34;https://www.r-project.org/&#34;&gt;R 语言&lt;/a&gt;的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么就一定不能错过 R。本文只总结了 R 语言里面的那些最最最基础，想用好 R 必须要背过的内容。话不多说，赶紧上车。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -174,10 +171,10 @@
     
     <item>
       <title>光棍节初探 TensorFlow（一）：数据集的预处理</title>
-      <link>http://localhost:1313/post/2017-11-12-tensorflow01/</link>
+      <link>https://localhost:1313/blog/%E5%85%89%E6%A3%8D%E8%8A%82%E5%88%9D%E6%8E%A2-tensorflow%E4%B8%80%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E9%A2%84%E5%A4%84%E7%90%86/</link>
       <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2017-11-12-tensorflow01/</guid>
+      <guid>https://localhost:1313/blog/%E5%85%89%E6%A3%8D%E8%8A%82%E5%88%9D%E6%8E%A2-tensorflow%E4%B8%80%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E9%A2%84%E5%A4%84%E7%90%86/</guid>
       <description>&lt;p&gt;11 月 11 日这天注定对我具有了一定的意义。不是因为它是购物狂欢节或光棍节，而是因为在这一天，我第一次尝试使用 TensorFlow 搭建了一个简单的神经网络。我希望用几篇文章记录这个过程。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -185,10 +182,10 @@
     
     <item>
       <title>为什么要使用 LaTeX 呢？</title>
-      <link>http://localhost:1313/post/2017-10-23-why-latex/</link>
+      <link>https://localhost:1313/blog/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8-latex-%E5%91%A2/</link>
       <pubDate>Mon, 23 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2017-10-23-why-latex/</guid>
+      <guid>https://localhost:1313/blog/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8-latex-%E5%91%A2/</guid>
       <description>&lt;p&gt;这个标题其实不是我对我自己的诘问。作为一个医学生，在习惯使用 LaTeX 完成日常的作业或是论文时，总会有几个同学凑上前来，好奇地问这是个什么样的写作工具。在我做一番简要的介绍后，他们或许会表露出感兴趣，或称赞的神情，然后问下一个重复了很多遍的问题：为什么要使用 LaTeX 呢？&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -196,10 +193,10 @@
     
     <item>
       <title>「翻译」如何用 Python 画出像 FiveThirtyEight 那么棒的图表</title>
-      <link>http://localhost:1313/post/2017-10-15-trans01/</link>
+      <link>https://localhost:1313/blog/%E7%BF%BB%E8%AF%91%E5%A6%82%E4%BD%95%E7%94%A8-python-%E7%94%BB%E5%87%BA%E5%83%8F-fivethirtyeight-%E9%82%A3%E4%B9%88%E6%A3%92%E7%9A%84%E5%9B%BE%E8%A1%A8/</link>
       <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2017-10-15-trans01/</guid>
+      <guid>https://localhost:1313/blog/%E7%BF%BB%E8%AF%91%E5%A6%82%E4%BD%95%E7%94%A8-python-%E7%94%BB%E5%87%BA%E5%83%8F-fivethirtyeight-%E9%82%A3%E4%B9%88%E6%A3%92%E7%9A%84%E5%9B%BE%E8%A1%A8/</guid>
       <description>&lt;p&gt;如果你经常读数据科学领域的文章的话，你可能会偶然发现 &lt;a href=&#34;http://fivethirtyeight.com&#34;&gt;FiveThirtyEight&lt;/a&gt; 上的内容，然后被他们惊艳的图表迷住。于是你自己也想制作如此出色的可视化作品，于是去 Quora 和 Reddit 上问怎么做。你收到了几个回答，但是这些回答都很模糊。你还是不知道怎么搞定这样的图表。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -207,10 +204,10 @@
     
     <item>
       <title>用 Python 解决数据结构与算法题 01</title>
-      <link>http://localhost:1313/post/2017-10-05-algorithm01/</link>
+      <link>https://localhost:1313/blog/%E7%94%A8-python-%E8%A7%A3%E5%86%B3%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E9%A2%98-01/</link>
       <pubDate>Thu, 05 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2017-10-05-algorithm01/</guid>
+      <guid>https://localhost:1313/blog/%E7%94%A8-python-%E8%A7%A3%E5%86%B3%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E9%A2%98-01/</guid>
       <description>&lt;p&gt;这是 Python 解决算法问题的第一期。我想以后每期写出三道题。本人是医学生，没有上过任何数据结构和算法课，对于解决算法题也纯属个人的课余兴趣爱好。还希望各位真正的大牛不吝赐教。我会继续坚持下去的。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -218,13 +215,22 @@
     
     <item>
       <title>Hello World</title>
-      <link>http://localhost:1313/post/2017-10-04-helloworld/</link>
+      <link>https://localhost:1313/blog/hello-world/</link>
       <pubDate>Wed, 04 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/2017-10-04-helloworld/</guid>
+      <guid>https://localhost:1313/blog/hello-world/</guid>
       <description>&lt;p&gt;在国庆放假的期间，花了大概半个晚上的时间，使用 hexo 配置好了自己的个人博客。我觉得博客是一个很好的刺激自己不断学习和保持记录习惯的帮手。我也是在身边同学里第一个开通博客的。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Home</title>
+      <link>https://localhost:1313/home/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://localhost:1313/home/</guid>
+      <description></description>
     </item>
     
   </channel>
