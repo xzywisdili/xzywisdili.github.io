@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Matplotlib on xzy&#39;s blog</title>
-    <link>https://localhost:1313/tags/matplotlib/</link>
+    <link>https://xzywisdili.com/tags/matplotlib/</link>
     <description>Recent content in Matplotlib on xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://localhost:1313/tags/matplotlib/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xzywisdili.com/tags/matplotlib/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>「翻译」如何用 Python 画出像 FiveThirtyEight 那么棒的图表</title>
-      <link>https://localhost:1313/blog/%E7%BF%BB%E8%AF%91%E5%A6%82%E4%BD%95%E7%94%A8-python-%E7%94%BB%E5%87%BA%E5%83%8F-fivethirtyeight-%E9%82%A3%E4%B9%88%E6%A3%92%E7%9A%84%E5%9B%BE%E8%A1%A8/</link>
+      <link>https://xzywisdili.com/blog/%E7%BF%BB%E8%AF%91%E5%A6%82%E4%BD%95%E7%94%A8-python-%E7%94%BB%E5%87%BA%E5%83%8F-fivethirtyeight-%E9%82%A3%E4%B9%88%E6%A3%92%E7%9A%84%E5%9B%BE%E8%A1%A8/</link>
       <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost:1313/blog/%E7%BF%BB%E8%AF%91%E5%A6%82%E4%BD%95%E7%94%A8-python-%E7%94%BB%E5%87%BA%E5%83%8F-fivethirtyeight-%E9%82%A3%E4%B9%88%E6%A3%92%E7%9A%84%E5%9B%BE%E8%A1%A8/</guid>
+      <guid>https://xzywisdili.com/blog/%E7%BF%BB%E8%AF%91%E5%A6%82%E4%BD%95%E7%94%A8-python-%E7%94%BB%E5%87%BA%E5%83%8F-fivethirtyeight-%E9%82%A3%E4%B9%88%E6%A3%92%E7%9A%84%E5%9B%BE%E8%A1%A8/</guid>
       <description>&lt;p&gt;如果你经常读数据科学领域的文章的话，你可能会偶然发现 &lt;a href=&#34;http://fivethirtyeight.com&#34;&gt;FiveThirtyEight&lt;/a&gt; 上的内容，然后被他们惊艳的图表迷住。于是你自己也想制作如此出色的可视化作品，于是去 Quora 和 Reddit 上问怎么做。你收到了几个回答，但是这些回答都很模糊。你还是不知道怎么搞定这样的图表。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>

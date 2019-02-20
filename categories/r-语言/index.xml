@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R 语言 on xzy&#39;s blog</title>
-    <link>https://localhost:1313/categories/r-%E8%AF%AD%E8%A8%80/</link>
+    <link>https://xzywisdili.com/categories/r-%E8%AF%AD%E8%A8%80/</link>
     <description>Recent content in R 语言 on xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 11 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://localhost:1313/categories/r-%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xzywisdili.com/categories/r-%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>再吹一波 Rmarkdown</title>
-      <link>https://localhost:1313/blog/%E5%86%8D%E5%90%B9%E4%B8%80%E6%B3%A2-rmarkdown/</link>
+      <link>https://xzywisdili.com/blog/%E5%86%8D%E5%90%B9%E4%B8%80%E6%B3%A2-rmarkdown/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost:1313/blog/%E5%86%8D%E5%90%B9%E4%B8%80%E6%B3%A2-rmarkdown/</guid>
+      <guid>https://xzywisdili.com/blog/%E5%86%8D%E5%90%B9%E4%B8%80%E6%B3%A2-rmarkdown/</guid>
       <description>&lt;p&gt;既上次写过一篇关于 &lt;a href=&#34;http://www.xzywisdili.com/post/2017/12/23/%E8%BD%BB%E6%9D%BE%E6%84%89%E5%BF%AB%E5%9C%B0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8-rmarkdown/&#34;&gt;Rmarkdown 的安利&lt;/a&gt; 之后，我在实际使用过程中遇到了一些难题，就是关于中文的问题。如果只使用英文写作的话，完全没有问题；但是一旦使用中文，各级标题，加粗强调和引用都会变得非常奇怪。这也使我暂时搁置下了 Rmarkdown 不用。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>R 语言基础入门</title>
-      <link>https://localhost:1313/blog/r-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</link>
+      <link>https://xzywisdili.com/blog/r-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</link>
       <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost:1313/blog/r-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</guid>
+      <guid>https://xzywisdili.com/blog/r-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</guid>
       <description>&lt;p&gt;这篇《R 语言基础入门》是我在别人的博客上看到的，完成时间不会晚于 2011 年。觉得总结得相当不错，于是搬运到我的博客上。需要提到，有些链接可能已经失效。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -35,10 +35,10 @@
     
     <item>
       <title>学习 R 语言里的 subset</title>
-      <link>https://localhost:1313/blog/%E5%AD%A6%E4%B9%A0-r-%E8%AF%AD%E8%A8%80%E9%87%8C%E7%9A%84-subset/</link>
+      <link>https://xzywisdili.com/blog/%E5%AD%A6%E4%B9%A0-r-%E8%AF%AD%E8%A8%80%E9%87%8C%E7%9A%84-subset/</link>
       <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost:1313/blog/%E5%AD%A6%E4%B9%A0-r-%E8%AF%AD%E8%A8%80%E9%87%8C%E7%9A%84-subset/</guid>
+      <guid>https://xzywisdili.com/blog/%E5%AD%A6%E4%B9%A0-r-%E8%AF%AD%E8%A8%80%E9%87%8C%E7%9A%84-subset/</guid>
       <description>&lt;p&gt;主要内容：&lt;/p&gt;
 
 &lt;ul&gt;
@@ -52,10 +52,10 @@
     
     <item>
       <title>R 语言基础数据结构</title>
-      <link>https://localhost:1313/blog/r-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+      <link>https://xzywisdili.com/blog/r-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
       <pubDate>Wed, 28 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost:1313/blog/r-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
+      <guid>https://xzywisdili.com/blog/r-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
       <description>&lt;p&gt;介绍了 R 语言中的内置基础数据结构。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -63,10 +63,10 @@
     
     <item>
       <title>轻松愉快地开始使用 Rmarkdown</title>
-      <link>https://localhost:1313/blog/%E8%BD%BB%E6%9D%BE%E6%84%89%E5%BF%AB%E5%9C%B0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8-rmarkdown/</link>
+      <link>https://xzywisdili.com/blog/%E8%BD%BB%E6%9D%BE%E6%84%89%E5%BF%AB%E5%9C%B0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8-rmarkdown/</link>
       <pubDate>Sat, 23 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost:1313/blog/%E8%BD%BB%E6%9D%BE%E6%84%89%E5%BF%AB%E5%9C%B0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8-rmarkdown/</guid>
+      <guid>https://xzywisdili.com/blog/%E8%BD%BB%E6%9D%BE%E6%84%89%E5%BF%AB%E5%9C%B0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8-rmarkdown/</guid>
       <description>&lt;p&gt;R 语言世界里的一个大杀器。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -74,10 +74,10 @@
     
     <item>
       <title>dplyr 包里面必会的处理数据方法</title>
-      <link>https://localhost:1313/blog/dplyr-%E5%8C%85%E9%87%8C%E9%9D%A2%E5%BF%85%E4%BC%9A%E7%9A%84%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE%E6%96%B9%E6%B3%95/</link>
+      <link>https://xzywisdili.com/blog/dplyr-%E5%8C%85%E9%87%8C%E9%9D%A2%E5%BF%85%E4%BC%9A%E7%9A%84%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE%E6%96%B9%E6%B3%95/</link>
       <pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost:1313/blog/dplyr-%E5%8C%85%E9%87%8C%E9%9D%A2%E5%BF%85%E4%BC%9A%E7%9A%84%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://xzywisdili.com/blog/dplyr-%E5%8C%85%E9%87%8C%E9%9D%A2%E5%BF%85%E4%BC%9A%E7%9A%84%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE%E6%96%B9%E6%B3%95/</guid>
       <description>&lt;p&gt;最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看。最近学习的很简单，就是 &lt;code&gt;dplyr&lt;/code&gt; 包里面最基础的 5 种数据处理方法。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -85,10 +85,10 @@
     
     <item>
       <title>R 语言的那些最最最基础</title>
-      <link>https://localhost:1313/blog/r-%E8%AF%AD%E8%A8%80%E7%9A%84%E9%82%A3%E4%BA%9B%E6%9C%80%E6%9C%80%E6%9C%80%E5%9F%BA%E7%A1%80/</link>
+      <link>https://xzywisdili.com/blog/r-%E8%AF%AD%E8%A8%80%E7%9A%84%E9%82%A3%E4%BA%9B%E6%9C%80%E6%9C%80%E6%9C%80%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Tue, 21 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost:1313/blog/r-%E8%AF%AD%E8%A8%80%E7%9A%84%E9%82%A3%E4%BA%9B%E6%9C%80%E6%9C%80%E6%9C%80%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://xzywisdili.com/blog/r-%E8%AF%AD%E8%A8%80%E7%9A%84%E9%82%A3%E4%BA%9B%E6%9C%80%E6%9C%80%E6%9C%80%E5%9F%BA%E7%A1%80/</guid>
       <description>&lt;p&gt;在 &lt;a href=&#34;https://www.r-project.org/&#34;&gt;R 语言&lt;/a&gt;的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么就一定不能错过 R。本文只总结了 R 语言里面的那些最最最基础，想用好 R 必须要背过的内容。话不多说，赶紧上车。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>

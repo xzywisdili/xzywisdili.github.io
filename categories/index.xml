@@ -2,101 +2,101 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on xzy&#39;s blog</title>
-    <link>https://localhost:1313/categories/</link>
+    <link>https://xzywisdili.com/categories/</link>
     <description>Recent content in Categories on xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	<atom:link href="https://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xzywisdili.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hexo</title>
-      <link>https://localhost:1313/categories/hexo/</link>
+      <link>https://xzywisdili.com/categories/hexo/</link>
       <pubDate>Wed, 04 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost:1313/categories/hexo/</guid>
+      <guid>https://xzywisdili.com/categories/hexo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Latex</title>
-      <link>https://localhost:1313/categories/latex/</link>
+      <link>https://xzywisdili.com/categories/latex/</link>
       <pubDate>Mon, 23 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost:1313/categories/latex/</guid>
+      <guid>https://xzywisdili.com/categories/latex/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Python</title>
-      <link>https://localhost:1313/categories/python/</link>
+      <link>https://xzywisdili.com/categories/python/</link>
       <pubDate>Thu, 05 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost:1313/categories/python/</guid>
+      <guid>https://xzywisdili.com/categories/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R 语言</title>
-      <link>https://localhost:1313/categories/r-%E8%AF%AD%E8%A8%80/</link>
+      <link>https://xzywisdili.com/categories/r-%E8%AF%AD%E8%A8%80/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost:1313/categories/r-%E8%AF%AD%E8%A8%80/</guid>
+      <guid>https://xzywisdili.com/categories/r-%E8%AF%AD%E8%A8%80/</guid>
       <description></description>
     </item>
     
     <item>
       <title>可视化</title>
-      <link>https://localhost:1313/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/</link>
+      <link>https://xzywisdili.com/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/</link>
       <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost:1313/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/</guid>
+      <guid>https://xzywisdili.com/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/</guid>
       <description></description>
     </item>
     
     <item>
       <title>影评</title>
-      <link>https://localhost:1313/categories/%E5%BD%B1%E8%AF%84/</link>
+      <link>https://xzywisdili.com/categories/%E5%BD%B1%E8%AF%84/</link>
       <pubDate>Mon, 03 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost:1313/categories/%E5%BD%B1%E8%AF%84/</guid>
+      <guid>https://xzywisdili.com/categories/%E5%BD%B1%E8%AF%84/</guid>
       <description></description>
     </item>
     
     <item>
       <title>想法</title>
-      <link>https://localhost:1313/categories/%E6%83%B3%E6%B3%95/</link>
+      <link>https://xzywisdili.com/categories/%E6%83%B3%E6%B3%95/</link>
       <pubDate>Fri, 07 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost:1313/categories/%E6%83%B3%E6%B3%95/</guid>
+      <guid>https://xzywisdili.com/categories/%E6%83%B3%E6%B3%95/</guid>
       <description></description>
     </item>
     
     <item>
       <title>机器学习</title>
-      <link>https://localhost:1313/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+      <link>https://xzywisdili.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
       <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost:1313/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</guid>
+      <guid>https://xzywisdili.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</guid>
       <description></description>
     </item>
     
     <item>
       <title>统计学</title>
-      <link>https://localhost:1313/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/</link>
+      <link>https://xzywisdili.com/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/</link>
       <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost:1313/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/</guid>
+      <guid>https://xzywisdili.com/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/</guid>
       <description></description>
     </item>
     
     <item>
       <title>阅读</title>
-      <link>https://localhost:1313/categories/%E9%98%85%E8%AF%BB/</link>
+      <link>https://xzywisdili.com/categories/%E9%98%85%E8%AF%BB/</link>
       <pubDate>Sat, 30 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost:1313/categories/%E9%98%85%E8%AF%BB/</guid>
+      <guid>https://xzywisdili.com/categories/%E9%98%85%E8%AF%BB/</guid>
       <description></description>
     </item>
     
