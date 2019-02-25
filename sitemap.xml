@@ -120,13 +120,13 @@
   </url>
   
   <url>
-    <loc>https://xzywisdili.com/categories/hexo/</loc>
+    <loc>https://xzywisdili.com/tags/hexo/</loc>
     <lastmod>2017-10-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://xzywisdili.com/tags/hexo/</loc>
+    <loc>https://xzywisdili.com/categories/hexo/</loc>
     <lastmod>2017-10-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -141,13 +141,13 @@
   </url>
   
   <url>
-    <loc>https://xzywisdili.com/categories/latex/</loc>
+    <loc>https://xzywisdili.com/tags/latex/</loc>
     <lastmod>2017-10-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://xzywisdili.com/tags/latex/</loc>
+    <loc>https://xzywisdili.com/categories/latex/</loc>
     <lastmod>2017-10-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -165,25 +165,25 @@
   </url>
   
   <url>
-    <loc>https://xzywisdili.com/categories/python/</loc>
-    <lastmod>2017-10-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://xzywisdili.com/tags/python/</loc>
     <lastmod>2017-11-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://xzywisdili.com/categories/r-%E8%AF%AD%E8%A8%80/</loc>
-    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
+    <loc>https://xzywisdili.com/categories/python/</loc>
+    <lastmod>2017-10-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://xzywisdili.com/tags/r-%E8%AF%AD%E8%A8%80/</loc>
+    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://xzywisdili.com/categories/r-%E8%AF%AD%E8%A8%80/</loc>
     <lastmod>2018-04-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -225,13 +225,13 @@
   </url>
   
   <url>
-    <loc>https://xzywisdili.com/categories/%E5%BD%B1%E8%AF%84/</loc>
+    <loc>https://xzywisdili.com/tags/%E5%BD%B1%E8%AF%84/</loc>
     <lastmod>2018-09-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://xzywisdili.com/tags/%E5%BD%B1%E8%AF%84/</loc>
+    <loc>https://xzywisdili.com/categories/%E5%BD%B1%E8%AF%84/</loc>
     <lastmod>2018-09-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -243,14 +243,14 @@
   </url>
   
   <url>
-    <loc>https://xzywisdili.com/categories/%E6%83%B3%E6%B3%95/</loc>
-    <lastmod>2018-12-07T00:00:00+00:00</lastmod>
+    <loc>https://xzywisdili.com/tags/%E6%83%B3%E6%B3%95/</loc>
+    <lastmod>2018-06-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://xzywisdili.com/tags/%E6%83%B3%E6%B3%95/</loc>
-    <lastmod>2018-06-04T00:00:00+00:00</lastmod>
+    <loc>https://xzywisdili.com/categories/%E6%83%B3%E6%B3%95/</loc>
+    <lastmod>2018-12-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -261,25 +261,25 @@
   </url>
   
   <url>
-    <loc>https://xzywisdili.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2017-11-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://xzywisdili.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2017-11-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://xzywisdili.com/categories/%E6%B5%81%E8%A1%8C%E7%97%85%E5%AD%A6/</loc>
-    <lastmod>2019-02-21T00:00:00+00:00</lastmod>
+    <loc>https://xzywisdili.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2017-11-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://xzywisdili.com/tags/%E6%B5%81%E8%A1%8C%E7%97%85%E5%AD%A6/</loc>
+    <lastmod>2019-02-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://xzywisdili.com/categories/%E6%B5%81%E8%A1%8C%E7%97%85%E5%AD%A6/</loc>
     <lastmod>2019-02-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -309,20 +309,14 @@
   </url>
   
   <url>
-    <loc>https://xzywisdili.com/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/</loc>
-    <lastmod>2018-04-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://xzywisdili.com/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/</loc>
     <lastmod>2018-04-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://xzywisdili.com/categories/%E9%98%85%E8%AF%BB/</loc>
-    <lastmod>2017-12-30T00:00:00+00:00</lastmod>
+    <loc>https://xzywisdili.com/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/</loc>
+    <lastmod>2018-04-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -333,13 +327,19 @@
   </url>
   
   <url>
-    <loc>https://xzywisdili.com/categories/%E9%9A%8F%E6%83%B3/</loc>
-    <lastmod>2019-02-23T00:00:00+00:00</lastmod>
+    <loc>https://xzywisdili.com/categories/%E9%98%85%E8%AF%BB/</loc>
+    <lastmod>2017-12-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://xzywisdili.com/tags/%E9%9A%8F%E6%83%B3/</loc>
+    <lastmod>2019-02-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://xzywisdili.com/categories/%E9%9A%8F%E6%83%B3/</loc>
     <lastmod>2019-02-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
