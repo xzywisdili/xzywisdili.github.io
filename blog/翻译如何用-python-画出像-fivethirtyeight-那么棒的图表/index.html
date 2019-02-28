@@ -1159,12 +1159,15 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
 
 <p>我们将要处理的数据集展现的事从 1970 年到 2011 年在美国授予女性的学位比例。我们使用的数据集是数据科学家 Randal Olson 从国家教育统计中心采集的。</p>
 
-<p>如果你想通过自己写代码来学习，你可以从 Randal 的博客下载数据集。如果想节省时间的话，你可以跳过下载文件，直接把链接甩给 pandas 的 <code>read_csv()</code> 函数。在下面的代码中，我们做了：
-- 导入 pandas 模块
-- 把数据集的链接通过字符串保存在变量 <code>direct_link</code> 中
-- 通过 <code>read_csv()</code> 读取数据，并把内容保存在 <code>women_majors</code>
-- 使用 <code>info()</code> 方法展示数据集的基本信息，了解行数和列数，同时找一找有没有缺失的值
-- 使用 <code>head()</code> 方法显示出数据集的前 5 行可以帮助我们更好地理解数据集的结构</p>
+<p>如果你想通过自己写代码来学习，你可以从 Randal 的博客下载数据集。如果想节省时间的话，你可以跳过下载文件，直接把链接甩给 pandas 的 <code>read_csv()</code> 函数。在下面的代码中，我们做了：</p>
+
+<ul>
+<li>导入 pandas 模块</li>
+<li>把数据集的链接通过字符串保存在变量 <code>direct_link</code> 中</li>
+<li>通过 <code>read_csv()</code> 读取数据，并把内容保存在 <code>women_majors</code></li>
+<li>使用 <code>info()</code> 方法展示数据集的基本信息，了解行数和列数，同时找一找有没有缺失的值</li>
+<li>使用 <code>head()</code> 方法显示出数据集的前 5 行可以帮助我们更好地理解数据集的结构</li>
+</ul>
 
 <pre><code class="language-Python">import pandas as pd
 
@@ -1237,13 +1240,19 @@ Name: 0, dtype: float64
 
 <h2 id="使用-matplotlib-的默认样式">使用 matplotlib 的默认样式</h2>
 
-<p>让我们开始制作曲线图。我们先看一看我们使用默认样式做出来是什么样子，在下面的代码中，我们会：
-- 在 Jupyter 中用 <code>%matplotlib</code> 来让 Jupyter 和 matplotlib 能够正常工作，在后面加上 <code>inline</code> 能让画出的图直接在 Jupyter notebook 中显示。
-- 使用 <code>plot()</code> 方法来画出 <code>women_majors</code> 的初始版本。我们将传入这些参数：
-    - <code>x</code> - 指明 <code>women_majors</code> 中用来做 x 轴的那一列；
-    - <code>y</code> - 指明 <code>women_majors</code> 中用来做 y 轴的那一列；我们将使用 <code>under_20</code> 下储存在 <code>.index</code> 中的下标索引；
-    - <code>figsize</code> - 设定图片的尺寸大小（设定格式是<code>(width, height)</code>，单位是英寸）。
-- 把画出来的图形对象存储进 <code>under_20_graph</code>，然后打印出这个对象的类型，可以发现 pandas 实际上使用的是 matplotlib 的对象。</p>
+<p>让我们开始制作曲线图。我们先看一看我们使用默认样式做出来是什么样子，在下面的代码中，我们会：</p>
+
+<ul>
+<li>在 Jupyter 中用 <code>%matplotlib</code> 来让 Jupyter 和 matplotlib 能够正常工作，在后面加上 <code>inline</code> 能让画出的图直接在 Jupyter notebook 中显示。</li>
+<li>使用 <code>plot()</code> 方法来画出 <code>women_majors</code> 的初始版本。我们将传入这些参数：
+
+<ul>
+<li><code>x</code> - 指明 <code>women_majors</code> 中用来做 x 轴的那一列；</li>
+<li><code>y</code> - 指明 <code>women_majors</code> 中用来做 y 轴的那一列；我们将使用 <code>under_20</code> 下储存在 <code>.index</code> 中的下标索引；</li>
+<li><code>figsize</code> - 设定图片的尺寸大小（设定格式是<code>(width, height)</code>，单位是英寸）。</li>
+</ul></li>
+<li>把画出来的图形对象存储进 <code>under_20_graph</code>，然后打印出这个对象的类型，可以发现 pandas 实际上使用的是 matplotlib 的对象。</li>
+</ul>
 
 <pre><code class="language-Python">%matplotlib inline
 under_20_graph = women_majors.plot(x = 'Year', y = under_20.index, figsize = (12,8))
@@ -1304,7 +1313,7 @@ women_majors.plot(x = 'Year', y = under_20.index, figsize = (12,8))
 
 <p>确实改变了许多！对比我们的第一张图，我们可以发现这张曲线图的背景颜色不同，出现了网格线，没有明显的毛刺，字体大小和坐标轴刻度等等也有了很大的不同。</p>
 
-<p>你可以在<img src="https://github.com/matplotlib/matplotlib/blob/38be7aeaaac3691560aeadafe46722dda427ef47/lib/matplotlib/mpl-data/stylelib/fivethirtyeight.mplstyle" alt="这里" />读到 FTE 样式的更多介绍。里面会有使用这个样式时的具体代码讲解。在![这里]（<a href="https://dataorigami.net/blogs/napkin-folding/17543615-replicating-538s-plot-styles-in-matplotlib）可以看到这个样式作者">https://dataorigami.net/blogs/napkin-folding/17543615-replicating-538s-plot-styles-in-matplotlib）可以看到这个样式作者</a> Cameron David-Pilon 关于它的更多讨论。</p>
+<p>你可以在 <a href="https://github.com/matplotlib/matplotlib/blob/38be7aeaaac3691560aeadafe46722dda427ef47/lib/matplotlib/mpl-data/stylelib/fivethirtyeight.mplstyle">这里</a> 读到 FTE 样式的更多介绍。里面会有使用这个样式时的具体代码讲解。在 <a href="https://dataorigami.net/blogs/napkin-folding/17543615-replicating-538s-plot-styles-in-matplotlib">这里</a> 可以看到这个样式作者 Cameron David-Pilon 关于它的更多讨论。</p>
 
 <h2 id="matplotlib-的-fte-样式的限制">matplotlib 的 FTE 样式的限制</h2>
 
@@ -1314,28 +1323,40 @@ women_majors.plot(x = 'Year', y = under_20.index, figsize = (12,8))
 
 <p>Source: <a href="https://fivethirtyeight.com/features/fandango-movies-ratings/">FiveThirtyEight</a></p>
 
-<p>通过比较上面的图示和我们所完成的那张图，我们还需要：
-- 增加一个标题和副标题
-- 移除那个方块型的图例，而在相关的曲线旁边增加标签，并且这些标签旁边的网格线变成透明的
-- 在图的底部增加一个签名，包括这张图的作者和数据源
-- 其他一些小调整：
-    - 增加刻度标记的字体大小
-    - 在 y 轴的某个主要刻度标记上增加「%」标志
-    - 移除 x 轴的标签
-    - 加粗 y = 0 的水平线
-    - 在 y 轴的刻度标记旁边增加一条额外的网格线
-    - 增加图的侧边距</p>
+<p>通过比较上面的图示和我们所完成的那张图，我们还需要：</p>
+
+<ul>
+<li>增加一个标题和副标题</li>
+<li>移除那个方块型的图例，而在相关的曲线旁边增加标签，并且这些标签旁边的网格线变成透明的</li>
+<li>在图的底部增加一个签名，包括这张图的作者和数据源</li>
+<li>其他一些小调整：
+
+<ul>
+<li>增加刻度标记的字体大小</li>
+<li>在 y 轴的某个主要刻度标记上增加「%」标志</li>
+<li>移除 x 轴的标签</li>
+<li>加粗 y = 0 的水平线</li>
+<li>在 y 轴的刻度标记旁边增加一条额外的网格线</li>
+<li>增加图的侧边距</li>
+</ul></li>
+</ul>
 
 <p>为了节省我们制图的时间，避免在开始的时候添加标题，副标题或者其他文字非常重要。在 matplotlib 中，一段文字是通过给定的 x 和 y 坐标放置的，我们会在之后的内容里看到。为了从细节上复制 FTE 的制图风格，我们需要把 y 轴刻度标记和标题与副标题竖直对齐。我们不希望看到当我们设定好对齐之后，却通过增加刻度标签字体大小的时候错乱了，到时候还得重新调整标题和副标题的位置。</p>
 
 <h2 id="定制刻度标记">定制刻度标记</h2>
 
-<p>我们先从增加刻度标记的字体大小开始，在下面的代码中，我们会：
-- 使用之前的代码画图，把图像对象保存在 <code>fte_graph</code> 中。这样可以帮助我们探知它的一些属性，并且重复使用和修改这个对象。
-- 使用 <code>tick_params()</code> 方法增加所有刻度标记的字体大小，各种参数如下：
-    - <code>axis</code> - 指明我们想要修改的坐标轴是哪条，在这里我们想要两条都改；
-    - <code>which</code> - 指明需要改哪里的刻度标记（主要的/次要的），如果不理解可以看上文给出的链接；
-    - <code>labelsize</code> - 设定刻度标记的字体大小</p>
+<p>我们先从增加刻度标记的字体大小开始，在下面的代码中，我们会：</p>
+
+<ul>
+<li>使用之前的代码画图，把图像对象保存在 <code>fte_graph</code> 中。这样可以帮助我们探知它的一些属性，并且重复使用和修改这个对象。</li>
+<li>使用 <code>tick_params()</code> 方法增加所有刻度标记的字体大小，各种参数如下：
+
+<ul>
+<li><code>axis</code> - 指明我们想要修改的坐标轴是哪条，在这里我们想要两条都改；</li>
+<li><code>which</code> - 指明需要改哪里的刻度标记（主要的/次要的），如果不理解可以看上文给出的链接；</li>
+<li><code>labelsize</code> - 设定刻度标记的字体大小</li>
+</ul></li>
+</ul>
 
 <pre><code class="language-Python">fte_graph = women_majors.plot(x = 'Year', y = under_20.index, figsize = (12,8))
 fte_graph.tick_params(axis = 'both', which = 'major', labelsize = 18)
@@ -1345,9 +1366,12 @@ fte_graph.tick_params(axis = 'both', which = 'major', labelsize = 18)
 
 <p>你可能已经发现我们这次没有使用 <code>style.use('fivethirtyeight')</code>。这是因为 matplotlib 样式的首选项已经在上文第一次提到 <code>style</code> 的时候全局更改为 <code>fivethirtyeight</code> 了。之后的所有图都会继承这个样式。如果你想要回到默认的状态，可以使用 <code>style.use('default')</code>。</p>
 
-<p>我们现在在原有的基础上继续调整 y 轴的刻度标记：
-- 我们对 y 轴可以看到的最高标记 50 增加一个「%」标记
-- 我们还需要对其他的几个刻度标记增加一个空格字符，保证它们可以和「50%」完美对齐</p>
+<p>我们现在在原有的基础上继续调整 y 轴的刻度标记：</p>
+
+<ul>
+<li>我们对 y 轴可以看到的最高标记 50 增加一个「%」标记</li>
+<li>我们还需要对其他的几个刻度标记增加一个空格字符，保证它们可以和「50%」完美对齐</li>
+</ul>
 
 <p>为了改变 y 轴的刻度标记，我们使用了 <code>set_yticklabels()</code> 这个方法。从下面的代码中，你可以看到 <code>label</code> 这个参数接受一个多种数据类型混合的列表，而并不要求固定数量或形式的标记。</p>
 
@@ -1363,11 +1387,14 @@ print('The tick labels of the y-axis:', fte_graph.get_yticks()) # -10 and 60 are
 
 <h2 id="对-y-0-处的水平线加粗">对 y = 0 处的水平线加粗</h2>
 
-<p>我们现在需要加粗 y 轴坐标为 0 时的水平线。使用 <code>axhline()</code> 方法可以增加一条新的水平网格线，覆盖住原有的水平轴。<code>axhline()</code> 的参数有：
-- <code>y</code> - 指明水平线的 y 坐标；
-- <code>color</code> - 指明线的颜色；
-- <code>linewidth</code> - 设定线的宽度；
-- <code>alpha</code> - 控制线的透明度，但我们在这里是用来控制黑色的强度；<code>alpha</code> 值的范围从 0 到 1（完全透明到完全不透明）</p>
+<p>我们现在需要加粗 y 轴坐标为 0 时的水平线。使用 <code>axhline()</code> 方法可以增加一条新的水平网格线，覆盖住原有的水平轴。<code>axhline()</code> 的参数有：</p>
+
+<ul>
+<li><code>y</code> - 指明水平线的 y 坐标；</li>
+<li><code>color</code> - 指明线的颜色；</li>
+<li><code>linewidth</code> - 设定线的宽度；</li>
+<li><code>alpha</code> - 控制线的透明度，但我们在这里是用来控制黑色的强度；<code>alpha</code> 值的范围从 0 到 1（完全透明到完全不透明）</li>
+</ul>
 
 <pre><code class="language-Python"># Generate a bolded horizontal line at y = 0
 fte_graph.axhline(y = 0, color = 'black', linewidth = 1.3, alpha = .7)
@@ -1387,12 +1414,15 @@ fte_graph.set_xlim(left = 1969, right = 2011)
 
 <h2 id="生成一条签名栏">生成一条签名栏</h2>
 
-<p>FTE 图像示例的签名栏有着很明显的几个特征：
-- 位置位于图片底部
-- 作者的姓名位于签名栏的左边
-- 数据源位于签名栏的右边
-- 文字的颜色是浅灰色（和图片背景的颜色一样），背景是深灰色
-- 作者姓名和数据源之间的空间背景也是深灰色</p>
+<p>FTE 图像示例的签名栏有着很明显的几个特征：</p>
+
+<ul>
+<li>位置位于图片底部</li>
+<li>作者的姓名位于签名栏的左边</li>
+<li>数据源位于签名栏的右边</li>
+<li>文字的颜色是浅灰色（和图片背景的颜色一样），背景是深灰色</li>
+<li>作者姓名和数据源之间的空间背景也是深灰色</li>
+</ul>
 
 <p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://xzywisdili.com/trans01/ftesample.png" src="https://xzywisdili.com/trans01/low/ftesample.png" alt="ftesample" /></p></figure>
 
@@ -1402,15 +1432,21 @@ fte_graph.set_xlim(left = 1969, right = 2011)
 
 <p>我们还需要一些刻个来让作者姓名和数据源对齐，这些都会在下个代码块里面看到。</p>
 
-<p>也是时候移除 x 轴的刻度标记了！这样，我们可以看到签名栏在整体的曲线图中达到了什么样的视觉效果。在下一段代码中，我们要：
-- 对 <code>fte_graph.xaxis.label</code> 使用 <code>set_visible()</code> 方法移除 x 轴的刻度标记，把这个属性的值改成 <code>False</code>
-- 通过我们上面讨论过的方法增加一个文字片段。我们所使用的 <code>text()</code> 方法有以下几个参数：
-    - <code>x</code> - 指明文字段的 x 坐标；
-    - <code>y</code> - 指明文字段的 y 坐标；
-    - <code>s</code> - 指明要添加的文字；
-    - <code>fontsize</code> - 设定文字的字体大小；
-    - <code>color</code> - 指明文字的颜色；下面我们使用这个值的格式是 16 进制的，这个颜色和整张图的背景颜色完全一致；
-    - <code>backgroundcolor</code> - 设定文字段的背景颜色</p>
+<p>也是时候移除 x 轴的刻度标记了！这样，我们可以看到签名栏在整体的曲线图中达到了什么样的视觉效果。在下一段代码中，我们要：</p>
+
+<ul>
+<li>对 <code>fte_graph.xaxis.label</code> 使用 <code>set_visible()</code> 方法移除 x 轴的刻度标记，把这个属性的值改成 <code>False</code></li>
+<li>通过我们上面讨论过的方法增加一个文字片段。我们所使用的 <code>text()</code> 方法有以下几个参数：
+
+<ul>
+<li><code>x</code> - 指明文字段的 x 坐标；</li>
+<li><code>y</code> - 指明文字段的 y 坐标；</li>
+<li><code>s</code> - 指明要添加的文字；</li>
+<li><code>fontsize</code> - 设定文字的字体大小；</li>
+<li><code>color</code> - 指明文字的颜色；下面我们使用这个值的格式是 16 进制的，这个颜色和整张图的背景颜色完全一致；</li>
+<li><code>backgroundcolor</code> - 设定文字段的背景颜色</li>
+</ul></li>
+</ul>
 
 <pre><code class="language-Python"># Remove the label of the x-axis
 fte_graph.xaxis.label.set_visible(False)
@@ -1457,14 +1493,20 @@ fte_graph.text(x = 1966.1, y = -9,
 
 <h2 id="增加一个标题和副标题">增加一个标题和副标题</h2>
 
-<p>如果你检查许多 FTE 的图表，你会发现它们的标题和副标题遵循着这样的模式：
-- 标题文字几乎都需要一个副标题补充
-- 一副特定图示的标题需要考虑到上下文的角度。它不会太复杂，太技术性，而是简单地表达出一个清晰的观点。标题也从来不会出现一个中立的情绪。就如同上文中「Fandango」的那幅图，我们可以看到一个简单的，饱含情绪的标题：「Fandango LOVES Movies」，而不是一个苍白的「电影评分类型的分布情况」这样的标题
-- 副标题提供的事这幅图的技术性信息，它常常会使坐标轴的标签显得多余。我们在完成副标题时需要注意，因为我们已经把 x 轴的标签删掉了
-- 从视觉上讲，标题和副标题有不一样的字重，而且是左对齐的（不像大多数标题是居中的），并且和 y 轴的主要刻度标记左对齐</p>
+<p>如果你检查许多 FTE 的图表，你会发现它们的标题和副标题遵循着这样的模式：</p>
 
-<p>让我们牢记以上几点，为这幅图增添一个标题和副标题。在下面的代码块中，我们将要：
-- 使用 <code>text()</code> 方法增添一个标题和副标题。如果你已经有使用 matplotlib 的经验的话，你可能好奇为什么我们不使用 <code>title()</code> 和 <code>suptitle()</code> 这两个方法。这是因为这两个方法在精确移动文字位置上显得无比笨拙。这次唯一的新参数是 <code>weight</code>，我们使用它来加粗标题。</p>
+<ul>
+<li>标题文字几乎都需要一个副标题补充</li>
+<li>一副特定图示的标题需要考虑到上下文的角度。它不会太复杂，太技术性，而是简单地表达出一个清晰的观点。标题也从来不会出现一个中立的情绪。就如同上文中「Fandango」的那幅图，我们可以看到一个简单的，饱含情绪的标题：「Fandango LOVES Movies」，而不是一个苍白的「电影评分类型的分布情况」这样的标题</li>
+<li>副标题提供的事这幅图的技术性信息，它常常会使坐标轴的标签显得多余。我们在完成副标题时需要注意，因为我们已经把 x 轴的标签删掉了</li>
+<li>从视觉上讲，标题和副标题有不一样的字重，而且是左对齐的（不像大多数标题是居中的），并且和 y 轴的主要刻度标记左对齐</li>
+</ul>
+
+<p>让我们牢记以上几点，为这幅图增添一个标题和副标题。在下面的代码块中，我们将要：</p>
+
+<ul>
+<li>使用 <code>text()</code> 方法增添一个标题和副标题。如果你已经有使用 matplotlib 的经验的话，你可能好奇为什么我们不使用 <code>title()</code> 和 <code>suptitle()</code> 这两个方法。这是因为这两个方法在精确移动文字位置上显得无比笨拙。这次唯一的新参数是 <code>weight</code>，我们使用它来加粗标题。</li>
+</ul>
 
 <pre><code class="language-Python"># Adding a title and a subtitle
 fte_graph.text(x = 1966.65, y = 62.7, s = &quot;The gender gap is transitory - even for extreme cases&quot;,
@@ -1561,17 +1603,23 @@ fte_graph.text(x = 1976, y = 25, s = 'Physical Sciences', color = colors[5], wei
 <p>这样，我们的图就可以发表了！
 That’s it, our graph is now ready for publication!</p>
 
-<p>做一个小总结，我们开始的时候使用 matplotlib 的默认样式，然后我们一步步把这张图修改成了 FTE 的官方水平：
-- 使用了 matplotlib 内建的 <code>fivethirtyeight</code> 样式
-- 增加了个性化的标题和副标题
-- 增加了一个标题栏
-- 去掉了默认的图例，增加了曲线旁边的图例
-- 其他的一些小调整：定制了刻度标记，加粗了 y = 0 的水平线，在刻度标记旁边增加了竖直线，去除了 x 轴的标签，同时增加了 y 轴的边距。</p>
+<p>做一个小总结，我们开始的时候使用 matplotlib 的默认样式，然后我们一步步把这张图修改成了 FTE 的官方水平：</p>
 
-<p>你可以把下面这几件事作为学习之后的复习：
-- 使用其他科目学士数据生成一个相似的图表
-- 生成一个其他类型的 FTE 图表：直方图，散点图等等
-- 探索<a href="https://matplotlib.org/gallery.html">matplotlib gallery</a>，找到一些新的元素来丰富你的 FTE 图表（比如插入图片，增加箭头等等）。插入图片能让你的图表到达一个新的层次：</p>
+<ul>
+<li>使用了 matplotlib 内建的 <code>fivethirtyeight</code> 样式</li>
+<li>增加了个性化的标题和副标题</li>
+<li>增加了一个标题栏</li>
+<li>去掉了默认的图例，增加了曲线旁边的图例</li>
+<li>其他的一些小调整：定制了刻度标记，加粗了 y = 0 的水平线，在刻度标记旁边增加了竖直线，去除了 x 轴的标签，同时增加了 y 轴的边距。</li>
+</ul>
+
+<p>你可以把下面这几件事作为学习之后的复习：</p>
+
+<ul>
+<li>使用其他科目学士数据生成一个相似的图表</li>
+<li>生成一个其他类型的 FTE 图表：直方图，散点图等等</li>
+<li>探索<a href="https://matplotlib.org/gallery.html">matplotlib gallery</a>，找到一些新的元素来丰富你的 FTE 图表（比如插入图片，增加箭头等等）。插入图片能让你的图表到达一个新的层次：</li>
+</ul>
 
 <p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://xzywisdili.com/trans01/ftesample03.png" src="https://xzywisdili.com/trans01/low/ftesample03.png" alt="ftesample03" /></p></figure>
 
