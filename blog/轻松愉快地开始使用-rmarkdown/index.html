@@ -1137,9 +1137,9 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
             <div class="markdown">
                 
     
-    <p>R 语言世界里的一个大杀器。</p>
+    
 
-<p></p>
+<p>R 语言世界里的一个大杀器。</p>
 
 <p>我想，在所有接触和学习 R 语言的初学者（当然包括我）眼里，有两个东西是相当酷的。一个是 <a href="http://shiny.rstudio.com/tutorial/">shiny</a>，可以轻松做出交互式的图表；而另一个就是 <a href="http://rmarkdown.rstudio.com/">Rmarkdown</a> 了。</p>
 
@@ -1178,44 +1178,40 @@ Use multiple languages including R, Python, and SQL.</p>
 <ol>
 <li>我的环境是 Mac OSX 系统，安装 MacTex</li>
 <li>在 RStudio 的 Preferences 中的 「Sweave」 里把 「Weave Rnw files using」改为 「knitr」，「Type LaTeX into PDF using」 改为 「XeLaTeX」</li>
-
-<li><p>在 Rmarkdown 文档的同路径下创建一个 <code>header.tex</code>，内容是<code>\usepackage{ctex}</code>，然后把 Rmarkdown 文档 yaml 栏内的内容改为如下：</p>
+<li>在 Rmarkdown 文档的同路径下创建一个 <code>header.tex</code>，内容是<code>\usepackage{ctex}</code>，然后把 Rmarkdown 文档 yaml 栏内的内容改为如下：</li>
+</ol>
 
 <pre><code class="language-Markdown">title: &quot;我的第一个 Rmarkdown 文档&quot;
 author: &quot;anthor&quot;
 output:
-pdf_document:
-includes:
-  in_header: header.tex
-keep_tex: yes
-latex_engine: xelatex
-html_document: default
+  pdf_document:
+    includes:
+      in_header: header.tex
+    keep_tex: yes
+    latex_engine: xelatex
+  html_document: default
 </code></pre>
 
-<p>测试一下：
-```markdown</p>
+<p>测试一下：</p>
 
-<h2 id="中文显示">中文显示</h2></li>
-</ol>
-
-<p>测试中文的显示效果。</p>
-
-<p>这里先输入一段文字，我们这段文字的目的是测试在 Rmarkdown 中中文的显示效果：
+<pre><code class="language-markdown">## 中文显示
+测试中文的显示效果。
+这里先输入一段文字，我们这段文字的目的是测试在 Rmarkdown 中中文的显示效果：
 * 列表项目 1
 * 列表项目 2
-* 列表项目 3</p>
+* 列表项目 3
+</code></pre>
 
-<pre><code>输出的 pdf 显示为：
-![中文输出](/rmarkdown/chinese.png)
+<p>输出的 pdf 显示为：
+<figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://xzywisdili.com/rmarkdown/chinese.png" src="https://xzywisdili.com/rmarkdown/low/chinese.png" alt="中文输出" /></p></figure>
 
-完美！
+<p>完美！</p>
 
-## 加粗，链接和行内代码块
+<h2 id="加粗-链接和行内代码块">加粗，链接和行内代码块</h2>
 
-一段常见的 Markdown 语法：
+<p>一段常见的 Markdown 语法：</p>
 
-```Markdown
-## Start with a cool section
+<pre><code class="language-Markdown">## Start with a cool section
 
 You can use traditional **Markdown** syntax, such as [links](http://yihui.name/knitr) and `code`. Here is a quote:
 
@@ -1270,6 +1266,7 @@ Right Left Center  Default
 <figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://xzywisdili.com/rmarkdown/table.png" src="https://xzywisdili.com/rmarkdown/low/table.png" alt="table" /></p></figure>
 
 <p>其他的比如脚注，有序列表，无序列表，定义等等不再做过多展示，上面提到的内容已经足以证明 Rmarkdown 的强大。而这些东西的学习成本几乎为零，这太令人不可思议了。</p>
+
 
             </div>
             
