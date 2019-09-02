@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>想法 on xzy&#39;s blog</title>
-    <link>https://xzywisdili.com/categories/%E6%83%B3%E6%B3%95/</link>
-    <description>Recent content in 想法 on xzy&#39;s blog</description>
+    <title>周记 on xzy&#39;s blog</title>
+    <link>https://xzywisdili.com/tags/%E5%91%A8%E8%AE%B0/</link>
+    <description>Recent content in 周记 on xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 02 Sep 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://xzywisdili.com/categories/%E6%83%B3%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xzywisdili.com/tags/%E5%91%A8%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -24,29 +24,6 @@
 在工作中比较困惑的地方在于，如何进行文件的存档管理。每天由于不停地重新跑程序，数据更新迭代也比较快。而数据又经常通过word文档和excel表格进行上交和分享。众所周知，git 是不适用于传统的word和excel的，因此就需要使用比较传统的方法：在文件名上标注作者、日期和版本号。这样下来，本地就会堆积不少的各种版本文件，实在令人难以处理。下周我要花一定的时间，哪怕抽出半天的时间好好检查和整理一下现在的文件。还要整理扔在有道云里面的各种来源的笔记。
 另一点令我不满的是，现在的生活可以说几乎是 100% 的“坐立生活”。白天久坐一天之后，到了晚上也没有精力去运动，也是坐在宿舍里，这样导致我自己更没有精神。这样长久会形成一种恶性循环，加剧自己的腰背疼痛的问题。因此，我在考虑要不要购置一把更舒服的椅子或者靠垫，然后抽出时间开始运动。白天坐着不动一段时间之后一定要起身一段时间，舒展舒展。
 新学期即将开学，不知道还能实习多久，不过珍惜每一天。</description>
-    </item>
-    
-    <item>
-      <title>我们怎么知道自己学会了？</title>
-      <link>https://xzywisdili.com/blog/%E6%88%91%E4%BB%AC%E6%80%8E%E4%B9%88%E7%9F%A5%E9%81%93%E8%87%AA%E5%B7%B1%E5%AD%A6%E4%BC%9A%E4%BA%86/</link>
-      <pubDate>Fri, 07 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.com/blog/%E6%88%91%E4%BB%AC%E6%80%8E%E4%B9%88%E7%9F%A5%E9%81%93%E8%87%AA%E5%B7%B1%E5%AD%A6%E4%BC%9A%E4%BA%86/</guid>
-      <description>&lt;p&gt;本科生活即将结束了。最后的一周日子里，主要在复习职业病学和精神病学，准备考试，一边又不想落下 SAS 的学习，当然还有其他杂七杂八的任务。在学习的时候，自然会想到一个问题就是：我们怎么知道自己学会了？&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>简化我们的工具</title>
-      <link>https://xzywisdili.com/blog/%E7%AE%80%E5%8C%96%E6%88%91%E4%BB%AC%E7%9A%84%E5%B7%A5%E5%85%B7/</link>
-      <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.com/blog/%E7%AE%80%E5%8C%96%E6%88%91%E4%BB%AC%E7%9A%84%E5%B7%A5%E5%85%B7/</guid>
-      <description>&lt;p&gt;现在的大学生不像十几年前，必定是人手一台笔记本电脑（有的人甚至有两台）。只要在自习室稍微留神观察一下
-专注学习的同学们，就会发现几乎 100% 的同学的电脑上停留的软件不是微软家的 powerpoint，就是 PDF 阅读器。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
