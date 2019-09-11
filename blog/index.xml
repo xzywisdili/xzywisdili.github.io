@@ -6,10 +6,25 @@
     <description>Recent content in Blog on xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 09 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://xzywisdili.com/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>再也敏感不起来</title>
+      <link>https://xzywisdili.com/blog/%E5%86%8D%E4%B9%9F%E6%95%8F%E6%84%9F%E4%B8%8D%E8%B5%B7%E6%9D%A5/</link>
+      <pubDate>Wed, 11 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.com/blog/%E5%86%8D%E4%B9%9F%E6%95%8F%E6%84%9F%E4%B8%8D%E8%B5%B7%E6%9D%A5/</guid>
+      <description>今天本来想总结一下这阵子使用 R 代码画地图的一些心得，但写到半夜 12 点半才写到一半，无奈今天无法更新。 眼睛打架之时开始翻看 eBooksPlan 的 Telegram群组。
+eBooksPlan 是我一直很欣赏的一个社群，因为群主会稳定持续地分享很多优秀内容，但群组内一直有不讨论政治议题的群规。 今日，群里几个人又争论起了政治话题，似乎是有关“民主和言论自由”云云。管理员出面打断了讨论并封禁了两名带头的辩论者。
+我对于这样的处理结果不置可否，但却也心生疑惑，于是只是凭借好奇询问：
+ 我知道读书群不允许讨论政治的群规。但我们如何单纯地讨论读书，而绝不涉及政治。拿“每周一书”举例，这周的选书是《过剩之地：美式富足与贫穷悖论》。我个人对这本书特别感兴趣，但是否意味着我们无法在群里探讨书中可能提及的绝大多数主题？抑或是说我们只能讨论文本层面的内容？
+ 就抛开那本书而言，很多生活的方方面面最后都不可避免地涉及到了经济、政治。 我们可以显而易见地发现，遵守群规的众人只能无休止地使用贴纸，争论 kindle、iPad 和纸质书阅读的利弊，或者求某本书的电子书资源。 这样的群倒也食之无味。而针对我的问题，管理员是这样回复的：
+ 討論主題，問題若僵持在辯，討論什麼…？ 你、我都知道，許多人對於議題來講，只一心求辯贏。誰能控制自己，好好說理…？ 如果各位都能夠控制自身的情緒，在論述之上，誰會惹得最後惡言相向？ 看過太多群組討論到最後，不是一句傻B，就是一句爹爹來著的。
+ 我对于群主的回复颇有几分认同，也理解了群规的道理所在，但心里感觉有一点遗憾。 我们从小的政治课都只是灌输政治观点，却从来没有培育讨论议题的能力，甚至似乎都没有被传授如何开放性地谈论问题。 网络空间里层出不穷的“辩手”一言不合就无赖式撒泼，或是脏话频出，确实让其他所有人的讨论兴致荡然无存。</description>
+    </item>
     
     <item>
       <title>这一周（9.2-9.8）</title>
