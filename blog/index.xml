@@ -6,10 +6,27 @@
     <description>Recent content in Blog on xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 16 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://xzywisdili.com/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>‘我在 R 里画地图（一）&#39;</title>
+      <link>https://xzywisdili.com/blog/%E6%88%91%E5%9C%A8-r-%E9%87%8C%E7%94%BB%E5%9C%B0%E5%9B%BE%E4%B8%80/</link>
+      <pubDate>Mon, 23 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.com/blog/%E6%88%91%E5%9C%A8-r-%E9%87%8C%E7%94%BB%E5%9C%B0%E5%9B%BE%E4%B8%80/</guid>
+      <description>前言 大约一个月前，接到一个任务：绘制全国的患病率地图，就草草做了一个初版，当时还做了一个 ppt 和组里的小伙伴分享。 直到后来，才知道这种图有一个专业的称呼：choropleth maps，中文名字是分层设色图。 可以看到在 google 中检索 choropleth maps 得到的结果：
+单在画图这一方面讲，其实这是一个老生常谈的话题，也有数不胜数的工具和包。但问题的关键在于：绝大多数国外提供的中国地图并不规范。 关于中国地图的规范问题，在姜大伟的知乎专栏 使用中国地图的正确姿势 中有比较翔实的介绍。我也根据此做成了其中一张幻灯片：
+所以问题摆在了我们的面前：
+ 找到一张可供使用的规范的中国矢量地图； 根据这张地图绘制我们想要的分层设色图。  提前提醒：本文代码直接复制粘贴不能够运行，请到文末下载分享的全部程序和地图文件！
+寻找标准地图 在网络上，使用最多的是一份名为 bou2_4p.shp 的地图矢量文件，这份文件来自哪里已不可考，似乎是 2012 年国家提供的 1：400 万地理信息地图，但是后来又关闭了开放。 这份地图应该是目前问题最少的地图，藏南、台湾、南海诸岛也都存在。但是时间已经来到了 2019 年，这份 12 年的地图是否那么无懈可击呢？
+答案是否定的。根据 b 站 up 主“地理人_zxl”的视频 ArcGis更正老式中国基础地理信息数据错误，通过 天地图 和 bou2_4p 的比对，还是可以发现新疆的边界存在一些问题（红线为 bou2_4p，底图为标准地图）：
+同时，bou2_4p 的地图也没有澳门特别行政区。通过上面视频中提供的方法，在 ArcGis 中对 bou2_4p 进行修改，就可以得到修正版本的 bou2_4p 了。 以上，这就是我们的标准地图。
+使用 R 绘制地图 首先要说明，在我个人使用过的工具和包里面，还是 ArcGis 这种专业 GIS 软件作图最为顺滑快捷。但是出于以下的原因，还是选用 R 了：
+ 不只我要出图，别人也要进行地图制作； 免费开源，安装便捷，上手简单； 只需改动患病率数据，运行代码就可出图  以下我不会贴出完整代码，只会贴出一些核心的重点代码。完整的代码会分享在文章末尾。</description>
+    </item>
     
     <item>
       <title>这一周（9.9-9.15）</title>
