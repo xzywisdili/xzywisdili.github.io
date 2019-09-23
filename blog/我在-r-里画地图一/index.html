@@ -15,8 +15,8 @@
 <meta property="og:locale" content="zh-cn" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://xzywisdili.com/blog/%E6%88%91%E5%9C%A8-r-%E9%87%8C%E7%94%BB%E5%9C%B0%E5%9B%BE%E4%B8%80/" />
-<meta property="og:title" content="‘我在 R 里画地图（一）&#39;" />
-<meta property="twitter:title" content="‘我在 R 里画地图（一）&#39;">
+<meta property="og:title" content="我在 R 里画地图（一）" />
+<meta property="twitter:title" content="我在 R 里画地图（一）">
 
     <meta property="og:image" content="https://xzywisdili.com/img/logo.png">
     <meta property="twitter:card" content="summary">
@@ -28,7 +28,7 @@
 <title>
 
 
-     xzy&#39;s blog - ‘我在 R 里画地图（一）&#39; 
+     xzy&#39;s blog - 我在 R 里画地图（一） 
 
 </title>
 <link rel="canonical" href="https://xzywisdili.com/blog/%E6%88%91%E5%9C%A8-r-%E9%87%8C%E7%94%BB%E5%9C%B0%E5%9B%BE%E4%B8%80/">
@@ -1108,7 +1108,7 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
                     <div class="page-heading">
 
     
-    ‘我在 R 里画地图（一）&#39;
+    我在 R 里画地图（一）
     
 
 </div>
@@ -1177,11 +1177,12 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
 <p><img src="https://i.loli.net/2019/09/23/DSTahEbdA2XefVO.jpg" alt="" /></p>
 
 <p>同时，bou2_4p 的地图也没有澳门特别行政区。通过上面视频中提供的方法，在 ArcGis 中对 bou2_4p 进行修改，就可以得到修正版本的 bou2_4p 了。
-以上，这就是我们的标准地图。</p>
+这就是我们接下来要使用的标准地图。</p>
 
 <h2 id="使用-r-绘制地图">使用 R 绘制地图</h2>
 
-<p>首先要说明，在我个人使用过的工具和包里面，还是 ArcGis 这种专业 GIS 软件作图最为顺滑快捷。但是出于以下的原因，还是选用 R 了：</p>
+<p>首先要说明，在我个人使用过的工具和包里面，还是 ArcGis 这种专业 GIS 软件绘制地图最为顺滑快捷。
+那为什么要使用 R 语言呢？其实还是出于以下这几个原因：</p>
 
 <ul>
 <li>不只我要出图，别人也要进行地图制作；</li>
@@ -1189,12 +1190,46 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
 <li>只需改动患病率数据，运行代码就可出图</li>
 </ul>
 
-<p>以下我不会贴出完整代码，只会贴出一些核心的重点代码。完整的代码会分享在文章末尾。</p>
+<p>再次提醒，以下我不会贴出完整代码，只会贴出一些核心的重点代码。完整的代码会分享在文章末尾。</p>
 
 <h3 id="基础绘图">基础绘图</h3>
 
-<p>首先，我们通过 <code>rgdal::readOGR</code> 读取修正过后的中国地图，然后对数据框进行转换，再和患病率数据 <code>da</code> 进行合并。
-这里的患病率数据写明了每个省的患病率大小。然后通过 <code>ggplot</code> 绘制出我们需要的基础制图。</p>
+<p>首先，我们通过 <code>rgdal::readOGR</code> 读取修正过后的中国地图，然后对数据框进行转换，再和患病率数据 <code>da</code> 进行合并。</p>
+
+<p>患病率数据 <code>da</code> 长什么样子呢？你一看便懂：</p>
+
+<table>
+<thead>
+<tr>
+<th>NAME</th>
+<th>rate</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>安徽省</td>
+<td>15.89</td>
+</tr>
+
+<tr>
+<td>北京市</td>
+<td>12.85</td>
+</tr>
+
+<tr>
+<td>福建省</td>
+<td>15.14</td>
+</tr>
+
+<tr>
+<td>黑龙江省</td>
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+
+<p>这里的患病率数据中用 <code>rate</code> 写明了每个省的患病率大小。然后通过 <code>ggplot</code> 绘制出我们需要的基础制图。</p>
 
 <pre><code class="language-R">china_map &lt;- rgdal::readOGR(&quot;map//bou2_4p.shp&quot;, use_iconv = TRUE, encoding = &quot;UTF-8&quot;)
 xdata &lt;- china_map@data 
@@ -1227,7 +1262,8 @@ p2
 
 <p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g79r767fk6j31by0ts40r.jpg" alt="" /></p>
 
-<p>这里选取颜色的技巧在于，在 google 图片里面搜索 choropleth map，如果看到好看的，喜欢的颜色可以复制到自己的图里。</p>
+<p>顺带一提，想要选取好看的颜色，可以试试在 google 图片里面搜索 choropleth map。
+如果看到顺眼的颜色，可以直接得到色彩的 hex 值复制到自己的图里。</p>
 
 <h3 id="绘制九段线">绘制九段线</h3>
 
@@ -1285,6 +1321,9 @@ p3 &lt;- p2 +
 除此之外，只要把 <code>geom_text</code> 替换成 <code>geom_shadowtext</code>，就可以使用带白边的标签，效果如下：</p>
 
 <p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g79rg0c73zj31b80tgdir.jpg" alt="" /></p>
+
+<p>在我的破电脑上，如果单次开始运行整个绘图程序，到出图保存，大概需要 10s 左右。
+这可能是一个劣势，当然也不是不能接受的。</p>
 
 <h2 id="后记">后记</h2>
 
