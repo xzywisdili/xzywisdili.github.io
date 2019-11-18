@@ -6,10 +6,23 @@
     <description>Recent content in Home on xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 26 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://xzywisdili.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>我在 R 里画地图（二）</title>
+      <link>https://xzywisdili.com/blog/%E6%88%91%E5%9C%A8-r-%E9%87%8C%E7%94%BB%E5%9C%B0%E5%9B%BE%E4%BA%8C/</link>
+      <pubDate>Mon, 18 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.com/blog/%E6%88%91%E5%9C%A8-r-%E9%87%8C%E7%94%BB%E5%9C%B0%E5%9B%BE%E4%BA%8C/</guid>
+      <description>在R语言中绘制地图，尤其是可交互式的地图的另一个利器是 leaflet 包。 这次我会借着我刚刚完成的一个小项目来讲解这一内容，目标是仿制美国 CDC 官网上的一张图————是的，我们的「战场」从中国转移到了美国。
+数据准备 官网上有相关数据的下载。除此之外，我们还需要美国的 shapefile 文件。 一般来说，国外的地图文件去 GADM 上下载问题就不是很大。 接下来，对于这一任务来说，可以通过 ArcGis 方便地将包含各州数据 csv 文件 join 到地图文件上。 这一步唯一要注意的就是地图文件对应字段的类型（一般来说是 Text）要与各州数据类型一致。
+在这一系列的上一篇文章中，我当时将这一 merge 过程在 R 里用代码写了出来。 这两种方法都可以，如果需要批量绘制地图的话，当然还是之前代码的方法更好。
+leaflet 绘制地图 leaflet 实在是绘制地图的一大利器。它不仅强大，还足够简单。 在 Youtube 上面也有太多相关的教学视频，每一讲大概2-3分钟，看起来也不累。 使用 40 行左右的代码就可以生成我们需要的地图：
+library(leaflet) library(rgdal) library(sf) library(htmltools) library(htmlwidgets) USA_data &amp;lt;- st_read(&amp;quot;map2/USA_data.shp&amp;quot;) # 4个分类的配色定义 pal &amp;lt;- colorFactor( palette = c(&#39;#fff5f0&#39;, &#39;#b4b4b4&#39;, &#39;#fb6a4a&#39;, &#39;#fcbba1&#39;), domain = US$category ) # 每个州显示的标签内容 USA_data$label &amp;lt;- paste(&amp;quot;&amp;lt;p&amp;gt;&amp;lt;b&amp;gt;&amp;quot;, USA_data$NAME, &amp;quot;&amp;lt;/b&amp;gt;&amp;lt;/p&amp;gt;&amp;quot;, &amp;quot;Category: &amp;quot;, USA_data$category, &amp;quot;&amp;lt;br&amp;gt;&amp;quot;, &amp;quot;Percent Change From 2016-2017: &amp;quot;, USA_data$change, &amp;quot;&amp;lt;br&amp;gt;&amp;quot;, &amp;quot;Statistically ignificant: &amp;quot;,USA_data$significan, &amp;quot;&amp;lt;br&amp;gt;&amp;quot;, &amp;quot;2016 Number: &amp;quot;, USA_data$X2016number, &amp;quot;&amp;lt;br&amp;gt;&amp;quot;, &amp;quot;2016 Rate: &amp;quot;, USA_data$X2016rate, &amp;quot;&amp;lt;br&amp;gt;&amp;quot;, &amp;quot;2017 Number: &amp;quot;, USA_data$X2017number, &amp;quot;&amp;lt;br&amp;gt;&amp;quot;, &amp;quot;2017 Rate: &amp;quot;, USA_data$X2017rate) # 绘制地图并保存 my_map &amp;lt;- leaflet(USA_data) %&amp;gt;% addPolygons(color = &amp;quot;#444444&amp;quot;, weight = 1, smoothFactor = 0.</description>
+    </item>
     
     <item>
       <title>政客生活 101</title>
