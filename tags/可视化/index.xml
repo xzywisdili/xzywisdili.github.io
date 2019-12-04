@@ -6,10 +6,23 @@
     <description>Recent content in 可视化 on xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 18 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 04 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://xzywisdili.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>最近我都做了些什么</title>
+      <link>https://xzywisdili.com/blog/%E6%9C%80%E8%BF%91%E6%88%91%E9%83%BD%E5%81%9A%E4%BA%86%E4%BA%9B%E4%BB%80%E4%B9%88/</link>
+      <pubDate>Wed, 04 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.com/blog/%E6%9C%80%E8%BF%91%E6%88%91%E9%83%BD%E5%81%9A%E4%BA%86%E4%BA%9B%E4%BB%80%E4%B9%88/</guid>
+      <description>时间匆匆忙忙到了 2019 年的 12 月，我自己也是匆匆忙忙的事情。至于即将到来的年终总结什么的，就随缘了。 最近忙的事，既然暂时告一段落，就有必要开个博客总结一下。 所以这一篇可能内容会比较杂乱反复。
+地图和 shiny 玩出新花样 在 shiny 中，选择想要绘制的美国州名，再单独绘制这一个州的情况，达到如下图的效果：
+当然，在众多的美国地图文件中，如果选择边缘没有那么精细的版本，就能让渲染速度更快一点。 shiny 实在是一个好用好玩的东西。
+R 也能写简单的网络爬虫？ 有一个项目是需要整理 2015 到 16 赛季 nba 球员的场均得分、场均助攻等数据。 我们可以直接在 篮球数据网站 进行爬取。 这事本来比较适合直接拿 python 跑，但出于一些原因，还是得用 R。 但意外地发现，其实也不是特别复杂，解析，xpath 查找也都不在话下，核心爬取部分也就不到 30 行代码。
+library(tidyverse) library(xml2) # 得到某个球员的查询地址 # 举例，输入&amp;quot;Derrick Rose&amp;quot;，函数返回&amp;quot;/players/r/rosede01.html&amp;quot; get_player_url &amp;lt;- function(player_name) { query_url &amp;lt;- &amp;quot;https://www.basketball-reference.com/search/search.fcgi?hint=&amp;amp;search=&amp;quot; url &amp;lt;- paste0(query_url, str_replace(player_name, &amp;quot; &amp;quot;, &amp;quot;%20&amp;quot;)) player_url &amp;lt;- url %&amp;gt;% read_html() %&amp;gt;% html_nodes(xpath=&#39;//div[contains(@class, &amp;quot;search-item-url&amp;quot;)]&#39;) %&amp;gt;% html_text() return(player_url[1]) } # 得到某个球员的数据 # 举例：输入&amp;quot;Derrick Rose&amp;quot;，函数返回该球员相关的 Age, Tm等等数据 get_player_data &amp;lt;- function(player_name) { print(player_name) base_url &amp;lt;- &amp;quot;https://www.</description>
+    </item>
     
     <item>
       <title>我在 R 里画地图（二）</title>
