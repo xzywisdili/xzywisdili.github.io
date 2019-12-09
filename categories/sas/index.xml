@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sas on xzy&#39;s blog</title>
-    <link>https://xzywisdili.com/tags/sas/</link>
+    <link>https://xzywisdili.com/categories/sas/</link>
     <description>Recent content in Sas on xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 09 Dec 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://xzywisdili.com/tags/sas/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xzywisdili.com/categories/sas/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -23,17 +23,6 @@
 也许有些写程序的小伙伴会觉得非常好写，但对我来说，想要使用 SAS 解决这个问题，直觉上还是比较费劲的。 昨晚在参加选调生宣讲的时候，就一直在想。回宿舍立马坐下敲了出来。
 首先，导入数据。将数据里每个值和 35 进行比较，先转换成由 0， 1 组成的数据集。 方便下一步的运算。
 DATA example; infile &amp;quot;G:\04_code\PM2.5数据.csv&amp;quot; DSD MISSOVER firstobs=2; input id pm1-pm356; RUN; DATA example_35; set example; array pm {365} pm1-pm365; do i = 1 to 365; pm[i] = pm[i] &amp;gt; 35; end; drop i; RUN;  接下来，就是最关键的部分。 这里是利用 SAS 在 DATA 步读取数据的同时，插入一个循环。 这个循环长度就是 365，把每个研究对象的数据由头读到尾，在读的过程中分析数值 1 的连续情况。</description>
-    </item>
-    
-    <item>
-      <title>我们怎么知道自己学会了？</title>
-      <link>https://xzywisdili.com/blog/%E6%88%91%E4%BB%AC%E6%80%8E%E4%B9%88%E7%9F%A5%E9%81%93%E8%87%AA%E5%B7%B1%E5%AD%A6%E4%BC%9A%E4%BA%86/</link>
-      <pubDate>Fri, 07 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.com/blog/%E6%88%91%E4%BB%AC%E6%80%8E%E4%B9%88%E7%9F%A5%E9%81%93%E8%87%AA%E5%B7%B1%E5%AD%A6%E4%BC%9A%E4%BA%86/</guid>
-      <description>&lt;p&gt;本科生活即将结束了。最后的一周日子里，主要在复习职业病学和精神病学，准备考试，一边又不想落下 SAS 的学习，当然还有其他杂七杂八的任务。在学习的时候，自然会想到一个问题就是：我们怎么知道自己学会了？&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
