@@ -6,10 +6,20 @@
     <description>Recent content in Blog on xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 09 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://xzywisdili.com/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>记录自己用一天时间完成的成果</title>
+      <link>https://xzywisdili.com/blog/%E8%AE%B0%E5%BD%95%E8%87%AA%E5%B7%B1%E7%94%A8%E4%B8%80%E5%A4%A9%E6%97%B6%E9%97%B4%E5%AE%8C%E6%88%90%E7%9A%84%E6%88%90%E6%9E%9C/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.com/blog/%E8%AE%B0%E5%BD%95%E8%87%AA%E5%B7%B1%E7%94%A8%E4%B8%80%E5%A4%A9%E6%97%B6%E9%97%B4%E5%AE%8C%E6%88%90%E7%9A%84%E6%88%90%E6%9E%9C/</guid>
+      <description>这次最大的收获是完全过了一遍文本分析，其中包括：
+ 文本清洗 词频分析 绘制词云 文本分类模型  我无意在博客中写出我是怎么做的或是贴出任何代码，因为网络上有太多太多相关的教程了，文本的，视频的。 当今世界，只要不是特别冷门的知识，想学习还是特别方便的。再一次歌颂互联网。 当然，虽然只是很粗浅地了解和实践，但至少自己能在一天之内做完一整套出来，还是比较有成就感的。 于是权且把最后的成果贴在这里。</description>
+    </item>
     
     <item>
       <title>新型冠状病毒</title>
