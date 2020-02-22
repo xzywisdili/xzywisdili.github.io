@@ -6,10 +6,25 @@
     <description>Recent content in Home on xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 10 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://xzywisdili.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>大家是怎么展现疫情的</title>
+      <link>https://xzywisdili.com/blog/%E5%A4%A7%E5%AE%B6%E6%98%AF%E6%80%8E%E4%B9%88%E5%B1%95%E7%8E%B0%E7%96%AB%E6%83%85%E7%9A%84/</link>
+      <pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.com/blog/%E5%A4%A7%E5%AE%B6%E6%98%AF%E6%80%8E%E4%B9%88%E5%B1%95%E7%8E%B0%E7%96%AB%E6%83%85%E7%9A%84/</guid>
+      <description>一个简单地汇总。
+这次疫情，以丁香园为代表，微博，支付宝和腾讯跟上，都建立了自己的疫情实时播报页面。布局也都大同小异，最上面是确诊、疑似、重症、死亡和治愈五个最为重要的数字。下面是表现各个省份地区的疫情地图，和治愈情况、新增情况等的时间趋势。再下面是最新的新闻通报。
+中文维基上则记录了从报道开始每一天每一个省的详细情况，这里有日期和地区尺度上最为翔实的数据和增长率，并且每一个数字都有对应的引用来源。看起来相当规范。
+联合早报报道新加坡疫情时，采用了如下这种堆积的趋势图，可以更方便地观察确诊病例中不同情况人数的比例。
+另一个报道新加坡疫情以面板的形式展现了所有数字、趋势。其最大的特点是在右侧显示了每一个病例，点击就可以显示病例的性别，年龄，所处地区和确诊日期等等内容。
+微博上以 @江南剑心2 为代表的一批志愿者团队试图梳理每一个病例的情况，呈现一个地区亲属关系，聚集关系，是否为输入和非输入性。
+希望一切早点过去。</description>
+    </item>
     
     <item>
       <title>记录自己用一天时间完成的成果</title>
