@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>分享 on xzy&#39;s blog</title>
-    <link>https://xzywisdili.com/tags/%E5%88%86%E4%BA%AB/</link>
-    <description>Recent content in 分享 on xzy&#39;s blog</description>
+    <title>影视剧 on xzy&#39;s blog</title>
+    <link>https://xzywisdili.com/categories/%E5%BD%B1%E8%A7%86%E5%89%A7/</link>
+    <description>Recent content in 影视剧 on xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 20 Jun 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://xzywisdili.com/tags/%E5%88%86%E4%BA%AB/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xzywisdili.com/categories/%E5%BD%B1%E8%A7%86%E5%89%A7/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -23,16 +23,6 @@
 而到了改编剧上，只能说情况变得更糟了。明显导演和编剧不能照搬小说 9 人死亡的剧情，只好在原先的框架下修修补补。 这样一来，剧作的重心偏向了对朱朝阳和严良（剧中和书中不是一个人，书中刑警为严良，福利院溜出男生为丁浩）的家庭背景展开，尤其是朱朝阳在离异父母之间的关系展开占到了大量篇幅。 最关键的是，我们的两个小少年变成了其心也善的正面形象，所有的罪恶都留给了张东升一个人。 尤其是朱朝阳抱着濒死的父亲掩面痛哭的时候，相信读过原著的小伙伴都只能无奈地摇摇头。 而我认为，这样改编的结果只能是丢掉了原著里最精华，最亮点的部分，实在让人有些失望。
 但是依然也要夸奖剧作的摄影风格，给我们呈现了一座透着海风味道的沿海小城。 里面的一些镜头也颇有想法，比如第六集结尾小船透过云层，再拉回到海上浮尸的镜头让我印象非常深刻。 三位小演员的演技也是出奇地好，都表演出了各自角色的特点，在秦昊面前也丝毫不落下风。 另外，12 集的设定也应该给个大大的好评，真心不希望国产剧动辄拍出个几十集。
 接下来，紫金陈老师的《长夜难明》也会出剧版，将在今年播出。兴奋地期待的同事，也希望不要改得太多，因为那本原著涉及的剧情更加阴暗，且富有政治性。希望国产剧发展得越来越好，产出更多精品。也希望国产犯罪推理类型的小说也能打出一片天。</description>
-    </item>
-    
-    <item>
-      <title>分享几篇统计相关好文</title>
-      <link>https://xzywisdili.com/blog/%E5%88%86%E4%BA%AB%E5%87%A0%E7%AF%87%E7%BB%9F%E8%AE%A1%E7%9B%B8%E5%85%B3%E5%A5%BD%E6%96%87/</link>
-      <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.com/blog/%E5%88%86%E4%BA%AB%E5%87%A0%E7%AF%87%E7%BB%9F%E8%AE%A1%E7%9B%B8%E5%85%B3%E5%A5%BD%E6%96%87/</guid>
-      <description>最近在研究分段样条回归和线性混合效应模型，看到了几篇好文可以分享。
- 样条回归（附 python 代码） [分段回归的拐点连续性](https://yihui.org/cn/2012/04/break-points-in-regression/ 最全使用 R 语言中lme4 包完成线性混合效应模型分析  但还是没搞懂分段线性混合效应模型，要学会接受自己的平庸和愚蠢。</description>
     </item>
     
   </channel>

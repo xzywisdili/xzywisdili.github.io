@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://xzywisdili.com/blog/%E8%81%8A%E8%81%8A%E9%9A%90%E7%A7%98%E7%9A%84%E8%A7%92%E8%90%BD/</loc>
+    <lastmod>2020-06-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://xzywisdili.com/blog/%E5%88%86%E4%BA%AB%E5%87%A0%E7%AF%87%E7%BB%9F%E8%AE%A1%E7%9B%B8%E5%85%B3%E5%A5%BD%E6%96%87/</loc>
     <lastmod>2020-04-28T00:00:00+00:00</lastmod>
   </url>
@@ -219,7 +224,7 @@
   
   <url>
     <loc>https://xzywisdili.com/blog/</loc>
-    <lastmod>2020-04-28T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -248,7 +253,7 @@
   
   <url>
     <loc>https://xzywisdili.com/</loc>
-    <lastmod>2020-04-28T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -335,7 +340,7 @@
   
   <url>
     <loc>https://xzywisdili.com/tags/%E5%88%86%E4%BA%AB/</loc>
-    <lastmod>2020-04-28T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -366,6 +371,12 @@
   <url>
     <loc>https://xzywisdili.com/categories/%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://xzywisdili.com/categories/%E5%BD%B1%E8%A7%86%E5%89%A7/</loc>
+    <lastmod>2020-06-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -515,7 +526,7 @@
   
   <url>
     <loc>https://xzywisdili.com/tags/%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2020-04-28T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
