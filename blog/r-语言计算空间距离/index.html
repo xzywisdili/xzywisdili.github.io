@@ -1140,7 +1140,9 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
             <div class="markdown">
                 
     
-    <p>最近在研究计算真实空间两个点的距离，
+    
+
+<p>最近在研究计算真实空间两个点的距离，
 比如已知 A, B 两点的经纬度坐标，计算两点之间的距离。
 在 R 语言中，已经有很多大神提供的空间地理数据包，经过搜索发现最备受推崇的是 <code>geosphere</code> 包。</p>
 
@@ -1155,6 +1157,14 @@ distance &lt;- distGeo(df[1, ], df[2, ])
 <p>得到的距离结果单位是 <code>m</code>。</p>
 
 <p>这个包的最大优势是计算速度很快，比如<a href="https://stackoverflow.com/questions/22184101/calculate-distance-between-each-pair-of-coordinates-in-wide-dataframe">这里</a>有 <code>geosphere</code> 包的 <code>distGeo</code> 方法和 <code>sp</code> 包的 <code>spDistsN1</code> 方法的 Benchmark 对比。</p>
+
+<h2 id="附赠内容">附赠内容</h2>
+
+<ol>
+<li><a href="https://maplocation.sjfkai.com/">批量转换地址为经纬度工具</a></li>
+<li><a href="https://api.map.baidu.com/lbsapi/getpoint/index.html">百度地图经纬度拾取系统</a></li>
+<li><a href="http://blog.fens.me/r-distance/">R 语言实现 46 种距离算法</a></li>
+</ol>
 
 
             </div>
