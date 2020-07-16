@@ -6,10 +6,22 @@
     <description>Recent content in R 语言 on xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 04 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://xzywisdili.com/tags/r-%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>R 语言计算空间距离</title>
+      <link>https://xzywisdili.com/blog/r-%E8%AF%AD%E8%A8%80%E8%AE%A1%E7%AE%97%E7%A9%BA%E9%97%B4%E8%B7%9D%E7%A6%BB/</link>
+      <pubDate>Thu, 16 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.com/blog/r-%E8%AF%AD%E8%A8%80%E8%AE%A1%E7%AE%97%E7%A9%BA%E9%97%B4%E8%B7%9D%E7%A6%BB/</guid>
+      <description>最近在研究计算真实空间两个点的距离， 比如已知 A, B 两点的经纬度坐标，计算两点之间的距离。 在 R 语言中，已经有很多大神提供的空间地理数据包，经过搜索发现最备受推崇的是 geosphere 包。
+使用方法也非常简单：
+library(geosphere) df &amp;lt;- data.frame(lon = c(lon1, lon2), lat=c(lat1, lat2)) distance &amp;lt;- distGeo(df[1, ], df[2, ])  得到的距离结果单位是 m。
+这个包的最大优势是计算速度很快，比如这里有 geosphere 包的 distGeo 方法和 sp 包的 spDistsN1 方法的 Benchmark 对比。</description>
+    </item>
     
     <item>
       <title>最近我都做了些什么</title>
