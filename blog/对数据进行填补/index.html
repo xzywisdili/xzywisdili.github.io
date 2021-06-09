@@ -14,9 +14,9 @@
 <meta property="og:site_name" content="xzy&#39;s blog" />
 <meta property="og:locale" content="zh-cn" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://xzywisdili.com/blog/%E6%8E%A8%E8%8D%90%E4%B8%94%E6%94%B6%E8%97%8F%E7%9A%84%E5%A5%BD%E7%BD%91%E7%AB%99/" />
-<meta property="og:title" content="推荐且收藏的好网站" />
-<meta property="twitter:title" content="推荐且收藏的好网站">
+<meta property="og:url" content="https://xzywisdili.com/blog/%E5%AF%B9%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E5%A1%AB%E8%A1%A5/" />
+<meta property="og:title" content="对数据进行填补" />
+<meta property="twitter:title" content="对数据进行填补">
 
     <meta property="og:image" content="https://xzywisdili.com/img/logo.png">
     <meta property="twitter:card" content="summary">
@@ -28,10 +28,10 @@
 <title>
 
 
-     xzy&#39;s blog - 推荐且收藏的好网站 
+     xzy&#39;s blog - 对数据进行填补 
 
 </title>
-<link rel="canonical" href="https://xzywisdili.com/blog/%E6%8E%A8%E8%8D%90%E4%B8%94%E6%94%B6%E8%97%8F%E7%9A%84%E5%A5%BD%E7%BD%91%E7%AB%99/">
+<link rel="canonical" href="https://xzywisdili.com/blog/%E5%AF%B9%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E5%A1%AB%E8%A1%A5/">
 
 
 <style media="screen">
@@ -1108,14 +1108,14 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
                     <div class="page-heading">
 
     
-    推荐且收藏的好网站
+    对数据进行填补
     
 
 </div>
 
                 </div>
                 <div class="meta">
-                    <div class="date" title="Sun Dec 27 2020 00:00:00 UTC">Dec 27, 2020</div>
+                    <div class="date" title="Wed Jun 9 2021 00:00:00 UTC">Jun 9, 2021</div>
                     
                         
                     
@@ -1125,9 +1125,9 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
                     <div class="tags">
                         <ul>
                           
-                            <li class="middot"><a href="https://xzywisdili.com/tags/%E5%B7%A5%E4%BD%9C">工作</a> </li>
-                          
                             <li class="middot"><a href="https://xzywisdili.com/tags/%E5%88%86%E4%BA%AB">分享</a> </li>
+                          
+                            <li class="middot"><a href="https://xzywisdili.com/tags/r-%E8%AF%AD%E8%A8%80">R 语言</a> </li>
                           
                         </ul>
                     </div>
@@ -1142,80 +1142,67 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
             <div class="markdown">
                 
     
-    
+    <p>今天整理数据的时候，需要使用数据集 2 对数据集 1 里缺失的部分进行填补，而两者重复的部分，优先保留数据集 1 里的。</p>
 
-<p>这篇博客计划持续更新。这里的网站或者是实用的工具，或者是收藏的实用知识，而且每一个都是我自己用过或者看过的。
-其中不少还是我高频使用的，甚至域名也已经背下来了。</p>
+<p>这个问题其实很简单，只需短短 2-3 行：</p>
 
-<h2 id="工具类网站">工具类网站</h2>
+<pre><code class="language-R">result &lt;- data1 %&gt;%
+  left_join(data2) %&gt;%
+  mutate(value = ifelse(is.na(value.x), value.y, value.x))
+</code></pre>
 
-<ul>
-<li><a href="http://map.yanue.net/">经纬度批量查询</a></li>
-<li><a href="https://d-maps.com/index.php?lang=zh">世界范围内免费地图下载</a></li>
-<li><a href="https://everytimezone.com">查看时差的网站</a></li>
-<li><a href="https://www.xicidaili.com">提供代理 ip 池</a></li>
-<li><a href="https://brandcolors.net">各种知名品牌配色参考</a></li>
-<li><a href="https://sonic.volf.club/">电脑装机官方网站合集</a></li>
-<li><a href="https://www.kuaidi100.com/time/">快递时效查询</a></li>
-<li><a href="https://www.deepl.com/translator">深度学习助力翻译网站 DeepL</a></li>
-<li><a href="https://gifsuper.com/">在线编辑修改 GIF 图</a></li>
-<li><a href="https://online.easyscreenocr.com/ZH">免费在线 OCR 工具</a></li>
-<li><a href="https://www.mapchecking.com/">给定地图区域的面积和最大容纳人数</a></li>
-<li><a href="https://pdf2jpg.net/convert.php">我最常用的 PDF 转图片网站</a></li>
-<li><a href="http://www.beautifulcarrot.com/">上传 word 生成手写字体文档，方便打印的【萝卜工坊】</a></li>
-<li><a href="http://3g.gljlw.com/diy/douyin.php">下载无水印抖音视频</a></li>
-<li><a href="https://ezgif.com/">一站式解决 gif 相关问题（什么都有）</a></li>
-<li><a href="https://appledi.com/">免费美区 Apple ID </a></li>
-<li><a href="https://xbeibeix.com/api/bilibili/">B站视频解析下载</a></li>
-<li><a href="https://lab.magiconch.com/nbnhhsh/">看不懂的网络缩略词速查工具</a></li>
-</ul>
+<p>但我遇到的问题稍微多一点点难度，日期的序列不是连续的话，例如数据集 1：</p>
 
-<h2 id="学习类网站">学习类网站</h2>
+<pre><code class="language-R"># date       value
+# 2014-01-01 12
+# 2014-01-03 14
+# 2014-01-05 17
+</code></pre>
 
-<ul>
-<li><a href="http://www.sthda.com/english/wiki/word-cloud-generator-in-r-one-killer-function-to-do-everything-you-need">杀手级词云</a></li>
-<li><a href="https://ludwig.guru">英文句式写法查询</a></li>
-<li><a href="https://visualgo.net/zh">编程通用算法可视化</a></li>
-<li><a href="https://github.com/geekxh/hello-algorithm">和小浩学算法大全</a></li>
-<li><a href="http://tuzhidian.com/">统计类图表汇总</a></li>
-<li><a href="https://github.com/librauee/Reptile">python3网络爬虫汇总</a></li>
-<li><a href="https://howmuch.net/">经济类数据图表（值得学习）</a></li>
-</ul>
+<p>数据集 2：</p>
 
-<h2 id="积累-tips">积累 Tips</h2>
+<pre><code class="language-R"># date       value
+# 2014-01-02 13
+# 2014-01-03 16
+# 2014-01-04 15
+</code></pre>
 
-<h3 id="科研-学术">科研·学术</h3>
+<p>那么希望得到的结果是：</p>
 
-<ul>
-<li><a href="https://sspai.com/post/58708">学生在家远程学术</a></li>
-</ul>
+<pre><code class="language-R"># date       value
+# 2014-01-01 12
+# 2014-01-02 16
+# 2014-01-03 14
+# 2014-01-04 15
+# 2014-01-05 17
+</code></pre>
 
-<h3 id="生活-厨房">生活·厨房</h3>
+<p>我们会需要先生成一个日期的模板：</p>
 
-<ul>
-<li><a href="怎样才能吃得方便、卫生又健康？:https://sspai.com/post/60836">夏日便当拯救计划</a></li>
-<li><a href="https://sspai.com/post/58573">通过这些小改变，帮家中的年夜饭增添一份健康</a></li>
-<li><a href="https://sspai.com/post/58737">屯粮做饭</a></li>
-<li><a href="https://sspai.com/post/64028">关于洗涤、熨烫和收纳衣服的常识</a></li>
-<li><a href="https://sspai.com/post/64109">工作日简单A+B煮饭</a></li>
-<li><a href="https://serialdater.net/tdee-calculator/">TDEE 热量计算器，得到每日摄入热量</a></li>
-<li><a href="https://sspai.com/post/61154">打印机选择指南</a></li>
-</ul>
+<pre><code class="language-R">template &lt;- tibble(
+  date = seq(as.Date(&quot;2013/1/1&quot;), as.Date(&quot;2017/12/31&quot;), &quot;days&quot;
+)
 
-<h3 id="职场-工作">职场·工作</h3>
+template %&gt;%
+  left_join(data1, by=&quot;date&quot;) %&gt;%
+  left_join(data2, by-&quot;date&quot;) %&gt;%
+  mutate(value = ifelse(is.na(value.x), value.y, value.x))
+</code></pre>
 
-<ul>
-<li><a href="https://sspai.com/post/60859">写给职场新人的 PPT 演示制作指南</a></li>
-<li><a href="https://sspai.com/post/61728">PPT 制作全流程要点</a></li>
-<li><a href="https://mp.weixin.qq.com/s/hziIjUMoKEBi0xDRBh_4Zg">办公技巧分享</a></li>
-<li><a href="http://www.mca.gov.cn//article/sj/xzqh/2020/2020/20200908007001.html">2020 年 7 月中华人民共和国县以上行政区划代码</a></li>
-</ul>
+<p>当然，如果数据维度上升，比如多了一个城市维度的话，只需要在模板上更改一下也能解决了：</p>
 
-<h2 id="其他">其他</h2>
+<pre><code class="language-R">template &lt;- tibble(
+  city = rep(city_codes, each=len1),
+  date = rep(seq(as.Date(&quot;2013/1/1&quot;), as.Date(&quot;2017/12/31&quot;), &quot;days&quot;), len2)
+)
 
-<ul>
-<li><a href="https://www.zhihu.com/question/31028215">bilibili up主推荐</a></li>
-</ul>
+template %&gt;%
+  left_join(data1, by=c(&quot;date&quot;, &quot;city&quot;)) %&gt;%
+  left_join(data2, by-c(&quot;date&quot;, &quot;city&quot;)) %&gt;%
+  mutate(value = ifelse(is.na(value.x), value.y, value.x))
+</code></pre>
+
+<p>这里需要注意生成模板的两个变量重复的次数和参数设置，另外下面的合并键也要加入新的变量。</p>
 
 
             </div>
@@ -1226,15 +1213,10 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
                 
                 <div>
                     <img class="icon" src="https://xzywisdili.com/img/back.svg" alt="back" />
-                    <a href="https://xzywisdili.com/blog/%E8%B5%B5%E7%B2%A4%E7%9A%84%E6%97%B6%E5%B0%9Acosmo%E6%9D%82%E5%BF%97%E7%BF%BB%E8%AF%91/">赵粤的《时尚COSMO》杂志翻译</a>
+                    <a href="https://xzywisdili.com/blog/%E6%8E%A8%E8%8D%90%E4%B8%94%E6%94%B6%E8%97%8F%E7%9A%84%E5%A5%BD%E7%BD%91%E7%AB%99/">推荐且收藏的好网站</a>
                 </div>
                 
                 <div style="width: 100%;"></div>
-                
-                <div>
-                    <a href="https://xzywisdili.com/blog/%E5%AF%B9%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E5%A1%AB%E8%A1%A5/">对数据进行填补</a>
-                    <img class="icon" src="https://xzywisdili.com/img/next.svg" alt="next" />
-                </div>
                 
             </div>
             

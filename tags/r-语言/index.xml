@@ -6,10 +6,24 @@
     <description>Recent content in R 语言 on xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 16 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 09 Jun 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://xzywisdili.com/tags/r-%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>对数据进行填补</title>
+      <link>https://xzywisdili.com/blog/%E5%AF%B9%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E5%A1%AB%E8%A1%A5/</link>
+      <pubDate>Wed, 09 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.com/blog/%E5%AF%B9%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E5%A1%AB%E8%A1%A5/</guid>
+      <description>今天整理数据的时候，需要使用数据集 2 对数据集 1 里缺失的部分进行填补，而两者重复的部分，优先保留数据集 1 里的。
+这个问题其实很简单，只需短短 2-3 行：
+result &amp;lt;- data1 %&amp;gt;% left_join(data2) %&amp;gt;% mutate(value = ifelse(is.na(value.x), value.y, value.x))  但我遇到的问题稍微多一点点难度，日期的序列不是连续的话，例如数据集 1：
+# date value # 2014-01-01 12 # 2014-01-03 14 # 2014-01-05 17  数据集 2：
+# date value # 2014-01-02 13 # 2014-01-03 16 # 2014-01-04 15  那么希望得到的结果是：
+# date value # 2014-01-01 12 # 2014-01-02 16 # 2014-01-03 14 # 2014-01-04 15 # 2014-01-05 17  我们会需要先生成一个日期的模板：</description>
+    </item>
     
     <item>
       <title>R 语言计算空间距离</title>
