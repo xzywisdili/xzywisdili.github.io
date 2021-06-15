@@ -1269,7 +1269,7 @@ mydata[, .N,
 <p>最后要介绍的 <code>fcase()</code> 函数和 SQL 里面的 <code>CASE WHEN</code> 语句和 <code>dplyr</code> 里面的 <code>case_when()</code> 语句
 类似，基本语法是 <code>fcase(condition1, &quot;value1&quot;, condition2, &quot;value2&quot;)</code>，比如下面的例子：</p>
 
-<pre><code class="language-R">diris[, newSpeices := fcase
+<pre><code class="language-R">diris[, newSpeices := fcase(
   IfVirginic &amp; !IfVensicolor, &quot;Species1&quot;,
   !IfVirginic &amp; IfVensicolor, &quot;Species2&quot;,
   IfVirginic &amp; IfVensicolor, &quot;Both&quot;,
