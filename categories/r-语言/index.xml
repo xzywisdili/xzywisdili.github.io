@@ -6,10 +6,26 @@
     <description>Recent content in R 语言 on xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 09 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 15 Jun 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://xzywisdili.com/categories/r-%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>新发现的 R 里关于 data.table 的一些神奇用法</title>
+      <link>https://xzywisdili.com/blog/%E6%96%B0%E5%8F%91%E7%8E%B0%E7%9A%84-r-%E9%87%8C%E5%85%B3%E4%BA%8E-data.table-%E7%9A%84%E4%B8%80%E4%BA%9B%E7%A5%9E%E5%A5%87%E7%94%A8%E6%B3%95/</link>
+      <pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.com/blog/%E6%96%B0%E5%8F%91%E7%8E%B0%E7%9A%84-r-%E9%87%8C%E5%85%B3%E4%BA%8E-data.table-%E7%9A%84%E4%B8%80%E4%BA%9B%E7%A5%9E%E5%A5%87%E7%94%A8%E6%B3%95/</guid>
+      <description>R 语言中的 data.table 包可以理解为 data.frame 的高级版本，它比较适合适合用来处理大型数据集。
+载入包并且读取一些数据，当然也可以使用 nrow 参数来决定读取多少行：
+library(data.table) mydata &amp;lt;- fread(&amp;quot;some_kind_of_data.csv&amp;quot;) mydata &amp;lt;- fread(&amp;quot;some_kind_of_data.csv&amp;quot;, nrows = 10)  data.table 包提供了一个非常简洁的通用格式：mydata[i, j, by]，可以理解为：对于数据集mydata，选取子集行i,通过by分组计算j。只需要记住，i是用来在行上进行操作的（比如筛选行），j 是用来在列上进行操作的（比如选择列或者根据计算创建新列）。对比dplyr等包来说，data.table的运行速度更快。
+选择列 如果只需要选择列的话，可以只代入 j，但需要记住给 i 留出位置：
+mydata[, j]  首先，通过列名选择列是，是否需要打双引号是一个值得考虑的问题，因为两者各有优劣。 data.table 支持打双引号的原生 R 的做法：
+data1 &amp;lt;- mydata[, c(&amp;quot;columnA&amp;quot;, &amp;quot;columnB&amp;quot;, &amp;quot;columnC&amp;quot;, &amp;quot;columnD&amp;quot;)]  但也可以使用不打双引号，这样会更方便（就好像 tidyverse 里面的 select），只不过需要用到 list：
+data1 &amp;lt;- mydata[, list(columnA, columnB, columnC, columnD)]  这里，第一个小技巧就来了，我们可以使用一个点代替 list：
+data1 &amp;lt;- mydata[, .(columnA, columnB, columnC, column)]  在 data.</description>
+    </item>
     
     <item>
       <title>对数据进行填补</title>
