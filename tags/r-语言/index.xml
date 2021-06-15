@@ -12,6 +12,18 @@
     
     
     <item>
+      <title>从电子病历提取数据</title>
+      <link>https://xzywisdili.com/blog/%E4%BB%8E%E7%94%B5%E5%AD%90%E7%97%85%E5%8E%86%E6%8F%90%E5%8F%96%E6%95%B0%E6%8D%AE/</link>
+      <pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.com/blog/%E4%BB%8E%E7%94%B5%E5%AD%90%E7%97%85%E5%8E%86%E6%8F%90%E5%8F%96%E6%95%B0%E6%8D%AE/</guid>
+      <description>电子病历的普及度已经很高。但如何从电子病历中提取信息还是比较令人头疼。 首先病历内容众多，从主诉到体格检查，从家族史到用药史，一份完整的病历涵盖的信息众多。 其次，病历内容是由医生按照段落填写的，很难在数以万计的病历中找到通用的标准进行提取。
+当然，如果医院的病历系统是按照表格进行组织并且保存，比如我之前实习过的社区医院，将每个人的电子病历 保存为 HTML 格式，就可以使用 python 的 BeautifulSoup 进行提取。当然，如果只能得到大段 文字的话，大概需要借助人工智能里面的自然语言处理来做更多的工作的。
+当然，如果任务比较简单的话，我们还是有取巧的方法的。比如要从病历记录里面提取出来身高、体重、收缩压和舒张压 等等，如：“血压114/56mmHg，体重53.3kg，胎心146次/分，宫高25cm，宫缩无。” 这样的描述中提取出舒张压：56，收缩压：114，体重：53.3 等等数据，我们可以借助正则表达式解决：
+library(readxl) library(tidyr) library(stringr) data &amp;lt;- read_excel(&amp;quot;data.xlsx&amp;quot;, sheet = 1) extract_blood_pressure &amp;lt;- function(diag_str) { res &amp;lt;- str_match(diag_str, &amp;quot;血压[:： ]*[0-9]*/[0-9]*[ ]*[(mmHg)|(mmhg)]+&amp;quot;) blood_pressure &amp;lt;- unlist(str_extract_all(res[, 1], &amp;quot;[0-9]+&amp;quot;)) return(as.numeric(blood_pressure)) } extract_height &amp;lt;- function(diag_str) { res &amp;lt;- str_match(diag_str, &amp;quot;身高[:：]*[0-9]*/[0-9]*[ ]*[cC][mM]&amp;quot;) height &amp;lt;- unlist(str_extract_all(res[, 1], &amp;quot;[0-9]+&amp;quot;)) return(as.numeric(blood_pressure)) } extract_weight &amp;lt;- function(diag_str) { res &amp;lt;- str_match(diag_str, &amp;quot;体重[ ]*([0-9]{1,}[.]*[0-9]*)[ ]*[kK][gG]&amp;quot;) weight &amp;lt;- unlist(str_extract_all(res[, 1], &amp;quot;[0-9]{1,}[.</description>
+    </item>
+    
+    <item>
       <title>新发现的 R 里关于 data.table 的一些神奇用法</title>
       <link>https://xzywisdili.com/blog/%E6%96%B0%E5%8F%91%E7%8E%B0%E7%9A%84-r-%E9%87%8C%E5%85%B3%E4%BA%8E-data.table-%E7%9A%84%E4%B8%80%E4%BA%9B%E7%A5%9E%E5%A5%87%E7%94%A8%E6%B3%95/</link>
       <pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate>
