@@ -6,10 +6,25 @@
     <description>Recent content in Blog on xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 15 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Jun 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://xzywisdili.com/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>如何从 NASA 下载气象数据</title>
+      <link>https://xzywisdili.com/blog/%E5%A6%82%E4%BD%95%E4%BB%8E-nasa-%E4%B8%8B%E8%BD%BD%E6%B0%94%E8%B1%A1%E6%95%B0%E6%8D%AE/</link>
+      <pubDate>Wed, 16 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.com/blog/%E5%A6%82%E4%BD%95%E4%BB%8E-nasa-%E4%B8%8B%E8%BD%BD%E6%B0%94%E8%B1%A1%E6%95%B0%E6%8D%AE/</guid>
+      <description>如果大家有从 NASA 获取气象数据的需求的话，只要在某度搜索，一定会看到下面的这些链接：
+他们可以批量获取单个城市和经纬度范围内的数据，而且代码也写得很好，但有两点问题： - 他使用的数据库是 NASA 为作物生长模型提供的气象数据，包括辐射、最大最小气温、降雨、风速，而不包括很多研究需要用到的气温和相对湿度的数据； - 他将空值用了前后5日的平均值代替，有时候可能不需要这么处理
+针对以上两点问题，我只能去寻找 NASA 官网进行数据检索和下载，而 NASA 提供的数据获取工具也十分方便。 只需要打开 NASA 的 Data Access Viewer，就可以看到左边的界面：
+左边的工具选项都十分明确： 1. 数据来源：就选择“SSE-Renewable Energy”就好； 2. 选择日值、年值或是气候学的平均处理； 3. 选择目标城市的经纬度即可，当然也可以使用标记工具直接在地图上点出； 4. 输入目标的起止日期； 5. 输出文件的格式
+下面就是选择目标变量，我选择的是这两个，也就是气温和相对湿度：
+接下来就可以提交和下载了。
+至于数据的说明，可以点击这里，里面说明了数据的来源、分辨率和可获取的日期跨度。当然，如果要进行批量获取的话，可能需要高人来写相应的代码了。</description>
+    </item>
     
     <item>
       <title>从电子病历提取数据</title>
