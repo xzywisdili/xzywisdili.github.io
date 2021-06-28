@@ -6,10 +6,23 @@
     <description>Recent content in 记录 on xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 16 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Jun 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://xzywisdili.com/tags/%E8%AE%B0%E5%BD%95/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>最近要开始啃书了</title>
+      <link>https://xzywisdili.com/blog/%E6%9C%80%E8%BF%91%E8%A6%81%E5%BC%80%E5%A7%8B%E5%95%83%E4%B9%A6%E4%BA%86/</link>
+      <pubDate>Mon, 28 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.com/blog/%E6%9C%80%E8%BF%91%E8%A6%81%E5%BC%80%E5%A7%8B%E5%95%83%E4%B9%A6%E4%BA%86/</guid>
+      <description>最近开始关心 AI 技术在医疗领域的一些应用。 随着老龄化社会的进程，节省医疗系统的冗余成本，做到更好的健康管理势必更为重要。 而从现有积累的和未来获得的人群大数据势必也将把医疗探索和相关制药研发带入到一个新的时代。
+但同时这个进程也有太多问题和阻碍：缺乏相关跨界人才的问题，数据隐私和伦理的问题，模型可解释性的问题和 人群对 AI 的信用度和接受度的问题等等……
+不过，我还是相信，新技术的到来能帮助我们在医疗系统中解决更多的问题。
+所以，最近搜罗了这个方向的一些书籍，准备开始爆啃：
+当然，如果有更多的心得和收获也会在博客和大家及时分享。 可能唯一的遗憾是平时没有一起交流讨论的伙伴。</description>
+    </item>
     
     <item>
       <title>如何从 NASA 下载气象数据</title>
