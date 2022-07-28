@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="not-ready text-sm lg:text-base" lang="zh-cn">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  
+  <title>再也敏感不起来 - xzy&#39;s blog</title>
+
+  
+  <meta name="theme-color" />
+  
+  <meta name="description" content="今天本来想总结一下这阵子使用 R 代码画地图的一些心得，但写到半夜 12 点半才写到一半，无奈今天无法更新。 眼睛打架之时开始翻看 eBooksPlan 的 Telegram群组。
+eBooksPlan 是我一直很欣赏的一个社群，因为群主会稳定持续地分享很多优秀内容，但群组内一直有不讨论政治议题的群规。 今日，群里几个人又争论起了政治话题，似乎是有关“民主和言论自由”云云。管理员出面打断了讨论并封禁了两名带头的辩论者。
+我对于这样的处理结果不置可否，但却也心生疑惑，于是只是凭借好奇询问：
+我知道读书群不允许讨论政治的群规。但我们如何单纯地讨论读书，而绝不涉及政治。拿“每周一书”举例，这周的选书是《过剩之地：美式富足与贫穷悖论》。我个人对这本书特别感兴趣，但是否意味着我们无法在群里探讨书中可能提及的绝大多数主题？抑或是说我们只能讨论文本层面的内容？
+就抛开那本书而言，很多生活的方方面面最后都不可避免地涉及到了经济、政治。 我们可以显而易见地发现，遵守群规的众人只能无休止地使用贴纸，争论 kindle、iPad 和纸质书阅读的利弊，或者求某本书的电子书资源。 这样的群倒也食之无味。而针对我的问题，管理员是这样回复的：
+討論主題，問題若僵持在辯，討論什麼…？ 你、我都知道，許多人對於議題來講，只一心求辯贏。誰能控制自己，好好說理…？ 如果各位都能夠控制自身的情緒，在論述之上，誰會惹得最後惡言相向？ 看過太多群組討論到最後，不是一句傻B，就是一句爹爹來著的。
+我对于群主的回复颇有几分认同，也理解了群规的道理所在，但心里感觉有一点遗憾。 我们从小的政治课都只是灌输政治观点，却从来没有培育讨论议题的能力，甚至似乎都没有被传授如何开放性地谈论问题。 网络空间里层出不穷的“辩手”一言不合就无赖式撒泼，或是脏话频出，确实让其他所有人的讨论兴致荡然无存。" />
+  <meta name="author" content="" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://xzywisdili.com/main.min.css" />
+
+  
+  <script
+    defer
+    src="https://xzywisdili.com/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  <link
+    rel="preload"
+    as="image"
+    href="https://xzywisdili.com/theme.%7B%7B%20if%20site.Params.monoDarkIcon%20%7D%7Dsvg%7B%7B%20else%20%7D%7Dpng%7B%7B%20end%20%7D%7D"
+  />
+
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/bc73d7effd7675f355ff736ececc779a?s=160&amp;d=identicon" />
+  
+  
+
+  
+  <link rel="preload" as="image" href="https://xzywisdili.com/twitter.svg" />
+  
+  <link rel="preload" as="image" href="https://xzywisdili.com/github.svg" />
+  
+
+  
+  <link rel="icon" href="https://xzywisdili.com/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://xzywisdili.com/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="再也敏感不起来" />
+<meta property="og:description" content="今天本来想总结一下这阵子使用 R 代码画地图的一些心得，但写到半夜 12 点半才写到一半，无奈今天无法更新。 眼睛打架之时开始翻看 eBooksPlan 的 Telegram群组。
+eBooksPlan 是我一直很欣赏的一个社群，因为群主会稳定持续地分享很多优秀内容，但群组内一直有不讨论政治议题的群规。 今日，群里几个人又争论起了政治话题，似乎是有关“民主和言论自由”云云。管理员出面打断了讨论并封禁了两名带头的辩论者。
+我对于这样的处理结果不置可否，但却也心生疑惑，于是只是凭借好奇询问：
+我知道读书群不允许讨论政治的群规。但我们如何单纯地讨论读书，而绝不涉及政治。拿“每周一书”举例，这周的选书是《过剩之地：美式富足与贫穷悖论》。我个人对这本书特别感兴趣，但是否意味着我们无法在群里探讨书中可能提及的绝大多数主题？抑或是说我们只能讨论文本层面的内容？
+就抛开那本书而言，很多生活的方方面面最后都不可避免地涉及到了经济、政治。 我们可以显而易见地发现，遵守群规的众人只能无休止地使用贴纸，争论 kindle、iPad 和纸质书阅读的利弊，或者求某本书的电子书资源。 这样的群倒也食之无味。而针对我的问题，管理员是这样回复的：
+討論主題，問題若僵持在辯，討論什麼…？ 你、我都知道，許多人對於議題來講，只一心求辯贏。誰能控制自己，好好說理…？ 如果各位都能夠控制自身的情緒，在論述之上，誰會惹得最後惡言相向？ 看過太多群組討論到最後，不是一句傻B，就是一句爹爹來著的。
+我对于群主的回复颇有几分认同，也理解了群规的道理所在，但心里感觉有一点遗憾。 我们从小的政治课都只是灌输政治观点，却从来没有培育讨论议题的能力，甚至似乎都没有被传授如何开放性地谈论问题。 网络空间里层出不穷的“辩手”一言不合就无赖式撒泼，或是脏话频出，确实让其他所有人的讨论兴致荡然无存。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xzywisdili.com/post/2019-09-11-thoughts/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2019-09-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-09-11T00:00:00+00:00" />
+
+
+  
+  <meta itemprop="name" content="再也敏感不起来">
+<meta itemprop="description" content="今天本来想总结一下这阵子使用 R 代码画地图的一些心得，但写到半夜 12 点半才写到一半，无奈今天无法更新。 眼睛打架之时开始翻看 eBooksPlan 的 Telegram群组。
+eBooksPlan 是我一直很欣赏的一个社群，因为群主会稳定持续地分享很多优秀内容，但群组内一直有不讨论政治议题的群规。 今日，群里几个人又争论起了政治话题，似乎是有关“民主和言论自由”云云。管理员出面打断了讨论并封禁了两名带头的辩论者。
+我对于这样的处理结果不置可否，但却也心生疑惑，于是只是凭借好奇询问：
+我知道读书群不允许讨论政治的群规。但我们如何单纯地讨论读书，而绝不涉及政治。拿“每周一书”举例，这周的选书是《过剩之地：美式富足与贫穷悖论》。我个人对这本书特别感兴趣，但是否意味着我们无法在群里探讨书中可能提及的绝大多数主题？抑或是说我们只能讨论文本层面的内容？
+就抛开那本书而言，很多生活的方方面面最后都不可避免地涉及到了经济、政治。 我们可以显而易见地发现，遵守群规的众人只能无休止地使用贴纸，争论 kindle、iPad 和纸质书阅读的利弊，或者求某本书的电子书资源。 这样的群倒也食之无味。而针对我的问题，管理员是这样回复的：
+討論主題，問題若僵持在辯，討論什麼…？ 你、我都知道，許多人對於議題來講，只一心求辯贏。誰能控制自己，好好說理…？ 如果各位都能夠控制自身的情緒，在論述之上，誰會惹得最後惡言相向？ 看過太多群組討論到最後，不是一句傻B，就是一句爹爹來著的。
+我对于群主的回复颇有几分认同，也理解了群规的道理所在，但心里感觉有一点遗憾。 我们从小的政治课都只是灌输政治观点，却从来没有培育讨论议题的能力，甚至似乎都没有被传授如何开放性地谈论问题。 网络空间里层出不穷的“辩手”一言不合就无赖式撒泼，或是脏话频出，确实让其他所有人的讨论兴致荡然无存。"><meta itemprop="datePublished" content="2019-09-11T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-09-11T00:00:00+00:00" />
+<meta itemprop="wordCount" content="26">
+<meta itemprop="keywords" content="记录," />
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="再也敏感不起来"/>
+<meta name="twitter:description" content="今天本来想总结一下这阵子使用 R 代码画地图的一些心得，但写到半夜 12 点半才写到一半，无奈今天无法更新。 眼睛打架之时开始翻看 eBooksPlan 的 Telegram群组。
+eBooksPlan 是我一直很欣赏的一个社群，因为群主会稳定持续地分享很多优秀内容，但群组内一直有不讨论政治议题的群规。 今日，群里几个人又争论起了政治话题，似乎是有关“民主和言论自由”云云。管理员出面打断了讨论并封禁了两名带头的辩论者。
+我对于这样的处理结果不置可否，但却也心生疑惑，于是只是凭借好奇询问：
+我知道读书群不允许讨论政治的群规。但我们如何单纯地讨论读书，而绝不涉及政治。拿“每周一书”举例，这周的选书是《过剩之地：美式富足与贫穷悖论》。我个人对这本书特别感兴趣，但是否意味着我们无法在群里探讨书中可能提及的绝大多数主题？抑或是说我们只能讨论文本层面的内容？
+就抛开那本书而言，很多生活的方方面面最后都不可避免地涉及到了经济、政治。 我们可以显而易见地发现，遵守群规的众人只能无休止地使用贴纸，争论 kindle、iPad 和纸质书阅读的利弊，或者求某本书的电子书资源。 这样的群倒也食之无味。而针对我的问题，管理员是这样回复的：
+討論主題，問題若僵持在辯，討論什麼…？ 你、我都知道，許多人對於議題來講，只一心求辯贏。誰能控制自己，好好說理…？ 如果各位都能夠控制自身的情緒，在論述之上，誰會惹得最後惡言相向？ 看過太多群組討論到最後，不是一句傻B，就是一句爹爹來著的。
+我对于群主的回复颇有几分认同，也理解了群规的道理所在，但心里感觉有一点遗憾。 我们从小的政治课都只是灌输政治观点，却从来没有培育讨论议题的能力，甚至似乎都没有被传授如何开放性地谈论问题。 网络空间里层出不穷的“辩手”一言不合就无赖式撒泼，或是脏话频出，确实让其他所有人的讨论兴致荡然无存。"/>
+
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a class="-translate-x-[1px] -translate-y-0.5 text-3xl font-bold" href="https://xzywisdili.com/"
+      >xzy&#39;s blog</a
+    >
+    <a
+      class="btn-dark ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+    ></a>
+  </div>
+
+  <a
+    class="btn-menu relative z-50 -mr-8 flex h-[5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+  ></a>
+
+  <script>
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => htmlClass.remove('not-ready'), 10);
+
+    const setDark = (newDark) => {
+      metaTheme.setAttribute('content', newDark ? '#000' : '#fbfbfb');
+      htmlClass[newDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', newDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkVal = localStorage.getItem('dark');
+    setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:mt-0 lg:ml-12 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./twitter.svg)"
+        href=" https://twitter.com/xzywisdili "
+        target="_blank"
+      ></a>
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href=" https://github.com/github.com/xzywisdili "
+        target="_blank"
+      ></a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-20 pb-32 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-20">
+    <h1 class="!my-0 pb-2.5">再也敏感不起来</h1>
+
+    
+    <div class="text-sm opacity-60">
+      
+      <time>Sep 11, 2019</time>
+      
+      
+    </div>
+    
+  </header>
+
+  <section><p>今天本来想总结一下这阵子使用 R 代码画地图的一些心得，但写到半夜 12 点半才写到一半，无奈今天无法更新。
+眼睛打架之时开始翻看 <a href="https://t.me/what_youread">eBooksPlan 的 Telegram群组</a>。</p>
+<p>eBooksPlan 是我一直很欣赏的一个社群，因为群主会稳定持续地分享很多优秀内容，但群组内一直有不讨论政治议题的群规。
+今日，群里几个人又争论起了政治话题，似乎是有关“民主和言论自由”云云。管理员出面打断了讨论并封禁了两名带头的辩论者。</p>
+<p>我对于这样的处理结果不置可否，但却也心生疑惑，于是只是凭借好奇询问：</p>
+<blockquote>
+<p>我知道读书群不允许讨论政治的群规。但我们如何单纯地讨论读书，而绝不涉及政治。拿“每周一书”举例，这周的选书是《过剩之地：美式富足与贫穷悖论》。我个人对这本书特别感兴趣，但是否意味着我们无法在群里探讨书中可能提及的绝大多数主题？抑或是说我们只能讨论文本层面的内容？</p>
+</blockquote>
+<p>就抛开那本书而言，很多生活的方方面面最后都不可避免地涉及到了经济、政治。
+我们可以显而易见地发现，遵守群规的众人只能无休止地使用贴纸，争论 kindle、iPad 和纸质书阅读的利弊，或者求某本书的电子书资源。
+这样的群倒也食之无味。而针对我的问题，管理员是这样回复的：</p>
+<blockquote>
+<p>討論主題，問題若僵持在辯，討論什麼…？
+你、我都知道，許多人對於議題來講，只一心求辯贏。誰能控制自己，好好說理…？
+如果各位都能夠控制自身的情緒，在論述之上，誰會惹得最後惡言相向？
+看過太多群組討論到最後，不是一句傻B，就是一句爹爹來著的。</p>
+</blockquote>
+<p>我对于群主的回复颇有几分认同，也理解了群规的道理所在，但心里感觉有一点遗憾。
+我们从小的政治课都只是灌输政治观点，却从来没有培育讨论议题的能力，甚至似乎都没有被传授如何开放性地谈论问题。
+网络空间里层出不穷的“辩手”一言不合就无赖式撒泼，或是脏话频出，确实让其他所有人的讨论兴致荡然无存。</p>
+</section>
+
+  
+  
+  <footer class="mt-12 flex flex-wrap">
+     
+    <a
+      class="mr-1.5 mb-1.5 rounded-lg bg-black/[3%] px-5 py-2 no-underline dark:bg-white/[8%]"
+      href="https://xzywisdili.com/tags/%E8%AE%B0%E5%BD%95"
+      >记录</a
+    >
+    
+  </footer>
+  
+
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    <a class="flex w-1/2 items-center p-6 pr-3 no-underline" href="https://xzywisdili.com/post/2019-09-12-thoughts/"
+      ><span class="mr-1.5">←</span><span>一点碎碎念</span></a
+    >
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end p-6 pl-3 no-underline"
+      href="https://xzywisdili.com/post/2019-09-09-weeknote/"
+      ><span>这一周（9.2-9.8）</span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+
+  
+  
+</article>
+
+
+    </main>
+
+    <footer class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60">
+  <div class="mr-auto">
+    &copy; 2022
+    <a class="link" href="https://xzywisdili.com/">xzy&#39;s blog</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank">Powered by Hugo️️</a
+  >️
+  <a class="link" href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank"
+    >▷ Paper 6</a
+  >
+</footer>
+
+  </body>
+</html>

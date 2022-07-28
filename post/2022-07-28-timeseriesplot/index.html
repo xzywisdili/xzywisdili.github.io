@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="not-ready text-sm lg:text-base" lang="zh-cn">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  
+  <title>一天内数据分布的可视化 - xzy&#39;s blog</title>
+
+  
+  <meta name="theme-color" />
+  
+  <meta name="description" content="我们在很多情况下都会想要可视化一天中的周期时间来探索发现可能存在的某种模式。 比如根据犯罪数据发现在一天中的高发时段，又或者某个app的用户活跃时段的表示，又或者患者在院外一天中的健康作息的可视化，都不可避免会碰到要把数据在周期性的时间上进行展示。 而目前这样的可视化方向大概有两个：线性展示和环形展示。
+线性展示 线性展示是目前使用方式相对比较多的可视化方式，如下图分别展示的对于人群购物时间的可视化和运动传感器回收数据时间分布的可视化：
+如此使用折线图和条形图来对数据在一天中的时间分布的优势显而易见：
+符合读者的直觉； 绘图比较简单； 但是这种方式也有一些局限性，即没有办法很好体现出时间的连续性。 它们的 X 轴出于限制，都不可避免地选择两个时间点作为图表的开始和结束。 而这个时间点的选取也需要根据数据的实际情况来进行。 比如通用的时间制会规定一天的24小时开始于 0:00，结束于 23:59，但对于很多活动并非如此（比如部分职业的加班或者犯罪往往在午夜时分保持连贯，甚至有可能延伸到凌晨2-3点）。 有时候图表所显示的内容强行断开有时候也会让部分想要探索该处连续性的读者没有办法直观看到。 此外，大众对于上午、下午、徬晚和晚上都在心里有一个普遍共识的观念，这也没有办法在线性图中直观看到，除非作图者显性标注出来。
+以上这些种种的问题想要解决其实比较棘手。曾有人使用双层时间图来进行展示：
+上半部分依然是正常的线性可视化，但是作者将上半部分反转再进行平移，想要以此来同时展示白天（上半部分）和夜间（下半部分）的时间趋势，从一定程度上解决连续性表现不足的问题。但是这样在一定程度牺牲了可视化的直观性，用户可能会觉得上下是两个系列的数据；另外也没有从根本解决问题。
+所以有些人开始尝试另一种可视化思路。
+环形展示 不知道环形展示方式的最初灵感是不是来自钟表的表盘。但钟表代表时间，使用钟表表盘式的圆形尝试来进行一天内趋势的可视化似乎也合情合理。 我自己也在 Excel 里面尝试了一下。 只要将数据转换合理，再使用 Excel 里面内置的雷达图，就能做出近似环形的可视化效果。 但是很快就发现了问题：传统的符合人类直觉的钟表表盘是 12 小时制的，而一天有 24 个小时。 如果强行将 24 个小时挤入一个环形圆盘也会显得非常怪异，比如 Magic Eye 的设计中，&ldquo;Morning&rdquo; 到了右下象限而 “Evening” 到了左上象限：
+这时候有人开始尝试这些妥协式的设计，即使用双表盘、在一个表盘中利用不同颜色来展示上12小时和下12小时、又或者用内圈和外圈来代表 AM 和 PM：
+甚至还有一种使用无限符号的可视化方式，想要表现完整的一天：
+可以看到，环形的方式进行可视化展示的优点包括：
+能够带给读者直观的“上午”、&ldquo;下午&quot;以及“晚上”这种结合生活时间段的感受； 部分解决了连续性的问题； 但是又带来了新的问题：
+AM 和 PM 本身需要颜色或内外圈多维展示，如果有更多维度或系列的数据，就会显得更加杂乱； 作图难度相对于线性方式来说更高； 数据映射到极坐标下，增长和减少的趋势可能也会随之扭曲。 综合以上，我觉得还是优先考虑使用线性的方式进行展示一天内的数据分布情况更为合理。 更为简便的作图方式，展示作图者想要展示的趋势或者模式，就已经足矣。 如果使用环形可视化很容易耗费更多的精力，反而只能做到华而不实的效果，也可能被误导，很难真正探索出数据背后真正的时间分布情况。" />
+  <meta name="author" content="" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://xzywisdili.com/main.min.css" />
+
+  
+  <script
+    defer
+    src="https://xzywisdili.com/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  <link
+    rel="preload"
+    as="image"
+    href="https://xzywisdili.com/theme.%7B%7B%20if%20site.Params.monoDarkIcon%20%7D%7Dsvg%7B%7B%20else%20%7D%7Dpng%7B%7B%20end%20%7D%7D"
+  />
+
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/bc73d7effd7675f355ff736ececc779a?s=160&amp;d=identicon" />
+  
+  
+
+  
+  <link rel="preload" as="image" href="https://xzywisdili.com/twitter.svg" />
+  
+  <link rel="preload" as="image" href="https://xzywisdili.com/github.svg" />
+  
+
+  
+  <link rel="icon" href="https://xzywisdili.com/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://xzywisdili.com/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="一天内数据分布的可视化" />
+<meta property="og:description" content="我们在很多情况下都会想要可视化一天中的周期时间来探索发现可能存在的某种模式。 比如根据犯罪数据发现在一天中的高发时段，又或者某个app的用户活跃时段的表示，又或者患者在院外一天中的健康作息的可视化，都不可避免会碰到要把数据在周期性的时间上进行展示。 而目前这样的可视化方向大概有两个：线性展示和环形展示。
+线性展示 线性展示是目前使用方式相对比较多的可视化方式，如下图分别展示的对于人群购物时间的可视化和运动传感器回收数据时间分布的可视化：
+如此使用折线图和条形图来对数据在一天中的时间分布的优势显而易见：
+符合读者的直觉； 绘图比较简单； 但是这种方式也有一些局限性，即没有办法很好体现出时间的连续性。 它们的 X 轴出于限制，都不可避免地选择两个时间点作为图表的开始和结束。 而这个时间点的选取也需要根据数据的实际情况来进行。 比如通用的时间制会规定一天的24小时开始于 0:00，结束于 23:59，但对于很多活动并非如此（比如部分职业的加班或者犯罪往往在午夜时分保持连贯，甚至有可能延伸到凌晨2-3点）。 有时候图表所显示的内容强行断开有时候也会让部分想要探索该处连续性的读者没有办法直观看到。 此外，大众对于上午、下午、徬晚和晚上都在心里有一个普遍共识的观念，这也没有办法在线性图中直观看到，除非作图者显性标注出来。
+以上这些种种的问题想要解决其实比较棘手。曾有人使用双层时间图来进行展示：
+上半部分依然是正常的线性可视化，但是作者将上半部分反转再进行平移，想要以此来同时展示白天（上半部分）和夜间（下半部分）的时间趋势，从一定程度上解决连续性表现不足的问题。但是这样在一定程度牺牲了可视化的直观性，用户可能会觉得上下是两个系列的数据；另外也没有从根本解决问题。
+所以有些人开始尝试另一种可视化思路。
+环形展示 不知道环形展示方式的最初灵感是不是来自钟表的表盘。但钟表代表时间，使用钟表表盘式的圆形尝试来进行一天内趋势的可视化似乎也合情合理。 我自己也在 Excel 里面尝试了一下。 只要将数据转换合理，再使用 Excel 里面内置的雷达图，就能做出近似环形的可视化效果。 但是很快就发现了问题：传统的符合人类直觉的钟表表盘是 12 小时制的，而一天有 24 个小时。 如果强行将 24 个小时挤入一个环形圆盘也会显得非常怪异，比如 Magic Eye 的设计中，&ldquo;Morning&rdquo; 到了右下象限而 “Evening” 到了左上象限：
+这时候有人开始尝试这些妥协式的设计，即使用双表盘、在一个表盘中利用不同颜色来展示上12小时和下12小时、又或者用内圈和外圈来代表 AM 和 PM：
+甚至还有一种使用无限符号的可视化方式，想要表现完整的一天：
+可以看到，环形的方式进行可视化展示的优点包括：
+能够带给读者直观的“上午”、&ldquo;下午&quot;以及“晚上”这种结合生活时间段的感受； 部分解决了连续性的问题； 但是又带来了新的问题：
+AM 和 PM 本身需要颜色或内外圈多维展示，如果有更多维度或系列的数据，就会显得更加杂乱； 作图难度相对于线性方式来说更高； 数据映射到极坐标下，增长和减少的趋势可能也会随之扭曲。 综合以上，我觉得还是优先考虑使用线性的方式进行展示一天内的数据分布情况更为合理。 更为简便的作图方式，展示作图者想要展示的趋势或者模式，就已经足矣。 如果使用环形可视化很容易耗费更多的精力，反而只能做到华而不实的效果，也可能被误导，很难真正探索出数据背后真正的时间分布情况。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xzywisdili.com/post/2022-07-28-timeseriesplot/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-07-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-07-28T00:00:00+00:00" />
+
+
+  
+  <meta itemprop="name" content="一天内数据分布的可视化">
+<meta itemprop="description" content="我们在很多情况下都会想要可视化一天中的周期时间来探索发现可能存在的某种模式。 比如根据犯罪数据发现在一天中的高发时段，又或者某个app的用户活跃时段的表示，又或者患者在院外一天中的健康作息的可视化，都不可避免会碰到要把数据在周期性的时间上进行展示。 而目前这样的可视化方向大概有两个：线性展示和环形展示。
+线性展示 线性展示是目前使用方式相对比较多的可视化方式，如下图分别展示的对于人群购物时间的可视化和运动传感器回收数据时间分布的可视化：
+如此使用折线图和条形图来对数据在一天中的时间分布的优势显而易见：
+符合读者的直觉； 绘图比较简单； 但是这种方式也有一些局限性，即没有办法很好体现出时间的连续性。 它们的 X 轴出于限制，都不可避免地选择两个时间点作为图表的开始和结束。 而这个时间点的选取也需要根据数据的实际情况来进行。 比如通用的时间制会规定一天的24小时开始于 0:00，结束于 23:59，但对于很多活动并非如此（比如部分职业的加班或者犯罪往往在午夜时分保持连贯，甚至有可能延伸到凌晨2-3点）。 有时候图表所显示的内容强行断开有时候也会让部分想要探索该处连续性的读者没有办法直观看到。 此外，大众对于上午、下午、徬晚和晚上都在心里有一个普遍共识的观念，这也没有办法在线性图中直观看到，除非作图者显性标注出来。
+以上这些种种的问题想要解决其实比较棘手。曾有人使用双层时间图来进行展示：
+上半部分依然是正常的线性可视化，但是作者将上半部分反转再进行平移，想要以此来同时展示白天（上半部分）和夜间（下半部分）的时间趋势，从一定程度上解决连续性表现不足的问题。但是这样在一定程度牺牲了可视化的直观性，用户可能会觉得上下是两个系列的数据；另外也没有从根本解决问题。
+所以有些人开始尝试另一种可视化思路。
+环形展示 不知道环形展示方式的最初灵感是不是来自钟表的表盘。但钟表代表时间，使用钟表表盘式的圆形尝试来进行一天内趋势的可视化似乎也合情合理。 我自己也在 Excel 里面尝试了一下。 只要将数据转换合理，再使用 Excel 里面内置的雷达图，就能做出近似环形的可视化效果。 但是很快就发现了问题：传统的符合人类直觉的钟表表盘是 12 小时制的，而一天有 24 个小时。 如果强行将 24 个小时挤入一个环形圆盘也会显得非常怪异，比如 Magic Eye 的设计中，&ldquo;Morning&rdquo; 到了右下象限而 “Evening” 到了左上象限：
+这时候有人开始尝试这些妥协式的设计，即使用双表盘、在一个表盘中利用不同颜色来展示上12小时和下12小时、又或者用内圈和外圈来代表 AM 和 PM：
+甚至还有一种使用无限符号的可视化方式，想要表现完整的一天：
+可以看到，环形的方式进行可视化展示的优点包括：
+能够带给读者直观的“上午”、&ldquo;下午&quot;以及“晚上”这种结合生活时间段的感受； 部分解决了连续性的问题； 但是又带来了新的问题：
+AM 和 PM 本身需要颜色或内外圈多维展示，如果有更多维度或系列的数据，就会显得更加杂乱； 作图难度相对于线性方式来说更高； 数据映射到极坐标下，增长和减少的趋势可能也会随之扭曲。 综合以上，我觉得还是优先考虑使用线性的方式进行展示一天内的数据分布情况更为合理。 更为简便的作图方式，展示作图者想要展示的趋势或者模式，就已经足矣。 如果使用环形可视化很容易耗费更多的精力，反而只能做到华而不实的效果，也可能被误导，很难真正探索出数据背后真正的时间分布情况。"><meta itemprop="datePublished" content="2022-07-28T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-07-28T00:00:00+00:00" />
+<meta itemprop="wordCount" content="61">
+<meta itemprop="keywords" content="分享,可视化," />
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="一天内数据分布的可视化"/>
+<meta name="twitter:description" content="我们在很多情况下都会想要可视化一天中的周期时间来探索发现可能存在的某种模式。 比如根据犯罪数据发现在一天中的高发时段，又或者某个app的用户活跃时段的表示，又或者患者在院外一天中的健康作息的可视化，都不可避免会碰到要把数据在周期性的时间上进行展示。 而目前这样的可视化方向大概有两个：线性展示和环形展示。
+线性展示 线性展示是目前使用方式相对比较多的可视化方式，如下图分别展示的对于人群购物时间的可视化和运动传感器回收数据时间分布的可视化：
+如此使用折线图和条形图来对数据在一天中的时间分布的优势显而易见：
+符合读者的直觉； 绘图比较简单； 但是这种方式也有一些局限性，即没有办法很好体现出时间的连续性。 它们的 X 轴出于限制，都不可避免地选择两个时间点作为图表的开始和结束。 而这个时间点的选取也需要根据数据的实际情况来进行。 比如通用的时间制会规定一天的24小时开始于 0:00，结束于 23:59，但对于很多活动并非如此（比如部分职业的加班或者犯罪往往在午夜时分保持连贯，甚至有可能延伸到凌晨2-3点）。 有时候图表所显示的内容强行断开有时候也会让部分想要探索该处连续性的读者没有办法直观看到。 此外，大众对于上午、下午、徬晚和晚上都在心里有一个普遍共识的观念，这也没有办法在线性图中直观看到，除非作图者显性标注出来。
+以上这些种种的问题想要解决其实比较棘手。曾有人使用双层时间图来进行展示：
+上半部分依然是正常的线性可视化，但是作者将上半部分反转再进行平移，想要以此来同时展示白天（上半部分）和夜间（下半部分）的时间趋势，从一定程度上解决连续性表现不足的问题。但是这样在一定程度牺牲了可视化的直观性，用户可能会觉得上下是两个系列的数据；另外也没有从根本解决问题。
+所以有些人开始尝试另一种可视化思路。
+环形展示 不知道环形展示方式的最初灵感是不是来自钟表的表盘。但钟表代表时间，使用钟表表盘式的圆形尝试来进行一天内趋势的可视化似乎也合情合理。 我自己也在 Excel 里面尝试了一下。 只要将数据转换合理，再使用 Excel 里面内置的雷达图，就能做出近似环形的可视化效果。 但是很快就发现了问题：传统的符合人类直觉的钟表表盘是 12 小时制的，而一天有 24 个小时。 如果强行将 24 个小时挤入一个环形圆盘也会显得非常怪异，比如 Magic Eye 的设计中，&ldquo;Morning&rdquo; 到了右下象限而 “Evening” 到了左上象限：
+这时候有人开始尝试这些妥协式的设计，即使用双表盘、在一个表盘中利用不同颜色来展示上12小时和下12小时、又或者用内圈和外圈来代表 AM 和 PM：
+甚至还有一种使用无限符号的可视化方式，想要表现完整的一天：
+可以看到，环形的方式进行可视化展示的优点包括：
+能够带给读者直观的“上午”、&ldquo;下午&quot;以及“晚上”这种结合生活时间段的感受； 部分解决了连续性的问题； 但是又带来了新的问题：
+AM 和 PM 本身需要颜色或内外圈多维展示，如果有更多维度或系列的数据，就会显得更加杂乱； 作图难度相对于线性方式来说更高； 数据映射到极坐标下，增长和减少的趋势可能也会随之扭曲。 综合以上，我觉得还是优先考虑使用线性的方式进行展示一天内的数据分布情况更为合理。 更为简便的作图方式，展示作图者想要展示的趋势或者模式，就已经足矣。 如果使用环形可视化很容易耗费更多的精力，反而只能做到华而不实的效果，也可能被误导，很难真正探索出数据背后真正的时间分布情况。"/>
+
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a class="-translate-x-[1px] -translate-y-0.5 text-3xl font-bold" href="https://xzywisdili.com/"
+      >xzy&#39;s blog</a
+    >
+    <a
+      class="btn-dark ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+    ></a>
+  </div>
+
+  <a
+    class="btn-menu relative z-50 -mr-8 flex h-[5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+  ></a>
+
+  <script>
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => htmlClass.remove('not-ready'), 10);
+
+    const setDark = (newDark) => {
+      metaTheme.setAttribute('content', newDark ? '#000' : '#fbfbfb');
+      htmlClass[newDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', newDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkVal = localStorage.getItem('dark');
+    setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:mt-0 lg:ml-12 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./twitter.svg)"
+        href=" https://twitter.com/xzywisdili "
+        target="_blank"
+      ></a>
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href=" https://github.com/github.com/xzywisdili "
+        target="_blank"
+      ></a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-20 pb-32 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-20">
+    <h1 class="!my-0 pb-2.5">一天内数据分布的可视化</h1>
+
+    
+    <div class="text-sm opacity-60">
+      
+      <time>Jul 28, 2022</time>
+      
+      
+    </div>
+    
+  </header>
+
+  <section><p>我们在很多情况下都会想要可视化一天中的周期时间来探索发现可能存在的某种模式。
+比如根据犯罪数据发现在一天中的高发时段，又或者某个app的用户活跃时段的表示，又或者患者在院外一天中的健康作息的可视化，都不可避免会碰到要把数据在周期性的时间上进行展示。
+而目前这样的可视化方向大概有两个：线性展示和环形展示。</p>
+<h2 id="线性展示">线性展示</h2>
+<p>线性展示是目前使用方式相对比较多的可视化方式，如下图分别展示的对于人群购物时间的可视化和运动传感器回收数据时间分布的可视化：</p>
+<p><img src="https://s2.loli.net/2022/07/28/8BcbqmZWPs91NtF.png" alt="Snipaste_2022-07-28_15-45-23.png"></p>
+<p><img src="https://s2.loli.net/2022/07/28/1Xaz9rVvB2Ad8lf.png" alt="Snipaste_2022-07-28_15-48-20.png"></p>
+<p>如此使用折线图和条形图来对数据在一天中的时间分布的优势显而易见：</p>
+<ul>
+<li>符合读者的直觉；</li>
+<li>绘图比较简单；</li>
+</ul>
+<p>但是这种方式也有一些局限性，即没有办法很好体现出时间的连续性。
+它们的 X 轴出于限制，都不可避免地选择两个时间点作为图表的开始和结束。
+而这个时间点的选取也需要根据数据的实际情况来进行。
+比如通用的时间制会规定一天的24小时开始于 0:00，结束于 23:59，但对于很多活动并非如此（比如部分职业的加班或者犯罪往往在午夜时分保持连贯，甚至有可能延伸到凌晨2-3点）。
+有时候图表所显示的内容强行断开有时候也会让部分想要探索该处连续性的读者没有办法直观看到。
+此外，大众对于上午、下午、徬晚和晚上都在心里有一个普遍共识的观念，这也没有办法在线性图中直观看到，除非作图者显性标注出来。</p>
+<p>以上这些种种的问题想要解决其实比较棘手。曾<a href="https://dougmccune.com/blog/2011/04/26/visualizing-time-with-the-double-time-bar-chart/">有人使用双层时间图</a>来进行展示：</p>
+<p><img src="https://s2.loli.net/2022/07/28/VIlFZk7ushnEyWD.png" alt="Snipaste_2022-07-28_16-03-39.png"></p>
+<p>上半部分依然是正常的线性可视化，但是作者将上半部分反转再进行平移，想要以此来同时展示白天（上半部分）和夜间（下半部分）的时间趋势，从一定程度上解决连续性表现不足的问题。但是这样在一定程度牺牲了可视化的直观性，用户可能会觉得上下是两个系列的数据；另外也没有从根本解决问题。</p>
+<p>所以有些人开始尝试另一种可视化思路。</p>
+<h2 id="环形展示">环形展示</h2>
+<p>不知道环形展示方式的最初灵感是不是来自钟表的表盘。但钟表代表时间，使用钟表表盘式的圆形尝试来进行一天内趋势的可视化似乎也合情合理。
+我自己也在 Excel 里面尝试了一下。
+只要将数据转换合理，再使用 Excel 里面内置的雷达图，就能做出近似环形的可视化效果。
+但是很快就发现了问题：传统的符合人类直觉的钟表表盘是 12 小时制的，而一天有 24 个小时。
+如果强行将 24 个小时挤入一个环形圆盘也会显得非常怪异，比如 <a href="http://veralou.github.io/Project-3/Explanations.html">Magic Eye</a> 的设计中，&ldquo;Morning&rdquo; 到了右下象限而 “Evening” 到了左上象限：</p>
+<p><img src="https://s2.loli.net/2022/07/28/b4HtULapG3TPm59.png" alt="Snipaste_2022-07-28_16-23-17.png"></p>
+<p>这时候有人开始尝试这些妥协式的设计，即使用双表盘、在一个表盘中利用不同颜色来展示上12小时和下12小时、又或者用内圈和外圈来代表 AM 和 PM：</p>
+<p><img src="https://s2.loli.net/2022/07/28/gIxhWKsaLCeVF9c.png" alt="Snipaste_2022-07-28_16-14-27.png"></p>
+<p><img src="https://s2.loli.net/2022/07/28/k4sdUOiXWL7fzuP.jpg" alt="photo_2022-07-28_16-17-02.jpg"></p>
+<p>甚至还有一种<a href="https://dougmccune.com/blog/2011/05/07/visualizing-time-with-the-infinity-hour-chart/">使用无限符号的可视化方式</a>，想要表现完整的一天：</p>
+<p><img src="https://s2.loli.net/2022/07/28/xVgLTUCdQ49cy5W.jpg" alt="photo_2022-07-28_16-26-57.jpg"></p>
+<p>可以看到，环形的方式进行可视化展示的优点包括：</p>
+<ul>
+<li>能够带给读者直观的“上午”、&ldquo;下午&quot;以及“晚上”这种结合生活时间段的感受；</li>
+<li>部分解决了连续性的问题；</li>
+</ul>
+<p>但是又带来了新的问题：</p>
+<ul>
+<li>AM 和 PM 本身需要颜色或内外圈多维展示，如果有更多维度或系列的数据，就会显得更加杂乱；</li>
+<li>作图难度相对于线性方式来说更高；</li>
+<li>数据映射到极坐标下，增长和减少的趋势可能也会随之扭曲。</li>
+</ul>
+<p>综合以上，我觉得还是优先考虑使用线性的方式进行展示一天内的数据分布情况更为合理。
+更为简便的作图方式，展示作图者想要展示的趋势或者模式，就已经足矣。
+如果使用环形可视化很容易耗费更多的精力，反而只能做到华而不实的效果，也可能被误导，很难真正探索出数据背后真正的时间分布情况。</p>
+</section>
+
+  
+  
+  <footer class="mt-12 flex flex-wrap">
+     
+    <a
+      class="mr-1.5 mb-1.5 rounded-lg bg-black/[3%] px-5 py-2 no-underline dark:bg-white/[8%]"
+      href="https://xzywisdili.com/tags/%E5%88%86%E4%BA%AB"
+      >分享</a
+    >
+     
+    <a
+      class="mr-1.5 mb-1.5 rounded-lg bg-black/[3%] px-5 py-2 no-underline dark:bg-white/[8%]"
+      href="https://xzywisdili.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96"
+      >可视化</a
+    >
+    
+  </footer>
+  
+
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end p-6 pl-3 no-underline"
+      href="https://xzywisdili.com/post/2022-01-04-happynewyear/"
+      ><span>2022 跨年快乐</span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+
+  
+  
+</article>
+
+
+    </main>
+
+    <footer class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60">
+  <div class="mr-auto">
+    &copy; 2022
+    <a class="link" href="https://xzywisdili.com/">xzy&#39;s blog</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank">Powered by Hugo️️</a
+  >️
+  <a class="link" href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank"
+    >▷ Paper 6</a
+  >
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="not-ready text-sm lg:text-base" lang="zh-cn">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  
+  <title>从电子病历提取数据 - xzy&#39;s blog</title>
+
+  
+  <meta name="theme-color" />
+  
+  <meta name="description" content="电子病历的普及度已经很高。但如何从电子病历中提取信息还是比较令人头疼。 首先病历内容众多，从主诉到体格检查，从家族史到用药史，一份完整的病历涵盖的信息众多。 其次，病历内容是由医生按照段落填写的，很难在数以万计的病历中找到通用的标准进行提取。
+当然，如果医院的病历系统是按照表格进行组织并且保存，比如我之前实习过的社区医院，将每个人的电子病历 保存为 HTML 格式，就可以使用 python 的 BeautifulSoup 进行提取。当然，如果只能得到大段 文字的话，大概需要借助人工智能里面的自然语言处理来做更多的工作的。
+当然，如果任务比较简单的话，我们还是有取巧的方法的。比如要从病历记录里面提取出来身高、体重、收缩压和舒张压 等等，如：“血压114/56mmHg，体重53.3kg，胎心146次/分，宫高25cm，宫缩无。” 这样的描述中提取出舒张压：56，收缩压：114，体重：53.3 等等数据，我们可以借助正则表达式解决：
+library(readxl) library(tidyr) library(stringr) data &lt;- read_excel(&#34;data.xlsx&#34;, sheet = 1) extract_blood_pressure &lt;- function(diag_str) { res &lt;- str_match(diag_str, &#34;血压[:： ]*[0-9]*/[0-9]*[ ]*[(mmHg)|(mmhg)]&#43;&#34;) blood_pressure &lt;- unlist(str_extract_all(res[, 1], &#34;[0-9]&#43;&#34;)) return(as.numeric(blood_pressure)) } extract_height &lt;- function(diag_str) { res &lt;- str_match(diag_str, &#34;身高[:：]*[0-9]*/[0-9]*[ ]*[cC][mM]&#34;) height &lt;- unlist(str_extract_all(res[, 1], &#34;[0-9]&#43;&#34;)) return(as.numeric(blood_pressure)) } extract_weight &lt;- function(diag_str) { res &lt;- str_match(diag_str, &#34;体重[ ]*([0-9]{1,}[.]*[0-9]*)[ ]*[kK][gG]&#34;) weight &lt;- unlist(str_extract_all(res[, 1], &#34;[0-9]{1,}[." />
+  <meta name="author" content="" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://xzywisdili.com/main.min.css" />
+
+  
+  <script
+    defer
+    src="https://xzywisdili.com/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  <link
+    rel="preload"
+    as="image"
+    href="https://xzywisdili.com/theme.%7B%7B%20if%20site.Params.monoDarkIcon%20%7D%7Dsvg%7B%7B%20else%20%7D%7Dpng%7B%7B%20end%20%7D%7D"
+  />
+
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/bc73d7effd7675f355ff736ececc779a?s=160&amp;d=identicon" />
+  
+  
+
+  
+  <link rel="preload" as="image" href="https://xzywisdili.com/twitter.svg" />
+  
+  <link rel="preload" as="image" href="https://xzywisdili.com/github.svg" />
+  
+
+  
+  <link rel="icon" href="https://xzywisdili.com/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://xzywisdili.com/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="从电子病历提取数据" />
+<meta property="og:description" content="电子病历的普及度已经很高。但如何从电子病历中提取信息还是比较令人头疼。 首先病历内容众多，从主诉到体格检查，从家族史到用药史，一份完整的病历涵盖的信息众多。 其次，病历内容是由医生按照段落填写的，很难在数以万计的病历中找到通用的标准进行提取。
+当然，如果医院的病历系统是按照表格进行组织并且保存，比如我之前实习过的社区医院，将每个人的电子病历 保存为 HTML 格式，就可以使用 python 的 BeautifulSoup 进行提取。当然，如果只能得到大段 文字的话，大概需要借助人工智能里面的自然语言处理来做更多的工作的。
+当然，如果任务比较简单的话，我们还是有取巧的方法的。比如要从病历记录里面提取出来身高、体重、收缩压和舒张压 等等，如：“血压114/56mmHg，体重53.3kg，胎心146次/分，宫高25cm，宫缩无。” 这样的描述中提取出舒张压：56，收缩压：114，体重：53.3 等等数据，我们可以借助正则表达式解决：
+library(readxl) library(tidyr) library(stringr) data &lt;- read_excel(&#34;data.xlsx&#34;, sheet = 1) extract_blood_pressure &lt;- function(diag_str) { res &lt;- str_match(diag_str, &#34;血压[:： ]*[0-9]*/[0-9]*[ ]*[(mmHg)|(mmhg)]&#43;&#34;) blood_pressure &lt;- unlist(str_extract_all(res[, 1], &#34;[0-9]&#43;&#34;)) return(as.numeric(blood_pressure)) } extract_height &lt;- function(diag_str) { res &lt;- str_match(diag_str, &#34;身高[:：]*[0-9]*/[0-9]*[ ]*[cC][mM]&#34;) height &lt;- unlist(str_extract_all(res[, 1], &#34;[0-9]&#43;&#34;)) return(as.numeric(blood_pressure)) } extract_weight &lt;- function(diag_str) { res &lt;- str_match(diag_str, &#34;体重[ ]*([0-9]{1,}[.]*[0-9]*)[ ]*[kK][gG]&#34;) weight &lt;- unlist(str_extract_all(res[, 1], &#34;[0-9]{1,}[." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xzywisdili.com/post/2021-06-15-extractnumbers/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-06-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-06-15T00:00:00+00:00" />
+
+
+  
+  <meta itemprop="name" content="从电子病历提取数据">
+<meta itemprop="description" content="电子病历的普及度已经很高。但如何从电子病历中提取信息还是比较令人头疼。 首先病历内容众多，从主诉到体格检查，从家族史到用药史，一份完整的病历涵盖的信息众多。 其次，病历内容是由医生按照段落填写的，很难在数以万计的病历中找到通用的标准进行提取。
+当然，如果医院的病历系统是按照表格进行组织并且保存，比如我之前实习过的社区医院，将每个人的电子病历 保存为 HTML 格式，就可以使用 python 的 BeautifulSoup 进行提取。当然，如果只能得到大段 文字的话，大概需要借助人工智能里面的自然语言处理来做更多的工作的。
+当然，如果任务比较简单的话，我们还是有取巧的方法的。比如要从病历记录里面提取出来身高、体重、收缩压和舒张压 等等，如：“血压114/56mmHg，体重53.3kg，胎心146次/分，宫高25cm，宫缩无。” 这样的描述中提取出舒张压：56，收缩压：114，体重：53.3 等等数据，我们可以借助正则表达式解决：
+library(readxl) library(tidyr) library(stringr) data &lt;- read_excel(&#34;data.xlsx&#34;, sheet = 1) extract_blood_pressure &lt;- function(diag_str) { res &lt;- str_match(diag_str, &#34;血压[:： ]*[0-9]*/[0-9]*[ ]*[(mmHg)|(mmhg)]&#43;&#34;) blood_pressure &lt;- unlist(str_extract_all(res[, 1], &#34;[0-9]&#43;&#34;)) return(as.numeric(blood_pressure)) } extract_height &lt;- function(diag_str) { res &lt;- str_match(diag_str, &#34;身高[:：]*[0-9]*/[0-9]*[ ]*[cC][mM]&#34;) height &lt;- unlist(str_extract_all(res[, 1], &#34;[0-9]&#43;&#34;)) return(as.numeric(blood_pressure)) } extract_weight &lt;- function(diag_str) { res &lt;- str_match(diag_str, &#34;体重[ ]*([0-9]{1,}[.]*[0-9]*)[ ]*[kK][gG]&#34;) weight &lt;- unlist(str_extract_all(res[, 1], &#34;[0-9]{1,}[."><meta itemprop="datePublished" content="2021-06-15T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-06-15T00:00:00+00:00" />
+<meta itemprop="wordCount" content="83">
+<meta itemprop="keywords" content="分享,R 语言," />
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="从电子病历提取数据"/>
+<meta name="twitter:description" content="电子病历的普及度已经很高。但如何从电子病历中提取信息还是比较令人头疼。 首先病历内容众多，从主诉到体格检查，从家族史到用药史，一份完整的病历涵盖的信息众多。 其次，病历内容是由医生按照段落填写的，很难在数以万计的病历中找到通用的标准进行提取。
+当然，如果医院的病历系统是按照表格进行组织并且保存，比如我之前实习过的社区医院，将每个人的电子病历 保存为 HTML 格式，就可以使用 python 的 BeautifulSoup 进行提取。当然，如果只能得到大段 文字的话，大概需要借助人工智能里面的自然语言处理来做更多的工作的。
+当然，如果任务比较简单的话，我们还是有取巧的方法的。比如要从病历记录里面提取出来身高、体重、收缩压和舒张压 等等，如：“血压114/56mmHg，体重53.3kg，胎心146次/分，宫高25cm，宫缩无。” 这样的描述中提取出舒张压：56，收缩压：114，体重：53.3 等等数据，我们可以借助正则表达式解决：
+library(readxl) library(tidyr) library(stringr) data &lt;- read_excel(&#34;data.xlsx&#34;, sheet = 1) extract_blood_pressure &lt;- function(diag_str) { res &lt;- str_match(diag_str, &#34;血压[:： ]*[0-9]*/[0-9]*[ ]*[(mmHg)|(mmhg)]&#43;&#34;) blood_pressure &lt;- unlist(str_extract_all(res[, 1], &#34;[0-9]&#43;&#34;)) return(as.numeric(blood_pressure)) } extract_height &lt;- function(diag_str) { res &lt;- str_match(diag_str, &#34;身高[:：]*[0-9]*/[0-9]*[ ]*[cC][mM]&#34;) height &lt;- unlist(str_extract_all(res[, 1], &#34;[0-9]&#43;&#34;)) return(as.numeric(blood_pressure)) } extract_weight &lt;- function(diag_str) { res &lt;- str_match(diag_str, &#34;体重[ ]*([0-9]{1,}[.]*[0-9]*)[ ]*[kK][gG]&#34;) weight &lt;- unlist(str_extract_all(res[, 1], &#34;[0-9]{1,}[."/>
+
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a class="-translate-x-[1px] -translate-y-0.5 text-3xl font-bold" href="https://xzywisdili.com/"
+      >xzy&#39;s blog</a
+    >
+    <a
+      class="btn-dark ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+    ></a>
+  </div>
+
+  <a
+    class="btn-menu relative z-50 -mr-8 flex h-[5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+  ></a>
+
+  <script>
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => htmlClass.remove('not-ready'), 10);
+
+    const setDark = (newDark) => {
+      metaTheme.setAttribute('content', newDark ? '#000' : '#fbfbfb');
+      htmlClass[newDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', newDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkVal = localStorage.getItem('dark');
+    setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:mt-0 lg:ml-12 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./twitter.svg)"
+        href=" https://twitter.com/xzywisdili "
+        target="_blank"
+      ></a>
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href=" https://github.com/github.com/xzywisdili "
+        target="_blank"
+      ></a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-20 pb-32 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-20">
+    <h1 class="!my-0 pb-2.5">从电子病历提取数据</h1>
+
+    
+    <div class="text-sm opacity-60">
+      
+      <time>Jun 15, 2021</time>
+      
+      
+    </div>
+    
+  </header>
+
+  <section><p>电子病历的普及度已经很高。但如何从电子病历中提取信息还是比较令人头疼。
+首先病历内容众多，从主诉到体格检查，从家族史到用药史，一份完整的病历涵盖的信息众多。
+其次，病历内容是由医生按照段落填写的，很难在数以万计的病历中找到通用的标准进行提取。</p>
+<p>当然，如果医院的病历系统是按照表格进行组织并且保存，比如我之前实习过的社区医院，将每个人的电子病历
+保存为 HTML 格式，就可以使用 python 的 <code>BeautifulSoup</code> 进行提取。当然，如果只能得到大段
+文字的话，大概需要借助人工智能里面的自然语言处理来做更多的工作的。</p>
+<p>当然，如果任务比较简单的话，我们还是有取巧的方法的。比如要从病历记录里面提取出来身高、体重、收缩压和舒张压
+等等，如：“血压114/56mmHg，体重53.3kg，胎心146次/分，宫高25cm，宫缩无。” 这样的描述中提取出舒张压：56，收缩压：114，体重：53.3 等等数据，我们可以借助正则表达式解决：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(readxl)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(tidyr)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(stringr)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read_excel</span>(<span style="color:#e6db74">&#34;data.xlsx&#34;</span>, sheet <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>extract_blood_pressure <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(diag_str) {
+</span></span><span style="display:flex;"><span>  res <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_match</span>(diag_str, <span style="color:#e6db74">&#34;血压[:： ]*[0-9]*/[0-9]*[ ]*[(mmHg)|(mmhg)]+&#34;</span>)
+</span></span><span style="display:flex;"><span>  blood_pressure <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">unlist</span>(<span style="color:#a6e22e">str_extract_all</span>(res[, <span style="color:#ae81ff">1</span>], <span style="color:#e6db74">&#34;[0-9]+&#34;</span>))
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">return</span>(<span style="color:#a6e22e">as.numeric</span>(blood_pressure))
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>extract_height <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(diag_str) {
+</span></span><span style="display:flex;"><span>  res <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_match</span>(diag_str, <span style="color:#e6db74">&#34;身高[:：]*[0-9]*/[0-9]*[ ]*[cC][mM]&#34;</span>)
+</span></span><span style="display:flex;"><span>  height <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">unlist</span>(<span style="color:#a6e22e">str_extract_all</span>(res[, <span style="color:#ae81ff">1</span>], <span style="color:#e6db74">&#34;[0-9]+&#34;</span>))
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">return</span>(<span style="color:#a6e22e">as.numeric</span>(blood_pressure))
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>extract_weight <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(diag_str) {
+</span></span><span style="display:flex;"><span>  res <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">str_match</span>(diag_str, <span style="color:#e6db74">&#34;体重[ ]*([0-9]{1,}[.]*[0-9]*)[ ]*[kK][gG]&#34;</span>)
+</span></span><span style="display:flex;"><span>  weight <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">unlist</span>(<span style="color:#a6e22e">str_extract_all</span>(res[, <span style="color:#ae81ff">1</span>], <span style="color:#e6db74">&#34;[0-9]{1,}[.]*[0-9]*&#34;</span>))
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">return</span>(<span style="color:#a6e22e">as.numeric</span>(weight))
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>其实就是医生在写这些数据的时候，绝大部分情况下都有这样的固定模式，可以让我们通过正则表达式
+提取。当然，我们甚至可以针对更多数据，包括心率、体温等等，给出对应的正则表达式。我写的是针对我得到
+的数据给出的解决方案，可能不具有普适性，甚至在语法上也不一定是完美方案，但思路和代码仅供大家参考。</p>
+<p>另外，关于这个主题有几个比较实用的网站推荐：</p>
+<ul>
+<li><a href="https://www.regexpal.com/">正则表达式匹配验证</a></li>
+<li><a href="https://cran.r-project.org/web/packages/stringr/vignettes/regular-expressions.html">R 语言正则表达式语法汇总</a></li>
+<li><a href="https://www.runoob.com/regexp/regexp-syntax.html">正则表达式规则入门</a></li>
+</ul>
+</section>
+
+  
+  
+  <footer class="mt-12 flex flex-wrap">
+     
+    <a
+      class="mr-1.5 mb-1.5 rounded-lg bg-black/[3%] px-5 py-2 no-underline dark:bg-white/[8%]"
+      href="https://xzywisdili.com/tags/%E5%88%86%E4%BA%AB"
+      >分享</a
+    >
+     
+    <a
+      class="mr-1.5 mb-1.5 rounded-lg bg-black/[3%] px-5 py-2 no-underline dark:bg-white/[8%]"
+      href="https://xzywisdili.com/tags/r-%E8%AF%AD%E8%A8%80"
+      >R 语言</a
+    >
+    
+  </footer>
+  
+
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    <a class="flex w-1/2 items-center p-6 pr-3 no-underline" href="https://xzywisdili.com/post/2021-06-16-downloadclimate/"
+      ><span class="mr-1.5">←</span><span>如何从 NASA 下载气象数据</span></a
+    >
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end p-6 pl-3 no-underline"
+      href="https://xzywisdili.com/post/2021-06-15-newrtips/"
+      ><span>新发现的 R 里关于 data.table 的一些神奇用法</span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+
+  
+  
+</article>
+
+
+    </main>
+
+    <footer class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60">
+  <div class="mr-auto">
+    &copy; 2022
+    <a class="link" href="https://xzywisdili.com/">xzy&#39;s blog</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank">Powered by Hugo️️</a
+  >️
+  <a class="link" href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank"
+    >▷ Paper 6</a
+  >
+</footer>
+
+  </body>
+</html>

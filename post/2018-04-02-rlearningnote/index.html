@@ -1,43 +1,4 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>R 语言基础入门 - 中文博客 - xzy&#39;s blog</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
-
-
-<meta name="author" content="徐洲阳" />
-  <meta name="description" content="这篇《R 语言基础入门》是我在别人的博客上看到的，完成时间不会晚于 2011 年。觉得总结得相当不错，于是搬运到我的博客上。需要提到，有些链接可能已经失效。
-
-" />
-
-  <meta name="keywords" content="Hugo, theme, even" />
-
-
-
-
-
-
-<meta name="generator" content="Hugo 0.49" />
-
-
-<link rel="canonical" href="http://localhost:1313/post/2018-04-02-rlearningnote/" />
-
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
 
@@ -45,218 +6,247 @@
 
 
 
-<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
 
 
 
 
-<meta property="og:title" content="R 语言基础入门" />
-<meta property="og:description" content="这篇《R 语言基础入门》是我在别人的博客上看到的，完成时间不会晚于 2011 年。觉得总结得相当不错，于是搬运到我的博客上。需要提到，有些链接可能已经失效。
-
-" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/2018-04-02-rlearningnote/" /><meta property="article:published_time" content="2018-04-02T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2018-04-02T00:00:00&#43;00:00"/>
-
-<meta itemprop="name" content="R 语言基础入门">
-<meta itemprop="description" content="这篇《R 语言基础入门》是我在别人的博客上看到的，完成时间不会晚于 2011 年。觉得总结得相当不错，于是搬运到我的博客上。需要提到，有些链接可能已经失效。
-
-">
-
-
-<meta itemprop="datePublished" content="2018-04-02T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2018-04-02T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="4964">
 
 
 
-<meta itemprop="keywords" content="R 语言," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="R 语言基础入门"/>
-<meta name="twitter:description" content="这篇《R 语言基础入门》是我在别人的博客上看到的，完成时间不会晚于 2011 年。觉得总结得相当不错，于是搬运到我的博客上。需要提到，有些链接可能已经失效。
 
-"/>
 
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
 
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
 
-</head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">xzy&#39;s blog</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">博客</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">归档</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">标签</li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">分类</li>
-      </a><a href="/about/">
-        <li class="mobile-menu-item">关于</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">xzy&#39;s blog</a>
-</div>
 
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">博客</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">归档</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">标签</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">分类</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/about/">关于</a>
-      </li>
-  </ul>
-</nav>
-    </header>
 
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title">R 语言基础入门</h1>
 
-      <div class="post-meta">
-        <span class="post-time"> 2018-04-02 </span>
-        <div class="post-category">
-            
-              <a href="/categories/r-%E8%AF%AD%E8%A8%80/"> R 语言 </a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
 
-    
-    
-<div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">文章目录</h2>
+
+
+
+
+
+
+
+<html class="not-ready text-sm lg:text-base" lang="zh-cn">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
   
-  <div class="post-toc-content">
-    <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#引言">引言</a>
-<ul>
-<li><a href="#什么是-r-语言">什么是 R 语言</a></li>
-<li><a href="#为什么要学习-r-语言">为什么要学习 R 语言</a></li>
-<li><a href="#r-语言的下载和-gui-界面">R 语言的下载和 GUI 界面</a></li>
-<li><a href="#r-语言的学习方法">R 语言的学习方法</a></li>
-<li><a href="#哪里可以得到参考资料">哪里可以得到参考资料</a></li>
-<li><a href="#本系列博文的目的">本系列博文的目的</a></li>
-</ul></li>
-<li><a href="#数据导入和描述统计">数据导入和描述统计</a>
-<ul>
-<li><a href="#数据导入">数据导入</a></li>
-<li><a href="#data-frame-操作">Data frame 操作</a></li>
-<li><a href="#描述统计">描述统计</a></li>
-</ul></li>
-<li><a href="#常用统计函数运算">常用统计函数运算</a>
-<ul>
-<li><a href="#数据汇总函数">数据汇总函数</a></li>
-<li><a href="#概率计算函数">概率计算函数</a></li>
-<li><a href="#抽样函数">抽样函数</a></li>
-</ul></li>
-<li><a href="#常用的统计推断">常用的统计推断</a>
-<ul>
-<li><a href="#对总体均值进行区间估计">对总体均值进行区间估计</a></li>
-<li><a href="#对总体均值进行假设检验">对总体均值进行假设检验</a></li>
-<li><a href="#正态分布检验">正态分布检验</a></li>
-<li><a href="#非参数检验">非参数检验</a></li>
-<li><a href="#独立性检验-联列表检验">独立性检验（联列表检验）</a></li>
-</ul></li>
-<li><a href="#简单线性回归">简单线性回归</a>
-<ul>
-<li><a href="#回归建模">回归建模</a></li>
-<li><a href="#模型诊断">模型诊断</a></li>
-<li><a href="#变量变换">变量变换</a></li>
-<li><a href="#模型预测">模型预测</a></li>
-</ul></li>
-<li><a href="#logistic-回归">Logistic 回归</a></li>
-</ul></li>
-</ul>
-</nav>
+  <title>R 语言基础入门 - xzy&#39;s blog</title>
+
+  
+  <meta name="theme-color" />
+  
+  <meta name="description" content="这篇《R 语言基础入门》是我在别人的博客上看到的，完成时间不会晚于 2011 年。觉得总结得相当不错，于是搬运到我的博客上。需要提到，有些链接可能已经失效。" />
+  <meta name="author" content="" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://xzywisdili.com/main.min.css" />
+
+  
+  <script
+    defer
+    src="https://xzywisdili.com/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  <link
+    rel="preload"
+    as="image"
+    href="https://xzywisdili.com/theme.%7B%7B%20if%20site.Params.monoDarkIcon%20%7D%7Dsvg%7B%7B%20else%20%7D%7Dpng%7B%7B%20end%20%7D%7D"
+  />
+
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/bc73d7effd7675f355ff736ececc779a?s=160&amp;d=identicon" />
+  
+  
+
+  
+  <link rel="preload" as="image" href="https://xzywisdili.com/twitter.svg" />
+  
+  <link rel="preload" as="image" href="https://xzywisdili.com/github.svg" />
+  
+
+  
+  <link rel="icon" href="https://xzywisdili.com/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://xzywisdili.com/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="R 语言基础入门" />
+<meta property="og:description" content="这篇《R 语言基础入门》是我在别人的博客上看到的，完成时间不会晚于 2011 年。觉得总结得相当不错，于是搬运到我的博客上。需要提到，有些链接可能已经失效。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xzywisdili.com/post/2018-04-02-rlearningnote/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2018-04-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-04-02T00:00:00+00:00" />
+
+
+  
+  <meta itemprop="name" content="R 语言基础入门">
+<meta itemprop="description" content="这篇《R 语言基础入门》是我在别人的博客上看到的，完成时间不会晚于 2011 年。觉得总结得相当不错，于是搬运到我的博客上。需要提到，有些链接可能已经失效。"><meta itemprop="datePublished" content="2018-04-02T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2018-04-02T00:00:00+00:00" />
+<meta itemprop="wordCount" content="749">
+<meta itemprop="keywords" content="R 语言," />
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="R 语言基础入门"/>
+<meta name="twitter:description" content="这篇《R 语言基础入门》是我在别人的博客上看到的，完成时间不会晚于 2011 年。觉得总结得相当不错，于是搬运到我的博客上。需要提到，有些链接可能已经失效。"/>
+
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a class="-translate-x-[1px] -translate-y-0.5 text-3xl font-bold" href="https://xzywisdili.com/"
+      >xzy&#39;s blog</a
+    >
+    <a
+      class="btn-dark ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+    ></a>
   </div>
-</div>
 
+  <a
+    class="btn-menu relative z-50 -mr-8 flex h-[5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+  ></a>
+
+  <script>
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => htmlClass.remove('not-ready'), 10);
+
+    const setDark = (newDark) => {
+      metaTheme.setAttribute('content', newDark ? '#000' : '#fbfbfb');
+      htmlClass[newDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', newDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkVal = localStorage.getItem('dark');
+    setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
     
     
 
     
-    <div class="post-content">
-      <p>这篇《R 语言基础入门》是我在别人的博客上看到的，完成时间不会晚于 2011 年。觉得总结得相当不错，于是搬运到我的博客上。需要提到，有些链接可能已经失效。</p>
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:mt-0 lg:ml-12 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./twitter.svg)"
+        href=" https://twitter.com/xzywisdili "
+        target="_blank"
+      ></a>
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href=" https://github.com/github.com/xzywisdili "
+        target="_blank"
+      ></a>
+      
+    </nav>
+    
+  </div>
+</header>
 
-<p></p>
 
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-20 pb-32 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-20">
+    <h1 class="!my-0 pb-2.5">R 语言基础入门</h1>
+
+    
+    <div class="text-sm opacity-60">
+      
+      <time>Apr 2, 2018</time>
+      
+      
+    </div>
+    
+  </header>
+
+  <section><p>这篇《R 语言基础入门》是我在别人的博客上看到的，完成时间不会晚于 2011 年。觉得总结得相当不错，于是搬运到我的博客上。需要提到，有些链接可能已经失效。</p>
 <h2 id="引言">引言</h2>
-
 <h3 id="什么是-r-语言">什么是 R 语言</h3>
-
 <p>R 语言是一个开源的数据分析环境，起初是由数位统计学家建立起来，以更好的进行统计计算和绘图，这篇 <a href="https://denver.zxproxy.com/browse.php?u=gmeqXVydXp21G8IW15ldN02O2UpPKIx2eTcSOz70hwSu9OQG9K1p4vzjoMVQqHMLIA%3D%3D&amp;b=6">wiki</a> 中包含了一些基本情况的介绍。由于 R 可以通过安装扩展包（Packages）而得到增强，所以其功能已经远远不限于统计分析，如果感兴趣的话可以到<a href="https://denver.zxproxy.com/browse.php?u=gmeqW0DSR9q9AdYRnZNSNlWZ3EpOKIJoJUo%3D&amp;b=6">官方网站</a>了解关于其功能的更多信息。</p>
-
 <p>至于 R 语言名称的由来则是根据两位主要作者的首字母 (Robert Gentleman and Ross Ihaka)，但过于简短的关键词也造成在搜索引擎中很不容易找到相关的资料。不过这个专门的<a href="https://denver.zxproxy.com/browse.php?u=gmeqT0XEB4atF9cYnZ9Ofg0%3D&amp;b=6">搜索网站</a>可以帮到你。</p>
-
 <h3 id="为什么要学习-r-语言">为什么要学习 R 语言</h3>
-
 <ul>
 <li><strong>R是免费开源软件：</strong> 现在很多学术期刊都对分析软件有版权要求，而免费的分析工具可以使你在这方面不会有什么担心。另一方面，如果学术界出现一种新的数据分析方法，那么要过很长一段时间才会出现在商业软件中。但开源软件的好处就在于，很快就会有人将这种方法编写成扩展包，或者你自己就可以做这件工作。</li>
 <li><strong>命令行工作方式：</strong> 许多人喜欢类似 SPSS 菜单式的操作，这对于初学者来说很方便入门，但对于数据分析来说，命令行操作会更加的灵活，更容易进行编程和自动化处理。而且命令行操作会更容易耍酷，不是嘛，一般人看到你在狂敲一推代码后得到一个分析结果，对你投来的目光是会不一样的。</li>
 <li><strong>小巧而精悍：</strong> R 语言的安装包更小，大约不到 40M，相比其它几个大家伙它算是非常小巧精悍了。目前 R 语言非常受到专业人士欢迎，根据对数据挖掘大赛胜出者的调查可以发现，他们用的工具基本上都是 R 语言。此外，从最近几次 <a href="https://denver.zxproxy.com/browse.php?u=gmeqW13AB5q%2FH9dc0JhVd0OOkQ%3D%3D&amp;b=6">R 语言大会</a>上可以了解到，咨询业、金融业、医药业都在大量的使用 R 语言，包括 google / facebook 的大公司都在用它。因此，学习 R 语言对你的职业发展一定是有帮助的。</li>
 </ul>
-
 <h3 id="r-语言的下载和-gui-界面">R 语言的下载和 GUI 界面</h3>
-
 <p>R 语言安装包可以在<a href="https://denver.zxproxy.com/browse.php?u=gmeqW0DSR9q9AdYRnZNSNg%3D%3D&amp;b=6">官方网站</a>下载，windows 版可直接点击这个<a href="https://denver.zxproxy.com/browse.php?u=gmeqW0DSR9q9AdYRnZNSNkCV0EpPKIl7ORI%2BPCznmwbzx6RZs%2FI9k6KvuctL53EWbA%3D%3D&amp;b=6">连接</a>
 在 ubuntu 下面安装 R 则更容易，在终端里头运行如下命令即可
 sudo apt-get update
 sudo apt-get install r-base</p>
-
 <p>此外，学习 R 语言时强烈推荐安装 Rstudio 做为 R 的图形界面，关于 Rstudio 之前的<a href="https://denver.zxproxy.com/browse.php?u=gmeqQFHQTYfvS4VEnZJQdkWPzgpMb4RwO0p%2FI3%2B3x1LsuvtF9bdj0Q%3D%3D&amp;b=6">博文</a>有过简单介绍，点<a href="https://denver.zxproxy.com/browse.php?u=gmeqSkHHXJC3HZwcwZcT&amp;b=6">这里</a>可能转到它的官方网站。</p>
-
 <h3 id="r-语言的学习方法">R 语言的学习方法</h3>
-
 <p>学习 R 并不是一件非常轻松的事情，初学者需要记住的就是：</p>
-
 <ul>
 <li>亲手键入代码并理解其意义</li>
 <li>在笔记里记下一些重点或心得（个人推荐 Evernote）</li>
 <li>坚持练习，对手边的数据进行应用分析</li>
 <li>理解背景知识，细节很重要。</li>
 </ul>
-
 <h3 id="哪里可以得到参考资料">哪里可以得到参考资料</h3>
-
 <ol>
 <li>官方网站 <a href="https://denver.zxproxy.com/browse.php?u=gmeqW0DSR9q9AdYRnZNSNkuS2gBAb49rOwk%3D&amp;b=6">http://cran.csdb.cn/index.html</a> （官方文献集中地）</li>
 <li><a href="https://denver.zxproxy.com/browse.php?u=gmeqW13AB5q%2FH9dc0J4Tf02OywgXcNI%3D&amp;b=6">统计之都论坛</a></li>
@@ -269,431 +259,223 @@ sudo apt-get install r-base</p>
 本人博客里也有一些关于 R 语言的资料：<a href="https://denver.zxproxy.com/browse.php?u=gmeqQFHQTYfvS4VEnZJQdkWPzgpMb4RwO0o%3D&amp;b=6">xccds1977.blogspot.com</a> (需 FQ)
 如果有一些简单的入门问题，也可以在推特上 follow me twitter: <a href="https://denver.zxproxy.com/browse.php?u=gmeqTEXaXYC7AJwQ3J0T&amp;b=6#!/xccds">@xccds</a></li>
 </ol>
-
 <h3 id="本系列博文的目的">本系列博文的目的</h3>
-
 <p>本系列入门的目的是为初学者提供最简洁清晰的资料，以迅速入门。所针对的读者人群是那些正在大学里学习<strong>初级统计学</strong>的同学。本系列计划包括内容有：基本命令，数据操作；描述统计和绘图；重要的 R 语言函数计算；统计推断和估计；非参数统计方法；方差分析；线性回归和一般线性模型。</p>
-
 <h2 id="数据导入和描述统计">数据导入和描述统计</h2>
-
 <h3 id="数据导入">数据导入</h3>
-
 <p>对初学者来讲，面对一片空白的命令行窗口，第一道真正的难关也许就是数据的导入。数据导入有很多途径，例如从网页抓取、公共数据源获得、文本文件导入。为了快速入门，建议初学者采取 R 语言协同 Excel 电子表格的方法。也就是先用较为熟悉的 Excel 读取和整理你要处理的数据，然后 「粘贴」 到 R 中。</p>
-
 <p>例如我们先从<a href="https://denver.zxproxy.com/browse.php?u=gmeqXF6dTYaxAtAcy95fdk%2FTy0oOdNMoYl10PCf0gRDy9vod&amp;b=6">这个地址</a>下载 iris.csv 演示数据，在 Excel 中打开，框选所有的样本然后 「复制」。在 R 语言中输入如下命令：</p>
-
-<pre><code class="language-R">data &lt;- read.table('clipboard',T)
-</code></pre>
-
-<h3 id="data-frame-操作">Data frame 操作</h3>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read.table</span>(<span style="color:#e6db74">&#39;clipboard&#39;</span>,T)
+</span></span></code></pre></div><h3 id="data-frame-操作">Data frame 操作</h3>
 <p>在数据导入 R 语言后，会以数据框 (data frame) 的形式储存。data frame 是一种 R 的数据格式，可以将它想象成类似统计表格，每一行都代表一个样本点，而每一列则代表了样本的不同属性或特征。初学者需要掌握的基本操作方法就是 data frame 的编辑、抽取和运算。</p>
-
 <p>尽管建议初学者在 Excel 中就把数据处理好，但有时候还是需要在 R 中对数据进行编辑，下面的命令可以让你有机会修改数据并存入到新的变量 <code>newdata</code> 中：</p>
-
-<pre><code class="language-R">newdata &lt;- edit(data)
-</code></pre>
-
-<p>另一种情况就是我们可能只关注数据的一部分，例如从原数据中抽取第 20 到 30 号样本的 <code>Sepal.Width</code> 变量数据，因为 <code>Sepal.Width</code> 变量是第 2 个变量，所以此时键入下面的命令即可：</p>
-
-<pre><code class="language-R">newdata &lt;- data[20:30, 2]
-</code></pre>
-
-<p>如果需要抽取所有数据的 Sepal.Width 变量，那么下面两个命令是等价的：</p>
-
-<pre><code class="language-R">newdata &lt;- data[, 2]
-newdata &lt;- data$Sepal.Width
-</code></pre>
-
-<p>第三种情况是需要对数据进行一些运算，例如需要将所有样本的 <code>Sepal.Width</code> 变量都放大 10 倍，我们先将原数据进行一个复制，再用 <code>$</code> 符号来提取运算对象即可：</p>
-
-<pre><code class="language-R">newdata &lt;- data
-newdata$Sepal.Width &lt;- newdata$Sepal.Width * 10
-</code></pre>
-
-<h3 id="描述统计">描述统计</h3>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>newdata <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">edit</span>(data)
+</span></span></code></pre></div><p>另一种情况就是我们可能只关注数据的一部分，例如从原数据中抽取第 20 到 30 号样本的 <code>Sepal.Width</code> 变量数据，因为 <code>Sepal.Width</code> 变量是第 2 个变量，所以此时键入下面的命令即可：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>newdata <span style="color:#f92672">&lt;-</span> data[20<span style="color:#f92672">:</span><span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">2</span>]
+</span></span></code></pre></div><p>如果需要抽取所有数据的 Sepal.Width 变量，那么下面两个命令是等价的：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>newdata <span style="color:#f92672">&lt;-</span> data[, <span style="color:#ae81ff">2</span>]
+</span></span><span style="display:flex;"><span>newdata <span style="color:#f92672">&lt;-</span> data<span style="color:#f92672">$</span>Sepal.Width
+</span></span></code></pre></div><p>第三种情况是需要对数据进行一些运算，例如需要将所有样本的 <code>Sepal.Width</code> 变量都放大 10 倍，我们先将原数据进行一个复制，再用 <code>$</code> 符号来提取运算对象即可：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>newdata <span style="color:#f92672">&lt;-</span> data
+</span></span><span style="display:flex;"><span>newdata<span style="color:#f92672">$</span>Sepal.Width <span style="color:#f92672">&lt;-</span> newdata<span style="color:#f92672">$</span>Sepal.Width <span style="color:#f92672">*</span> <span style="color:#ae81ff">10</span>
+</span></span></code></pre></div><h3 id="描述统计">描述统计</h3>
 <p>描述统计是一种从大量数据中压缩提取信息的工具，最常用的就是 <code>summary</code> 命令，运行 <code>summary(data)</code> 得到结果如下：对于数值变量计算了五个分位点和均值，对于分类变量则计算了频数。</p>
-
 <p>也可以单独计算 <code>Sepal.Width</code> 变量的平均值和标准差：</p>
-
-<pre><code class="language-R">mean(data$Sepal.Width)
-sd(data$Sepal.Width)
-</code></pre>
-
-<p>计算分类数据 <code>Species</code> 变量的频数表和条形图：</p>
-
-<pre><code class="language-R">mean(data$Species)
-barplot(table(data$Species))
-</code></pre>
-
-<p>对于一元数值数据，绘制直方图和箱线图观察其分布是常用的方法：</p>
-
-<pre><code class="language-R">hist(data$Sepal.Width)
-boxplot(data$Sepal.Width)
-</code></pre>
-
-<p>对于二元数值数据，则可以通过散点图来观察规律</p>
-
-<pre><code class="language-R">plot(data$Sepal.Width, Sepal.Length)
-</code></pre>
-
-<h2 id="常用统计函数运算">常用统计函数运算</h2>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">mean</span>(data<span style="color:#f92672">$</span>Sepal.Width)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">sd</span>(data<span style="color:#f92672">$</span>Sepal.Width)
+</span></span></code></pre></div><p>计算分类数据 <code>Species</code> 变量的频数表和条形图：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">mean</span>(data<span style="color:#f92672">$</span>Species)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">barplot</span>(<span style="color:#a6e22e">table</span>(data<span style="color:#f92672">$</span>Species))
+</span></span></code></pre></div><p>对于一元数值数据，绘制直方图和箱线图观察其分布是常用的方法：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">hist</span>(data<span style="color:#f92672">$</span>Sepal.Width)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">boxplot</span>(data<span style="color:#f92672">$</span>Sepal.Width)
+</span></span></code></pre></div><p>对于二元数值数据，则可以通过散点图来观察规律</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">plot</span>(data<span style="color:#f92672">$</span>Sepal.Width, Sepal.Length)
+</span></span></code></pre></div><h2 id="常用统计函数运算">常用统计函数运算</h2>
 <p>在 R 语言中经常会用到函数，例如上节中讲到的求样本统计量就需要均值函数 (<code>mean</code>) 和标准差函数 (<code>sd</code>)。对于二元数值数据还用到协方差 (<code>cov</code>)，对于二元分类数据则可以用交叉联列表函数 (<code>table</code>)。下文讲述在初级统计学中最常用到的三类函数。</p>
-
 <h3 id="数据汇总函数">数据汇总函数</h3>
-
-<pre><code class="language-R">data &lt;- iris[, c(4, 5)]
-</code></pre>
-
-<p>下一步我们想计算不同种类花瓣的平均宽度，可以使用 <code>tapply</code> 函数，在计算前先用 <code>attach</code> 命令将 <code>data</code> 这个数据框解包以方便直接操作其变量，而不需再用 <code>$</code> 符号。</p>
-
-<pre><code class="language-R">attach(data)
-tapply(X = Petal.Width, Index = Species, FUN = mean)
-</code></pre>
-
-<p>结果如下：</p>
-
-<pre><code class="language-R">setosa versicolor  virginica
- 0.246      1.326      2.026
-</code></pre>
-
-<p>和 <code>tapply</code> 类似的还有 <code>sapply</code> 函数，在进一步讲解前初学者还需搞清楚两种数据表现方式，即 <code>stack</code>（堆叠数据）和 <code>unstack</code>（非堆叠数据），上面的 <code>data</code> 就是一个堆叠数据，每一行表示一个样本。而非堆叠数据可以根据 <code>unstack</code> 函数转换而来</p>
-
-<pre><code class="language-R">data.unstack &lt;- unstack(data)
-head(data.unstack)
-</code></pre>
-
-<p>你应该明白这二者之间的区别了，如果要对非堆叠数据计算不同种类花瓣的平均宽度，可以利用如下函数。</p>
-
-<pre><code class="language-R">sapply(data.unstack, FUN = mean)
-</code></pre>
-
-<p>结果是一样的，也就是说 tapply 对应于 stack 数据，而 sapply 对应于 unstack 数据。</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>data <span style="color:#f92672">&lt;-</span> iris[, <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>)]
+</span></span></code></pre></div><p>下一步我们想计算不同种类花瓣的平均宽度，可以使用 <code>tapply</code> 函数，在计算前先用 <code>attach</code> 命令将 <code>data</code> 这个数据框解包以方便直接操作其变量，而不需再用 <code>$</code> 符号。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">attach</span>(data)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">tapply</span>(X <span style="color:#f92672">=</span> Petal.Width, Index <span style="color:#f92672">=</span> Species, FUN <span style="color:#f92672">=</span> mean)
+</span></span></code></pre></div><p>结果如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>setosa versicolor  virginica
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">0.246</span>      <span style="color:#ae81ff">1.326</span>      <span style="color:#ae81ff">2.026</span>
+</span></span></code></pre></div><p>和 <code>tapply</code> 类似的还有 <code>sapply</code> 函数，在进一步讲解前初学者还需搞清楚两种数据表现方式，即 <code>stack</code>（堆叠数据）和 <code>unstack</code>（非堆叠数据），上面的 <code>data</code> 就是一个堆叠数据，每一行表示一个样本。而非堆叠数据可以根据 <code>unstack</code> 函数转换而来</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>data.unstack <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">unstack</span>(data)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">head</span>(data.unstack)
+</span></span></code></pre></div><p>你应该明白这二者之间的区别了，如果要对非堆叠数据计算不同种类花瓣的平均宽度，可以利用如下函数。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">sapply</span>(data.unstack, FUN <span style="color:#f92672">=</span> mean)
+</span></span></code></pre></div><p>结果是一样的，也就是说 tapply 对应于 stack 数据，而 sapply 对应于 unstack 数据。</p>
 <h3 id="概率计算函数">概率计算函数</h3>
-
 <p>如果给定一种概率分布，通常会有四类计算问题：</p>
-
 <ul>
 <li>计算其概率密度 density （d）</li>
 <li>计算其概率分布 probability（p）</li>
 <li>计算其百分位数 quantile （q）</li>
 <li>随机数模拟 random （r）</li>
 </ul>
-
 <p>记住上面四类计算对应的英文首字母。</p>
-
 <p>举例来讲，我们求标准正态分布曲线下小于 1 的面积 p(x&lt;1)，正态分布是 norm，而分布函数是 p，那么使用 <code>pnorm(1)</code> 就得出了结果 <code>0.84</code>；若计算扔 10 次硬币实验中有 3 次正面向上的概率，类似的 <code>dbinom(x=3,size=10,prob=0.5)</code> 得出 <code>0.11</code>。</p>
-
 <h3 id="抽样函数">抽样函数</h3>
-
 <p>我们想从 1 到 10 中随机抽取 5 个数字，那么这样来做：首先产生一个序列，然后用 sample 函数进行无放回抽取。</p>
-
-<pre><code class="language-R">x &lt;- 1:10
-sample(x, size=5)
-</code></pre>
-
-<p>有放回抽取则是</p>
-
-<pre><code class="language-R">sample(x, size=5, replace=T)
-</code></pre>
-
-<p><code>sample</code> 函数在建模中经常用来对样本数据进行随机的划分，一部分作为训练数据，另一部分作为检验数据。</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>x <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">sample</span>(x, size<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>)
+</span></span></code></pre></div><p>有放回抽取则是</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">sample</span>(x, size<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, replace<span style="color:#f92672">=</span>T)
+</span></span></code></pre></div><p><code>sample</code> 函数在建模中经常用来对样本数据进行随机的划分，一部分作为训练数据，另一部分作为检验数据。</p>
 <h2 id="常用的统计推断">常用的统计推断</h2>
-
 <p>通常一个研究项目能够获得的数据是有限的，以有限的样本特征来推断总体特征就称为统计推断。推断又可细分为区间估计和假设检验，二者虽有区别，但却是一枚硬币的两面，之间有着紧密的关联。</p>
-
 <h3 id="对总体均值进行区间估计">对总体均值进行区间估计</h3>
-
 <p>假设我们从总体中抽得一个样本，希望根据样本均值判断总体均值的置信区间，如下例所示：</p>
-
-<pre><code class="language-R">x &lt;- rnorm(50, mean=10, sd=5)
-mean(x)-qt(0.975, 49) * sd(x) / sqrt(50)
-mean(x)+qt(0.975, 49) * sd(x) / sqrt(50)
-</code></pre>
-
-<p>也可以直接利用 R 语言内置函数 <code>t.test</code></p>
-
-<pre><code class="language-R">t.test(x, conf.level=0.95)
-</code></pre>
-
-<p>从如下结果可得 95% 置信区间为 <code>(9.56，12.36)</code>。</p>
-
-<pre><code class="language-R">One Sample t-test
-data:  x
-t = 15.7301, df = 49, p-value &lt; 2.2e-16
-alternative hypothesis: true mean is not equal to 0
-95 percent confidence interval:
-  9.563346 12.364729
-sample estimates:
-mean of x
- 10.96404
-</code></pre>
-
-<h3 id="对总体均值进行假设检验">对总体均值进行假设检验</h3>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>x <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rnorm</span>(<span style="color:#ae81ff">50</span>, mean<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, sd<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">mean</span>(x)<span style="color:#f92672">-</span><span style="color:#a6e22e">qt</span>(<span style="color:#ae81ff">0.975</span>, <span style="color:#ae81ff">49</span>) <span style="color:#f92672">*</span> <span style="color:#a6e22e">sd</span>(x) <span style="color:#f92672">/</span> <span style="color:#a6e22e">sqrt</span>(<span style="color:#ae81ff">50</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">mean</span>(x)<span style="color:#f92672">+</span><span style="color:#a6e22e">qt</span>(<span style="color:#ae81ff">0.975</span>, <span style="color:#ae81ff">49</span>) <span style="color:#f92672">*</span> <span style="color:#a6e22e">sd</span>(x) <span style="color:#f92672">/</span> <span style="color:#a6e22e">sqrt</span>(<span style="color:#ae81ff">50</span>)
+</span></span></code></pre></div><p>也可以直接利用 R 语言内置函数 <code>t.test</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">t.test</span>(x, conf.level<span style="color:#f92672">=</span><span style="color:#ae81ff">0.95</span>)
+</span></span></code></pre></div><p>从如下结果可得 95% 置信区间为 <code>(9.56，12.36)</code>。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>One Sample t<span style="color:#f92672">-</span>test
+</span></span><span style="display:flex;"><span>data<span style="color:#f92672">:</span>  x
+</span></span><span style="display:flex;"><span>t <span style="color:#f92672">=</span> <span style="color:#ae81ff">15.7301</span>, df <span style="color:#f92672">=</span> <span style="color:#ae81ff">49</span>, p<span style="color:#f92672">-</span>value <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">2.2e-16</span>
+</span></span><span style="display:flex;"><span>alternative hypothesis<span style="color:#f92672">:</span> true mean is not equal to <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">95</span> percent confidence interval<span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">9.563346</span> <span style="color:#ae81ff">12.364729</span>
+</span></span><span style="display:flex;"><span>sample estimates<span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>mean of x
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">10.96404</span>
+</span></span></code></pre></div><h3 id="对总体均值进行假设检验">对总体均值进行假设检验</h3>
 <p>还是以上面的 X 数据作为对象，来检验总体均值是否为 10</p>
-
-<pre><code class="language-R">t.test(x, mu=10, alternative='two.sided')
-</code></pre>
-
-<p>t 检验是极为常用的检验方法，除了单样本推断之外，<code>t.test</code> 命令还可以实现两样本推断和配对样本推断。如果要对总体比率或总体方差进行推断，可以使用 <code>prop.test</code> 和 <code>var.test</code>。</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">t.test</span>(x, mu<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, alternative<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;two.sided&#39;</span>)
+</span></span></code></pre></div><p>t 检验是极为常用的检验方法，除了单样本推断之外，<code>t.test</code> 命令还可以实现两样本推断和配对样本推断。如果要对总体比率或总体方差进行推断，可以使用 <code>prop.test</code> 和 <code>var.test</code>。</p>
 <h3 id="正态分布检验">正态分布检验</h3>
-
 <p>t 检验的前提条件是总体服从正态分布，因此我们有必要先检验正态性。而且在评价回归模型时，对残差也需要检验正态性。检验正态性的函数是 <code>shapiro.test</code>：</p>
-
-<pre><code class="language-R">shapiro.test(x)
-</code></pre>
-
-<p>结果如下：</p>
-
-<pre><code class="language-R">Shapiro-Wilk normality test
-data:  x
-W = 0.9863, p-value = 0.8265
-</code></pre>
-
-<p>该检验的原假设是服从正态分布，由 P 值为 <code>0.82</code> 可判断不能拒绝总体服从正态的假设。</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">shapiro.test</span>(x)
+</span></span></code></pre></div><p>结果如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>Shapiro<span style="color:#f92672">-</span>Wilk normality test
+</span></span><span style="display:flex;"><span>data<span style="color:#f92672">:</span>  x
+</span></span><span style="display:flex;"><span>W <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.9863</span>, p<span style="color:#f92672">-</span>value <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.8265</span>
+</span></span></code></pre></div><p>该检验的原假设是服从正态分布，由 P 值为 <code>0.82</code> 可判断不能拒绝总体服从正态的假设。</p>
 <h3 id="非参数检验">非参数检验</h3>
-
 <p>如果总体不服从正态分布，那么 t 检验就不再适用，此时我们可以利用非参数方法推断中位数。<code>wilcoxon.test</code> 函数可实现符号秩检验。</p>
-
-<pre><code class="language-R">wilcox.test(x, conf.int=T)
-wilcox.test(x, mu=1)
-</code></pre>
-
-<h3 id="独立性检验-联列表检验">独立性检验（联列表检验）</h3>
-
-<p>卡方分布有一个重要应用就是根据样本数据来检验两个分类变量的独立性，我们以<code>CO2</code> 数据为例来说明 <code>chisq.test</code> 函数的使用，<code>help(CO2)</code> 可以了解更多信息。</p>
-
-<pre><code class="language-R">data(CO2)
-chisq.test(table(CO2$Type, CO2$Treatment))
-</code></pre>
-
-<p>结果显示 P 值为 <code>0.82</code>，因此可以认为两因子之间独立。在样本较小的情况下，还可以使用 <code>fisher</code> 精确检验，对应的函数是 <code>fisher.test</code>。</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">wilcox.test</span>(x, conf.int<span style="color:#f92672">=</span>T)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">wilcox.test</span>(x, mu<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span></code></pre></div><h3 id="独立性检验联列表检验">独立性检验（联列表检验）</h3>
+<p>卡方分布有一个重要应用就是根据样本数据来检验两个分类变量的独立性，我们以<code> CO2</code> 数据为例来说明 <code>chisq.test</code> 函数的使用，<code>help(CO2)</code> 可以了解更多信息。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">data</span>(CO2)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">chisq.test</span>(<span style="color:#a6e22e">table</span>(CO2<span style="color:#f92672">$</span>Type, CO2<span style="color:#f92672">$</span>Treatment))
+</span></span></code></pre></div><p>结果显示 P 值为 <code>0.82</code>，因此可以认为两因子之间独立。在样本较小的情况下，还可以使用 <code>fisher</code> 精确检验，对应的函数是 <code>fisher.test</code>。</p>
 <h2 id="简单线性回归">简单线性回归</h2>
-
 <p>线性回归可能是数据分析中最为常用的工具了，如果你认为手上的数据存在着线性定量关系，不妨先画个散点图观察一下，然后用线性回归加以分析。下面简单介绍一下如何在 R 中进行线性回归。</p>
-
 <h3 id="回归建模">回归建模</h3>
-
 <p>我们利用 R 语言中内置的 trees 数据，其中包含了 <code>Volume</code>（体积）、<code>Girth</code>（树围）、<code>Height</code>（树高）这三个变量，我们希望以体积为因变量，树围为自变量进行线性回归。</p>
-
-<pre><code class="language-R">plot(Volume~Girth, data=trees, pch=16, col='red')
-model &lt;- lm(Volume ~ Girth, data=trees)
-abline(model, lty=2)
-summary(model)
-</code></pre>
-
-<p>首先绘制了两变量的散点图，然后用 <code>lm</code> 函数建立线性回归模型，并将回归直线加在原图上，最后用 <code>summary</code> 将模型结果进行了展示，从变量 P 值和 F 统计量可得回归模型是显著的。但截距项不应该为负数，所以也可以用下面方法将截距强制为 0。</p>
-
-<pre><code class="language-R">model2 &lt;- lm(Volume ~ Girth-1, data=trees)
-</code></pre>
-
-<h3 id="模型诊断">模型诊断</h3>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">plot</span>(Volume<span style="color:#f92672">~</span>Girth, data<span style="color:#f92672">=</span>trees, pch<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>, col<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;red&#39;</span>)
+</span></span><span style="display:flex;"><span>model <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">lm</span>(Volume <span style="color:#f92672">~</span> Girth, data<span style="color:#f92672">=</span>trees)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">abline</span>(model, lty<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">summary</span>(model)
+</span></span></code></pre></div><p>首先绘制了两变量的散点图，然后用 <code>lm</code> 函数建立线性回归模型，并将回归直线加在原图上，最后用 <code>summary</code> 将模型结果进行了展示，从变量 P 值和 F 统计量可得回归模型是显著的。但截距项不应该为负数，所以也可以用下面方法将截距强制为 0。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>model2 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">lm</span>(Volume <span style="color:#f92672">~</span> Girth<span style="color:#ae81ff">-1</span>, data<span style="color:#f92672">=</span>trees)
+</span></span></code></pre></div><h3 id="模型诊断">模型诊断</h3>
 <p>在模型建立后会利用各种方式来检验模型的正确性，对残差进行分析是常见的方法，下面我们来生成四种用于模型诊断的图形。</p>
-
-<pre><code class="language-R">par(mfrow=c(2,2))
-plot(model)
-par(mfrow=c(1,1))
-</code></pre>
-
-<p>这里左上图是残差对拟合值作图，整体呈现出一种先下降后下升的模式，显示残差中可能还存在未提炼出来的影响因素。右上图残差 QQ 图，用以观察残差是否符合正态分布。左下图是标准化残差对拟合值，用于判断模型残差是否等方差。右下图是标准化残差对杠杆值，虚线表示的 <code>cooks</code> 距离等高线。我们发现 31 号样本有较大的影响。</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>))
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">plot</span>(model)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>))
+</span></span></code></pre></div><p>这里左上图是残差对拟合值作图，整体呈现出一种先下降后下升的模式，显示残差中可能还存在未提炼出来的影响因素。右上图残差 QQ 图，用以观察残差是否符合正态分布。左下图是标准化残差对拟合值，用于判断模型残差是否等方差。右下图是标准化残差对杠杆值，虚线表示的 <code>cooks</code> 距离等高线。我们发现 31 号样本有较大的影响。</p>
 <h3 id="变量变换">变量变换</h3>
-
 <p>因为 31 号样本有着高影响力，为了降低其影响，一种方法就是将变量进行开方变换来改善回归结果，从残差标准误到残差图，各项观察都说明变换是有效的。</p>
-
-<pre><code class="language-R">plot(sqrt(Volume) ~ Girth, data=trees, pch=16, col='red')
-model2 &lt;- lm(sqrt(Volume) ~ Girth, data=trees)
-abline(model2, lty=2)
-summary(model2)
-</code></pre>
-
-<h3 id="模型预测">模型预测</h3>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">plot</span>(<span style="color:#a6e22e">sqrt</span>(Volume) <span style="color:#f92672">~</span> Girth, data<span style="color:#f92672">=</span>trees, pch<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>, col<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;red&#39;</span>)
+</span></span><span style="display:flex;"><span>model2 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">lm</span>(<span style="color:#a6e22e">sqrt</span>(Volume) <span style="color:#f92672">~</span> Girth, data<span style="color:#f92672">=</span>trees)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">abline</span>(model2, lty<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">summary</span>(model2)
+</span></span></code></pre></div><h3 id="模型预测">模型预测</h3>
 <p>下面根据上述模型计算预测值以及置信区间，predict 函数可以获得模型的预测值，加入参数可以得到预测区间：</p>
-
-<pre><code class="language-R">plot(sqrt(Volume) ~ Girth, data=trees, pch=16, col='red')
-model2 &lt;- lm(sqrt(Volume) ~ Girth, data=trees)
-data.pre &lt;- data.frame(predict(model2, interval='prediction'))
-lines(data.pre$lwr ~ trees$Girth, col='blue', lty=2)
-lines(data.pre$upr ~ trees$Girth, col='blue', lty=2)
-</code></pre>
-
-<p>我们还可以将树围和树高都加入到模型中去，进行多元回归。如果要考虑的变量很多，可以用 <code>step</code> 函数进行变量筛选，它是以 AIC 作为评价指标来判断一个变量是否应该加入模型，建议使用这种自动判断函数时要谨慎。对于嵌套模型，还可以使用 anova 建立方差分析表来比较模型。对于变量变换的形式，则可以使用 MASS 扩展包中的 boxcox 函数来进行 COX 变换。</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">plot</span>(<span style="color:#a6e22e">sqrt</span>(Volume) <span style="color:#f92672">~</span> Girth, data<span style="color:#f92672">=</span>trees, pch<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>, col<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;red&#39;</span>)
+</span></span><span style="display:flex;"><span>model2 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">lm</span>(<span style="color:#a6e22e">sqrt</span>(Volume) <span style="color:#f92672">~</span> Girth, data<span style="color:#f92672">=</span>trees)
+</span></span><span style="display:flex;"><span>data.pre <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">data.frame</span>(<span style="color:#a6e22e">predict</span>(model2, interval<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;prediction&#39;</span>))
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">lines</span>(data.pre<span style="color:#f92672">$</span>lwr <span style="color:#f92672">~</span> trees<span style="color:#f92672">$</span>Girth, col<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;blue&#39;</span>, lty<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">lines</span>(data.pre<span style="color:#f92672">$</span>upr <span style="color:#f92672">~</span> trees<span style="color:#f92672">$</span>Girth, col<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;blue&#39;</span>, lty<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+</span></span></code></pre></div><p>我们还可以将树围和树高都加入到模型中去，进行多元回归。如果要考虑的变量很多，可以用 <code>step</code> 函数进行变量筛选，它是以 AIC 作为评价指标来判断一个变量是否应该加入模型，建议使用这种自动判断函数时要谨慎。对于嵌套模型，还可以使用 anova 建立方差分析表来比较模型。对于变量变换的形式，则可以使用 MASS 扩展包中的 boxcox 函数来进行 COX 变换。</p>
 <h2 id="logistic-回归">Logistic 回归</h2>
-
 <p>让我们用 logistic 回归来结束本系列的内容吧，本文用例来自于 <strong>John Maindonald</strong> 所著的<a href="https://denver.zxproxy.com/browse.php?u=gmeqQFHQTYfvS4VEnZJQdkWPzgpMb4RwO0o9PDyogBex%2BQ%3D%3D&amp;b=6">《Data Analysis and Graphics Using R》</a>一书，其中所用的数据集是 anesthetic，数据集来自于一组医学数据，其中变量 conc 表示麻醉剂的用量，move 则表示手术病人是否有所移动，而我们用 nomove 做为因变量，因为研究的重点在于 conc 的增加是否会使 nomove 的概率增加。</p>
-
 <p>首先载入数据集并读取部分文件，为了观察两个变量之间关系，我们可以利 <code>cdplot</code> 函数来绘制条件密度图。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(DAAG)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">head</span>(anesthetic)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">cdplot</span>(<span style="color:#a6e22e">factor</span>(nomove) <span style="color:#f92672">~</span> conc, data<span style="color:#f92672">=</span>anesthetic, main<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;条件密度图&#39;</span>, ylab<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;病人移动&#39;</span>, xlab<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;麻醉剂量&#39;</span>)
+</span></span></code></pre></div><p>从图中可见，随着麻醉剂量加大，手术病人倾向于静止。下面利用 logistic 回归进行建模，得到<code> intercept</code> 和 <code>conc</code> 的系数为 <code>-6.47</code> 和 <code>5.57</code>，由此可见麻醉剂量超过 <code>1.16(6.47/5.57)</code> 时，病人静止概率超过 50%。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>anes1 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">glm</span>(nomove<span style="color:#f92672">~</span>conc, family<span style="color:#f92672">=</span><span style="color:#a6e22e">binomial</span>(link<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;logit&#39;</span>), data<span style="color:#f92672">=</span>anesthetic)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">summary</span>(anes1)
+</span></span></code></pre></div><p>上面的方法是使用原始的 0-1 数据进行建模, 即每一行数据均表示一个个体，另一种是使用汇总数据进行建模，先将原始数据按下面步骤进行汇总：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>anestot <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">aggregate</span>(anesthetic[,<span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#39;move&#39;</span>, <span style="color:#e6db74">&#39;nomove&#39;</span>)],by <span style="color:#f92672">=</span> <span style="color:#a6e22e">list</span>(conc<span style="color:#f92672">=</span>anesthetic<span style="color:#f92672">$</span>conc),FUN <span style="color:#f92672">=</span> sum)
+</span></span><span style="display:flex;"><span>anestot<span style="color:#f92672">$</span>conc <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">as.numeric</span>(<span style="color:#a6e22e">as.character</span>(anestot<span style="color:#f92672">$</span>conc))
+</span></span><span style="display:flex;"><span>anestot<span style="color:#f92672">$</span>total <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">apply</span>(anestot[,<span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#39;move&#39;</span>, <span style="color:#e6db74">&#39;nomove&#39;</span>)],<span style="color:#ae81ff">1</span>,sum)
+</span></span><span style="display:flex;"><span>anestot<span style="color:#f92672">$</span>prop <span style="color:#f92672">&lt;-</span> anestot<span style="color:#f92672">$</span>nomove <span style="color:#f92672">/</span> anestot<span style="color:#f92672">$</span>total
+</span></span></code></pre></div><p>得到汇总数据 <code>anestot</code> 如下所示：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>  conc move nomove total      prop
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">0.8</span>    <span style="color:#ae81ff">6</span>      <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">7</span> <span style="color:#ae81ff">0.1428571</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span>  <span style="color:#ae81ff">1.0</span>    <span style="color:#ae81ff">4</span>      <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">0.2000000</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span>  <span style="color:#ae81ff">1.2</span>    <span style="color:#ae81ff">2</span>      <span style="color:#ae81ff">4</span>     <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">0.6666667</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">4</span>  <span style="color:#ae81ff">1.4</span>    <span style="color:#ae81ff">2</span>      <span style="color:#ae81ff">4</span>     <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">0.6666667</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">1.6</span>    <span style="color:#ae81ff">0</span>      <span style="color:#ae81ff">4</span>     <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">1.0000000</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">6</span>  <span style="color:#ae81ff">2.5</span>    <span style="color:#ae81ff">0</span>      <span style="color:#ae81ff">2</span>     <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">1.0000000</span>
+</span></span></code></pre></div><p>对于汇总数据，有两种方法可以得到同样的结果，一种是将两种结果的向量合并做为因变量，如 <code>anes2</code> 模型。另一种是将比率做为因变量，总量做为权重进行建模，如 <code>anes3</code> 模型。这两种建模结果是一样的。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>anes2 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">glm</span>(<span style="color:#a6e22e">cbind</span>(nomove,move)<span style="color:#f92672">~</span>conc,family<span style="color:#f92672">=</span><span style="color:#a6e22e">binomial</span>(link<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;logit&#39;</span>),data<span style="color:#f92672">=</span>anestot)
+</span></span><span style="display:flex;"><span>anes3 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">glm</span>(prop<span style="color:#f92672">~</span>conc,family<span style="color:#f92672">=</span><span style="color:#a6e22e">binomial</span>(link<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;logit&#39;</span>),weights<span style="color:#f92672">=</span>total,data<span style="color:#f92672">=</span>anestot)
+</span></span></code></pre></div><p>根据 logistic 模型，我们可以使用 predict 函数来预测结果，下面根据上述模型来绘图：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>x <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">seq</span>(from<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>,to<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>,length.out<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>)
+</span></span><span style="display:flex;"><span>y <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">predict</span>(anes1,<span style="color:#a6e22e">data.frame</span>(conc<span style="color:#f92672">=</span>x),type<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;response&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">plot</span>(prop<span style="color:#f92672">~</span>conc,pch<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>,col<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;red&#39;</span>,data<span style="color:#f92672">=</span>anestot,xlim<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">0.5</span>,<span style="color:#ae81ff">3</span>),main<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Logistic 回归曲线图&#39;</span>,ylab<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;病人静止概率&#39;</span>,xlab<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;麻醉剂量&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">lines</span>(y<span style="color:#f92672">~</span>x,lty<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>,col<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;blue&#39;</span>)
+</span></span></code></pre></div></section>
 
-<pre><code class="language-R">library(DAAG)
-head(anesthetic)
-cdplot(factor(nomove) ~ conc, data=anesthetic, main='条件密度图', ylab='病人移动', xlab='麻醉剂量')
-</code></pre>
-
-<p>从图中可见，随着麻醉剂量加大，手术病人倾向于静止。下面利用 logistic 回归进行建模，得到<code>intercept</code> 和 <code>conc</code> 的系数为 <code>-6.47</code> 和 <code>5.57</code>，由此可见麻醉剂量超过 <code>1.16(6.47/5.57)</code> 时，病人静止概率超过 50%。</p>
-
-<pre><code class="language-R">anes1 &lt;- glm(nomove~conc, family=binomial(link='logit'), data=anesthetic)
-summary(anes1)
-</code></pre>
-
-<p>上面的方法是使用原始的 0-1 数据进行建模, 即每一行数据均表示一个个体，另一种是使用汇总数据进行建模，先将原始数据按下面步骤进行汇总：</p>
-
-<pre><code class="language-R">anestot &lt;- aggregate(anesthetic[,c('move', 'nomove')],by = list(conc=anesthetic$conc),FUN = sum)
-anestot$conc &lt;- as.numeric(as.character(anestot$conc))
-anestot$total &lt;- apply(anestot[,c('move', 'nomove')],1,sum)
-anestot$prop &lt;- anestot$nomove / anestot$total
-</code></pre>
-
-<p>得到汇总数据 <code>anestot</code> 如下所示：</p>
-
-<pre><code class="language-R">  conc move nomove total      prop
-1  0.8    6      1     7 0.1428571
-2  1.0    4      1     5 0.2000000
-3  1.2    2      4     6 0.6666667
-4  1.4    2      4     6 0.6666667
-5  1.6    0      4     4 1.0000000
-6  2.5    0      2     2 1.0000000
-</code></pre>
-
-<p>对于汇总数据，有两种方法可以得到同样的结果，一种是将两种结果的向量合并做为因变量，如 <code>anes2</code> 模型。另一种是将比率做为因变量，总量做为权重进行建模，如 <code>anes3</code> 模型。这两种建模结果是一样的。</p>
-
-<pre><code class="language-R">anes2 &lt;- glm(cbind(nomove,move)~conc,family=binomial(link='logit'),data=anestot)
-anes3 &lt;- glm(prop~conc,family=binomial(link='logit'),weights=total,data=anestot)
-</code></pre>
-
-<p>根据 logistic 模型，我们可以使用 predict 函数来预测结果，下面根据上述模型来绘图：</p>
-
-<pre><code class="language-R">x &lt;- seq(from=0,to=3,length.out=30)
-y &lt;- predict(anes1,data.frame(conc=x),type='response')
-plot(prop~conc,pch=16,col='red',data=anestot,xlim=c(0.5,3),main='Logistic 回归曲线图',ylab='病人静止概率',xlab='麻醉剂量')
-lines(y~x,lty=2,col='blue')
-</code></pre>
-    </div>
-
-    
-    <div class="post-copyright">
-  <p class="copyright-item">
-    <span class="item-title">文章作者</span>
-    <span class="item-content">徐洲阳</span>
-  </p>
-  <p class="copyright-item">
-    <span class="item-title">上次更新</span>
-    <span class="item-content">2018-04-02</span>
-  </p>
   
-  <p class="copyright-item">
-    <span class="item-title">许可协议</span>
-    <span class="item-content"><a rel="license noopener" href="https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License" target="_blank">Creative Commons Attribution-ShareAlike License</a></span>
-  </p>
-</div>
-
+  
+  <footer class="mt-12 flex flex-wrap">
+     
+    <a
+      class="mr-1.5 mb-1.5 rounded-lg bg-black/[3%] px-5 py-2 no-underline dark:bg-white/[8%]"
+      href="https://xzywisdili.com/tags/r-%E8%AF%AD%E8%A8%80"
+      >R 语言</a
+    >
     
-    
-
-    <footer class="post-footer">
-      <div class="post-tags">
-          
-          <a href="/tags/r-%E8%AF%AD%E8%A8%80/">R 语言</a>
-          
-        </div>
-
-      
-      <nav class="post-nav">
-        
-          <a class="prev" href="/post/2018-04-11-rmarkdown02/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">再吹一波 Rmarkdown</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        
-          <a class="next" href="/post/2018-04-02-rsubset/">
-            <span class="next-text nav-default">学习 R 语言里的 subset</span>
-            <span class="next-text nav-mobile">下一篇</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
-        </div>
-        
+  </footer>
   
 
   
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    <a class="flex w-1/2 items-center p-6 pr-3 no-underline" href="https://xzywisdili.com/post/2018-04-11-rmarkdown02/"
+      ><span class="mr-1.5">←</span><span>再吹一波 Rmarkdown</span></a
+    >
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end p-6 pl-3 no-underline"
+      href="https://xzywisdili.com/post/2018-04-02-rsubset/"
+      ><span>学习 R 语言里的 subset</span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
 
-      </div>
+  
+  
+</article>
+
+
     </main>
 
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="mailto:zhouyang.xu@outlook.com" class="iconfont icon-email" title="email"></a>
-      <a href="https://twitter.com/xzywisdili" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="https://weibo.com/u/5253413750" class="iconfont icon-weibo" title="weibo"></a>
-      <a href="https://www.zhihu.com/people/xu-zhou-yang-68/activities" class="iconfont icon-zhihu" title="zhihu"></a>
-      <a href="https://www.douban.com/people/130187249/" class="iconfont icon-douban" title="douban"></a>
-  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    主题 - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  
-
-  <span class="copyright-year">
-    &copy; 
-    
-      2017 - 
-    2019
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">徐洲阳</span>
-  </span>
-</div>
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
-    </div>
+    <footer class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60">
+  <div class="mr-auto">
+    &copy; 2022
+    <a class="link" href="https://xzywisdili.com/">xzy&#39;s blog</a>
   </div>
-  
-<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank">Powered by Hugo️️</a
+  >️
+  <a class="link" href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank"
+    >▷ Paper 6</a
+  >
+</footer>
 
-
-<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
-  <script type="text/javascript">
-    window.MathJax = {
-      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
-      showProcessingMessages: false,
-      messageStyle: 'none'
-    };
-  </script>
-  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-
-
-
-
-
-
-</body>
+  </body>
 </html>

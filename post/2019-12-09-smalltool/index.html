@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="not-ready text-sm lg:text-base" lang="zh-cn">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  
+  <title>工具人时刻 - xzy&#39;s blog</title>
+
+  
+  <meta name="theme-color" />
+  
+  <meta name="description" content="昨天晚上师姐速报：「师弟，帮忙算个东西，用SAS写」。
+一开始对我来说可能不是什么难事，打开文件一看，陷入了深深的沉思。 用一个截图说明：
+每一行代表一个研究对象，每个研究对象有 pm1 到 pm7 这 7 天所接触的 PM2.5 浓度（实际文件里面是 365 天）。 我们需要计算连续 2 天，连续 3 天，&hellip; ，连续 7 天接触 PM2.5 浓度大于 35 的次数。 而且如果连续 3 天接触 PM2.5，那么只能算一次连续 3 天次数，而不能再重复计算连续 2 天次数。 换句话说，这里的每一个连续的天数都必须刚刚好好。
+也许有些写程序的小伙伴会觉得非常好写，但对我来说，想要使用 SAS 解决这个问题，直觉上还是比较费劲的。 昨晚在参加选调生宣讲的时候，就一直在想。回宿舍立马坐下敲了出来。
+首先，导入数据。将数据里每个值和 35 进行比较，先转换成由 0， 1 组成的数据集。 方便下一步的运算。
+DATA example; infile &#34;G:\04_code\PM2.5数据.csv&#34; DSD MISSOVER firstobs=2; input id pm1-pm356; RUN; DATA example_35; set example; array pm {365} pm1-pm365; do i = 1 to 365; pm[i] = pm[i] &gt; 35; end; drop i; RUN; 接下来，就是最关键的部分。 这里是利用 SAS 在 DATA 步读取数据的同时，插入一个循环。 这个循环长度就是 365，把每个研究对象的数据由头读到尾，在读的过程中分析数值 1 的连续情况。" />
+  <meta name="author" content="" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://xzywisdili.com/main.min.css" />
+
+  
+  <script
+    defer
+    src="https://xzywisdili.com/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  <link
+    rel="preload"
+    as="image"
+    href="https://xzywisdili.com/theme.%7B%7B%20if%20site.Params.monoDarkIcon%20%7D%7Dsvg%7B%7B%20else%20%7D%7Dpng%7B%7B%20end%20%7D%7D"
+  />
+
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/bc73d7effd7675f355ff736ececc779a?s=160&amp;d=identicon" />
+  
+  
+
+  
+  <link rel="preload" as="image" href="https://xzywisdili.com/twitter.svg" />
+  
+  <link rel="preload" as="image" href="https://xzywisdili.com/github.svg" />
+  
+
+  
+  <link rel="icon" href="https://xzywisdili.com/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://xzywisdili.com/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="工具人时刻" />
+<meta property="og:description" content="昨天晚上师姐速报：「师弟，帮忙算个东西，用SAS写」。
+一开始对我来说可能不是什么难事，打开文件一看，陷入了深深的沉思。 用一个截图说明：
+每一行代表一个研究对象，每个研究对象有 pm1 到 pm7 这 7 天所接触的 PM2.5 浓度（实际文件里面是 365 天）。 我们需要计算连续 2 天，连续 3 天，&hellip; ，连续 7 天接触 PM2.5 浓度大于 35 的次数。 而且如果连续 3 天接触 PM2.5，那么只能算一次连续 3 天次数，而不能再重复计算连续 2 天次数。 换句话说，这里的每一个连续的天数都必须刚刚好好。
+也许有些写程序的小伙伴会觉得非常好写，但对我来说，想要使用 SAS 解决这个问题，直觉上还是比较费劲的。 昨晚在参加选调生宣讲的时候，就一直在想。回宿舍立马坐下敲了出来。
+首先，导入数据。将数据里每个值和 35 进行比较，先转换成由 0， 1 组成的数据集。 方便下一步的运算。
+DATA example; infile &#34;G:\04_code\PM2.5数据.csv&#34; DSD MISSOVER firstobs=2; input id pm1-pm356; RUN; DATA example_35; set example; array pm {365} pm1-pm365; do i = 1 to 365; pm[i] = pm[i] &gt; 35; end; drop i; RUN; 接下来，就是最关键的部分。 这里是利用 SAS 在 DATA 步读取数据的同时，插入一个循环。 这个循环长度就是 365，把每个研究对象的数据由头读到尾，在读的过程中分析数值 1 的连续情况。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xzywisdili.com/post/2019-12-09-smalltool/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2019-12-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-12-09T00:00:00+00:00" />
+
+
+  
+  <meta itemprop="name" content="工具人时刻">
+<meta itemprop="description" content="昨天晚上师姐速报：「师弟，帮忙算个东西，用SAS写」。
+一开始对我来说可能不是什么难事，打开文件一看，陷入了深深的沉思。 用一个截图说明：
+每一行代表一个研究对象，每个研究对象有 pm1 到 pm7 这 7 天所接触的 PM2.5 浓度（实际文件里面是 365 天）。 我们需要计算连续 2 天，连续 3 天，&hellip; ，连续 7 天接触 PM2.5 浓度大于 35 的次数。 而且如果连续 3 天接触 PM2.5，那么只能算一次连续 3 天次数，而不能再重复计算连续 2 天次数。 换句话说，这里的每一个连续的天数都必须刚刚好好。
+也许有些写程序的小伙伴会觉得非常好写，但对我来说，想要使用 SAS 解决这个问题，直觉上还是比较费劲的。 昨晚在参加选调生宣讲的时候，就一直在想。回宿舍立马坐下敲了出来。
+首先，导入数据。将数据里每个值和 35 进行比较，先转换成由 0， 1 组成的数据集。 方便下一步的运算。
+DATA example; infile &#34;G:\04_code\PM2.5数据.csv&#34; DSD MISSOVER firstobs=2; input id pm1-pm356; RUN; DATA example_35; set example; array pm {365} pm1-pm365; do i = 1 to 365; pm[i] = pm[i] &gt; 35; end; drop i; RUN; 接下来，就是最关键的部分。 这里是利用 SAS 在 DATA 步读取数据的同时，插入一个循环。 这个循环长度就是 365，把每个研究对象的数据由头读到尾，在读的过程中分析数值 1 的连续情况。"><meta itemprop="datePublished" content="2019-12-09T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-12-09T00:00:00+00:00" />
+<meta itemprop="wordCount" content="240">
+<meta itemprop="keywords" content="SAS,编程," />
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="工具人时刻"/>
+<meta name="twitter:description" content="昨天晚上师姐速报：「师弟，帮忙算个东西，用SAS写」。
+一开始对我来说可能不是什么难事，打开文件一看，陷入了深深的沉思。 用一个截图说明：
+每一行代表一个研究对象，每个研究对象有 pm1 到 pm7 这 7 天所接触的 PM2.5 浓度（实际文件里面是 365 天）。 我们需要计算连续 2 天，连续 3 天，&hellip; ，连续 7 天接触 PM2.5 浓度大于 35 的次数。 而且如果连续 3 天接触 PM2.5，那么只能算一次连续 3 天次数，而不能再重复计算连续 2 天次数。 换句话说，这里的每一个连续的天数都必须刚刚好好。
+也许有些写程序的小伙伴会觉得非常好写，但对我来说，想要使用 SAS 解决这个问题，直觉上还是比较费劲的。 昨晚在参加选调生宣讲的时候，就一直在想。回宿舍立马坐下敲了出来。
+首先，导入数据。将数据里每个值和 35 进行比较，先转换成由 0， 1 组成的数据集。 方便下一步的运算。
+DATA example; infile &#34;G:\04_code\PM2.5数据.csv&#34; DSD MISSOVER firstobs=2; input id pm1-pm356; RUN; DATA example_35; set example; array pm {365} pm1-pm365; do i = 1 to 365; pm[i] = pm[i] &gt; 35; end; drop i; RUN; 接下来，就是最关键的部分。 这里是利用 SAS 在 DATA 步读取数据的同时，插入一个循环。 这个循环长度就是 365，把每个研究对象的数据由头读到尾，在读的过程中分析数值 1 的连续情况。"/>
+
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a class="-translate-x-[1px] -translate-y-0.5 text-3xl font-bold" href="https://xzywisdili.com/"
+      >xzy&#39;s blog</a
+    >
+    <a
+      class="btn-dark ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+    ></a>
+  </div>
+
+  <a
+    class="btn-menu relative z-50 -mr-8 flex h-[5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+  ></a>
+
+  <script>
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => htmlClass.remove('not-ready'), 10);
+
+    const setDark = (newDark) => {
+      metaTheme.setAttribute('content', newDark ? '#000' : '#fbfbfb');
+      htmlClass[newDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', newDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkVal = localStorage.getItem('dark');
+    setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:mt-0 lg:ml-12 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./twitter.svg)"
+        href=" https://twitter.com/xzywisdili "
+        target="_blank"
+      ></a>
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href=" https://github.com/github.com/xzywisdili "
+        target="_blank"
+      ></a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-20 pb-32 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-20">
+    <h1 class="!my-0 pb-2.5">工具人时刻</h1>
+
+    
+    <div class="text-sm opacity-60">
+      
+      <time>Dec 9, 2019</time>
+      
+      
+    </div>
+    
+  </header>
+
+  <section><p>昨天晚上师姐速报：「师弟，帮忙算个东西，用SAS写」。</p>
+<p>一开始对我来说可能不是什么难事，打开文件一看，陷入了深深的沉思。
+用一个截图说明：</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1g9qkc9s187j30pd0nlgqq.jpg" alt=""></p>
+<p>每一行代表一个研究对象，每个研究对象有 pm1 到 pm7 这 7 天所接触的 PM2.5 浓度（实际文件里面是 365 天）。
+我们需要计算连续 2 天，连续 3 天，&hellip; ，连续 7 天接触 PM2.5 浓度大于 35 的次数。
+而且如果连续 3 天接触 PM2.5，那么只能算一次连续 3 天次数，而不能再重复计算连续 2 天次数。
+换句话说，这里的每一个连续的天数都必须刚刚好好。</p>
+<p>也许有些写程序的小伙伴会觉得非常好写，但对我来说，想要使用 SAS 解决这个问题，直觉上还是比较费劲的。
+昨晚在参加选调生宣讲的时候，就一直在想。回宿舍立马坐下敲了出来。</p>
+<p>首先，导入数据。将数据里每个值和 35 进行比较，先转换成由 0， 1 组成的数据集。
+方便下一步的运算。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SAS" data-lang="SAS"><span style="display:flex;"><span><span style="color:#66d9ef">DATA </span>example;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">infile</span> <span style="color:#e6db74">&#34;G:\04_code\PM2.5数据.csv&#34;</span> DSD MISSOVER firstobs=<span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">input</span> id pm1-pm356<span style="color:#66d9ef">;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">RUN;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">DATA </span>example_35;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">set</span> example;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">array</span> pm {<span style="color:#ae81ff">365</span>} pm1-pm365;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">do</span> i = <span style="color:#ae81ff">1</span> to <span style="color:#ae81ff">365</span>;
+</span></span><span style="display:flex;"><span>		pm[i] = pm[i] &gt; <span style="color:#ae81ff">35</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">end</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">drop</span> i<span style="color:#66d9ef">;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">RUN;</span>
+</span></span></code></pre></div><p>接下来，就是最关键的部分。
+这里是利用 SAS 在 DATA 步读取数据的同时，插入一个循环。
+这个循环长度就是 365，把每个研究对象的数据由头读到尾，在读的过程中分析数值 1 的连续情况。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SAS" data-lang="SAS"><span style="display:flex;"><span><span style="color:#66d9ef">DATA </span>PM_days(<span style="color:#66d9ef">keep</span>=id day2 day3 day4 day5 day6 day7);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">set</span> example_35;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">array</span> pm {<span style="color:#ae81ff">365</span>} pm1-pm365;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">do</span> i = <span style="color:#ae81ff">1</span> to <span style="color:#ae81ff">365</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> pm[i] eq <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">then</span> <span style="color:#66d9ef">do</span>;
+</span></span><span style="display:flex;"><span>			count<span style="color:#ae81ff">+1</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">end</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> pm[i] eq <span style="color:#ae81ff">0</span> | i eq <span style="color:#ae81ff">365</span> <span style="color:#66d9ef">then</span> <span style="color:#66d9ef">do</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> count eq <span style="color:#ae81ff">2</span> <span style="color:#66d9ef">then</span> day2<span style="color:#ae81ff">+1</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> count eq <span style="color:#ae81ff">3</span> <span style="color:#66d9ef">then</span> day3<span style="color:#ae81ff">+1</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> count eq <span style="color:#ae81ff">4</span> <span style="color:#66d9ef">then</span> day4<span style="color:#ae81ff">+1</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> count eq <span style="color:#ae81ff">5</span> <span style="color:#66d9ef">then</span> day5<span style="color:#ae81ff">+1</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> count eq <span style="color:#ae81ff">6</span> <span style="color:#66d9ef">then</span> day6<span style="color:#ae81ff">+1</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> count eq <span style="color:#ae81ff">7</span> <span style="color:#66d9ef">then</span> day7<span style="color:#ae81ff">+1</span>;
+</span></span><span style="display:flex;"><span>			count = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>			
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> i eq <span style="color:#ae81ff">356</span> <span style="color:#66d9ef">then</span> <span style="color:#66d9ef">do</span>;
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">output</span>;
+</span></span><span style="display:flex;"><span>				day2 = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>				day3 = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>				day4 = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>				day5 = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>				day6 = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>				day7 = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">end</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">end</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">end</span><span style="color:#66d9ef">;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">RUN;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">PROC SQL;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">create</span> <span style="color:#66d9ef">table</span> PM_result <span style="color:#66d9ef">as</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">select</span> *
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">from</span> example, PM_days
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">where</span> example<span style="color:#ae81ff">.</span>id = PM_days<span style="color:#ae81ff">.</span>id<span style="color:#66d9ef">;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">quit;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">PROC PRINT </span>data=PM_result(obs=<span style="color:#ae81ff">10</span>)<span style="color:#66d9ef">;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">RUN;</span>
+</span></span></code></pre></div><p>说实话，这段代码写下来还真有点 C 语言的感觉。
+当然在循环中，对于 day2-day7 的操控和赋值可能还有改进的空间，即把这些变量也编入一个数组。
+但既然只要求到了最多 7 天，这样其实也足够了。</p>
+<p>最后赶在 10 点之前，交给了师姐，师姐表示很欣慰。
+不过，我同样感受到了 SAS 实在是一种充满个性的数据分析语言。
+打个比方，写 python 和 R 像是骑马，写 SAS 就像骑河马。
+而且，此时此刻最让我难受的是，Markdown 也和河马过不去。</p>
+</section>
+
+  
+  
+  <footer class="mt-12 flex flex-wrap">
+     
+    <a
+      class="mr-1.5 mb-1.5 rounded-lg bg-black/[3%] px-5 py-2 no-underline dark:bg-white/[8%]"
+      href="https://xzywisdili.com/tags/sas"
+      >SAS</a
+    >
+     
+    <a
+      class="mr-1.5 mb-1.5 rounded-lg bg-black/[3%] px-5 py-2 no-underline dark:bg-white/[8%]"
+      href="https://xzywisdili.com/tags/%E7%BC%96%E7%A8%8B"
+      >编程</a
+    >
+    
+  </footer>
+  
+
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    <a class="flex w-1/2 items-center p-6 pr-3 no-underline" href="https://xzywisdili.com/post/2019-12-29-annualsummary/"
+      ><span class="mr-1.5">←</span><span>2019 年度总结</span></a
+    >
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end p-6 pl-3 no-underline"
+      href="https://xzywisdili.com/post/2019-12-04-whathaveidone/"
+      ><span>最近我都做了些什么</span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+
+  
+  
+</article>
+
+
+    </main>
+
+    <footer class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60">
+  <div class="mr-auto">
+    &copy; 2022
+    <a class="link" href="https://xzywisdili.com/">xzy&#39;s blog</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank">Powered by Hugo️️</a
+  >️
+  <a class="link" href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank"
+    >▷ Paper 6</a
+  >
+</footer>
+
+  </body>
+</html>

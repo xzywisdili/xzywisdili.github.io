@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="not-ready text-sm lg:text-base" lang="zh-cn">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  
+  <title>最近我都做了些什么 - xzy&#39;s blog</title>
+
+  
+  <meta name="theme-color" />
+  
+  <meta name="description" content="时间匆匆忙忙到了 2019 年的 12 月，我自己也是匆匆忙忙的事情。至于即将到来的年终总结什么的，就随缘了。 最近忙的事，既然暂时告一段落，就有必要开个博客总结一下。 所以这一篇可能内容会比较杂乱反复。
+地图和 shiny 玩出新花样 在 shiny 中，选择想要绘制的美国州名，再单独绘制这一个州的情况，达到如下图的效果：
+当然，在众多的美国地图文件中，如果选择边缘没有那么精细的版本，就能让渲染速度更快一点。 shiny 实在是一个好用好玩的东西。
+R 也能写简单的网络爬虫？ 有一个项目是需要整理 2015 到 16 赛季 nba 球员的场均得分、场均助攻等数据。 我们可以直接在 篮球数据网站 进行爬取。 这事本来比较适合直接拿 python 跑，但出于一些原因，还是得用 R。 但意外地发现，其实也不是特别复杂，解析，xpath 查找也都不在话下，核心爬取部分也就不到 30 行代码。
+library(tidyverse) library(xml2) # 得到某个球员的查询地址 # 举例，输入&#34;Derrick Rose&#34;，函数返回&#34;/players/r/rosede01.html&#34; get_player_url &lt;- function(player_name) { query_url &lt;- &#34;https://www.basketball-reference.com/search/search.fcgi?hint=&amp;search=&#34; url &lt;- paste0(query_url, str_replace(player_name, &#34; &#34;, &#34;%20&#34;)) player_url &lt;- url %&gt;% read_html() %&gt;% html_nodes(xpath=&#39;//div[contains(@class, &#34;search-item-url&#34;)]&#39;) %&gt;% html_text() return(player_url[1]) } # 得到某个球员的数据 # 举例：输入&#34;Derrick Rose&#34;，函数返回该球员相关的 Age, Tm等等数据 get_player_data &lt;- function(player_name) { print(player_name) base_url &lt;- &#34;https://www." />
+  <meta name="author" content="" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://xzywisdili.com/main.min.css" />
+
+  
+  <script
+    defer
+    src="https://xzywisdili.com/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  <link
+    rel="preload"
+    as="image"
+    href="https://xzywisdili.com/theme.%7B%7B%20if%20site.Params.monoDarkIcon%20%7D%7Dsvg%7B%7B%20else%20%7D%7Dpng%7B%7B%20end%20%7D%7D"
+  />
+
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/bc73d7effd7675f355ff736ececc779a?s=160&amp;d=identicon" />
+  
+  
+
+  
+  <link rel="preload" as="image" href="https://xzywisdili.com/twitter.svg" />
+  
+  <link rel="preload" as="image" href="https://xzywisdili.com/github.svg" />
+  
+
+  
+  <link rel="icon" href="https://xzywisdili.com/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://xzywisdili.com/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="最近我都做了些什么" />
+<meta property="og:description" content="时间匆匆忙忙到了 2019 年的 12 月，我自己也是匆匆忙忙的事情。至于即将到来的年终总结什么的，就随缘了。 最近忙的事，既然暂时告一段落，就有必要开个博客总结一下。 所以这一篇可能内容会比较杂乱反复。
+地图和 shiny 玩出新花样 在 shiny 中，选择想要绘制的美国州名，再单独绘制这一个州的情况，达到如下图的效果：
+当然，在众多的美国地图文件中，如果选择边缘没有那么精细的版本，就能让渲染速度更快一点。 shiny 实在是一个好用好玩的东西。
+R 也能写简单的网络爬虫？ 有一个项目是需要整理 2015 到 16 赛季 nba 球员的场均得分、场均助攻等数据。 我们可以直接在 篮球数据网站 进行爬取。 这事本来比较适合直接拿 python 跑，但出于一些原因，还是得用 R。 但意外地发现，其实也不是特别复杂，解析，xpath 查找也都不在话下，核心爬取部分也就不到 30 行代码。
+library(tidyverse) library(xml2) # 得到某个球员的查询地址 # 举例，输入&#34;Derrick Rose&#34;，函数返回&#34;/players/r/rosede01.html&#34; get_player_url &lt;- function(player_name) { query_url &lt;- &#34;https://www.basketball-reference.com/search/search.fcgi?hint=&amp;search=&#34; url &lt;- paste0(query_url, str_replace(player_name, &#34; &#34;, &#34;%20&#34;)) player_url &lt;- url %&gt;% read_html() %&gt;% html_nodes(xpath=&#39;//div[contains(@class, &#34;search-item-url&#34;)]&#39;) %&gt;% html_text() return(player_url[1]) } # 得到某个球员的数据 # 举例：输入&#34;Derrick Rose&#34;，函数返回该球员相关的 Age, Tm等等数据 get_player_data &lt;- function(player_name) { print(player_name) base_url &lt;- &#34;https://www." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xzywisdili.com/post/2019-12-04-whathaveidone/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2019-12-04T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-12-04T00:00:00+00:00" />
+
+
+  
+  <meta itemprop="name" content="最近我都做了些什么">
+<meta itemprop="description" content="时间匆匆忙忙到了 2019 年的 12 月，我自己也是匆匆忙忙的事情。至于即将到来的年终总结什么的，就随缘了。 最近忙的事，既然暂时告一段落，就有必要开个博客总结一下。 所以这一篇可能内容会比较杂乱反复。
+地图和 shiny 玩出新花样 在 shiny 中，选择想要绘制的美国州名，再单独绘制这一个州的情况，达到如下图的效果：
+当然，在众多的美国地图文件中，如果选择边缘没有那么精细的版本，就能让渲染速度更快一点。 shiny 实在是一个好用好玩的东西。
+R 也能写简单的网络爬虫？ 有一个项目是需要整理 2015 到 16 赛季 nba 球员的场均得分、场均助攻等数据。 我们可以直接在 篮球数据网站 进行爬取。 这事本来比较适合直接拿 python 跑，但出于一些原因，还是得用 R。 但意外地发现，其实也不是特别复杂，解析，xpath 查找也都不在话下，核心爬取部分也就不到 30 行代码。
+library(tidyverse) library(xml2) # 得到某个球员的查询地址 # 举例，输入&#34;Derrick Rose&#34;，函数返回&#34;/players/r/rosede01.html&#34; get_player_url &lt;- function(player_name) { query_url &lt;- &#34;https://www.basketball-reference.com/search/search.fcgi?hint=&amp;search=&#34; url &lt;- paste0(query_url, str_replace(player_name, &#34; &#34;, &#34;%20&#34;)) player_url &lt;- url %&gt;% read_html() %&gt;% html_nodes(xpath=&#39;//div[contains(@class, &#34;search-item-url&#34;)]&#39;) %&gt;% html_text() return(player_url[1]) } # 得到某个球员的数据 # 举例：输入&#34;Derrick Rose&#34;，函数返回该球员相关的 Age, Tm等等数据 get_player_data &lt;- function(player_name) { print(player_name) base_url &lt;- &#34;https://www."><meta itemprop="datePublished" content="2019-12-04T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-12-04T00:00:00+00:00" />
+<meta itemprop="wordCount" content="181">
+<meta itemprop="keywords" content="R 语言,可视化," />
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="最近我都做了些什么"/>
+<meta name="twitter:description" content="时间匆匆忙忙到了 2019 年的 12 月，我自己也是匆匆忙忙的事情。至于即将到来的年终总结什么的，就随缘了。 最近忙的事，既然暂时告一段落，就有必要开个博客总结一下。 所以这一篇可能内容会比较杂乱反复。
+地图和 shiny 玩出新花样 在 shiny 中，选择想要绘制的美国州名，再单独绘制这一个州的情况，达到如下图的效果：
+当然，在众多的美国地图文件中，如果选择边缘没有那么精细的版本，就能让渲染速度更快一点。 shiny 实在是一个好用好玩的东西。
+R 也能写简单的网络爬虫？ 有一个项目是需要整理 2015 到 16 赛季 nba 球员的场均得分、场均助攻等数据。 我们可以直接在 篮球数据网站 进行爬取。 这事本来比较适合直接拿 python 跑，但出于一些原因，还是得用 R。 但意外地发现，其实也不是特别复杂，解析，xpath 查找也都不在话下，核心爬取部分也就不到 30 行代码。
+library(tidyverse) library(xml2) # 得到某个球员的查询地址 # 举例，输入&#34;Derrick Rose&#34;，函数返回&#34;/players/r/rosede01.html&#34; get_player_url &lt;- function(player_name) { query_url &lt;- &#34;https://www.basketball-reference.com/search/search.fcgi?hint=&amp;search=&#34; url &lt;- paste0(query_url, str_replace(player_name, &#34; &#34;, &#34;%20&#34;)) player_url &lt;- url %&gt;% read_html() %&gt;% html_nodes(xpath=&#39;//div[contains(@class, &#34;search-item-url&#34;)]&#39;) %&gt;% html_text() return(player_url[1]) } # 得到某个球员的数据 # 举例：输入&#34;Derrick Rose&#34;，函数返回该球员相关的 Age, Tm等等数据 get_player_data &lt;- function(player_name) { print(player_name) base_url &lt;- &#34;https://www."/>
+
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a class="-translate-x-[1px] -translate-y-0.5 text-3xl font-bold" href="https://xzywisdili.com/"
+      >xzy&#39;s blog</a
+    >
+    <a
+      class="btn-dark ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+    ></a>
+  </div>
+
+  <a
+    class="btn-menu relative z-50 -mr-8 flex h-[5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+  ></a>
+
+  <script>
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => htmlClass.remove('not-ready'), 10);
+
+    const setDark = (newDark) => {
+      metaTheme.setAttribute('content', newDark ? '#000' : '#fbfbfb');
+      htmlClass[newDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', newDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkVal = localStorage.getItem('dark');
+    setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:mt-0 lg:ml-12 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./twitter.svg)"
+        href=" https://twitter.com/xzywisdili "
+        target="_blank"
+      ></a>
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href=" https://github.com/github.com/xzywisdili "
+        target="_blank"
+      ></a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-20 pb-32 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-20">
+    <h1 class="!my-0 pb-2.5">最近我都做了些什么</h1>
+
+    
+    <div class="text-sm opacity-60">
+      
+      <time>Dec 4, 2019</time>
+      
+      
+    </div>
+    
+  </header>
+
+  <section><p>时间匆匆忙忙到了 2019 年的 12 月，我自己也是匆匆忙忙的事情。至于即将到来的年终总结什么的，就随缘了。
+最近忙的事，既然暂时告一段落，就有必要开个博客总结一下。
+所以这一篇可能内容会比较杂乱反复。</p>
+<h2 id="地图和-shiny-玩出新花样">地图和 shiny 玩出新花样</h2>
+<p>在 <code>shiny</code> 中，选择想要绘制的美国州名，再单独绘制这一个州的情况，达到如下图的效果：</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1g9kp01ds5wj31nh0u0q5d.jpg" alt=""></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1g9kp0jfndbj31rc0tuju4.jpg" alt=""></p>
+<p>当然，在众多的美国地图文件中，如果选择边缘没有那么精细的版本，就能让渲染速度更快一点。
+shiny 实在是一个好用好玩的东西。</p>
+<h2 id="r-也能写简单的网络爬虫">R 也能写简单的网络爬虫？</h2>
+<p>有一个项目是需要整理 2015 到 16 赛季 nba 球员的场均得分、场均助攻等数据。
+我们可以直接在 <a href="https://www.basketball-reference.com">篮球数据网站</a> 进行爬取。
+这事本来比较适合直接拿 <code>python</code> 跑，但出于一些原因，还是得用 R。
+但意外地发现，其实也不是特别复杂，解析，xpath 查找也都不在话下，核心爬取部分也就不到 30 行代码。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(tidyverse)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(xml2)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 得到某个球员的查询地址</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 举例，输入&#34;Derrick Rose&#34;，函数返回&#34;/players/r/rosede01.html&#34;</span>
+</span></span><span style="display:flex;"><span>get_player_url <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(player_name) {
+</span></span><span style="display:flex;"><span>  query_url <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#34;https://www.basketball-reference.com/search/search.fcgi?hint=&amp;search=&#34;</span>
+</span></span><span style="display:flex;"><span>  url <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">paste0</span>(query_url, <span style="color:#a6e22e">str_replace</span>(player_name, <span style="color:#e6db74">&#34; &#34;</span>, <span style="color:#e6db74">&#34;%20&#34;</span>))
+</span></span><span style="display:flex;"><span>  player_url <span style="color:#f92672">&lt;-</span> url <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">read_html</span>() <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">html_nodes</span>(xpath<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;//div[contains(@class, &#34;search-item-url&#34;)]&#39;</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">html_text</span>()
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">return</span>(player_url[1])
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 得到某个球员的数据</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 举例：输入&#34;Derrick Rose&#34;，函数返回该球员相关的 Age, Tm等等数据</span>
+</span></span><span style="display:flex;"><span>get_player_data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(player_name) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">print</span>(player_name)
+</span></span><span style="display:flex;"><span>  base_url <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#34;https://www.basketball-reference.com&#34;</span>
+</span></span><span style="display:flex;"><span>  player_url <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">get_player_url</span>(player_name)
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">if </span>(<span style="color:#a6e22e">is.na</span>(player_url)) {url <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">paste0</span>(base_url, <span style="color:#e6db74">&#34;/search/search.fcgi?hint=&amp;search=&#34;</span>,
+</span></span><span style="display:flex;"><span>                                       <span style="color:#a6e22e">str_replace</span>(player_name, <span style="color:#e6db74">&#34; &#34;</span>, <span style="color:#e6db74">&#34;%20&#34;</span>))}
+</span></span><span style="display:flex;"><span>  else {url <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">paste0</span>(base_url, <span style="color:#a6e22e">get_player_url</span>(player_name))}
+</span></span><span style="display:flex;"><span>  player_data <span style="color:#f92672">&lt;-</span> url <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">read_html</span>() <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">html_table</span>() <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>    .[[1]] <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">filter</span>(Season <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;2015-16&#34;</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">select</span>(Season, Age, Tm, Pos, PTS, AST, TRB, STL, BLK, FG, FT, TOV) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">mutate</span>(Player <span style="color:#f92672">=</span> player_name)
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">return</span>(player_data)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="病例和对照的匹配">病例和对照的匹配</h2>
+<p>在病例对照研究中，对于一定数量的病例，要在对照组中选择一定比例的对象作为对照，这个过程叫做匹配（Match）。
+而匹配一般会以性别，年龄等特征作为变量。
+这次的匹配任务是使用年龄进行匹配，但查了网上的一些资料，大都是你要用什么什么，很少告诉你怎么用的。
+自己操练了以下，用 <code>MatchIt</code> 可太简单了：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(MatchIt)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 匹配</span>
+</span></span><span style="display:flex;"><span>match_it <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matchit</span>(group<span style="color:#f92672">~</span>年龄, data<span style="color:#f92672">=</span>data, method<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nearest&#34;</span>, ratio<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>a <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">summary</span>(match_it)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 提取匹配好的数据</span>
+</span></span><span style="display:flex;"><span>df_match <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">as_tibble</span>(<span style="color:#a6e22e">match.data</span>(match_it)[1<span style="color:#f92672">:</span><span style="color:#a6e22e">ncol</span>(data)])
+</span></span></code></pre></div><p>各种选项和奥秘都在 <code>matchit</code> 函数中，包括 <code>method</code>，<code>ratio</code> 等等。</p>
+<h2 id="荒野大镖客2的游玩体验">荒野大镖客2的游玩体验</h2>
+<p>这周通关了Rockstar Games 的新作 荒野大镖客2 的一周目。
+本来应该专门用一篇博客来聊一些通关的感想，但是看到网路上已经有不少文章，各种深度，各种角度都有。
+自己就也不用煞有介事地再去聊了。</p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1g9ko1pmhckj30xc0dwtcj.jpg" alt=""></p>
+<p>对我而言，R星最大的特质在于他会让你关注社会，关注现实。
+纵观几部作品，表面上看，他在打造一个越来越真实，细节越来越丰富的开放世界。
+但是从剧本层面来讲，他通过游戏让你：认识你自己、关注社会的现状和趋势、找到自己的归宿。</p>
+<p>比如亚瑟，是一个忠心耿耿的帮派打手，同时又具有情感和正义感的西部牛仔。
+而美国文明和秩序的边界在不断向西部扩张，传统的牛仔和帮派文化注定走下历史舞台。
+无论亚瑟如何反抗，都不可避免地成为牺牲。
+在这个无比悲壮的故事背后，可以看到R星一直以来对美国历史和社会的观察，而非仅仅把玩家从现实世界抽离。
+R星之于育碧，小丑之于漫威，都是一样的道理，我喜欢讨论现实的东西。</p>
+<p>另外，最近还做了一个时间序列分析，但没有时间写了。另外，新开了游戏《纪元1800》，这游戏简直太上头了。
+连续两天玩到快两点，今天不能再这样了。</p>
+</section>
+
+  
+  
+  <footer class="mt-12 flex flex-wrap">
+     
+    <a
+      class="mr-1.5 mb-1.5 rounded-lg bg-black/[3%] px-5 py-2 no-underline dark:bg-white/[8%]"
+      href="https://xzywisdili.com/tags/r-%E8%AF%AD%E8%A8%80"
+      >R 语言</a
+    >
+     
+    <a
+      class="mr-1.5 mb-1.5 rounded-lg bg-black/[3%] px-5 py-2 no-underline dark:bg-white/[8%]"
+      href="https://xzywisdili.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96"
+      >可视化</a
+    >
+    
+  </footer>
+  
+
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    <a class="flex w-1/2 items-center p-6 pr-3 no-underline" href="https://xzywisdili.com/post/2019-12-09-smalltool/"
+      ><span class="mr-1.5">←</span><span>工具人时刻</span></a
+    >
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end p-6 pl-3 no-underline"
+      href="https://xzywisdili.com/post/2019-11-18-rmap2/"
+      ><span>我在 R 里画地图（二）</span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+
+  
+  
+</article>
+
+
+    </main>
+
+    <footer class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60">
+  <div class="mr-auto">
+    &copy; 2022
+    <a class="link" href="https://xzywisdili.com/">xzy&#39;s blog</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank">Powered by Hugo️️</a
+  >️
+  <a class="link" href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank"
+    >▷ Paper 6</a
+  >
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="not-ready text-sm lg:text-base" lang="zh-cn">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  
+  <title>一周总结（8.26-9.1） - xzy&#39;s blog</title>
+
+  
+  <meta name="theme-color" />
+  
+  <meta name="description" content="今年已经步入了9月，也正式宣告这个“伪暑假”的落幕，新的学期就要开始了。之所以说是“伪暑假”，着实是因为自己没给自己放假，整整一个暑假都在实习。不过整个实习安排还好，从早上9点工作到下午5点半，倒不算特别辛苦，但是每天大部分时间也算投资在工作上面了。
+工作纪实 回顾这一周，似乎也没有做太多事情：
+过了一遍 python 的 numpy 和 pandas 包 和科研项目组里的服务器斗智斗勇，更新了一版小程序 整理了中国气象和污染物的数据 钻研出了绘制正规中国热力地图的画法 剩下时间都用来跑 SAS 代码了（这个 HPV 的项目已经让我整整心累了 3 周） 读了 1 本书，看了若干美剧和电影 庆祝曹老板考上清华，又欢迎马老板从东京归来 尝了一次味千家的葱油拌面（我感觉真的挺好吃的，里面的蛤挺鲜） 入手了 Sony 的 WH1000 XM3，第一次体会到了降噪耳机的强大之处 因为公司就在学校宿舍旁边，早上和晚上也就是骑车子往返，虽说方便，但倒是少了通勤时候安安静静看书的时间。这直接导致我这一周的第二本书拖拖拉拉，还没有读完。可能每天也只有在运行 SAS 代码和睡觉前能瞥上两眼，仔细想想这样的自己也是有点好笑。
+审视与敲打 实话实说，每天去实习之前，我总要花费不少的时间浏览端传媒，少数派 和 自己订阅的 今日热榜。这些井喷式的新闻和八卦究竟对我们是否有所裨益这个问题我没有想明白，但是我知道的是我特别特别喜欢看，一天不看心里就会发痒。这样网站的设计者千方百计地延长我们的在线时间，我也不止一次再各处看到有人提倡“远离一切瀑布流的社交媒体”。虽然心里认同这样的理念，但我却从没有一次真正戒除过。我决心，至少完成一天额定的工作之后，再浏览各类咨询。说不定累了之后就不想看了。
+在工作中比较困惑的地方在于，如何进行文件的存档管理。每天由于不停地重新跑程序，数据更新迭代也比较快。而数据又经常通过word文档和excel表格进行上交和分享。众所周知，git 是不适用于传统的word和excel的，因此就需要使用比较传统的方法：在文件名上标注作者、日期和版本号。这样下来，本地就会堆积不少的各种版本文件，实在令人难以处理。下周我要花一定的时间，哪怕抽出半天的时间好好检查和整理一下现在的文件。还要整理扔在有道云里面的各种来源的笔记。
+另一点令我不满的是，现在的生活可以说几乎是 100% 的“坐立生活”。白天久坐一天之后，到了晚上也没有精力去运动，也是坐在宿舍里，这样导致我自己更没有精神。这样长久会形成一种恶性循环，加剧自己的腰背疼痛的问题。因此，我在考虑要不要购置一把更舒服的椅子或者靠垫，然后抽出时间开始运动。白天坐着不动一段时间之后一定要起身一段时间，舒展舒展。
+新学期即将开学，不知道还能实习多久，不过珍惜每一天。" />
+  <meta name="author" content="" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://xzywisdili.com/main.min.css" />
+
+  
+  <script
+    defer
+    src="https://xzywisdili.com/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  <link
+    rel="preload"
+    as="image"
+    href="https://xzywisdili.com/theme.%7B%7B%20if%20site.Params.monoDarkIcon%20%7D%7Dsvg%7B%7B%20else%20%7D%7Dpng%7B%7B%20end%20%7D%7D"
+  />
+
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/bc73d7effd7675f355ff736ececc779a?s=160&amp;d=identicon" />
+  
+  
+
+  
+  <link rel="preload" as="image" href="https://xzywisdili.com/twitter.svg" />
+  
+  <link rel="preload" as="image" href="https://xzywisdili.com/github.svg" />
+  
+
+  
+  <link rel="icon" href="https://xzywisdili.com/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://xzywisdili.com/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="一周总结（8.26-9.1）" />
+<meta property="og:description" content="今年已经步入了9月，也正式宣告这个“伪暑假”的落幕，新的学期就要开始了。之所以说是“伪暑假”，着实是因为自己没给自己放假，整整一个暑假都在实习。不过整个实习安排还好，从早上9点工作到下午5点半，倒不算特别辛苦，但是每天大部分时间也算投资在工作上面了。
+工作纪实 回顾这一周，似乎也没有做太多事情：
+过了一遍 python 的 numpy 和 pandas 包 和科研项目组里的服务器斗智斗勇，更新了一版小程序 整理了中国气象和污染物的数据 钻研出了绘制正规中国热力地图的画法 剩下时间都用来跑 SAS 代码了（这个 HPV 的项目已经让我整整心累了 3 周） 读了 1 本书，看了若干美剧和电影 庆祝曹老板考上清华，又欢迎马老板从东京归来 尝了一次味千家的葱油拌面（我感觉真的挺好吃的，里面的蛤挺鲜） 入手了 Sony 的 WH1000 XM3，第一次体会到了降噪耳机的强大之处 因为公司就在学校宿舍旁边，早上和晚上也就是骑车子往返，虽说方便，但倒是少了通勤时候安安静静看书的时间。这直接导致我这一周的第二本书拖拖拉拉，还没有读完。可能每天也只有在运行 SAS 代码和睡觉前能瞥上两眼，仔细想想这样的自己也是有点好笑。
+审视与敲打 实话实说，每天去实习之前，我总要花费不少的时间浏览端传媒，少数派 和 自己订阅的 今日热榜。这些井喷式的新闻和八卦究竟对我们是否有所裨益这个问题我没有想明白，但是我知道的是我特别特别喜欢看，一天不看心里就会发痒。这样网站的设计者千方百计地延长我们的在线时间，我也不止一次再各处看到有人提倡“远离一切瀑布流的社交媒体”。虽然心里认同这样的理念，但我却从没有一次真正戒除过。我决心，至少完成一天额定的工作之后，再浏览各类咨询。说不定累了之后就不想看了。
+在工作中比较困惑的地方在于，如何进行文件的存档管理。每天由于不停地重新跑程序，数据更新迭代也比较快。而数据又经常通过word文档和excel表格进行上交和分享。众所周知，git 是不适用于传统的word和excel的，因此就需要使用比较传统的方法：在文件名上标注作者、日期和版本号。这样下来，本地就会堆积不少的各种版本文件，实在令人难以处理。下周我要花一定的时间，哪怕抽出半天的时间好好检查和整理一下现在的文件。还要整理扔在有道云里面的各种来源的笔记。
+另一点令我不满的是，现在的生活可以说几乎是 100% 的“坐立生活”。白天久坐一天之后，到了晚上也没有精力去运动，也是坐在宿舍里，这样导致我自己更没有精神。这样长久会形成一种恶性循环，加剧自己的腰背疼痛的问题。因此，我在考虑要不要购置一把更舒服的椅子或者靠垫，然后抽出时间开始运动。白天坐着不动一段时间之后一定要起身一段时间，舒展舒展。
+新学期即将开学，不知道还能实习多久，不过珍惜每一天。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xzywisdili.com/post/2019-09-02-weeknote/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2019-09-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-09-02T00:00:00+00:00" />
+
+
+  
+  <meta itemprop="name" content="一周总结（8.26-9.1）">
+<meta itemprop="description" content="今年已经步入了9月，也正式宣告这个“伪暑假”的落幕，新的学期就要开始了。之所以说是“伪暑假”，着实是因为自己没给自己放假，整整一个暑假都在实习。不过整个实习安排还好，从早上9点工作到下午5点半，倒不算特别辛苦，但是每天大部分时间也算投资在工作上面了。
+工作纪实 回顾这一周，似乎也没有做太多事情：
+过了一遍 python 的 numpy 和 pandas 包 和科研项目组里的服务器斗智斗勇，更新了一版小程序 整理了中国气象和污染物的数据 钻研出了绘制正规中国热力地图的画法 剩下时间都用来跑 SAS 代码了（这个 HPV 的项目已经让我整整心累了 3 周） 读了 1 本书，看了若干美剧和电影 庆祝曹老板考上清华，又欢迎马老板从东京归来 尝了一次味千家的葱油拌面（我感觉真的挺好吃的，里面的蛤挺鲜） 入手了 Sony 的 WH1000 XM3，第一次体会到了降噪耳机的强大之处 因为公司就在学校宿舍旁边，早上和晚上也就是骑车子往返，虽说方便，但倒是少了通勤时候安安静静看书的时间。这直接导致我这一周的第二本书拖拖拉拉，还没有读完。可能每天也只有在运行 SAS 代码和睡觉前能瞥上两眼，仔细想想这样的自己也是有点好笑。
+审视与敲打 实话实说，每天去实习之前，我总要花费不少的时间浏览端传媒，少数派 和 自己订阅的 今日热榜。这些井喷式的新闻和八卦究竟对我们是否有所裨益这个问题我没有想明白，但是我知道的是我特别特别喜欢看，一天不看心里就会发痒。这样网站的设计者千方百计地延长我们的在线时间，我也不止一次再各处看到有人提倡“远离一切瀑布流的社交媒体”。虽然心里认同这样的理念，但我却从没有一次真正戒除过。我决心，至少完成一天额定的工作之后，再浏览各类咨询。说不定累了之后就不想看了。
+在工作中比较困惑的地方在于，如何进行文件的存档管理。每天由于不停地重新跑程序，数据更新迭代也比较快。而数据又经常通过word文档和excel表格进行上交和分享。众所周知，git 是不适用于传统的word和excel的，因此就需要使用比较传统的方法：在文件名上标注作者、日期和版本号。这样下来，本地就会堆积不少的各种版本文件，实在令人难以处理。下周我要花一定的时间，哪怕抽出半天的时间好好检查和整理一下现在的文件。还要整理扔在有道云里面的各种来源的笔记。
+另一点令我不满的是，现在的生活可以说几乎是 100% 的“坐立生活”。白天久坐一天之后，到了晚上也没有精力去运动，也是坐在宿舍里，这样导致我自己更没有精神。这样长久会形成一种恶性循环，加剧自己的腰背疼痛的问题。因此，我在考虑要不要购置一把更舒服的椅子或者靠垫，然后抽出时间开始运动。白天坐着不动一段时间之后一定要起身一段时间，舒展舒展。
+新学期即将开学，不知道还能实习多久，不过珍惜每一天。"><meta itemprop="datePublished" content="2019-09-02T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-09-02T00:00:00+00:00" />
+<meta itemprop="wordCount" content="44">
+<meta itemprop="keywords" content="记录,周记," />
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="一周总结（8.26-9.1）"/>
+<meta name="twitter:description" content="今年已经步入了9月，也正式宣告这个“伪暑假”的落幕，新的学期就要开始了。之所以说是“伪暑假”，着实是因为自己没给自己放假，整整一个暑假都在实习。不过整个实习安排还好，从早上9点工作到下午5点半，倒不算特别辛苦，但是每天大部分时间也算投资在工作上面了。
+工作纪实 回顾这一周，似乎也没有做太多事情：
+过了一遍 python 的 numpy 和 pandas 包 和科研项目组里的服务器斗智斗勇，更新了一版小程序 整理了中国气象和污染物的数据 钻研出了绘制正规中国热力地图的画法 剩下时间都用来跑 SAS 代码了（这个 HPV 的项目已经让我整整心累了 3 周） 读了 1 本书，看了若干美剧和电影 庆祝曹老板考上清华，又欢迎马老板从东京归来 尝了一次味千家的葱油拌面（我感觉真的挺好吃的，里面的蛤挺鲜） 入手了 Sony 的 WH1000 XM3，第一次体会到了降噪耳机的强大之处 因为公司就在学校宿舍旁边，早上和晚上也就是骑车子往返，虽说方便，但倒是少了通勤时候安安静静看书的时间。这直接导致我这一周的第二本书拖拖拉拉，还没有读完。可能每天也只有在运行 SAS 代码和睡觉前能瞥上两眼，仔细想想这样的自己也是有点好笑。
+审视与敲打 实话实说，每天去实习之前，我总要花费不少的时间浏览端传媒，少数派 和 自己订阅的 今日热榜。这些井喷式的新闻和八卦究竟对我们是否有所裨益这个问题我没有想明白，但是我知道的是我特别特别喜欢看，一天不看心里就会发痒。这样网站的设计者千方百计地延长我们的在线时间，我也不止一次再各处看到有人提倡“远离一切瀑布流的社交媒体”。虽然心里认同这样的理念，但我却从没有一次真正戒除过。我决心，至少完成一天额定的工作之后，再浏览各类咨询。说不定累了之后就不想看了。
+在工作中比较困惑的地方在于，如何进行文件的存档管理。每天由于不停地重新跑程序，数据更新迭代也比较快。而数据又经常通过word文档和excel表格进行上交和分享。众所周知，git 是不适用于传统的word和excel的，因此就需要使用比较传统的方法：在文件名上标注作者、日期和版本号。这样下来，本地就会堆积不少的各种版本文件，实在令人难以处理。下周我要花一定的时间，哪怕抽出半天的时间好好检查和整理一下现在的文件。还要整理扔在有道云里面的各种来源的笔记。
+另一点令我不满的是，现在的生活可以说几乎是 100% 的“坐立生活”。白天久坐一天之后，到了晚上也没有精力去运动，也是坐在宿舍里，这样导致我自己更没有精神。这样长久会形成一种恶性循环，加剧自己的腰背疼痛的问题。因此，我在考虑要不要购置一把更舒服的椅子或者靠垫，然后抽出时间开始运动。白天坐着不动一段时间之后一定要起身一段时间，舒展舒展。
+新学期即将开学，不知道还能实习多久，不过珍惜每一天。"/>
+
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a class="-translate-x-[1px] -translate-y-0.5 text-3xl font-bold" href="https://xzywisdili.com/"
+      >xzy&#39;s blog</a
+    >
+    <a
+      class="btn-dark ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+    ></a>
+  </div>
+
+  <a
+    class="btn-menu relative z-50 -mr-8 flex h-[5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+  ></a>
+
+  <script>
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => htmlClass.remove('not-ready'), 10);
+
+    const setDark = (newDark) => {
+      metaTheme.setAttribute('content', newDark ? '#000' : '#fbfbfb');
+      htmlClass[newDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', newDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkVal = localStorage.getItem('dark');
+    setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:mt-0 lg:ml-12 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./twitter.svg)"
+        href=" https://twitter.com/xzywisdili "
+        target="_blank"
+      ></a>
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href=" https://github.com/github.com/xzywisdili "
+        target="_blank"
+      ></a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-20 pb-32 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-20">
+    <h1 class="!my-0 pb-2.5">一周总结（8.26-9.1）</h1>
+
+    
+    <div class="text-sm opacity-60">
+      
+      <time>Sep 2, 2019</time>
+      
+      
+    </div>
+    
+  </header>
+
+  <section><p>今年已经步入了9月，也正式宣告这个“伪暑假”的落幕，新的学期就要开始了。之所以说是“伪暑假”，着实是因为自己没给自己放假，整整一个暑假都在实习。不过整个实习安排还好，从早上9点工作到下午5点半，倒不算特别辛苦，但是每天大部分时间也算投资在工作上面了。</p>
+<h2 id="工作纪实">工作纪实</h2>
+<p>回顾这一周，似乎也没有做太多事情：</p>
+<ul>
+<li>过了一遍 python 的 numpy 和 pandas 包</li>
+<li>和科研项目组里的服务器斗智斗勇，更新了一版小程序</li>
+<li>整理了中国气象和污染物的数据</li>
+<li>钻研出了绘制正规中国热力地图的画法</li>
+<li>剩下时间都用来跑 SAS 代码了（这个 HPV 的项目已经让我整整心累了 3 周）</li>
+<li>读了 1 本书，看了若干美剧和电影</li>
+<li>庆祝曹老板考上清华，又欢迎马老板从东京归来</li>
+<li>尝了一次味千家的葱油拌面（我感觉真的挺好吃的，里面的蛤挺鲜）</li>
+<li>入手了 Sony 的 WH1000 XM3，第一次体会到了降噪耳机的强大之处</li>
+</ul>
+<p>因为公司就在学校宿舍旁边，早上和晚上也就是骑车子往返，虽说方便，但倒是少了通勤时候安安静静看书的时间。这直接导致我这一周的第二本书拖拖拉拉，还没有读完。可能每天也只有在运行 SAS 代码和睡觉前能瞥上两眼，仔细想想这样的自己也是有点好笑。</p>
+<h2 id="审视与敲打">审视与敲打</h2>
+<p>实话实说，每天去实习之前，我总要花费不少的时间浏览<a href="https://theinitium.com/">端传媒</a>，<a href="https://sspai.com/">少数派</a> 和 自己订阅的 <a href="https://tophub.today/">今日热榜</a>。这些井喷式的新闻和八卦究竟对我们是否有所裨益这个问题我没有想明白，但是我知道的是我特别特别喜欢看，一天不看心里就会发痒。这样网站的设计者千方百计地延长我们的在线时间，我也不止一次再各处看到有人提倡“远离一切瀑布流的社交媒体”。虽然心里认同这样的理念，但我却从没有一次真正戒除过。我决心，至少完成一天额定的工作之后，再浏览各类咨询。说不定累了之后就不想看了。</p>
+<p>在工作中比较困惑的地方在于，如何进行文件的存档管理。每天由于不停地重新跑程序，数据更新迭代也比较快。而数据又经常通过word文档和excel表格进行上交和分享。众所周知，git 是不适用于传统的word和excel的，因此就需要使用比较传统的方法：在文件名上标注作者、日期和版本号。这样下来，本地就会堆积不少的各种版本文件，实在令人难以处理。下周我要花一定的时间，哪怕抽出半天的时间好好检查和整理一下现在的文件。还要整理扔在有道云里面的各种来源的笔记。</p>
+<p>另一点令我不满的是，现在的生活可以说几乎是 100% 的“坐立生活”。白天久坐一天之后，到了晚上也没有精力去运动，也是坐在宿舍里，这样导致我自己更没有精神。这样长久会形成一种恶性循环，加剧自己的腰背疼痛的问题。因此，我在考虑要不要购置一把更舒服的椅子或者靠垫，然后抽出时间开始运动。白天坐着不动一段时间之后一定要起身一段时间，舒展舒展。</p>
+<p>新学期即将开学，不知道还能实习多久，不过珍惜每一天。</p>
+</section>
+
+  
+  
+  <footer class="mt-12 flex flex-wrap">
+     
+    <a
+      class="mr-1.5 mb-1.5 rounded-lg bg-black/[3%] px-5 py-2 no-underline dark:bg-white/[8%]"
+      href="https://xzywisdili.com/tags/%E8%AE%B0%E5%BD%95"
+      >记录</a
+    >
+     
+    <a
+      class="mr-1.5 mb-1.5 rounded-lg bg-black/[3%] px-5 py-2 no-underline dark:bg-white/[8%]"
+      href="https://xzywisdili.com/tags/%E5%91%A8%E8%AE%B0"
+      >周记</a
+    >
+    
+  </footer>
+  
+
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    <a class="flex w-1/2 items-center p-6 pr-3 no-underline" href="https://xzywisdili.com/post/2019-09-09-weeknote/"
+      ><span class="mr-1.5">←</span><span>这一周（9.2-9.8）</span></a
+    >
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end p-6 pl-3 no-underline"
+      href="https://xzywisdili.com/post/2019-04-22-drurylane/"
+      ><span>哲瑞·雷恩：悲剧系列终章</span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+
+  
+  
+</article>
+
+
+    </main>
+
+    <footer class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60">
+  <div class="mr-auto">
+    &copy; 2022
+    <a class="link" href="https://xzywisdili.com/">xzy&#39;s blog</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank">Powered by Hugo️️</a
+  >️
+  <a class="link" href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank"
+    >▷ Paper 6</a
+  >
+</footer>
+
+  </body>
+</html>

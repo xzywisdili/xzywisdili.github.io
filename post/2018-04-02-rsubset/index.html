@@ -1,271 +1,299 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>学习 R 语言里的 subset - 中文博客 - xzy&#39;s blog</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="徐洲阳" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="not-ready text-sm lg:text-base" lang="zh-cn">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  
+  <title>学习 R 语言里的 subset - xzy&#39;s blog</title>
+
+  
+  <meta name="theme-color" />
+  
   <meta name="description" content="主要内容：
- 三种 subset 操作 六类 subset 不同对象的的重要区别  
+
+三种 subset 操作
+六类 subset
+不同对象的的重要区别
 " />
+  <meta name="author" content="" />
+  
 
-  <meta name="keywords" content="Hugo, theme, even" />
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://xzywisdili.com/main.min.css" />
 
+  
+  <script
+    defer
+    src="https://xzywisdili.com/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
 
+  
+  <link
+    rel="preload"
+    as="image"
+    href="https://xzywisdili.com/theme.%7B%7B%20if%20site.Params.monoDarkIcon%20%7D%7Dsvg%7B%7B%20else%20%7D%7Dpng%7B%7B%20end%20%7D%7D"
+  />
 
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/bc73d7effd7675f355ff736ececc779a?s=160&amp;d=identicon" />
+  
+  
 
+  
+  <link rel="preload" as="image" href="https://xzywisdili.com/twitter.svg" />
+  
+  <link rel="preload" as="image" href="https://xzywisdili.com/github.svg" />
+  
 
+  
+  <link rel="icon" href="https://xzywisdili.com/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://xzywisdili.com/apple-touch-icon.png" />
 
-<meta name="generator" content="Hugo 0.49" />
+  
+  <meta name="generator" content="Hugo 0.101.0" />
 
+  
+  
 
-<link rel="canonical" href="http://localhost:1313/post/2018-04-02-rsubset/" />
-
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-
-
-
-
-
-
-
-<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
-
-
-
-
-<meta property="og:title" content="学习 R 语言里的 subset" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="学习 R 语言里的 subset" />
 <meta property="og:description" content="主要内容：
 
-
 三种 subset 操作
 六类 subset
 不同对象的的重要区别
-
-
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/2018-04-02-rsubset/" /><meta property="article:published_time" content="2018-04-02T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2018-04-02T00:00:00&#43;00:00"/>
+<meta property="og:url" content="https://xzywisdili.com/post/2018-04-02-rsubset/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2018-04-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-04-02T00:00:00+00:00" />
 
-<meta itemprop="name" content="学习 R 语言里的 subset">
+
+  
+  <meta itemprop="name" content="学习 R 语言里的 subset">
 <meta itemprop="description" content="主要内容：
-
 
 三种 subset 操作
 六类 subset
 不同对象的的重要区别
-
-
-">
-
-
-<meta itemprop="datePublished" content="2018-04-02T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2018-04-02T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1048">
-
-
-
+"><meta itemprop="datePublished" content="2018-04-02T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2018-04-02T00:00:00+00:00" />
+<meta itemprop="wordCount" content="383">
 <meta itemprop="keywords" content="R 语言," />
-<meta name="twitter:card" content="summary"/>
+  
+  <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="学习 R 语言里的 subset"/>
 <meta name="twitter:description" content="主要内容：
 
-
 三种 subset 操作
 六类 subset
 不同对象的的重要区别
-
-
 "/>
 
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
-
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
-
-</head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">xzy&#39;s blog</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">博客</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">归档</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">标签</li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">分类</li>
-      </a><a href="/about/">
-        <li class="mobile-menu-item">关于</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">xzy&#39;s blog</a>
-</div>
-
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">博客</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">归档</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">标签</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">分类</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/about/">关于</a>
-      </li>
-  </ul>
-</nav>
-    </header>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title">学习 R 语言里的 subset</h1>
-
-      <div class="post-meta">
-        <span class="post-time"> 2018-04-02 </span>
-        <div class="post-category">
-            
-              <a href="/categories/r-%E8%AF%AD%E8%A8%80/"> R 语言 </a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
-
-    
-    
-<div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">文章目录</h2>
   
-  <div class="post-toc-content">
-    <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#来让我们用-来-subset">来让我们用 <code>[]</code> 来 subset！</a></li>
-<li><a href="#还有两种操作-和">还有两种操作：<code>[[]]</code> 和 <code>$</code></a></li>
-<li><a href="#应用">应用</a></li>
-</ul></li>
-</ul>
-</nav>
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a class="-translate-x-[1px] -translate-y-0.5 text-3xl font-bold" href="https://xzywisdili.com/"
+      >xzy&#39;s blog</a
+    >
+    <a
+      class="btn-dark ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+    ></a>
   </div>
-</div>
 
+  <a
+    class="btn-menu relative z-50 -mr-8 flex h-[5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+  ></a>
+
+  <script>
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => htmlClass.remove('not-ready'), 10);
+
+    const setDark = (newDark) => {
+      metaTheme.setAttribute('content', newDark ? '#000' : '#fbfbfb');
+      htmlClass[newDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', newDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkVal = localStorage.getItem('dark');
+    setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
     
     
 
     
-    <div class="post-content">
-      <p>主要内容：</p>
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:mt-0 lg:ml-12 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./twitter.svg)"
+        href=" https://twitter.com/xzywisdili "
+        target="_blank"
+      ></a>
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href=" https://github.com/github.com/xzywisdili "
+        target="_blank"
+      ></a>
+      
+    </nav>
+    
+  </div>
+</header>
 
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-20 pb-32 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-20">
+    <h1 class="!my-0 pb-2.5">学习 R 语言里的 subset</h1>
+
+    
+    <div class="text-sm opacity-60">
+      
+      <time>Apr 2, 2018</time>
+      
+      
+    </div>
+    
+  </header>
+
+  <section><p>主要内容：</p>
 <ul>
 <li>三种 subset 操作</li>
 <li>六类 subset</li>
 <li>不同对象的的重要区别</li>
 </ul>
-
-<p></p>
-
 <p>众所周知，R 语言里面有几种不同的 subset 方法：<code>[]</code>，<code>[[]]</code>，<code>$</code>，但是有时候会产生混淆。所以这篇笔记主要分析理清 R 语言里面的 subset 操作。</p>
-
-<h2 id="来让我们用-来-subset">来让我们用 <code>[]</code> 来 subset！</h2>
-
+<h2 id="来让我们用--来-subset">来让我们用 <code>[]</code> 来 subset！</h2>
 <p>对 atomic vector 进行 subset 操作时，通常使用 <code>[]</code>，总共有 6 种形式：</p>
-
 <ul>
-<li><p><strong>正数</strong>：简单，就是返回这个位置上的数（注意 R 语言从 1 开始计数）</p></li>
-
-<li><p><strong>负数</strong>：忽略这个位置上的数</p></li>
-
-<li><p><strong>逻辑值</strong>：只选择那些值为 <code>TRUE</code> 的数，所以基于此可以在 <code>[]</code> 中放入某些逻辑判断条件</p></li>
+<li>
+<p><strong>正数</strong>：简单，就是返回这个位置上的数（注意 R 语言从 1 开始计数）</p>
+</li>
+<li>
+<p><strong>负数</strong>：忽略这个位置上的数</p>
+</li>
+<li>
+<p><strong>逻辑值</strong>：只选择那些值为 <code>TRUE</code> 的数，所以基于此可以在 <code>[]</code> 中放入某些逻辑判断条件</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>x<span style="color:#a6e22e">[c</span>(<span style="color:#66d9ef">TRUE</span>, <span style="color:#66d9ef">FALSE</span>, <span style="color:#66d9ef">TRUE</span>)]
+</span></span><span style="display:flex;"><span>x[x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">3</span>]
+</span></span></code></pre></div></li>
+<li>
+<p><strong>什么也没有</strong>：返回原始的 vector</p>
+</li>
+<li>
+<p><strong>0</strong>：返回一个长度为 0 的 vector</p>
+</li>
+<li>
+<p><strong>字符</strong>：如果 vector 设置好了 name，就可以使用字符型进行 subset</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>y <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">setNames</span>(x, <span style="color:#66d9ef">letters</span>[1<span style="color:#f92672">:</span><span style="color:#ae81ff">4</span>])
+</span></span><span style="display:flex;"><span>y<span style="color:#a6e22e">[c</span>(<span style="color:#e6db74">&#34;d&#34;</span>, <span style="color:#e6db74">&#34;c&#34;</span>, <span style="color:#e6db74">&#34;a&#34;</span>)]
+</span></span></code></pre></div></li>
 </ul>
-
-<pre><code class="language-R">  x[c(TRUE, FALSE, TRUE)]
-  x[x &gt; 3]
-</code></pre>
-
-<ul>
-<li><p><strong>什么也没有</strong>：返回原始的 vector</p></li>
-
-<li><p><strong>0</strong>：返回一个长度为 0 的 vector</p></li>
-
-<li><p><strong>字符</strong>：如果 vector 设置好了 name，就可以使用字符型进行 subset</p></li>
-</ul>
-
-<pre><code class="language-R">  y &lt;- setNames(x, letters[1:4])
-  y[c(&quot;d&quot;, &quot;c&quot;, &quot;a&quot;)]
-</code></pre>
-
 <p>对于 list 来说，subset 可以有两种：使用 <code>[]</code> 往往会返回一个 list，使用 <code>[[]]</code> 和 <code>$</code> 则会得到 list 的组成部分。</p>
-
 <p>对于 data frame 来说，它兼具两种数据结构的特点：使用一个 vector 对其 subset，它就可以当做 list；使用两个 vector 对其 subset，它就可以当做 matrix。</p>
-
-<pre><code class="language-R">df &lt;- data.frame(
-  x = 1:3,
-  y = 3:1,
-  z = letters[1:3]
-)
-
-df[1:2]
-#   x y
-# 1 1 3
-# 2 2 2
-# 3 3 1
-df[1:2, ]
-#   x y z
-# 1 1 3 a
-# 2 2 2 b
-</code></pre>
-
-<h2 id="还有两种操作-和">还有两种操作：<code>[[]]</code> 和 <code>$</code></h2>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>df <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">data.frame</span>(
+</span></span><span style="display:flex;"><span>  x <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">3</span>,
+</span></span><span style="display:flex;"><span>  y <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>  z <span style="color:#f92672">=</span> <span style="color:#66d9ef">letters</span>[1<span style="color:#f92672">:</span><span style="color:#ae81ff">3</span>]
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>df[1<span style="color:#f92672">:</span><span style="color:#ae81ff">2</span>]
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#   x y</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1 1 3</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2 2 2</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3 3 1</span>
+</span></span><span style="display:flex;"><span>df[1<span style="color:#f92672">:</span><span style="color:#ae81ff">2</span>, ]
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#   x y z</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1 1 3 a</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2 2 2 b</span>
+</span></span></code></pre></div><h2 id="还有两种操作-和-">还有两种操作：<code>[[]]</code> 和 <code>$</code></h2>
 <p>前面提到 <code>[[]]</code> 这种方式对于 list 来说，会从里面取出它的元素。这里可以引申出简化操作和保留操作的概念。</p>
-
 <p>顾名思义，保留操作会保证输出和输入的数据结构类型是一样的，而简化操作会对输入进行不同程度的简化：</p>
-
 <ul>
 <li>Atomic vector：移除变量名字</li>
 <li>List：返回的是 list 里的元素，而不是 list</li>
@@ -273,7 +301,6 @@ df[1:2, ]
 <li>Matrix：如果某个维度长度是 1，舍弃这个维度</li>
 <li>Data frame：如果输出一个单变量，把它变成一个 vector</li>
 </ul>
-
 <table>
 <thead>
 <tr>
@@ -282,32 +309,27 @@ df[1:2, ]
 <th>Preserving</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>Vector</td>
 <td><code>x[[1]]</code></td>
 <td><code>x[1]</code></td>
 </tr>
-
 <tr>
 <td>List</td>
 <td><code>x[[1]]</code></td>
 <td><code>x[1]</code></td>
 </tr>
-
 <tr>
 <td>Factor</td>
 <td><code>x[1:4, drop=T]</code></td>
 <td><code>x[1:4]</code></td>
 </tr>
-
 <tr>
 <td>Array</td>
 <td><code>x[1, ] x[, 1]</code></td>
 <td><code>x[1, , drop=F] x[, 1, drop=F]</code></td>
 </tr>
-
 <tr>
 <td>Data frame</td>
 <td><code>x[, 1] x[[1]]</code></td>
@@ -315,200 +337,113 @@ df[1:2, ]
 </tr>
 </tbody>
 </table>
-
 <p><code>$</code> 在某种方面上和 <code>[[]]</code> 一样，它经常被用来从一个 data frame 种提取变量，如 <code>mtcars$cyl</code> 等。</p>
-
 <p><code>$</code> 和 <code>[[]]</code> 有一些区别：</p>
-
 <ul>
-<li>不能这样使用 <code>$</code>（但 <code>[[]]</code> 可以）：</li>
+<li>
+<p>不能这样使用 <code>$</code>（但 <code>[[]]</code> 可以）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>var <span style="color:#f92672">&lt;-</span> cyl
+</span></span><span style="display:flex;"><span>mtcars<span style="color:#f92672">$</span>var
+</span></span></code></pre></div></li>
+<li>
+<p><code>$</code> 可以进行名字检索：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>mod <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">lm</span>(mpg <span style="color:#f92672">~</span> wt, data <span style="color:#f92672">=</span> mtcars)
+</span></span><span style="display:flex;"><span>mod<span style="color:#f92672">$</span>df.r <span style="color:#75715e"># 返回 mod$df.residual</span>
+</span></span></code></pre></div></li>
 </ul>
-
-<pre><code class="language-R">  var &lt;- cyl
-  mtcars$var
-</code></pre>
-
-<ul>
-<li><code>$</code> 可以进行名字检索：</li>
-</ul>
-
-<pre><code class="language-R">  mod &lt;- lm(mpg ~ wt, data = mtcars)
-  mod$df.r # 返回 mod$df.residual
-</code></pre>
-
 <h2 id="应用">应用</h2>
-
 <p>对字符缩写的转换（本质上是对分类变量设置了标签）：</p>
-
-<pre><code class="language-r">x &lt;- c(&quot;m&quot;, &quot;f&quot;, &quot;m&quot;, &quot;m&quot;, &quot;f&quot;, &quot;u&quot;)
-lookup &lt;- c(m=&quot;Male&quot;, f=&quot;Female&quot;, u=&quot;Unknown&quot;)
-lookup[x]
-#         m         f         m         m         f         u
-#    &quot;Male&quot;  &quot;Female&quot;    &quot;Male&quot;    &quot;Male&quot;  &quot;Female&quot; &quot;Unknown&quot;
-</code></pre>
-
-<p><code>info</code> 是关于成绩的相关信息，我们可以使用 integer subset 进行信息的匹配和合并：</p>
-
-<pre><code class="language-R">grades &lt;- c(1, 2, 3, 3, 1)
-info = data.frame(
-  grade = 1:3,
-  desc = c(&quot;Excellent&quot;, &quot;Good&quot;, &quot;Poor&quot;),
-  fail = c(F, F, T)
-)
-
-// 使用 match
-id &lt;- match(grades, info$grade)
-info[id, ]
-
-// 使用 rownames
-rownames(info) &lt;- info$grade
-info[grades, ]
-</code></pre>
-
-<p>Data frame 对行进行随机抽样：</p>
-
-<pre><code class="language-R">df &lt;- data.frame(
-  x = rep(1:3, each=2),
-  y = 6:1,
-  z = letters[1:6]
-)
-
-df[sample(nrow(df)), ]
-df[sample(nrow(df), 8, rep = T), ]
-</code></pre>
-
-<p><code>n</code> 列表示了每个观测重复几次，这里相当于把频数表转换为原始数据：</p>
-
-<pre><code class="language-R">df &lt;- data.frame(x = c(2, 4, 1), y = c(9, 11, 6), n = c(3, 5, 1))
-df[rep(1:nrow(df), df$n), ]
-</code></pre>
-
-<p>使用布尔值的 subset 可以让我们在 data frame 中进行条件筛选：</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>x <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;m&#34;</span>, <span style="color:#e6db74">&#34;f&#34;</span>, <span style="color:#e6db74">&#34;m&#34;</span>, <span style="color:#e6db74">&#34;m&#34;</span>, <span style="color:#e6db74">&#34;f&#34;</span>, <span style="color:#e6db74">&#34;u&#34;</span>)
+</span></span><span style="display:flex;"><span>lookup <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(m<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Male&#34;</span>, f<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Female&#34;</span>, u<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Unknown&#34;</span>)
+</span></span><span style="display:flex;"><span>lookup[x]
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#         m         f         m         m         f         u</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#    &#34;Male&#34;  &#34;Female&#34;    &#34;Male&#34;    &#34;Male&#34;  &#34;Female&#34; &#34;Unknown&#34;</span>
+</span></span></code></pre></div><p><code>info</code> 是关于成绩的相关信息，我们可以使用 integer subset 进行信息的匹配和合并：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>grades <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>info <span style="color:#f92672">=</span> <span style="color:#a6e22e">data.frame</span>(
+</span></span><span style="display:flex;"><span>  grade <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">3</span>,
+</span></span><span style="display:flex;"><span>  desc <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Excellent&#34;</span>, <span style="color:#e6db74">&#34;Good&#34;</span>, <span style="color:#e6db74">&#34;Poor&#34;</span>),
+</span></span><span style="display:flex;"><span>  fail <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(F, F, T)
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">//</span> 使用 match
+</span></span><span style="display:flex;"><span>id <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">match</span>(grades, info<span style="color:#f92672">$</span>grade)
+</span></span><span style="display:flex;"><span>info[id, ]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">//</span> 使用 rownames
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">rownames</span>(info) <span style="color:#f92672">&lt;-</span> info<span style="color:#f92672">$</span>grade
+</span></span><span style="display:flex;"><span>info[grades, ]
+</span></span></code></pre></div><p>Data frame 对行进行随机抽样：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>df <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">data.frame</span>(
+</span></span><span style="display:flex;"><span>  x <span style="color:#f92672">=</span> <span style="color:#a6e22e">rep</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">3</span>, each<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>),
+</span></span><span style="display:flex;"><span>  y <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>  z <span style="color:#f92672">=</span> <span style="color:#66d9ef">letters</span>[1<span style="color:#f92672">:</span><span style="color:#ae81ff">6</span>]
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>df<span style="color:#a6e22e">[sample</span>(<span style="color:#a6e22e">nrow</span>(df)), ]
+</span></span><span style="display:flex;"><span>df<span style="color:#a6e22e">[sample</span>(<span style="color:#a6e22e">nrow</span>(df), <span style="color:#ae81ff">8</span>, rep <span style="color:#f92672">=</span> T), ]
+</span></span></code></pre></div><p><code>n</code> 列表示了每个观测重复几次，这里相当于把频数表转换为原始数据：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>df <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">data.frame</span>(x <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">1</span>), y <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">6</span>), n <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">1</span>))
+</span></span><span style="display:flex;"><span>df<span style="color:#a6e22e">[rep</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#a6e22e">nrow</span>(df), df<span style="color:#f92672">$</span>n), ]
+</span></span></code></pre></div><p>使用布尔值的 subset 可以让我们在 data frame 中进行条件筛选：</p>
 <ul>
 <li>注意和 <code>if</code> 中使用的 <code>&amp;&amp;</code> 和 <code>||</code> 不同，这里使用的是 <code>&amp;</code> 和 <code>|</code></li>
 <li>如果有很多条件，不想重复写 data frame 的名字，可以使用 <code>subset</code></li>
 </ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>mtcars[mtcars<span style="color:#f92672">$</span>gear <span style="color:#f92672">==</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">&amp;</span> mtcars<span style="color:#f92672">$</span>cyl <span style="color:#f92672">==</span> <span style="color:#ae81ff">4</span>, ]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">subset</span>(mtcars, gear <span style="color:#f92672">==</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">&amp;</span> cyl <span style="color:#f92672">==</span> <span style="color:#ae81ff">4</span>)
+</span></span></code></pre></div></section>
 
-<pre><code class="language-R">mtcars[mtcars$gear == 5 &amp; mtcars$cyl == 4, ]
-subset(mtcars, gear == 5 &amp; cyl == 4)
-</code></pre>
-    </div>
-
-    
-    <div class="post-copyright">
-  <p class="copyright-item">
-    <span class="item-title">文章作者</span>
-    <span class="item-content">徐洲阳</span>
-  </p>
-  <p class="copyright-item">
-    <span class="item-title">上次更新</span>
-    <span class="item-content">2018-04-02</span>
-  </p>
   
-  <p class="copyright-item">
-    <span class="item-title">许可协议</span>
-    <span class="item-content"><a rel="license noopener" href="https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License" target="_blank">Creative Commons Attribution-ShareAlike License</a></span>
-  </p>
-</div>
-
+  
+  <footer class="mt-12 flex flex-wrap">
+     
+    <a
+      class="mr-1.5 mb-1.5 rounded-lg bg-black/[3%] px-5 py-2 no-underline dark:bg-white/[8%]"
+      href="https://xzywisdili.com/tags/r-%E8%AF%AD%E8%A8%80"
+      >R 语言</a
+    >
     
-    
-
-    <footer class="post-footer">
-      <div class="post-tags">
-          
-          <a href="/tags/r-%E8%AF%AD%E8%A8%80/">R 语言</a>
-          
-        </div>
-
-      
-      <nav class="post-nav">
-        
-          <a class="prev" href="/post/2018-04-02-rlearningnote/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">R 语言基础入门</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        
-          <a class="next" href="/post/2018-03-28-rstructure/">
-            <span class="next-text nav-default">R 语言基础数据结构</span>
-            <span class="next-text nav-mobile">下一篇</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
-        </div>
-        
+  </footer>
   
 
   
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    <a class="flex w-1/2 items-center p-6 pr-3 no-underline" href="https://xzywisdili.com/post/2018-04-02-rlearningnote/"
+      ><span class="mr-1.5">←</span><span>R 语言基础入门</span></a
+    >
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end p-6 pl-3 no-underline"
+      href="https://xzywisdili.com/post/2018-03-28-rstructure/"
+      ><span>R 语言基础数据结构</span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
 
-      </div>
+  
+  
+</article>
+
+
     </main>
 
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="mailto:zhouyang.xu@outlook.com" class="iconfont icon-email" title="email"></a>
-      <a href="https://twitter.com/xzywisdili" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="https://weibo.com/u/5253413750" class="iconfont icon-weibo" title="weibo"></a>
-      <a href="https://www.zhihu.com/people/xu-zhou-yang-68/activities" class="iconfont icon-zhihu" title="zhihu"></a>
-      <a href="https://www.douban.com/people/130187249/" class="iconfont icon-douban" title="douban"></a>
-  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    主题 - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  
-
-  <span class="copyright-year">
-    &copy; 
-    
-      2017 - 
-    2019
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">徐洲阳</span>
-  </span>
-</div>
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
-    </div>
+    <footer class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60">
+  <div class="mr-auto">
+    &copy; 2022
+    <a class="link" href="https://xzywisdili.com/">xzy&#39;s blog</a>
   </div>
-  
-<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank">Powered by Hugo️️</a
+  >️
+  <a class="link" href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank"
+    >▷ Paper 6</a
+  >
+</footer>
 
-
-<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
-  <script type="text/javascript">
-    window.MathJax = {
-      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
-      showProcessingMessages: false,
-      messageStyle: 'none'
-    };
-  </script>
-  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-
-
-
-
-
-
-</body>
+  </body>
 </html>

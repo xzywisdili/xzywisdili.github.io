@@ -1,43 +1,4 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>R 语言的那些最最最基础 - 中文博客 - xzy&#39;s blog</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
-
-
-<meta name="author" content="徐洲阳" />
-  <meta name="description" content="在 R 语言的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么就一定不能错过 R。本文只总结了 R 语言里面的那些最最最基础，想用好 R 必须要背过的内容。话不多说，赶紧上车。
-
-" />
-
-  <meta name="keywords" content="Hugo, theme, even" />
-
-
-
-
-
-
-<meta name="generator" content="Hugo 0.49" />
-
-
-<link rel="canonical" href="http://localhost:1313/post/2017-11-21-rbasic/" />
-
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
 
@@ -45,596 +6,548 @@
 
 
 
-<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
 
 
 
 
-<meta property="og:title" content="R 语言的那些最最最基础" />
-<meta property="og:description" content="在 R 语言的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么就一定不能错过 R。本文只总结了 R 语言里面的那些最最最基础，想用好 R 必须要背过的内容。话不多说，赶紧上车。
-
-" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/2017-11-21-rbasic/" /><meta property="article:published_time" content="2017-11-21T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2017-11-21T00:00:00&#43;00:00"/>
-
-<meta itemprop="name" content="R 语言的那些最最最基础">
-<meta itemprop="description" content="在 R 语言的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么就一定不能错过 R。本文只总结了 R 语言里面的那些最最最基础，想用好 R 必须要背过的内容。话不多说，赶紧上车。
-
-">
-
-
-<meta itemprop="datePublished" content="2017-11-21T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2017-11-21T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1744">
 
 
 
-<meta itemprop="keywords" content="R 语言,统计," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="R 语言的那些最最最基础"/>
-<meta name="twitter:description" content="在 R 语言的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么就一定不能错过 R。本文只总结了 R 语言里面的那些最最最基础，想用好 R 必须要背过的内容。话不多说，赶紧上车。
 
-"/>
 
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
 
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
 
-</head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">xzy&#39;s blog</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">博客</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">归档</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">标签</li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">分类</li>
-      </a><a href="/about/">
-        <li class="mobile-menu-item">关于</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">xzy&#39;s blog</a>
-</div>
 
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">博客</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">归档</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">标签</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">分类</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/about/">关于</a>
-      </li>
-  </ul>
-</nav>
-    </header>
 
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title">R 语言的那些最最最基础</h1>
 
-      <div class="post-meta">
-        <span class="post-time"> 2017-11-21 </span>
-        <div class="post-category">
-            
-              <a href="/categories/r-%E8%AF%AD%E8%A8%80/"> R 语言 </a>
-            
-          </div>
-        
-        
-      </div>
-    </header>
 
-    
-    
-<div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">文章目录</h2>
+
+
+
+
+
+
+
+<html class="not-ready text-sm lg:text-base" lang="zh-cn">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
   
-  <div class="post-toc-content">
-    <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#基本算数">基本算数</a></li>
-<li><a href="#简单统计与下标">简单统计与下标</a></li>
-<li><a href="#矩阵">矩阵</a></li>
-<li><a href="#apply-函数">apply 函数</a></li>
-<li><a href="#统计计算和模拟">统计计算和模拟</a></li>
-<li><a href="#作图">作图</a></li>
-<li><a href="#编写函数">编写函数</a></li>
-<li><a href="#其他">其他</a></li>
-</ul></li>
-</ul>
-</nav>
+  <title>R 语言的那些最最最基础 - xzy&#39;s blog</title>
+
+  
+  <meta name="theme-color" />
+  
+  <meta name="description" content="在 R 语言 的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么就一定不能错过 R。本文只总结了 R 语言里面的那些最最最基础，想用好 R 必须要背过的内容。话不多说，赶紧上车。
+基本算数 直接进行算数运算：
+&gt; 4 &#43; 6 [1] 10 将值保存在对象中进行运算：
+&gt; x &lt;- 6 &gt; y &lt;- 4 &gt; z &lt;- x &#43; y &gt; z [1] 10 显示我们已经创建的对象：
+&gt; ls() [1] &#34;x&#34; &#34;y&#34; &#34;z&#34; 清除一些对象：
+&gt; rm(x, y) &gt; ls() [1] &#34;z&#34; 创建向量（vector）：
+&gt; z &lt;- c(5, 9, 1, 0) 使用函数 c(x, y) 可以做到向量的连接：" />
+  <meta name="author" content="" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://xzywisdili.com/main.min.css" />
+
+  
+  <script
+    defer
+    src="https://xzywisdili.com/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  <link
+    rel="preload"
+    as="image"
+    href="https://xzywisdili.com/theme.%7B%7B%20if%20site.Params.monoDarkIcon%20%7D%7Dsvg%7B%7B%20else%20%7D%7Dpng%7B%7B%20end%20%7D%7D"
+  />
+
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/bc73d7effd7675f355ff736ececc779a?s=160&amp;d=identicon" />
+  
+  
+
+  
+  <link rel="preload" as="image" href="https://xzywisdili.com/twitter.svg" />
+  
+  <link rel="preload" as="image" href="https://xzywisdili.com/github.svg" />
+  
+
+  
+  <link rel="icon" href="https://xzywisdili.com/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://xzywisdili.com/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="R 语言的那些最最最基础" />
+<meta property="og:description" content="在 R 语言 的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么就一定不能错过 R。本文只总结了 R 语言里面的那些最最最基础，想用好 R 必须要背过的内容。话不多说，赶紧上车。
+基本算数 直接进行算数运算：
+&gt; 4 &#43; 6 [1] 10 将值保存在对象中进行运算：
+&gt; x &lt;- 6 &gt; y &lt;- 4 &gt; z &lt;- x &#43; y &gt; z [1] 10 显示我们已经创建的对象：
+&gt; ls() [1] &#34;x&#34; &#34;y&#34; &#34;z&#34; 清除一些对象：
+&gt; rm(x, y) &gt; ls() [1] &#34;z&#34; 创建向量（vector）：
+&gt; z &lt;- c(5, 9, 1, 0) 使用函数 c(x, y) 可以做到向量的连接：" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xzywisdili.com/post/2017-11-21-rbasic/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2017-11-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-11-21T00:00:00+00:00" />
+
+
+  
+  <meta itemprop="name" content="R 语言的那些最最最基础">
+<meta itemprop="description" content="在 R 语言 的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么就一定不能错过 R。本文只总结了 R 语言里面的那些最最最基础，想用好 R 必须要背过的内容。话不多说，赶紧上车。
+基本算数 直接进行算数运算：
+&gt; 4 &#43; 6 [1] 10 将值保存在对象中进行运算：
+&gt; x &lt;- 6 &gt; y &lt;- 4 &gt; z &lt;- x &#43; y &gt; z [1] 10 显示我们已经创建的对象：
+&gt; ls() [1] &#34;x&#34; &#34;y&#34; &#34;z&#34; 清除一些对象：
+&gt; rm(x, y) &gt; ls() [1] &#34;z&#34; 创建向量（vector）：
+&gt; z &lt;- c(5, 9, 1, 0) 使用函数 c(x, y) 可以做到向量的连接："><meta itemprop="datePublished" content="2017-11-21T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2017-11-21T00:00:00+00:00" />
+<meta itemprop="wordCount" content="936">
+<meta itemprop="keywords" content="R 语言,统计," />
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="R 语言的那些最最最基础"/>
+<meta name="twitter:description" content="在 R 语言 的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么就一定不能错过 R。本文只总结了 R 语言里面的那些最最最基础，想用好 R 必须要背过的内容。话不多说，赶紧上车。
+基本算数 直接进行算数运算：
+&gt; 4 &#43; 6 [1] 10 将值保存在对象中进行运算：
+&gt; x &lt;- 6 &gt; y &lt;- 4 &gt; z &lt;- x &#43; y &gt; z [1] 10 显示我们已经创建的对象：
+&gt; ls() [1] &#34;x&#34; &#34;y&#34; &#34;z&#34; 清除一些对象：
+&gt; rm(x, y) &gt; ls() [1] &#34;z&#34; 创建向量（vector）：
+&gt; z &lt;- c(5, 9, 1, 0) 使用函数 c(x, y) 可以做到向量的连接："/>
+
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a class="-translate-x-[1px] -translate-y-0.5 text-3xl font-bold" href="https://xzywisdili.com/"
+      >xzy&#39;s blog</a
+    >
+    <a
+      class="btn-dark ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+    ></a>
   </div>
-</div>
 
+  <a
+    class="btn-menu relative z-50 -mr-8 flex h-[5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+  ></a>
+
+  <script>
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => htmlClass.remove('not-ready'), 10);
+
+    const setDark = (newDark) => {
+      metaTheme.setAttribute('content', newDark ? '#000' : '#fbfbfb');
+      htmlClass[newDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', newDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkVal = localStorage.getItem('dark');
+    setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
     
     
 
     
-    <div class="post-content">
-      <p>在 <a href="https://www.r-project.org/">R 语言</a>的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么就一定不能错过 R。本文只总结了 R 语言里面的那些最最最基础，想用好 R 必须要背过的内容。话不多说，赶紧上车。</p>
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:mt-0 lg:ml-12 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./twitter.svg)"
+        href=" https://twitter.com/xzywisdili "
+        target="_blank"
+      ></a>
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href=" https://github.com/github.com/xzywisdili "
+        target="_blank"
+      ></a>
+      
+    </nav>
+    
+  </div>
+</header>
 
-<p></p>
 
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-20 pb-32 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-20">
+    <h1 class="!my-0 pb-2.5">R 语言的那些最最最基础</h1>
+
+    
+    <div class="text-sm opacity-60">
+      
+      <time>Nov 21, 2017</time>
+      
+      
+    </div>
+    
+  </header>
+
+  <section><p>在 <a href="https://www.r-project.org/">R 语言</a> 的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么就一定不能错过 R。本文只总结了 R 语言里面的那些最最最基础，想用好 R 必须要背过的内容。话不多说，赶紧上车。</p>
 <h2 id="基本算数">基本算数</h2>
-
 <p>直接进行算数运算：</p>
-
-<pre><code class="language-r">&gt; 4 + 6
+<pre tabindex="0"><code class="language-{r}" data-lang="{r}">&gt; 4 + 6
 [1] 10
-</code></pre>
-
-<p>将值保存在对象中进行运算：</p>
-
-<pre><code class="language-r">&gt; x &lt;- 6
+</code></pre><p>将值保存在对象中进行运算：</p>
+<pre tabindex="0"><code class="language-{r}" data-lang="{r}">&gt; x &lt;- 6
 &gt; y &lt;- 4
 &gt; z &lt;- x + y
 &gt; z
 [1] 10
-</code></pre>
-
-<p>显示我们已经创建的对象：</p>
-
-<pre><code class="language-r">&gt; ls()
-[1] &quot;x&quot; &quot;y&quot; &quot;z&quot;
-</code></pre>
-
-<p>清除一些对象：</p>
-
-<pre><code class="language-r">&gt; rm(x, y)
+</code></pre><p>显示我们已经创建的对象：</p>
+<pre tabindex="0"><code class="language-{r}" data-lang="{r}">&gt; ls()
+[1] &#34;x&#34; &#34;y&#34; &#34;z&#34;
+</code></pre><p>清除一些对象：</p>
+<pre tabindex="0"><code class="language-{r}" data-lang="{r}">&gt; rm(x, y)
 &gt; ls()
-[1] &quot;z&quot;
-</code></pre>
-
-<p>创建向量（vector）：</p>
-
-<pre><code class="language-R">&gt; z &lt;- c(5, 9, 1, 0)
-</code></pre>
-
-<p>使用函数 <code>c(x, y)</code> 可以做到向量的连接：</p>
-
-<pre><code class="language-R">&gt; x &lt;- c(1, 2)
-&gt; y &lt;- c(3, 4)
-&gt; z &lt;- c(x, y)
-&gt; z
-[1] 1 2 3 4
-</code></pre>
-
-<p>向量之间也可以完成运算，这些运算是按照元素之间发生（element-wise）的：</p>
-
-<pre><code class="language-R">&gt; x + y
-[1] 4 6
-&gt; x * y
-[1] 3 8
-[1] 3 8
-&gt; x ** 2
-[1] 1 4
-</code></pre>
-
-<p>我们可以使用多种方式生成一个序列，额外参数 <code>by</code> 代表公差，<code>length.out</code> 参数表示生成序列的长度：</p>
-
-<pre><code class="language-R">&gt; x &lt;- 1:4
-&gt; x
-[1] 1 2 3 4
-&gt; seq(1, 9, by=2)
-[1] 1 3 5 7 9
-&gt; seq(8, 20, length=6)
-[1]  8.0 10.4 12.8 15.2 17.6 20.0
-&gt; seq(8, 20, length.out=6)
-[1]  8.0 10.4 12.8 15.2 17.6 20.0
-</code></pre>
-
-<p>另一个可以生成含有重复元素的向量的方法是<code>rep()</code>：</p>
-
-<pre><code class="language-R">&gt; rep(0, 100)
-  [1] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
- [38] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
- [75] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-&gt; rep(1:3, 6)
- [1] 1 2 3 1 2 3 1 2 3 1 2 3 1 2 3 1 2 3
-&gt; rep(1:3, c(4, 5, 6))
- [1] 1 1 1 1 2 2 2 2 2 3 3 3 3 3 3
-</code></pre>
-
-<h2 id="简单统计与下标">简单统计与下标</h2>
-
+[1] &#34;z&#34;
+</code></pre><p>创建向量（vector）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> z <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>)
+</span></span></code></pre></div><p>使用函数 <code>c(x, y)</code> 可以做到向量的连接：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> x <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> y <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> z <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(x, y)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> z
+</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span>
+</span></span></code></pre></div><p>向量之间也可以完成运算，这些运算是按照元素之间发生（element-wise）的：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> x <span style="color:#f92672">+</span> y
+</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">6</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> x <span style="color:#f92672">*</span> y
+</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> x <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">4</span>
+</span></span></code></pre></div><p>我们可以使用多种方式生成一个序列，额外参数 <code>by</code> 代表公差，<code>length.out</code> 参数表示生成序列的长度：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> x <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> x
+</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">seq</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">9</span>, by<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">7</span> <span style="color:#ae81ff">9</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">seq</span>(<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">20</span>, length<span style="color:#f92672">=</span><span style="color:#ae81ff">6</span>)
+</span></span><span style="display:flex;"><span>[1]  <span style="color:#ae81ff">8.0</span> <span style="color:#ae81ff">10.4</span> <span style="color:#ae81ff">12.8</span> <span style="color:#ae81ff">15.2</span> <span style="color:#ae81ff">17.6</span> <span style="color:#ae81ff">20.0</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">seq</span>(<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">20</span>, length.out<span style="color:#f92672">=</span><span style="color:#ae81ff">6</span>)
+</span></span><span style="display:flex;"><span>[1]  <span style="color:#ae81ff">8.0</span> <span style="color:#ae81ff">10.4</span> <span style="color:#ae81ff">12.8</span> <span style="color:#ae81ff">15.2</span> <span style="color:#ae81ff">17.6</span> <span style="color:#ae81ff">20.0</span>
+</span></span></code></pre></div><p>另一个可以生成含有重复元素的向量的方法是<code>rep()</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">rep</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">100</span>)
+</span></span><span style="display:flex;"><span>  [1] <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span> [38] <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span> [75] <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">rep</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">6</span>)
+</span></span><span style="display:flex;"><span> [1] <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">rep</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">3</span>, <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>))
+</span></span><span style="display:flex;"><span> [1] <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">3</span>
+</span></span></code></pre></div><h2 id="简单统计与下标">简单统计与下标</h2>
 <p>算出一个向量的均值，方差和概要：</p>
-
-<pre><code class="language-R">&gt;  y &lt;- c(33, 44, 29, 16, 25, 45, 33, 19, 54, 22, 21, 59, 11, 24, 56)
-&gt; mean(y)
-[1] 32.73333
-&gt; var(y)
-[1] 236.0667
-&gt; summary(y)
-   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  11.00   21.50   29.00   32.73   44.50   59.00
-</code></pre>
-
-<p>可以只计算向量中的一部分：</p>
-
-<pre><code class="language-R">&gt; y[1:6]
-[1] 33 44 29 16 25 45
-&gt; summary(y[1:6])
-   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-  16.00   26.00   31.00   32.00   41.25   45.00
-&gt; mean(y[c(1, 4, 6, 9)])
-[1] 37
-</code></pre>
-
-<p>有两个必须记住的函数<code>length()</code>和<code>sum()</code>：</p>
-
-<pre><code class="language-R">&gt; length(y)
-[1] 15
-&gt; sum(y)
-[1] 491
-</code></pre>
-
-<h2 id="矩阵">矩阵</h2>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span>  y <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">33</span>, <span style="color:#ae81ff">44</span>, <span style="color:#ae81ff">29</span>, <span style="color:#ae81ff">16</span>, <span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">45</span>, <span style="color:#ae81ff">33</span>, <span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">54</span>, <span style="color:#ae81ff">22</span>, <span style="color:#ae81ff">21</span>, <span style="color:#ae81ff">59</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">24</span>, <span style="color:#ae81ff">56</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">mean</span>(y)
+</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">32.73333</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">var</span>(y)
+</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">236.0667</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">summary</span>(y)
+</span></span><span style="display:flex;"><span>   Min. <span style="color:#ae81ff">1</span>st Qu.  Median    Mean <span style="color:#ae81ff">3</span>rd Qu.    Max.
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">11.00</span>   <span style="color:#ae81ff">21.50</span>   <span style="color:#ae81ff">29.00</span>   <span style="color:#ae81ff">32.73</span>   <span style="color:#ae81ff">44.50</span>   <span style="color:#ae81ff">59.00</span>
+</span></span></code></pre></div><p>可以只计算向量中的一部分：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> y[1<span style="color:#f92672">:</span><span style="color:#ae81ff">6</span>]
+</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">33</span> <span style="color:#ae81ff">44</span> <span style="color:#ae81ff">29</span> <span style="color:#ae81ff">16</span> <span style="color:#ae81ff">25</span> <span style="color:#ae81ff">45</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">summary</span>(y[1<span style="color:#f92672">:</span><span style="color:#ae81ff">6</span>])
+</span></span><span style="display:flex;"><span>   Min. <span style="color:#ae81ff">1</span>st Qu.  Median    Mean <span style="color:#ae81ff">3</span>rd Qu.    Max.
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">16.00</span>   <span style="color:#ae81ff">26.00</span>   <span style="color:#ae81ff">31.00</span>   <span style="color:#ae81ff">32.00</span>   <span style="color:#ae81ff">41.25</span>   <span style="color:#ae81ff">45.00</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">mean</span>(y<span style="color:#a6e22e">[c</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">9</span>)])
+</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">37</span>
+</span></span></code></pre></div><p>有两个必须记住的函数<code>length()</code>和<code>sum()</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">length</span>(y)
+</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">15</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">sum</span>(y)
+</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">491</span>
+</span></span></code></pre></div><h2 id="矩阵">矩阵</h2>
 <p>在 R 中可以使用 <code>cbind()</code> 和 <code>rbind()</code> 来组合向量创建矩阵，使用 <code>dim()</code> 可以查看矩阵的维度：</p>
-
-<pre><code class="language-R">&gt; x &lt;- c(5, 7, 9)
-&gt; y &lt;- c(6, 3, 4)
-&gt; z &lt;- cbind(x, y)
-&gt; z
-     x y
-[1,] 5 6
-[2,] 7 3
-[3,] 9 4
-&gt; dim(z)
-[1] 3 2
-&gt; rbind(z, z)
-     x y
-[1,] 5 6
-[2,] 7 3
-[3,] 9 4
-[4,] 5 6
-[5,] 7 3
-[6,] 9 4
-</code></pre>
-
-<p>还可以通过 <code>matrix()</code> 来创建矩阵，参数 <code>nrow</code> 表示想要矩阵有几行，<code>byrow</code> 如果为真，则表示按行填充：</p>
-
-<pre><code class="language-R">&gt; z &lt;- matrix(c(5, 7, 9, 6, 3, 4), nrow=3)
-&gt; z
-     [,1] [,2]
-[1,]    5    6
-[2,]    7    3
-[3,]    9    4
-&gt; z &lt;- matrix(c(5, 7, 9, 6, 3, 4), nrow=3, byrow=T)
-&gt; z
-     [,1] [,2]
-[1,]    5    7
-[2,]    9    6
-[3,]    3    4
-&gt; z &lt;- matrix(c(5, 7, 9, 6, 3, 4), nrow=3, byrow=T)
-</code></pre>
-
-<p>矩阵和矩阵之间的运算（也是 element-wise），矩阵乘法使用 <code>%*%</code>：</p>
-
-<pre><code class="language-R">&gt; z
-     [,1] [,2]
-[1,]    5    7
-[2,]    9    6
-[3,]    3    4
-&gt; y &lt;- matrix(c(1, 3, 0, 9, 5, -1), nrow=3, byrow=T)
-&gt; y
-     [,1] [,2]
-[1,]    1    3
-[2,]    0    9
-[3,]    5   -1
-&gt; z + y
-     [,1] [,2]
-[1,]    6   10
-[2,]    9   15
-[3,]    8    3
-&gt; z * y
-     [,1] [,2]
-[1,]    5   21
-[2,]    0   54
-[3,]   15   -4
-&gt; x &lt;- matrix(c(3, 4, -2, 6), nrow=2, byrow=T)
-&gt; x
-     [,1] [,2]
-[1,]    3    4
-[2,]   -2    6
-&gt; y%*%x
-     [,1] [,2]
-[1,]   -3   22
-[2,]  -18   54
-[3,]   17   14
-</code></pre>
-
-<p>使用 <code>t()</code> 求矩阵的转置，使用 <code>solve()</code> 求矩阵的逆矩阵：</p>
-
-<pre><code class="language-R">&gt; t(z)
-     [,1] [,2] [,3]
-[1,]    5    9    3
-[2,]    7    6    4
-&gt; solve(x)
-           [,1]       [,2]
-[1,] 0.23076923 -0.1538462
-[2,] 0.07692308  0.1153846
-</code></pre>
-
-<p>使用合适的下标快速提取矩阵元素：</p>
-
-<pre><code class="language-R">&gt; z
-     [,1] [,2]
-[1,]    5    7
-[2,]    9    6
-[3,]    3    4
-&gt; z[1, 1]
-[1] 5
-&gt; z[c(2, 3), 2]
-[1] 6 4
-&gt; z[, 2]
-[1] 7 6 4
-&gt; z[1:2, ]
-     [,1] [,2]
-[1,]    5    7
-[2,]    9    6
-</code></pre>
-
-<h2 id="apply-函数">apply 函数</h2>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> x <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">9</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> y <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> z <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">cbind</span>(x, y)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> z
+</span></span><span style="display:flex;"><span>     x y
+</span></span><span style="display:flex;"><span>[1,] <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">6</span>
+</span></span><span style="display:flex;"><span>[2,] <span style="color:#ae81ff">7</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>[3,] <span style="color:#ae81ff">9</span> <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">dim</span>(z)
+</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">rbind</span>(z, z)
+</span></span><span style="display:flex;"><span>     x y
+</span></span><span style="display:flex;"><span>[1,] <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">6</span>
+</span></span><span style="display:flex;"><span>[2,] <span style="color:#ae81ff">7</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>[3,] <span style="color:#ae81ff">9</span> <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>[4,] <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">6</span>
+</span></span><span style="display:flex;"><span>[5,] <span style="color:#ae81ff">7</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>[6,] <span style="color:#ae81ff">9</span> <span style="color:#ae81ff">4</span>
+</span></span></code></pre></div><p>还可以通过 <code>matrix()</code> 来创建矩阵，参数 <code>nrow</code> 表示想要矩阵有几行，<code>byrow</code> 如果为真，则表示按行填充：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> z <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>), nrow<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> z
+</span></span><span style="display:flex;"><span>     [,<span style="color:#ae81ff">1</span>] [,<span style="color:#ae81ff">2</span>]
+</span></span><span style="display:flex;"><span>[1,]    <span style="color:#ae81ff">5</span>    <span style="color:#ae81ff">6</span>
+</span></span><span style="display:flex;"><span>[2,]    <span style="color:#ae81ff">7</span>    <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>[3,]    <span style="color:#ae81ff">9</span>    <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> z <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>), nrow<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, byrow<span style="color:#f92672">=</span>T)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> z
+</span></span><span style="display:flex;"><span>     [,<span style="color:#ae81ff">1</span>] [,<span style="color:#ae81ff">2</span>]
+</span></span><span style="display:flex;"><span>[1,]    <span style="color:#ae81ff">5</span>    <span style="color:#ae81ff">7</span>
+</span></span><span style="display:flex;"><span>[2,]    <span style="color:#ae81ff">9</span>    <span style="color:#ae81ff">6</span>
+</span></span><span style="display:flex;"><span>[3,]    <span style="color:#ae81ff">3</span>    <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> z <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>), nrow<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, byrow<span style="color:#f92672">=</span>T)
+</span></span></code></pre></div><p>矩阵和矩阵之间的运算（也是 element-wise），矩阵乘法使用 <code>%*%</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> z
+</span></span><span style="display:flex;"><span>     [,<span style="color:#ae81ff">1</span>] [,<span style="color:#ae81ff">2</span>]
+</span></span><span style="display:flex;"><span>[1,]    <span style="color:#ae81ff">5</span>    <span style="color:#ae81ff">7</span>
+</span></span><span style="display:flex;"><span>[2,]    <span style="color:#ae81ff">9</span>    <span style="color:#ae81ff">6</span>
+</span></span><span style="display:flex;"><span>[3,]    <span style="color:#ae81ff">3</span>    <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> y <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">-1</span>), nrow<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, byrow<span style="color:#f92672">=</span>T)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> y
+</span></span><span style="display:flex;"><span>     [,<span style="color:#ae81ff">1</span>] [,<span style="color:#ae81ff">2</span>]
+</span></span><span style="display:flex;"><span>[1,]    <span style="color:#ae81ff">1</span>    <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>[2,]    <span style="color:#ae81ff">0</span>    <span style="color:#ae81ff">9</span>
+</span></span><span style="display:flex;"><span>[3,]    <span style="color:#ae81ff">5</span>   <span style="color:#ae81ff">-1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> z <span style="color:#f92672">+</span> y
+</span></span><span style="display:flex;"><span>     [,<span style="color:#ae81ff">1</span>] [,<span style="color:#ae81ff">2</span>]
+</span></span><span style="display:flex;"><span>[1,]    <span style="color:#ae81ff">6</span>   <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>[2,]    <span style="color:#ae81ff">9</span>   <span style="color:#ae81ff">15</span>
+</span></span><span style="display:flex;"><span>[3,]    <span style="color:#ae81ff">8</span>    <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> z <span style="color:#f92672">*</span> y
+</span></span><span style="display:flex;"><span>     [,<span style="color:#ae81ff">1</span>] [,<span style="color:#ae81ff">2</span>]
+</span></span><span style="display:flex;"><span>[1,]    <span style="color:#ae81ff">5</span>   <span style="color:#ae81ff">21</span>
+</span></span><span style="display:flex;"><span>[2,]    <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">54</span>
+</span></span><span style="display:flex;"><span>[3,]   <span style="color:#ae81ff">15</span>   <span style="color:#ae81ff">-4</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> x <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">matrix</span>(<span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">-2</span>, <span style="color:#ae81ff">6</span>), nrow<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, byrow<span style="color:#f92672">=</span>T)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> x
+</span></span><span style="display:flex;"><span>     [,<span style="color:#ae81ff">1</span>] [,<span style="color:#ae81ff">2</span>]
+</span></span><span style="display:flex;"><span>[1,]    <span style="color:#ae81ff">3</span>    <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>[2,]   <span style="color:#ae81ff">-2</span>    <span style="color:#ae81ff">6</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> y<span style="color:#f92672">%*%</span>x
+</span></span><span style="display:flex;"><span>     [,<span style="color:#ae81ff">1</span>] [,<span style="color:#ae81ff">2</span>]
+</span></span><span style="display:flex;"><span>[1,]   <span style="color:#ae81ff">-3</span>   <span style="color:#ae81ff">22</span>
+</span></span><span style="display:flex;"><span>[2,]  <span style="color:#ae81ff">-18</span>   <span style="color:#ae81ff">54</span>
+</span></span><span style="display:flex;"><span>[3,]   <span style="color:#ae81ff">17</span>   <span style="color:#ae81ff">14</span>
+</span></span></code></pre></div><p>使用 <code>t()</code> 求矩阵的转置，使用 <code>solve()</code> 求矩阵的逆矩阵：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">t</span>(z)
+</span></span><span style="display:flex;"><span>     [,<span style="color:#ae81ff">1</span>] [,<span style="color:#ae81ff">2</span>] [,<span style="color:#ae81ff">3</span>]
+</span></span><span style="display:flex;"><span>[1,]    <span style="color:#ae81ff">5</span>    <span style="color:#ae81ff">9</span>    <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>[2,]    <span style="color:#ae81ff">7</span>    <span style="color:#ae81ff">6</span>    <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">solve</span>(x)
+</span></span><span style="display:flex;"><span>           [,<span style="color:#ae81ff">1</span>]       [,<span style="color:#ae81ff">2</span>]
+</span></span><span style="display:flex;"><span>[1,] <span style="color:#ae81ff">0.23076923</span> <span style="color:#ae81ff">-0.1538462</span>
+</span></span><span style="display:flex;"><span>[2,] <span style="color:#ae81ff">0.07692308</span>  <span style="color:#ae81ff">0.1153846</span>
+</span></span></code></pre></div><p>使用合适的下标快速提取矩阵元素：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> z
+</span></span><span style="display:flex;"><span>     [,<span style="color:#ae81ff">1</span>] [,<span style="color:#ae81ff">2</span>]
+</span></span><span style="display:flex;"><span>[1,]    <span style="color:#ae81ff">5</span>    <span style="color:#ae81ff">7</span>
+</span></span><span style="display:flex;"><span>[2,]    <span style="color:#ae81ff">9</span>    <span style="color:#ae81ff">6</span>
+</span></span><span style="display:flex;"><span>[3,]    <span style="color:#ae81ff">3</span>    <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> z[1, <span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> z<span style="color:#a6e22e">[c</span>(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>), <span style="color:#ae81ff">2</span>]
+</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> z[, <span style="color:#ae81ff">2</span>]
+</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">7</span> <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> z[1<span style="color:#f92672">:</span><span style="color:#ae81ff">2</span>, ]
+</span></span><span style="display:flex;"><span>     [,<span style="color:#ae81ff">1</span>] [,<span style="color:#ae81ff">2</span>]
+</span></span><span style="display:flex;"><span>[1,]    <span style="color:#ae81ff">5</span>    <span style="color:#ae81ff">7</span>
+</span></span><span style="display:flex;"><span>[2,]    <span style="color:#ae81ff">9</span>    <span style="color:#ae81ff">6</span>
+</span></span></code></pre></div><h2 id="apply-函数">apply 函数</h2>
 <p>对于 R 内置的一个数据集 <code>trees</code>，如果我们想求数据集中每一个变量的均值，可能首先想到一个一个去求，但如果有很多变量就行不通了；可能会想写一个循环，虽然在 R 语言里可以做到，但是并不推荐循环；我们可以使用 <code>apply()</code> 函数简单解决：</p>
-
-<pre><code class="language-R">&gt; data(trees)
-&gt; head(trees)
-  Girth Height Volume
-1   8.3     70   10.3
-2   8.6     65   10.3
-3   8.8     63   10.2
-4  10.5     72   16.4
-5  10.7     81   18.8
-6  10.8     83   19.7
-&gt; apply(trees, 2, mean)
-   Girth   Height   Volume
-13.24839 76.00000 30.17097
-</code></pre>
-
-<h2 id="统计计算和模拟">统计计算和模拟</h2>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">data</span>(trees)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">head</span>(trees)
+</span></span><span style="display:flex;"><span>  Girth Height Volume
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span>   <span style="color:#ae81ff">8.3</span>     <span style="color:#ae81ff">70</span>   <span style="color:#ae81ff">10.3</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span>   <span style="color:#ae81ff">8.6</span>     <span style="color:#ae81ff">65</span>   <span style="color:#ae81ff">10.3</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span>   <span style="color:#ae81ff">8.8</span>     <span style="color:#ae81ff">63</span>   <span style="color:#ae81ff">10.2</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">4</span>  <span style="color:#ae81ff">10.5</span>     <span style="color:#ae81ff">72</span>   <span style="color:#ae81ff">16.4</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">10.7</span>     <span style="color:#ae81ff">81</span>   <span style="color:#ae81ff">18.8</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">6</span>  <span style="color:#ae81ff">10.8</span>     <span style="color:#ae81ff">83</span>   <span style="color:#ae81ff">19.7</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">apply</span>(trees, <span style="color:#ae81ff">2</span>, mean)
+</span></span><span style="display:flex;"><span>   Girth   Height   Volume
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">13.24839</span> <span style="color:#ae81ff">76.00000</span> <span style="color:#ae81ff">30.17097</span>
+</span></span></code></pre></div><h2 id="统计计算和模拟">统计计算和模拟</h2>
 <p>最开始我们说到 R 语言是用来做统计计算的，比如我们可以使用 <code>dnorm()</code>，<code>pnorm()</code> 和 <code>qnorm()</code>三板斧：</p>
-
-<pre><code class="language-R">&gt; dnorm(0, 3, 2)
-[1] 0.0647588
-&gt; dnorm(seq(-10, 10), 0, 2)
- [1] 7.433598e-07 7.991871e-06 6.691511e-05 4.363413e-04 2.215924e-03
- [6] 8.764150e-03 2.699548e-02 6.475880e-02 1.209854e-01 1.760327e-01
-[11] 1.994711e-01 1.760327e-01 1.209854e-01 6.475880e-02 2.699548e-02
-[16] 8.764150e-03 2.215924e-03 4.363413e-04 6.691511e-05 7.991871e-06
-[21] 7.433598e-07
-&gt; plot(dnorm(seq(-10, 10), 0, 2))
-</code></pre>
-
-<p>简单地画一个 <code>dnorm()</code> 函数生成的图，就可以看到它表示正态分布的密度函数：
-<img src="/Rbasic/dnorm.png" alt="dnorm" />
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">dnorm</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">0.0647588</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">dnorm</span>(<span style="color:#a6e22e">seq</span>(<span style="color:#ae81ff">-10</span>, <span style="color:#ae81ff">10</span>), <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span> [1] <span style="color:#ae81ff">7.433598e-07</span> <span style="color:#ae81ff">7.991871e-06</span> <span style="color:#ae81ff">6.691511e-05</span> <span style="color:#ae81ff">4.363413e-04</span> <span style="color:#ae81ff">2.215924e-03</span>
+</span></span><span style="display:flex;"><span> [6] <span style="color:#ae81ff">8.764150e-03</span> <span style="color:#ae81ff">2.699548e-02</span> <span style="color:#ae81ff">6.475880e-02</span> <span style="color:#ae81ff">1.209854e-01</span> <span style="color:#ae81ff">1.760327e-01</span>
+</span></span><span style="display:flex;"><span>[11] <span style="color:#ae81ff">1.994711e-01</span> <span style="color:#ae81ff">1.760327e-01</span> <span style="color:#ae81ff">1.209854e-01</span> <span style="color:#ae81ff">6.475880e-02</span> <span style="color:#ae81ff">2.699548e-02</span>
+</span></span><span style="display:flex;"><span>[16] <span style="color:#ae81ff">8.764150e-03</span> <span style="color:#ae81ff">2.215924e-03</span> <span style="color:#ae81ff">4.363413e-04</span> <span style="color:#ae81ff">6.691511e-05</span> <span style="color:#ae81ff">7.991871e-06</span>
+</span></span><span style="display:flex;"><span>[21] <span style="color:#ae81ff">7.433598e-07</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">plot</span>(<span style="color:#a6e22e">dnorm</span>(<span style="color:#a6e22e">seq</span>(<span style="color:#ae81ff">-10</span>, <span style="color:#ae81ff">10</span>), <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2</span>))
+</span></span></code></pre></div><p>简单地画一个 <code>dnorm()</code> 函数生成的图，就可以看到它表示正态分布的密度函数：
+<img src="https://xzywisdili.com/Rbasic/dnorm.png" alt="dnorm">
 <code>rnorm()</code> 可以生成符合某个分布的随机数，<code>pnorm()</code> 计算出正态分布的累积概率函数：</p>
-
-<pre><code class="language-R">&gt; rnorm(10, 3, 2)
-[1]  2.9455919  5.6487038  0.9341445  2.7948578 -1.5562341  1.6078429
-[7]  0.4516596  3.3077327  5.6856195  3.8256133
-&gt; pnorm(10, 3, 2)
-[1] 0.9997674
-</code></pre>
-
-<p>其他分布也同理，只需要加上<code>d</code>，<code>p</code>，<code>r</code>即可。</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">rnorm</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>[1]  <span style="color:#ae81ff">2.9455919</span>  <span style="color:#ae81ff">5.6487038</span>  <span style="color:#ae81ff">0.9341445</span>  <span style="color:#ae81ff">2.7948578</span> <span style="color:#ae81ff">-1.5562341</span>  <span style="color:#ae81ff">1.6078429</span>
+</span></span><span style="display:flex;"><span>[7]  <span style="color:#ae81ff">0.4516596</span>  <span style="color:#ae81ff">3.3077327</span>  <span style="color:#ae81ff">5.6856195</span>  <span style="color:#ae81ff">3.8256133</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">pnorm</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">0.9997674</span>
+</span></span></code></pre></div><p>其他分布也同理，只需要加上<code>d</code>，<code>p</code>，<code>r</code>即可。</p>
 <h2 id="作图">作图</h2>
-
 <p>使用 <code>par()</code> 完成 subplot：</p>
-
-<pre><code class="language-R">&gt; par(mfrow=c(2,2))
-&gt; hist(trees$Height)
-&gt; boxplot(trees$Height)
-&gt; hist(trees$Volume)
-&gt; boxplot(trees$Volume)
-</code></pre>
-
-<p><img src="/Rbasic/par.png" alt="par" />
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>))
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">hist</span>(trees<span style="color:#f92672">$</span>Height)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">boxplot</span>(trees<span style="color:#f92672">$</span>Height)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">hist</span>(trees<span style="color:#f92672">$</span>Volume)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">boxplot</span>(trees<span style="color:#f92672">$</span>Volume)
+</span></span></code></pre></div><p><img src="https://xzywisdili.com/Rbasic/par.png" alt="par">
 使用 <code>plot()</code> 飞速做出一个最简陋的散点图：</p>
-
-<pre><code class="language-R">&gt; plot(trees$Height, trees$Volume)
-</code></pre>
-
-<p><img src="/Rbasic/scatter.png" alt="scatter" />
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">plot</span>(trees<span style="color:#f92672">$</span>Height, trees<span style="color:#f92672">$</span>Volume)
+</span></span></code></pre></div><p><img src="https://xzywisdili.com/Rbasic/scatter.png" alt="scatter">
 使用 <code>pairs()</code> 飞速做出 <code>trees</code> 数据集中两两变量之间的关系：</p>
-
-<pre><code class="language-R">&gt; pairs(trees)
-</code></pre>
-
-<p><img src="/Rbasic/pairs.png" alt="pairs" /></p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">pairs</span>(trees)
+</span></span></code></pre></div><p><img src="https://xzywisdili.com/Rbasic/pairs.png" alt="pairs"></p>
 <h2 id="编写函数">编写函数</h2>
-
 <p>如下方法编写自己的函数：</p>
-
-<pre><code class="language-R">&gt; sd &lt;- function(x) sqrt(var(x))
-&gt; x &lt;- c(9, 5, 2, 3, 7)
-&gt; sd(x)
-[1] 2.863564
-&gt; several.plots &lt;- function (x)
-{
-    par(mfrow=c(3, 1))
-    hist(x[ ,1])
-    hist(x[, 2])
-    plot(x[, 1], x[, 2])
-    par(mfrow=c(1, 1))
-    apply(x, 2, summary)
-}
-&gt; several.plots(faithful)
-        eruptions  waiting
-Min.     1.600000 43.00000
-1st Qu.  2.162750 58.00000
-Median   4.000000 76.00000
-Mean     3.487783 70.89706
-3rd Qu.  4.454250 82.00000
-Max.     5.100000 96.00000
-</code></pre>
-
-<p><img src="/Rbasic/func.png" alt="func" /></p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> sd <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(x) <span style="color:#a6e22e">sqrt</span>(<span style="color:#a6e22e">var</span>(x))
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> x <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">7</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">sd</span>(x)
+</span></span><span style="display:flex;"><span>[1] <span style="color:#ae81ff">2.863564</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> several.plots <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function </span>(x)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">1</span>))
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">hist</span>(x[ ,<span style="color:#ae81ff">1</span>])
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">hist</span>(x[, <span style="color:#ae81ff">2</span>])
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">plot</span>(x[, <span style="color:#ae81ff">1</span>], x[, <span style="color:#ae81ff">2</span>])
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">par</span>(mfrow<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>))
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">apply</span>(x, <span style="color:#ae81ff">2</span>, summary)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">several.plots</span>(faithful)
+</span></span><span style="display:flex;"><span>        eruptions  waiting
+</span></span><span style="display:flex;"><span>Min.     <span style="color:#ae81ff">1.600000</span> <span style="color:#ae81ff">43.00000</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span>st Qu.  <span style="color:#ae81ff">2.162750</span> <span style="color:#ae81ff">58.00000</span>
+</span></span><span style="display:flex;"><span>Median   <span style="color:#ae81ff">4.000000</span> <span style="color:#ae81ff">76.00000</span>
+</span></span><span style="display:flex;"><span>Mean     <span style="color:#ae81ff">3.487783</span> <span style="color:#ae81ff">70.89706</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span>rd Qu.  <span style="color:#ae81ff">4.454250</span> <span style="color:#ae81ff">82.00000</span>
+</span></span><span style="display:flex;"><span>Max.     <span style="color:#ae81ff">5.100000</span> <span style="color:#ae81ff">96.00000</span>
+</span></span></code></pre></div><p><img src="https://xzywisdili.com/Rbasic/func.png" alt="func"></p>
 <h2 id="其他">其他</h2>
-
 <ul>
 <li>如果想退出 R 语言，可以使用<code>q()</code>；</li>
 <li>如果不明白某个函数的功能，使用<code>help(func)</code>即可；</li>
 <li>使用 <code>library(libraryname)</code> 来载入别的包。</li>
 </ul>
-    </div>
+</section>
 
-    
-    <div class="post-copyright">
-  <p class="copyright-item">
-    <span class="item-title">文章作者</span>
-    <span class="item-content">徐洲阳</span>
-  </p>
-  <p class="copyright-item">
-    <span class="item-title">上次更新</span>
-    <span class="item-content">2017-11-21</span>
-  </p>
   
-  <p class="copyright-item">
-    <span class="item-title">许可协议</span>
-    <span class="item-content"><a rel="license noopener" href="https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License" target="_blank">Creative Commons Attribution-ShareAlike License</a></span>
-  </p>
-</div>
-
+  
+  <footer class="mt-12 flex flex-wrap">
+     
+    <a
+      class="mr-1.5 mb-1.5 rounded-lg bg-black/[3%] px-5 py-2 no-underline dark:bg-white/[8%]"
+      href="https://xzywisdili.com/tags/r-%E8%AF%AD%E8%A8%80"
+      >R 语言</a
+    >
+     
+    <a
+      class="mr-1.5 mb-1.5 rounded-lg bg-black/[3%] px-5 py-2 no-underline dark:bg-white/[8%]"
+      href="https://xzywisdili.com/tags/%E7%BB%9F%E8%AE%A1"
+      >统计</a
+    >
     
-    
-
-    <footer class="post-footer">
-      <div class="post-tags">
-          
-          <a href="/tags/r-%E8%AF%AD%E8%A8%80/">R 语言</a>
-          
-          <a href="/tags/%E7%BB%9F%E8%AE%A1/">统计</a>
-          
-        </div>
-
-      
-      <nav class="post-nav">
-        
-          <a class="prev" href="/post/2017-12-19-datatransform/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">dplyr 包里面必会的处理数据方法</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        
-          <a class="next" href="/post/2017-11-12-tensorflow01/">
-            <span class="next-text nav-default">光棍节初探 TensorFlow（一）：数据集的预处理</span>
-            <span class="next-text nav-mobile">下一篇</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
-        </div>
-        
+  </footer>
   
 
   
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    <a class="flex w-1/2 items-center p-6 pr-3 no-underline" href="https://xzywisdili.com/post/2017-12-19-datatransform/"
+      ><span class="mr-1.5">←</span><span>dplyr 包里面必会的处理数据方法</span></a
+    >
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end p-6 pl-3 no-underline"
+      href="https://xzywisdili.com/post/2017-11-12-tensorflow01/"
+      ><span>光棍节初探 TensorFlow（一）：数据集的预处理</span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
 
-      </div>
+  
+  
+</article>
+
+
     </main>
 
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="mailto:zhouyang.xu@outlook.com" class="iconfont icon-email" title="email"></a>
-      <a href="https://twitter.com/xzywisdili" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="https://weibo.com/u/5253413750" class="iconfont icon-weibo" title="weibo"></a>
-      <a href="https://www.zhihu.com/people/xu-zhou-yang-68/activities" class="iconfont icon-zhihu" title="zhihu"></a>
-      <a href="https://www.douban.com/people/130187249/" class="iconfont icon-douban" title="douban"></a>
-  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    主题 - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  
-
-  <span class="copyright-year">
-    &copy; 
-    
-      2017 - 
-    2019
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">徐洲阳</span>
-  </span>
-</div>
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
-    </div>
+    <footer class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60">
+  <div class="mr-auto">
+    &copy; 2022
+    <a class="link" href="https://xzywisdili.com/">xzy&#39;s blog</a>
   </div>
-  
-<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank">Powered by Hugo️️</a
+  >️
+  <a class="link" href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank"
+    >▷ Paper 6</a
+  >
+</footer>
 
-
-<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
-  <script type="text/javascript">
-    window.MathJax = {
-      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
-      showProcessingMessages: false,
-      messageStyle: 'none'
-    };
-  </script>
-  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-
-
-
-
-
-
-</body>
+  </body>
 </html>

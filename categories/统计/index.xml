@@ -9,10 +9,10 @@
     <lastBuildDate>Tue, 28 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.com/categories/%E7%BB%9F%E8%AE%A1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>分享几篇统计相关好文</title>
-      <link>https://xzywisdili.com/blog/%E5%88%86%E4%BA%AB%E5%87%A0%E7%AF%87%E7%BB%9F%E8%AE%A1%E7%9B%B8%E5%85%B3%E5%A5%BD%E6%96%87/</link>
+      <link>https://xzywisdili.com/post/2020-04-28-papershare/</link>
       <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.com/blog/%E5%88%86%E4%BA%AB%E5%87%A0%E7%AF%87%E7%BB%9F%E8%AE%A1%E7%9B%B8%E5%85%B3%E5%A5%BD%E6%96%87/</guid>
+      <guid>https://xzywisdili.com/post/2020-04-28-papershare/</guid>
       <description>最近在研究分段样条回归和线性混合效应模型，看到了几篇好文可以分享。
 样条回归（附 python 代码） [分段回归的拐点连续性](https://yihui.org/cn/2012/04/break-points-in-regression/ 最全使用 R 语言中lme4 包完成线性混合效应模型分析 但还是没搞懂分段线性混合效应模型，要学会接受自己的平庸和愚蠢。</description>
     </item>
