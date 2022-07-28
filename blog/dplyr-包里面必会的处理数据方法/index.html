@@ -1058,7 +1058,6 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
 
 
 
-
 </head>
 
 
@@ -1143,244 +1142,194 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
                 
     
     <p>最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看。最近学习的很简单，就是 <code>dplyr</code> 包里面最基础的 5 种数据处理方法。</p>
-
-<p></p>
-
 <h2 id="所用的数据集">所用的数据集</h2>
-
 <p>这次我们所有数据处理的用法范例都是建立在 <code>flights</code> 数据集上的，先来看看这个数据集：</p>
-
-<pre><code class="language-R">library(nycflights13)
-library(tidyverse)
-
-head(flights)
-</code></pre>
-
-<p>可以看到，每一条数据代表的是一次航班飞行记录的相关信息：</p>
-
-<pre><code class="language-R"># A tibble: 6 x 19
-   year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
-  &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
-1  2013     1     1      517            515         2      830            819
-2  2013     1     1      533            529         4      850            830
-3  2013     1     1      542            540         2      923            850
-4  2013     1     1      544            545        -1     1004           1022
-5  2013     1     1      554            600        -6      812            837
-6  2013     1     1      554            558        -4      740            728
-# ... with 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,
-#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,
-#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;
-</code></pre>
-
-<p>看看这个数据集中都包含了哪些项目（其中一些项目的含义可以通过名字猜出一二）：</p>
-
-<pre><code class="language-R">&gt; names(flights)
- [1] &quot;year&quot;           &quot;month&quot;          &quot;day&quot;            &quot;dep_time&quot;      
- [5] &quot;sched_dep_time&quot; &quot;dep_delay&quot;      &quot;arr_time&quot;       &quot;sched_arr_time&quot;
- [9] &quot;arr_delay&quot;      &quot;carrier&quot;        &quot;flight&quot;         &quot;tailnum&quot;       
-[13] &quot;origin&quot;         &quot;dest&quot;           &quot;air_time&quot;       &quot;distance&quot;      
-[17] &quot;hour&quot;           &quot;minute&quot;         &quot;time_hour&quot;
-</code></pre>
-
-<p>当然在 Rstudio 中，可以更加方便地通过 <code>View(flights)</code> 来查看数据集。</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(nycflights13)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(tidyverse)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">head</span>(flights)
+</span></span></code></pre></div><p>可以看到，每一条数据代表的是一次航班飞行记录的相关信息：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#75715e"># A tibble: 6 x 19</span>
+</span></span><span style="display:flex;"><span>   year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span>    <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span>          <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span>     <span style="color:#f92672">&lt;</span>dbl<span style="color:#f92672">&gt;</span>    <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span>          <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">517</span>            <span style="color:#ae81ff">515</span>         <span style="color:#ae81ff">2</span>      <span style="color:#ae81ff">830</span>            <span style="color:#ae81ff">819</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">533</span>            <span style="color:#ae81ff">529</span>         <span style="color:#ae81ff">4</span>      <span style="color:#ae81ff">850</span>            <span style="color:#ae81ff">830</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">542</span>            <span style="color:#ae81ff">540</span>         <span style="color:#ae81ff">2</span>      <span style="color:#ae81ff">923</span>            <span style="color:#ae81ff">850</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">4</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">544</span>            <span style="color:#ae81ff">545</span>        <span style="color:#ae81ff">-1</span>     <span style="color:#ae81ff">1004</span>           <span style="color:#ae81ff">1022</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">554</span>            <span style="color:#ae81ff">600</span>        <span style="color:#ae81ff">-6</span>      <span style="color:#ae81ff">812</span>            <span style="color:#ae81ff">837</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">6</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">554</span>            <span style="color:#ae81ff">558</span>        <span style="color:#ae81ff">-4</span>      <span style="color:#ae81ff">740</span>            <span style="color:#ae81ff">728</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ... with 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</span>
+</span></span></code></pre></div><p>看看这个数据集中都包含了哪些项目（其中一些项目的含义可以通过名字猜出一二）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">names</span>(flights)
+</span></span><span style="display:flex;"><span> [1] <span style="color:#e6db74">&#34;year&#34;</span>           <span style="color:#e6db74">&#34;month&#34;</span>          <span style="color:#e6db74">&#34;day&#34;</span>            <span style="color:#e6db74">&#34;dep_time&#34;</span>      
+</span></span><span style="display:flex;"><span> [5] <span style="color:#e6db74">&#34;sched_dep_time&#34;</span> <span style="color:#e6db74">&#34;dep_delay&#34;</span>      <span style="color:#e6db74">&#34;arr_time&#34;</span>       <span style="color:#e6db74">&#34;sched_arr_time&#34;</span>
+</span></span><span style="display:flex;"><span> [9] <span style="color:#e6db74">&#34;arr_delay&#34;</span>      <span style="color:#e6db74">&#34;carrier&#34;</span>        <span style="color:#e6db74">&#34;flight&#34;</span>         <span style="color:#e6db74">&#34;tailnum&#34;</span>       
+</span></span><span style="display:flex;"><span>[13] <span style="color:#e6db74">&#34;origin&#34;</span>         <span style="color:#e6db74">&#34;dest&#34;</span>           <span style="color:#e6db74">&#34;air_time&#34;</span>       <span style="color:#e6db74">&#34;distance&#34;</span>      
+</span></span><span style="display:flex;"><span>[17] <span style="color:#e6db74">&#34;hour&#34;</span>           <span style="color:#e6db74">&#34;minute&#34;</span>         <span style="color:#e6db74">&#34;time_hour&#34;</span>
+</span></span></code></pre></div><p>当然在 Rstudio 中，可以更加方便地通过 <code>View(flights)</code> 来查看数据集。</p>
 <p>接下来就来说一说 dplyr 最基础的 5 个处理数据的方法：</p>
-
 <ul>
-<li><p>使用 <code>filter()</code> 来过滤筛选</p></li>
-
-<li><p>使用 <code>arrange()</code> 来重新排列</p></li>
-
-<li><p>使用 <code>select()</code> 来选择数据集里面的变量</p></li>
-
-<li><p>使用 <code>mutate()</code>，基于已有的变量，创建需要的新变量</p></li>
-
-<li><p>使用 <code>summarize()</code> 打碎重组多个变量，来完成一些概括</p></li>
+<li>
+<p>使用 <code>filter()</code> 来过滤筛选</p>
+</li>
+<li>
+<p>使用 <code>arrange()</code> 来重新排列</p>
+</li>
+<li>
+<p>使用 <code>select()</code> 来选择数据集里面的变量</p>
+</li>
+<li>
+<p>使用 <code>mutate()</code>，基于已有的变量，创建需要的新变量</p>
+</li>
+<li>
+<p>使用 <code>summarize()</code> 打碎重组多个变量，来完成一些概括</p>
+</li>
 </ul>
-
 <p>每个函数我都想拿例子来介绍。</p>
-
-<h2 id="观测的-过滤器-filter">观测的「过滤器」：filter()</h2>
-
+<h2 id="观测的过滤器filter">观测的「过滤器」：filter()</h2>
 <p><code>filter()</code> 筛选的目标是观测（也就是数据中横向的行）。</p>
-
 <p>如果想看看我生日那天的航班数据：</p>
-
-<pre><code class="language-R">&gt; filter(flights, month == 7, day == 31)
-# A tibble: 1,001 x 19
-    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
-   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
- 1  2013     7    31       10           2359        11      344            340
- 2  2013     7    31       19           2359        20      355            344
- 3  2013     7    31      132           2359        93      510            350
- 4  2013     7    31      459            500        -1      633            640
- 5  2013     7    31      529            536        -7      755            806
- 6  2013     7    31      534            515        19      739            725
- 7  2013     7    31      540            540         0      829            840
- 8  2013     7    31      541            545        -4      912            921
- 9  2013     7    31      542            545        -3      803            813
-10  2013     7    31      551            600        -9      640            700
-# ... with 991 more rows, and 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;,
-#   flight &lt;int&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;,
-#   distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;
-</code></pre>
-
-<p>看看整个夏天的航班数据（使用逻辑运算符）：</p>
-
-<pre><code class="language-R">&gt; filter(flights, month == 6 | month == 7 | month == 8)
-# A tibble: 86,995 x 19
-    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
-   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
- 1  2013     6     1        2           2359         3      341            350
- 2  2013     6     1      451            500        -9      624            640
- 3  2013     6     1      506            515        -9      715            800
- 4  2013     6     1      534            545       -11      800            829
- 5  2013     6     1      538            545        -7      925            922
- 6  2013     6     1      539            540        -1      832            840
- 7  2013     6     1      546            600       -14      850            910
- 8  2013     6     1      551            600        -9      828            850
- 9  2013     6     1      552            600        -8      647            655
-10  2013     6     1      553            600        -7      700            711
-# ... with 86,985 more rows, and 11 more variables: arr_delay &lt;dbl&gt;,
-#   carrier &lt;chr&gt;, flight &lt;int&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;,
-#   air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;
-</code></pre>
-
-<p>当然更好的方法可能是：</p>
-
-<pre><code class="language-R">filter(flights, month %in% c(6, 7, 8))
-</code></pre>
-
-<h2 id="对观测进行重排-arrange">对观测进行重排：arrange()</h2>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">filter</span>(flights, month <span style="color:#f92672">==</span> <span style="color:#ae81ff">7</span>, day <span style="color:#f92672">==</span> <span style="color:#ae81ff">31</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># A tibble: 1,001 x 19</span>
+</span></span><span style="display:flex;"><span>    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span>    <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span>          <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span>     <span style="color:#f92672">&lt;</span>dbl<span style="color:#f92672">&gt;</span>    <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span>          <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">7</span>    <span style="color:#ae81ff">31</span>       <span style="color:#ae81ff">10</span>           <span style="color:#ae81ff">2359</span>        <span style="color:#ae81ff">11</span>      <span style="color:#ae81ff">344</span>            <span style="color:#ae81ff">340</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">2</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">7</span>    <span style="color:#ae81ff">31</span>       <span style="color:#ae81ff">19</span>           <span style="color:#ae81ff">2359</span>        <span style="color:#ae81ff">20</span>      <span style="color:#ae81ff">355</span>            <span style="color:#ae81ff">344</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">3</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">7</span>    <span style="color:#ae81ff">31</span>      <span style="color:#ae81ff">132</span>           <span style="color:#ae81ff">2359</span>        <span style="color:#ae81ff">93</span>      <span style="color:#ae81ff">510</span>            <span style="color:#ae81ff">350</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">4</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">7</span>    <span style="color:#ae81ff">31</span>      <span style="color:#ae81ff">459</span>            <span style="color:#ae81ff">500</span>        <span style="color:#ae81ff">-1</span>      <span style="color:#ae81ff">633</span>            <span style="color:#ae81ff">640</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">7</span>    <span style="color:#ae81ff">31</span>      <span style="color:#ae81ff">529</span>            <span style="color:#ae81ff">536</span>        <span style="color:#ae81ff">-7</span>      <span style="color:#ae81ff">755</span>            <span style="color:#ae81ff">806</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">6</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">7</span>    <span style="color:#ae81ff">31</span>      <span style="color:#ae81ff">534</span>            <span style="color:#ae81ff">515</span>        <span style="color:#ae81ff">19</span>      <span style="color:#ae81ff">739</span>            <span style="color:#ae81ff">725</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">7</span>    <span style="color:#ae81ff">31</span>      <span style="color:#ae81ff">540</span>            <span style="color:#ae81ff">540</span>         <span style="color:#ae81ff">0</span>      <span style="color:#ae81ff">829</span>            <span style="color:#ae81ff">840</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">8</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">7</span>    <span style="color:#ae81ff">31</span>      <span style="color:#ae81ff">541</span>            <span style="color:#ae81ff">545</span>        <span style="color:#ae81ff">-4</span>      <span style="color:#ae81ff">912</span>            <span style="color:#ae81ff">921</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">9</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">7</span>    <span style="color:#ae81ff">31</span>      <span style="color:#ae81ff">542</span>            <span style="color:#ae81ff">545</span>        <span style="color:#ae81ff">-3</span>      <span style="color:#ae81ff">803</span>            <span style="color:#ae81ff">813</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">10</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">7</span>    <span style="color:#ae81ff">31</span>      <span style="color:#ae81ff">551</span>            <span style="color:#ae81ff">600</span>        <span style="color:#ae81ff">-9</span>      <span style="color:#ae81ff">640</span>            <span style="color:#ae81ff">700</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ... with 991 more rows, and 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;,</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#   flight &lt;int&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;,</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#   distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</span>
+</span></span></code></pre></div><p>看看整个夏天的航班数据（使用逻辑运算符）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">filter</span>(flights, month <span style="color:#f92672">==</span> <span style="color:#ae81ff">6</span> <span style="color:#f92672">|</span> month <span style="color:#f92672">==</span> <span style="color:#ae81ff">7</span> <span style="color:#f92672">|</span> month <span style="color:#f92672">==</span> <span style="color:#ae81ff">8</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># A tibble: 86,995 x 19</span>
+</span></span><span style="display:flex;"><span>    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span>    <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span>          <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span>     <span style="color:#f92672">&lt;</span>dbl<span style="color:#f92672">&gt;</span>    <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span>          <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">6</span>     <span style="color:#ae81ff">1</span>        <span style="color:#ae81ff">2</span>           <span style="color:#ae81ff">2359</span>         <span style="color:#ae81ff">3</span>      <span style="color:#ae81ff">341</span>            <span style="color:#ae81ff">350</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">2</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">6</span>     <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">451</span>            <span style="color:#ae81ff">500</span>        <span style="color:#ae81ff">-9</span>      <span style="color:#ae81ff">624</span>            <span style="color:#ae81ff">640</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">3</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">6</span>     <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">506</span>            <span style="color:#ae81ff">515</span>        <span style="color:#ae81ff">-9</span>      <span style="color:#ae81ff">715</span>            <span style="color:#ae81ff">800</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">4</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">6</span>     <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">534</span>            <span style="color:#ae81ff">545</span>       <span style="color:#ae81ff">-11</span>      <span style="color:#ae81ff">800</span>            <span style="color:#ae81ff">829</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">6</span>     <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">538</span>            <span style="color:#ae81ff">545</span>        <span style="color:#ae81ff">-7</span>      <span style="color:#ae81ff">925</span>            <span style="color:#ae81ff">922</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">6</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">6</span>     <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">539</span>            <span style="color:#ae81ff">540</span>        <span style="color:#ae81ff">-1</span>      <span style="color:#ae81ff">832</span>            <span style="color:#ae81ff">840</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">6</span>     <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">546</span>            <span style="color:#ae81ff">600</span>       <span style="color:#ae81ff">-14</span>      <span style="color:#ae81ff">850</span>            <span style="color:#ae81ff">910</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">8</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">6</span>     <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">551</span>            <span style="color:#ae81ff">600</span>        <span style="color:#ae81ff">-9</span>      <span style="color:#ae81ff">828</span>            <span style="color:#ae81ff">850</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">9</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">6</span>     <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">552</span>            <span style="color:#ae81ff">600</span>        <span style="color:#ae81ff">-8</span>      <span style="color:#ae81ff">647</span>            <span style="color:#ae81ff">655</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">10</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">6</span>     <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">553</span>            <span style="color:#ae81ff">600</span>        <span style="color:#ae81ff">-7</span>      <span style="color:#ae81ff">700</span>            <span style="color:#ae81ff">711</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ... with 86,985 more rows, and 11 more variables: arr_delay &lt;dbl&gt;,</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#   carrier &lt;chr&gt;, flight &lt;int&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;,</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#   air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</span>
+</span></span></code></pre></div><p>当然更好的方法可能是：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">filter</span>(flights, month <span style="color:#f92672">%in%</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>))
+</span></span></code></pre></div><h2 id="对观测进行重排arrange">对观测进行重排：arrange()</h2>
 <p><code>arrange()</code>的目标也是观测（横向的行），只不过是对观测进行重排。比如我想要以起飞时的延迟时间 <code>dep_delay</code> 的倒序排列：</p>
-
-<pre><code class="language-R">&gt; arrange(flights, desc(dep_delay))
-# A tibble: 336,776 x 19
-    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
-   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
- 1  2013     1     9      641            900      1301     1242           1530
- 2  2013     6    15     1432           1935      1137     1607           2120
- 3  2013     1    10     1121           1635      1126     1239           1810
- 4  2013     9    20     1139           1845      1014     1457           2210
- 5  2013     7    22      845           1600      1005     1044           1815
- 6  2013     4    10     1100           1900       960     1342           2211
- 7  2013     3    17     2321            810       911      135           1020
- 8  2013     6    27      959           1900       899     1236           2226
- 9  2013     7    22     2257            759       898      121           1026
-10  2013    12     5      756           1700       896     1058           2020
-# ... with 336,766 more rows, and 11 more variables: arr_delay &lt;dbl&gt;,
-#   carrier &lt;chr&gt;, flight &lt;int&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;,
-#   air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;
-</code></pre>
-
-<h2 id="变量的选择器-select">变量的选择器：select()</h2>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">arrange</span>(flights, <span style="color:#a6e22e">desc</span>(dep_delay))
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># A tibble: 336,776 x 19</span>
+</span></span><span style="display:flex;"><span>    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span>    <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span>          <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span>     <span style="color:#f92672">&lt;</span>dbl<span style="color:#f92672">&gt;</span>    <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span>          <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">9</span>      <span style="color:#ae81ff">641</span>            <span style="color:#ae81ff">900</span>      <span style="color:#ae81ff">1301</span>     <span style="color:#ae81ff">1242</span>           <span style="color:#ae81ff">1530</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">2</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">6</span>    <span style="color:#ae81ff">15</span>     <span style="color:#ae81ff">1432</span>           <span style="color:#ae81ff">1935</span>      <span style="color:#ae81ff">1137</span>     <span style="color:#ae81ff">1607</span>           <span style="color:#ae81ff">2120</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">3</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>    <span style="color:#ae81ff">10</span>     <span style="color:#ae81ff">1121</span>           <span style="color:#ae81ff">1635</span>      <span style="color:#ae81ff">1126</span>     <span style="color:#ae81ff">1239</span>           <span style="color:#ae81ff">1810</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">4</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">9</span>    <span style="color:#ae81ff">20</span>     <span style="color:#ae81ff">1139</span>           <span style="color:#ae81ff">1845</span>      <span style="color:#ae81ff">1014</span>     <span style="color:#ae81ff">1457</span>           <span style="color:#ae81ff">2210</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">7</span>    <span style="color:#ae81ff">22</span>      <span style="color:#ae81ff">845</span>           <span style="color:#ae81ff">1600</span>      <span style="color:#ae81ff">1005</span>     <span style="color:#ae81ff">1044</span>           <span style="color:#ae81ff">1815</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">6</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">4</span>    <span style="color:#ae81ff">10</span>     <span style="color:#ae81ff">1100</span>           <span style="color:#ae81ff">1900</span>       <span style="color:#ae81ff">960</span>     <span style="color:#ae81ff">1342</span>           <span style="color:#ae81ff">2211</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">3</span>    <span style="color:#ae81ff">17</span>     <span style="color:#ae81ff">2321</span>            <span style="color:#ae81ff">810</span>       <span style="color:#ae81ff">911</span>      <span style="color:#ae81ff">135</span>           <span style="color:#ae81ff">1020</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">8</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">6</span>    <span style="color:#ae81ff">27</span>      <span style="color:#ae81ff">959</span>           <span style="color:#ae81ff">1900</span>       <span style="color:#ae81ff">899</span>     <span style="color:#ae81ff">1236</span>           <span style="color:#ae81ff">2226</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">9</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">7</span>    <span style="color:#ae81ff">22</span>     <span style="color:#ae81ff">2257</span>            <span style="color:#ae81ff">759</span>       <span style="color:#ae81ff">898</span>      <span style="color:#ae81ff">121</span>           <span style="color:#ae81ff">1026</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">10</span>  <span style="color:#ae81ff">2013</span>    <span style="color:#ae81ff">12</span>     <span style="color:#ae81ff">5</span>      <span style="color:#ae81ff">756</span>           <span style="color:#ae81ff">1700</span>       <span style="color:#ae81ff">896</span>     <span style="color:#ae81ff">1058</span>           <span style="color:#ae81ff">2020</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ... with 336,766 more rows, and 11 more variables: arr_delay &lt;dbl&gt;,</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#   carrier &lt;chr&gt;, flight &lt;int&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;,</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#   air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</span>
+</span></span></code></pre></div><h2 id="变量的选择器select">变量的选择器：select()</h2>
 <p><code>select()</code> 可以灵活选择数据集中的变量，或者叫特征（纵向的列）。
 比如我们只想看日期和起飞时间这几个变量，可以用 <code>year: dep_time</code> 来进行选择：</p>
-
-<pre><code class="language-R">&gt; select(flights, year:dep_time)
-# A tibble: 336,776 x 4
-    year month   day dep_time
-   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;
- 1  2013     1     1      517
- 2  2013     1     1      533
- 3  2013     1     1      542
- 4  2013     1     1      544
- 5  2013     1     1      554
- 6  2013     1     1      554
- 7  2013     1     1      555
- 8  2013     1     1      557
- 9  2013     1     1      557
-10  2013     1     1      558
-# ... with 336,766 more rows
-</code></pre>
-
-<p>可以在参数中使用 <code>everything()</code> 来代表所有变量。</p>
-
-<h2 id="如何添加新变量-mutate">如何添加新变量：mutate()</h2>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">select</span>(flights, year<span style="color:#f92672">:</span>dep_time)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># A tibble: 336,776 x 4</span>
+</span></span><span style="display:flex;"><span>    year month   day dep_time
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span>    <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">517</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">2</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">533</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">3</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">542</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">4</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">544</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">554</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">6</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">554</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">555</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">8</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">557</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">9</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">557</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">10</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">558</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ... with 336,766 more rows</span>
+</span></span></code></pre></div><p>可以在参数中使用 <code>everything()</code> 来代表所有变量。</p>
+<h2 id="如何添加新变量mutate">如何添加新变量：mutate()</h2>
 <p>如果基于原有的数据集，想要添加新的变量（纵向的列），<code>mutate()</code> 正是你所需要的的。
 比如我们已知航班的飞行时间和飞行距离，就可以计算出航班的平均速度，并添加这个变量：</p>
-
-<pre><code class="language-R">&gt; mutate(select(flights, year: day, distance, air_time),
-+        speed = distance / air_time * 60)
-# A tibble: 336,776 x 6
-    year month   day distance air_time    speed
-   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;
- 1  2013     1     1     1400      227 370.0441
- 2  2013     1     1     1416      227 374.2731
- 3  2013     1     1     1089      160 408.3750
- 4  2013     1     1     1576      183 516.7213
- 5  2013     1     1      762      116 394.1379
- 6  2013     1     1      719      150 287.6000
- 7  2013     1     1     1065      158 404.4304
- 8  2013     1     1      229       53 259.2453
- 9  2013     1     1      944      140 404.5714
-10  2013     1     1      733      138 318.6957
-# ... with 336,766 more rows
-</code></pre>
-
-<p>使用 <code>transmute()</code> 可以只保留新变量。</p>
-
-<h2 id="概括一个数据集-summarize">概括一个数据集：summarize()</h2>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">mutate</span>(<span style="color:#a6e22e">select</span>(flights, year<span style="color:#f92672">:</span> day, distance, air_time),
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>        speed <span style="color:#f92672">=</span> distance <span style="color:#f92672">/</span> air_time <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># A tibble: 336,776 x 6</span>
+</span></span><span style="display:flex;"><span>    year month   day distance air_time    speed
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span>    <span style="color:#f92672">&lt;</span>dbl<span style="color:#f92672">&gt;</span>    <span style="color:#f92672">&lt;</span>dbl<span style="color:#f92672">&gt;</span>    <span style="color:#f92672">&lt;</span>dbl<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1400</span>      <span style="color:#ae81ff">227</span> <span style="color:#ae81ff">370.0441</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">2</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1416</span>      <span style="color:#ae81ff">227</span> <span style="color:#ae81ff">374.2731</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">3</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1089</span>      <span style="color:#ae81ff">160</span> <span style="color:#ae81ff">408.3750</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">4</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1576</span>      <span style="color:#ae81ff">183</span> <span style="color:#ae81ff">516.7213</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">762</span>      <span style="color:#ae81ff">116</span> <span style="color:#ae81ff">394.1379</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">6</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">719</span>      <span style="color:#ae81ff">150</span> <span style="color:#ae81ff">287.6000</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1065</span>      <span style="color:#ae81ff">158</span> <span style="color:#ae81ff">404.4304</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">8</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">229</span>       <span style="color:#ae81ff">53</span> <span style="color:#ae81ff">259.2453</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">9</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">944</span>      <span style="color:#ae81ff">140</span> <span style="color:#ae81ff">404.5714</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">10</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1</span>      <span style="color:#ae81ff">733</span>      <span style="color:#ae81ff">138</span> <span style="color:#ae81ff">318.6957</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ... with 336,766 more rows</span>
+</span></span></code></pre></div><p>使用 <code>transmute()</code> 可以只保留新变量。</p>
+<h2 id="概括一个数据集summarize">概括一个数据集：summarize()</h2>
 <p>说「概括数据集」可能不太合适，<code>summarize()</code> 可以求得某个变量的平均值，总和等统计量。
 比如我们求起飞延迟时间的平均值：</p>
-
-<pre><code class="language-R">&gt; summarize(flights, delay = mean(dep_delay, na.rm = TRUE))
-# A tibble: 1 x 1
-     delay
-     &lt;dbl&gt;
-1 12.63907
-</code></pre>
-
-<p><code>summarize()</code> 经常和 <code>group_by()</code> 一起用，这样能对原数据集分组并求出想要的统计量：</p>
-
-<pre><code class="language-R">&gt; flights %&gt;%
-+     group_by(year, month, day) %&gt;%
-+     summarize(delay = mean(dep_delay, na.rm = TRUE))
-# A tibble: 365 x 4
-# Groups:   year, month [?]
-    year month   day     delay
-   &lt;int&gt; &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;
- 1  2013     1     1 11.548926
- 2  2013     1     2 13.858824
- 3  2013     1     3 10.987832
- 4  2013     1     4  8.951595
- 5  2013     1     5  5.732218
- 6  2013     1     6  7.148014
- 7  2013     1     7  5.417204
- 8  2013     1     8  2.553073
- 9  2013     1     9  2.276477
-10  2013     1    10  2.844995
-# ... with 355 more rows
-</code></pre>
-
-<p>可以看到，所有观测都被按日期分组了，而 <code>delay</code> 表示的是每组的平均值。这里 <code>na.rm</code> 意思是 remove na，即移除缺失值。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">summarize</span>(flights, delay <span style="color:#f92672">=</span> <span style="color:#a6e22e">mean</span>(dep_delay, na.rm <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>))
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># A tibble: 1 x 1</span>
+</span></span><span style="display:flex;"><span>     delay
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">&lt;</span>dbl<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span> <span style="color:#ae81ff">12.63907</span>
+</span></span></code></pre></div><p><code>summarize()</code> 经常和 <code>group_by()</code> 一起用，这样能对原数据集分组并求出想要的统计量：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> flights <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>     <span style="color:#a6e22e">group_by</span>(year, month, day) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>     <span style="color:#a6e22e">summarize</span>(delay <span style="color:#f92672">=</span> <span style="color:#a6e22e">mean</span>(dep_delay, na.rm <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>))
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># A tibble: 365 x 4</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Groups:   year, month [?]</span>
+</span></span><span style="display:flex;"><span>    year month   day     delay
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span>int<span style="color:#f92672">&gt;</span>     <span style="color:#f92672">&lt;</span>dbl<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">11.548926</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">2</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">13.858824</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">3</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">10.987832</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">4</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">4</span>  <span style="color:#ae81ff">8.951595</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">5</span>  <span style="color:#ae81ff">5.732218</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">6</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">6</span>  <span style="color:#ae81ff">7.148014</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">7</span>  <span style="color:#ae81ff">5.417204</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">8</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">8</span>  <span style="color:#ae81ff">2.553073</span>
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">9</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>     <span style="color:#ae81ff">9</span>  <span style="color:#ae81ff">2.276477</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">10</span>  <span style="color:#ae81ff">2013</span>     <span style="color:#ae81ff">1</span>    <span style="color:#ae81ff">10</span>  <span style="color:#ae81ff">2.844995</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ... with 355 more rows</span>
+</span></span></code></pre></div><p>可以看到，所有观测都被按日期分组了，而 <code>delay</code> 表示的是每组的平均值。这里 <code>na.rm</code> 意思是 remove na，即移除缺失值。
 <code>%&gt;%</code> 代表的是一种操作流程（pipeline），这个符号之前的数据集作为符号之后函数的第一个参数。</p>
-
 <h2 id="综合使用">综合使用</h2>
-
 <p>直接拍上下面一段代码，这里用到了 <code>filter()</code>，<code>summarize()</code>，并使用 <code>ggplot</code> 画图。</p>
-
-<pre><code class="language-R">&gt; library(ggplot)
-&gt; flights %&gt;%
-+   filter(!is.na(dep_delay), !is.na(arr_delay)) %&gt;%
-+   group_by(tailnum) %&gt;%
-+   summarize(
-+     delay = mean(arr_delay),
-+     n = n()
-+   ) %&gt;%
-+   filter(n &gt; 25) %&gt;%
-+   ggplot(mapping = aes(x = n, y = delay)) +
-+   geom_point(alpha = 1/10)
-</code></pre>
-
-<p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://xzywisdili.com/datatransform/summarize.png" src="https://xzywisdili.com/datatransform/low/summarize.png" alt="综合使用" /></p></figure>
-
-<p>我们先把 <code>dep_delay</code> 和 <code>arr_delay</code> 这两列里面包含 <code>na</code>值的观测移除掉，以航班尾号分组，查看每组的数量和到达延迟时间，并作图。</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">library</span>(ggplot)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> flights <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>   <span style="color:#a6e22e">filter</span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">is.na</span>(dep_delay), <span style="color:#f92672">!</span><span style="color:#a6e22e">is.na</span>(arr_delay)) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>   <span style="color:#a6e22e">group_by</span>(tailnum) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>   <span style="color:#a6e22e">summarize</span>(
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>     delay <span style="color:#f92672">=</span> <span style="color:#a6e22e">mean</span>(arr_delay),
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>     n <span style="color:#f92672">=</span> <span style="color:#a6e22e">n</span>()
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>   ) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>   <span style="color:#a6e22e">filter</span>(n <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">25</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>   <span style="color:#a6e22e">ggplot</span>(mapping <span style="color:#f92672">=</span> <span style="color:#a6e22e">aes</span>(x <span style="color:#f92672">=</span> n, y <span style="color:#f92672">=</span> delay)) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>   <span style="color:#a6e22e">geom_point</span>(alpha <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">10</span>)
+</span></span></code></pre></div><p><img src="https://xzywisdili.com/datatransform/summarize.png" alt="综合使用"></p>
+<p>我们先把 <code>dep_delay</code> 和 <code>arr_delay</code> 这两列里面包含 <code>na </code>值的观测移除掉，以航班尾号分组，查看每组的数量和到达延迟时间，并作图。</p>
 <p>这篇虽然只是相当基本地介绍了 5 种函数，但是博客也够长了，就先到这里打住吧。</p>
 
             </div>
@@ -1462,11 +1411,8 @@ head(flights)
             </a>
         
 
-        
-            <a href="https://xzywisdili.com/index.xml">
-                <img class="icon" src="https://xzywisdili.com/img/rss.svg" alt="rss" />
+        <img class="icon" src="https://xzywisdili.com/img/rss.svg" alt="rss" />
             </a>
-        
 
         </div>
     </div>

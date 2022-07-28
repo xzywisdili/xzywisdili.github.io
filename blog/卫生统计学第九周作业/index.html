@@ -1058,7 +1058,6 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
 
 
 
-
 </head>
 
 
@@ -1142,114 +1141,25 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
             <div class="markdown">
                 
     
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
-
+    <!-- raw HTML omitted -->
 <h2 id="前言">前言</h2>
-
 <p>这几天读到一个观点，论文的发表在很久之前抛弃了写在纸上的模式，现在也到了抛弃 PDF 或 Word 格式的时候了。其实一直以来，论文核心呈现的，我们所关注的都是它的内容所在。既然这样，我们为什么不能把论文呈现为 HTML 格式呢？</p>
-
-<p></p>
-
 <p>首先，现在的论文可能有一些交互式的展示或者动画展示，这些都是传统 PDF 格式文件所不能展示的。其次，互联网时代提倡信息共享和联通，HTML 放在网站上可以在浏览器里轻松点击不被获取。</p>
-
 <p>当我读到这些内容的时候，一拍大腿，觉得很有道理。所以这次我在博客上完成了我的统计学作业。当然上交的时候还是得灰溜溜的写到我的本子上，但这样至少表达了我的态度和想法。</p>
-
 <h2 id="problem-1">Problem #1</h2>
-
 <p>绘制下面这种检验方法的 ROC 曲线：</p>
-
-<table>
-   <tr>
-      <td></td>
-      <td colspan="6">Test Result</td>
-   </tr>
-   <tr>
-      <td>Surgery Result</td>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
-      <td>4</td>
-      <td>5</td>
-      <td>Total</td>
-   </tr>
-   <tr>
-      <td>Disease Present</td>
-      <td>18</td>
-      <td>1</td>
-      <td>2</td>
-      <td>9</td>
-      <td>40</td>
-      <td>70</td>
-   </tr>
-   <tr>
-      <td>No Disease</td>
-      <td>23</td>
-      <td>1</td>
-      <td>2</td>
-      <td>0</td>
-      <td>1</td>
-      <td>27</td>
-   </tr>
-</table>
-
+<!-- raw HTML omitted -->
 <p>对于这种检验方法来说，如果取 cut-off 值为 2 时，我们认为 Surgery Result 值为 3，4，5 时检验结果为 positive(+)，取值为 1，2 时检验结果为 negative(-)。</p>
-
-<p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://xzywisdili.com/Statistichomework/roccurve.png" src="https://xzywisdili.com/Statistichomework/low/roccurve.png" alt="ROC 曲线" /></p></figure>
-
+<p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://xzywisdili.com/Statistichomework/roccurve.png" src="https://xzywisdili.com/Statistichomework/low/roccurve.png" alt="ROC 曲线"></p></figure>
 <h2 id="problem-2">Problem #2</h2>
-
 <p>对这种肝脏疾病检验方法的统计数据如下：</p>
-
-<table>
-   <tr>
-      <td colspan="4" align="center">Hepatic Scintigraph Data</td>
-   </tr>
-   <tr>
-      <td></td>
-      <td></td>
-      <td colspan="2" align="center">Diagnostic Results</td>
-   </tr>
-   <tr>
-      <td></td>
-      <td></td>
-      <td align="center">T = 1</td>
-      <td align="center">T = 0</td>
-   </tr>
-   <tr>
-      <td rowspan="2" align="center">V = 1</td>
-      <td align="center">D = 1</td>
-      <td align="center">231</td>
-      <td align="center">27</td>
-   </tr>
-   <tr>
-      <td align="center">D = 0</td>
-      <td align="center">32</td>
-      <td align="center">54</td>
-   </tr>
-   <tr>
-      <td colspan="2" align="center">V = 0</td>
-      <td align="center">166</td>
-      <td align="center">140</td>
-   </tr>
-   <tr>
-      <td colspan="2" align="center">Total</td>
-      <td align="center">429</td>
-      <td align="center">221</td>
-   </tr>
-</table>
-
+<!-- raw HTML omitted -->
 <p>计算出修正后的灵敏度和特异度：</p>
-
 <p>$$ sensitivity = \frac{\frac{231}{231+32} \times n_1}{\frac{231}{231+32} \times n_1 + \frac{27}{27 + 54} \times n_2} = 0.84 $$</p>
-
 <p>$$ specificity = \frac{\frac{54}{27+54} \times n_2}{\frac{54}{27+54} \times n_2 + \frac{32}{32 + 231} \times n_1} = 0.74 $$</p>
-
 <p>如果去掉所有没有经过金标准检测的病例，得到的灵敏度和特异度：</p>
-
 <p>$$ sensitivity = \frac{231}{231 + 27} = 0.90 $$</p>
-
 <p>$$ specificity = \frac{54}{32 + 54} = 0.63 $$</p>
-
 <p>可以看出不经过修正会出现明显的偏差。</p>
 
             </div>
@@ -1331,11 +1241,8 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
             </a>
         
 
-        
-            <a href="https://xzywisdili.com/index.xml">
-                <img class="icon" src="https://xzywisdili.com/img/rss.svg" alt="rss" />
+        <img class="icon" src="https://xzywisdili.com/img/rss.svg" alt="rss" />
             </a>
-        
 
         </div>
     </div>

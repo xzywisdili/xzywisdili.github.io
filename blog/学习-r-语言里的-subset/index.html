@@ -1058,7 +1058,6 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
 
 
 
-
 </head>
 
 
@@ -1141,72 +1140,58 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
                 
     
     <p>主要内容：</p>
-
 <ul>
 <li>三种 subset 操作</li>
 <li>六类 subset</li>
 <li>不同对象的的重要区别</li>
 </ul>
-
-<p></p>
-
 <p>众所周知，R 语言里面有几种不同的 subset 方法：<code>[]</code>，<code>[[]]</code>，<code>$</code>，但是有时候会产生混淆。所以这篇笔记主要分析理清 R 语言里面的 subset 操作。</p>
-
-<h2 id="来让我们用-来-subset">来让我们用 <code>[]</code> 来 subset！</h2>
-
+<h2 id="来让我们用--来-subset">来让我们用 <code>[]</code> 来 subset！</h2>
 <p>对 atomic vector 进行 subset 操作时，通常使用 <code>[]</code>，总共有 6 种形式：</p>
-
 <ul>
-<li><p><strong>正数</strong>：简单，就是返回这个位置上的数（注意 R 语言从 1 开始计数）</p></li>
-
-<li><p><strong>负数</strong>：忽略这个位置上的数</p></li>
-
-<li><p><strong>逻辑值</strong>：只选择那些值为 <code>TRUE</code> 的数，所以基于此可以在 <code>[]</code> 中放入某些逻辑判断条件</p></li>
+<li>
+<p><strong>正数</strong>：简单，就是返回这个位置上的数（注意 R 语言从 1 开始计数）</p>
+</li>
+<li>
+<p><strong>负数</strong>：忽略这个位置上的数</p>
+</li>
+<li>
+<p><strong>逻辑值</strong>：只选择那些值为 <code>TRUE</code> 的数，所以基于此可以在 <code>[]</code> 中放入某些逻辑判断条件</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>x<span style="color:#a6e22e">[c</span>(<span style="color:#66d9ef">TRUE</span>, <span style="color:#66d9ef">FALSE</span>, <span style="color:#66d9ef">TRUE</span>)]
+</span></span><span style="display:flex;"><span>x[x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">3</span>]
+</span></span></code></pre></div></li>
+<li>
+<p><strong>什么也没有</strong>：返回原始的 vector</p>
+</li>
+<li>
+<p><strong>0</strong>：返回一个长度为 0 的 vector</p>
+</li>
+<li>
+<p><strong>字符</strong>：如果 vector 设置好了 name，就可以使用字符型进行 subset</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>y <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">setNames</span>(x, <span style="color:#66d9ef">letters</span>[1<span style="color:#f92672">:</span><span style="color:#ae81ff">4</span>])
+</span></span><span style="display:flex;"><span>y<span style="color:#a6e22e">[c</span>(<span style="color:#e6db74">&#34;d&#34;</span>, <span style="color:#e6db74">&#34;c&#34;</span>, <span style="color:#e6db74">&#34;a&#34;</span>)]
+</span></span></code></pre></div></li>
 </ul>
-
-<pre><code class="language-R">  x[c(TRUE, FALSE, TRUE)]
-  x[x &gt; 3]
-</code></pre>
-
-<ul>
-<li><p><strong>什么也没有</strong>：返回原始的 vector</p></li>
-
-<li><p><strong>0</strong>：返回一个长度为 0 的 vector</p></li>
-
-<li><p><strong>字符</strong>：如果 vector 设置好了 name，就可以使用字符型进行 subset</p></li>
-</ul>
-
-<pre><code class="language-R">  y &lt;- setNames(x, letters[1:4])
-  y[c(&quot;d&quot;, &quot;c&quot;, &quot;a&quot;)]
-</code></pre>
-
 <p>对于 list 来说，subset 可以有两种：使用 <code>[]</code> 往往会返回一个 list，使用 <code>[[]]</code> 和 <code>$</code> 则会得到 list 的组成部分。</p>
-
 <p>对于 data frame 来说，它兼具两种数据结构的特点：使用一个 vector 对其 subset，它就可以当做 list；使用两个 vector 对其 subset，它就可以当做 matrix。</p>
-
-<pre><code class="language-R">df &lt;- data.frame(
-  x = 1:3,
-  y = 3:1,
-  z = letters[1:3]
-)
-
-df[1:2]
-#   x y
-# 1 1 3
-# 2 2 2
-# 3 3 1
-df[1:2, ]
-#   x y z
-# 1 1 3 a
-# 2 2 2 b
-</code></pre>
-
-<h2 id="还有两种操作-和">还有两种操作：<code>[[]]</code> 和 <code>$</code></h2>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>df <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">data.frame</span>(
+</span></span><span style="display:flex;"><span>  x <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">3</span>,
+</span></span><span style="display:flex;"><span>  y <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>  z <span style="color:#f92672">=</span> <span style="color:#66d9ef">letters</span>[1<span style="color:#f92672">:</span><span style="color:#ae81ff">3</span>]
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>df[1<span style="color:#f92672">:</span><span style="color:#ae81ff">2</span>]
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#   x y</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1 1 3</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2 2 2</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3 3 1</span>
+</span></span><span style="display:flex;"><span>df[1<span style="color:#f92672">:</span><span style="color:#ae81ff">2</span>, ]
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#   x y z</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1 1 3 a</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2 2 2 b</span>
+</span></span></code></pre></div><h2 id="还有两种操作-和-">还有两种操作：<code>[[]]</code> 和 <code>$</code></h2>
 <p>前面提到 <code>[[]]</code> 这种方式对于 list 来说，会从里面取出它的元素。这里可以引申出简化操作和保留操作的概念。</p>
-
 <p>顾名思义，保留操作会保证输出和输入的数据结构类型是一样的，而简化操作会对输入进行不同程度的简化：</p>
-
 <ul>
 <li>Atomic vector：移除变量名字</li>
 <li>List：返回的是 list 里的元素，而不是 list</li>
@@ -1214,7 +1199,6 @@ df[1:2, ]
 <li>Matrix：如果某个维度长度是 1，舍弃这个维度</li>
 <li>Data frame：如果输出一个单变量，把它变成一个 vector</li>
 </ul>
-
 <table>
 <thead>
 <tr>
@@ -1223,32 +1207,27 @@ df[1:2, ]
 <th>Preserving</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>Vector</td>
 <td><code>x[[1]]</code></td>
 <td><code>x[1]</code></td>
 </tr>
-
 <tr>
 <td>List</td>
 <td><code>x[[1]]</code></td>
 <td><code>x[1]</code></td>
 </tr>
-
 <tr>
 <td>Factor</td>
 <td><code>x[1:4, drop=T]</code></td>
 <td><code>x[1:4]</code></td>
 </tr>
-
 <tr>
 <td>Array</td>
 <td><code>x[1, ] x[, 1]</code></td>
 <td><code>x[1, , drop=F] x[, 1, drop=F]</code></td>
 </tr>
-
 <tr>
 <td>Data frame</td>
 <td><code>x[, 1] x[[1]]</code></td>
@@ -1256,84 +1235,62 @@ df[1:2, ]
 </tr>
 </tbody>
 </table>
-
 <p><code>$</code> 在某种方面上和 <code>[[]]</code> 一样，它经常被用来从一个 data frame 种提取变量，如 <code>mtcars$cyl</code> 等。</p>
-
 <p><code>$</code> 和 <code>[[]]</code> 有一些区别：</p>
-
 <ul>
-<li>不能这样使用 <code>$</code>（但 <code>[[]]</code> 可以）：</li>
+<li>
+<p>不能这样使用 <code>$</code>（但 <code>[[]]</code> 可以）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>var <span style="color:#f92672">&lt;-</span> cyl
+</span></span><span style="display:flex;"><span>mtcars<span style="color:#f92672">$</span>var
+</span></span></code></pre></div></li>
+<li>
+<p><code>$</code> 可以进行名字检索：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>mod <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">lm</span>(mpg <span style="color:#f92672">~</span> wt, data <span style="color:#f92672">=</span> mtcars)
+</span></span><span style="display:flex;"><span>mod<span style="color:#f92672">$</span>df.r <span style="color:#75715e"># 返回 mod$df.residual</span>
+</span></span></code></pre></div></li>
 </ul>
-
-<pre><code class="language-R">  var &lt;- cyl
-  mtcars$var
-</code></pre>
-
-<ul>
-<li><code>$</code> 可以进行名字检索：</li>
-</ul>
-
-<pre><code class="language-R">  mod &lt;- lm(mpg ~ wt, data = mtcars)
-  mod$df.r # 返回 mod$df.residual
-</code></pre>
-
 <h2 id="应用">应用</h2>
-
 <p>对字符缩写的转换（本质上是对分类变量设置了标签）：</p>
-
-<pre><code class="language-r">x &lt;- c(&quot;m&quot;, &quot;f&quot;, &quot;m&quot;, &quot;m&quot;, &quot;f&quot;, &quot;u&quot;)
-lookup &lt;- c(m=&quot;Male&quot;, f=&quot;Female&quot;, u=&quot;Unknown&quot;)
-lookup[x]
-#         m         f         m         m         f         u
-#    &quot;Male&quot;  &quot;Female&quot;    &quot;Male&quot;    &quot;Male&quot;  &quot;Female&quot; &quot;Unknown&quot;
-</code></pre>
-
-<p><code>info</code> 是关于成绩的相关信息，我们可以使用 integer subset 进行信息的匹配和合并：</p>
-
-<pre><code class="language-R">grades &lt;- c(1, 2, 3, 3, 1)
-info = data.frame(
-  grade = 1:3,
-  desc = c(&quot;Excellent&quot;, &quot;Good&quot;, &quot;Poor&quot;),
-  fail = c(F, F, T)
-)
-
-// 使用 match
-id &lt;- match(grades, info$grade)
-info[id, ]
-
-// 使用 rownames
-rownames(info) &lt;- info$grade
-info[grades, ]
-</code></pre>
-
-<p>Data frame 对行进行随机抽样：</p>
-
-<pre><code class="language-R">df &lt;- data.frame(
-  x = rep(1:3, each=2),
-  y = 6:1,
-  z = letters[1:6]
-)
-
-df[sample(nrow(df)), ]
-df[sample(nrow(df), 8, rep = T), ]
-</code></pre>
-
-<p><code>n</code> 列表示了每个观测重复几次，这里相当于把频数表转换为原始数据：</p>
-
-<pre><code class="language-R">df &lt;- data.frame(x = c(2, 4, 1), y = c(9, 11, 6), n = c(3, 5, 1))
-df[rep(1:nrow(df), df$n), ]
-</code></pre>
-
-<p>使用布尔值的 subset 可以让我们在 data frame 中进行条件筛选：</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>x <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;m&#34;</span>, <span style="color:#e6db74">&#34;f&#34;</span>, <span style="color:#e6db74">&#34;m&#34;</span>, <span style="color:#e6db74">&#34;m&#34;</span>, <span style="color:#e6db74">&#34;f&#34;</span>, <span style="color:#e6db74">&#34;u&#34;</span>)
+</span></span><span style="display:flex;"><span>lookup <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(m<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Male&#34;</span>, f<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Female&#34;</span>, u<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Unknown&#34;</span>)
+</span></span><span style="display:flex;"><span>lookup[x]
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#         m         f         m         m         f         u</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#    &#34;Male&#34;  &#34;Female&#34;    &#34;Male&#34;    &#34;Male&#34;  &#34;Female&#34; &#34;Unknown&#34;</span>
+</span></span></code></pre></div><p><code>info</code> 是关于成绩的相关信息，我们可以使用 integer subset 进行信息的匹配和合并：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>grades <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>info <span style="color:#f92672">=</span> <span style="color:#a6e22e">data.frame</span>(
+</span></span><span style="display:flex;"><span>  grade <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">3</span>,
+</span></span><span style="display:flex;"><span>  desc <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;Excellent&#34;</span>, <span style="color:#e6db74">&#34;Good&#34;</span>, <span style="color:#e6db74">&#34;Poor&#34;</span>),
+</span></span><span style="display:flex;"><span>  fail <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(F, F, T)
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">//</span> 使用 match
+</span></span><span style="display:flex;"><span>id <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">match</span>(grades, info<span style="color:#f92672">$</span>grade)
+</span></span><span style="display:flex;"><span>info[id, ]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">//</span> 使用 rownames
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">rownames</span>(info) <span style="color:#f92672">&lt;-</span> info<span style="color:#f92672">$</span>grade
+</span></span><span style="display:flex;"><span>info[grades, ]
+</span></span></code></pre></div><p>Data frame 对行进行随机抽样：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>df <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">data.frame</span>(
+</span></span><span style="display:flex;"><span>  x <span style="color:#f92672">=</span> <span style="color:#a6e22e">rep</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">3</span>, each<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>),
+</span></span><span style="display:flex;"><span>  y <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>  z <span style="color:#f92672">=</span> <span style="color:#66d9ef">letters</span>[1<span style="color:#f92672">:</span><span style="color:#ae81ff">6</span>]
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>df<span style="color:#a6e22e">[sample</span>(<span style="color:#a6e22e">nrow</span>(df)), ]
+</span></span><span style="display:flex;"><span>df<span style="color:#a6e22e">[sample</span>(<span style="color:#a6e22e">nrow</span>(df), <span style="color:#ae81ff">8</span>, rep <span style="color:#f92672">=</span> T), ]
+</span></span></code></pre></div><p><code>n</code> 列表示了每个观测重复几次，这里相当于把频数表转换为原始数据：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>df <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">data.frame</span>(x <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">1</span>), y <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">6</span>), n <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">1</span>))
+</span></span><span style="display:flex;"><span>df<span style="color:#a6e22e">[rep</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#a6e22e">nrow</span>(df), df<span style="color:#f92672">$</span>n), ]
+</span></span></code></pre></div><p>使用布尔值的 subset 可以让我们在 data frame 中进行条件筛选：</p>
 <ul>
 <li>注意和 <code>if</code> 中使用的 <code>&amp;&amp;</code> 和 <code>||</code> 不同，这里使用的是 <code>&amp;</code> 和 <code>|</code></li>
 <li>如果有很多条件，不想重复写 data frame 的名字，可以使用 <code>subset</code></li>
 </ul>
-
-<pre><code class="language-R">mtcars[mtcars$gear == 5 &amp; mtcars$cyl == 4, ]
-subset(mtcars, gear == 5 &amp; cyl == 4)
-</code></pre>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>mtcars[mtcars<span style="color:#f92672">$</span>gear <span style="color:#f92672">==</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">&amp;</span> mtcars<span style="color:#f92672">$</span>cyl <span style="color:#f92672">==</span> <span style="color:#ae81ff">4</span>, ]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">subset</span>(mtcars, gear <span style="color:#f92672">==</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">&amp;</span> cyl <span style="color:#f92672">==</span> <span style="color:#ae81ff">4</span>)
+</span></span></code></pre></div>
 
             </div>
             
@@ -1414,11 +1371,8 @@ subset(mtcars, gear == 5 &amp; cyl == 4)
             </a>
         
 
-        
-            <a href="https://xzywisdili.com/index.xml">
-                <img class="icon" src="https://xzywisdili.com/img/rss.svg" alt="rss" />
+        <img class="icon" src="https://xzywisdili.com/img/rss.svg" alt="rss" />
             </a>
-        
 
         </div>
     </div>

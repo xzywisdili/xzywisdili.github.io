@@ -1058,7 +1058,6 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
 
 
 
-
 </head>
 
 
@@ -1143,66 +1142,47 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
                 
     
     <p>今天整理数据的时候，需要使用数据集 2 对数据集 1 里缺失的部分进行填补，而两者重复的部分，优先保留数据集 1 里的。</p>
-
 <p>这个问题其实很简单，只需短短 2-3 行：</p>
-
-<pre><code class="language-R">result &lt;- data1 %&gt;%
-  left_join(data2) %&gt;%
-  mutate(value = ifelse(is.na(value.x), value.y, value.x))
-</code></pre>
-
-<p>但我遇到的问题稍微多一点点难度，日期的序列不是连续的话，例如数据集 1：</p>
-
-<pre><code class="language-R"># date       value
-# 2014-01-01 12
-# 2014-01-03 14
-# 2014-01-05 17
-</code></pre>
-
-<p>数据集 2：</p>
-
-<pre><code class="language-R"># date       value
-# 2014-01-02 13
-# 2014-01-03 16
-# 2014-01-04 15
-</code></pre>
-
-<p>那么希望得到的结果是：</p>
-
-<pre><code class="language-R"># date       value
-# 2014-01-01 12
-# 2014-01-02 16
-# 2014-01-03 14
-# 2014-01-04 15
-# 2014-01-05 17
-</code></pre>
-
-<p>我们会需要先生成一个日期的模板：</p>
-
-<pre><code class="language-R">template &lt;- tibble(
-  date = seq(as.Date(&quot;2013/1/1&quot;), as.Date(&quot;2017/12/31&quot;), &quot;days&quot;
-)
-
-template %&gt;%
-  left_join(data1, by=&quot;date&quot;) %&gt;%
-  left_join(data2, by-&quot;date&quot;) %&gt;%
-  mutate(value = ifelse(is.na(value.x), value.y, value.x))
-</code></pre>
-
-<p>当然，如果数据维度上升，比如多了一个城市维度的话，只需要在模板上更改一下也能解决了：</p>
-
-<pre><code class="language-R">template &lt;- tibble(
-  city = rep(city_codes, each=len1),
-  date = rep(seq(as.Date(&quot;2013/1/1&quot;), as.Date(&quot;2017/12/31&quot;), &quot;days&quot;), len2)
-)
-
-template %&gt;%
-  left_join(data1, by=c(&quot;date&quot;, &quot;city&quot;)) %&gt;%
-  left_join(data2, by-c(&quot;date&quot;, &quot;city&quot;)) %&gt;%
-  mutate(value = ifelse(is.na(value.x), value.y, value.x))
-</code></pre>
-
-<p>这里需要注意生成模板的两个变量重复的次数和参数设置，另外下面的合并键也要加入新的变量。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>result <span style="color:#f92672">&lt;-</span> data1 <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">left_join</span>(data2) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">mutate</span>(value <span style="color:#f92672">=</span> <span style="color:#a6e22e">ifelse</span>(<span style="color:#a6e22e">is.na</span>(value.x), value.y, value.x))
+</span></span></code></pre></div><p>但我遇到的问题稍微多一点点难度，日期的序列不是连续的话，例如数据集 1：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#75715e"># date       value</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2014-01-01 12</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2014-01-03 14</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2014-01-05 17</span>
+</span></span></code></pre></div><p>数据集 2：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#75715e"># date       value</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2014-01-02 13</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2014-01-03 16</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2014-01-04 15</span>
+</span></span></code></pre></div><p>那么希望得到的结果是：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#75715e"># date       value</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2014-01-01 12</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2014-01-02 16</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2014-01-03 14</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2014-01-04 15</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2014-01-05 17</span>
+</span></span></code></pre></div><p>我们会需要先生成一个日期的模板：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>template <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">tibble</span>(
+</span></span><span style="display:flex;"><span>  date <span style="color:#f92672">=</span> <span style="color:#a6e22e">seq</span>(<span style="color:#a6e22e">as.Date</span>(<span style="color:#e6db74">&#34;2013/1/1&#34;</span>), <span style="color:#a6e22e">as.Date</span>(<span style="color:#e6db74">&#34;2017/12/31&#34;</span>), <span style="color:#e6db74">&#34;days&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>template <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">left_join</span>(data1, by<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;date&#34;</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">left_join</span>(data2, by<span style="color:#f92672">-</span><span style="color:#e6db74">&#34;date&#34;</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">mutate</span>(value <span style="color:#f92672">=</span> <span style="color:#a6e22e">ifelse</span>(<span style="color:#a6e22e">is.na</span>(value.x), value.y, value.x))
+</span></span></code></pre></div><p>当然，如果数据维度上升，比如多了一个城市维度的话，只需要在模板上更改一下也能解决了：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>template <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">tibble</span>(
+</span></span><span style="display:flex;"><span>  city <span style="color:#f92672">=</span> <span style="color:#a6e22e">rep</span>(city_codes, each<span style="color:#f92672">=</span>len1),
+</span></span><span style="display:flex;"><span>  date <span style="color:#f92672">=</span> <span style="color:#a6e22e">rep</span>(<span style="color:#a6e22e">seq</span>(<span style="color:#a6e22e">as.Date</span>(<span style="color:#e6db74">&#34;2013/1/1&#34;</span>), <span style="color:#a6e22e">as.Date</span>(<span style="color:#e6db74">&#34;2017/12/31&#34;</span>), <span style="color:#e6db74">&#34;days&#34;</span>), len2)
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>template <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">left_join</span>(data1, by<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;date&#34;</span>, <span style="color:#e6db74">&#34;city&#34;</span>)) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">left_join</span>(data2, by<span style="color:#f92672">-</span><span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;date&#34;</span>, <span style="color:#e6db74">&#34;city&#34;</span>)) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">mutate</span>(value <span style="color:#f92672">=</span> <span style="color:#a6e22e">ifelse</span>(<span style="color:#a6e22e">is.na</span>(value.x), value.y, value.x))
+</span></span></code></pre></div><p>这里需要注意生成模板的两个变量重复的次数和参数设置，另外下面的合并键也要加入新的变量。</p>
 
 
             </div>
@@ -1284,11 +1264,8 @@ template %&gt;%
             </a>
         
 
-        
-            <a href="https://xzywisdili.com/index.xml">
-                <img class="icon" src="https://xzywisdili.com/img/rss.svg" alt="rss" />
+        <img class="icon" src="https://xzywisdili.com/img/rss.svg" alt="rss" />
             </a>
-        
 
         </div>
     </div>

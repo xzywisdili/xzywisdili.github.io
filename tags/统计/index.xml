@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>统计 on xzy&#39;s blog</title>
@@ -6,11 +6,7 @@
     <description>Recent content in 统计 on xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 21 Nov 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://xzywisdili.com/tags/%E7%BB%9F%E8%AE%A1/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 21 Nov 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.com/tags/%E7%BB%9F%E8%AE%A1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>R 语言的那些最最最基础</title>
       <link>https://xzywisdili.com/blog/r-%E8%AF%AD%E8%A8%80%E7%9A%84%E9%82%A3%E4%BA%9B%E6%9C%80%E6%9C%80%E6%9C%80%E5%9F%BA%E7%A1%80/</link>
@@ -19,11 +15,11 @@
       <guid>https://xzywisdili.com/blog/r-%E8%AF%AD%E8%A8%80%E7%9A%84%E9%82%A3%E4%BA%9B%E6%9C%80%E6%9C%80%E6%9C%80%E5%9F%BA%E7%A1%80/</guid>
       <description>在 R 语言 的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么就一定不能错过 R。本文只总结了 R 语言里面的那些最最最基础，想用好 R 必须要背过的内容。话不多说，赶紧上车。
 基本算数 直接进行算数运算：
-&amp;gt; 4 + 6 [1] 10  将值保存在对象中进行运算：
-&amp;gt; x &amp;lt;- 6 &amp;gt; y &amp;lt;- 4 &amp;gt; z &amp;lt;- x + y &amp;gt; z [1] 10  显示我们已经创建的对象：
-&amp;gt; ls() [1] &amp;quot;x&amp;quot; &amp;quot;y&amp;quot; &amp;quot;z&amp;quot;  清除一些对象：
-&amp;gt; rm(x, y) &amp;gt; ls() [1] &amp;quot;z&amp;quot;  创建向量（vector）：
-&amp;gt; z &amp;lt;- c(5, 9, 1, 0)  使用函数 c(x, y) 可以做到向量的连接：</description>
+&amp;gt; 4 + 6 [1] 10 将值保存在对象中进行运算：
+&amp;gt; x &amp;lt;- 6 &amp;gt; y &amp;lt;- 4 &amp;gt; z &amp;lt;- x + y &amp;gt; z [1] 10 显示我们已经创建的对象：
+&amp;gt; ls() [1] &amp;#34;x&amp;#34; &amp;#34;y&amp;#34; &amp;#34;z&amp;#34; 清除一些对象：
+&amp;gt; rm(x, y) &amp;gt; ls() [1] &amp;#34;z&amp;#34; 创建向量（vector）：
+&amp;gt; z &amp;lt;- c(5, 9, 1, 0) 使用函数 c(x, y) 可以做到向量的连接：</description>
     </item>
     
   </channel>

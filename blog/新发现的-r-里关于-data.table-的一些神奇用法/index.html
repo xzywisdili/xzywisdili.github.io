@@ -1058,7 +1058,6 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
 
 
 
-
 </head>
 
 
@@ -1142,141 +1141,81 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
             <div class="markdown">
                 
     
-    
-
-<p>R 语言中的 <code>data.table</code> 包可以理解为 <code>data.frame</code> 的高级版本，它比较适合适合用来处理大型数据集。</p>
-
+    <p>R 语言中的 <code>data.table</code> 包可以理解为 <code>data.frame</code> 的高级版本，它比较适合适合用来处理大型数据集。</p>
 <p>载入包并且读取一些数据，当然也可以使用 <code>nrow</code> 参数来决定读取多少行：</p>
-
-<pre><code class="language-R">library(data.table)
-
-mydata &lt;- fread(&quot;some_kind_of_data.csv&quot;)
-mydata &lt;- fread(&quot;some_kind_of_data.csv&quot;, nrows = 10)
-</code></pre>
-
-<p><code>data.table</code> 包提供了一个非常简洁的通用格式：<code>mydata[i, j, by]</code>，可以理解为：对于数据集<code>mydata</code>，选取子集行<code>i</code>,通过<code>by</code>分组计算<code>j</code>。只需要记住，<code>i</code>是用来在行上进行操作的（比如筛选行），<code>j</code> 是用来在列上进行操作的（比如选择列或者根据计算创建新列）。对比<code>dplyr</code>等包来说，<code>data.table</code>的运行速度更快。</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(data.table)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>mydata <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">fread</span>(<span style="color:#e6db74">&#34;some_kind_of_data.csv&#34;</span>)
+</span></span><span style="display:flex;"><span>mydata <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">fread</span>(<span style="color:#e6db74">&#34;some_kind_of_data.csv&#34;</span>, nrows <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>)
+</span></span></code></pre></div><p><code>data.table</code> 包提供了一个非常简洁的通用格式：<code>mydata[i, j, by]</code>，可以理解为：对于数据集<code>mydata</code>，选取子集行<code>i</code>,通过<code>by</code>分组计算<code>j</code>。只需要记住，<code>i</code>是用来在行上进行操作的（比如筛选行），<code>j</code> 是用来在列上进行操作的（比如选择列或者根据计算创建新列）。对比<code>dplyr</code>等包来说，<code>data.table</code>的运行速度更快。</p>
 <h2 id="选择列">选择列</h2>
-
 <p>如果只需要选择列的话，可以只代入 <code>j</code>，但需要记住给 <code>i</code> 留出位置：</p>
-
-<pre><code class="language-R">mydata[, j]
-</code></pre>
-
-<p>首先，通过列名选择列是，是否需要打双引号是一个值得考虑的问题，因为两者各有优劣。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>mydata[, j]
+</span></span></code></pre></div><p>首先，通过列名选择列是，是否需要打双引号是一个值得考虑的问题，因为两者各有优劣。
 <code>data.table</code> 支持打双引号的原生 <code>R</code> 的做法：</p>
-
-<pre><code class="language-R">data1 &lt;- mydata[, c(&quot;columnA&quot;, &quot;columnB&quot;, &quot;columnC&quot;, &quot;columnD&quot;)]
-</code></pre>
-
-<p>但也可以使用不打双引号，这样会更方便（就好像 tidyverse 里面的 <code>select</code>），只不过需要用到 <code>list</code>：</p>
-
-<pre><code class="language-R">data1 &lt;- mydata[, list(columnA, columnB, columnC, columnD)]
-</code></pre>
-
-<p>这里，第一个小技巧就来了，我们可以使用一个点代替 <code>list</code>：</p>
-
-<pre><code class="language-R">data1 &lt;- mydata[, .(columnA, columnB, columnC, column)]
-</code></pre>
-
-<p>在 <code>data.table</code> 的中括号里，<code>.()</code> 就是 <code>list()</code>的简写形式。</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>data1 <span style="color:#f92672">&lt;-</span> mydata[, <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;columnA&#34;</span>, <span style="color:#e6db74">&#34;columnB&#34;</span>, <span style="color:#e6db74">&#34;columnC&#34;</span>, <span style="color:#e6db74">&#34;columnD&#34;</span>)]
+</span></span></code></pre></div><p>但也可以使用不打双引号，这样会更方便（就好像 tidyverse 里面的 <code>select</code>），只不过需要用到 <code>list</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>data1 <span style="color:#f92672">&lt;-</span> mydata[, <span style="color:#a6e22e">list</span>(columnA, columnB, columnC, columnD)]
+</span></span></code></pre></div><p>这里，第一个小技巧就来了，我们可以使用一个点代替 <code>list</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>data1 <span style="color:#f92672">&lt;-</span> mydata[, .(columnA, columnB, columnC, column)]
+</span></span></code></pre></div><p>在 <code>data.table</code> 的中括号里，<code>.()</code> 就是 <code>list()</code>的简写形式。</p>
 <p>如果你想使用一个已经存在的列名向量，比如：</p>
-
-<pre><code class="language-R">mycols &lt;- c(&quot;columnA&quot;, &quot;columnB&quot;, &quot;columnC&quot;, &quot;columnD&quot;)
-</code></pre>
-
-<p>直接套用是行不通的：<code>mydata[, mycols]</code>，而是需要在这个列名向量前面加两个点：</p>
-
-<pre><code class="language-R">data1 &lt;- mydata[, ..mycols]
-</code></pre>
-
-<p>当然，你可以借用命令行里面 <code>..</code> 的含义去理解，可以认为是从括号里面的命名空间上升到全局变量了。</p>
-
-<h2 id="计算-data-table-行数">计算 data.table 行数</h2>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>mycols <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;columnA&#34;</span>, <span style="color:#e6db74">&#34;columnB&#34;</span>, <span style="color:#e6db74">&#34;columnC&#34;</span>, <span style="color:#e6db74">&#34;columnD&#34;</span>)
+</span></span></code></pre></div><p>直接套用是行不通的：<code>mydata[, mycols]</code>，而是需要在这个列名向量前面加两个点：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>data1 <span style="color:#f92672">&lt;-</span> mydata[, ..mycols]
+</span></span></code></pre></div><p>当然，你可以借用命令行里面 <code>..</code> 的含义去理解，可以认为是从括号里面的命名空间上升到全局变量了。</p>
+<h2 id="计算-datatable-行数">计算 data.table 行数</h2>
 <p>下一个标记是 <code>.N</code>，代表行数。可以用这个标记来得到数据集的总行数和使用 <code>by</code> 分组后的各亚组行数。
 比如我们返回 <code>iris</code> 数据集的总行数和按照 <code>Species</code> 分组的行数：</p>
-
-<pre><code class="language-R">diris &lt;- as.data.table(iris)
-diris[, .N]
-# 150
-
-diris[, .N, Species]
-#       Species  N
-# 1:     setosa 50
-# 2: versicolor 50
-# 3:  virginica 50
-</code></pre>
-
-<p>当然，使用多个变量进行分组也是可以的，同样用到 <code>.</code>：</p>
-
-<pre><code class="language-R">mydata[, .N, .(columnA, columnB)]
-</code></pre>
-
-<p>并且你还可以在后面使用 <code>order</code>，让行数结果从高到低排列：</p>
-
-<pre><code class="language-R">mydata[, .N, .(columnA, columnB)][order(columnA, -N)]
-</code></pre>
-
-<p>这样的语句顺序也非常符合数据处理的逻辑。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>diris <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">as.data.table</span>(iris)
+</span></span><span style="display:flex;"><span>diris[, .N]
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 150</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>diris[, .N, Species]
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#       Species  N</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1:     setosa 50</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2: versicolor 50</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3:  virginica 50</span>
+</span></span></code></pre></div><p>当然，使用多个变量进行分组也是可以的，同样用到 <code>.</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>mydata[, .N, .(columnA, columnB)]
+</span></span></code></pre></div><p>并且你还可以在后面使用 <code>order</code>，让行数结果从高到低排列：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>mydata[, .N, .(columnA, columnB)]<span style="color:#a6e22e">[order</span>(columnA, <span style="color:#f92672">-</span>N)]
+</span></span></code></pre></div><p>这样的语句顺序也非常符合数据处理的逻辑。
 当然，如果你使用习惯了 <code>dplyr</code>，你喜欢的写法 <code>data.table</code> 也可以模仿：</p>
-
-<pre><code class="language-R">mydata %&gt;%
-  count(columnA, columnB) %&gt;%
-  order(columnA, -n)
-
-mydata[, .N,
-  .(columnA, columnB)][
-    order(columnA, -n)
-  ]
-</code></pre>
-
-<h2 id="向-data-table-增加列">向 data.table 增加列</h2>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>mydata <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">count</span>(columnA, columnB) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">order</span>(columnA, <span style="color:#f92672">-</span>n)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>mydata[, .N,
+</span></span><span style="display:flex;"><span>  .(columnA, columnB)][
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">order</span>(columnA, <span style="color:#f92672">-</span>n)
+</span></span><span style="display:flex;"><span>  ]
+</span></span></code></pre></div><h2 id="向-datatable-增加列">向 data.table 增加列</h2>
 <p>比如我们想要在 <code>iris</code> 数据集增加一列，看品种是否是 <code>Virginica</code>，如果是则为 <code>TRUE</code>，否则为 <code>FALSE</code>，
 那么可以这样写：</p>
-
-<pre><code class="language-R">diris[, IfVirginica := ifelse(Species %like% &quot;virgin&quot;, TRUE, FALSE)]
-</code></pre>
-
-<p>这个 <code>%like%</code> 的用法有点类似于 SQL 里面的 <code>LIKE</code>。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>diris[, IfVirginica <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ifelse</span>(Species <span style="color:#f92672">%like%</span> <span style="color:#e6db74">&#34;virgin&#34;</span>, <span style="color:#66d9ef">TRUE</span>, <span style="color:#66d9ef">FALSE</span>)]
+</span></span></code></pre></div><p>这个 <code>%like%</code> 的用法有点类似于 SQL 里面的 <code>LIKE</code>。
 而 <code>:=</code> 的用法可能在其他编程语言中比较常见，这里代表通过增加新列改变了目前的数据集 <code>diris</code>，
 而并非存入另外的新数据集。</p>
-
 <p>当然也可以同时增加两列：</p>
-
-<pre><code class="language-R">diris[, `:=`(
-  IfVirginica := ifelse(Species %like% &quot;virgin&quot;, TRUE, FALSE),
-  IfVensicolor := ifelse(Species %like% &quot;vensi&quot;, TRUE, FALSE)
-)]
-</code></pre>
-
-<h2 id="更多的操作符">更多的操作符</h2>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>diris[, <span style="color:#a6e22e">`:=`</span>(
+</span></span><span style="display:flex;"><span>  IfVirginica <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ifelse</span>(Species <span style="color:#f92672">%like%</span> <span style="color:#e6db74">&#34;virgin&#34;</span>, <span style="color:#66d9ef">TRUE</span>, <span style="color:#66d9ef">FALSE</span>),
+</span></span><span style="display:flex;"><span>  IfVensicolor <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ifelse</span>(Species <span style="color:#f92672">%like%</span> <span style="color:#e6db74">&#34;vensi&#34;</span>, <span style="color:#66d9ef">TRUE</span>, <span style="color:#66d9ef">FALSE</span>)
+</span></span><span style="display:flex;"><span>)]
+</span></span></code></pre></div><h2 id="更多的操作符">更多的操作符</h2>
 <p><code>%between%</code>：找到目标的取值区间进行筛选</p>
-
-<pre><code class="language-R">mydata &lt;- diris[Species == &quot;virginica&quot; &amp; Sepal.Length %between% c(4, 6)]
-</code></pre>
-
-<p><code>%chin%</code>：类似原生 R 的 <code>%in%</code>，但只面向字符变量且速度更快</p>
-
-<pre><code class="language-R">mydata &lt;- diris[Species %chin% c(&quot;virginica&quot;, &quot;vensicolor&quot;)]
-</code></pre>
-
-<h2 id="fcase-函数">fcase() 函数</h2>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>mydata <span style="color:#f92672">&lt;-</span> diris[Species <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;virginica&#34;</span> <span style="color:#f92672">&amp;</span> Sepal.Length <span style="color:#f92672">%between%</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">6</span>)]
+</span></span></code></pre></div><p><code>%chin%</code>：类似原生 R 的 <code>%in%</code>，但只面向字符变量且速度更快</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>mydata <span style="color:#f92672">&lt;-</span> diris[Species <span style="color:#f92672">%chin%</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;virginica&#34;</span>, <span style="color:#e6db74">&#34;vensicolor&#34;</span>)]
+</span></span></code></pre></div><h2 id="fcase-函数">fcase() 函数</h2>
 <p>最后要介绍的 <code>fcase()</code> 函数和 SQL 里面的 <code>CASE WHEN</code> 语句和 <code>dplyr</code> 里面的 <code>case_when()</code> 语句
 类似，基本语法是 <code>fcase(condition1, &quot;value1&quot;, condition2, &quot;value2&quot;)</code>，比如下面的例子：</p>
-
-<pre><code class="language-R">diris[, newSpeices := fcase(
-  IfVirginic &amp; !IfVensicolor, &quot;Species1&quot;,
-  !IfVirginic &amp; IfVensicolor, &quot;Species2&quot;,
-  IfVirginic &amp; IfVensicolor, &quot;Both&quot;,
-  !IfVirginic &amp; !IfVensicolor, &quot;Neither&quot;)]
-</code></pre>
-
-<p>最后，更多特殊符号的用法可以参考 <code>help(&quot;special-symbols&quot;)</code>，虽然文档可能讲得不是很清楚，但依然全面。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>diris[, newSpeices <span style="color:#f92672">:=</span> <span style="color:#a6e22e">fcase</span>(
+</span></span><span style="display:flex;"><span>  IfVirginic <span style="color:#f92672">&amp;</span> <span style="color:#f92672">!</span>IfVensicolor, <span style="color:#e6db74">&#34;Species1&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">!</span>IfVirginic <span style="color:#f92672">&amp;</span> IfVensicolor, <span style="color:#e6db74">&#34;Species2&#34;</span>,
+</span></span><span style="display:flex;"><span>  IfVirginic <span style="color:#f92672">&amp;</span> IfVensicolor, <span style="color:#e6db74">&#34;Both&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">!</span>IfVirginic <span style="color:#f92672">&amp;</span> <span style="color:#f92672">!</span>IfVensicolor, <span style="color:#e6db74">&#34;Neither&#34;</span>)]
+</span></span></code></pre></div><p>最后，更多特殊符号的用法可以参考 <code>help(&quot;special-symbols&quot;)</code>，虽然文档可能讲得不是很清楚，但依然全面。</p>
 
 
             </div>
@@ -1358,11 +1297,8 @@ mydata[, .N,
             </a>
         
 
-        
-            <a href="https://xzywisdili.com/index.xml">
-                <img class="icon" src="https://xzywisdili.com/img/rss.svg" alt="rss" />
+        <img class="icon" src="https://xzywisdili.com/img/rss.svg" alt="rss" />
             </a>
-        
 
         </div>
     </div>

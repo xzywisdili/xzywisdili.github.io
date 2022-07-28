@@ -1058,7 +1058,6 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
 
 
 
-
 </head>
 
 
@@ -1143,86 +1142,74 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
                 
     
     <p>昨天晚上师姐速报：「师弟，帮忙算个东西，用SAS写」。</p>
-
 <p>一开始对我来说可能不是什么难事，打开文件一看，陷入了深深的沉思。
 用一个截图说明：</p>
-
-<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1g9qkc9s187j30pd0nlgqq.jpg" alt="" /></p>
-
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1g9qkc9s187j30pd0nlgqq.jpg" alt=""></p>
 <p>每一行代表一个研究对象，每个研究对象有 pm1 到 pm7 这 7 天所接触的 PM2.5 浓度（实际文件里面是 365 天）。
 我们需要计算连续 2 天，连续 3 天，&hellip; ，连续 7 天接触 PM2.5 浓度大于 35 的次数。
 而且如果连续 3 天接触 PM2.5，那么只能算一次连续 3 天次数，而不能再重复计算连续 2 天次数。
 换句话说，这里的每一个连续的天数都必须刚刚好好。</p>
-
 <p>也许有些写程序的小伙伴会觉得非常好写，但对我来说，想要使用 SAS 解决这个问题，直觉上还是比较费劲的。
 昨晚在参加选调生宣讲的时候，就一直在想。回宿舍立马坐下敲了出来。</p>
-
 <p>首先，导入数据。将数据里每个值和 35 进行比较，先转换成由 0， 1 组成的数据集。
 方便下一步的运算。</p>
-
-<pre><code class="language-SAS">DATA example;
-  infile &quot;G:\04_code\PM2.5数据.csv&quot; DSD MISSOVER firstobs=2;
-	input id pm1-pm356;
-RUN;
-
-DATA example_35;
-	set example;
-	array pm {365} pm1-pm365;
-	do i = 1 to 365;
-		pm[i] = pm[i] &gt; 35;
-	end;
-	drop i;
-RUN;
-</code></pre>
-
-<p>接下来，就是最关键的部分。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SAS" data-lang="SAS"><span style="display:flex;"><span><span style="color:#66d9ef">DATA </span>example;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">infile</span> <span style="color:#e6db74">&#34;G:\04_code\PM2.5数据.csv&#34;</span> DSD MISSOVER firstobs=<span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">input</span> id pm1-pm356<span style="color:#66d9ef">;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">RUN;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">DATA </span>example_35;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">set</span> example;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">array</span> pm {<span style="color:#ae81ff">365</span>} pm1-pm365;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">do</span> i = <span style="color:#ae81ff">1</span> to <span style="color:#ae81ff">365</span>;
+</span></span><span style="display:flex;"><span>		pm[i] = pm[i] &gt; <span style="color:#ae81ff">35</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">end</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">drop</span> i<span style="color:#66d9ef">;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">RUN;</span>
+</span></span></code></pre></div><p>接下来，就是最关键的部分。
 这里是利用 SAS 在 DATA 步读取数据的同时，插入一个循环。
 这个循环长度就是 365，把每个研究对象的数据由头读到尾，在读的过程中分析数值 1 的连续情况。</p>
-
-<pre><code class="language-SAS">DATA PM_days(keep=id day2 day3 day4 day5 day6 day7);
-	set example_35;
-	array pm {365} pm1-pm365;
-	do i = 1 to 365;
-		if pm[i] eq 1 then do;
-			count+1;
-		end;
-		if pm[i] eq 0 | i eq 365 then do;
-			if count eq 2 then day2+1;
-			if count eq 3 then day3+1;
-			if count eq 4 then day4+1;
-			if count eq 5 then day5+1;
-			if count eq 6 then day6+1;
-			if count eq 7 then day7+1;
-			count = 0;
-			
-			if i eq 356 then do;
-				output;
-				day2 = 0;
-				day3 = 0;
-				day4 = 0;
-				day5 = 0;
-				day6 = 0;
-				day7 = 0;
-			end;
-		end;
-	end;
-RUN;
-
-PROC SQL;
-	create table PM_result as
-	select *
-	from example, PM_days
-	where example.id = PM_days.id;
-quit;
-
-PROC PRINT data=PM_result(obs=10);
-RUN;
-</code></pre>
-
-<p>说实话，这段代码写下来还真有点 C 语言的感觉。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SAS" data-lang="SAS"><span style="display:flex;"><span><span style="color:#66d9ef">DATA </span>PM_days(<span style="color:#66d9ef">keep</span>=id day2 day3 day4 day5 day6 day7);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">set</span> example_35;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">array</span> pm {<span style="color:#ae81ff">365</span>} pm1-pm365;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">do</span> i = <span style="color:#ae81ff">1</span> to <span style="color:#ae81ff">365</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> pm[i] eq <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">then</span> <span style="color:#66d9ef">do</span>;
+</span></span><span style="display:flex;"><span>			count<span style="color:#ae81ff">+1</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">end</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> pm[i] eq <span style="color:#ae81ff">0</span> | i eq <span style="color:#ae81ff">365</span> <span style="color:#66d9ef">then</span> <span style="color:#66d9ef">do</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> count eq <span style="color:#ae81ff">2</span> <span style="color:#66d9ef">then</span> day2<span style="color:#ae81ff">+1</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> count eq <span style="color:#ae81ff">3</span> <span style="color:#66d9ef">then</span> day3<span style="color:#ae81ff">+1</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> count eq <span style="color:#ae81ff">4</span> <span style="color:#66d9ef">then</span> day4<span style="color:#ae81ff">+1</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> count eq <span style="color:#ae81ff">5</span> <span style="color:#66d9ef">then</span> day5<span style="color:#ae81ff">+1</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> count eq <span style="color:#ae81ff">6</span> <span style="color:#66d9ef">then</span> day6<span style="color:#ae81ff">+1</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> count eq <span style="color:#ae81ff">7</span> <span style="color:#66d9ef">then</span> day7<span style="color:#ae81ff">+1</span>;
+</span></span><span style="display:flex;"><span>			count = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>			
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> i eq <span style="color:#ae81ff">356</span> <span style="color:#66d9ef">then</span> <span style="color:#66d9ef">do</span>;
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">output</span>;
+</span></span><span style="display:flex;"><span>				day2 = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>				day3 = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>				day4 = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>				day5 = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>				day6 = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>				day7 = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">end</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">end</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">end</span><span style="color:#66d9ef">;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">RUN;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">PROC SQL;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">create</span> <span style="color:#66d9ef">table</span> PM_result <span style="color:#66d9ef">as</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">select</span> *
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">from</span> example, PM_days
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">where</span> example<span style="color:#ae81ff">.</span>id = PM_days<span style="color:#ae81ff">.</span>id<span style="color:#66d9ef">;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">quit;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">PROC PRINT </span>data=PM_result(obs=<span style="color:#ae81ff">10</span>)<span style="color:#66d9ef">;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">RUN;</span>
+</span></span></code></pre></div><p>说实话，这段代码写下来还真有点 C 语言的感觉。
 当然在循环中，对于 day2-day7 的操控和赋值可能还有改进的空间，即把这些变量也编入一个数组。
 但既然只要求到了最多 7 天，这样其实也足够了。</p>
-
 <p>最后赶在 10 点之前，交给了师姐，师姐表示很欣慰。
 不过，我同样感受到了 SAS 实在是一种充满个性的数据分析语言。
 打个比方，写 python 和 R 像是骑马，写 SAS 就像骑河马。
@@ -1308,11 +1295,8 @@ RUN;
             </a>
         
 
-        
-            <a href="https://xzywisdili.com/index.xml">
-                <img class="icon" src="https://xzywisdili.com/img/rss.svg" alt="rss" />
+        <img class="icon" src="https://xzywisdili.com/img/rss.svg" alt="rss" />
             </a>
-        
 
         </div>
     </div>

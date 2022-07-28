@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R 语言 on xzy&#39;s blog</title>
@@ -6,11 +6,7 @@
     <description>Recent content in R 语言 on xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 15 Jun 2021 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://xzywisdili.com/categories/r-%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 15 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.com/categories/r-%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>从电子病历提取数据</title>
       <link>https://xzywisdili.com/blog/%E4%BB%8E%E7%94%B5%E5%AD%90%E7%97%85%E5%8E%86%E6%8F%90%E5%8F%96%E6%95%B0%E6%8D%AE/</link>
@@ -20,7 +16,7 @@
       <description>电子病历的普及度已经很高。但如何从电子病历中提取信息还是比较令人头疼。 首先病历内容众多，从主诉到体格检查，从家族史到用药史，一份完整的病历涵盖的信息众多。 其次，病历内容是由医生按照段落填写的，很难在数以万计的病历中找到通用的标准进行提取。
 当然，如果医院的病历系统是按照表格进行组织并且保存，比如我之前实习过的社区医院，将每个人的电子病历 保存为 HTML 格式，就可以使用 python 的 BeautifulSoup 进行提取。当然，如果只能得到大段 文字的话，大概需要借助人工智能里面的自然语言处理来做更多的工作的。
 当然，如果任务比较简单的话，我们还是有取巧的方法的。比如要从病历记录里面提取出来身高、体重、收缩压和舒张压 等等，如：“血压114/56mmHg，体重53.3kg，胎心146次/分，宫高25cm，宫缩无。” 这样的描述中提取出舒张压：56，收缩压：114，体重：53.3 等等数据，我们可以借助正则表达式解决：
-library(readxl) library(tidyr) library(stringr) data &amp;lt;- read_excel(&amp;quot;data.xlsx&amp;quot;, sheet = 1) extract_blood_pressure &amp;lt;- function(diag_str) { res &amp;lt;- str_match(diag_str, &amp;quot;血压[:： ]*[0-9]*/[0-9]*[ ]*[(mmHg)|(mmhg)]+&amp;quot;) blood_pressure &amp;lt;- unlist(str_extract_all(res[, 1], &amp;quot;[0-9]+&amp;quot;)) return(as.numeric(blood_pressure)) } extract_height &amp;lt;- function(diag_str) { res &amp;lt;- str_match(diag_str, &amp;quot;身高[:：]*[0-9]*/[0-9]*[ ]*[cC][mM]&amp;quot;) height &amp;lt;- unlist(str_extract_all(res[, 1], &amp;quot;[0-9]+&amp;quot;)) return(as.numeric(blood_pressure)) } extract_weight &amp;lt;- function(diag_str) { res &amp;lt;- str_match(diag_str, &amp;quot;体重[ ]*([0-9]{1,}[.]*[0-9]*)[ ]*[kK][gG]&amp;quot;) weight &amp;lt;- unlist(str_extract_all(res[, 1], &amp;quot;[0-9]{1,}[.</description>
+library(readxl) library(tidyr) library(stringr) data &amp;lt;- read_excel(&amp;#34;data.xlsx&amp;#34;, sheet = 1) extract_blood_pressure &amp;lt;- function(diag_str) { res &amp;lt;- str_match(diag_str, &amp;#34;血压[:： ]*[0-9]*/[0-9]*[ ]*[(mmHg)|(mmhg)]+&amp;#34;) blood_pressure &amp;lt;- unlist(str_extract_all(res[, 1], &amp;#34;[0-9]+&amp;#34;)) return(as.numeric(blood_pressure)) } extract_height &amp;lt;- function(diag_str) { res &amp;lt;- str_match(diag_str, &amp;#34;身高[:：]*[0-9]*/[0-9]*[ ]*[cC][mM]&amp;#34;) height &amp;lt;- unlist(str_extract_all(res[, 1], &amp;#34;[0-9]+&amp;#34;)) return(as.numeric(blood_pressure)) } extract_weight &amp;lt;- function(diag_str) { res &amp;lt;- str_match(diag_str, &amp;#34;体重[ ]*([0-9]{1,}[.]*[0-9]*)[ ]*[kK][gG]&amp;#34;) weight &amp;lt;- unlist(str_extract_all(res[, 1], &amp;#34;[0-9]{1,}[.</description>
     </item>
     
     <item>
@@ -31,12 +27,13 @@ library(readxl) library(tidyr) library(stringr) data &amp;lt;- read_excel(&amp;q
       <guid>https://xzywisdili.com/blog/%E6%96%B0%E5%8F%91%E7%8E%B0%E7%9A%84-r-%E9%87%8C%E5%85%B3%E4%BA%8E-data.table-%E7%9A%84%E4%B8%80%E4%BA%9B%E7%A5%9E%E5%A5%87%E7%94%A8%E6%B3%95/</guid>
       <description>R 语言中的 data.table 包可以理解为 data.frame 的高级版本，它比较适合适合用来处理大型数据集。
 载入包并且读取一些数据，当然也可以使用 nrow 参数来决定读取多少行：
-library(data.table) mydata &amp;lt;- fread(&amp;quot;some_kind_of_data.csv&amp;quot;) mydata &amp;lt;- fread(&amp;quot;some_kind_of_data.csv&amp;quot;, nrows = 10)  data.table 包提供了一个非常简洁的通用格式：mydata[i, j, by]，可以理解为：对于数据集mydata，选取子集行i,通过by分组计算j。只需要记住，i是用来在行上进行操作的（比如筛选行），j 是用来在列上进行操作的（比如选择列或者根据计算创建新列）。对比dplyr等包来说，data.table的运行速度更快。
+library(data.table) mydata &amp;lt;- fread(&amp;#34;some_kind_of_data.csv&amp;#34;) mydata &amp;lt;- fread(&amp;#34;some_kind_of_data.csv&amp;#34;, nrows = 10) data.table 包提供了一个非常简洁的通用格式：mydata[i, j, by]，可以理解为：对于数据集mydata，选取子集行i,通过by分组计算j。只需要记住，i是用来在行上进行操作的（比如筛选行），j 是用来在列上进行操作的（比如选择列或者根据计算创建新列）。对比dplyr等包来说，data.table的运行速度更快。
 选择列 如果只需要选择列的话，可以只代入 j，但需要记住给 i 留出位置：
-mydata[, j]  首先，通过列名选择列是，是否需要打双引号是一个值得考虑的问题，因为两者各有优劣。 data.table 支持打双引号的原生 R 的做法：
-data1 &amp;lt;- mydata[, c(&amp;quot;columnA&amp;quot;, &amp;quot;columnB&amp;quot;, &amp;quot;columnC&amp;quot;, &amp;quot;columnD&amp;quot;)]  但也可以使用不打双引号，这样会更方便（就好像 tidyverse 里面的 select），只不过需要用到 list：
-data1 &amp;lt;- mydata[, list(columnA, columnB, columnC, columnD)]  这里，第一个小技巧就来了，我们可以使用一个点代替 list：
-data1 &amp;lt;- mydata[, .(columnA, columnB, columnC, column)]  在 data.</description>
+mydata[, j] 首先，通过列名选择列是，是否需要打双引号是一个值得考虑的问题，因为两者各有优劣。 data.table 支持打双引号的原生 R 的做法：
+data1 &amp;lt;- mydata[, c(&amp;#34;columnA&amp;#34;, &amp;#34;columnB&amp;#34;, &amp;#34;columnC&amp;#34;, &amp;#34;columnD&amp;#34;)] 但也可以使用不打双引号，这样会更方便（就好像 tidyverse 里面的 select），只不过需要用到 list：
+data1 &amp;lt;- mydata[, list(columnA, columnB, columnC, columnD)] 这里，第一个小技巧就来了，我们可以使用一个点代替 list：
+data1 &amp;lt;- mydata[, .(columnA, columnB, columnC, column)] 在 data.table 的中括号里，.() 就是 list()的简写形式。
+如果你想使用一个已经存在的列名向量，比如：</description>
     </item>
     
     <item>
@@ -47,10 +44,11 @@ data1 &amp;lt;- mydata[, .(columnA, columnB, columnC, column)]  在 data.</descr
       <guid>https://xzywisdili.com/blog/%E5%AF%B9%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E5%A1%AB%E8%A1%A5/</guid>
       <description>今天整理数据的时候，需要使用数据集 2 对数据集 1 里缺失的部分进行填补，而两者重复的部分，优先保留数据集 1 里的。
 这个问题其实很简单，只需短短 2-3 行：
-result &amp;lt;- data1 %&amp;gt;% left_join(data2) %&amp;gt;% mutate(value = ifelse(is.na(value.x), value.y, value.x))  但我遇到的问题稍微多一点点难度，日期的序列不是连续的话，例如数据集 1：
-# date value # 2014-01-01 12 # 2014-01-03 14 # 2014-01-05 17  数据集 2：
-# date value # 2014-01-02 13 # 2014-01-03 16 # 2014-01-04 15  那么希望得到的结果是：
-# date value # 2014-01-01 12 # 2014-01-02 16 # 2014-01-03 14 # 2014-01-04 15 # 2014-01-05 17  我们会需要先生成一个日期的模板：</description>
+result &amp;lt;- data1 %&amp;gt;% left_join(data2) %&amp;gt;% mutate(value = ifelse(is.na(value.x), value.y, value.x)) 但我遇到的问题稍微多一点点难度，日期的序列不是连续的话，例如数据集 1：
+# date value # 2014-01-01 12 # 2014-01-03 14 # 2014-01-05 17 数据集 2：
+# date value # 2014-01-02 13 # 2014-01-03 16 # 2014-01-04 15 那么希望得到的结果是：
+# date value # 2014-01-01 12 # 2014-01-02 16 # 2014-01-03 14 # 2014-01-04 15 # 2014-01-05 17 我们会需要先生成一个日期的模板：
+template &amp;lt;- tibble( date = seq(as.</description>
     </item>
     
     <item>
@@ -59,11 +57,11 @@ result &amp;lt;- data1 %&amp;gt;% left_join(data2) %&amp;gt;% mutate(value = ife
       <pubDate>Thu, 16 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://xzywisdili.com/blog/r-%E8%AF%AD%E8%A8%80%E8%AE%A1%E7%AE%97%E7%A9%BA%E9%97%B4%E8%B7%9D%E7%A6%BB/</guid>
-      <description> 最近在研究计算真实空间两个点的距离， 比如已知 A, B 两点的经纬度坐标，计算两点之间的距离。 在 R 语言中，已经有很多大神提供的空间地理数据包，经过搜索发现最备受推崇的是 geosphere 包。
+      <description>最近在研究计算真实空间两个点的距离， 比如已知 A, B 两点的经纬度坐标，计算两点之间的距离。 在 R 语言中，已经有很多大神提供的空间地理数据包，经过搜索发现最备受推崇的是 geosphere 包。
 使用方法也非常简单：
-library(geosphere) df &amp;lt;- data.frame(lon = c(lon1, lon2), lat=c(lat1, lat2)) distance &amp;lt;- distGeo(df[1, ], df[2, ])  得到的距离结果单位是 m。
+library(geosphere) df &amp;lt;- data.frame(lon = c(lon1, lon2), lat=c(lat1, lat2)) distance &amp;lt;- distGeo(df[1, ], df[2, ]) 得到的距离结果单位是 m。
 这个包的最大优势是计算速度很快，比如这里有 geosphere 包的 distGeo 方法和 sp 包的 spDistsN1 方法的 Benchmark 对比。
-附赠内容  批量转换地址为经纬度工具 百度地图经纬度拾取系统 R 语言实现 46 种距离算法  </description>
+附赠内容 批量转换地址为经纬度工具 百度地图经纬度拾取系统 R 语言实现 46 种距离算法 </description>
     </item>
     
     <item>
@@ -76,7 +74,7 @@ library(geosphere) df &amp;lt;- data.frame(lon = c(lon1, lon2), lat=c(lat1, lat2
 地图和 shiny 玩出新花样 在 shiny 中，选择想要绘制的美国州名，再单独绘制这一个州的情况，达到如下图的效果：
 当然，在众多的美国地图文件中，如果选择边缘没有那么精细的版本，就能让渲染速度更快一点。 shiny 实在是一个好用好玩的东西。
 R 也能写简单的网络爬虫？ 有一个项目是需要整理 2015 到 16 赛季 nba 球员的场均得分、场均助攻等数据。 我们可以直接在 篮球数据网站 进行爬取。 这事本来比较适合直接拿 python 跑，但出于一些原因，还是得用 R。 但意外地发现，其实也不是特别复杂，解析，xpath 查找也都不在话下，核心爬取部分也就不到 30 行代码。
-library(tidyverse) library(xml2) # 得到某个球员的查询地址 # 举例，输入&amp;quot;Derrick Rose&amp;quot;，函数返回&amp;quot;/players/r/rosede01.html&amp;quot; get_player_url &amp;lt;- function(player_name) { query_url &amp;lt;- &amp;quot;https://www.basketball-reference.com/search/search.fcgi?hint=&amp;amp;search=&amp;quot; url &amp;lt;- paste0(query_url, str_replace(player_name, &amp;quot; &amp;quot;, &amp;quot;%20&amp;quot;)) player_url &amp;lt;- url %&amp;gt;% read_html() %&amp;gt;% html_nodes(xpath=&#39;//div[contains(@class, &amp;quot;search-item-url&amp;quot;)]&#39;) %&amp;gt;% html_text() return(player_url[1]) } # 得到某个球员的数据 # 举例：输入&amp;quot;Derrick Rose&amp;quot;，函数返回该球员相关的 Age, Tm等等数据 get_player_data &amp;lt;- function(player_name) { print(player_name) base_url &amp;lt;- &amp;quot;https://www.</description>
+library(tidyverse) library(xml2) # 得到某个球员的查询地址 # 举例，输入&amp;#34;Derrick Rose&amp;#34;，函数返回&amp;#34;/players/r/rosede01.html&amp;#34; get_player_url &amp;lt;- function(player_name) { query_url &amp;lt;- &amp;#34;https://www.basketball-reference.com/search/search.fcgi?hint=&amp;amp;search=&amp;#34; url &amp;lt;- paste0(query_url, str_replace(player_name, &amp;#34; &amp;#34;, &amp;#34;%20&amp;#34;)) player_url &amp;lt;- url %&amp;gt;% read_html() %&amp;gt;% html_nodes(xpath=&amp;#39;//div[contains(@class, &amp;#34;search-item-url&amp;#34;)]&amp;#39;) %&amp;gt;% html_text() return(player_url[1]) } # 得到某个球员的数据 # 举例：输入&amp;#34;Derrick Rose&amp;#34;，函数返回该球员相关的 Age, Tm等等数据 get_player_data &amp;lt;- function(player_name) { print(player_name) base_url &amp;lt;- &amp;#34;https://www.</description>
     </item>
     
     <item>
@@ -89,7 +87,7 @@ library(tidyverse) library(xml2) # 得到某个球员的查询地址 # 举例，
 数据准备 官网上有相关数据的下载。除此之外，我们还需要美国的 shapefile 文件。 一般来说，国外的地图文件去 GADM 上下载问题就不是很大。 接下来，对于这一任务来说，可以通过 ArcGis 方便地将包含各州数据 csv 文件 join 到地图文件上。 这一步唯一要注意的就是地图文件对应字段的类型（一般来说是 Text）要与各州数据类型一致。
 在这一系列的上一篇文章中，我当时将这一 merge 过程在 R 里用代码写了出来。 这两种方法都可以，如果需要批量绘制地图的话，当然还是之前代码的方法更好。
 leaflet 绘制地图 leaflet 实在是绘制地图的一大利器。它不仅强大，还足够简单。 在 Youtube 上面也有太多相关的教学视频，每一讲大概2-3分钟，看起来也不累。 使用 40 行左右的代码就可以生成我们需要的地图：
-library(leaflet) library(rgdal) library(sf) library(htmltools) library(htmlwidgets) USA_data &amp;lt;- st_read(&amp;quot;map2/USA_data.shp&amp;quot;) # 4个分类的配色定义 pal &amp;lt;- colorFactor( palette = c(&#39;#fff5f0&#39;, &#39;#b4b4b4&#39;, &#39;#fb6a4a&#39;, &#39;#fcbba1&#39;), domain = US$category ) # 每个州显示的标签内容 USA_data$label &amp;lt;- paste(&amp;quot;&amp;lt;p&amp;gt;&amp;lt;b&amp;gt;&amp;quot;, USA_data$NAME, &amp;quot;&amp;lt;/b&amp;gt;&amp;lt;/p&amp;gt;&amp;quot;, &amp;quot;Category: &amp;quot;, USA_data$category, &amp;quot;&amp;lt;br&amp;gt;&amp;quot;, &amp;quot;Percent Change From 2016-2017: &amp;quot;, USA_data$change, &amp;quot;&amp;lt;br&amp;gt;&amp;quot;, &amp;quot;Statistically ignificant: &amp;quot;,USA_data$significan, &amp;quot;&amp;lt;br&amp;gt;&amp;quot;, &amp;quot;2016 Number: &amp;quot;, USA_data$X2016number, &amp;quot;&amp;lt;br&amp;gt;&amp;quot;, &amp;quot;2016 Rate: &amp;quot;, USA_data$X2016rate, &amp;quot;&amp;lt;br&amp;gt;&amp;quot;, &amp;quot;2017 Number: &amp;quot;, USA_data$X2017number, &amp;quot;&amp;lt;br&amp;gt;&amp;quot;, &amp;quot;2017 Rate: &amp;quot;, USA_data$X2017rate) # 绘制地图并保存 my_map &amp;lt;- leaflet(USA_data) %&amp;gt;% addPolygons(color = &amp;quot;#444444&amp;quot;, weight = 1, smoothFactor = 0.</description>
+library(leaflet) library(rgdal) library(sf) library(htmltools) library(htmlwidgets) USA_data &amp;lt;- st_read(&amp;#34;map2/USA_data.shp&amp;#34;) # 4个分类的配色定义 pal &amp;lt;- colorFactor( palette = c(&amp;#39;#fff5f0&amp;#39;, &amp;#39;#b4b4b4&amp;#39;, &amp;#39;#fb6a4a&amp;#39;, &amp;#39;#fcbba1&amp;#39;), domain = US$category ) # 每个州显示的标签内容 USA_data$label &amp;lt;- paste(&amp;#34;&amp;lt;p&amp;gt;&amp;lt;b&amp;gt;&amp;#34;, USA_data$NAME, &amp;#34;&amp;lt;/b&amp;gt;&amp;lt;/p&amp;gt;&amp;#34;, &amp;#34;Category: &amp;#34;, USA_data$category, &amp;#34;&amp;lt;br&amp;gt;&amp;#34;, &amp;#34;Percent Change From 2016-2017: &amp;#34;, USA_data$change, &amp;#34;&amp;lt;br&amp;gt;&amp;#34;, &amp;#34;Statistically ignificant: &amp;#34;,USA_data$significan, &amp;#34;&amp;lt;br&amp;gt;&amp;#34;, &amp;#34;2016 Number: &amp;#34;, USA_data$X2016number, &amp;#34;&amp;lt;br&amp;gt;&amp;#34;, &amp;#34;2016 Rate: &amp;#34;, USA_data$X2016rate, &amp;#34;&amp;lt;br&amp;gt;&amp;#34;, &amp;#34;2017 Number: &amp;#34;, USA_data$X2017number, &amp;#34;&amp;lt;br&amp;gt;&amp;#34;, &amp;#34;2017 Rate: &amp;#34;, USA_data$X2017rate) # 绘制地图并保存 my_map &amp;lt;- leaflet(USA_data) %&amp;gt;% addPolygons(color = &amp;#34;#444444&amp;#34;, weight = 1, smoothFactor = 0.</description>
     </item>
     
     <item>
@@ -101,12 +99,13 @@ library(leaflet) library(rgdal) library(sf) library(htmltools) library(htmlwidge
       <description>前言 大约一个月前，接到一个任务：绘制全国的患病率地图，就草草做了一个初版，当时还做了一个 ppt 和组里的小伙伴分享。 直到后来，才知道这种图有一个专业的称呼：choropleth maps，中文名字是分层设色图。 可以看到在 google 中检索 choropleth maps 得到的结果：
 单在画图这一方面讲，其实这是一个老生常谈的话题，也有数不胜数的工具和包。但问题的关键在于：绝大多数国外提供的中国地图并不规范。 关于中国地图的规范问题，在姜大伟的知乎专栏 使用中国地图的正确姿势 中有比较翔实的介绍。我也根据此做成了其中一张幻灯片：
 所以问题摆在了我们的面前：
- 找到一张可供使用的规范的中国矢量地图； 根据这张地图绘制我们想要的分层设色图。  提前提醒：本文代码直接复制粘贴不能够运行，请到文末下载分享的全部程序和地图文件！
+找到一张可供使用的规范的中国矢量地图； 根据这张地图绘制我们想要的分层设色图。 提前提醒：本文代码直接复制粘贴不能够运行，请到文末下载分享的全部程序和地图文件！
 寻找标准地图 在网络上，使用最多的是一份名为 bou2_4p.shp 的地图矢量文件，这份文件来自哪里已不可考，似乎是 2012 年国家提供的 1：400 万地理信息地图，但是后来又关闭了开放。 这份地图应该是目前问题最少的地图，藏南、台湾、南海诸岛也都存在。但是时间已经来到了 2019 年，这份 12 年的地图是否那么无懈可击呢？
 答案是否定的。根据 b 站 up 主“地理人_zxl”的视频 ArcGis更正老式中国基础地理信息数据错误，通过 天地图 和 bou2_4p 的比对，还是可以发现新疆的边界存在一些问题（红线为 bou2_4p，底图为标准地图）：
 同时，bou2_4p 的地图也没有澳门特别行政区。通过上面视频中提供的方法，在 ArcGis 中对 bou2_4p 进行修改，就可以得到修正版本的 bou2_4p 了。 这就是我们接下来要使用的标准地图。
 使用 R 绘制地图 首先要说明，在我个人使用过的工具和包里面，还是 ArcGis 这种专业 GIS 软件绘制地图最为顺滑快捷。 那为什么要使用 R 语言呢？其实还是出于以下这几个原因：
- 不只我要出图，别人也要进行地图制作； 免费开源，安装便捷，上手简单； 只需改动患病率数据，运行代码就可出图  再次提醒，以下我不会贴出完整代码，只会贴出一些核心的重点代码。完整的代码会分享在文章末尾。</description>
+不只我要出图，别人也要进行地图制作； 免费开源，安装便捷，上手简单； 只需改动患病率数据，运行代码就可出图 再次提醒，以下我不会贴出完整代码，只会贴出一些核心的重点代码。完整的代码会分享在文章末尾。
+基础绘图 首先，我们通过 rgdal::readOGR 读取修正过后的中国地图，然后对数据框进行转换，再和患病率数据 da 进行合并。</description>
     </item>
     
     <item>
@@ -115,9 +114,7 @@ library(leaflet) library(rgdal) library(sf) library(htmltools) library(htmlwidge
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://xzywisdili.com/blog/%E5%86%8D%E5%90%B9%E4%B8%80%E6%B3%A2-rmarkdown/</guid>
-      <description>&lt;p&gt;既上次写过一篇关于 &lt;a href=&#34;http://www.xzywisdili.com/post/2017/12/23/%E8%BD%BB%E6%9D%BE%E6%84%89%E5%BF%AB%E5%9C%B0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8-rmarkdown/&#34;&gt;Rmarkdown 的安利&lt;/a&gt; 之后，我在实际使用过程中遇到了一些难题，就是关于中文的问题。如果只使用英文写作的话，完全没有问题；但是一旦使用中文，各级标题，加粗强调和引用都会变得非常奇怪。这也使我暂时搁置下了 Rmarkdown 不用。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;既上次写过一篇关于 &lt;a href=&#34;http://www.xzywisdili.com/post/2017/12/23/%E8%BD%BB%E6%9D%BE%E6%84%89%E5%BF%AB%E5%9C%B0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8-rmarkdown/&#34;&gt;Rmarkdown 的安利&lt;/a&gt; 之后，我在实际使用过程中遇到了一些难题，就是关于中文的问题。如果只使用英文写作的话，完全没有问题；但是一旦使用中文，各级标题，加粗强调和引用都会变得非常奇怪。这也使我暂时搁置下了 Rmarkdown 不用。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -126,9 +123,7 @@ library(leaflet) library(rgdal) library(sf) library(htmltools) library(htmlwidge
       <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://xzywisdili.com/blog/r-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</guid>
-      <description>&lt;p&gt;这篇《R 语言基础入门》是我在别人的博客上看到的，完成时间不会晚于 2011 年。觉得总结得相当不错，于是搬运到我的博客上。需要提到，有些链接可能已经失效。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;这篇《R 语言基础入门》是我在别人的博客上看到的，完成时间不会晚于 2011 年。觉得总结得相当不错，于是搬运到我的博客上。需要提到，有些链接可能已经失效。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -138,14 +133,11 @@ library(leaflet) library(rgdal) library(sf) library(htmltools) library(htmlwidge
       
       <guid>https://xzywisdili.com/blog/%E5%AD%A6%E4%B9%A0-r-%E8%AF%AD%E8%A8%80%E9%87%8C%E7%9A%84-subset/</guid>
       <description>&lt;p&gt;主要内容：&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;三种 subset 操作&lt;/li&gt;
 &lt;li&gt;六类 subset&lt;/li&gt;
 &lt;li&gt;不同对象的的重要区别&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -154,9 +146,7 @@ library(leaflet) library(rgdal) library(sf) library(htmltools) library(htmlwidge
       <pubDate>Wed, 28 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>https://xzywisdili.com/blog/r-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
-      <description>&lt;p&gt;介绍了 R 语言中的内置基础数据结构。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;介绍了 R 语言中的内置基础数据结构。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -169,10 +159,12 @@ library(leaflet) library(rgdal) library(sf) library(htmltools) library(htmlwidge
 我想，在所有接触和学习 R 语言的初学者（当然包括我）眼里，有两个东西是相当酷的。一个是 shiny，可以轻松做出交互式的图表；而另一个就是 Rmarkdown 了。
 现如今我想 markdown 是何物已经不用过多介绍了，它语法简洁，门槛很低，已经到了一种是个人就会的地步。那 Rmarkdown 到底是什么呢？
 Rmarkdown 的官网上有这样几段介绍：
- Turn your analyses into high quality documents, reports, presentations and dashboards. Use a productive notebook interface to weave together narrative text and code to produce elegantly formatted output. Use multiple languages including R, Python, and SQL.
- 简单来说，就是 Rmarkdown 能够使用 markdown 的语法，支持多种语言代码的运行和输出（R, Python 和 SQL），输出高质量的文档。
+Turn your analyses into high quality documents, reports, presentations and dashboards. Use a productive notebook interface to weave together narrative text and code to produce elegantly formatted output. Use multiple languages including R, Python, and SQL.
+简单来说，就是 Rmarkdown 能够使用 markdown 的语法，支持多种语言代码的运行和输出（R, Python 和 SQL），输出高质量的文档。
 这个所谓的「高质量」的文档到底是怎么样的呢？可以这么说，有不少的人都认为 Rmarkdown 可以成为科技写作的主流：
- 为什么 Markdown + R 有叫大概率成为科技写作主流</description>
+为什么 Markdown + R 有叫大概率成为科技写作主流
+数据文档的革命
+既然说了这么多，我们就来简单看一看 Rmarkdown 的真正表现。我会将 markdown 里使用的大多数常用语法在 Rmarkdown 里展示出来。</description>
     </item>
     
     <item>
@@ -181,9 +173,7 @@ Rmarkdown 的官网上有这样几段介绍：
       <pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://xzywisdili.com/blog/dplyr-%E5%8C%85%E9%87%8C%E9%9D%A2%E5%BF%85%E4%BC%9A%E7%9A%84%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE%E6%96%B9%E6%B3%95/</guid>
-      <description>&lt;p&gt;最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看。最近学习的很简单，就是 &lt;code&gt;dplyr&lt;/code&gt; 包里面最基础的 5 种数据处理方法。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看。最近学习的很简单，就是 &lt;code&gt;dplyr&lt;/code&gt; 包里面最基础的 5 种数据处理方法。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -194,11 +184,11 @@ Rmarkdown 的官网上有这样几段介绍：
       <guid>https://xzywisdili.com/blog/r-%E8%AF%AD%E8%A8%80%E7%9A%84%E9%82%A3%E4%BA%9B%E6%9C%80%E6%9C%80%E6%9C%80%E5%9F%BA%E7%A1%80/</guid>
       <description>在 R 语言 的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么就一定不能错过 R。本文只总结了 R 语言里面的那些最最最基础，想用好 R 必须要背过的内容。话不多说，赶紧上车。
 基本算数 直接进行算数运算：
-&amp;gt; 4 + 6 [1] 10  将值保存在对象中进行运算：
-&amp;gt; x &amp;lt;- 6 &amp;gt; y &amp;lt;- 4 &amp;gt; z &amp;lt;- x + y &amp;gt; z [1] 10  显示我们已经创建的对象：
-&amp;gt; ls() [1] &amp;quot;x&amp;quot; &amp;quot;y&amp;quot; &amp;quot;z&amp;quot;  清除一些对象：
-&amp;gt; rm(x, y) &amp;gt; ls() [1] &amp;quot;z&amp;quot;  创建向量（vector）：
-&amp;gt; z &amp;lt;- c(5, 9, 1, 0)  使用函数 c(x, y) 可以做到向量的连接：</description>
+&amp;gt; 4 + 6 [1] 10 将值保存在对象中进行运算：
+&amp;gt; x &amp;lt;- 6 &amp;gt; y &amp;lt;- 4 &amp;gt; z &amp;lt;- x + y &amp;gt; z [1] 10 显示我们已经创建的对象：
+&amp;gt; ls() [1] &amp;#34;x&amp;#34; &amp;#34;y&amp;#34; &amp;#34;z&amp;#34; 清除一些对象：
+&amp;gt; rm(x, y) &amp;gt; ls() [1] &amp;#34;z&amp;#34; 创建向量（vector）：
+&amp;gt; z &amp;lt;- c(5, 9, 1, 0) 使用函数 c(x, y) 可以做到向量的连接：</description>
     </item>
     
   </channel>

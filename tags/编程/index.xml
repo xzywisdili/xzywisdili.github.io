@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>编程 on xzy&#39;s blog</title>
@@ -6,11 +6,7 @@
     <description>Recent content in 编程 on xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 09 Dec 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://xzywisdili.com/tags/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 09 Dec 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.com/tags/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>工具人时刻</title>
       <link>https://xzywisdili.com/blog/%E5%B7%A5%E5%85%B7%E4%BA%BA%E6%97%B6%E5%88%BB/</link>
@@ -22,7 +18,7 @@
 每一行代表一个研究对象，每个研究对象有 pm1 到 pm7 这 7 天所接触的 PM2.5 浓度（实际文件里面是 365 天）。 我们需要计算连续 2 天，连续 3 天，&amp;hellip; ，连续 7 天接触 PM2.5 浓度大于 35 的次数。 而且如果连续 3 天接触 PM2.5，那么只能算一次连续 3 天次数，而不能再重复计算连续 2 天次数。 换句话说，这里的每一个连续的天数都必须刚刚好好。
 也许有些写程序的小伙伴会觉得非常好写，但对我来说，想要使用 SAS 解决这个问题，直觉上还是比较费劲的。 昨晚在参加选调生宣讲的时候，就一直在想。回宿舍立马坐下敲了出来。
 首先，导入数据。将数据里每个值和 35 进行比较，先转换成由 0， 1 组成的数据集。 方便下一步的运算。
-DATA example; infile &amp;quot;G:\04_code\PM2.5数据.csv&amp;quot; DSD MISSOVER firstobs=2; input id pm1-pm356; RUN; DATA example_35; set example; array pm {365} pm1-pm365; do i = 1 to 365; pm[i] = pm[i] &amp;gt; 35; end; drop i; RUN;  接下来，就是最关键的部分。 这里是利用 SAS 在 DATA 步读取数据的同时，插入一个循环。 这个循环长度就是 365，把每个研究对象的数据由头读到尾，在读的过程中分析数值 1 的连续情况。</description>
+DATA example; infile &amp;#34;G:\04_code\PM2.5数据.csv&amp;#34; DSD MISSOVER firstobs=2; input id pm1-pm356; RUN; DATA example_35; set example; array pm {365} pm1-pm365; do i = 1 to 365; pm[i] = pm[i] &amp;gt; 35; end; drop i; RUN; 接下来，就是最关键的部分。 这里是利用 SAS 在 DATA 步读取数据的同时，插入一个循环。 这个循环长度就是 365，把每个研究对象的数据由头读到尾，在读的过程中分析数值 1 的连续情况。</description>
     </item>
     
   </channel>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>影评 on xzy&#39;s blog</title>
@@ -6,11 +6,7 @@
     <description>Recent content in 影评 on xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 26 Oct 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://xzywisdili.com/categories/%E5%BD%B1%E8%AF%84/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 26 Oct 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.com/categories/%E5%BD%B1%E8%AF%84/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>政客生活 101</title>
       <link>https://xzywisdili.com/blog/%E6%94%BF%E5%AE%A2%E7%94%9F%E6%B4%BB-101/</link>
@@ -36,9 +32,7 @@ keep real 政客是瑞恩·墨菲利用高中生竞选学生会主席的环境�
       <pubDate>Mon, 03 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://xzywisdili.com/blog/2018%E5%B9%B4%E4%B8%AD%E5%9B%BD%E7%8B%AC%E7%AB%8B%E6%B8%B8%E6%88%8F%E5%92%8C%E4%BB%96%E4%BB%AC/</guid>
-      <description>&lt;p&gt;强烈推荐纪录片《独行》。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;强烈推荐纪录片《独行》。&lt;/p&gt;</description>
     </item>
     
   </channel>

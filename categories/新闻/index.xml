@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>新闻 on xzy&#39;s blog</title>
@@ -6,11 +6,7 @@
     <description>Recent content in 新闻 on xzy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 22 Feb 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://xzywisdili.com/categories/%E6%96%B0%E9%97%BB/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 22 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.com/categories/%E6%96%B0%E9%97%BB/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>大家是怎么展现疫情的</title>
       <link>https://xzywisdili.com/blog/%E5%A4%A7%E5%AE%B6%E6%98%AF%E6%80%8E%E4%B9%88%E5%B1%95%E7%8E%B0%E7%96%AB%E6%83%85%E7%9A%84/</link>
@@ -33,11 +29,11 @@
       
       <guid>https://xzywisdili.com/blog/%E6%96%B0%E5%9E%8B%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92/</guid>
       <description>今天，官方公布了此次「武汉肺炎」的病毒病原体检测结果， 结论是这是一种新型的冠状病毒。那么，现在广大普通群众最关注的重点应该有两个：
- 该病毒是否有人传人性质？ 该病毒的来源究竟是哪里？  对于第一点，这里权且整理一下多方的观点，仅供参考：
- 武汉市卫生健康委员会通报，个案发病日介于去年12月12日至12月29日，均在武汉市医疗机构隔离治疗，追踪的密切接触者也从121人增至163人，目前追踪者均无发烧等异常症状，且目前未发现明显人传人现象，也没有医护人员感染。武汉疾控中心主任李刚称，不明原因的肺炎病例数量可能还会有所增加。
+该病毒是否有人传人性质？ 该病毒的来源究竟是哪里？ 对于第一点，这里权且整理一下多方的观点，仅供参考：
+武汉市卫生健康委员会通报，个案发病日介于去年12月12日至12月29日，均在武汉市医疗机构隔离治疗，追踪的密切接触者也从121人增至163人，目前追踪者均无发烧等异常症状，且目前未发现明显人传人现象，也没有医护人员感染。武汉疾控中心主任李刚称，不明原因的肺炎病例数量可能还会有所增加。
 香港大学感染及传染病中心总监何柏良上周在接受多家媒体采访时，将武汉近期爆发不明肺炎疫情，定义为“新型病毒”，极有可能人传人。香港中文大学医学院呼吸系统学讲座教授许树昌也表示，病毒会否人传人仍有待观察，绝不可排除相关可能性。
 台湾卫生福利部疾病管制署副署长庄人祥表示，冠状病毒的潜伏期最长可达14天，1月1日至14日间若有新病例传出都可能是休市前就感染的，但若1月14日以后仍持续出现新病例，可能代表此病毒具有人传人能力；若没有新病例出现，或许可研判和动物感染源有关。
- 所以，该病毒是否具有「人传人」确实还不清楚。担心会「人传人」的人可以购买 N95 口罩预防，而不担心的也至少应该持续关注相关新闻和最新进展。对于第二点，病毒的来源更是需要把第一点弄清楚之后进行更为细致的排查。因此我们还需要继续等待官方的结论。</description>
+所以，该病毒是否具有「人传人」确实还不清楚。担心会「人传人」的人可以购买 N95 口罩预防，而不担心的也至少应该持续关注相关新闻和最新进展。对于第二点，病毒的来源更是需要把第一点弄清楚之后进行更为细致的排查。因此我们还需要继续等待官方的结论。</description>
     </item>
     
   </channel>

@@ -1058,7 +1058,6 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
 
 
 
-
 </head>
 
 
@@ -1142,134 +1141,93 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
             <div class="markdown">
                 
     
-    
-
-<p>R 语言世界里的一个大杀器。</p>
-
+    <p>R 语言世界里的一个大杀器。</p>
 <p>我想，在所有接触和学习 R 语言的初学者（当然包括我）眼里，有两个东西是相当酷的。一个是 <a href="http://shiny.rstudio.com/tutorial/">shiny</a>，可以轻松做出交互式的图表；而另一个就是 <a href="http://rmarkdown.rstudio.com/">Rmarkdown</a> 了。</p>
-
 <p>现如今我想 markdown 是何物已经不用过多介绍了，它语法简洁，门槛很低，已经到了一种是个人就会的地步。那 Rmarkdown 到底是什么呢？</p>
-
 <p>Rmarkdown 的<a href="http://rmarkdown.rstudio.com/">官网</a>上有这样几段介绍：</p>
-
 <blockquote>
 <p>Turn your analyses into high quality documents, reports, presentations and dashboards.
 Use a productive notebook interface to weave together narrative text and code to produce elegantly formatted output.
 Use multiple languages including R, Python, and SQL.</p>
 </blockquote>
-
 <p>简单来说，就是 Rmarkdown 能够使用 markdown 的语法，支持多种语言代码的运行和输出（R, Python 和 SQL），输出高质量的文档。</p>
-
 <p>这个所谓的「高质量」的文档到底是怎么样的呢？可以这么说，有不少的人都认为 Rmarkdown 可以成为科技写作的主流：</p>
-
 <ul>
-<li><p><a href="https://www.douban.com/group/topic/30623908/">为什么 Markdown + R 有叫大概率成为科技写作主流</a></p></li>
-
-<li><p><a href="https://zhuanlan.zhihu.com/p/21285821?refer=harryzhustudio">数据文档的革命</a></p></li>
+<li>
+<p><a href="https://www.douban.com/group/topic/30623908/">为什么 Markdown + R 有叫大概率成为科技写作主流</a></p>
+</li>
+<li>
+<p><a href="https://zhuanlan.zhihu.com/p/21285821?refer=harryzhustudio">数据文档的革命</a></p>
+</li>
 </ul>
-
 <p>既然说了这么多，我们就来简单看一看 Rmarkdown 的真正表现。我会将 markdown 里使用的大多数常用语法在 Rmarkdown 里展示出来。</p>
-
 <h2 id="新建一个-rmarkdown-文件">新建一个 Rmarkdown 文件</h2>
-
 <p>我使用的是 Rstudio，可以在 <code>File &gt;&gt; New File &gt;&gt; R Markdown...</code> 里新建一个 Rmarkdown 文档。</p>
-
-<p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://xzywisdili.com/rmarkdown/newRmarkdown.png" src="https://xzywisdili.com/rmarkdown/low/newRmarkdown.png" alt="新建 Rmarkdown" /></p></figure>
-
+<p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://xzywisdili.com/rmarkdown/newRmarkdown.png" src="https://xzywisdili.com/rmarkdown/low/newRmarkdown.png" alt="新建 Rmarkdown"></p></figure>
 <p>填入文档标题和作者名即可，下面的可以选择默认选项（在后来可以轻松改变）。</p>
-
 <h2 id="如何使-rmarkdown-完美支持中文">如何使 Rmarkdown 完美支持中文</h2>
-
 <ol>
 <li>我的环境是 Mac OSX 系统，安装 MacTex</li>
 <li>在 RStudio 的 Preferences 中的 「Sweave」 里把 「Weave Rnw files using」改为 「knitr」，「Type LaTeX into PDF using」 改为 「XeLaTeX」</li>
 <li>在 Rmarkdown 文档的同路径下创建一个 <code>header.tex</code>，内容是<code>\usepackage{ctex}</code>，然后把 Rmarkdown 文档 yaml 栏内的内容改为如下：</li>
 </ol>
-
-<pre><code class="language-Markdown">title: &quot;我的第一个 Rmarkdown 文档&quot;
-author: &quot;anthor&quot;
-output:
-  pdf_document:
-    includes:
-      in_header: header.tex
-    keep_tex: yes
-    latex_engine: xelatex
-  html_document: default
-</code></pre>
-
-<p>测试一下：</p>
-
-<pre><code class="language-markdown">中文显示
-测试中文的显示效果。
-这里先输入一段文字，我们这段文字的目的是测试在 Rmarkdown 中中文的显示效果：
-* 列表项目 1
-* 列表项目 2
-* 列表项目 3
-</code></pre>
-
-<p>输出的 pdf 显示为：
-<figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://xzywisdili.com/rmarkdown/chinese.png" src="https://xzywisdili.com/rmarkdown/low/chinese.png" alt="中文输出" /></p></figure>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Markdown" data-lang="Markdown"><span style="display:flex;"><span>title: &#34;我的第一个 Rmarkdown 文档&#34;
+</span></span><span style="display:flex;"><span>author: &#34;anthor&#34;
+</span></span><span style="display:flex;"><span>output:
+</span></span><span style="display:flex;"><span>  pdf_document:
+</span></span><span style="display:flex;"><span>    includes:
+</span></span><span style="display:flex;"><span>      in_header: header.tex
+</span></span><span style="display:flex;"><span>    keep_tex: yes
+</span></span><span style="display:flex;"><span>    latex_engine: xelatex
+</span></span><span style="display:flex;"><span>  html_document: default
+</span></span></code></pre></div><p>测试一下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>中文显示
+</span></span><span style="display:flex;"><span>测试中文的显示效果。
+</span></span><span style="display:flex;"><span>这里先输入一段文字，我们这段文字的目的是测试在 Rmarkdown 中中文的显示效果：
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">*</span> 列表项目 1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">*</span> 列表项目 2
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">*</span> 列表项目 3
+</span></span></code></pre></div><p>输出的 pdf 显示为：
+<img src="https://xzywisdili.com/rmarkdown/chinese.png" alt="中文输出"></p>
 <p>完美！</p>
-
-<h2 id="加粗-链接和行内代码块">加粗，链接和行内代码块</h2>
-
+<h2 id="加粗链接和行内代码块">加粗，链接和行内代码块</h2>
 <p>一段常见的 Markdown 语法：</p>
-
-<pre><code class="language-Markdown">## Start with a cool section
-
-You can use traditional **Markdown** syntax, such as [links](http://yihui.name/knitr) and `code`. Here is a quote:
-
-&gt; A girl phoned me the other day and said &quot;Come on over, there's nobody home.&quot; I went over. Nobody was home. -- Rodney Dangerfield
-</code></pre>
-
-<p>显示为：
-<figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://xzywisdili.com/rmarkdown/quote.png" src="https://xzywisdili.com/rmarkdown/low/quote.png" alt="显示一" /></p></figure>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Markdown" data-lang="Markdown"><span style="display:flex;"><span><span style="color:#75715e">## Start with a cool section
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>You can use traditional <span style="font-weight:bold">**Markdown**</span> syntax, such as [<span style="color:#f92672">links</span>](<span style="color:#a6e22e">http://yihui.name/knitr</span>) and <span style="color:#e6db74">`code`</span>. Here is a quote:
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">&gt; </span><span style="font-style:italic">A girl phoned me the other day and said &#34;Come on over, there&#39;s nobody home.&#34; I went over. Nobody was home. -- Rodney Dangerfield
+</span></span></span></code></pre></div><p>显示为：
+<img src="https://xzywisdili.com/rmarkdown/quote.png" alt="显示一"></p>
 <h2 id="运行-r-代码">运行 R 代码</h2>
-
 <p>写入一段 R 语言代码，会在编译时自动运行：
-<figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://xzywisdili.com/rmarkdown/code.png" src="https://xzywisdili.com/rmarkdown/low/code.png" alt="code" /></p></figure>
-
+<img src="https://xzywisdili.com/rmarkdown/code.png" alt="code"></p>
 <p>在 pdf 中显示为：
-<figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://xzywisdili.com/rmarkdown/codepdf.png" src="https://xzywisdili.com/rmarkdown/low/codepdf.png" alt="codepdf" /></p></figure>
-
+<img src="https://xzywisdili.com/rmarkdown/codepdf.png" alt="codepdf"></p>
 <p>还可以使用 R 语言强大的画图功能：
-<figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://xzywisdili.com/rmarkdown/plot.png" src="https://xzywisdili.com/rmarkdown/low/plot.png" alt="plot" /></p></figure>
-
+<img src="https://xzywisdili.com/rmarkdown/plot.png" alt="plot"></p>
 <p>在 pdf 中显示为：
-<figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://xzywisdili.com/rmarkdown/plotpdf.png" src="https://xzywisdili.com/rmarkdown/low/plotpdf.png" alt="plotpdf" /></p></figure>
-
+<img src="https://xzywisdili.com/rmarkdown/plotpdf.png" alt="plotpdf"></p>
 <h2 id="数学公式">数学公式</h2>
-
 <p>Rmarkdown 中同样完美支持数学公式的书写：</p>
-
-<pre><code class="language-Markdown">## A little bit math
-
-Our regression equation is $Y=`r b[1]` + `r b[2]`x$, and the model is:
-
-$$ Y = \beta_0 + \beta_1 x + \epsilon$$
-</code></pre>
-
-<p>显示为：
-<figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://xzywisdili.com/rmarkdown/equation.png" src="https://xzywisdili.com/rmarkdown/low/equation.png" alt="equation" /></p></figure>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Markdown" data-lang="Markdown"><span style="display:flex;"><span><span style="color:#75715e">## A little bit math
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>Our regression equation is $Y=`r b[1]` + <span style="color:#e6db74">`r b[2]`</span>x$, and the model is:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$$ Y = \beta_0 + \beta_1 x + \epsilon$$
+</span></span></code></pre></div><p>显示为：
+<img src="https://xzywisdili.com/rmarkdown/equation.png" alt="equation"></p>
 <h2 id="表格">表格</h2>
-
 <p>使用 Markdown 提供的表格语法：</p>
-
-<pre><code class="language-Markdown">Table: Demonstration of simple table syntax.
-
-Right Left Center  Default
------ ---- ------  -------
-   12 12     12        12  
-  123 123   123       123
-    1 1      1          1
-</code></pre>
-
-<p>我们得到的是我们希望的三线图格式：
-<figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://xzywisdili.com/rmarkdown/table.png" src="https://xzywisdili.com/rmarkdown/low/table.png" alt="table" /></p></figure>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Markdown" data-lang="Markdown"><span style="display:flex;"><span>Table: Demonstration of simple table syntax.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Right Left Center  Default
+</span></span><span style="display:flex;"><span>----- ---- ------  -------
+</span></span><span style="display:flex;"><span>   12 12     12        12  
+</span></span><span style="display:flex;"><span>  123 123   123       123
+</span></span><span style="display:flex;"><span>    1 1      1          1
+</span></span></code></pre></div><p>我们得到的是我们希望的三线图格式：
+<img src="https://xzywisdili.com/rmarkdown/table.png" alt="table"></p>
 <p>其他的比如脚注，有序列表，无序列表，定义等等不再做过多展示，上面提到的内容已经足以证明 Rmarkdown 的强大。而这些东西的学习成本几乎为零，这太令人不可思议了。</p>
 
 
@@ -1352,11 +1310,8 @@ Right Left Center  Default
             </a>
         
 
-        
-            <a href="https://xzywisdili.com/index.xml">
-                <img class="icon" src="https://xzywisdili.com/img/rss.svg" alt="rss" />
+        <img class="icon" src="https://xzywisdili.com/img/rss.svg" alt="rss" />
             </a>
-        
 
         </div>
     </div>

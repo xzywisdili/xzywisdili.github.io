@@ -1058,7 +1058,6 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
 
 
 
-
 </head>
 
 
@@ -1143,33 +1142,27 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
                 
     
     <p>如果大家有从 NASA 获取气象数据的需求的话，只要在某度搜索，一定会看到下面的这些链接：</p>
-
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1grk5dm9ikuj31aa0jg0yr.jpg" alt="" /></p>
-
-<p>他们可以批量获取单个城市和经纬度范围内的数据，而且代码也写得很好，但有两点问题：
-- 他使用的数据库是 NASA 为作物生长模型提供的气象数据，包括辐射、最大最小气温、降雨、风速，而不包括很多研究需要用到的气温和相对湿度的数据；
-- 他将空值用了前后5日的平均值代替，有时候可能不需要这么处理</p>
-
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1grk5gcldwlj30yg0u00yy.jpg" alt="" /></p>
-
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1grk5dm9ikuj31aa0jg0yr.jpg" alt=""></p>
+<p>他们可以批量获取单个城市和经纬度范围内的数据，而且代码也写得很好，但有两点问题：</p>
+<ul>
+<li>他使用的数据库是 NASA 为作物生长模型提供的气象数据，包括辐射、最大最小气温、降雨、风速，而不包括很多研究需要用到的气温和相对湿度的数据；</li>
+<li>他将空值用了前后5日的平均值代替，有时候可能不需要这么处理</li>
+</ul>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1grk5gcldwlj30yg0u00yy.jpg" alt=""></p>
 <p>针对以上两点问题，我只能去寻找 NASA 官网进行数据检索和下载，而 NASA 提供的数据获取工具也十分方便。
 只需要打开 NASA 的 <a href="https://power.larc.nasa.gov/data-access-viewer/">Data Access Viewer</a>，就可以看到左边的界面：</p>
-
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1grk5l9matwj31i00u0b2b.jpg" alt="" /></p>
-
-<p>左边的工具选项都十分明确：
-1. 数据来源：就选择“SSE-Renewable Energy”就好；
-2. 选择日值、年值或是气候学的平均处理；
-3. 选择目标城市的经纬度即可，当然也可以使用标记工具直接在地图上点出；
-4. 输入目标的起止日期；
-5. 输出文件的格式</p>
-
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1grk5l9matwj31i00u0b2b.jpg" alt=""></p>
+<p>左边的工具选项都十分明确：</p>
+<ol>
+<li>数据来源：就选择“SSE-Renewable Energy”就好；</li>
+<li>选择日值、年值或是气候学的平均处理；</li>
+<li>选择目标城市的经纬度即可，当然也可以使用标记工具直接在地图上点出；</li>
+<li>输入目标的起止日期；</li>
+<li>输出文件的格式</li>
+</ol>
 <p>下面就是选择目标变量，我选择的是这两个，也就是气温和相对湿度：</p>
-
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1grk5p4ouj2j31560t61kx.jpg" alt="" /></p>
-
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1grk5p4ouj2j31560t61kx.jpg" alt=""></p>
 <p>接下来就可以提交和下载了。</p>
-
 <p>至于数据的说明，可以点击<a href="https://power.larc.nasa.gov/docs/methodology/communities/sse/">这里</a>，里面说明了数据的来源、分辨率和可获取的日期跨度。当然，如果要进行批量获取的话，可能需要高人来写相应的代码了。</p>
 
 
@@ -1252,11 +1245,8 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
             </a>
         
 
-        
-            <a href="https://xzywisdili.com/index.xml">
-                <img class="icon" src="https://xzywisdili.com/img/rss.svg" alt="rss" />
+        <img class="icon" src="https://xzywisdili.com/img/rss.svg" alt="rss" />
             </a>
-        
 
         </div>
     </div>

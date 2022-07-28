@@ -1058,7 +1058,6 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
 
 
 
-
 </head>
 
 
@@ -1143,45 +1142,27 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
                 
     
     <p>在国庆放假的期间，花了大概半个晚上的时间，使用 hexo 配置好了自己的个人博客。我觉得博客是一个很好的刺激自己不断学习和保持记录习惯的帮手。我也是在身边同学里第一个开通博客的。</p>
-
-<p></p>
-
 <p>在这个过程中也产生了两点感想：</p>
-
 <ul>
-<li><p>科技不停进步，就计算机和互联网方面完成一件事是越来越简单了。以前如果想写网页，建网站，不可能不去学习 HTML 语言，CSS 以及 JavaScript 等等，而现在越来越多新工具的出现能让你在半个晚上就制作出美观的网页了。</p></li>
-
-<li><p>以前看到别人精美的博客的时候，总觉得是一件特别了不起的事情，同时也是一件很难办到的事情。但在基于很多前辈写博客的建议，自己也尝试去网上查找教程搭建，之后觉得这件事其实也没有那么难。<strong>很多看起来困难的事情，真正动手去做也许没有那么难。</strong></p></li>
+<li>
+<p>科技不停进步，就计算机和互联网方面完成一件事是越来越简单了。以前如果想写网页，建网站，不可能不去学习 HTML 语言，CSS 以及 JavaScript 等等，而现在越来越多新工具的出现能让你在半个晚上就制作出美观的网页了。</p>
+</li>
+<li>
+<p>以前看到别人精美的博客的时候，总觉得是一件特别了不起的事情，同时也是一件很难办到的事情。但在基于很多前辈写博客的建议，自己也尝试去网上查找教程搭建，之后觉得这件事其实也没有那么难。<strong>很多看起来困难的事情，真正动手去做也许没有那么难。</strong></p>
+</li>
 </ul>
-
 <p>这个博客会不定期更新自己的学习笔记，成长过程和生活感悟等等。我更期待多年之后自己回看时候吃惊的那一刻。</p>
-
 <h2 id="使用-hexo-进行博客创作的流程">使用 Hexo 进行博客创作的流程</h2>
-
 <h3 id="创建一个草稿">创建一个草稿</h3>
-
-<pre><code class="language-bash">$ hexo new draft &quot;new artical&quot;
-</code></pre>
-
-<p>或者，在 <code>_config.yml</code> 的 <code>Writing</code> 下找到 <code>default_layout</code>，将 <code>post</code> 改为 <code>draft</code>，然后直接使用：</p>
-
-<pre><code class="language-bash">$ hexo new &quot;new artical&quot;
-</code></pre>
-
-<p>这样 <a href="https://hexo.io/">Hexo</a> 就会自动在 <code>source</code> 文件夹下的 <code>draft</code> 中创建一个等待你编辑的 <code>Markdown</code> 文件了。我个人习惯先在草稿内完成创作，所以使用的是后者。如果想要在生成的页面上看到自己的草稿的话，可以键入命令：</p>
-
-<pre><code class="language-bash">$ hexo server --draft
-</code></pre>
-
-<h3 id="完成创作后发表">完成创作后发表</h3>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hexo new draft <span style="color:#e6db74">&#34;new artical&#34;</span>
+</span></span></code></pre></div><p>或者，在 <code>_config.yml</code> 的 <code>Writing</code> 下找到 <code>default_layout</code>，将 <code>post</code> 改为 <code>draft</code>，然后直接使用：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hexo new <span style="color:#e6db74">&#34;new artical&#34;</span>
+</span></span></code></pre></div><p>这样 <a href="https://hexo.io/">Hexo</a> 就会自动在 <code>source</code> 文件夹下的 <code>draft</code> 中创建一个等待你编辑的 <code>Markdown</code> 文件了。我个人习惯先在草稿内完成创作，所以使用的是后者。如果想要在生成的页面上看到自己的草稿的话，可以键入命令：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hexo server --draft
+</span></span></code></pre></div><h3 id="完成创作后发表">完成创作后发表</h3>
 <p>当在草稿中完成文章后，只需要一行命令：</p>
-
-<pre><code class="language-bash">$ hexo publish &quot;new artical&quot;
-</code></pre>
-
-<p>这样 <a href="https://hexo.io/">Hexo</a> 会自动把 <code>draft</code> 文件夹里面的 <code>Markdown</code> 文件移动到 <code>post</code> 文件夹里面。随后使用那几个大家都知道的命令生成静态网页，更新到博客里面就好了。</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hexo publish <span style="color:#e6db74">&#34;new artical&#34;</span>
+</span></span></code></pre></div><p>这样 <a href="https://hexo.io/">Hexo</a> 会自动把 <code>draft</code> 文件夹里面的 <code>Markdown</code> 文件移动到 <code>post</code> 文件夹里面。随后使用那几个大家都知道的命令生成静态网页，更新到博客里面就好了。</p>
 <p>更多信息推荐访问 <a href="https://hexo.io/docs/">文档</a>。</p>
 
             </div>
@@ -1258,11 +1239,8 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
             </a>
         
 
-        
-            <a href="https://xzywisdili.com/index.xml">
-                <img class="icon" src="https://xzywisdili.com/img/rss.svg" alt="rss" />
+        <img class="icon" src="https://xzywisdili.com/img/rss.svg" alt="rss" />
             </a>
-        
 
         </div>
     </div>

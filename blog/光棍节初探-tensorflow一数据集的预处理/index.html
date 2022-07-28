@@ -1058,7 +1058,6 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
 
 
 
-
 </head>
 
 
@@ -1144,260 +1143,216 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
             <div class="markdown">
                 
     
-    
-
-<p>11 月 11 日这天注定对我具有了一定的意义。不是因为它是购物狂欢节或光棍节，而是因为在这一天，我第一次尝试使用 TensorFlow 搭建了一个简单的神经网络。我希望用几篇文章记录这个过程。</p>
-
-<p>最近在读 <a href="https://book.douban.com/subject/26425877/">Fundamentals of Deep Learning</a> 这本书。我选择它的原因是讲解得通俗易懂，又会直白地点出重点内容。然而当我读到第三章「Implementing Neural Networks in TensorFlow」时，整个人就好像懵了一样。对于一个从来没接触过 TensorFlow 的人来说，是难以通过看代码直接理解 Graph, Session 等等这些新概念的。于是联想到<a href="https://book.douban.com/subject/5372651/">程序员的思维修炼</a>里面提到的「SQ3R 阅读法」，赶紧先放下这本书，到网上找其他关于 TensorFlow 的资料，值得推荐的是：
-- <a href="http://wiki.jikexueyuan.com/project/tensorflow-zh/">TensorFlow 官方文档中文版</a>
-- TF Girls「TensorFlow Tutorial」修炼指南（这老师很幽默）
-    - <a href="https://www.youtube.com/watch?v=8X9QUwtRSs0&amp;list=PLwY2GJhAPWRcZxxVFpNhhfivuW0kX15yG">youtube 地址</a>
-    - <a href="https://www.bilibili.com/video/av11079460/?from=search&amp;seid=13313846105672125761">bilibili 地址</a></p>
-
+    <p>11 月 11 日这天注定对我具有了一定的意义。不是因为它是购物狂欢节或光棍节，而是因为在这一天，我第一次尝试使用 TensorFlow 搭建了一个简单的神经网络。我希望用几篇文章记录这个过程。</p>
+<p>最近在读 <a href="https://book.douban.com/subject/26425877/">Fundamentals of Deep Learning</a> 这本书。我选择它的原因是讲解得通俗易懂，又会直白地点出重点内容。然而当我读到第三章「Implementing Neural Networks in TensorFlow」时，整个人就好像懵了一样。对于一个从来没接触过 TensorFlow 的人来说，是难以通过看代码直接理解 Graph, Session 等等这些新概念的。于是联想到<a href="https://book.douban.com/subject/5372651/">程序员的思维修炼</a>里面提到的「SQ3R 阅读法」，赶紧先放下这本书，到网上找其他关于 TensorFlow 的资料，值得推荐的是：</p>
+<ul>
+<li><a href="http://wiki.jikexueyuan.com/project/tensorflow-zh/">TensorFlow 官方文档中文版</a></li>
+<li>TF Girls「TensorFlow Tutorial」修炼指南（这老师很幽默）
+<ul>
+<li><a href="https://www.youtube.com/watch?v=8X9QUwtRSs0&amp;list=PLwY2GJhAPWRcZxxVFpNhhfivuW0kX15yG">youtube 地址</a></li>
+<li><a href="https://www.bilibili.com/video/av11079460/?from=search&amp;seid=13313846105672125761">bilibili 地址</a></li>
+</ul>
+</li>
+</ul>
 <p>没想到我居然也能一天完成了一个基础的神经网络（虽然是从下午 1 点到晚上 2 点）。现在到了「SQ3R 阅读法」中的很重要的 Recite（复述）这步———把这个过程写成文章发布到博客里。</p>
-
 <p>所使用的数据集来自 <a href="http://ufldl.stanford.edu/housenumbers/">The Street View House Numbers (SVHN) Dataset</a>，这是一个关于识别街景照片中出现的数字的数据集。</p>
-
-<p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://xzywisdili.com/tensorflow01/dataset.png" src="https://xzywisdili.com/tensorflow01/low/dataset.png" alt="Street View" /></p></figure>
-
+<p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://xzywisdili.com/tensorflow01/dataset.png" src="https://xzywisdili.com/tensorflow01/low/dataset.png" alt="Street View"></p></figure>
 <h2 id="读取数据">读取数据</h2>
-
 <p>首先下载 Format 2 格式的数据，即 <code>.mat</code> 格式的数据。我们先在 iPython 里面探索一下数据：</p>
-
-<pre><code class="language-Python">In[1]: from scipy.io import loadmat as load
-
-In[2]: train_data = load('data/train_32x32.mat')
-  ...: test_data = load('data/test_32x32.mat')
-
-In[3]: train_data.keys()
-Out[3]: dict_keys(['__header__', '__version__', '__globals__', 'X', 'y'])
-
-In[4]: train_data['X'].shape
-Out[4]: (32, 32, 3, 73257)
-
-In[5]: train_data['y'].shape
-Out[5]: (73257, 1)
-</code></pre>
-
-<p>我们把训练集和测试集的样本和标签提取出来。我不想让训练数据集的标签是一个二维数组，所以简单调整一下：</p>
-
-<pre><code class="language-Python">In[6]: train_samples = train_data['X']
-  ...: train_labels = train_data['y'].reshape(train_data['y'].shape[0])
-  ...: test_samples = test_data['X']
-  ...: test_labels = test_data['y'].reshape(test_data['y'].shape[0])
-
-In[7]: train_labels.shape
-Out[7]: (73257,)
-</code></pre>
-
-<h2 id="转换数据维度">转换数据维度</h2>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>In[<span style="color:#ae81ff">1</span>]: <span style="color:#f92672">from</span> scipy.io <span style="color:#f92672">import</span> loadmat <span style="color:#66d9ef">as</span> load
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>In[<span style="color:#ae81ff">2</span>]: train_data <span style="color:#f92672">=</span> load(<span style="color:#e6db74">&#39;data/train_32x32.mat&#39;</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">...</span>: test_data <span style="color:#f92672">=</span> load(<span style="color:#e6db74">&#39;data/test_32x32.mat&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>In[<span style="color:#ae81ff">3</span>]: train_data<span style="color:#f92672">.</span>keys()
+</span></span><span style="display:flex;"><span>Out[<span style="color:#ae81ff">3</span>]: dict_keys([<span style="color:#e6db74">&#39;__header__&#39;</span>, <span style="color:#e6db74">&#39;__version__&#39;</span>, <span style="color:#e6db74">&#39;__globals__&#39;</span>, <span style="color:#e6db74">&#39;X&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>In[<span style="color:#ae81ff">4</span>]: train_data[<span style="color:#e6db74">&#39;X&#39;</span>]<span style="color:#f92672">.</span>shape
+</span></span><span style="display:flex;"><span>Out[<span style="color:#ae81ff">4</span>]: (<span style="color:#ae81ff">32</span>, <span style="color:#ae81ff">32</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">73257</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>In[<span style="color:#ae81ff">5</span>]: train_data[<span style="color:#e6db74">&#39;y&#39;</span>]<span style="color:#f92672">.</span>shape
+</span></span><span style="display:flex;"><span>Out[<span style="color:#ae81ff">5</span>]: (<span style="color:#ae81ff">73257</span>, <span style="color:#ae81ff">1</span>)
+</span></span></code></pre></div><p>我们把训练集和测试集的样本和标签提取出来。我不想让训练数据集的标签是一个二维数组，所以简单调整一下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>In[<span style="color:#ae81ff">6</span>]: train_samples <span style="color:#f92672">=</span> train_data[<span style="color:#e6db74">&#39;X&#39;</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">...</span>: train_labels <span style="color:#f92672">=</span> train_data[<span style="color:#e6db74">&#39;y&#39;</span>]<span style="color:#f92672">.</span>reshape(train_data[<span style="color:#e6db74">&#39;y&#39;</span>]<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">...</span>: test_samples <span style="color:#f92672">=</span> test_data[<span style="color:#e6db74">&#39;X&#39;</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">...</span>: test_labels <span style="color:#f92672">=</span> test_data[<span style="color:#e6db74">&#39;y&#39;</span>]<span style="color:#f92672">.</span>reshape(test_data[<span style="color:#e6db74">&#39;y&#39;</span>]<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>In[<span style="color:#ae81ff">7</span>]: train_labels<span style="color:#f92672">.</span>shape
+</span></span><span style="display:flex;"><span>Out[<span style="color:#ae81ff">7</span>]: (<span style="color:#ae81ff">73257</span>,)
+</span></span></code></pre></div><h2 id="转换数据维度">转换数据维度</h2>
 <p>这时 <code>train_samples</code> 的维度是 <code>(32, 32, 3, 73257)</code>，即(图片高，图片宽，通道数，图片数)。很奇怪原始格式把图片数放在了第四个维度上。我们希望 <code>train_samples</code> 的维度是(图片数，图片高，图片宽，通道数)，即 <code>(73257, 32, 32, 3)</code> 的模式。而 <code>train_labels</code> 也需要一些变化。现在的 <code>train_labels</code> 中每个 <code>label</code> 都是图像上对应的数字，如 3，我们希望它变成 <code>[0, 0, 0, 1, 0, 0, 0, 0, 0, 0]</code> 的模式。其中麻烦一点的是 <code>.mat</code> 格式的数据中并没有 0，而是用 10 来表示 0，这需要我们做一点小小的调整：</p>
-
-<pre><code class="language-Python">import numpy as np
-
-def reformat(samples, labels):
-    # 改变原始数据的形状
-    # (图片高，图片宽，通道数，图片数) -&gt; (图片数，图片高，图片宽，通道数)
-    # labels 转换为 one-hot encoding [3] -&gt; [0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
-    samples = np.transpose(samples, (3, 0, 1, 2))
-
-    one_hot_labels = np.zeros((labels.shape[0], 10))
-    for i, label in enumerate(labels):
-        index = label if label != 10 else 0
-        one_hot_labels[i, index] = 1.0
-
-    return samples, one_hot_labels
-</code></pre>
-
-<h2 id="压缩数据通道数-可视化数据">压缩数据通道数，可视化数据</h2>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reformat</span>(samples, labels):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 改变原始数据的形状</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># (图片高，图片宽，通道数，图片数) -&gt; (图片数，图片高，图片宽，通道数)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># labels 转换为 one-hot encoding [3] -&gt; [0, 0, 0, 1, 0, 0, 0, 0, 0, 0]</span>
+</span></span><span style="display:flex;"><span>    samples <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>transpose(samples, (<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    one_hot_labels <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>zeros((labels<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>], <span style="color:#ae81ff">10</span>))
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i, label <span style="color:#f92672">in</span> enumerate(labels):
+</span></span><span style="display:flex;"><span>        index <span style="color:#f92672">=</span> label <span style="color:#66d9ef">if</span> label <span style="color:#f92672">!=</span> <span style="color:#ae81ff">10</span> <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        one_hot_labels[i, index] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> samples, one_hot_labels
+</span></span></code></pre></div><h2 id="压缩数据通道数可视化数据">压缩数据通道数，可视化数据</h2>
 <p>然后再把图片的 RGB 三通道压缩成一通道的灰度模式，同时压缩映射到 -1.0~1.0 上：</p>
-
-<pre><code class="language-Python">def normalize(samples):
-    &quot;&quot;&quot;
-    @ samples: numpy array
-    &quot;&quot;&quot;
-    samples = np.add.reduce(samples, keepdims=True, axis=3) / 3.0
-    return samples / 128.0 - 1.0
-</code></pre>
-
-<p>改变成灰度图之后，我们现在想看看最初的图片和灰度图。参数 <code>huidu</code> 是用来表示想要展示的是否是灰度图。如果是，则调用关于灰度图的相关函数：</p>
-
-<pre><code class="language-Python">import matplotlib.pyplot as plt
-
-def inspect(datasets, labels, i, huidu=False):
-    # 显示图片查看
-    print(labels[i])
-
-    if huidu:
-        huidu_shape = (datasets.shape[1], datasets.shape[2])
-        plt.imshow(datasets[i].reshape(huidu_shape), cmap=&quot;gray&quot;)
-    else:
-        plt.imshow(datasets[i])
-    plt.show()
-</code></pre>
-
-<p>我们对训练集和测试集进行调整维度和压缩通道的预处理：</p>
-
-<pre><code class="language-Python">In[8]: re_train_samples, re_train_labels = reformat(train_samples, train_labels)
-  ...: re_test_samples, re_test_labels = reformat(test_samples, test_labels)
-
-In[9]: final_train_samples = normalize(re_train_samples)
-  ...: final_train_labels = re_train_labels
-  ...: final_test_samples = normalize(re_test_samples)
-  ...: final_test_labels = re_test_labels
-</code></pre>
-
-<p>现在我们随便选择训练集中的一个样本，看看它的原始图片和灰度图：</p>
-
-<pre><code class="language-Python">inspect(re_train_samples, train_labels, 31960)
-</code></pre>
-
-<p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://xzywisdili.com/tensorflow01/inspect_color.png" src="https://xzywisdili.com/tensorflow01/low/inspect_color.png" alt="inspect color" /></p></figure>
-
-<pre><code class="language-Python">inspect(final_train_samples, train_labels, 31960, huidu=True)
-</code></pre>
-
-<p>下面就是灰度图：
-<figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://xzywisdili.com/tensorflow01/inspect_huidu.png" src="https://xzywisdili.com/tensorflow01/low/inspect_huidu.png" alt="inspect huidu" /></figure>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">normalize</span>(samples):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    @ samples: numpy array
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    samples <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>add<span style="color:#f92672">.</span>reduce(samples, keepdims<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, axis<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">3.0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> samples <span style="color:#f92672">/</span> <span style="color:#ae81ff">128.0</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1.0</span>
+</span></span></code></pre></div><p>改变成灰度图之后，我们现在想看看最初的图片和灰度图。参数 <code>huidu</code> 是用来表示想要展示的是否是灰度图。如果是，则调用关于灰度图的相关函数：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">inspect</span>(datasets, labels, i, huidu<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 显示图片查看</span>
+</span></span><span style="display:flex;"><span>    print(labels[i])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> huidu:
+</span></span><span style="display:flex;"><span>        huidu_shape <span style="color:#f92672">=</span> (datasets<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>], datasets<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">2</span>])
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>imshow(datasets[i]<span style="color:#f92672">.</span>reshape(huidu_shape), cmap<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;gray&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>imshow(datasets[i])
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><p>我们对训练集和测试集进行调整维度和压缩通道的预处理：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>In[<span style="color:#ae81ff">8</span>]: re_train_samples, re_train_labels <span style="color:#f92672">=</span> reformat(train_samples, train_labels)
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">...</span>: re_test_samples, re_test_labels <span style="color:#f92672">=</span> reformat(test_samples, test_labels)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>In[<span style="color:#ae81ff">9</span>]: final_train_samples <span style="color:#f92672">=</span> normalize(re_train_samples)
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">...</span>: final_train_labels <span style="color:#f92672">=</span> re_train_labels
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">...</span>: final_test_samples <span style="color:#f92672">=</span> normalize(re_test_samples)
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">...</span>: final_test_labels <span style="color:#f92672">=</span> re_test_labels
+</span></span></code></pre></div><p>现在我们随便选择训练集中的一个样本，看看它的原始图片和灰度图：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>inspect(re_train_samples, train_labels, <span style="color:#ae81ff">31960</span>)
+</span></span></code></pre></div><p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://xzywisdili.com/tensorflow01/inspect_color.png" src="https://xzywisdili.com/tensorflow01/low/inspect_color.png" alt="inspect color"></p></figure>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>inspect(final_train_samples, train_labels, <span style="color:#ae81ff">31960</span>, huidu<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><p>下面就是灰度图：
+<figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://xzywisdili.com/tensorflow01/inspect_huidu.png" src="https://xzywisdili.com/tensorflow01/low/inspect_huidu.png" alt="inspect huidu"></figure>
 好了，一切完美运行！最后，我们想看看我们训练集和测试集的标签的分布情况，画出数字 0~9 的分布情况的直方图：</p>
-
-<pre><code class="language-Python">from collections import Counter
-
-def distribution(labels, name):
-    # 查看 labels 的分布，并画出统计图
-    count = Counter(labels)
-    y_pos = np.arange(len(count))
-    y_count = [count[i] if i != 0 else count[10] for i in y_pos]
-    plt.bar(y_pos, y_count, align='center', alpha=0.5)
-    plt.xticks(y_pos, y_pos)
-    plt.ylabel('Count')
-    plt.title(name + ' Label Distribution')
-    plt.show()
-</code></pre>
-
-<pre><code class="language-Python">In[10]: distribution(train_labels, 'Train')
-</code></pre>
-
-<p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://xzywisdili.com/tensorflow01/train_label_dist.png" src="https://xzywisdili.com/tensorflow01/low/train_label_dist.png" alt="train labels distribution" /></p></figure>
-
-<pre><code class="language-Python">In[11]: distribution(test_labels, 'Train')
-</code></pre>
-
-<p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://xzywisdili.com/tensorflow01/test_label_dist.png" src="https://xzywisdili.com/tensorflow01/low/test_label_dist.png" alt="test labels distribution" /></p></figure>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> Counter
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">distribution</span>(labels, name):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 查看 labels 的分布，并画出统计图</span>
+</span></span><span style="display:flex;"><span>    count <span style="color:#f92672">=</span> Counter(labels)
+</span></span><span style="display:flex;"><span>    y_pos <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arange(len(count))
+</span></span><span style="display:flex;"><span>    y_count <span style="color:#f92672">=</span> [count[i] <span style="color:#66d9ef">if</span> i <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">else</span> count[<span style="color:#ae81ff">10</span>] <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> y_pos]
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>bar(y_pos, y_count, align<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;center&#39;</span>, alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>xticks(y_pos, y_pos)
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;Count&#39;</span>)
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>title(name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; Label Distribution&#39;</span>)
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>In[<span style="color:#ae81ff">10</span>]: distribution(train_labels, <span style="color:#e6db74">&#39;Train&#39;</span>)
+</span></span></code></pre></div><p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://xzywisdili.com/tensorflow01/train_label_dist.png" src="https://xzywisdili.com/tensorflow01/low/train_label_dist.png" alt="train labels distribution"></p></figure>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>In[<span style="color:#ae81ff">11</span>]: distribution(test_labels, <span style="color:#e6db74">&#39;Train&#39;</span>)
+</span></span></code></pre></div><p><figure class="progressive"><img class="progressive__img progressive--not-loaded" data-progressive="https://xzywisdili.com/tensorflow01/test_label_dist.png" src="https://xzywisdili.com/tensorflow01/low/test_label_dist.png" alt="test labels distribution"></p></figure>
 <p>可以看到 <code>train_labels</code> 和 <code>test_labels</code> 具有相似的分布结构，说明训练集和测试集的划分还算合理，我们可以接下来继续用。</p>
-
 <p>至此，我们的预处理就结束了。我们把这里所有的代码整理为 <code>load.py</code> 以供接下来的神经网络使用：</p>
-
-<pre><code class="language-Python">from scipy.io import loadmat as load
-import matplotlib.pyplot as plt
-import numpy as np
-from collections import Counter
-
-
-# 使用 tensorflow 实现图像识别
-def load_data():
-    train_data = load('data/train_32x32.mat')
-    test_data = load('data/test_32x32.mat')
-    # extra_data = load('data/extra_32x32.mat')
-    return train_data, test_data
-
-
-def reformat(samples, labels):
-    # 改变原始数据的形状
-    # (图片高，图片宽，通道数，图片数) -&gt; (图片数，图片高，图片宽，通道数)
-    # labels 转换为 one-hot encoding [3] -&gt; [0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
-    samples = np.transpose(samples, (3, 0, 1, 2))
-
-    one_hot_labels = np.zeros((labels.shape[0], 10))
-    for i, label in enumerate(labels):
-        index = label if label != 10 else 0
-        one_hot_labels[i, index] = 1.0
-
-    return samples, one_hot_labels
-
-
-def normalize(samples):
-    &quot;&quot;&quot;
-    灰度化：(R + G + B) / 3（省内存，加快训练速度）
-    将图片从 0 ~ 255 映射到 -1.0 ~ 1.0
-    @ samples: numpy array
-    &quot;&quot;&quot;
-    samples = np.add.reduce(samples, keepdims=True, axis=3) / 3.0
-    return samples / 128.0 - 1.0
-
-
-def distribution(labels, name):
-    # 查看 labels 的分布，并画出统计图
-    count = Counter(labels)
-    y_pos = np.arange(len(count))
-    y_count = [count[i] if i != 0 else count[10] for i in y_pos]
-    plt.bar(y_pos, y_count, align='center', alpha=0.5)
-    plt.xticks(y_pos, y_pos)
-    plt.ylabel('Count')
-    plt.title(name + ' Label Distribution')
-    plt.show()
-
-
-def inspect(datasets, labels, i, huidu=False):
-    # 显示图片查看
-    print(labels[i])
-
-    if huidu:
-        huidu_shape = (datasets.shape[1], datasets.shape[2])
-        plt.imshow(datasets[i].reshape(huidu_shape), cmap=&quot;gray&quot;)
-    else:
-        plt.imshow(datasets[i])
-    plt.show()
-
-train_data, test_data = load_data()
-
-train_samples = train_data['X']
-train_labels = train_data['y'].reshape(train_data['y'].shape[0])
-test_samples = test_data['X']
-test_labels = test_data['y'].reshape(test_data['y'].shape[0])
-# test_samples = extra_data['X']
-# test_labels = extra_data['y']
-
-print('Train Data Samples Shape: ', train_samples.shape)
-print('Train Data Labels Shape: ', train_labels.shape)
-
-print('Test Data Samples Shape: ', test_samples.shape)
-print('Test Data Labels Shape: ', test_labels.shape)
-
-# print('Extra Data Samples Shape: ', extra_data['X'].shape)
-# print('Extra Data Labels Shape: ', extra_data['y'].shape)
-
-re_train_samples, re_train_labels = reformat(train_samples, train_labels)
-re_test_samples, re_test_labels = reformat(test_samples, test_labels)
-
-final_train_samples = normalize(re_train_samples)
-final_train_labels = re_train_labels
-final_test_samples = normalize(re_test_samples)
-final_test_labels = re_test_labels
-
-num_labels = final_train_labels.shape[1] # 10
-image_size = final_train_samples.shape[1] # 32
-num_channel = final_train_samples.shape[3] # 1
-
-if __name__ == '__main__':
-    # See some pictures
-    inspect(re_train_samples, train_labels, 1, huidu=False)
-
-    # See some gray pictures
-    inspect(final_train_samples, train_labels, 1, huidu=True)
-
-    # See the distribution of the labels
-    distribution(train_labels, 'Train')
-    distribution(test_labels, 'Test')
-</code></pre>
-
-<h2 id="结语">结语</h2>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy.io <span style="color:#f92672">import</span> loadmat <span style="color:#66d9ef">as</span> load
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> Counter
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用 tensorflow 实现图像识别</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">load_data</span>():
+</span></span><span style="display:flex;"><span>    train_data <span style="color:#f92672">=</span> load(<span style="color:#e6db74">&#39;data/train_32x32.mat&#39;</span>)
+</span></span><span style="display:flex;"><span>    test_data <span style="color:#f92672">=</span> load(<span style="color:#e6db74">&#39;data/test_32x32.mat&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># extra_data = load(&#39;data/extra_32x32.mat&#39;)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> train_data, test_data
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reformat</span>(samples, labels):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 改变原始数据的形状</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># (图片高，图片宽，通道数，图片数) -&gt; (图片数，图片高，图片宽，通道数)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># labels 转换为 one-hot encoding [3] -&gt; [0, 0, 0, 1, 0, 0, 0, 0, 0, 0]</span>
+</span></span><span style="display:flex;"><span>    samples <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>transpose(samples, (<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    one_hot_labels <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>zeros((labels<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>], <span style="color:#ae81ff">10</span>))
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i, label <span style="color:#f92672">in</span> enumerate(labels):
+</span></span><span style="display:flex;"><span>        index <span style="color:#f92672">=</span> label <span style="color:#66d9ef">if</span> label <span style="color:#f92672">!=</span> <span style="color:#ae81ff">10</span> <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        one_hot_labels[i, index] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> samples, one_hot_labels
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">normalize</span>(samples):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    灰度化：(R + G + B) / 3（省内存，加快训练速度）
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    将图片从 0 ~ 255 映射到 -1.0 ~ 1.0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    @ samples: numpy array
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    samples <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>add<span style="color:#f92672">.</span>reduce(samples, keepdims<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, axis<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">3.0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> samples <span style="color:#f92672">/</span> <span style="color:#ae81ff">128.0</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1.0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">distribution</span>(labels, name):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 查看 labels 的分布，并画出统计图</span>
+</span></span><span style="display:flex;"><span>    count <span style="color:#f92672">=</span> Counter(labels)
+</span></span><span style="display:flex;"><span>    y_pos <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arange(len(count))
+</span></span><span style="display:flex;"><span>    y_count <span style="color:#f92672">=</span> [count[i] <span style="color:#66d9ef">if</span> i <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">else</span> count[<span style="color:#ae81ff">10</span>] <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> y_pos]
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>bar(y_pos, y_count, align<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;center&#39;</span>, alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>xticks(y_pos, y_pos)
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;Count&#39;</span>)
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>title(name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; Label Distribution&#39;</span>)
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>show()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">inspect</span>(datasets, labels, i, huidu<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 显示图片查看</span>
+</span></span><span style="display:flex;"><span>    print(labels[i])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> huidu:
+</span></span><span style="display:flex;"><span>        huidu_shape <span style="color:#f92672">=</span> (datasets<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>], datasets<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">2</span>])
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>imshow(datasets[i]<span style="color:#f92672">.</span>reshape(huidu_shape), cmap<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;gray&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        plt<span style="color:#f92672">.</span>imshow(datasets[i])
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>show()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>train_data, test_data <span style="color:#f92672">=</span> load_data()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>train_samples <span style="color:#f92672">=</span> train_data[<span style="color:#e6db74">&#39;X&#39;</span>]
+</span></span><span style="display:flex;"><span>train_labels <span style="color:#f92672">=</span> train_data[<span style="color:#e6db74">&#39;y&#39;</span>]<span style="color:#f92672">.</span>reshape(train_data[<span style="color:#e6db74">&#39;y&#39;</span>]<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>test_samples <span style="color:#f92672">=</span> test_data[<span style="color:#e6db74">&#39;X&#39;</span>]
+</span></span><span style="display:flex;"><span>test_labels <span style="color:#f92672">=</span> test_data[<span style="color:#e6db74">&#39;y&#39;</span>]<span style="color:#f92672">.</span>reshape(test_data[<span style="color:#e6db74">&#39;y&#39;</span>]<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># test_samples = extra_data[&#39;X&#39;]</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># test_labels = extra_data[&#39;y&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Train Data Samples Shape: &#39;</span>, train_samples<span style="color:#f92672">.</span>shape)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Train Data Labels Shape: &#39;</span>, train_labels<span style="color:#f92672">.</span>shape)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Test Data Samples Shape: &#39;</span>, test_samples<span style="color:#f92672">.</span>shape)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#39;Test Data Labels Shape: &#39;</span>, test_labels<span style="color:#f92672">.</span>shape)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># print(&#39;Extra Data Samples Shape: &#39;, extra_data[&#39;X&#39;].shape)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># print(&#39;Extra Data Labels Shape: &#39;, extra_data[&#39;y&#39;].shape)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>re_train_samples, re_train_labels <span style="color:#f92672">=</span> reformat(train_samples, train_labels)
+</span></span><span style="display:flex;"><span>re_test_samples, re_test_labels <span style="color:#f92672">=</span> reformat(test_samples, test_labels)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>final_train_samples <span style="color:#f92672">=</span> normalize(re_train_samples)
+</span></span><span style="display:flex;"><span>final_train_labels <span style="color:#f92672">=</span> re_train_labels
+</span></span><span style="display:flex;"><span>final_test_samples <span style="color:#f92672">=</span> normalize(re_test_samples)
+</span></span><span style="display:flex;"><span>final_test_labels <span style="color:#f92672">=</span> re_test_labels
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>num_labels <span style="color:#f92672">=</span> final_train_labels<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>] <span style="color:#75715e"># 10</span>
+</span></span><span style="display:flex;"><span>image_size <span style="color:#f92672">=</span> final_train_samples<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>] <span style="color:#75715e"># 32</span>
+</span></span><span style="display:flex;"><span>num_channel <span style="color:#f92672">=</span> final_train_samples<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">3</span>] <span style="color:#75715e"># 1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># See some pictures</span>
+</span></span><span style="display:flex;"><span>    inspect(re_train_samples, train_labels, <span style="color:#ae81ff">1</span>, huidu<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># See some gray pictures</span>
+</span></span><span style="display:flex;"><span>    inspect(final_train_samples, train_labels, <span style="color:#ae81ff">1</span>, huidu<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># See the distribution of the labels</span>
+</span></span><span style="display:flex;"><span>    distribution(train_labels, <span style="color:#e6db74">&#39;Train&#39;</span>)
+</span></span><span style="display:flex;"><span>    distribution(test_labels, <span style="color:#e6db74">&#39;Test&#39;</span>)
+</span></span></code></pre></div><h2 id="结语">结语</h2>
 <p>你可能心里说：「骗子，你根本没写 TensorFlow 的内容」。嘿嘿，先别打我，我们接下来会把神经网络的相关代码写在另一个程序 <code>network.py</code> 里面，在那里就需要 TensorFlow 的内容了。碍于篇幅，不好在一篇文章中写完。关于使用 TensorFlow 构建基础的神经网络，我会在下一篇文章中介绍。</p>
-
 <p>顺带一提，在写日志的时候，把自己写过的代码再过一遍，我觉得是一种很好的学习方法：）为早日精通 TensorFlow 奋斗！</p>
 
 
@@ -1480,11 +1435,8 @@ if __name__ == '__main__':
             </a>
         
 
-        
-            <a href="https://xzywisdili.com/index.xml">
-                <img class="icon" src="https://xzywisdili.com/img/rss.svg" alt="rss" />
+        <img class="icon" src="https://xzywisdili.com/img/rss.svg" alt="rss" />
             </a>
-        
 
         </div>
     </div>
