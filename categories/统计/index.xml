@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>统计 on XZY&#39;s BLOG</title>
-    <link>https://www.xzywisdili.com/post/categories/%E7%BB%9F%E8%AE%A1/</link>
+    <link>https://www.xzywisdili.com/categories/%E7%BB%9F%E8%AE%A1/</link>
     <description>Recent content in 统计 on XZY&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 28 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/post/categories/%E7%BB%9F%E8%AE%A1/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/categories/%E7%BB%9F%E8%AE%A1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>分享几篇统计相关好文</title>
-      <link>https://www.xzywisdili.com/post/post/2020-04-28-papershare/</link>
+      <link>https://www.xzywisdili.com/post/2020-04-28-papershare/</link>
       <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.xzywisdili.com/post/post/2020-04-28-papershare/</guid>
+      <guid>https://www.xzywisdili.com/post/2020-04-28-papershare/</guid>
       <description>最近在研究分段样条回归和线性混合效应模型，看到了几篇好文可以分享。
 样条回归（附 python 代码） [分段回归的拐点连续性](https://yihui.org/cn/2012/04/break-points-in-regression/ 最全使用 R 语言中lme4 包完成线性混合效应模型分析 但还是没搞懂分段线性混合效应模型，要学会接受自己的平庸和愚蠢。</description>
     </item>

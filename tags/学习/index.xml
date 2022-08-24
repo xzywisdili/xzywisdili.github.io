@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>学习 on XZY&#39;s BLOG</title>
-    <link>https://www.xzywisdili.com/post/tags/%E5%AD%A6%E4%B9%A0/</link>
+    <link>https://www.xzywisdili.com/tags/%E5%AD%A6%E4%B9%A0/</link>
     <description>Recent content in 学习 on XZY&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 09 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/post/tags/%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/tags/%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>毕业流程之不吐不快</title>
-      <link>https://www.xzywisdili.com/post/post/2021-06-09-graduation/</link>
+      <link>https://www.xzywisdili.com/post/2021-06-09-graduation/</link>
       <pubDate>Wed, 09 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.xzywisdili.com/post/post/2021-06-09-graduation/</guid>
+      <guid>https://www.xzywisdili.com/post/2021-06-09-graduation/</guid>
       <description>终于在今年经历了毕业季，虽然坎坎坷坷，但也还算顺利，即将要从北京大学医学部毕业了。 然而在这之间走的各种流程和细节着实让人无比心累，实在是不吐不快。 明明有很大的提升空间，却还是抱残守缺，实在是与北大医学部的名校形象不太相符。
 老旧的线上管理系统 难以想象，北医在 2021 年还在使用只有 IE (对，就是那个在 95 年推出，在 15 年被微软宣布要放弃的 Internet Explorer 浏览器) 才能顺利登陆并且完成各项内容提交的研究生教育管理系统。只要使用现代浏览器登陆，那必然是只能显示一片白色：
 这带来的后果便是，从抢课、查成绩，到毕业申请、提交材料，任何使用苹果 mac 系统和最新版 windows 的用户都 无法顺利处理研究生期间的教务相关事务。虽然北医的生活服务平台已经更新成了现代化的新版应用，并且支持所有平台（包括手机 APP），但研究生教育管理系统迟迟不更新的原因实在不得而知。
@@ -25,10 +25,10 @@
     
     <item>
       <title>欲速则不达</title>
-      <link>https://www.xzywisdili.com/post/post/2019-02-23-speededucation/</link>
+      <link>https://www.xzywisdili.com/post/2019-02-23-speededucation/</link>
       <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.xzywisdili.com/post/post/2019-02-23-speededucation/</guid>
+      <guid>https://www.xzywisdili.com/post/2019-02-23-speededucation/</guid>
       <description>越来越多的速成教程出现在我们的视野中。高中时期，贴吧就有不少关于“如何在一个月内高考数学提高XX分”这样的内容。 而之后，像这样的内容越来越多，无论是程序相关，考研，摄影，视频后期，音乐制作等等领域，都出现了诸如此类的速成教程。 似乎跟着这些内容学完，就能在短时间内摇身一变，成功升级为这一领域的大神。
 我以前也经常被这样的标题所迷惑，也在网盘或收藏夹存储了大量的这类教程。最近我开始反思这一类内容的真正用处。 这类内容一般有两类。第一类是真的可以在很短时间内速成学会，比如 Markdown 的语法，使用软件剪辑视频的操作， Office 软件的一些基础用法等等。但是这种技能不可能成为一个人的核心技能，你可以学会，别人也可以在短时间内学会。 如果只衡量一项技能的时间成本，这类技能等于是零门槛的。这不代表它们是没有价值的，但我们不应该把大量时间和精力花在搜寻和学习它们上，也不能因为自己会这类技能就沾沾自喜，自我满足。
 另一类则是以这样的标题作为吸睛的鸡血，引诱读者而打开链接，而实际上仍需要大量的时间精进。比如我最近学习的 Python Web 编程内容，24 节课，每节课 2 小时，按 2 倍速播放需要 1 小时，再加上课前预习内容和课后作业，每节课也得至少 1 个半小时，这样总共算下来需要 60 个小时，就算每周能抽出 6 个小时时间学习，也需要 3 个月时间才能学完（我不相信有人能一天 10 小时高强度学习）。 这样也才是刚刚入门，还需要大量时间去练习，才能够算得上掌握了一项新的技能。别的领域我想也是如此，摄影、绘画大神才出彩前付出大量的时间，考研成功的人也一定是在所有参与者中相对努力的那批人。这才是一个人的核心竞争力，也是不可替代的。

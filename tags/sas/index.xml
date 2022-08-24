@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SAS on XZY&#39;s BLOG</title>
-    <link>https://www.xzywisdili.com/post/tags/sas/</link>
+    <link>https://www.xzywisdili.com/tags/sas/</link>
     <description>Recent content in SAS on XZY&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 09 Dec 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/post/tags/sas/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Dec 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/tags/sas/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>工具人时刻</title>
-      <link>https://www.xzywisdili.com/post/post/2019-12-09-smalltool/</link>
+      <link>https://www.xzywisdili.com/post/2019-12-09-smalltool/</link>
       <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.xzywisdili.com/post/post/2019-12-09-smalltool/</guid>
+      <guid>https://www.xzywisdili.com/post/2019-12-09-smalltool/</guid>
       <description>昨天晚上师姐速报：「师弟，帮忙算个东西，用SAS写」。
 一开始对我来说可能不是什么难事，打开文件一看，陷入了深深的沉思。 用一个截图说明：
 每一行代表一个研究对象，每个研究对象有 pm1 到 pm7 这 7 天所接触的 PM2.5 浓度（实际文件里面是 365 天）。 我们需要计算连续 2 天，连续 3 天，&amp;hellip; ，连续 7 天接触 PM2.5 浓度大于 35 的次数。 而且如果连续 3 天接触 PM2.5，那么只能算一次连续 3 天次数，而不能再重复计算连续 2 天次数。 换句话说，这里的每一个连续的天数都必须刚刚好好。
@@ -23,10 +23,10 @@ DATA example; infile &amp;#34;G:\04_code\PM2.5数据.csv&amp;#34; DSD MISSOVER f
     
     <item>
       <title>我们怎么知道自己学会了？</title>
-      <link>https://www.xzywisdili.com/post/post/2018-12-8-learnthoughts/</link>
+      <link>https://www.xzywisdili.com/post/2018-12-8-learnthoughts/</link>
       <pubDate>Fri, 07 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://www.xzywisdili.com/post/post/2018-12-8-learnthoughts/</guid>
+      <guid>https://www.xzywisdili.com/post/2018-12-8-learnthoughts/</guid>
       <description>&lt;p&gt;本科生活即将结束了。最后的一周日子里，主要在复习职业病学和精神病学，准备考试，一边又不想落下 SAS 的学习，当然还有其他杂七杂八的任务。在学习的时候，自然会想到一个问题就是：我们怎么知道自己学会了？&lt;/p&gt;</description>
     </item>
     
