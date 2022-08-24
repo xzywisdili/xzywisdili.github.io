@@ -835,7 +835,8 @@ In[1]: from scipy.io import loadmat as load In[2]: train_data = load(&amp;#39;da
       
       <guid>https://www.xzywisdili.com/home/</guid>
       <description>欢迎来到我的博客做客！
-以下可能是您感兴趣的文章列表：
+这里有完整的博客文章列表。
+以下可能是您感兴趣的文章：
 我在 R 里画地图（一） 我在 R 里画地图（二） 赵粤的《时尚COSMO》杂志翻译 如何从 NASA 下载气象数据 看看一些现代“媒体”是怎么愚弄大众的 博客使用 Hugo 搭建，主题使用 cocoa-eh。</description>
     </item>
     
