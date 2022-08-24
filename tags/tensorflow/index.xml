@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>TensorFlow on XZY&#39;s BLOG</title>
-    <link>https://xzywisdili.com/tags/tensorflow/</link>
+    <link>https://www.xzywisdili.com/post/tags/tensorflow/</link>
     <description>Recent content in TensorFlow on XZY&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 12 Nov 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.com/tags/tensorflow/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Nov 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/post/tags/tensorflow/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>光棍节初探 TensorFlow（一）：数据集的预处理</title>
-      <link>https://xzywisdili.com/post/2017-11-12-tensorflow01/</link>
+      <link>https://www.xzywisdili.com/post/post/2017-11-12-tensorflow01/</link>
       <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.com/post/2017-11-12-tensorflow01/</guid>
+      <guid>https://www.xzywisdili.com/post/post/2017-11-12-tensorflow01/</guid>
       <description>11 月 11 日这天注定对我具有了一定的意义。不是因为它是购物狂欢节或光棍节，而是因为在这一天，我第一次尝试使用 TensorFlow 搭建了一个简单的神经网络。我希望用几篇文章记录这个过程。
 最近在读 Fundamentals of Deep Learning 这本书。我选择它的原因是讲解得通俗易懂，又会直白地点出重点内容。然而当我读到第三章「Implementing Neural Networks in TensorFlow」时，整个人就好像懵了一样。对于一个从来没接触过 TensorFlow 的人来说，是难以通过看代码直接理解 Graph, Session 等等这些新概念的。于是联想到程序员的思维修炼里面提到的「SQ3R 阅读法」，赶紧先放下这本书，到网上找其他关于 TensorFlow 的资料，值得推荐的是：
 TensorFlow 官方文档中文版 TF Girls「TensorFlow Tutorial」修炼指南（这老师很幽默） youtube 地址 bilibili 地址 没想到我居然也能一天完成了一个基础的神经网络（虽然是从下午 1 点到晚上 2 点）。现在到了「SQ3R 阅读法」中的很重要的 Recite（复述）这步———把这个过程写成文章发布到博客里。

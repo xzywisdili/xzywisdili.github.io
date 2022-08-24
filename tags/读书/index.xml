@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>读书 on XZY&#39;s BLOG</title>
-    <link>https://xzywisdili.com/tags/%E8%AF%BB%E4%B9%A6/</link>
+    <link>https://www.xzywisdili.com/post/tags/%E8%AF%BB%E4%B9%A6/</link>
     <description>Recent content in 读书 on XZY&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 28 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.com/tags/%E8%AF%BB%E4%B9%A6/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/post/tags/%E8%AF%BB%E4%B9%A6/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>最近要开始啃书了</title>
-      <link>https://xzywisdili.com/post/2021-06-28-starttoreadbooks/</link>
+      <link>https://www.xzywisdili.com/post/post/2021-06-28-starttoreadbooks/</link>
       <pubDate>Mon, 28 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://xzywisdili.com/post/2021-06-28-starttoreadbooks/</guid>
+      <guid>https://www.xzywisdili.com/post/post/2021-06-28-starttoreadbooks/</guid>
       <description>最近开始关心 AI 技术在医疗领域的一些应用。 随着老龄化社会的进程，节省医疗系统的冗余成本，做到更好的健康管理势必更为重要。 而从现有积累的和未来获得的人群大数据势必也将把医疗探索和相关制药研发带入到一个新的时代。
 但同时这个进程也有太多问题和阻碍：缺乏相关跨界人才的问题，数据隐私和伦理的问题，模型可解释性的问题和 人群对 AI 的信用度和接受度的问题等等……
 不过，我还是相信，新技术的到来能帮助我们在医疗系统中解决更多的问题。
