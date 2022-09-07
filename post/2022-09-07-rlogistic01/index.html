@@ -13,9 +13,9 @@
 <meta property="og:site_name" content="XZY&#39;s BLOG" />
 <meta property="og:locale" content="zh-cn" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.xzywisdili.com/post/" />
-<meta property="og:title" content="Post" />
-<meta property="twitter:title" content="Post">
+<meta property="og:url" content="https://www.xzywisdili.com/post/2022-09-07-rlogistic01/" />
+<meta property="og:title" content="【医学预测01】Logistic 回归构建变量筛选：先单后多" />
+<meta property="twitter:title" content="【医学预测01】Logistic 回归构建变量筛选：先单后多">
 
     <meta property="og:image" content="https://www.xzywisdili.com/img/logo.png">
     <meta property="twitter:card" content="summary">
@@ -27,10 +27,10 @@
 <title>
 
 
-     XZY&#39;s BLOG - Post 
+     XZY&#39;s BLOG - 【医学预测01】Logistic 回归构建变量筛选：先单后多 
 
 </title>
-<link rel="canonical" href="https://www.xzywisdili.com/post/">
+<link rel="canonical" href="https://www.xzywisdili.com/post/2022-09-07-rlogistic01/">
 
 
 <style media="screen">
@@ -1053,7 +1053,6 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
 >
 
 
-<link rel="alternate" type="application/rss+xml" href="https://www.xzywisdili.com/post/index.xml" title="XZY's BLOG" />
 
 </head>
 
@@ -1061,7 +1060,7 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
 <body>
 
 
-<div class="header header-home column">
+<div class="header column">
 
     <div class="container">
         
@@ -1092,807 +1091,147 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
     </div>
 </div>
 
+
+
 <div class="main column">
     <div class="container">
         <div class="content">
-            <div class="posts">
-                <div class="page-heading">Post</div>
+            <div class="page-heading">
 
+    
+    【医学预测01】Logistic 回归构建变量筛选：先单后多
+    
+
+</div>
+
+            <div class="markdown">
                 
-
-                
-                <ul>
-                    
-                      
-                        <li class="groupby">Sep, 2022</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Sep 7, 2022</span>
-    
-    <a href="https://www.xzywisdili.com/post/2022-09-07-rlogistic01/"><span>【医学预测01】Logistic 回归构建变量筛选：先单后多</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Sep 5, 2022</span>
-    
-    <a href="https://www.xzywisdili.com/post/2022-09-05-bookreview02/"><span>【把书读薄02】开启高质量沟通的第1分钟</span></a>
-    
-</li>
-
-                          
-                        
-                      
-                    
-                      
-                        <li class="groupby">Aug, 2022</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Aug 29, 2022</span>
-    
-    <a href="https://www.xzywisdili.com/post/2022-08-29-bookreview01/"><span>【把书读薄01】拼凑真相：指导读者如何面对各种诡计多端的媒体把戏</span></a>
-    
-</li>
-
-                          
-                        
-                      
-                    
-                      
-                        <li class="groupby">Jul, 2022</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Jul 28, 2022</span>
-    
-    <a href="https://www.xzywisdili.com/post/2022-07-28-timeseriesplot/"><span>一天内数据分布的可视化</span></a>
-    
-</li>
-
-                          
-                        
-                      
-                    
-                      
-                        <li class="groupby">Jan, 2022</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Jan 4, 2022</span>
-    
-    <a href="https://www.xzywisdili.com/post/2022-01-04-happynewyear/"><span>2022 跨年快乐</span></a>
-    
-</li>
-
-                          
-                        
-                      
-                    
-                      
-                        <li class="groupby">Dec, 2021</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Dec 18, 2021</span>
-    
-    <a href="https://www.xzywisdili.com/post/2021-12-18-bookthoughts/"><span>读完一本应试方法书的碎碎念</span></a>
-    
-</li>
-
-                          
-                        
-                      
-                    
-                      
-                        <li class="groupby">Nov, 2021</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Nov 29, 2021</span>
-    
-    <a href="https://www.xzywisdili.com/post/2021-11-29-newdietmethod/"><span>最近在尝试的一种新的减重饮食法</span></a>
-    
-</li>
-
-                          
-                        
-                      
-                    
-                      
-                        <li class="groupby">Oct, 2021</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Oct 18, 2021</span>
-    
-    <a href="https://www.xzywisdili.com/post/2021-10-18-thoughtsofdtx/"><span>听完数字疗法产业峰会北京站的一些想法</span></a>
-    
-</li>
-
-                          
-                        
-                      
-                    
-                      
-                        <li class="groupby">Aug, 2021</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Aug 13, 2021</span>
-    
-    <a href="https://www.xzywisdili.com/post/2021-08-13-seehowmediafoolus/"><span>看看一些现代“媒体”是怎么愚弄大众的</span></a>
-    
-</li>
-
-                          
-                        
-                      
-                    
-                      
-                        <li class="groupby">Jul, 2021</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Jul 5, 2021</span>
-    
-    <a href="https://www.xzywisdili.com/post/2021-07-05-writesendletter/"><span>在 2021 年寄一封平信</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Jul 2, 2021</span>
-    
-    <a href="https://www.xzywisdili.com/post/2021-07-02-thingsneverbuy/"><span>我个人不会再买的东西</span></a>
-    
-</li>
-
-                          
-                        
-                      
-                    
-                      
-                        <li class="groupby">Jun, 2021</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Jun 28, 2021</span>
-    
-    <a href="https://www.xzywisdili.com/post/2021-06-28-starttoreadbooks/"><span>最近要开始啃书了</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Jun 16, 2021</span>
-    
-    <a href="https://www.xzywisdili.com/post/2021-06-16-downloadclimate/"><span>如何从 NASA 下载气象数据</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Jun 15, 2021</span>
-    
-    <a href="https://www.xzywisdili.com/post/2021-06-15-newrtips/"><span>新发现的 R 里关于 data.table 的一些神奇用法</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Jun 15, 2021</span>
-    
-    <a href="https://www.xzywisdili.com/post/2021-06-15-extractnumbers/"><span>从电子病历提取数据</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Jun 9, 2021</span>
-    
-    <a href="https://www.xzywisdili.com/post/2021-06-09-graduation/"><span>毕业流程之不吐不快</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Jun 9, 2021</span>
-    
-    <a href="https://www.xzywisdili.com/post/2021-06-09-mergeandkeepdata/"><span>对数据进行填补</span></a>
-    
-</li>
-
-                          
-                        
-                      
-                    
-                      
-                        <li class="groupby">Dec, 2020</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Dec 27, 2020</span>
-    
-    <a href="https://www.xzywisdili.com/post/2020-12-28-recommendwebsite/"><span>推荐且收藏的好网站</span></a>
-    
-</li>
-
-                          
-                        
-                      
-                    
-                      
-                        <li class="groupby">Sep, 2020</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Sep 30, 2020</span>
-    
-    <a href="https://www.xzywisdili.com/post/2020-09-30-zhaoyuecosmo/"><span>赵粤的《时尚COSMO》杂志翻译</span></a>
-    
-</li>
-
-                          
-                        
-                      
-                    
-                      
-                        <li class="groupby">Jul, 2020</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Jul 16, 2020</span>
-    
-    <a href="https://www.xzywisdili.com/post/2020-07-16-rdistance/"><span>R 语言计算空间距离</span></a>
-    
-</li>
-
-                          
-                        
-                      
-                    
-                      
-                        <li class="groupby">Jun, 2020</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Jun 20, 2020</span>
-    
-    <a href="https://www.xzywisdili.com/post/2020-06-20-thebadkids/"><span>聊聊《隐秘的角落》</span></a>
-    
-</li>
-
-                          
-                        
-                      
-                    
-                      
-                        <li class="groupby">Apr, 2020</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Apr 28, 2020</span>
-    
-    <a href="https://www.xzywisdili.com/post/2020-04-28-papershare/"><span>分享几篇统计相关好文</span></a>
-    
-</li>
-
-                          
-                        
-                      
-                    
-                      
-                        <li class="groupby">Feb, 2020</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Feb 28, 2020</span>
-    
-    <a href="https://www.xzywisdili.com/post/2020-02-29-commonwaytoprevent/"><span>一个最推荐的预防流行病的方法</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Feb 22, 2020</span>
-    
-    <a href="https://www.xzywisdili.com/post/2020-02-22-convirusgraph/"><span>大家是怎么展现疫情的</span></a>
-    
-</li>
-
-                          
-                        
-                      
-                    
-                      
-                        <li class="groupby">Jan, 2020</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Jan 10, 2020</span>
-    
-    <a href="https://www.xzywisdili.com/post/2020-01-10-newwork/"><span>记录自己用一天时间完成的成果</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Jan 9, 2020</span>
-    
-    <a href="https://www.xzywisdili.com/post/2020-01-09-virus/"><span>新型冠状病毒</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Jan 2, 2020</span>
-    
-    <a href="https://www.xzywisdili.com/post/2020-01-02-pathetic/"><span>别向小徐学习</span></a>
-    
-</li>
-
-                          
-                        
-                      
-                    
-                      
-                        <li class="groupby">Dec, 2019</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Dec 30, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/post/2019-12-30-bestoftheyear/"><span>别做「十里坡剑神」</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Dec 29, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/post/2019-12-29-annualsummary/"><span>2019 年度总结</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Dec 9, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/post/2019-12-09-smalltool/"><span>工具人时刻</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Dec 4, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/post/2019-12-04-whathaveidone/"><span>最近我都做了些什么</span></a>
-    
-</li>
-
-                          
-                        
-                      
-                    
-                      
-                        <li class="groupby">Nov, 2019</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Nov 18, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/post/2019-11-18-rmap2/"><span>我在 R 里画地图（二）</span></a>
-    
-</li>
-
-                          
-                        
-                      
-                    
-                      
-                        <li class="groupby">Oct, 2019</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Oct 26, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/post/2019-10-26-politicians/"><span>政客生活 101</span></a>
-    
-</li>
-
-                          
-                        
-                      
-                    
-                      
-                        <li class="groupby">Sep, 2019</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Sep 24, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/post/2019-09-24-weeknote/"><span>一周总结（9.16-9.22）</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Sep 23, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/post/2019-09-23-rmap/"><span>我在 R 里画地图（一）</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Sep 16, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/post/2019-09-16-weeknote/"><span>这一周（9.9-9.15）</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Sep 15, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/post/2019-09-15-taxidriver/"><span>计程车人生</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Sep 13, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/post/2019-09-13-midautumn/"><span>好一个中秋</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Sep 12, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/post/2019-09-12-thoughts/"><span>一点碎碎念</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Sep 11, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/post/2019-09-11-thoughts/"><span>再也敏感不起来</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Sep 9, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/post/2019-09-09-weeknote/"><span>这一周（9.2-9.8）</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Sep 2, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/post/2019-09-02-weeknote/"><span>一周总结（8.26-9.1）</span></a>
-    
-</li>
-
-                          
-                        
-                      
-                    
-                      
-                        <li class="groupby">Apr, 2019</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Apr 22, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/post/2019-04-22-drurylane/"><span>哲瑞·雷恩：悲剧系列终章</span></a>
-    
-</li>
-
-                          
-                        
-                      
-                    
-                      
-                        <li class="groupby">Feb, 2019</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Feb 28, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/post/2019-02-28-cohortstudy/"><span>流行病学学习笔记（二）：队列研究（cohort study）</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Feb 23, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/post/2019-02-23-speededucation/"><span>欲速则不达</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Feb 21, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/post/2019-02-21-descriptive-study/"><span>流行病学学习笔记（一）：描述性研究（descriptive study）</span></a>
-    
-</li>
-
-                          
-                        
-                      
-                    
-                      
-                        <li class="groupby">Dec, 2018</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Dec 7, 2018</span>
-    
-    <a href="https://www.xzywisdili.com/post/2018-12-8-learnthoughts/"><span>我们怎么知道自己学会了？</span></a>
     
-</li>
+    <h2 id="总结">总结</h2>
+<ul>
+<li>介绍了 Logistic 回归模型构建过程中的一种变量筛选方式——先单后多；</li>
+<li>配合对应的代码实例和结果解释，让方法更加清楚，同时便于日后复习查看。</li>
+</ul>
+<hr>
+<p>在 Logistic 回归模型的构建过程中，面对的第一个问题是<strong>变量筛选</strong>，即筛选哪些作为预测因子进入到最后构建的模型中。其中最为基础的方法是 <strong>「先单后多」</strong>，顾名思义，即先进行单因素分析，再将单因素分析中具有统计学意义的变量再一起纳入多因素模型中。这样的方法最为简单和实用。</p>
+<p>接下来会通过 R 语言代码的实例来演示整个过程。数据采用的是 [Framingham 十年冠心病风险数据](<a href="https://www.kaggle.com/datasets/5d359d0259d8325396aff882594f0c59e5e0c3da49c5bf4df3c23121109b4955?resource=download">Framingham_CHD_preprocessed_data | Kaggle</a>。</p>
+<h2 id="step-1-数据的读取和预处理">Step 1 数据的读取和预处理</h2>
+<p>第一步，当然是读取数据并且通过 <code>names</code> 、<code>summary</code> 和 <code>str</code> 分别查看数据集的变量名称、基本统计信息和变量的类型。尤其是后两者，能够提供变量的数据类型和统计信息，有助于发现异常的数据，在分析之前发现原因提前纠正。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#75715e"># 导入数据，命名为 data</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(readr)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">read_csv</span>(<span style="color:#e6db74">&#34;framingham.csv&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 查看变量名称</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">names</span>(data)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 查看基本统计信息</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">summary</span>(data)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 查看变量类型</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">str</span>(data)
+</span></span></code></pre></div><p>接下来对数据做基础的预处理。对于医学数据，需要注意的预处理主要是对于分类变量的转换：</p>
+<ul>
+<li>将分类变量转换为 <code>factor</code>；</li>
+<li>二分类变量处理或者不处理不影响结果，多分类变量则一定要进行处理，为了保险和便利起见，尽量都进行处理；</li>
+<li>转换中，使用 <code>labels</code> 标清楚各个分类代表的含义，之后不容易发生混淆。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#75715e"># 标明连续型变量和分类型变量</span>
+</span></span><span style="display:flex;"><span>contin_vars <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;age&#34;</span>, <span style="color:#e6db74">&#34;cigsPerDay&#34;</span>, <span style="color:#e6db74">&#34;totChol&#34;</span>, <span style="color:#e6db74">&#34;sysBP&#34;</span>, <span style="color:#e6db74">&#34;diaBP&#34;</span>, <span style="color:#e6db74">&#34;BMI&#34;</span>, <span style="color:#e6db74">&#34;heartRate&#34;</span>, <span style="color:#e6db74">&#34;glucose&#34;</span>)
+</span></span><span style="display:flex;"><span>discre_vars <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;male&#34;</span>, <span style="color:#e6db74">&#34;education&#34;</span>, <span style="color:#e6db74">&#34;currentSmoker&#34;</span>, <span style="color:#e6db74">&#34;BPMeds&#34;</span>, <span style="color:#e6db74">&#34;prevalentStroke&#34;</span>, <span style="color:#e6db74">&#34;prevalentHyp&#34;</span>, <span style="color:#e6db74">&#34;diabetes&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 处理分类变量</span>
+</span></span><span style="display:flex;"><span>data<span style="color:#f92672">$</span>TenYearCHD <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">factor</span>(data<span style="color:#f92672">$</span>TenYearCHD, levels<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>), 
+</span></span><span style="display:flex;"><span>                          labels <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;未来10年无冠心病风险&#34;</span>, <span style="color:#e6db74">&#34;未来10年具有冠心病风险&#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>data[discre_vars] <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">lapply</span>(data[discre_vars], factor)
+</span></span></code></pre></div><h2 id="step-2-单因素分析">Step 2 单因素分析</h2>
+<p>一般而言，单因素可以采用的统计分析方法包括：<strong>t 检验、卡方检验和秩和检验</strong>。t 检验需要满足数据符合正态分布，如果不满足则需要考虑秩和检验这种非参数检验。另外卡方检验则一般面向分类的数据，而非定量数据，比如性别（1代表男，2代表女，数字无比较意义）。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#75715e"># 对连续变量进行 t 检验</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 对分类变量进行卡方检验</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(tableone)
+</span></span><span style="display:flex;"><span>table1 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">CreateTableOne</span>(vars<span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>(contin_vars, discre_vars),
+</span></span><span style="display:flex;"><span>                         data<span style="color:#f92672">=</span>data,
+</span></span><span style="display:flex;"><span>                         factorVars<span style="color:#f92672">=</span>discre_vars,
+</span></span><span style="display:flex;"><span>                         strata<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;TenYearCHD&#34;</span>, addOverall<span style="color:#f92672">=</span><span style="color:#66d9ef">FALSE</span>)
+</span></span><span style="display:flex;"><span>result1 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">print</span>(table1, showAllLevels<span style="color:#f92672">=</span><span style="color:#66d9ef">FALSE</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">write.csv</span>(result1, <span style="color:#e6db74">&#34;result1.csv&#34;</span>)
+</span></span></code></pre></div><p>这时，可以看到 <code>tableone</code> 的输出结果。可以看到，按照连续型变量和分类变量展示了不同统计结果（Mean(SD)/占比）。并且在最后一列给出了统计学的检验结果 P 值。</p>
+<p><img src="https://s2.loli.net/2022/09/07/ZPcvj1xML2Wdb7Y.png" alt="Snipaste_2022-09-07_14-38-29.png"></p>
+<p>这里可以补充几个参数的说明：</p>
+<ul>
+<li><code>addOverall</code>：在列上展示所有出 Overall 的情况。</li>
+<li><code>showAllLevels</code>：如果设置为 <code>TRUE</code>，展示所有变量的所有水平；</li>
+<li><code>nonnormal</code>：不满足正态条件，可以指定确切进行秩和检验的变量，之后在结果会显示中位数、第一四分位数和第三四分位数；</li>
+<li><code>exact</code>：不满足卡方条件，可以指定确切概率检验的变量。</li>
+</ul>
+<h2 id="step-3-单因素的-logistic-模型分析">Step 3 单因素的 Logistic 模型分析</h2>
+<p>在完成上述分析之后，可以开始进行多因素模型构建。有时，我们会先进行单因素的 Logistic 模型分析，然后再做多因素的 Logistic 模型构建。这样的好处在于，我们可以观察到对于某个单个变量的 Crude OR值（俗称的粗 OR值）和调整后 OR 值（adjustment OR）。</p>
+<p>这里举一个变量的例子：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#75715e"># 单因素 logistic</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 如果存在分类变量，需要设置哑变量</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 自变量: 年龄</span>
+</span></span><span style="display:flex;"><span>model <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">glm</span>(TenYearCHD<span style="color:#f92672">~</span>age, data<span style="color:#f92672">=</span>data, family<span style="color:#f92672">=</span><span style="color:#a6e22e">binomial</span>())
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">summary</span>(model)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">summary</span>(model)<span style="color:#f92672">$</span>coefficients
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 计算 OR 及其可信区间</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">exp</span>(<span style="color:#a6e22e">cbind</span>(<span style="color:#e6db74">&#34;OR&#34;</span><span style="color:#f92672">=</span><span style="color:#a6e22e">coef</span>(model), <span style="color:#a6e22e">confint</span>(model)))
+</span></span></code></pre></div><p><img src="https://s2.loli.net/2022/09/07/b2awl6e3zoAsyIL.png" alt="Snipaste_2022-09-07_14-56-51.png"></p>
+<p>这里结果显示了自变量 <code>age</code> 的参数值、标准误、z 值以及 P 值。可以看到，P 值明显小于 0.05，说明「年龄」这个自变量在单因素 Logistic 回归里是有意义的。</p>
+<p>再来看下面的 OR 值，为 1.079 (1.067, 1.090)，可以解释为，<strong>年龄每增加 1 岁，未来10年的冠心病发生风险是之前的 1.079 倍</strong>。</p>
+<p>对于一个分类变量「糖尿病」来说：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#75715e"># 自变量: 糖尿病合并症</span>
+</span></span><span style="display:flex;"><span>model <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">glm</span>(TenYearCHD<span style="color:#f92672">~</span>diabetes, data<span style="color:#f92672">=</span>data, family<span style="color:#f92672">=</span><span style="color:#a6e22e">binomial</span>())
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">summary</span>(model)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">summary</span>(model)<span style="color:#f92672">$</span>coefficients
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 计算 OR 及其可信区间</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">exp</span>(<span style="color:#a6e22e">cbind</span>(<span style="color:#e6db74">&#34;OR&#34;</span><span style="color:#f92672">=</span><span style="color:#a6e22e">coef</span>(model), <span style="color:#a6e22e">confint</span>(model)))
+</span></span></code></pre></div><p><img src="https://s2.loli.net/2022/09/07/c6k42F8anisVYR3.png" alt="Snipaste_2022-09-07_15-02-41.png"></p>
+<p>与上述同理，不过这里的 OR 值 3.398 (2.250, 5.064) 可以解释为，具有糖尿病合并症人群未来 10 年的冠心病发生风险是无糖尿病人群的 3.398 倍。</p>
+<h2 id="step-4-多因素的-logistic-模型分析">Step 4 多因素的 Logistic 模型分析</h2>
+<h3 id="常规方式">常规方式</h3>
+<p>根据上面单因素分析的结果，如果<strong>某变量的 P 值一般小于 0.05</strong>，就可以将该变量纳入多因素模型中。实际应用中，也可以将纳入标准放宽，即 P 值小于 0.1，就纳入多因素模型。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#75715e"># 多因素模型分析</span>
+</span></span><span style="display:flex;"><span>model <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">glm</span>(TenYearCHD<span style="color:#f92672">~</span>var1<span style="color:#f92672">+</span>var2<span style="color:#f92672">+</span>var3<span style="color:#ae81ff">+.</span>..<span style="color:#f92672">+</span>varn, data<span style="color:#f92672">=</span>data, family<span style="color:#f92672">=</span><span style="color:#a6e22e">binomial</span>())
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">summary</span>(model)<span style="color:#f92672">$</span>coefficients
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">exp</span>(<span style="color:#a6e22e">cbind</span>(<span style="color:#e6db74">&#34;OR&#34;</span><span style="color:#f92672">=</span><span style="color:#a6e22e">cord</span>(model), <span style="color:#a6e22e">confint</span>(model)))
+</span></span></code></pre></div><p>这里就不展示结果了。得到的 OR 值可以认为是调整后的 OR 值。解释的结果和上面也大同小异。</p>
+<p>有时候会发现，部分之前单因素分析时存在统计学意义的变量，在多因素中则不存在统计学意义。这很可能是因为存在混杂偏倚，而多因素分析在一定程度上控制了混杂偏倚。</p>
+<h3 id="另一种非常规的方式">另一种非常规的方式</h3>
+<p>假如我们已经确定了要研究的是某个因素（就叫做主因素吧）和因变量，也就是结局之间的关系，我们应该如何筛选协变量呢？</p>
+<p>如果某个协变量与因变量之间单因素分析的 P 值小于 0.1，并且当纳入主因素和协变量同时进行分析后，由于协变量的存在，主因素的系数相比之前只有主因素时，变化超过了 10%，那么就说明这个协变量其实是对主因素的系数有一定程度的影响，应该纳入到多因素分析中。这里可以采用下面的代码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span>uni_methods <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(xvar) {
+</span></span><span style="display:flex;"><span>  model <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">glm</span>(TenYearCHD<span style="color:#f92672">~</span>diabetes, data<span style="color:#f92672">=</span>data, family<span style="color:#f92672">=</span><span style="color:#a6e22e">binomial</span>())
+</span></span><span style="display:flex;"><span>  coef <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">coef</span>(model)[2]
+</span></span><span style="display:flex;"><span>  form <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">as.formula</span>(<span style="color:#a6e22e">paste0</span>(<span style="color:#e6db74">&#34;TenYearCHD~diabetes+&#34;</span>, xvar))
+</span></span><span style="display:flex;"><span>  model2 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">glm</span>(form, data<span style="color:#f92672">=</span>data, family<span style="color:#f92672">=</span><span style="color:#a6e22e">binomial</span>())
+</span></span><span style="display:flex;"><span>  coef2 <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">coef2</span>(model2)[2]
+</span></span><span style="display:flex;"><span>  ratio <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">abs</span>(coef2<span style="color:#f92672">-</span>coef1)<span style="color:#f92672">/</span>coef1
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">if </span>(ratio <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0.1</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">return</span>(xvar)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>xvar <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(contin_vars, discre_vars)
+</span></span><span style="display:flex;"><span>xvar <span style="color:#f92672">&lt;-</span> xvar[<span style="color:#f92672">-</span><span style="color:#a6e22e">which</span>(xvar<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;diabetes&#34;</span>)]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">lapply</span>(xvar, uni_methods)
+</span></span></code></pre></div><p>这里我们确定变量 <code>diabetes</code> 作为我们的主因素，然后筛选其他协变量。只要 <code>ratio</code> ，也就是系数的变化幅度大于 10%，就可以在最后的结果中显示出来。</p>
+<h2 id="参考资料">参考资料</h2>
+<ul>
+<li><a href="https://www.bilibili.com/video/BV1SQ4y1Z7Yw">Logistic 相关课程讲座</a></li>
+<li><a href="http://tecdat.cn/r%e8%af%ad%e8%a8%80%e9%80%bb%e8%be%91%e5%9b%9e%e5%bd%92%ef%bc%88logistic%e5%9b%9e%e5%bd%92%ef%bc%89%e6%a8%a1%e5%9e%8b%e5%88%86%e7%b1%bb%e9%a2%84%e6%b5%8b%e7%97%85%e4%ba%ba%e5%86%a0%e5%bf%83%e7%97%85/">R语言逻辑回归（Logistic回归）模型分类预测病人冠心病风险</a></li>
+<li><a href="https://www.kaggle.com/datasets/5d359d0259d8325396aff882594f0c59e5e0c3da49c5bf4df3c23121109b4955?resource=download">Framingham 数据集</a></li>
+</ul>
 
-                          
-                        
-                      
-                    
-                      
-                        <li class="groupby">Sep, 2018</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Sep 3, 2018</span>
-    
-    <a href="https://www.xzywisdili.com/post/2018-9-3-indiagames/"><span>2018年，中国独立游戏，和他们</span></a>
-    
-</li>
-
-                          
-                        
-                      
-                    
-                      
-                        <li class="groupby">Jun, 2018</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Jun 4, 2018</span>
-    
-    <a href="https://www.xzywisdili.com/post/2018-6-4-simplifytools/"><span>简化我们的工具</span></a>
-    
-</li>
-
-                          
-                        
-                      
-                    
-                      
-                        <li class="groupby">Apr, 2018</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Apr 25, 2018</span>
-    
-    <a href="https://www.xzywisdili.com/post/2018-04-25-statistichomework/"><span>卫生统计学第九周作业</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Apr 11, 2018</span>
-    
-    <a href="https://www.xzywisdili.com/post/2018-04-11-rmarkdown02/"><span>再吹一波 Rmarkdown</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Apr 2, 2018</span>
-    
-    <a href="https://www.xzywisdili.com/post/2018-04-02-rsubset/"><span>学习 R 语言里的 subset</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Apr 2, 2018</span>
-    
-    <a href="https://www.xzywisdili.com/post/2018-04-02-rlearningnote/"><span>R 语言基础入门</span></a>
-    
-</li>
-
-                          
-                        
-                      
-                    
-                      
-                        <li class="groupby">Mar, 2018</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Mar 28, 2018</span>
-    
-    <a href="https://www.xzywisdili.com/post/2018-03-28-rstructure/"><span>R 语言基础数据结构</span></a>
-    
-</li>
-
-                          
-                        
-                      
-                    
-                      
-                        <li class="groupby">Dec, 2017</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Dec 30, 2017</span>
-    
-    <a href="https://www.xzywisdili.com/post/2017-12-30-reading/"><span>2017 读书印象</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Dec 23, 2017</span>
-    
-    <a href="https://www.xzywisdili.com/post/2017-12-23-rmarkdown/"><span>轻松愉快地开始使用 Rmarkdown</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Dec 19, 2017</span>
-    
-    <a href="https://www.xzywisdili.com/post/2017-12-19-datatransform/"><span>dplyr 包里面必会的处理数据方法</span></a>
-    
-</li>
-
-                          
-                        
-                      
-                    
-                      
-                        <li class="groupby">Nov, 2017</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Nov 21, 2017</span>
-    
-    <a href="https://www.xzywisdili.com/post/2017-11-21-rbasic/"><span>R 语言的那些最最最基础</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Nov 12, 2017</span>
-    
-    <a href="https://www.xzywisdili.com/post/2017-11-12-tensorflow01/"><span>光棍节初探 TensorFlow（一）：数据集的预处理</span></a>
-    
-</li>
-
-                          
-                        
-                      
-                    
-                      
-                        <li class="groupby">Oct, 2017</li>
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Oct 23, 2017</span>
-    
-    <a href="https://www.xzywisdili.com/post/2017-10-23-why-latex/"><span>为什么要使用 LaTeX 呢？</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Oct 15, 2017</span>
-    
-    <a href="https://www.xzywisdili.com/post/2017-10-15-trans01/"><span>「翻译」如何用 Python 画出像 FiveThirtyEight 那么棒的图表</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Oct 5, 2017</span>
-    
-    <a href="https://www.xzywisdili.com/post/2017-10-05-algorithm01/"><span>用 Python 解决数据结构与算法题 01</span></a>
-    
-</li>
-
-                          
-                        
-                          
-                            <li class="post-item">
-    <span class="meta">Oct 4, 2017</span>
-    
-    <a href="https://www.xzywisdili.com/post/2017-10-04-helloworld/"><span>Hello World</span></a>
-    
-</li>
 
-                          
-                        
-                      
-                    
-                </ul>
             </div>
         </div>
     </div>
 </div>
+
+
+
 <div class="footer column">
     <div class="container">
 
@@ -1939,7 +1278,6 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
             </a>
         
 
-        <a rel="alternate" type="application/rss+xml" href="https://www.xzywisdili.com/post/index.xml" title="XZY's BLOG" />
         </div>
     </div>
 </div>

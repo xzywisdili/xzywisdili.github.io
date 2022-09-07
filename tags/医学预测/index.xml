@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>医学预测 on XZY&#39;s BLOG</title>
+    <link>https://www.xzywisdili.com/tags/%E5%8C%BB%E5%AD%A6%E9%A2%84%E6%B5%8B/</link>
+    <description>Recent content in 医学预测 on XZY&#39;s BLOG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 07 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/tags/%E5%8C%BB%E5%AD%A6%E9%A2%84%E6%B5%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【医学预测01】Logistic 回归构建变量筛选：先单后多</title>
+      <link>https://www.xzywisdili.com/post/2022-09-07-rlogistic01/</link>
+      <pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/post/2022-09-07-rlogistic01/</guid>
+      <description>总结 介绍了 Logistic 回归模型构建过程中的一种变量筛选方式——先单后多； 配合对应的代码实例和结果解释，让方法更加清楚，同时便于日后复习查看。 在 Logistic 回归模型的构建过程中，面对的第一个问题是变量筛选，即筛选哪些作为预测因子进入到最后构建的模型中。其中最为基础的方法是 「先单后多」，顾名思义，即先进行单因素分析，再将单因素分析中具有统计学意义的变量再一起纳入多因素模型中。这样的方法最为简单和实用。
+接下来会通过 R 语言代码的实例来演示整个过程。数据采用的是 [Framingham 十年冠心病风险数据](Framingham_CHD_preprocessed_data | Kaggle。
+Step 1 数据的读取和预处理 第一步，当然是读取数据并且通过 names 、summary 和 str 分别查看数据集的变量名称、基本统计信息和变量的类型。尤其是后两者，能够提供变量的数据类型和统计信息，有助于发现异常的数据，在分析之前发现原因提前纠正。
+# 导入数据，命名为 data library(readr) data &amp;lt;- read_csv(&amp;#34;framingham.csv&amp;#34;) # 查看变量名称 names(data) # 查看基本统计信息 summary(data) # 查看变量类型 str(data) 接下来对数据做基础的预处理。对于医学数据，需要注意的预处理主要是对于分类变量的转换：
+将分类变量转换为 factor； 二分类变量处理或者不处理不影响结果，多分类变量则一定要进行处理，为了保险和便利起见，尽量都进行处理； 转换中，使用 labels 标清楚各个分类代表的含义，之后不容易发生混淆。 # 标明连续型变量和分类型变量 contin_vars &amp;lt;- c(&amp;#34;age&amp;#34;, &amp;#34;cigsPerDay&amp;#34;, &amp;#34;totChol&amp;#34;, &amp;#34;sysBP&amp;#34;, &amp;#34;diaBP&amp;#34;, &amp;#34;BMI&amp;#34;, &amp;#34;heartRate&amp;#34;, &amp;#34;glucose&amp;#34;) discre_vars &amp;lt;- c(&amp;#34;male&amp;#34;, &amp;#34;education&amp;#34;, &amp;#34;currentSmoker&amp;#34;, &amp;#34;BPMeds&amp;#34;, &amp;#34;prevalentStroke&amp;#34;, &amp;#34;prevalentHyp&amp;#34;, &amp;#34;diabetes&amp;#34;) # 处理分类变量 data$TenYearCHD &amp;lt;- factor(data$TenYearCHD, levels=c(0, 1), labels = c(&amp;#34;未来10年无冠心病风险&amp;#34;, &amp;#34;未来10年具有冠心病风险&amp;#34;)) data[discre_vars] &amp;lt;- lapply(data[discre_vars], factor) Step 2 单因素分析 一般而言，单因素可以采用的统计分析方法包括：t 检验、卡方检验和秩和检验。t 检验需要满足数据符合正态分布，如果不满足则需要考虑秩和检验这种非参数检验。另外卡方检验则一般面向分类的数据，而非定量数据，比如性别（1代表男，2代表女，数字无比较意义）。</description>
+    </item>
+    
+  </channel>
+</rss>
