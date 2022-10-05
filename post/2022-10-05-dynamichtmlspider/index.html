@@ -1111,6 +1111,7 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
 <p><img src="https://s2.loli.net/2022/10/05/7sFQIWmXwRHyfkV.png" alt="Snipaste_2022-10-05_20-21-33.png"></p>
 <p>微博网页端的粉丝列表，在向下刷的时候是会动态加载和更新的。这种情况下，我们想要的元素是通过 js 事件动态请求和返回的。那么，就需要我们分析页面请求，<strong>找到那个发送的请求和对应返回的数据</strong>。在 F12 的「网络」选项卡下面进行刷新，可以比较轻松地找到对应发送的请求和返回的数据（json 格式）：</p>
 <p><img src="https://s2.loli.net/2022/10/05/lDGEW8a3nFwbuvr.jpg" alt="微信图片_20221005202634.jpg"></p>
+<p>可以看到，这个请求会返回 json 格式的数据。当用户下拉粉丝列表页面时，会触发一个 js 事件，项服务器发送这个请求获取数据，再通过一定的逻辑将这些 json 数据填充到 HTML 页面中。而我们的爬虫只要获取这些 json 数据，再进行整理就可以了。</p>
 <p>这样一来就比较轻松了：（当然需要注意一下，发出的相关请求需要你保持登录的 Cookie，不然返回会报错）</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#f92672">import</span> requests
 </span></span><span style="display:flex;"><span>

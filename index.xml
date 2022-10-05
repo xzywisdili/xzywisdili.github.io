@@ -15,9 +15,10 @@
       <guid>https://www.xzywisdili.com/post/2022-10-05-dynamichtmlspider/</guid>
       <description>在碰到一些网页，想通过爬虫抓取页面信息的时候，会发现网页采用了一些动态 HTML 的相关技术来展示信息。这样直接使用 requests 是无法直接获取想要的 HTML 元素内容的。比如我们查看微博网页端的粉丝列表：
 微博网页端的粉丝列表，在向下刷的时候是会动态加载和更新的。这种情况下，我们想要的元素是通过 js 事件动态请求和返回的。那么，就需要我们分析页面请求，找到那个发送的请求和对应返回的数据。在 F12 的「网络」选项卡下面进行刷新，可以比较轻松地找到对应发送的请求和返回的数据（json 格式）：
+可以看到，这个请求会返回 json 格式的数据。当用户下拉粉丝列表页面时，会触发一个 js 事件，项服务器发送这个请求获取数据，再通过一定的逻辑将这些 json 数据填充到 HTML 页面中。而我们的爬虫只要获取这些 json 数据，再进行整理就可以了。
 这样一来就比较轻松了：（当然需要注意一下，发出的相关请求需要你保持登录的 Cookie，不然返回会报错）
 import requests headers = { &amp;#39;cookie&amp;#39;: &amp;#39;Your Cookie&amp;#39;, &amp;#39;User-Agent&amp;#39;: &amp;#39;Your User Agent&amp;#39;, &amp;#39;referer&amp;#39;: &amp;#39;Your referer&amp;#39; } url = &amp;#34;https://weibo.com/ajax/friendships/friends?relate=fans&amp;amp;page=1&amp;amp;uid=3668829440&amp;amp;type=all&amp;amp;newFollowerCount=0&amp;#34; r = requests.get(url, headers=headers).json() for user in r[&amp;#39;users&amp;#39;]: print(&amp;#34;id: {} - name: {} = fans:{}&amp;#34;.format(user[&amp;#39;id&amp;#39;], user[&amp;#39;screen_name&amp;#39;], user[&amp;#39;followers_count&amp;#39;])) 当然，我们可以看到 url 里面的参数 page=1，那么我们可以修改这个参数就可以获得很多页面的粉丝列表信息了。再保存到准备好的数据库中：
-import requests import pymysql # 连接 MySQL 数据库 conn = pymysql.connect( host=&amp;#39;127.0.0.1&amp;#39;, user=&amp;#39;root&amp;#39;, passwd=&amp;#39;your pwd&amp;#39;, port=xxxx, db=&amp;#39;your db&amp;#39;, charset=&amp;#39;utf8&amp;#39; ) headers = { &amp;#39;cookie&amp;#39;: &amp;#39;Your Cookie&amp;#39;, &amp;#39;User-Agent&amp;#39;: &amp;#39;Your User Agent&amp;#39;, &amp;#39;referer&amp;#39;: &amp;#39;Your referer&amp;#39; } # 每次查看并更新 10 页粉丝列表 for page_i in range(10): url = &amp;#34;https://weibo.</description>
+import requests import pymysql # 连接 MySQL 数据库 conn = pymysql.</description>
     </item>
     
     <item>
@@ -964,7 +965,7 @@ In[1]: from scipy.io import loadmat as load In[2]: train_data = load(&amp;#39;da
       <description>欢迎来我的博客做客！
 这里有完整的博客文章列表。
 最新的博客更新：
-【把书读薄04】一日两餐：找回身体代谢灵活性的新饮食理念 【把书读薄03】锻炼：丹尼尔·利伯曼教授对健康迷思的一一解答 【医学预测01】Logistic 回归构建变量筛选：先单后多 【把书读薄02】开启高质量沟通的第1分钟 【把书读薄01】拼凑真相：指导读者如何面对各种诡计多端的媒体把戏 以下可能是您感兴趣的文章：
+动态页面的爬虫示例一则：抓取微博粉丝列表 【把书读薄04】一日两餐：找回身体代谢灵活性的新饮食理念 【把书读薄03】锻炼：丹尼尔·利伯曼教授对健康迷思的一一解答 【医学预测01】Logistic 回归构建变量筛选：先单后多 【把书读薄02】开启高质量沟通的第1分钟 以下可能是您感兴趣的文章：
 我在 R 里画地图（一） 我在 R 里画地图（二） 赵粤的《时尚COSMO》杂志翻译 如何从 NASA 下载气象数据 看看一些现代“媒体”是怎么愚弄大众的 博客使用 Hugo 搭建，主题使用 cocoa-eh。</description>
     </item>
     
