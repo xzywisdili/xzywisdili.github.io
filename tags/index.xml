@@ -6,7 +6,25 @@
     <description>Recent content in Tags on XZY&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 26 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python</title>
+      <link>https://www.xzywisdili.com/tags/python/</link>
+      <pubDate>Wed, 05 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>爬虫</title>
+      <link>https://www.xzywisdili.com/tags/%E7%88%AC%E8%99%AB/</link>
+      <pubDate>Wed, 05 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/tags/%E7%88%AC%E8%99%AB/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>健康科普</title>
       <link>https://www.xzywisdili.com/tags/%E5%81%A5%E5%BA%B7%E7%A7%91%E6%99%AE/</link>
@@ -301,15 +319,6 @@
       <pubDate>Tue, 21 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://www.xzywisdili.com/tags/%E7%BB%9F%E8%AE%A1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>https://www.xzywisdili.com/tags/python/</link>
-      <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.xzywisdili.com/tags/python/</guid>
       <description></description>
     </item>
     

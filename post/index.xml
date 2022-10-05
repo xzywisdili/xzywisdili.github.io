@@ -6,7 +6,20 @@
     <description>Recent content in Post on XZY&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 26 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>动态页面的爬虫示例一则：抓取微博粉丝列表</title>
+      <link>https://www.xzywisdili.com/post/2022-10-05-dynamichtmlspider/</link>
+      <pubDate>Wed, 05 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/post/2022-10-05-dynamichtmlspider/</guid>
+      <description>在碰到一些网页，想通过爬虫抓取页面信息的时候，会发现网页采用了一些动态 HTML 的相关技术来展示信息。这样直接使用 requests 是无法直接获取想要的 HTML 元素内容的。比如我们查看微博网页端的粉丝列表：
+微博网页端的粉丝列表，在向下刷的时候是会动态加载和更新的。这种情况下，我们想要的元素是通过 js 事件动态请求和返回的。那么，就需要我们分析页面请求，找到那个发送的请求和对应返回的数据。在 F12 的「网络」选项卡下面进行刷新，可以比较轻松地找到对应发送的请求和返回的数据（json 格式）：
+这样一来就比较轻松了：（当然需要注意一下，发出的相关请求需要你保持登录的 Cookie，不然返回会报错）
+import requests headers = { &amp;#39;cookie&amp;#39;: &amp;#39;Your Cookie&amp;#39;, &amp;#39;User-Agent&amp;#39;: &amp;#39;Your User Agent&amp;#39;, &amp;#39;referer&amp;#39;: &amp;#39;Your referer&amp;#39; } url = &amp;#34;https://weibo.com/ajax/friendships/friends?relate=fans&amp;amp;page=1&amp;amp;uid=3668829440&amp;amp;type=all&amp;amp;newFollowerCount=0&amp;#34; r = requests.get(url, headers=headers).json() for user in r[&amp;#39;users&amp;#39;]: print(&amp;#34;id: {} - name: {} = fans:{}&amp;#34;.format(user[&amp;#39;id&amp;#39;], user[&amp;#39;screen_name&amp;#39;], user[&amp;#39;followers_count&amp;#39;])) 当然，我们可以看到 url 里面的参数 page=1，那么我们可以修改这个参数就可以获得很多页面的粉丝列表信息了。再保存到准备好的数据库中：
+import requests import pymysql # 连接 MySQL 数据库 conn = pymysql.connect( host=&amp;#39;127.0.0.1&amp;#39;, user=&amp;#39;root&amp;#39;, passwd=&amp;#39;your pwd&amp;#39;, port=xxxx, db=&amp;#39;your db&amp;#39;, charset=&amp;#39;utf8&amp;#39; ) headers = { &amp;#39;cookie&amp;#39;: &amp;#39;Your Cookie&amp;#39;, &amp;#39;User-Agent&amp;#39;: &amp;#39;Your User Agent&amp;#39;, &amp;#39;referer&amp;#39;: &amp;#39;Your referer&amp;#39; } # 每次查看并更新 10 页粉丝列表 for page_i in range(10): url = &amp;#34;https://weibo.</description>
+    </item>
+    
     <item>
       <title>【把书读薄04】一日两餐：找回身体代谢灵活性的新饮食理念</title>
       <link>https://www.xzywisdili.com/post/2022-09-26-bookreview04/</link>
