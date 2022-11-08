@@ -6,7 +6,24 @@
     <description>Recent content in Post on XZY&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 19 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>（2022年11月过）SAS Advance 考试最新完全攻略！</title>
+      <link>https://www.xzywisdili.com/post/2022-11-08-sasadvance/</link>
+      <pubDate>Tue, 08 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/post/2022-11-08-sasadvance/</guid>
+      <description>今天终于通过了 SAS Advance 的考试。有一些最新的备考和考试过程的经验可以跟大家分享一下。 这篇攻略我会从两个方面来说，分别是备考篇和考试篇。
+备考篇 SAS Advance 的考试并不难，主要是考察三个部分：Proc SQL 语句，SAS 中Macro宏的应用以及一些进阶技巧。 只要认准下面的备考材料，就不用怕了。下面也会放上所有材料的分享下载链接。
+官方教材《SAS Certified Professional Prep Guide: Advanced Programming Using SAS 9.4》 注意，一定一定不要用老的教材版本，老版本的教材有 800 多页，看完太费时间，而且还有大部分内容不会考察，还有部分要考察的内容没有涉及。所以一定要认准总共 400 余页的新版本的教材。另外，可能在某亩三分地或者其他论坛里分享的教材版本是乱码的，里面的代码片段和图片也有很多缺失。我找到了完整的电子版书籍，内容是完整的，分享链接也在下面。
+论坛大神 Mike Q 总结的 20 道 Lab 试题 Lab 试题，即需要你在考场上实机编写代码进行解答，具体情况是：
+左侧显示题目信息和要求； 右侧是一个远程编程环境窗口，供你写代码使用； 备考时候可以提前看一下 SAS 官方提供的讲解视频，熟悉操作； 实机操作的题目不用担心，不会很难，题型基本上都涵盖在了上面的 20 道 Lab 机经中，考前一定要至少刷一遍！最好自己亲手敲一遍代码，更加熟悉。
+论坛大神总结 63+20 题 这部分主要针对的是考试中出现的选择题，63+20题版本已经可以涵盖绝大部分的考试范围了，而且我分享的版本除了题目，还有详细的题目答案解析，总共内容不到 100 页，考前至少刷一遍就好。另外需要注意，正式考试中还覆盖了正则表达式（Perl Regular Expression）的题目，在刷题之余还需要看一下。
+备考总结 总结一下怎么备考：
+有富余时间建议过一遍教材（包括课后习题），没有时间的话可以跳过直接刷题； 一定过一遍 Lab 20 题，至少亲手敲一遍代码； 一定过一遍 63+20 题，可以看答案过一遍之后，挡住答案自己做一遍。 考试篇 考试篇我会分为线上考试和线下考试分别讲讲是怎么样的（对，我很悲催地两种都经历过）。
+无论是线上还是线下都可以在官网进行报名；按照步骤注册登录，然后选择自己想要参加的考试（本文中是 SAS Advance Programming - Performance Based）就行了。之后在选择考试方式（线下 or 线下），预约时间，进行付费就可以了。付费需要使用海外信用卡支付 180 美元。</description>
+    </item>
+    
     <item>
       <title>【把书读薄05】向心城市：带你了解现代城市的发展规律</title>
       <link>https://www.xzywisdili.com/post/2022-10-19-bookreview05/</link>
