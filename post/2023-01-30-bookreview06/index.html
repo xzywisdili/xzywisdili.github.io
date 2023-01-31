@@ -13,9 +13,9 @@
 <meta property="og:site_name" content="XZY&#39;s BLOG" />
 <meta property="og:locale" content="zh-cn" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.xzywisdili.com/tags/" />
-<meta property="og:title" content="Tags" />
-<meta property="twitter:title" content="Tags">
+<meta property="og:url" content="https://www.xzywisdili.com/post/2023-01-30-bookreview06/" />
+<meta property="og:title" content="【把书读薄06】Excel 学习真的不适合借助书本了" />
+<meta property="twitter:title" content="【把书读薄06】Excel 学习真的不适合借助书本了">
 
     <meta property="og:image" content="https://www.xzywisdili.com/img/logo.png">
     <meta property="twitter:card" content="summary">
@@ -27,10 +27,10 @@
 <title>
 
 
-     XZY&#39;s BLOG - Tags 
+     XZY&#39;s BLOG - 【把书读薄06】Excel 学习真的不适合借助书本了 
 
 </title>
-<link rel="canonical" href="https://www.xzywisdili.com/tags/">
+<link rel="canonical" href="https://www.xzywisdili.com/post/2023-01-30-bookreview06/">
 
 
 <style media="screen">
@@ -1053,7 +1053,6 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
 >
 
 
-<link rel="alternate" type="application/rss+xml" href="https://www.xzywisdili.com/tags/index.xml" title="XZY's BLOG" />
 
 </head>
 
@@ -1061,7 +1060,7 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
 <body>
 
 
-<div class="header header-home column">
+<div class="header column">
 
     <div class="container">
         
@@ -1092,378 +1091,163 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
     </div>
 </div>
 
+
+
 <div class="main column">
     <div class="container">
         <div class="content">
-            <div class="posts">
-                <div class="page-heading">Posts about Tags</div>
-                <ul>
-                    
-                        <li class="post-item">
-    <span class="meta">Jan 30, 2023</span>
-    
-    <a href="https://www.xzywisdili.com/tags/excel/"><span>Excel</span></a>
-    
-</li>
+            <div class="page-heading">
 
-                    
-                        <li class="post-item">
-    <span class="meta">Jan 30, 2023</span>
     
-    <a href="https://www.xzywisdili.com/tags/%E5%88%86%E4%BA%AB/"><span>分享</span></a>
+    【把书读薄06】Excel 学习真的不适合借助书本了
     
-</li>
 
-                    
-                        <li class="post-item">
-    <span class="meta">Jan 30, 2023</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><span>读书笔记</span></a>
-    
-</li>
+</div>
 
-                    
-                        <li class="post-item">
-    <span class="meta">Jan 30, 2023</span>
+            <div class="markdown">
+                
     
-    <a href="https://www.xzywisdili.com/tags/%E9%98%85%E8%AF%BB/"><span>阅读</span></a>
-    
+    <h2 id="总结">总结</h2>
+<ul>
+<li><a href="https://book.douban.com/subject/35646192/">《跟李锐学Excel数据分析》</a> 名为「数据分析」，内容实则是 Excel 软件使用技巧，这点需要读者注意；</li>
+<li>虽然页数看起来较多，但是大量篇幅均为各种实操步骤截图，伴随每一个步骤讲解，友好度不如视频；</li>
+<li>评分：2.0/5.0，更建议想要学习 Excel 工具的读者去寻找视频教程；想学习数据分析相关内容的读者就更不用看了。</li>
+</ul>
+<hr>
+<p>最近读完了《跟李锐学Excel数据分析》。可惜的是，书名有点误导性质，全书和「数据分析」关系不大，更多是介绍 Excel 的使用方式和进阶技巧。但多多少少还是跟着看完了全书，并且把对自己有点用的部分记录了下来，权当给自己复习巩固。</p>
+<p><img src="https://s2.loli.net/2023/01/30/tAsE1xuC5fSBP7D.png" alt="Snipaste_2023-01-30_15-31-43.png"></p>
+<p>书中讲解的 Excel 相关知识，可以归纳为以下几点：</p>
+<ol>
+<li>需要知道的进阶知识</li>
+<li>函数和公式</li>
+<li>实用技巧和快捷键</li>
+<li>更多高级用法：数据透视表、Power Query、Power Pivot</li>
+</ol>
+<p>在这些内容中，最常用的需要非常熟悉。而相对不那么常用的，只要知道其存在，脑子里有个印象即可。具体用法细节可以在用的时候，稍加检索，基本上也可以了。</p>
+<h2 id="一需要知道的进阶知识">一、需要知道的进阶知识</h2>
+<p>这里有几个需要<strong>优先了解的进阶知识</strong>，方便在后面的公式部分进行组合，发挥出更强大的威力。</p>
+<h3 id="绝对引用相对引用混合引用">绝对引用，相对引用，混合引用</h3>
+<p>通过在行和列号前面的 <code>$</code> 符号进行控制，可以将 <code>$</code> 理解为锚定，锚定住的行或列号是不会改变的。比如 <code>$A$1:$B$8</code> 就是一个绝对引用的区域，在自动填充中不会变化。</p>
+<h3 id="字符串连接符号">字符串连接符号</h3>
+<p><code>&amp;</code> 符号，代表字符串的连接。比如 <code>=&quot;联想&quot;&amp;&quot;笔记本&quot;</code>，显示结果就会是 <code>联想笔记本</code>。</p>
+<h3 id="通配符">通配符</h3>
+<p>通配符，就是这个符号能匹配多种字符，在查找和替换里经常会用到，以下几种最常用：</p>
+<ul>
+<li>问号 <code>?</code>：占位一个字符；</li>
+<li>星号 <code>*</code>：占位多个字符；</li>
+<li>波浪号 <code>~</code>：右侧的符号为普通字符，比如 <code>~*</code> 指代的就是星号。</li>
+</ul>
+<h3 id="跨表符号">跨表符号</h3>
+<p>一般在需要跨表引用的时候，使用 <code>!</code> 进行连接，比如 <code>sheet1!$B$4:$F$8</code> 代表引用 <code>sheet1</code> 的 B4 到 F8 范围。</p>
+<h2 id="二快捷键">二、快捷键</h2>
+<p>说到快捷键，其实最推荐的学习方式就是在某宝上购买一个快捷键桌垫，在手边经常能看到，日积月累耳濡目染也能记得不少，可以反复加深印象：</p>
+<p><img src="https://s2.loli.net/2023/01/30/HJIdAtZpzR4hO95.png" alt="Snipaste_2023-01-30_10-42-30.png"></p>
+<p>不过还是总结了书里提到的几个常用的快捷键：</p>
+<ul>
+<li>&lt;Alt + =&gt;：行和列的求和汇总；</li>
+<li>&lt;Ctrl + Enter&gt;：批量填充，非常好用；</li>
+<li>&lt;Ctrl + E&gt;：自动填充，可以批量提取和合并数据，甚至部分场景可以智能合并数据；</li>
+<li>&lt;Ctrl + T&gt;：快速在现有表上创建表格；</li>
+<li>&lt;Ctrl + 1&gt;：设置单元格格式；</li>
+<li>&lt;Ctrl + Shift + 数字&gt;：快速切换单元格格式（常规、文本、日期、货币、百分比等等）；</li>
+<li>&lt; F5 &gt;：定位</li>
+</ul>
+<h2 id="三公式">三、公式</h2>
+<p>有一些非常经典好用的公式，是需要记住使用方法的。而我认为，其他公式，只需要脑子里有个印象即可，当需要用到的时候，在网上稍微查一下用法和各个参数就行了。这里列举一些比较常用和好用的公式。</p>
+<ul>
+<li>逻辑判断
+<ul>
+<li><code>IF(条件, 条件成立时的结果, 条件不成立时的结果)</code></li>
+<li>举例：<code>IF(A2&gt;=60, &quot;及格&quot;, &quot;不及格&quot;)</code></li>
+</ul>
 </li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Nov 8, 2022</span>
-    
-    <a href="https://www.xzywisdili.com/tags/sas/"><span>SAS</span></a>
-    
+<li>多条逻辑判断组合
+<ul>
+<li><code>AND</code> 和 <code>OR</code></li>
+<li>举例：<code>IF(OR(A2&gt;=60, B2&gt;=60), &quot;及格&quot;, &quot;不及格&quot;)</code></li>
+</ul>
 </li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Nov 8, 2022</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E8%80%83%E8%AF%95/"><span>考试</span></a>
-    
+<li>特定查找
+<ul>
+<li><code>VLOOKUP(查找值, 查找区域, 返回值在查找区域所处的列数, 0)</code></li>
+<li>举例：<code>VLOOKUP(A2, 表1!$A2:B$50, 2, 0)</code></li>
+</ul>
 </li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Oct 19, 2022</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E5%9F%8E%E5%B8%82/"><span>城市</span></a>
-    
+<li>返回单元格所在行和列
+<ul>
+<li><code>ROW(单元格引用)</code>、<code>COLUMN(单元格引用)</code></li>
+</ul>
 </li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Oct 5, 2022</span>
-    
-    <a href="https://www.xzywisdili.com/tags/python/"><span>Python</span></a>
-    
+<li>提取某个区域中指定位置的数据
+<ul>
+<li><code>INDEX(区域，所查找的行数，所查找的列数)</code></li>
+<li>举例单列数据：<code>INDEX(B2:B13, 5)</code> 提取 B2-B13 区域第 5 行数据</li>
+<li>多行多列数据：<code>INDEX(B2:G13, 5, 3)</code>，提取 B2-G13 区域第 5 行，第 3 列的数据</li>
+</ul>
 </li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Oct 5, 2022</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E7%88%AC%E8%99%AB/"><span>爬虫</span></a>
-    
+<li>查询指定数据在某一列中的相对位置
+<ul>
+<li><code>MATCH(指定数据，单行或单列区域, 0)</code></li>
+<li>举例：<code>MATCH(D2, A2:A13, 0)</code>，返回 A2-A13 区域中，D2 数据所在的相对位置</li>
+<li><code>INDEX</code> 和 <code>MATCH</code> 往往组合在一起使用</li>
+</ul>
 </li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Sep 26, 2022</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E5%81%A5%E5%BA%B7%E7%A7%91%E6%99%AE/"><span>健康科普</span></a>
-    
+<li>改变数值显示形式
+<ul>
+<li><code>TEXT(数值，格式代码)</code></li>
+<li>举例：<code>TEXT(A2, &quot;0.00&quot;)</code> 即显示保留 2 位小数</li>
+</ul>
 </li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Sep 7, 2022</span>
-    
-    <a href="https://www.xzywisdili.com/tags/r%E8%AF%AD%E8%A8%80/"><span>R语言</span></a>
-    
+<li>根据指定条件统计个数
+<ul>
+<li><code>COUNTIF(统计区域, 判断条件)</code></li>
+<li>举例：<code>COUNTIF(A2:A10, &quot;男&quot;)</code>，统计 A2-A10 区域中值为&quot;男&quot;的个数</li>
+<li>多个区域和条件统计个数：<code>COUNTIFS(统计区域1, 判断条件1, 统计区域2, 判断条件2, ...)</code></li>
+</ul>
 </li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Sep 7, 2022</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E4%B8%B4%E5%BA%8A%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"><span>临床数据分析</span></a>
-    
+<li>根据指定条件求和
+<ul>
+<li><code>SUMIF(判断区域，判断条件，求和数据所在区域)</code></li>
+<li>举例：<code>SUMIF(C:C, &quot;小米*&quot;, D:D)</code> 根据 C 列进行条件判断，然后对 D 列对应数值求和</li>
+<li>多个条件汇总求和：<code>SUMIFS(求和区域，判断区域1, 判断条件1, 判断区域2, 判断条件2, ...)</code></li>
+</ul>
 </li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Sep 7, 2022</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E5%8C%BB%E5%AD%A6%E9%A2%84%E6%B5%8B/"><span>医学预测</span></a>
-    
+<li>经典的分类汇总函数
+<ul>
+<li><code>SUBTOTAL(功能参数，统计区域)</code></li>
+<li>可以自动无视被筛选或隐藏掉的行影响，具体功能参数用法可以查询相关文档</li>
+</ul>
 </li>
+</ul>
+<h2 id="四实用技巧">四、实用技巧</h2>
+<ul>
+<li>从外部导入数据，推荐 Power Query：「数据」→「获取数据」；</li>
+<li>科学记数法录入数据：<code>1**8</code> 可以方便录入 100000000；</li>
+<li>规定单元格输入内容范围：「数据」 → 「数据验证」；</li>
+<li>多个区域录入相同的内容：选中区域 → 录入内容 → &lt;Ctrl + Enter&gt;；</li>
+<li>转换不规范的日期数据：「数据」 → 「分列」 → 「列数据格式」选择「日期」；</li>
+<li>可视化数据条：「条件格式」 → 「数据条」，具体的各种设置可以在「编辑格式规则」中调整；</li>
+<li>可视化图标集：「条件格式」 → 「图标集」，添加方向、形状等等标记，也可以在「编辑格式规则」中调整设置；</li>
+</ul>
+<h2 id="五更多高级用法">五、更多高级用法</h2>
+<p>更多的高级用法包括<strong>数据透视表、Power BI（主要是 Power Query、Power Pivot）</strong>，可以针对复杂的大数据量的表格通过多维度进行分类、汇总、转换等等操作，功能相当强大。</p>
+<p>但可惜的是，这部分内容<strong>通过书本讲解起来相当吃力</strong>，作者想要通过案例展示功能，但只能将逐个步骤进行截图，配上文字讲解，在占去大量篇幅的同时，读者看起来也相当吃力。</p>
+<p><img src="https://s2.loli.net/2023/01/30/SwPbEpjL7V4kCXB.png" alt="Snipaste_2023-01-30_11-07-52.png"></p>
+<p>这部分还是推荐通过视频的方法更系统地学习一下，B站上就有非常多的教学视频：</p>
+<p><img src="https://s2.loli.net/2023/01/30/blpqjKBAWeYRrnU.png" alt="Snipaste_2023-01-30_11-09-24.png"></p>
+<h2 id="结尾的碎碎念">结尾的碎碎念</h2>
+<p>2022 年过去了，总感觉有点浑浑噩噩。
+本来这本书在年前就已经开始阅读了，但整个过年期间，心思也一直安定不下来，一直拖到了年后才读完，并且做了总结。
+希望新的一年里，至少能多看一点书，毕竟囤了不少很感兴趣的书还没有来得及阅读。而且也希望自己能输出更多的博客文章。</p>
 
-                    
-                        <li class="post-item">
-    <span class="meta">Jul 28, 2022</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"><span>可视化</span></a>
-    
-</li>
 
-                    
-                        <li class="post-item">
-    <span class="meta">Jan 4, 2022</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E8%AE%B0%E5%BD%95/"><span>记录</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Jun 28, 2021</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E8%AF%BB%E4%B9%A6/"><span>读书</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Jun 15, 2021</span>
-    
-    <a href="https://www.xzywisdili.com/tags/r-%E8%AF%AD%E8%A8%80/"><span>R 语言</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Jun 9, 2021</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E5%AD%A6%E4%B9%A0/"><span>学习</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Dec 27, 2020</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E5%B7%A5%E4%BD%9C/"><span>工作</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Sep 30, 2020</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E8%BF%BD%E6%98%9F/"><span>追星</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Feb 22, 2020</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E7%BB%9F%E8%AE%A1%E5%9B%BE/"><span>统计图</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Dec 9, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E7%BC%96%E7%A8%8B/"><span>编程</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Oct 26, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E5%BD%B1%E8%AF%84/"><span>影评</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Oct 26, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E7%BE%8E%E5%89%A7/"><span>美剧</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Sep 24, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E5%91%A8%E8%AE%B0/"><span>周记</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Sep 15, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E7%94%B5%E5%BD%B1/"><span>电影</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Apr 22, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E6%8E%A8%E7%90%86/"><span>推理</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Feb 28, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E6%B5%81%E8%A1%8C%E7%97%85%E5%AD%A6/"><span>流行病学</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Feb 28, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E7%AC%94%E8%AE%B0/"><span>笔记</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Feb 23, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E9%9A%8F%E6%83%B3/"><span>随想</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Sep 3, 2018</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E7%8B%AC%E7%AB%8B%E6%B8%B8%E6%88%8F/"><span>独立游戏</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Jun 4, 2018</span>
-    
-    <a href="https://www.xzywisdili.com/tags/markdown/"><span>Markdown</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Jun 4, 2018</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E6%83%B3%E6%B3%95/"><span>想法</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Apr 25, 2018</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E4%BD%9C%E5%9B%BE/"><span>作图</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Apr 25, 2018</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/"><span>统计学</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Dec 30, 2017</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E6%80%BB%E7%BB%93/"><span>总结</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Dec 19, 2017</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"><span>数据处理</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Nov 21, 2017</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E7%BB%9F%E8%AE%A1/"><span>统计</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Nov 12, 2017</span>
-    
-    <a href="https://www.xzywisdili.com/tags/tensorflow/"><span>TensorFlow</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Nov 12, 2017</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"><span>机器学习</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Oct 23, 2017</span>
-    
-    <a href="https://www.xzywisdili.com/tags/latex/"><span>LaTeX</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Oct 15, 2017</span>
-    
-    <a href="https://www.xzywisdili.com/tags/matplotlib/"><span>matplotlib</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Oct 5, 2017</span>
-    
-    <a href="https://www.xzywisdili.com/tags/%E7%AE%97%E6%B3%95/"><span>算法</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Oct 4, 2017</span>
-    
-    <a href="https://www.xzywisdili.com/tags/blog/"><span>Blog</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Oct 4, 2017</span>
-    
-    <a href="https://www.xzywisdili.com/tags/hexo/"><span>Hexo</span></a>
-    
-</li>
-
-                    
-                </ul>
             </div>
         </div>
     </div>
 </div>
+
+
+
 <div class="footer column">
     <div class="container">
 
@@ -1510,7 +1294,6 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
             </a>
         
 
-        <a rel="alternate" type="application/rss+xml" href="https://www.xzywisdili.com/tags/index.xml" title="XZY's BLOG" />
         </div>
     </div>
 </div>

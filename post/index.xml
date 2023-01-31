@@ -6,7 +6,26 @@
     <description>Recent content in Post on XZY&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 08 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【把书读薄06】Excel 学习真的不适合借助书本了</title>
+      <link>https://www.xzywisdili.com/post/2023-01-30-bookreview06/</link>
+      <pubDate>Mon, 30 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/post/2023-01-30-bookreview06/</guid>
+      <description>总结 《跟李锐学Excel数据分析》 名为「数据分析」，内容实则是 Excel 软件使用技巧，这点需要读者注意； 虽然页数看起来较多，但是大量篇幅均为各种实操步骤截图，伴随每一个步骤讲解，友好度不如视频； 评分：2.0/5.0，更建议想要学习 Excel 工具的读者去寻找视频教程；想学习数据分析相关内容的读者就更不用看了。 最近读完了《跟李锐学Excel数据分析》。可惜的是，书名有点误导性质，全书和「数据分析」关系不大，更多是介绍 Excel 的使用方式和进阶技巧。但多多少少还是跟着看完了全书，并且把对自己有点用的部分记录了下来，权当给自己复习巩固。
+书中讲解的 Excel 相关知识，可以归纳为以下几点：
+需要知道的进阶知识 函数和公式 实用技巧和快捷键 更多高级用法：数据透视表、Power Query、Power Pivot 在这些内容中，最常用的需要非常熟悉。而相对不那么常用的，只要知道其存在，脑子里有个印象即可。具体用法细节可以在用的时候，稍加检索，基本上也可以了。
+一、需要知道的进阶知识 这里有几个需要优先了解的进阶知识，方便在后面的公式部分进行组合，发挥出更强大的威力。
+绝对引用，相对引用，混合引用 通过在行和列号前面的 $ 符号进行控制，可以将 $ 理解为锚定，锚定住的行或列号是不会改变的。比如 $A$1:$B$8 就是一个绝对引用的区域，在自动填充中不会变化。
+字符串连接符号 &amp;amp; 符号，代表字符串的连接。比如 =&amp;quot;联想&amp;quot;&amp;amp;&amp;quot;笔记本&amp;quot;，显示结果就会是 联想笔记本。
+通配符 通配符，就是这个符号能匹配多种字符，在查找和替换里经常会用到，以下几种最常用：
+问号 ?：占位一个字符； 星号 *：占位多个字符； 波浪号 ~：右侧的符号为普通字符，比如 ~* 指代的就是星号。 跨表符号 一般在需要跨表引用的时候，使用 ! 进行连接，比如 sheet1!$B$4:$F$8 代表引用 sheet1 的 B4 到 F8 范围。
+二、快捷键 说到快捷键，其实最推荐的学习方式就是在某宝上购买一个快捷键桌垫，在手边经常能看到，日积月累耳濡目染也能记得不少，可以反复加深印象：
+不过还是总结了书里提到的几个常用的快捷键：
+&amp;lt;Alt + =&amp;gt;：行和列的求和汇总； &amp;lt;Ctrl + Enter&amp;gt;：批量填充，非常好用； &amp;lt;Ctrl + E&amp;gt;：自动填充，可以批量提取和合并数据，甚至部分场景可以智能合并数据； &amp;lt;Ctrl + T&amp;gt;：快速在现有表上创建表格； &amp;lt;Ctrl + 1&amp;gt;：设置单元格格式； &amp;lt;Ctrl + Shift + 数字&amp;gt;：快速切换单元格格式（常规、文本、日期、货币、百分比等等）； &amp;lt; F5 &amp;gt;：定位 三、公式 有一些非常经典好用的公式，是需要记住使用方法的。而我认为，其他公式，只需要脑子里有个印象即可，当需要用到的时候，在网上稍微查一下用法和各个参数就行了。这里列举一些比较常用和好用的公式。</description>
+    </item>
+    
     <item>
       <title>（2022年11月过）SAS Advance 考试最新完全攻略！</title>
       <link>https://www.xzywisdili.com/post/2022-11-08-sasadvance/</link>
