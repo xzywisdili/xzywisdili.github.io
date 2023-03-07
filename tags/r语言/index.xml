@@ -6,7 +6,22 @@
     <description>Recent content in R语言 on XZY&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 07 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/tags/r%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/tags/r%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【学习笔记】保序回归——适用于单调递增数据的统计回归方法</title>
+      <link>https://www.xzywisdili.com/post/2023-03-07-isotonicregression/</link>
+      <pubDate>Tue, 07 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/post/2023-03-07-isotonicregression/</guid>
+      <description>什么是保序回归？ 保序回归（Isotonic Regression）是一种适用于单调函数非参数统计回归方法，即在一个序列中，Xn ≥ Xn-1。通过字面理解「Isotonic Regression」：
+iso的意思就是「相等、相同」的意思； tonic 就是 tone 的意思，指的是「调」。 所以保序回归的核心还是在于单调递增的函数，当需要分析的数据资料符合单调递增的趋势可以用。 保序回归最常用的应用场景之一是探索药量和药效的关系，因为一般来说药物剂量越高，药效应该更强，因此通过保序回归的方式可以从药效和经济学的角度估计最合适的药量。
+保序回归使用 weighted least-squares 来进行拟合： 怎么做保序回归？ 求解保序回归的一种最常用算法是 PAVA 算法（ Pool-Adjacent-Violators Algorithm，池相邻违规者算法）。PAVA 算法的直观形式只需要看下面这张图就行了：
+这种算法是通过从左往右逐渐扫描数据序列，并且保证整个序列是单调递增的，以此来获得 Beta 值的结果。如果 Beta_i &amp;lt; Beta_i-1，那么就同时把这两个值替换为 (Beta_i + Beta_i-1) / 2。以此就能获得严格且平滑的保序回归。
+通过 PAVA 算法，可以获得一个包括多个 Beta 参数组成的单调递增序列，用可视化的方法可以看到是由多条上升线和水平线组成的函数图：
+如何使用 R 语言进行保序回归？ 在 R 中可以轻松进行保序回归，只需要使用 stats 包中的 isoreg 函数即可。下面的代码提供一个简单的示例，并将原始数据和拟合值（蓝点）绘制出来。注意，拟合后的蓝点是单调递增的。
+# Generate Training Data set.seed(15) x &amp;lt;- sample(2 * 1:15) y &amp;lt;- 0.5 * x + rnorm(length(x)) # Isotonic Regression Model Fit reg.</description>
+    </item>
+    
     <item>
       <title>【医学预测01】Logistic 回归构建变量筛选：先单后多</title>
       <link>https://www.xzywisdili.com/post/2022-09-07-rlogistic01/</link>
