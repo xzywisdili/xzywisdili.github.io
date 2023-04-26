@@ -13,9 +13,9 @@
 <meta property="og:site_name" content="XZY&#39;s BLOG" />
 <meta property="og:locale" content="zh-cn" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.xzywisdili.com/tags/%E5%88%86%E4%BA%AB/" />
-<meta property="og:title" content="分享" />
-<meta property="twitter:title" content="分享">
+<meta property="og:url" content="https://www.xzywisdili.com/post/2023-04-26-generatewordcloudin5minutes/" />
+<meta property="og:title" content="5 分钟简单生成指定形状的词云" />
+<meta property="twitter:title" content="5 分钟简单生成指定形状的词云">
 
     <meta property="og:image" content="https://www.xzywisdili.com/img/logo.png">
     <meta property="twitter:card" content="summary">
@@ -27,10 +27,10 @@
 <title>
 
 
-     XZY&#39;s BLOG - 分享 
+     XZY&#39;s BLOG - 5 分钟简单生成指定形状的词云 
 
 </title>
-<link rel="canonical" href="https://www.xzywisdili.com/tags/%E5%88%86%E4%BA%AB/">
+<link rel="canonical" href="https://www.xzywisdili.com/post/2023-04-26-generatewordcloudin5minutes/">
 
 
 <style media="screen">
@@ -1053,7 +1053,6 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
 >
 
 
-<link rel="alternate" type="application/rss+xml" href="https://www.xzywisdili.com/tags/%E5%88%86%E4%BA%AB/index.xml" title="XZY's BLOG" />
 
 </head>
 
@@ -1061,7 +1060,7 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
 <body>
 
 
-<div class="header header-home column">
+<div class="header column">
 
     <div class="container">
         
@@ -1092,258 +1091,72 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
     </div>
 </div>
 
+
+
 <div class="main column">
     <div class="container">
         <div class="content">
-            <div class="posts">
-                <div class="page-heading">Posts about 分享</div>
-                <ul>
-                    
-                        <li class="post-item">
-    <span class="meta">Apr 28, 2020</span>
-    
-    <a href="https://www.xzywisdili.com/post/2020-04-28-papershare/"><span>分享几篇统计相关好文</span></a>
-    
-</li>
+            <div class="page-heading">
 
-                    
-                        <li class="post-item">
-    <span class="meta">Jun 20, 2020</span>
     
-    <a href="https://www.xzywisdili.com/post/2020-06-20-thebadkids/"><span>聊聊《隐秘的角落》</span></a>
+    5 分钟简单生成指定形状的词云
     
-</li>
 
-                    
-                        <li class="post-item">
-    <span class="meta">Sep 30, 2020</span>
-    
-    <a href="https://www.xzywisdili.com/post/2020-09-30-zhaoyuecosmo/"><span>赵粤的《时尚COSMO》杂志翻译</span></a>
-    
-</li>
+</div>
 
-                    
-                        <li class="post-item">
-    <span class="meta">Dec 27, 2020</span>
+            <div class="markdown">
+                
     
-    <a href="https://www.xzywisdili.com/post/2020-12-28-recommendwebsite/"><span>推荐且收藏的好网站</span></a>
-    
-</li>
+    <p>群里有人问，想要做一张这样的指定形状的词云：</p>
+<p><img src="https://s2.loli.net/2023/04/26/6Sl3DX27eC4ZxiM.jpg" alt="photo_2023-04-26_10-26-15.jpg"></p>
+<p>我试了一下，其实很简单，基本上 5 分钟就搞定。这里的简单思路就是：</p>
+<ol>
+<li>使用 <code>jieba</code> 包对原始文本进行分词处理;</li>
+<li>将分词之后的结果导入 <code>wordcloud</code> 包生成分词。</li>
+</ol>
+<p>至于指定形状的需求，需要注意在 <code>WordCloud()</code> 中的 <code>mask</code> 参数导入指定的形状遮罩图片就好，具体的代码如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> jieba
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> wordcloud <span style="color:#f92672">import</span> WordCloud
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> PIL.Image <span style="color:#66d9ef">as</span> image
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 对分析文本做分词处理</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">cut</span>(text):
+</span></span><span style="display:flex;"><span>    word_list <span style="color:#f92672">=</span> jieba<span style="color:#f92672">.</span>cut(text)
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">.</span>join(word_list)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> result
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 读取分析文本，进行分词</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#34;D:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">测试文章.txt&#34;</span>, <span style="color:#e6db74">&#39;rb&#39;</span>) <span style="color:#66d9ef">as</span> fp:
+</span></span><span style="display:flex;"><span>    text <span style="color:#f92672">=</span> fp<span style="color:#f92672">.</span>read()<span style="color:#f92672">.</span>decode(<span style="color:#e6db74">&#39;utf-8&#39;</span>)
+</span></span><span style="display:flex;"><span>    words <span style="color:#f92672">=</span> cut(text)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 设置目标词云的遮罩</span>
+</span></span><span style="display:flex;"><span>mask <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array(image<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#34;D:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">测试图片.png&#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 进行词云分析并生成</span>
+</span></span><span style="display:flex;"><span>test_cloud <span style="color:#f92672">=</span> WordCloud(
+</span></span><span style="display:flex;"><span>    mask <span style="color:#f92672">=</span> mask,
+</span></span><span style="display:flex;"><span>    background_color <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;#FFFFFF&#39;</span>,
+</span></span><span style="display:flex;"><span>    font_path<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;C:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Windows</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Fonts</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">方正聚珍新仿.TTF&#39;</span>
+</span></span><span style="display:flex;"><span>)<span style="color:#f92672">.</span>generate(text)
+</span></span><span style="display:flex;"><span>image_produce <span style="color:#f92672">=</span> test_cloud<span style="color:#f92672">.</span>to_image()
+</span></span><span style="display:flex;"><span>test_cloud<span style="color:#f92672">.</span>to_file(<span style="color:#e6db74">&#34;D:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">生成图片.jpg&#34;</span>)
+</span></span></code></pre></div><p>当然，再总结一下完成过程，需要注意这两个小小的翻车点：</p>
+<ul>
+<li>wordcloud 自身不支持中文，直接生成会产生乱码，注意在 <code>WordCloud()</code> 中通过 <code>font_path</code> 参数指定本地的中文字体文件（程序第24行）；</li>
+<li>mask 使用的图片是你想生成的词云的遮罩形状，注意你准备好的图片需要是白色底或者透明底</li>
+</ul>
+<p>Over.</p>
 
-                    
-                        <li class="post-item">
-    <span class="meta">Jun 9, 2021</span>
-    
-    <a href="https://www.xzywisdili.com/post/2021-06-09-mergeandkeepdata/"><span>对数据进行填补</span></a>
-    
-</li>
 
-                    
-                        <li class="post-item">
-    <span class="meta">Jun 9, 2021</span>
-    
-    <a href="https://www.xzywisdili.com/post/2021-06-09-graduation/"><span>毕业流程之不吐不快</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Jun 15, 2021</span>
-    
-    <a href="https://www.xzywisdili.com/post/2021-06-15-extractnumbers/"><span>从电子病历提取数据</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Jun 15, 2021</span>
-    
-    <a href="https://www.xzywisdili.com/post/2021-06-15-newrtips/"><span>新发现的 R 里关于 data.table 的一些神奇用法</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Jun 16, 2021</span>
-    
-    <a href="https://www.xzywisdili.com/post/2021-06-16-downloadclimate/"><span>如何从 NASA 下载气象数据</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Jun 28, 2021</span>
-    
-    <a href="https://www.xzywisdili.com/post/2021-06-28-starttoreadbooks/"><span>最近要开始啃书了</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Jul 2, 2021</span>
-    
-    <a href="https://www.xzywisdili.com/post/2021-07-02-thingsneverbuy/"><span>我个人不会再买的东西</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Jul 5, 2021</span>
-    
-    <a href="https://www.xzywisdili.com/post/2021-07-05-writesendletter/"><span>在 2021 年寄一封平信</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Aug 13, 2021</span>
-    
-    <a href="https://www.xzywisdili.com/post/2021-08-13-seehowmediafoolus/"><span>看看一些现代“媒体”是怎么愚弄大众的</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Oct 18, 2021</span>
-    
-    <a href="https://www.xzywisdili.com/post/2021-10-18-thoughtsofdtx/"><span>听完数字疗法产业峰会北京站的一些想法</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Nov 29, 2021</span>
-    
-    <a href="https://www.xzywisdili.com/post/2021-11-29-newdietmethod/"><span>最近在尝试的一种新的减重饮食法</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Dec 18, 2021</span>
-    
-    <a href="https://www.xzywisdili.com/post/2021-12-18-bookthoughts/"><span>读完一本应试方法书的碎碎念</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Jan 4, 2022</span>
-    
-    <a href="https://www.xzywisdili.com/post/2022-01-04-happynewyear/"><span>2022 跨年快乐</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Jul 28, 2022</span>
-    
-    <a href="https://www.xzywisdili.com/post/2022-07-28-timeseriesplot/"><span>一天内数据分布的可视化</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Aug 29, 2022</span>
-    
-    <a href="https://www.xzywisdili.com/post/2022-08-29-bookreview01/"><span>【把书读薄01】拼凑真相：指导读者如何面对各种诡计多端的媒体把戏</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Sep 5, 2022</span>
-    
-    <a href="https://www.xzywisdili.com/post/2022-09-05-bookreview02/"><span>【把书读薄02】开启高质量沟通的第1分钟</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Sep 21, 2022</span>
-    
-    <a href="https://www.xzywisdili.com/post/2022-9-21-bookreview03/"><span>【把书读薄03】锻炼：丹尼尔·利伯曼教授对健康迷思的一一解答</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Sep 26, 2022</span>
-    
-    <a href="https://www.xzywisdili.com/post/2022-09-26-bookreview04/"><span>【把书读薄04】一日两餐：找回身体代谢灵活性的新饮食理念</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Oct 19, 2022</span>
-    
-    <a href="https://www.xzywisdili.com/post/2022-10-19-bookreview05/"><span>【把书读薄05】向心城市：带你了解现代城市的发展规律</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Nov 8, 2022</span>
-    
-    <a href="https://www.xzywisdili.com/post/2022-11-08-sasadvance/"><span>（2022年11月过）SAS Advance 考试最新完全攻略！</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Jan 30, 2023</span>
-    
-    <a href="https://www.xzywisdili.com/post/2023-01-30-bookreview06/"><span>【把书读薄06】Excel 学习真的不适合借助书本了</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Mar 3, 2023</span>
-    
-    <a href="https://www.xzywisdili.com/post/2023-03-03-bookreview07/"><span>【把书读薄07】《所罗门的密码》：试图分析人工智能的信任问题却深度不足</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Mar 7, 2023</span>
-    
-    <a href="https://www.xzywisdili.com/post/2023-03-07-isotonicregression/"><span>【学习笔记】保序回归——适用于单调递增数据的统计回归方法</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Mar 23, 2023</span>
-    
-    <a href="https://www.xzywisdili.com/post/2023-03-23-dataanalysisnote01/"><span>【学习笔记】实用统计学复习手册01——探索性数据分析</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Apr 23, 2023</span>
-    
-    <a href="https://www.xzywisdili.com/post/2023-04-23-userjsonfindextradata/"><span>数据挖掘的奇效——爬到网站没有显示的数据</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Apr 26, 2023</span>
-    
-    <a href="https://www.xzywisdili.com/post/2023-04-26-generatewordcloudin5minutes/"><span>5 分钟简单生成指定形状的词云</span></a>
-    
-</li>
-
-                    
-                </ul>
             </div>
         </div>
     </div>
 </div>
+
+
+
 <div class="footer column">
     <div class="container">
 
@@ -1390,7 +1203,6 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
             </a>
         
 
-        <a rel="alternate" type="application/rss+xml" href="https://www.xzywisdili.com/tags/%E5%88%86%E4%BA%AB/index.xml" title="XZY's BLOG" />
         </div>
     </div>
 </div>

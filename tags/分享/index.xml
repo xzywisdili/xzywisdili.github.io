@@ -6,7 +6,19 @@
     <description>Recent content in 分享 on XZY&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 23 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/tags/%E5%88%86%E4%BA%AB/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/tags/%E5%88%86%E4%BA%AB/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>5 分钟简单生成指定形状的词云</title>
+      <link>https://www.xzywisdili.com/post/2023-04-26-generatewordcloudin5minutes/</link>
+      <pubDate>Wed, 26 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/post/2023-04-26-generatewordcloudin5minutes/</guid>
+      <description>群里有人问，想要做一张这样的指定形状的词云：
+我试了一下，其实很简单，基本上 5 分钟就搞定。这里的简单思路就是：
+使用 jieba 包对原始文本进行分词处理; 将分词之后的结果导入 wordcloud 包生成分词。 至于指定形状的需求，需要注意在 WordCloud() 中的 mask 参数导入指定的形状遮罩图片就好，具体的代码如下：
+import jieba from wordcloud import WordCloud import numpy as np import PIL.Image as image # 对分析文本做分词处理 def cut(text): word_list = jieba.cut(text) result = &amp;#34; &amp;#34;.join(word_list) return result # 读取分析文本，进行分词 with open(&amp;#34;D:\\测试文章.txt&amp;#34;, &amp;#39;rb&amp;#39;) as fp: text = fp.read().decode(&amp;#39;utf-8&amp;#39;) words = cut(text) # 设置目标词云的遮罩 mask = np.array(image.open(&amp;#34;D:\\测试图片.png&amp;#34;)) # 进行词云分析并生成 test_cloud = WordCloud( mask = mask, background_color = &amp;#39;#FFFFFF&amp;#39;, font_path=&amp;#39;C:\\Windows\\Fonts\\方正聚珍新仿.</description>
+    </item>
+    
     <item>
       <title>数据挖掘的奇效——爬到网站没有显示的数据</title>
       <link>https://www.xzywisdili.com/post/2023-04-23-userjsonfindextradata/</link>
