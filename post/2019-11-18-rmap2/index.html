@@ -1109,7 +1109,7 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
     
     <p>在R语言中绘制地图，尤其是可交互式的地图的另一个利器是 <code>leaflet</code> 包。
 这次我会借着我刚刚完成的一个小项目来讲解这一内容，目标是仿制<a href="https://www.cdc.gov/drugoverdose/data/heroin.html#overdose-deaths">美国 CDC 官网</a>上的一张图——是的，我们的「战场」从中国转移到了美国。</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g921d93ytej31bh0u046f.jpg" alt=""></p>
+<p><img src="https://s2.loli.net/2023/04/28/cUs8eIOQ9WKMTaJ.webp" alt="41.jpg"></p>
 <h2 id="数据准备">数据准备</h2>
 <p>官网上有相关数据的下载。除此之外，我们还需要美国的 shapefile 文件。
 一般来说，国外的地图文件去 <a href="https://gadm.org/download_country_v3.html">GADM</a> 上下载问题就不是很大。
@@ -1157,7 +1157,7 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">addLegend</span>(position<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bottomright&#34;</span>, pal<span style="color:#f92672">=</span>pal, values<span style="color:#f92672">=~</span>category, title<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Category&#34;</span>, opacity<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">%&gt;%</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">setView</span>(lng<span style="color:#f92672">=</span><span style="color:#ae81ff">-98.134</span>, lat<span style="color:#f92672">=</span><span style="color:#ae81ff">38.053</span>, zoom<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>)
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">saveWidget</span>(widget<span style="color:#f92672">=</span>my_map, file<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;my_map.html&#34;</span>)
-</span></span></code></pre></div><p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g926hvv2muj31e00u00xn.jpg" alt=""></p>
+</span></span></code></pre></div><p><img src="https://s2.loli.net/2023/04/28/uBfgwEaWY2MdkqT.webp" alt="42.jpg"></p>
 <p>这段代码的核心部分在于一开始使用 <code>sf</code> 包的 <code>st_read()</code> 读取 shapefile 格式的地图文件。
 之后使用 <code>leaflet</code> 生成对应的地图对象，再使用类似 <code>ggplot</code> 里面的绘图思路加上各个图层。
 <code>addPolygons</code> 方法里面提供了很多参数和选项，包括鼠标悬浮时的高亮选择，悬浮时候的标签和标签的样式。
@@ -1174,7 +1174,7 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
 <p><code>leaflet</code> 与 <code>R shiny</code> 结合起来使用也实在是异常顺滑，逼格满满。
 最让人舒服的一点是，<code>R shiny</code> 也异常清晰易懂，也存在大量官方和民间教程可供学习。
 我可以在地图的左上角放置选项框，并对选中分类的州进行高亮显示：</p>
-<p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g926uz8015j31be0u0q6y.jpg" alt=""></p>
+<p><img src="https://s2.loli.net/2023/04/28/cEUyiZ8JhHjwexY.webp" alt="43.jpg"></p>
 <p>最后，不得不感叹，在 <code>leaflet</code> 包的强大加持下，交互式地图可视化也能变得如此轻松愉快。
 这竟然也让上一期的 <code>ggplot</code> 落后得有点像上个时代的产物。不过当然这是一句玩笑话。
 一切都越来越有意思了。</p>
