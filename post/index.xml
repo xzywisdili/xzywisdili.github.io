@@ -6,7 +6,20 @@
     <description>Recent content in Post on XZY&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 28 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CDISC 标准（二）——SDTM 标准概述</title>
+      <link>https://www.xzywisdili.com/post/2023-04-29-cdiscnote2/</link>
+      <pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/post/2023-04-29-cdiscnote2/</guid>
+      <description>总结 介绍了 SDTM 和 IG 文件的基本概念； 通过阅读 SDTM IG 文件，了解 Domain 和 Variable 的各种信息； 重点是 Variable 的五种分类：Identifier, Topic, Qualifier, Timing, Rule。 SDTM 的基本概念 SDTM（Study Data Tabulation Model）是一个服务于临床实验的标准数据指标模型，也是被业界和 FDA 广泛采用的标准。它规定了在临床实验中，原始数据收集之后的标准化的呈现方式。可能不同种类的药物，在实验中收集的数据样式是不一样的，但是经过 SDTM 标准化之后，相同类别的数据一定是相同的。
+标准化的好处是，可以更好地服务于药物开发全链条中的各方人员，大大降低了沟通成本，提高审查部门的审核效率。经过多年的数次更新，SDTM 标准已经几乎可以涵盖所有类型的临床实验数据格式。
+而 SDTM IG 文件（SDTM Implementation Guide）中就详细说明了所有 SDTM 标准化数据的方方面面的信息。想要了解 SDTM，就必须要从阅读 SDTM IG 文件开始。
+从阅读 SDTM IG 文件开始 SDTM IG 文件可以从 CDISC 组织的官网中免费获得。官网下载得到的是英文版本，虽然民间存在个人翻译的中文版本，但还是推荐采用原汁原味的英文版本进行阅读。同时，官网还提供了 PDF 和 HTML 的多种格式，方便阅读。
+Domain 域 在第二章 Fundamentals of the SDTM 中，向我们介绍了 SDTM 标准中的基础元素：Domain（域）。每个 Domain 可以理解为围绕一个主题，相关的所有观测和变量组成的数据集，其中有一些基础的通用要求：</description>
+    </item>
+    
     <item>
       <title>博客的新浪图床图片崩了？简单办法教你解决！（2023年4月有效）</title>
       <link>https://www.xzywisdili.com/post/2023-04-28-saveyourblogpics/</link>

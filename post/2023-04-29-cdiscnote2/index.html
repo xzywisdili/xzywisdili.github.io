@@ -13,9 +13,9 @@
 <meta property="og:site_name" content="XZY&#39;s BLOG" />
 <meta property="og:locale" content="zh-cn" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.xzywisdili.com/categories/" />
-<meta property="og:title" content="Categories" />
-<meta property="twitter:title" content="Categories">
+<meta property="og:url" content="https://www.xzywisdili.com/post/2023-04-29-cdiscnote2/" />
+<meta property="og:title" content="CDISC 标准（二）——SDTM 标准概述" />
+<meta property="twitter:title" content="CDISC 标准（二）——SDTM 标准概述">
 
     <meta property="og:image" content="https://www.xzywisdili.com/img/logo.png">
     <meta property="twitter:card" content="summary">
@@ -27,10 +27,10 @@
 <title>
 
 
-     XZY&#39;s BLOG - Categories 
+     XZY&#39;s BLOG - CDISC 标准（二）——SDTM 标准概述 
 
 </title>
-<link rel="canonical" href="https://www.xzywisdili.com/categories/">
+<link rel="canonical" href="https://www.xzywisdili.com/post/2023-04-29-cdiscnote2/">
 
 
 <style media="screen">
@@ -1053,7 +1053,6 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
 >
 
 
-<link rel="alternate" type="application/rss+xml" href="https://www.xzywisdili.com/categories/index.xml" title="XZY's BLOG" />
 
 </head>
 
@@ -1061,7 +1060,7 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
 <body>
 
 
-<div class="header header-home column">
+<div class="header column">
 
     <div class="container">
         
@@ -1092,210 +1091,103 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
     </div>
 </div>
 
+
+
 <div class="main column">
     <div class="container">
         <div class="content">
-            <div class="posts">
-                <div class="page-heading">Posts about Categories</div>
-                <ul>
-                    
-                        <li class="post-item">
-    <span class="meta">Apr 29, 2023</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span>学习笔记</span></a>
-    
-</li>
+            <div class="page-heading">
 
-                    
-                        <li class="post-item">
-    <span class="meta">Apr 28, 2023</span>
     
-    <a href="https://www.xzywisdili.com/categories/%E5%8D%9A%E5%AE%A2/"><span>博客</span></a>
+    CDISC 标准（二）——SDTM 标准概述
     
-</li>
 
-                    
-                        <li class="post-item">
-    <span class="meta">Mar 3, 2023</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><span>读书笔记</span></a>
-    
-</li>
+</div>
 
-                    
-                        <li class="post-item">
-    <span class="meta">Nov 8, 2022</span>
+            <div class="markdown">
+                
     
-    <a href="https://www.xzywisdili.com/categories/%E5%88%86%E4%BA%AB/"><span>分享</span></a>
-    
+    <h2 id="总结">总结</h2>
+<ul>
+<li>介绍了 SDTM 和 IG 文件的基本概念；</li>
+<li>通过阅读 SDTM IG 文件，了解 Domain 和 Variable 的各种信息；</li>
+<li>重点是 Variable 的五种分类：Identifier, Topic, Qualifier, Timing, Rule。</li>
+</ul>
+<h2 id="sdtm-的基本概念">SDTM 的基本概念</h2>
+<p>SDTM（<strong>Study Data Tabulation Model</strong>）是一个服务于临床实验的标准数据指标模型，也是被业界和 FDA 广泛采用的标准。它规定了在临床实验中，原始数据收集之后的标准化的呈现方式。可能不同种类的药物，在实验中收集的数据样式是不一样的，<strong>但是经过 SDTM 标准化之后，相同类别的数据一定是相同的。</strong></p>
+<p>标准化的好处是，可以更好地服务于药物开发全链条中的各方人员，大大降低了沟通成本，提高审查部门的审核效率。经过多年的数次更新，SDTM 标准已经几乎可以涵盖所有类型的临床实验数据格式。</p>
+<p>而 SDTM IG 文件（SDTM Implementation Guide）中就详细说明了所有 SDTM 标准化数据的方方面面的信息。想要了解 SDTM，就必须要从阅读 SDTM IG 文件开始。</p>
+<h2 id="从阅读-sdtm-ig-文件开始">从阅读 SDTM IG 文件开始</h2>
+<p>SDTM IG 文件可以从 <a href="https://www.cdisc.org/standards/foundational/sdtmig/sdtmig-v3-3">CDISC 组织的官网中免费获得</a>。官网下载得到的是英文版本，虽然民间存在个人翻译的中文版本，但还是推荐采用原汁原味的英文版本进行阅读。同时，官网还提供了 PDF 和 HTML 的多种格式，方便阅读。</p>
+<p><img src="https://s2.loli.net/2023/04/29/nzZaiRLmlvM52du.png" alt="Snipaste_2023-04-29_10-47-48.png"></p>
+<h3 id="domain-域">Domain 域</h3>
+<p>在第二章 <em>Fundamentals of the SDTM</em> 中，向我们介绍了 SDTM 标准中的基础元素：Domain（域）。每个 Domain 可以理解为围绕一个主题，相关的所有观测和变量组成的数据集，其中有一些基础的通用要求：</p>
+<ul>
+<li>每个 Domain 的名称都用<strong>两个大写字母表示</strong>；
+<ul>
+<li>举例：记录人口统计学的 Domain 名称为 DM，记录副作用的 Domain 名称为 AE；</li>
+</ul>
 </li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Sep 7, 2022</span>
-    
-    <a href="https://www.xzywisdili.com/categories/r%E8%AF%AD%E8%A8%80/"><span>R语言</span></a>
-    
+<li>每个 Domain 包括若干变量，<strong>绝大多数变量名称都以 Domain 的名称开头</strong>；
+<ul>
+<li>举例：副作用的 Domain AE 下的大部分变量以 AE 作为开头。</li>
+</ul>
 </li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Jul 28, 2022</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/"><span>可视化</span></a>
-    
+</ul>
+<p><img src="https://s2.loli.net/2023/04/29/FoZlzwc3D2LQJkG.png" alt="Snipaste_2023-04-29_11-07-41.png"></p>
+<h3 id="variable-变量信息">Variable 变量信息</h3>
+<p>从 IG 文件中可以看到，每个 Domain 中都存在若干变量，并且有一个变量说明表，从左到右依次是变量名称，变量标签，存储的数据类型，取值范围，变量类型，变量意义说明，变量存在度要求。接下来对这些基本概念进行介绍，就可以基本看懂不同 Domain 的变量表。</p>
+<p>变量也有几个的通用要求：</p>
+<ul>
+<li>每个变量名称（Variable Name）总长度是 8 位；</li>
+<li>每个变量有标准化的标签（Variable Label），长度是 40 位；</li>
+<li>可以看到 Type 列，表示变量的存储类型要求，在 SAS 中只有两种存储类型：Char 代表字符型，Num 代表数值型。</li>
+</ul>
+<p>SDTM 标准下的变量可以分为 5 个大类，可以看到上图中的 Role 那一列：</p>
+<ul>
+<li><strong>Identifier</strong>：用于标识和编号，比如研究 ID，患者 ID 等，举例 STYDYID（实验编号），USUBJID（患者唯一标识 ID 号码）；</li>
+<li><strong>Topic</strong>：上面提过，一个 Domain 的核心内容，举例 AE Domain 中的 Topic 就是副作用相关变量；</li>
+<li><strong>Qualifier</strong>：修饰作用，对于 Topic 内容的补充说明，也包括以下几类：
+<ul>
+<li>Grouping Qualifier：表示分类的说明，举例 LB Domain（实验室检测域）中的 LBCAT 代表检测类别（血检 / 尿检）；</li>
+<li>Synonym Qualifier：对 TOPIC 的一个修饰，举例 LB Domain 中的 LBTEST 表示对检测名称的说明；</li>
+<li>Record Qualifier：对某条记录的说明，举例 LB Domain 中的 LBBLFL 代表这条记录是否是基准线值（如果为 Y 代表是基准线值）；</li>
+<li>Result Qualifier：表示结果的内容，举例 LB Domain 中的 LBORRES 代表检测结果；</li>
+<li>Variable Qualifier：对某些变量的修饰，举例 LB Domain 中的 LBORRESU 代表检测结果的单位；</li>
+</ul>
 </li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Jun 15, 2021</span>
-    
-    <a href="https://www.xzywisdili.com/categories/r-%E8%AF%AD%E8%A8%80/"><span>R 语言</span></a>
-    
+<li><strong>Timing</strong>：表示日期和时间相关的变量，字符型变量格式，必须按照 ISO8601 的格式：yyyy-mm-ddThh:mm:ss；
+<ul>
+<li><strong>每一个日期都必须对应一个从实验开始计算的时间差，用数值型存储</strong>，举例 AE Domain 中 AESTDTC 表示副作用开始的时间，AESTDY 就是副作用在实验开始后的第几天产生；</li>
+</ul>
 </li>
+<li><strong>Rule</strong>：规则相关的变量，主要放在实验设计相关的 Domain 中。</li>
+</ul>
+<p>另外，IG 文件中变量表的最后一列 Core 代表对<strong>变量存在度</strong>的要求，分为以下三类：</p>
+<ul>
+<li>Req：<strong>代表 Required</strong>，指这个变量必须存在；</li>
+<li>Exp：<strong>代表 Expected</strong>，比 Req 低一级，表示希望存在的变量，没有也可以；</li>
+<li>Perm，<strong>代表 Permissible</strong>，代表允许存在的变量，是否添加到数据集中要看实验设计。</li>
+</ul>
+<p>注意，SDTM 标准下<strong>只允许规定的变量存在于数据集中</strong>。收集到的数据变量如果在 SDTM 标准中没有，<strong>一定不能添加到 SDTM 数据集中</strong>。每个数据集变量必须存在于 IG 中，<strong>只能少，但是不能多</strong>。</p>
+<h2 id="sdtm-放不进去的数据怎么办">SDTM 放不进去的数据怎么办</h2>
+<p>虽然 SDTM 在逐步更新的过程中，基本上能够覆盖到超过 90% 的常见临床实验的情况。但毕竟每一款药物都有自己特殊的地方，有可能遇到某一些变量无法放置在 SDTM 标准数据集的情况，这时候要介绍两个概念：<strong>补充数据集和自定义数据集</strong>。</p>
+<p>如果数据是<strong>某些 SDTM domain 的补充内容</strong>，就放置在补充数据集中。</p>
+<ul>
+<li>补充数据集的命名要求：<strong>SUPP + 原始 SDTM Domain 名称</strong>；</li>
+<li>举例：关于心电图的 Domain EG，医生对于心电图的解读结果无法放在标准化的 EG 数据集中，就可以放置在命名为 SUPPEG 的补充数据集中；</li>
+<li>注意“追溯性”：补充数据集中的每一条数据<strong>必须在原始数据集有对应记录</strong>。</li>
+</ul>
+<p>而如果某一种数据，无法归类在 SDTM 标准下的任何一个 Domain，就要使用自定义数据集了，这一类型的命名要求是：XYZ + 两位字母。不过这种情况极为极为少见，如果真遇到这种情况，还是好好检查一下，看看自己是不是遗漏了 IG 文件中的某个 Domain。</p>
 
-                    
-                        <li class="post-item">
-    <span class="meta">Sep 30, 2020</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E7%BF%BB%E8%AF%91/"><span>翻译</span></a>
-    
-</li>
 
-                    
-                        <li class="post-item">
-    <span class="meta">Jun 20, 2020</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E5%BD%B1%E8%A7%86%E5%89%A7/"><span>影视剧</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Apr 28, 2020</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E7%BB%9F%E8%AE%A1/"><span>统计</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Feb 28, 2020</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E6%B5%81%E8%A1%8C%E7%97%85/"><span>流行病</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Feb 22, 2020</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E6%96%B0%E9%97%BB/"><span>新闻</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Jan 10, 2020</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E5%AD%A6%E4%B9%A0/"><span>学习</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Jan 2, 2020</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E6%83%B3%E6%B3%95/"><span>想法</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Dec 9, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/categories/sas/"><span>SAS</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Oct 26, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E5%BD%B1%E8%AF%84/"><span>影评</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Apr 22, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E9%98%85%E8%AF%BB/"><span>阅读</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Feb 28, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E6%B5%81%E8%A1%8C%E7%97%85%E5%AD%A6/"><span>流行病学</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Feb 23, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E9%9A%8F%E6%83%B3/"><span>随想</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Apr 25, 2018</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/"><span>统计学</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Nov 12, 2017</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"><span>机器学习</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Oct 23, 2017</span>
-    
-    <a href="https://www.xzywisdili.com/categories/latex/"><span>LaTeX</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Oct 5, 2017</span>
-    
-    <a href="https://www.xzywisdili.com/categories/python/"><span>Python</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Oct 4, 2017</span>
-    
-    <a href="https://www.xzywisdili.com/categories/hexo/"><span>Hexo</span></a>
-    
-</li>
-
-                    
-                </ul>
             </div>
         </div>
     </div>
 </div>
+
+
+
 <div class="footer column">
     <div class="container">
 
@@ -1342,7 +1234,6 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
             </a>
         
 
-        <a rel="alternate" type="application/rss+xml" href="https://www.xzywisdili.com/categories/index.xml" title="XZY's BLOG" />
         </div>
     </div>
 </div>
