@@ -6,7 +6,21 @@
     <description>Recent content in SAS on XZY&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 29 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/tags/sas/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/tags/sas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CDISC 标准（三）——SDTM 标准初试</title>
+      <link>https://www.xzywisdili.com/post/2023-04-30-cdiscnote3/</link>
+      <pubDate>Sun, 30 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/post/2023-04-30-cdiscnote3/</guid>
+      <description>总结 第一次尝试仔细阅读 SDTM IG 文件中的一个 domain 变量信息； 通过 SAS 代码初试按照 SDTM 标准输出标准化的数据集。 本章要开始使用 SAS，并结合 SDTM 标准，看看如何让目标数据集符合 IG 文件里面的标准。
+使用的目标 Domain 是 IG 文件 64-65 页介绍的，最重要的 Domain 之一—— DM Domain，具体变量说明表如下：
+DM 是 Demographics 的缩写，代表人口统计学信息。所有人类参与的临床实验都需要 DM Domain，内容包括实验参与者的年龄、性别、种族、国籍、实验分组、实验开始日期和结束日期等等等等数据。
+DM 数据集往往是接手某个项目最先阅读的数据集，可以查看和了解参与实验的患者的所有信息。在临床实验中，有几个患者参与，那么 DM 数据集中就需要包括几条观测数据。比如，有 10 名患者参与了临床实验，收集了原始数据，那么 DM Domain 中就应该包括 5 条观测。
+接下来就是初学 SDTM 标准的学习方法：仔细阅读 SDTM IG 文件中对于每一条变量的说明，并且按照对应的要求，在 SAS 中处理数据集。处理过程中，需要注意以下几个重点：
+注意每一条变量的 Type，字符型或者数值型，一定要在 SAS 中按照对应的格式存储，不符合的需要进行转换（INPUT 或者 PUT）； 日期型的变量一定要注意按照规定的 ISO8601 格式； 变量顺序和变量的 Label 要按照表中规定的要求； 多多检查。 从 SDTM IG 表慢慢看起：</description>
+    </item>
+    
     <item>
       <title>CDISC 标准（二）——SDTM 标准概述</title>
       <link>https://www.xzywisdili.com/post/2023-04-29-cdiscnote2/</link>
