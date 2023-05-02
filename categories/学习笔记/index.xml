@@ -6,7 +6,19 @@
     <description>Recent content in 学习笔记 on XZY&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 30 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SAS 几个重要概念辨析</title>
+      <link>https://www.xzywisdili.com/post/2023-05-01-sasnotes1/</link>
+      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/post/2023-05-01-sasnotes1/</guid>
+      <description>进行变量类型转换，用 input 还是 put 在 SAS 编程过程中，往往会遇到需要转换变量的需求。而转换变量，往往需要考虑使用 INPUT 还是 PUT。那么这时候就要想想几个变量转换中的几个关键点：
+源变量是字符型还是数值型？ 如果源变量是字符型，那么值是字符还是数字？ 想要转换后的变量是字符型还是数值型？ 那么，根据这三个问题的答案，就可以推出是使用 INPUT 还是 PUT，他们分别有以下几个特点：
+PUT() 永远创建字符型变量； PUT() 中的格式参数必须和源变量类型匹配； INPUT() 的源变量必须为字符型变量； INPUT() 可以根据指定的格式，选择创建字符型或者数值型变量。 下面是几个例子：
+需求 代码 源变量类型 源变量值 返回变量类型 返回变量值 PUT 将字符变量转换为字符变量 PUT(name, $10.); 字符型 &amp;lsquo;Richard&amp;rsquo; 永远是字符型 &amp;lsquo;Richard &#39; PUT 将数值变量转换为字符变量 PUT(age, 4.); 数值型 30 永远是字符型 &amp;rsquo; 30&amp;rsquo; PUT 将自定义格式转换为字符变量 PUT(name, $nickname.); 字符型 &amp;lsquo;Richard&amp;rsquo; 永远是字符型 &amp;lsquo;Rick&amp;rsquo; INPUT 将值为数字的字符型变量转换为数值变量 INPUT(agechar, 4.); 永远是字符型 &amp;lsquo;30&amp;rsquo; 数值型 30 INPUT 将值为数字的字符型变量转换为字符变量 INPUT(agechar, $4.); 永远是字符型 &amp;lsquo;30&amp;rsquo; 字符型 &amp;rsquo; 30&#39; 都用于分类变量：class 与 by 的辨析 SAS中的 BY 语句和 CLASS 语句都允许指定一个或多个分类变量。主要区别在于：</description>
+    </item>
+    
     <item>
       <title>CDISC 标准（三）——SDTM 标准初试</title>
       <link>https://www.xzywisdili.com/post/2023-04-30-cdiscnote3/</link>

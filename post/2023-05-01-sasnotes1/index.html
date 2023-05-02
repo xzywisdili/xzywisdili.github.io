@@ -13,9 +13,9 @@
 <meta property="og:site_name" content="XZY&#39;s BLOG" />
 <meta property="og:locale" content="zh-cn" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.xzywisdili.com/categories/" />
-<meta property="og:title" content="Categories" />
-<meta property="twitter:title" content="Categories">
+<meta property="og:url" content="https://www.xzywisdili.com/post/2023-05-01-sasnotes1/" />
+<meta property="og:title" content="SAS 几个重要概念辨析" />
+<meta property="twitter:title" content="SAS 几个重要概念辨析">
 
     <meta property="og:image" content="https://www.xzywisdili.com/img/logo.png">
     <meta property="twitter:card" content="summary">
@@ -27,10 +27,10 @@
 <title>
 
 
-     XZY&#39;s BLOG - Categories 
+     XZY&#39;s BLOG - SAS 几个重要概念辨析 
 
 </title>
-<link rel="canonical" href="https://www.xzywisdili.com/categories/">
+<link rel="canonical" href="https://www.xzywisdili.com/post/2023-05-01-sasnotes1/">
 
 
 <style media="screen">
@@ -1053,7 +1053,6 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
 >
 
 
-<link rel="alternate" type="application/rss+xml" href="https://www.xzywisdili.com/categories/index.xml" title="XZY's BLOG" />
 
 </head>
 
@@ -1061,7 +1060,7 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
 <body>
 
 
-<div class="header header-home column">
+<div class="header column">
 
     <div class="container">
         
@@ -1092,210 +1091,131 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
     </div>
 </div>
 
+
+
 <div class="main column">
     <div class="container">
         <div class="content">
-            <div class="posts">
-                <div class="page-heading">Posts about Categories</div>
-                <ul>
-                    
-                        <li class="post-item">
-    <span class="meta">May 1, 2023</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span>学习笔记</span></a>
-    
-</li>
+            <div class="page-heading">
 
-                    
-                        <li class="post-item">
-    <span class="meta">Apr 28, 2023</span>
     
-    <a href="https://www.xzywisdili.com/categories/%E5%8D%9A%E5%AE%A2/"><span>博客</span></a>
+    SAS 几个重要概念辨析
     
-</li>
 
-                    
-                        <li class="post-item">
-    <span class="meta">Mar 3, 2023</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><span>读书笔记</span></a>
-    
-</li>
+</div>
 
-                    
-                        <li class="post-item">
-    <span class="meta">Nov 8, 2022</span>
+            <div class="markdown">
+                
     
-    <a href="https://www.xzywisdili.com/categories/%E5%88%86%E4%BA%AB/"><span>分享</span></a>
-    
-</li>
+    <h2 id="进行变量类型转换用-input-还是-put">进行变量类型转换，用 input 还是 put</h2>
+<p>在 SAS 编程过程中，往往会遇到需要转换变量的需求。而转换变量，往往需要考虑使用 <code>INPUT</code> 还是 <code>PUT</code>。那么这时候就要想想几个变量转换中的几个关键点：</p>
+<ul>
+<li>源变量是字符型还是数值型？</li>
+<li>如果源变量是字符型，那么值是字符还是数字？</li>
+<li>想要转换后的变量是字符型还是数值型？</li>
+</ul>
+<p>那么，根据这三个问题的答案，就可以推出是使用 <code>INPUT</code> 还是 <code>PUT</code>，他们分别有以下几个特点：</p>
+<ul>
+<li><code>PUT()</code> <strong>永远创建字符型变量</strong>；</li>
+<li><code>PUT()</code> 中的格式参数必须和源变量类型匹配；</li>
+<li><code>INPUT()</code> 的<strong>源变量必须为字符型变量</strong>；</li>
+<li><code>INPUT()</code> 可以根据指定的格式，选择创建字符型或者数值型变量。</li>
+</ul>
+<p>下面是几个例子：</p>
+<table>
+<thead>
+<tr>
+<th>需求</th>
+<th>代码</th>
+<th>源变量类型</th>
+<th>源变量值</th>
+<th>返回变量类型</th>
+<th>返回变量值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PUT</code> 将字符变量转换为字符变量</td>
+<td><code>PUT(name, $10.);</code></td>
+<td>字符型</td>
+<td>&lsquo;Richard&rsquo;</td>
+<td>永远是字符型</td>
+<td>&lsquo;Richard   '</td>
+</tr>
+<tr>
+<td><code>PUT</code> 将数值变量转换为字符变量</td>
+<td><code>PUT(age, 4.);</code></td>
+<td>数值型</td>
+<td>30</td>
+<td>永远是字符型</td>
+<td>&rsquo;  30&rsquo;</td>
+</tr>
+<tr>
+<td><code>PUT</code> 将自定义格式转换为字符变量</td>
+<td><code>PUT(name, $nickname.);</code></td>
+<td>字符型</td>
+<td>&lsquo;Richard&rsquo;</td>
+<td>永远是字符型</td>
+<td>&lsquo;Rick&rsquo;</td>
+</tr>
+<tr>
+<td><code>INPUT</code> 将值为数字的字符型变量转换为数值变量</td>
+<td><code>INPUT(agechar, 4.);</code></td>
+<td>永远是字符型</td>
+<td>&lsquo;30&rsquo;</td>
+<td>数值型</td>
+<td>30</td>
+</tr>
+<tr>
+<td><code>INPUT</code> 将值为数字的字符型变量转换为字符变量</td>
+<td><code>INPUT(agechar, $4.);</code></td>
+<td>永远是字符型</td>
+<td>&lsquo;30&rsquo;</td>
+<td>字符型</td>
+<td>&rsquo;  30'</td>
+</tr>
+</tbody>
+</table>
+<h2 id="都用于分类变量class-与-by-的辨析">都用于分类变量：class 与 by 的辨析</h2>
+<p>SAS中的 <code>BY</code> 语句和 <code>CLASS</code> 语句都允许指定一个或多个分类变量。主要区别在于：</p>
+<ul>
+<li><code>BY</code> 语句进行<strong>多次计算分析</strong>，每次计算<strong>针对数据的一个子集</strong>；</li>
+<li><code>CLASS</code> 语句会将分组变量包含在分析中，进行一次计算输出结果。</li>
+</ul>
+<p><code>BY</code> 语句会重复对每个子集进行分析，如果输出的结果以表格和图形显示的话，<code>BY</code> 进行的分组分析会输出相同格式的 N 个表格和图形，第一组是一号结果表格，第二组是二号结果表格，以此类推。</p>
+<p><code>CLASS</code> 语句则会将分类变量作为分析的一部分。通常，用于比较各组中，比如 t 检验或 ANOVA 分析。在回归模型中，<code>CLASS</code> 语句可以估计分类变量级别的参数，从而估计每个分类对结局变量的影响。</p>
+<p>举例，我们根据 <code>Sashelp.Cars</code> 数据来进行统计分析，进行对比：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SAS" data-lang="SAS"><span style="display:flex;"><span><span style="color:#66d9ef">data </span>Cars;
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">set</span> Sashelp<span style="color:#ae81ff">.</span>Cars;
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">where</span> cylinders <span style="color:#66d9ef">in</span> (<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">8</span>) <span style="color:#66d9ef">and</span> type ^= <span style="color:#e6db74">&#39;Hybrid&#39;</span><span style="color:#66d9ef">; 
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">run;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">proc sort </span>data=Cars <span style="color:#66d9ef">out</span>=CarsSorted; 
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">by</span> Origin<span style="color:#66d9ef">; 
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">run;</span>
+</span></span></code></pre></div><p>接下来使用 <code>PROC MEANS</code> 进行分组的描述统计：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SAS" data-lang="SAS"><span style="display:flex;"><span><span style="color:#75715e">* 使用 CLASS 语句;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">proc means </span>data=Cars N Mean Std;
+</span></span><span style="display:flex;"><span>   class Origin;
+</span></span><span style="display:flex;"><span>   var Horsepower Weight Mpg_Highway<span style="color:#66d9ef">;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">run;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">* 使用 BY 语句;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">proc means </span>data=CarsSorted N Mean Std;
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">by</span> Origin;
+</span></span><span style="display:flex;"><span>   var Horsepower Weight Mpg_Highway<span style="color:#66d9ef">;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">run;</span>
+</span></span></code></pre></div><p><img src="https://s2.loli.net/2023/05/01/5GJlHeDaRVZpY3z.png" alt="Snipaste_2023-05-01_00-39-56.png"></p>
+<p>此外，在统计分析的 <code>PROC</code> 中，往往使用 <code>CLASS</code> 语句，可以适应更多类型的模型，比如分析交互影响。</p>
 
-                    
-                        <li class="post-item">
-    <span class="meta">Sep 7, 2022</span>
-    
-    <a href="https://www.xzywisdili.com/categories/r%E8%AF%AD%E8%A8%80/"><span>R语言</span></a>
-    
-</li>
 
-                    
-                        <li class="post-item">
-    <span class="meta">Jul 28, 2022</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/"><span>可视化</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Jun 15, 2021</span>
-    
-    <a href="https://www.xzywisdili.com/categories/r-%E8%AF%AD%E8%A8%80/"><span>R 语言</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Sep 30, 2020</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E7%BF%BB%E8%AF%91/"><span>翻译</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Jun 20, 2020</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E5%BD%B1%E8%A7%86%E5%89%A7/"><span>影视剧</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Apr 28, 2020</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E7%BB%9F%E8%AE%A1/"><span>统计</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Feb 28, 2020</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E6%B5%81%E8%A1%8C%E7%97%85/"><span>流行病</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Feb 22, 2020</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E6%96%B0%E9%97%BB/"><span>新闻</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Jan 10, 2020</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E5%AD%A6%E4%B9%A0/"><span>学习</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Jan 2, 2020</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E6%83%B3%E6%B3%95/"><span>想法</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Dec 9, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/categories/sas/"><span>SAS</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Oct 26, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E5%BD%B1%E8%AF%84/"><span>影评</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Apr 22, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E9%98%85%E8%AF%BB/"><span>阅读</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Feb 28, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E6%B5%81%E8%A1%8C%E7%97%85%E5%AD%A6/"><span>流行病学</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Feb 23, 2019</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E9%9A%8F%E6%83%B3/"><span>随想</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Apr 25, 2018</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/"><span>统计学</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Nov 12, 2017</span>
-    
-    <a href="https://www.xzywisdili.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"><span>机器学习</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Oct 23, 2017</span>
-    
-    <a href="https://www.xzywisdili.com/categories/latex/"><span>LaTeX</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Oct 5, 2017</span>
-    
-    <a href="https://www.xzywisdili.com/categories/python/"><span>Python</span></a>
-    
-</li>
-
-                    
-                        <li class="post-item">
-    <span class="meta">Oct 4, 2017</span>
-    
-    <a href="https://www.xzywisdili.com/categories/hexo/"><span>Hexo</span></a>
-    
-</li>
-
-                    
-                </ul>
             </div>
         </div>
     </div>
 </div>
+
+
+
 <div class="footer column">
     <div class="container">
 
@@ -1342,7 +1262,6 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
             </a>
         
 
-        <a rel="alternate" type="application/rss+xml" href="https://www.xzywisdili.com/categories/index.xml" title="XZY's BLOG" />
         </div>
     </div>
 </div>
