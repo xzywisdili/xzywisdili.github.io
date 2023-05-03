@@ -6,7 +6,22 @@
     <description>Recent content in SAS on XZY&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 01 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/tags/sas/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/tags/sas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CDISC 标准（四）——SDTM 数据集详细分类</title>
+      <link>https://www.xzywisdili.com/post/2023-05-02-cdiscnotes4/</link>
+      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/post/2023-05-02-cdiscnotes4/</guid>
+      <description>总结 本笔记的主要内容：
+介绍 SDTM 标准下的七个大类别，以及主要包括的数据集； 梳理两个最重要的数据集：AE（副作用数据集）和 LB（实验室检测结果数据集）。 SDTM 的全称是 SDTM Standard dataset tabulation model，即实验数据标准化的模型，在之前的笔记中有一个概述的介绍。SDTM 标准力图能够尽可能覆盖在临床实验进行过程中所需要收集到的所有数据和相关信息，因此也详细地设计了各种不同分类的大类别和数据集。
+在这个分类下，总共包括七个大类别和 44 个数据集。每一种数据集都属于唯一一个类别。七个大类别“SIFEFTR”：
+特殊目的类：Special Purpose 干涉类：Intervention 发现类：Findings 发现相关类：Findings About 事件类：Events 实验设计类：Study Trial 关系类：Relationship 下面分门别类介绍每一种类型。
+特殊目的类 Special Purpose 特殊目的类：包括和实验参与者本人相关的数据，无法归类到其他类别。主要包括以下几个数据集：
+CO：评价数据集，Comments**，医生手写或者补充的文本备注和记录，需要与其他数据集相连接；如果手写的记录超过 CDISC 规定的最长值长度 200 个字符，就需要创建新的 COVAL1，COVAL2 变量保存字符，以此类推，每个变量容纳 200 个字符； DM：人口统计学，Demographics，用于保存患者的基础信息，比如患者编号、性别、国籍、种族、实验开始时间等等，在之前的内容中有所记录； SV：患者来访数据，Subject Visit SE，患者时期元素，Subject Element 一个患者在整个临床实验过程中需要来访多次。一般是从 Screen 和纳入开始，之后的来访依次是基线，第一次来访，第二次来访等，直到实验结束。在服用药物过后，因为药物在人体内有残留期，也需要几次患者来访，来观察是否具有副作用和其他治疗效果。 患者来访的时间数据都需要记录在 SV 数据集中。每个患者在实验过程中经历的每个时期和元素的时间信息，这些数据被放在 SE 中。 干涉类 Interventions 干涉类主要包括对患者有影响的行为的相关数据，包括以下几个数据集：
+**CM：伴随用药 Concomitant and prior medications 参加临床实验的患者，如果有其他疾病，需要服用已经上市的药物，就需要在数据集中记录伴随用药的相关信息；如果是和癌症相关的临床实验，可能需要让受试者服用一种统计的抗癌药物，再服用待实验的药物，那么这个统一服用的药物也需要放置在 CM 数据集中； CM 数据集存放患者服用的其他药物（非本实验药物）的名称、类别、剂量、计量单位、频率、药物类型（胶囊/饮剂）等数据； EX：实验用药 Exposure 实验计划中**药物的使用情况； 根据实验设计来确定，核心变量包括 EXTRT（药物的名称），EXDOSE（药物的剂量），EXDOSU（药物剂量的单位），EXDOSFRQ（药物按此剂量服用的频率） 和 EXDOSFRM（药物的形式，液体/胶囊/含服片）； **EC：实际实验用药 Exposure as Collected 实际中**药物的使用情况 由 ECOCCUR 变量指定该次是否服药，ECDOSE 记录剂量，ECDOSU 记录剂量单位； EC 和 EX 数据集的结构基本相同，实际分析使用 EX 数据集，因为根据实验设计而来的 **PR：过程 Procedures 患者治疗和诊断相关的过程 比如患者参与心血管相关的临床实验，中间去口腔科诊断并拔了智齿，这个过程无法判断是否与临床实验相关，所以也要记录下来。 核心变量：PRTRT，记录做的手术名称 PRSTDTC，PRENDTC，PRSTDY，PRENDY 分别对应手术开始的日期和结束的日期，以及对应的天数； SU：物质使用 Substance Use 其他非药物的物质的使用情况，比如最常见的咖啡（含有咖啡因），吸烟、喝酒； 主要包括以下几个变量：SUTRT（使用物质的名称，包括 CIGARETTES，COFFEE）、SUCAT（使用物质所属的大类）、SUDOSE（这些物质使用的数量）、SUDOSEU（使用物质的数量单位）、SUDOSFRQ（使用物质的频率）、SUSTAT，SUREASND（数值没有被记录和没有记录的原因） 事件类 Events 事件类，代表计划之外的事件，总共包括 6 个数据集：</description>
+    </item>
+    
     <item>
       <title>SAS 几个重要概念辨析</title>
       <link>https://www.xzywisdili.com/post/2023-05-01-sasnotes1/</link>
