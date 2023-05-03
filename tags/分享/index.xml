@@ -8,6 +8,19 @@
     <language>zh-cn</language>
     <lastBuildDate>Tue, 02 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/tags/%E5%88%86%E4%BA%AB/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>CDISC 标准（五）——ADaM 标准概述</title>
+      <link>https://www.xzywisdili.com/post/2023-05-02-cdiscnotes5/</link>
+      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/post/2023-05-02-cdiscnotes5/</guid>
+      <description>总结 ADaM 标准实为了让临床试验统计分析人员梗快速、标准准确地进行统计分析和制作报表的标准； ADaM 主要分为三类数据集：ADSL，BDS 和 OCCDS； 详细梳理了三类数据集的特点以及对应的重点变量。 ADaM 数据集是做什么用的？ ADaM，Analysis Data Model，顾名思义，为了更加方便、标准且准确地进行统计分析，输出相关统计图表的标准模型。
+临床实验的流程包括：实验设计，得到原始数据 → 经过 SDTM 标准化得到标准数据 → 将 SDTM 标准数据转化为 ADaM 标准数据 → 使用 ADaM 数据集生成统计图表 → 撰写药物上市申请文档。
+在这个工作流程中：
+SDTM 标准更偏向于数据标准化； 不同实验的数据集，结构内容和变量基本大部分相同； 如果直接从 SDTM 数据集创建统计图表，需要增加大量计算语句，非常冗杂并且容易出错； ADaM 标准更偏向于数据的可分析性； 数据集的变量可以根据实验的不同进行调整，更加灵活； 更加方便快捷、标准、准确地编写统计图表生成的语句。 跟 SDTM IG 文件类似，ADaM 也有对应的 IG（Implementation Guide） 文件，在 CDISC 的官网就可以找到。
+ADaM 有五大基础原则 清晰且无歧义，Clearly adn unambiguously，有标准则需要与标准一致，如果没有标准就需要描述清晰； 可追溯性，Traceability，每个变量，每条记录的来源，都必须能从对应的 SDTM 数据集中找到； 能够被常用的统计软件 SAS 使用； 必须具备 metadata 元数据，即必须把 ADaM 中每个变量的意义放在一个元数据文件中； 即分析性 analysis-ready，使用最少的编程工作就可以完成分析任务；ADaM 数据可以只包含分析所需要的数据，如果收集了一些原始数据并不会用于分析中，那么就不需要纳入 ADaM 数据集中。 可追溯性 可追溯性非常重要，它要求所有数据有依可查，而不是凭空产生。这样可以方便分析人员和审阅者查看数据的产生过程，排除可能存在的异常数据。可追溯性分为以下两点：</description>
+    </item>
+    
+    <item>
       <title>CDISC 标准（四）——SDTM 数据集详细分类</title>
       <link>https://www.xzywisdili.com/post/2023-05-02-cdiscnotes4/</link>
       <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
