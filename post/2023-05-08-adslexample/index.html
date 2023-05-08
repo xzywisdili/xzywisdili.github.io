@@ -13,9 +13,9 @@
 <meta property="og:site_name" content="XZY&#39;s BLOG" />
 <meta property="og:locale" content="zh-cn" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.xzywisdili.com/post/2023-05-02-cdiscnotes4/" />
-<meta property="og:title" content="CDISC 标准（四）——SDTM 数据集详细分类" />
-<meta property="twitter:title" content="CDISC 标准（四）——SDTM 数据集详细分类">
+<meta property="og:url" content="https://www.xzywisdili.com/post/2023-05-08-adslexample/" />
+<meta property="og:title" content="ADSL 数据集的建立：练习示例" />
+<meta property="twitter:title" content="ADSL 数据集的建立：练习示例">
 
     <meta property="og:image" content="https://www.xzywisdili.com/img/logo.png">
     <meta property="twitter:card" content="summary">
@@ -27,10 +27,10 @@
 <title>
 
 
-     XZY&#39;s BLOG - CDISC 标准（四）——SDTM 数据集详细分类 
+     XZY&#39;s BLOG - ADSL 数据集的建立：练习示例 
 
 </title>
-<link rel="canonical" href="https://www.xzywisdili.com/post/2023-05-02-cdiscnotes4/">
+<link rel="canonical" href="https://www.xzywisdili.com/post/2023-05-08-adslexample/">
 
 
 <style media="screen">
@@ -1099,7 +1099,7 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
             <div class="page-heading">
 
     
-    CDISC 标准（四）——SDTM 数据集详细分类
+    ADSL 数据集的建立：练习示例
     
 
 </div>
@@ -1108,223 +1108,229 @@ div.main .content .markdown pre, div.main .content .markdown pre code {
                 
     
     <h2 id="总结">总结</h2>
-<p>本笔记的主要内容：</p>
 <ul>
-<li>介绍 SDTM 标准下的七个大类别，以及主要包括的数据集；</li>
-<li>梳理两个最重要的数据集：AE（副作用数据集）和 LB（实验室检测结果数据集）。</li>
+<li>通过一则创立 ADSL 数据集的练习示例加深对 ADSL 数据集的理解；</li>
 </ul>
-<p>SDTM 的全称是 SDTM Standard dataset tabulation model，即实验数据标准化的模型，在之前的笔记中有一个<a href="https://www.xzywisdili.com/post/2023-04-29-cdiscnote2/">概述的介绍</a>。SDTM 标准力图能够尽可能覆盖在临床实验进行过程中所需要收集到的所有数据和相关信息，因此也详细地设计了各种不同分类的大类别和数据集。</p>
-<p>在这个分类下，总共包括<strong>七个大类别和 44 个数据集</strong>。每一种数据集都属于唯一一个类别。七个大类别“SIFEFTR”：</p>
+<p>ADSL（Subject-Level Analysis Data Set） 是 ADaM 中的一种数据集，特点是每一行是一个单独患者的记录（类似 SDTM 中的 DM 数据集），主要包括的变量有：</p>
 <ul>
-<li>特殊目的类：Special Purpose</li>
-<li>干涉类：Intervention</li>
-<li>发现类：Findings</li>
-<li>发现相关类：Findings About</li>
-<li>事件类：Events</li>
-<li>实验设计类：Study Trial</li>
-<li>关系类：Relationship</li>
+<li>Demographic 相关的变量；</li>
+<li>计划和实际的 Treatment 相关变量；</li>
+<li>是否为 &ldquo;Safety&rdquo; 的患者标识 flag</li>
 </ul>
-<p>下面分门别类介绍每一种类型。</p>
-<h2 id="特殊目的类-special-purpose">特殊目的类 Special Purpose</h2>
-<p>特殊目的类：包括和实验参与者本人相关的数据，无法归类到其他类别。主要包括以下几个数据集：</p>
+<p>ADSL 的建立过程中，一般需要从 SDTM Domain 中的数个数据集合并而来：</p>
 <ul>
-<li>CO：评价数据集，Comments**，医生手写或者补充的文本备注和记录，需要与其他数据集相连接；如果手写的记录超过 CDISC 规定的最长值长度 200 个字符，就需要创建新的 COVAL1，COVAL2 变量保存字符，以此类推，每个变量容纳 200 个字符；</li>
-<li>DM：人口统计学，Demographics，用于保存患者的基础信息，比如患者编号、性别、国籍、种族、实验开始时间等等，在之前的内容中有所记录；</li>
-<li>SV：患者来访数据，Subject Visit</li>
-<li>SE，患者时期元素，Subject Element
+<li>DM 中的大部分变量</li>
+<li>EX (Exposure)，DS (Disposition) 和其他 SDTM Domain</li>
+</ul>
+<h2 id="adsl-的结构">ADSL 的结构</h2>
+<p>ADSL 的结构是一行记录代表一个患者，包括 Identifier，Demographics, Population flags, treatment, dose 和其他 subject-level 的变量。下面一一进行分析。</p>
 <ul>
-<li>一个患者在整个临床实验过程中需要来访多次。一般是从 Screen 和纳入开始，之后的来访依次是基线，第一次来访，第二次来访等，直到实验结束。在服用药物过后，因为药物在人体内有残留期，也需要几次患者来访，来观察是否具有副作用和其他治疗效果。</li>
-<li><strong>患者来访的时间数据都需要记录在 SV 数据集中</strong>。每个患者<strong>在实验过程中经历的每个时期和元素的时间信息</strong>，这些数据被放在 SE 中。</li>
+<li>Identifier 变量
+<ul>
+<li>STUDYID, USUBJID, SUBJID, SITEID，在存在于 DM 中；</li>
+</ul>
+</li>
+<li>Subject Demographics 变量
+<ul>
+<li>AGE：DM.AGE，如果分析需要 derive 一个 age 出来，需要添加 AAGE 变量；</li>
+<li>AGEU、SEX、RACE：都从 DM 中合并过来；</li>
+</ul>
+</li>
+<li>Population Flag 变量
+<ul>
+<li>FASFL：全分析数据集的标识</li>
+<li>SAFFL：Safety Population 的标识</li>
+</ul>
+</li>
+<li>Dose 变量
+<ul>
+<li>TRTSDT、TRTSDTM：分别是 Treatment 中第一次服药的日期和日期时间；</li>
+<li>TRTxxSDTF：xx一般是两位数字，代表第几个阶段，也就是第几个阶段的TRT；</li>
+<li>TRTSDTF：第一次服药的标识。</li>
+</ul>
+</li>
+<li>Subject-Level Trial Experience 变量
+<ul>
+<li>EOSDT：研究结束的日期</li>
+<li>EOSSTT：研究结束的状态，比如取值“COMPLETED”</li>
 </ul>
 </li>
 </ul>
-<h2 id="干涉类-interventions">干涉类 Interventions</h2>
-<p>干涉类主要包括<strong>对患者有影响的行为</strong>的相关数据，包括以下几个数据集：</p>
+<h2 id="阅读和熟悉-adsl-的-spec">阅读和熟悉 ADSL 的 Spec</h2>
+<p>熟悉 ADSL 的 Spec，对于我们初学制作 ADSL 的合并数据集过程非常有帮助。</p>
+<p>可以看到 Spec 里面的各个内容：</p>
 <ul>
-<li><strong>CM：伴随用药 Concomitant and prior medications</strong>
+<li>Variable：变量名</li>
+<li>Label：每个变量的含义说明，基本上和 SDTM IG 中每个变量的 Label 对应；</li>
+<li>Type：存储格式，分为 char 和 num 两种，需要仔细对照检查，必要时转换；</li>
+<li>Length：变量储存长度，Derive 新变量的时候要注意设置；</li>
+<li>Controlled Terminology（CT），有 CT 要求时严格遵守即可；</li>
+<li>Notes：需要写明每个变量的来源，如果是 Derive 的，需要写清楚计算过程；</li>
+</ul>
+<p><img src="https://s2.loli.net/2023/05/08/xP23FKaWQzsukXN.png" alt="Snipaste_2023-05-08_09-27-53.png"></p>
+<p><img src="https://s2.loli.net/2023/05/08/a1uZj9JowUFd3gN.png" alt="Snipaste_2023-05-08_09-28-18.png"></p>
+<h2 id="adsl-的程序">ADSL 的程序</h2>
+<h3 id="第一部分">第一部分</h3>
+<p>Derive 以下这几个新变量：</p>
 <ul>
-<li>参加临床实验的患者，如果有其他疾病，需要服用已经上市的药物，就需要在数据集中记录伴随用药的相关信息；如果是和癌症相关的临床实验，可能需要让受试者服用一种统计的抗癌药物，再服用待实验的药物，那么这个统一服用的药物也需要放置在 CM 数据集中；</li>
-<li>CM 数据集存放<strong>患者服用的其他药物（非本实验药物）的</strong>名称、类别、剂量、计量单位、频率、药物类型（胶囊/饮剂）等数据；</li>
+<li>AETHNIC：如果 ETHINIC 为空，则赋值 &ldquo;NOT COLLECTED&rdquo;;</li>
+<li>ARACE：转换种族 RACE 变量，方便分析；</li>
+<li>TRTSDT, TRTSTM：分别是 Treatment 开始时第一次暴露（给药）的日期和时间，注意是以 num 存储并按照规定格式，所以需要 input 转换；</li>
+<li>TRTEDT，TRTETM：最后一次暴露（给药）的日期和时间，要求同上；</li>
+<li>TRT01P, TRT01A：分别是计划和实际的治疗方式，按要求转换；</li>
+<li>SAFFL，FASFL：对应 Safety Population 和 Full Analysis Set 的标识；Safety Population 意指至少经过一次暴露（给药）的人群，所以只要 RFSTDTC 不为空，就代表 &ldquo;Y&rdquo;；</li>
+</ul>
+<p>注意：Derive 的新版量最好注意一下 length 的设置；</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SAS" data-lang="SAS"><span style="display:flex;"><span><span style="color:#75715e">/* Begin Writing SAS Program sdtm.dm.sas */</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* Demographic Variables */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">data </span>DM1;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">set</span> sdtm<span style="color:#ae81ff">.</span><span style="color:#66d9ef">DM</span>; 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* Derive AETHNIC, ARACE */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">length</span> AETHNIC $<span style="color:#ae81ff">40</span>.;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">missing</span>(ETHTIC) <span style="color:#66d9ef">then</span> AETHNIC = <span style="color:#e6db74">&#34;NOT COLLECTED&#34;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">else</span> AETHNIC = ETHTIC;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> RACE=<span style="color:#e6db74">&#34;WHITE&#34;</span> <span style="color:#66d9ef">then</span> ARACE=<span style="color:#e6db74">&#34;W&#34;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> RACE=<span style="color:#e6db74">&#34;BLACK OR AFRICAN AMERICAN&#34;</span> <span style="color:#66d9ef">then</span> ARACE=<span style="color:#e6db74">&#34;B&#34;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> RACE=<span style="color:#e6db74">&#34;NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDERS&#34;</span> <span style="color:#66d9ef">then</span> ARACE=<span style="color:#e6db74">&#34;HP&#34;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> RACE=<span style="color:#e6db74">&#34;ASIAN&#34;</span> <span style="color:#66d9ef">then</span> ARACE=<span style="color:#e6db74">&#34;A&#34;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> RACE=<span style="color:#e6db74">&#34;AMERICAN INDIAN OR ALASKA AMERICAN&#34;</span> <span style="color:#66d9ef">then</span> ARACE=<span style="color:#e6db74">&#34;AA&#34;</span>;
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* Derive TRTSDT, TRTSTM, TRTEDT, TRTETM */</span>
+</span></span><span style="display:flex;"><span>  TRTSDT = <span style="color:#66d9ef">input</span>(substr(RFSTDTC, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10</span>), yymmdd10.);
+</span></span><span style="display:flex;"><span>  TRTSTM = <span style="color:#66d9ef">input</span>(substr(RFSTDTC, <span style="color:#ae81ff">12</span>), time5.);
+</span></span><span style="display:flex;"><span>  TRTEDT = <span style="color:#66d9ef">input</span>(substr(RFENDTC, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10</span>), yymmdd10.);
+</span></span><span style="display:flex;"><span>  TRTETM = <span style="color:#66d9ef">input</span>(substr(RFENDTC, <span style="color:#ae81ff">12</span>), time5.);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">format</span> TRTSDT yymmdd10. TRTSTM time5. TRTEDT yymmdd10. TRTETM time5.;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* Derive TRT01P, TRT01A */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">length</span> TRT01P TRT01A $<span style="color:#ae81ff">20</span>.;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> ARMCD = <span style="color:#e6db74">&#34;DRUG A&#34;</span> <span style="color:#66d9ef">then</span> TRT01P = <span style="color:#e6db74">&#34;TRTA&#34;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> ACTARMCD = <span style="color:#e6db74">&#34;DRUG A&#34;</span> <span style="color:#66d9ef">then</span> TRT01A = <span style="color:#e6db74">&#34;TRTA&#34;</span>; 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* Derive SAFFL, FASFL */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> ^<span style="color:#66d9ef">missing</span>(RFSTDTC) <span style="color:#66d9ef">then</span> <span style="color:#66d9ef">do</span>;
+</span></span><span style="display:flex;"><span>    SAFFL = <span style="color:#e6db74">&#34;Y&#34;</span>;
+</span></span><span style="display:flex;"><span>    FASFL = <span style="color:#e6db74">&#34;Y&#34;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">do</span>;
+</span></span><span style="display:flex;"><span>    SAFFL = <span style="color:#e6db74">&#34;N&#34;</span>;
+</span></span><span style="display:flex;"><span>    FASFL = <span style="color:#e6db74">&#34;N&#34;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span><span style="color:#66d9ef">;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">run;</span>
+</span></span></code></pre></div><h3 id="第二部分">第二部分</h3>
+<p>Derive 以下这几个新变量：</p>
+<ul>
+<li>EOSDT 和 EOSSTT：需要用到 DS Domain 的 DSDECOD（表示患者完成试验的状态），DSSTDTC（表示患者对应试验结束状态的日期）。思路是：先把 DM 和 DS merge 起来，再取出 DSDECOD 和 DSSTDTC 进行转换即可；</li>
+<li>TR01SDTM，TR01SDT，TR01EDTM，TR01EDT
+<ul>
+<li>代表治疗中第一次暴露（给药）的日期和时间，以及最后一次的日期和时间；</li>
+<li>来源是 EX Domain 中的 EXSTDTC，EXENDTC，思路是要取出每个 USUBJID 下的第一条给药记录中的 EXSTDTC 和最后一条给药记录中的 EXENDTC，再和 DM 进行 merge，转换对应变量即可；</li>
 </ul>
 </li>
-<li><strong>EX：实验用药 Exposure</strong>
-<ul>
-<li><strong>实验计划中</strong>药物的使用情况；</li>
-<li>根据实验设计来确定，核心变量包括 EXTRT（药物的名称），EXDOSE（药物的剂量），EXDOSU（药物剂量的单位），EXDOSFRQ（药物按此剂量服用的频率） 和 EXDOSFRM（药物的形式，液体/胶囊/含服片）；</li>
+<li></li>
 </ul>
-</li>
-<li><strong>EC：实际实验用药 Exposure as Collected</strong>
-<ul>
-<li>实际中**药物的使用情况</li>
-<li>由 ECOCCUR 变量指定该次是否服药，ECDOSE 记录剂量，ECDOSU 记录剂量单位；</li>
-<li><strong>EC 和 EX 数据集的结构基本相同，实际分析使用 EX 数据集</strong>，因为根据实验设计而来的</li>
-</ul>
-</li>
-<li><strong>PR：过程 Procedures</strong>
-<ul>
-<li>患者治疗和诊断相关的过程</li>
-<li>比如患者参与心血管相关的临床实验，中间去口腔科诊断并拔了智齿，这个过程无法判断是否与临床实验相关，所以也要记录下来。</li>
-<li>核心变量：PRTRT，记录做的手术名称</li>
-<li>PRSTDTC，PRENDTC，PRSTDY，PRENDY 分别对应手术开始的日期和结束的日期，以及对应的天数；</li>
-</ul>
-</li>
-<li>SU：物质使用 Substance Use
-<ul>
-<li>其他非药物的物质的使用情况，比如最常见的咖啡（含有咖啡因），吸烟、喝酒；</li>
-<li>主要包括以下几个变量：SUTRT（使用物质的名称，包括 CIGARETTES，COFFEE）、SUCAT（使用物质所属的大类）、SUDOSE（这些物质使用的数量）、SUDOSEU（使用物质的数量单位）、SUDOSFRQ（使用物质的频率）、SUSTAT，SUREASND（数值没有被记录和没有记录的原因）</li>
-</ul>
-</li>
-</ul>
-<h2 id="事件类-events">事件类 Events</h2>
-<p>事件类，代表计划之外的事件，总共包括 6 个数据集：</p>
-<ul>
-<li>AE：副作用，Adverse Events</li>
-<li>CE：临床事件，Clinical Events</li>
-<li>DS：处置，Disposition</li>
-<li>DV：实验计划偏差，Protocol Deviations</li>
-<li>HO：医疗事件，Healthcare Encounters</li>
-<li>MH：既往药史，Medical History</li>
-</ul>
-<p>其中最最重要的是 AE，也就是副作用数据集。</p>
-<p>AE 的主要变量包括四种类型：</p>
-<ul>
-<li>第一类：副作用的名称和类别
-<ul>
-<li>AE 中，每个副作用不仅要求记录它的名称，还需要记录所属的更高级身体组织和系统。基本上原始数据集会提供这些数据，如果需要查询，每个副作用的详细分类信息存在一个名为 MedDRA 的文档之中；</li>
-<li>AETERM（副作用名称）、AEDECOD（副作用标准名称）</li>
-</ul>
-</li>
-<li>第二类：属性类变量
-<ul>
-<li>相当于给每条副作用的属性进行记录，比如 AESEV（副作用严重程度），取值为 3 种，由轻到重分别是 MILD，MODERATE 和 SEVERE；</li>
-<li>AEACN（副作用发生后采取的行动，包括药量减少、暂时停药、退出实验等）、AEOUT（副作用的结果，包括解决中、已解决、甚至患者死亡）、AEREL（副作用是否与药物相关）；</li>
-</ul>
-</li>
-<li>第三类：评价类变量
-<ul>
-<li>往往用 Flag 来表示是否满足标量所描述的情况，Y 表示符合，N 表示不符合；</li>
-<li>比如 AESCONG 表示是否导致了胎儿先天性异常和缺陷；AESDISAB 表示是否导致了残疾，AESDTH 表示是否导致死亡，AESHOSP 表示是否导致住院等；</li>
-</ul>
-</li>
-<li>第四类：时间类变量
-<ul>
-<li>AESTDTC 和 AEENDTC 表示副作用开始和结束的时间；</li>
-<li>对应的 DY 类变量：AESTDY 和 AEENDY；</li>
-<li>AEDUR 表示副作用持续时间的变量。</li>
-</ul>
-</li>
-</ul>
-<h2 id="发现类-findings">发现类 Findings</h2>
-<p>发现类中包括最多数量的数据集。其中，大部分数据集只用于特殊疾病或者药物中，真正常用的发现类数据集如下：</p>
-<ul>
-<li>EG：心电图测试指标**，ECG Test Results</li>
-<li><strong>IE：每名患者纳入排除标准的情况</strong>，Inclusion/Exclusion Creterion Not Met</li>
-<li>**LB：血检尿检指标 Laboratory Test Results</li>
-<li>QS：调查问卷 Questionnaires**，在涉及生活质量的实验当中，QS 往往是最重要的数据集之一；</li>
-<li>**VS：记录人体的一些基本信息 Vital Signs，包括身高、体重、脉搏、血压等。</li>
-</ul>
-<p>而关于癌症的发现类数据集有下列几项：</p>
-<ul>
-<li>TU：Tumor Identification</li>
-<li>TR：Tumor Results</li>
-<li>RS：Disease Response</li>
-</ul>
-<p>发现类数据集一般有如下通用的结构，其中 XX 表示对应的数据集名字：</p>
-<ul>
-<li>检测的名称：XXTEST；</li>
-<li>检测名称的标准缩写：XXTESTCD，CDISC 中规定或者药厂自行规定；</li>
-<li>检测分类：XXCAT，XXSCAT；</li>
-<li>检测结果和对应的单位：XXORRES，XXORRESU；</li>
-<li>检测的标准化结果（取国际通用单位）：XXSTRESC：字符型结果，XXSTRESN：数值型结果，XXSTRESU：标准储存单位；</li>
-<li>患者来访的名称和次数：VISIT，VISITNUM（没有前缀）；</li>
-<li>时间类型变量：XXDTC/DY（检测时间和距离实验开始天数），比如 LBDTC 代表记录血检/尿检的检测时间，QSDTC 代表记录问卷填写的检测时间。</li>
-</ul>
-<h2 id="发现相关类数据集-findings-about">发现相关类数据集 Findings About</h2>
-<p>也算是发现类的一种类型，之所以叫发现相关类是因为收集的数据不像发现类那么标准，主要包括以下两类：</p>
-<ul>
-<li>FA：Findings About，除了 FATEST 以外还有一个 FAOBJ，表示实验的对象</li>
-<li>SR：Skin Response</li>
-</ul>
-<h2 id="实验设计类-trial-design">实验设计类 Trial design</h2>
-<p>实验设计类记录实验设计相关的内容。这些数据一般都是从统计分析计划的 SAP 中直接获得，查看这些数据集可以帮我们理解实验是如何设计的。主要包括如下 6 个数据集：</p>
-<ul>
-<li>TA：实验分组 Trial Arms</li>
-<li>TD：实验疾病数据 Trial Disease Assessment</li>
-<li>TE：实验时期元素 Trial Elements</li>
-<li>TV：实验来访计划 Trial Visits</li>
-<li>TI：实验纳入排除标准 Trial Inclusion / Exclusion Criteria</li>
-<li>TS：实验总结 Trial Summary</li>
-</ul>
-<h2 id="relationship-关系类">Relationship 关系类</h2>
-<p>主要包括以下 2 个数据集：</p>
-<ul>
-<li>RELREC：关系数据，比如一个患者的副作用被医生发现是由于伴随用药表引起的，那么应该有一个记录将副作用和伴随用药记录连接起来。</li>
-<li>SUPP：补充数据集，之前讲过，可以用于补充任何一个标准 SDTM 数据集，命名为 SUPP + XX（关联的数据集名字）；</li>
-</ul>
-<h2 id="其他内容">其他内容</h2>
-<h3 id="supp-补充数据集">SUPP 补充数据集</h3>
-<p>每一个 SDTM 数据集都可以用一个补充数据集，用来存放<strong>与主数据集相关的数据</strong>；</p>
-<ul>
-<li>名称是 SUPP + XX（原始数据集名字），比如 LB 对应的就是 SUPPLB；</li>
-<li>举例：
-<ul>
-<li>SUPPDM 中放置实验人口的 FLAG（包括 ITT，PPROT）;</li>
-<li>SUPPAE 放置是否是实验期间副作用和非实验期间副作用的标识 TRTEM；</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/05/03/Kzeh2c3TsIyH4MN.png" alt="Snipaste_2023-05-03_14-28-22.png"></p>
-<p>SUPP 数据集下面总共有 10 个变量：</p>
-<ul>
-<li>STUDYID，USUBJID：通用变量，不赘述；</li>
-<li>RDOMAIN：对应的主数据集，举例，如果对应的是 AE，RDOMAIN 值为 AE；</li>
-<li>IDVAR，IDVARVAL：在每名患者有多条记录的时候使用，需要指出对应主数据集的哪条记录，比如如果需要对应 AE 中的 AESEQ，那么 IDVAR 的值就是 AESEQ，IDVARVAL 的值就是对应的记录条数（但需要注意转化为字符型）；</li>
-<li>QNAM：描述一下所定义的值是什么意思，但只能使用不长于 8 位数的字符；</li>
-<li>QLABEL：不超过 40 个字符来描述这个值是什么意思；</li>
-<li>QVAL：具体的数据值是多少；</li>
-<li>QORIG：这个值是如何获取的，比如 CRF（原始数据收集）、ASSIGNED（根据一些条件直接赋值）、DERIVED（通过计算和逻辑分类得到的）；</li>
-<li>QEVAL：Evaluator，表示谁来完成的这次变量；</li>
-</ul>
-<p>实战创建一个补充数据集 SUPPAE，以便加深理解：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SAS" data-lang="SAS"><span style="display:flex;"><span><span style="color:#66d9ef">data </span>ae;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">set</span> data<span style="color:#ae81ff">.</span>ae_trtem;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">input</span>(rfstdtc, yyddmm10.) &lt;= <span style="color:#66d9ef">input</span>(substr(aestdtc, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10</span>), yymmdd10.) &lt;= <span style="color:#66d9ef">input</span>(rfendtc, yymmdd10.) + <span style="color:#ae81ff">14</span> <span style="color:#66d9ef">then</span> trtem=<span style="color:#e6db74">&#39;Y&#39;</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">else</span> trtem=<span style="color:#e6db74">&#39;N&#39;</span><span style="color:#66d9ef">;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SAS" data-lang="SAS"><span style="display:flex;"><span><span style="color:#75715e">/* Merge DS and DM1 to catch DSDECOD, DSSTDTC */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">proc sql;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">create</span> <span style="color:#66d9ef">table</span> DM2 <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">select</span> a.*, b<span style="color:#ae81ff">.</span>DSDECOD, DSSTDTC 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">from</span> DM1 a left join sdtm<span style="color:#ae81ff">.</span>DS b <span style="color:#66d9ef">on</span> a<span style="color:#ae81ff">.</span>USUBJID=b<span style="color:#ae81ff">.</span>USUBJID<span style="color:#66d9ef">;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">quit;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* Derive EOSDT, EOSSTT variables */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">data </span>DM3;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">set</span> DM2;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">length</span> EOSDT <span style="color:#ae81ff">8</span> EOSSTT $<span style="color:#ae81ff">20</span>.;
+</span></span><span style="display:flex;"><span>  EOSDT = <span style="color:#66d9ef">input</span>(substr(DSSTDTC, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10</span>), yymmdd10.);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> DSDECOD=<span style="color:#e6db74">&#34;COMPLETED&#34;</span> <span style="color:#66d9ef">then</span> EOSSTT=<span style="color:#e6db74">&#34;COMPLETED&#34;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">else</span> EOSSTT=<span style="color:#e6db74">&#34;DISCONTINUED&#34;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">format</span> EOSDT yymmdd10.<span style="color:#66d9ef">;
 </span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">run;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">options</span> validvarname=upcase<span style="color:#66d9ef">;
-</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">data </span>suppae;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">retain</span> studyid rdomain usubjid idvar idvarval qnam qlabel qval qorig qeval;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">set</span> ae;
-</span></span><span style="display:flex;"><span>  rdomain = <span style="color:#e6db74">&#39;AE&#39;</span>;
-</span></span><span style="display:flex;"><span>  idvar = <span style="color:#e6db74">&#39;AESEQ&#39;</span>;
-</span></span><span style="display:flex;"><span>  idvarval = strip(<span style="color:#66d9ef">put</span>(aeseq, best.));
-</span></span><span style="display:flex;"><span>  qnam = <span style="color:#e6db74">&#39;TRTEM&#39;</span>;
-</span></span><span style="display:flex;"><span>  qlabel = <span style="color:#e6db74">&#39;Treatment-Emergent Adverse Event&#39;</span>;
-</span></span><span style="display:flex;"><span>  qval = trtem;
-</span></span><span style="display:flex;"><span>  qorig = <span style="color:#e6db74">&#39;DERIVED&#39;</span>;
-</span></span><span style="display:flex;"><span>  qeval = <span style="color:#e6db74">&#39;&#39;</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">keep</span> studyid usubjid rdomain idvar idvarval qnam qlabel qval qorig qeval<span style="color:#66d9ef">;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* Sort data set SDTM.EX by USUBJID, EXESTDC without duplicate values */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">proc sort </span>data=sdtm<span style="color:#ae81ff">.</span>EX <span style="color:#66d9ef">out</span>=EX nodupkey;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">by</span> USUBJID EXESTDC EXENDTC<span style="color:#66d9ef">;
 </span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">run;</span>
-</span></span></code></pre></div><h3 id="自定义数据集">自定义数据集</h3>
-<p>CUSTOM DOMAIN 自定义数据集。因为临床试验毕竟有一些不同，为了保留自由度，SDTM 提供了自定义数据集允许创建一些需要定义的数据集。</p>
-<p>在创建自定义数据集时，需要遵守以下步骤：</p>
-<ul>
-<li><strong>仔细阅读 SDTM IG 文件</strong>，查看是否自己想要使用的变量内容确实无法归类到任何一个已经提供的标准数据集之中；</li>
-<li>确定自己的数据集类别，是干涉类，发现类还是事件类，给自定义数据集搭建一个基本的框架；</li>
-<li>找到每个类别中的几个数据集，找到共同存在的 required 变量，看看自己的数据如何放置在这些变量之中；如果实在无法容纳，就添加额外的变量。比如 LBFAST 变量表示是否空腹，如果你的数据集中也有需要表示是否空腹的变量，也需要使用 XXFAST 作为变量名。</li>
-</ul>
-<p>同时在创建自定义数据集需要注意：</p>
-<ul>
-<li><strong>数据集命名以 XYZ 开头+两位大写字母</strong>，可以保证在所有标准数据集之后；</li>
-<li><strong>部分变量的命名依然需要遵守标准</strong>，比如 STUDYID 和 USUBJID；</li>
-<li><strong>不同分类的数据集的变量命名规则不同</strong>，比如干涉类里干涉的名称放在 TRT 变量中、事件类里事件名称放置在 TERM 和 DECODE 这两个变量中，发现类所有的测试名放在 TEST 变量中，测量值和单位放在 ORRES 和 ORRESU 中。</li>
-</ul>
-<h3 id="控制术语-controlled-terminology">控制术语 Controlled Terminology</h3>
-<p>控制术语（Controlled Terminology） 是对 SDTM 里某些特定变量的值进行规范的一套规定。在查看 SDTM IG 的时候，经常会看到 Controlled Terms 这一项中有一些不为空的部分：</p>
-<p><img src="https://s2.loli.net/2023/05/03/Kzeh2c3TsIyH4MN.png" alt="Snipaste_2023-05-03_14-28-22.png"></p>
-<p>这就表示这个变量的值并不是我们想写什么就能写什么，<strong>必须按照给定的规范进行赋值</strong>。在 SDTM IG 文件中点击这些蓝色的链接，再结合搜索，就可以查看详细的规定：</p>
-<p><img src="https://s2.loli.net/2023/05/03/qWtvQJbNIZg14lH.png" alt="Snipaste_2023-05-03_15-02-18.png"></p>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">data </span>EX1 EX2;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">set</span> EX;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">by</span> USUBJID EXSTDTC EXENDTC;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* Create dataset EX1 if the first.USUBJID statement */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* Cretae dataset EX2 if the last.USUBJID statement */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> first<span style="color:#ae81ff">.</span>USUBJID <span style="color:#66d9ef">then</span> <span style="color:#66d9ef">output</span> EX1;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> last<span style="color:#ae81ff">.</span>USUBJID <span style="color:#66d9ef">then</span> <span style="color:#66d9ef">output</span> EX2<span style="color:#66d9ef">;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">run;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* Create data set DM4 and DM5 */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">proc sql;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">create</span> <span style="color:#66d9ef">table</span> DM4 <span style="color:#66d9ef">as</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">select</span> a.*, b<span style="color:#ae81ff">.</span>EXSTDTC 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">from</span> DM3 a left join EX1 b <span style="color:#66d9ef">on</span> a<span style="color:#ae81ff">.</span>USUBJID=b<span style="color:#ae81ff">.</span>USUBJID;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">create</span> <span style="color:#66d9ef">table</span> DM5 <span style="color:#66d9ef">as</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">select</span> a.*, b<span style="color:#ae81ff">.</span>EXENDTC
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">from</span> DM4 a left join EX2 b <span style="color:#66d9ef">on</span> a<span style="color:#ae81ff">.</span>USUBJID=b<span style="color:#ae81ff">.</span>USUBJID<span style="color:#66d9ef">;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">quit;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">data </span>FINAL;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">set</span> DM5;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* Derive TRT01SDTM, TRT01SDT, TRT01EDTM, TRT01EDT */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">length</span> TRT01SDTM TRT01SDT TRT01EDTM TRT01EDT <span style="color:#ae81ff">8</span>.;
+</span></span><span style="display:flex;"><span>  TRT01SDTM = <span style="color:#66d9ef">input</span>(EXSTDTC, e8601dt.);
+</span></span><span style="display:flex;"><span>  TRT01SDT = <span style="color:#66d9ef">input</span>(substr(EXSTDTC, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10</span>), yymmdd10.);
+</span></span><span style="display:flex;"><span>  TRT01EDTM = <span style="color:#66d9ef">input</span>(EXENDTC, e8601dt.);
+</span></span><span style="display:flex;"><span>  TRT01EDT = <span style="color:#66d9ef">input</span>(substr(EXENDTC, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10</span>), yymmdd10.);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">format</span> TRT01SDTM TRT01EDTM e8601dt. TRT01SDT TRT01EDT yymmdd10.<span style="color:#66d9ef">;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">run;</span>
+</span></span></code></pre></div><h3 id="第三部分">第三部分</h3>
+<p>主要包括声明 libname、校正所有变量的 label 和 length，以及变量顺序：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SAS" data-lang="SAS"><span style="display:flex;"><span><span style="color:#66d9ef">libname</span> ADAM <span style="color:#e6db74">&#34;.../directory&#34;</span><span style="color:#66d9ef">;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">data </span>ADAM<span style="color:#ae81ff">.</span>ADSL(<span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Subject-Level Analysis Data set&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/*Assign variable attributes such as label and length to conform with ADAM.ADSL
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  Specification (these will also be the same attributes as the ADAM IG). */</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">attrib</span>
+</span></span><span style="display:flex;"><span>  STUDYID <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Study Identifier&#34;</span> <span style="color:#66d9ef">length</span>=$<span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>  USUBJID <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Unique Subject Identifier&#34;</span> <span style="color:#66d9ef">length</span>=$<span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>  SUBJID <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Subject Identifier for the Study&#34;</span> <span style="color:#66d9ef">length</span>=$<span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>  SITEID <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Study Site Identifier&#34;</span> <span style="color:#66d9ef">length</span>=$<span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>  BRTHDTC <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Date/Time of Birth&#34;</span> <span style="color:#66d9ef">length</span>=$<span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>  AGE <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Age&#34;</span> <span style="color:#66d9ef">length</span>=<span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span>  AGEU <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Age Units&#34;</span> <span style="color:#66d9ef">length</span>=$<span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>  SEX <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Sex&#34;</span> lenght=$<span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>  RACE <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Race&#34;</span> <span style="color:#66d9ef">length</span>=$<span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>  ARACE <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Analysis Race&#34;</span> <span style="color:#66d9ef">length</span>=$<span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>  ETHNIC <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Ethnicity&#34;</span> <span style="color:#66d9ef">length</span>=$<span style="color:#ae81ff">60</span>
+</span></span><span style="display:flex;"><span>  AETHNIC <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Analysis Ethnicity&#34;</span> <span style="color:#66d9ef">length</span>=$<span style="color:#ae81ff">60</span>
+</span></span><span style="display:flex;"><span>  SAFFL <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Safety Population Flag&#34;</span> <span style="color:#66d9ef">length</span>=$<span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>  ARM <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Description of Planned Arm&#34;</span> <span style="color:#66d9ef">length</span>=$<span style="color:#ae81ff">200</span>
+</span></span><span style="display:flex;"><span>  ARMCD <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Planned Arm Code&#34;</span> <span style="color:#66d9ef">length</span>=$<span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>  ACTARMCD <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Actual Arm Code&#34;</span> <span style="color:#66d9ef">length</span>=$<span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>  ACTARM <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Description of Actual Arm&#34;</span> <span style="color:#66d9ef">length</span>=$<span style="color:#ae81ff">200</span>
+</span></span><span style="display:flex;"><span>  TRT01P <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Planned Treatment for Period 1&#34;</span> <span style="color:#66d9ef">length</span>=$<span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>  TRT01A <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Actual Treatment for Period1&#34;</span> <span style="color:#66d9ef">length</span>=$<span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>  RFSTDTC <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Subject Reference Start Date/Time&#34;</span> <span style="color:#66d9ef">length</span>=$<span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>  RFENDTC <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Subject Reference End Date/Time&#34;</span> <span style="color:#66d9ef">length</span>=$<span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>  TRTSDT <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Date of First Exposure to Treatment&#34;</span> <span style="color:#66d9ef">length</span>=<span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span>  TRTSTM <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Time of First Exposure to Treatment&#34;</span> <span style="color:#66d9ef">length</span>=<span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span>  TRT01SDTM <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Datetime of First Exposure in Period 1&#34;</span> <span style="color:#66d9ef">length</span>=<span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span>  TRT01SDT <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Date of First Exposure of Period 1&#34;</span> <span style="color:#66d9ef">length</span>=<span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span>  TRTEDT <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Date of Last Exposure to Treatment&#34;</span> <span style="color:#66d9ef">length</span>=<span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span>  TRTETM <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Time of Last Exposure to Treatment&#34;</span> <span style="color:#66d9ef">length</span>=<span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span>  TRT01EDTM <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Datetime of Last Exposure in Period 1&#34;</span> <span style="color:#66d9ef">length</span>=<span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span>  TRT01EDT <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Date of Last Exposure in Period 1&#34;</span> <span style="color:#66d9ef">length</span>=<span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span>  EOSSTT <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;End of Study Status&#34;</span> <span style="color:#66d9ef">length</span>=$<span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>  EOSDT <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;End of Study&#34;</span> <span style="color:#66d9ef">length</span>=<span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span>  COUNTRY <span style="color:#66d9ef">label</span>=<span style="color:#e6db74">&#34;Country&#34;</span> <span style="color:#66d9ef">length</span>=$<span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>  ;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">set</span> FINAL;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">keep</span> STUDYID USUBJID SUBJID SITEID BRTHDTC AGE AGEU SEX RACE ARACE ETHNIC
+</span></span><span style="display:flex;"><span>  AETHNIC SAFFL ARM ARMCD ACTARMCD ACTARM TRT01P TRT01A RFSTDTC RFENDTC TRTSDT 
+</span></span><span style="display:flex;"><span>  TRTSTM TRT01SDTM TRT01SDT TRTEDT TRTETM TRT01EDTM TRT01EDT EOSSTT EOSDT COUNTRY
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">run;</span>
+</span></span></code></pre></div><p>这样就完成了一个初步练习。</p>
 
 
             </div>

@@ -6,7 +6,19 @@
     <description>Recent content in CDISC on XZY&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 02 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/tags/cdisc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/tags/cdisc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ADSL 数据集的建立：练习示例</title>
+      <link>https://www.xzywisdili.com/post/2023-05-08-adslexample/</link>
+      <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/post/2023-05-08-adslexample/</guid>
+      <description>总结 通过一则创立 ADSL 数据集的练习示例加深对 ADSL 数据集的理解； ADSL（Subject-Level Analysis Data Set） 是 ADaM 中的一种数据集，特点是每一行是一个单独患者的记录（类似 SDTM 中的 DM 数据集），主要包括的变量有：
+Demographic 相关的变量； 计划和实际的 Treatment 相关变量； 是否为 &amp;ldquo;Safety&amp;rdquo; 的患者标识 flag ADSL 的建立过程中，一般需要从 SDTM Domain 中的数个数据集合并而来：
+DM 中的大部分变量 EX (Exposure)，DS (Disposition) 和其他 SDTM Domain ADSL 的结构 ADSL 的结构是一行记录代表一个患者，包括 Identifier，Demographics, Population flags, treatment, dose 和其他 subject-level 的变量。下面一一进行分析。
+Identifier 变量 STUDYID, USUBJID, SUBJID, SITEID，在存在于 DM 中； Subject Demographics 变量 AGE：DM.AGE，如果分析需要 derive 一个 age 出来，需要添加 AAGE 变量； AGEU、SEX、RACE：都从 DM 中合并过来； Population Flag 变量 FASFL：全分析数据集的标识 SAFFL：Safety Population 的标识 Dose 变量 TRTSDT、TRTSDTM：分别是 Treatment 中第一次服药的日期和日期时间； TRTxxSDTF：xx一般是两位数字，代表第几个阶段，也就是第几个阶段的TRT； TRTSDTF：第一次服药的标识。 Subject-Level Trial Experience 变量 EOSDT：研究结束的日期 EOSSTT：研究结束的状态，比如取值“COMPLETED” 阅读和熟悉 ADSL 的 Spec 熟悉 ADSL 的 Spec，对于我们初学制作 ADSL 的合并数据集过程非常有帮助。</description>
+    </item>
+    
     <item>
       <title>CDISC 标准（五）——ADaM 标准概述</title>
       <link>https://www.xzywisdili.com/post/2023-05-02-cdiscnotes5/</link>
