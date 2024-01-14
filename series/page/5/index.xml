@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>轻松愉快地开始使用 Rmarkdown</title>
+      <link>https://www.xzywisdili.com/2017/12/2017-12-23-rmarkdown/</link>
+      <pubDate>Sat, 23 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2017/12/2017-12-23-rmarkdown/</guid>
+      <description>R 语言世界里的一个大杀器。 我想，在所有接触和学习 R 语言的初学者（当然包括我）眼里，有两个东西是相当酷的。一个是 shiny，可以轻松做出交互式</description>
+    </item>
+    
+    <item>
       <title>dplyr 包里面必会的处理数据方法</title>
       <link>https://www.xzywisdili.com/2017/12/2017-12-19-datatransform/</link>
       <pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate>

@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Thu, 28 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jan 2024 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.xzywisdili.com/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>对数据进行填补</title>
+      <link>https://www.xzywisdili.com/2021/06/2021-06-09-mergeandkeepdata/</link>
+      <pubDate>Wed, 09 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2021/06/2021-06-09-mergeandkeepdata/</guid>
+      <description>今天整理数据的时候，需要使用数据集 2 对数据集 1 里缺失的部分进行填补，而两者重复的部分，优先保留数据集 1 里的。 这个问题其实很简单，只需短短 2-3 行</description>
+    </item>
     
     <item>
       <title>推荐且收藏的好网站</title>
@@ -181,15 +190,6 @@
       
       <guid>https://www.xzywisdili.com/2019/09/2019-09-23-rmap/</guid>
       <description>前言 大约一个月前，接到一个任务：绘制全国的患病率地图，就草草做了一个初版，当时还做了一个 ppt 和组里的小伙伴分享。 直到后来，才知道这种图有一个专</description>
-    </item>
-    
-    <item>
-      <title>这一周（9.9-9.15）</title>
-      <link>https://www.xzywisdili.com/2019/09/2019-09-16-weeknote/</link>
-      <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.xzywisdili.com/2019/09/2019-09-16-weeknote/</guid>
-      <description>晚上在全屏看视频的时候，不小心按到了一个键，直接调用了电脑的前置摄像头， 满屏出现我的大脸，差点没把我吓到凳子下面。 过去的一周前半程处于期待中</description>
     </item>
     
   </channel>

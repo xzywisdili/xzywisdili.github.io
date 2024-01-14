@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Thu, 29 Jun 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jan 2024 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.xzywisdili.com/tags/%E5%88%86%E4%BA%AB/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>R语言绘制中国地图改进版！博客里的旧教程可以丢掉了！</title>
+      <link>https://www.xzywisdili.com/2024/01/2024-01-15-new_map_plot/</link>
+      <pubDate>Sun, 14 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2024/01/2024-01-15-new_map_plot/</guid>
+      <description>依稀记得2020年前后，搞定了标准中国地图（包括九段线）的分层设色图的绘制，非常得意地写了教程。但是最近，又需要做一个类似的任务，突然发现，</description>
+    </item>
     
     <item>
       <title>营养干预的一点小思考</title>
@@ -181,15 +190,6 @@
       
       <guid>https://www.xzywisdili.com/2022/11/2022-11-08-sasadvance/</guid>
       <description>今天终于通过了 SAS Advance 的考试。有一些最新的备考和考试过程的经验可以跟大家分享一下。 这篇攻略我会从两个方面来说，分别是备考篇和考试篇。 备考篇 SAS Advance 的</description>
-    </item>
-    
-    <item>
-      <title>【把书读薄05】向心城市：带你了解现代城市的发展规律</title>
-      <link>https://www.xzywisdili.com/2022/10/2022-10-19-bookreview05/</link>
-      <pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.xzywisdili.com/2022/10/2022-10-19-bookreview05/</guid>
-      <description>总结 《向心城市》中作者通过大量的数据分析实证，介绍了城市的发展规律、为什么“向心城市”是发展趋势，以及城市化带来的各种方面的内容分析； 评分：</description>
     </item>
     
   </channel>

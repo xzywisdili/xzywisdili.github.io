@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Thu, 29 Jun 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jan 2024 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.xzywisdili.com/tags/%E5%88%86%E4%BA%AB/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>这一周（9.9-9.15）</title>
+      <link>https://www.xzywisdili.com/2019/09/2019-09-16-weeknote/</link>
+      <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2019/09/2019-09-16-weeknote/</guid>
+      <description>晚上在全屏看视频的时候，不小心按到了一个键，直接调用了电脑的前置摄像头， 满屏出现我的大脸，差点没把我吓到凳子下面。 过去的一周前半程处于期待中</description>
+    </item>
     
     <item>
       <title>计程车人生</title>
@@ -189,15 +198,6 @@
       
       <guid>https://www.xzywisdili.com/2017/12/2017-12-30-reading/</guid>
       <description>&lt;p&gt;自从 2016 年起，我逼自己养成一个习惯，每年准备一个记录阅读情况的 Excel 表格。一开始的时候，满怀热情，又是搞了图表，又是自学了 VBA 编程，然后模仿 Github 代码记录写了一个玩意儿——365 天对应 365 个小方格，每天读的页数越多，这天就越绿。当时熬夜完成的时候还特兴奋，但后来证明，没多大蛋用。当然读书记录这方法成效斐然，我在 2016 年读完了整整 40 本书！（要知道我以前一年可能翻不完一本书）&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>轻松愉快地开始使用 Rmarkdown</title>
-      <link>https://www.xzywisdili.com/2017/12/2017-12-23-rmarkdown/</link>
-      <pubDate>Sat, 23 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.xzywisdili.com/2017/12/2017-12-23-rmarkdown/</guid>
-      <description>R 语言世界里的一个大杀器。 我想，在所有接触和学习 R 语言的初学者（当然包括我）眼里，有两个东西是相当酷的。一个是 shiny，可以轻松做出交互式</description>
     </item>
     
   </channel>
