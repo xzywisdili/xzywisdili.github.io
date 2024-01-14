@@ -5,12 +5,57 @@
     <link>https://www.xzywisdili.com/tags/%E7%AE%97%E6%B3%95/</link>
     <description>Recent content in 算法 on Pure theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh</language>
     <copyright>CC BY 4.0 CN</copyright>
     <lastBuildDate>Thu, 05 Oct 2017 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.xzywisdili.com/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>营养干预的一点小思考</title>
+      <link>https://www.xzywisdili.com/2023/09/2023-09-16-nutritionthoughts/</link>
+      <pubDate>Sat, 16 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/09/2023-09-16-nutritionthoughts/</guid>
+      <description>最近和朋友聊关于营养干预、补充的一些话题，而且关于营养相关的内容也经常上热搜，比如“防猝死套餐”等等。 我其实就在想，其实有很多人有营养方面的</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄08】《一流工作者都在用的待办清单》：平平无奇的待办清单101</title>
+      <link>https://www.xzywisdili.com/2023/06/2023-06-29-bookreview08/</link>
+      <pubDate>Thu, 29 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/06/2023-06-29-bookreview08/</guid>
+      <description>总结 《一流工作者都在用的待办清单》是一本不到200页的效率类小书，简单讲了使用待办清单的基础原则和推荐的使用方式； 书中内容比较简单易懂，读起</description>
+    </item>
+    
+    <item>
+      <title>Telegram 破解限制下载方法（2023年6月亲测可用）</title>
+      <link>https://www.xzywisdili.com/2023/06/2023-06-04-telegramrestric/</link>
+      <pubDate>Sun, 04 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/06/2023-06-04-telegramrestric/</guid>
+      <description>Telegram 在早前推出了「限制下载」功能。只要群主在其群或者频道勾选了限制下载，那么用户是没有办法使用传统方法下载其中的文件的。当然，也有一些民间大神</description>
+    </item>
+    
+    <item>
+      <title>使用 R 完成一个小小的时间条可视化</title>
+      <link>https://www.xzywisdili.com/2023/05/2023-05-31-userfortimeannotate/</link>
+      <pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/05/2023-05-31-userfortimeannotate/</guid>
+      <description>任务背景 在制作了一系列视频的时候，我们在每个视频的片头放置了一个渐显和渐隐的元素。但是不同的视频中，这个元素出现和消失的时间是不同的。我们需</description>
+    </item>
+    
+    <item>
+      <title>Prompt 教程基础篇（一）</title>
+      <link>https://www.xzywisdili.com/2023/05/2023-05-15-promptbasic01/</link>
+      <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/05/2023-05-15-promptbasic01/</guid>
+      <description>总结 本文介绍了 GPT 使用中编写 prompt 的三个基本用法和原则：清晰准确、提供示例、角色扮演。 ChatGPT 越来越成为工作中的必备工具之一。而使用 ChatGPT 的关键步骤就是编写</description>
+    </item>
     
     <item>
       <title>ADSL 数据集的建立：练习示例</title>
@@ -22,21 +67,21 @@
     </item>
     
     <item>
-      <title>CDISC 标准（五）——ADaM 标准概述</title>
-      <link>https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes5/</link>
-      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes5/</guid>
-      <description>总结 ADaM 标准实为了让临床试验统计分析人员梗快速、标准准确地进行统计分析和制作报表的标准； ADaM 主要分为三类数据集：ADSL，BDS 和 OCCDS； 详</description>
-    </item>
-    
-    <item>
       <title>CDISC 标准（四）——SDTM 数据集详细分类</title>
       <link>https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes4/</link>
       <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes4/</guid>
       <description>总结 本笔记的主要内容： 介绍 SDTM 标准下的七个大类别，以及主要包括的数据集； 梳理两个最重要的数据集：AE（副作用数据集）和 LB（实验室检测结果数据</description>
+    </item>
+    
+    <item>
+      <title>CDISC 标准（五）——ADaM 标准概述</title>
+      <link>https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes5/</link>
+      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes5/</guid>
+      <description>总结 ADaM 标准实为了让临床试验统计分析人员梗快速、标准准确地进行统计分析和制作报表的标准； ADaM 主要分为三类数据集：ADSL，BDS 和 OCCDS； 详</description>
     </item>
     
     <item>
@@ -145,51 +190,6 @@
       
       <guid>https://www.xzywisdili.com/2022/10/2022-10-19-bookreview05/</guid>
       <description>总结 《向心城市》中作者通过大量的数据分析实证，介绍了城市的发展规律、为什么“向心城市”是发展趋势，以及城市化带来的各种方面的内容分析； 评分：</description>
-    </item>
-    
-    <item>
-      <title>动态页面的爬虫示例一则：抓取微博粉丝列表</title>
-      <link>https://www.xzywisdili.com/2022/10/2022-10-05-dynamichtmlspider/</link>
-      <pubDate>Wed, 05 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.xzywisdili.com/2022/10/2022-10-05-dynamichtmlspider/</guid>
-      <description>在碰到一些网页，想通过爬虫抓取页面信息的时候，会发现网页采用了一些动态 HTML 的相关技术来展示信息。这样直接使用 requests 是无法直接获取想要的 HTML 元素内容的</description>
-    </item>
-    
-    <item>
-      <title>【把书读薄04】一日两餐：找回身体代谢灵活性的新饮食理念</title>
-      <link>https://www.xzywisdili.com/2022/09/2022-09-26-bookreview04/</link>
-      <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.xzywisdili.com/2022/09/2022-09-26-bookreview04/</guid>
-      <description>总结 《一日两餐》想让我们通过限制碳水摄入和间歇性禁食这两个重要手段来摆脱未来的胰岛素抵抗； 书中的大量内容更像是别处观点的拼凑，同时时不时夹杂</description>
-    </item>
-    
-    <item>
-      <title>【把书读薄03】锻炼：丹尼尔·利伯曼教授对健康迷思的一一解答</title>
-      <link>https://www.xzywisdili.com/2022/09/2022-9-21-bookreview03/</link>
-      <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.xzywisdili.com/2022/09/2022-9-21-bookreview03/</guid>
-      <description>总结 《锻炼》通过人类进化学和现代医学研究两方面，对广泛流传的各种健康迷思进行了验证和解释； 关于久坐、睡眠、运动损伤、运动与衰老等等话题，你一</description>
-    </item>
-    
-    <item>
-      <title>【医学预测01】Logistic 回归构建变量筛选：先单后多</title>
-      <link>https://www.xzywisdili.com/2022/09/2022-09-07-rlogistic01/</link>
-      <pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.xzywisdili.com/2022/09/2022-09-07-rlogistic01/</guid>
-      <description>总结 介绍了 Logistic 回归模型构建过程中的一种变量筛选方式——先单后多； 配合对应的代码实例和结果解释，让方法更加清楚，同时便于日后复习查看。 在 Logistic 回归模</description>
-    </item>
-    
-    <item>
-      <title>【把书读薄02】开启高质量沟通的第1分钟</title>
-      <link>https://www.xzywisdili.com/2022/09/2022-09-05-bookreview02/</link>
-      <pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.xzywisdili.com/2022/09/2022-09-05-bookreview02/</guid>
-      <description>总结 《开启高质量沟通的第一分钟》目标是让职场工作沟通的双方可以通过一段简短的引言快速进入良好的沟通节奏； 书中凝练了一套沟通结构：沟通框架（背</description>
     </item>
     
   </channel>

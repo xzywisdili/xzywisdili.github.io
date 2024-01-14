@@ -5,12 +5,57 @@
     <link>https://www.xzywisdili.com/categories/%E5%BD%B1%E8%AF%84/</link>
     <description>Recent content in 影评 on Pure theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh</language>
     <copyright>CC BY 4.0 CN</copyright>
     <lastBuildDate>Sat, 26 Oct 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.xzywisdili.com/categories/%E5%BD%B1%E8%AF%84/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>计程车人生</title>
+      <link>https://www.xzywisdili.com/2019/09/2019-09-15-taxidriver/</link>
+      <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2019/09/2019-09-15-taxidriver/</guid>
+      <description>You talking to me（你在和我说话吗）？ 看过 出租车司机 之后，我本想把朋友圈的封面换成 坐在出租车内的德尼罗，但奈何绿色聊天软件对于图片糟糕的裁剪只能作罢</description>
+    </item>
+    
+    <item>
+      <title>好一个中秋</title>
+      <link>https://www.xzywisdili.com/2019/09/2019-09-13-midautumn/</link>
+      <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2019/09/2019-09-13-midautumn/</guid>
+      <description>悲报：2019年的我，只能做6个标准俯卧撑了。 对，没错，在中秋节这天晚上，如此适合聚会的日子，我去健身了。 还好回来的路上抬了头，没有错过月亮</description>
+    </item>
+    
+    <item>
+      <title>一点碎碎念</title>
+      <link>https://www.xzywisdili.com/2019/09/2019-09-12-thoughts/</link>
+      <pubDate>Thu, 12 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2019/09/2019-09-12-thoughts/</guid>
+      <description>刚刚以老年人的配速跑完了2km，不过实在太喜欢这种在雨后大口呼吸空气的感觉了。 清新的空气确实能让人头脑更加清醒，整个身体也更有活力。 也不知是</description>
+    </item>
+    
+    <item>
+      <title>再也敏感不起来</title>
+      <link>https://www.xzywisdili.com/2019/09/2019-09-11-thoughts/</link>
+      <pubDate>Wed, 11 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2019/09/2019-09-11-thoughts/</guid>
+      <description>今天本来想总结一下这阵子使用 R 代码画地图的一些心得，但写到半夜 12 点半才写到一半，无奈今天无法更新。 眼睛打架之时开始翻看 eBooksPlan 的 Telegram群</description>
+    </item>
+    
+    <item>
+      <title>这一周（9.2-9.8）</title>
+      <link>https://www.xzywisdili.com/2019/09/2019-09-09-weeknote/</link>
+      <pubDate>Mon, 09 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2019/09/2019-09-09-weeknote/</guid>
+      <description>“开学”这个词像一层乌云笼罩了我至少十余载的青春岁月，9月1日的到来也宣示着暑假的结束，对于学生来说自然苦不堪言。 但今年我却没有太大感觉，一</description>
+    </item>
     
     <item>
       <title>一周总结（8.26-9.1）</title>
@@ -153,51 +198,6 @@
       
       <guid>https://www.xzywisdili.com/2017/12/2017-12-23-rmarkdown/</guid>
       <description>R 语言世界里的一个大杀器。 我想，在所有接触和学习 R 语言的初学者（当然包括我）眼里，有两个东西是相当酷的。一个是 shiny，可以轻松做出交互式</description>
-    </item>
-    
-    <item>
-      <title>dplyr 包里面必会的处理数据方法</title>
-      <link>https://www.xzywisdili.com/2017/12/2017-12-19-datatransform/</link>
-      <pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.xzywisdili.com/2017/12/2017-12-19-datatransform/</guid>
-      <description>&lt;p&gt;最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看。最近学习的很简单，就是 &lt;code&gt;dplyr&lt;/code&gt; 包里面最基础的 5 种数据处理方法。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>R 语言的那些最最最基础</title>
-      <link>https://www.xzywisdili.com/2017/11/2017-11-21-rbasic/</link>
-      <pubDate>Tue, 21 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.xzywisdili.com/2017/11/2017-11-21-rbasic/</guid>
-      <description>在 R 语言 的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么</description>
-    </item>
-    
-    <item>
-      <title>光棍节初探 TensorFlow（一）：数据集的预处理</title>
-      <link>https://www.xzywisdili.com/2017/11/2017-11-12-tensorflow01/</link>
-      <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.xzywisdili.com/2017/11/2017-11-12-tensorflow01/</guid>
-      <description>11 月 11 日这天注定对我具有了一定的意义。不是因为它是购物狂欢节或光棍节，而是因为在这一天，我第一次尝试使用 TensorFlow 搭建了一个简单的神经网络。我希望用</description>
-    </item>
-    
-    <item>
-      <title>为什么要使用 LaTeX 呢？</title>
-      <link>https://www.xzywisdili.com/2017/10/2017-10-23-why-latex/</link>
-      <pubDate>Mon, 23 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.xzywisdili.com/2017/10/2017-10-23-why-latex/</guid>
-      <description>&lt;p&gt;这个标题其实不是我对我自己的诘问。作为一个医学生，在习惯使用 LaTeX 完成日常的作业或是论文时，总会有几个同学凑上前来，好奇地问这是个什么样的写作工具。在我做一番简要的介绍后，他们或许会表露出感兴趣，或称赞的神情，然后问下一个重复了很多遍的问题：为什么要使用 LaTeX 呢？&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>「翻译」如何用 Python 画出像 FiveThirtyEight 那么棒的图表</title>
-      <link>https://www.xzywisdili.com/2017/10/2017-10-15-trans01/</link>
-      <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.xzywisdili.com/2017/10/2017-10-15-trans01/</guid>
-      <description>&lt;p&gt;如果你经常读数据科学领域的文章的话，你可能会偶然发现 &lt;a href=&#34;http://fivethirtyeight.com&#34;&gt;FiveThirtyEight&lt;/a&gt; 上的内容，然后被他们惊艳的图表迷住。于是你自己也想制作如此出色的可视化作品，于是去 Quora 和 Reddit 上问怎么做。你收到了几个回答，但是这些回答都很模糊。你还是不知道怎么搞定这样的图表。&lt;/p&gt;</description>
     </item>
     
   </channel>

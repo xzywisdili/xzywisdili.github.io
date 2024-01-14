@@ -5,12 +5,57 @@
     <link>https://www.xzywisdili.com/tags/r%E8%AF%AD%E8%A8%80/</link>
     <description>Recent content in R语言 on Pure theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh</language>
     <copyright>CC BY 4.0 CN</copyright>
     <lastBuildDate>Sun, 23 Apr 2023 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.xzywisdili.com/tags/r%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>dplyr 包里面必会的处理数据方法</title>
+      <link>https://www.xzywisdili.com/2017/12/2017-12-19-datatransform/</link>
+      <pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2017/12/2017-12-19-datatransform/</guid>
+      <description>&lt;p&gt;最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看。最近学习的很简单，就是 &lt;code&gt;dplyr&lt;/code&gt; 包里面最基础的 5 种数据处理方法。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>R 语言的那些最最最基础</title>
+      <link>https://www.xzywisdili.com/2017/11/2017-11-21-rbasic/</link>
+      <pubDate>Tue, 21 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2017/11/2017-11-21-rbasic/</guid>
+      <description>在 R 语言 的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么</description>
+    </item>
+    
+    <item>
+      <title>光棍节初探 TensorFlow（一）：数据集的预处理</title>
+      <link>https://www.xzywisdili.com/2017/11/2017-11-12-tensorflow01/</link>
+      <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2017/11/2017-11-12-tensorflow01/</guid>
+      <description>11 月 11 日这天注定对我具有了一定的意义。不是因为它是购物狂欢节或光棍节，而是因为在这一天，我第一次尝试使用 TensorFlow 搭建了一个简单的神经网络。我希望用</description>
+    </item>
+    
+    <item>
+      <title>为什么要使用 LaTeX 呢？</title>
+      <link>https://www.xzywisdili.com/2017/10/2017-10-23-why-latex/</link>
+      <pubDate>Mon, 23 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2017/10/2017-10-23-why-latex/</guid>
+      <description>&lt;p&gt;这个标题其实不是我对我自己的诘问。作为一个医学生，在习惯使用 LaTeX 完成日常的作业或是论文时，总会有几个同学凑上前来，好奇地问这是个什么样的写作工具。在我做一番简要的介绍后，他们或许会表露出感兴趣，或称赞的神情，然后问下一个重复了很多遍的问题：为什么要使用 LaTeX 呢？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>「翻译」如何用 Python 画出像 FiveThirtyEight 那么棒的图表</title>
+      <link>https://www.xzywisdili.com/2017/10/2017-10-15-trans01/</link>
+      <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2017/10/2017-10-15-trans01/</guid>
+      <description>&lt;p&gt;如果你经常读数据科学领域的文章的话，你可能会偶然发现 &lt;a href=&#34;http://fivethirtyeight.com&#34;&gt;FiveThirtyEight&lt;/a&gt; 上的内容，然后被他们惊艳的图表迷住。于是你自己也想制作如此出色的可视化作品，于是去 Quora 和 Reddit 上问怎么做。你收到了几个回答，但是这些回答都很模糊。你还是不知道怎么搞定这样的图表。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>用 Python 解决数据结构与算法题 01</title>

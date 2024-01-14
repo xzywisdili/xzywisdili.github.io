@@ -5,12 +5,57 @@
     <link>https://www.xzywisdili.com/tags/%E8%80%83%E8%AF%95/</link>
     <description>Recent content in 考试 on Pure theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh</language>
     <copyright>CC BY 4.0 CN</copyright>
     <lastBuildDate>Tue, 08 Nov 2022 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.xzywisdili.com/tags/%E8%80%83%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>推荐且收藏的好网站</title>
+      <link>https://www.xzywisdili.com/2020/12/2020-12-28-recommendwebsite/</link>
+      <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2020/12/2020-12-28-recommendwebsite/</guid>
+      <description>这篇博客计划持续更新。这里的网站或者是实用的工具，或者是收藏的实用知识，而且每一个都是我自己用过或者看过的。 其中不少还是我高频使用的，甚至域</description>
+    </item>
+    
+    <item>
+      <title>赵粤的《时尚COSMO》杂志翻译</title>
+      <link>https://www.xzywisdili.com/2020/09/2020-09-30-zhaoyuecosmo/</link>
+      <pubDate>Wed, 30 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2020/09/2020-09-30-zhaoyuecosmo/</guid>
+      <description>写在前面 A little words before 我的英语水平相当有限，但我想把赵粤接受《时尚COSMO》的采访内容分享给可能看不懂中文的海外粉丝朋友。 里面有一些专用的中文词</description>
+    </item>
+    
+    <item>
+      <title>R 语言计算空间距离</title>
+      <link>https://www.xzywisdili.com/2020/07/2020-07-16-rdistance/</link>
+      <pubDate>Thu, 16 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2020/07/2020-07-16-rdistance/</guid>
+      <description>最近在研究计算真实空间两个点的距离， 比如已知 A, B 两点的经纬度坐标，计算两点之间的距离。 在 R 语言中，已经有很多大神提供的空间地理数据包，经过搜</description>
+    </item>
+    
+    <item>
+      <title>聊聊《隐秘的角落》</title>
+      <link>https://www.xzywisdili.com/2020/06/2020-06-20-thebadkids/</link>
+      <pubDate>Sat, 20 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2020/06/2020-06-20-thebadkids/</guid>
+      <description>最近热播，也引起热议的电视剧无疑是秦昊主演的隐秘的角落。而该剧的原著小说——紫金陈的《坏小孩》也和剧一起霸占了近期的豆瓣书影音热度榜前二。我</description>
+    </item>
+    
+    <item>
+      <title>分享几篇统计相关好文</title>
+      <link>https://www.xzywisdili.com/2020/04/2020-04-28-papershare/</link>
+      <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2020/04/2020-04-28-papershare/</guid>
+      <description>最近在研究分段样条回归和线性混合效应模型，看到了几篇好文可以分享。 样条回归（附 python 代码） [分段回归的拐点连续性](https://yihui.</description>
+    </item>
     
     <item>
       <title>一个最推荐的预防流行病的方法</title>
@@ -145,51 +190,6 @@
       
       <guid>https://www.xzywisdili.com/2019/09/2019-09-16-weeknote/</guid>
       <description>晚上在全屏看视频的时候，不小心按到了一个键，直接调用了电脑的前置摄像头， 满屏出现我的大脸，差点没把我吓到凳子下面。 过去的一周前半程处于期待中</description>
-    </item>
-    
-    <item>
-      <title>计程车人生</title>
-      <link>https://www.xzywisdili.com/2019/09/2019-09-15-taxidriver/</link>
-      <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.xzywisdili.com/2019/09/2019-09-15-taxidriver/</guid>
-      <description>You talking to me（你在和我说话吗）？ 看过 出租车司机 之后，我本想把朋友圈的封面换成 坐在出租车内的德尼罗，但奈何绿色聊天软件对于图片糟糕的裁剪只能作罢</description>
-    </item>
-    
-    <item>
-      <title>好一个中秋</title>
-      <link>https://www.xzywisdili.com/2019/09/2019-09-13-midautumn/</link>
-      <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.xzywisdili.com/2019/09/2019-09-13-midautumn/</guid>
-      <description>悲报：2019年的我，只能做6个标准俯卧撑了。 对，没错，在中秋节这天晚上，如此适合聚会的日子，我去健身了。 还好回来的路上抬了头，没有错过月亮</description>
-    </item>
-    
-    <item>
-      <title>一点碎碎念</title>
-      <link>https://www.xzywisdili.com/2019/09/2019-09-12-thoughts/</link>
-      <pubDate>Thu, 12 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.xzywisdili.com/2019/09/2019-09-12-thoughts/</guid>
-      <description>刚刚以老年人的配速跑完了2km，不过实在太喜欢这种在雨后大口呼吸空气的感觉了。 清新的空气确实能让人头脑更加清醒，整个身体也更有活力。 也不知是</description>
-    </item>
-    
-    <item>
-      <title>再也敏感不起来</title>
-      <link>https://www.xzywisdili.com/2019/09/2019-09-11-thoughts/</link>
-      <pubDate>Wed, 11 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.xzywisdili.com/2019/09/2019-09-11-thoughts/</guid>
-      <description>今天本来想总结一下这阵子使用 R 代码画地图的一些心得，但写到半夜 12 点半才写到一半，无奈今天无法更新。 眼睛打架之时开始翻看 eBooksPlan 的 Telegram群</description>
-    </item>
-    
-    <item>
-      <title>这一周（9.2-9.8）</title>
-      <link>https://www.xzywisdili.com/2019/09/2019-09-09-weeknote/</link>
-      <pubDate>Mon, 09 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.xzywisdili.com/2019/09/2019-09-09-weeknote/</guid>
-      <description>“开学”这个词像一层乌云笼罩了我至少十余载的青春岁月，9月1日的到来也宣示着暑假的结束，对于学生来说自然苦不堪言。 但今年我却没有太大感觉，一</description>
     </item>
     
   </channel>

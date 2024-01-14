@@ -5,12 +5,57 @@
     <link>https://www.xzywisdili.com/categories/%E7%BB%9F%E8%AE%A1/</link>
     <description>Recent content in 统计 on Pure theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh</language>
     <copyright>CC BY 4.0 CN</copyright>
     <lastBuildDate>Tue, 28 Apr 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://www.xzywisdili.com/categories/%E7%BB%9F%E8%AE%A1/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>动态页面的爬虫示例一则：抓取微博粉丝列表</title>
+      <link>https://www.xzywisdili.com/2022/10/2022-10-05-dynamichtmlspider/</link>
+      <pubDate>Wed, 05 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/10/2022-10-05-dynamichtmlspider/</guid>
+      <description>在碰到一些网页，想通过爬虫抓取页面信息的时候，会发现网页采用了一些动态 HTML 的相关技术来展示信息。这样直接使用 requests 是无法直接获取想要的 HTML 元素内容的</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄04】一日两餐：找回身体代谢灵活性的新饮食理念</title>
+      <link>https://www.xzywisdili.com/2022/09/2022-09-26-bookreview04/</link>
+      <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/09/2022-09-26-bookreview04/</guid>
+      <description>总结 《一日两餐》想让我们通过限制碳水摄入和间歇性禁食这两个重要手段来摆脱未来的胰岛素抵抗； 书中的大量内容更像是别处观点的拼凑，同时时不时夹杂</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄03】锻炼：丹尼尔·利伯曼教授对健康迷思的一一解答</title>
+      <link>https://www.xzywisdili.com/2022/09/2022-9-21-bookreview03/</link>
+      <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/09/2022-9-21-bookreview03/</guid>
+      <description>总结 《锻炼》通过人类进化学和现代医学研究两方面，对广泛流传的各种健康迷思进行了验证和解释； 关于久坐、睡眠、运动损伤、运动与衰老等等话题，你一</description>
+    </item>
+    
+    <item>
+      <title>【医学预测01】Logistic 回归构建变量筛选：先单后多</title>
+      <link>https://www.xzywisdili.com/2022/09/2022-09-07-rlogistic01/</link>
+      <pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/09/2022-09-07-rlogistic01/</guid>
+      <description>总结 介绍了 Logistic 回归模型构建过程中的一种变量筛选方式——先单后多； 配合对应的代码实例和结果解释，让方法更加清楚，同时便于日后复习查看。 在 Logistic 回归模</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄02】开启高质量沟通的第1分钟</title>
+      <link>https://www.xzywisdili.com/2022/09/2022-09-05-bookreview02/</link>
+      <pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/09/2022-09-05-bookreview02/</guid>
+      <description>总结 《开启高质量沟通的第一分钟》目标是让职场工作沟通的双方可以通过一段简短的引言快速进入良好的沟通节奏； 书中凝练了一套沟通结构：沟通框架（背</description>
+    </item>
     
     <item>
       <title>【把书读薄01】拼凑真相：指导读者如何面对各种诡计多端的媒体把戏</title>
@@ -130,15 +175,6 @@
     </item>
     
     <item>
-      <title>对数据进行填补</title>
-      <link>https://www.xzywisdili.com/2021/06/2021-06-09-mergeandkeepdata/</link>
-      <pubDate>Wed, 09 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.xzywisdili.com/2021/06/2021-06-09-mergeandkeepdata/</guid>
-      <description>今天整理数据的时候，需要使用数据集 2 对数据集 1 里缺失的部分进行填补，而两者重复的部分，优先保留数据集 1 里的。 这个问题其实很简单，只需短短 2-3 行</description>
-    </item>
-    
-    <item>
       <title>毕业流程之不吐不快</title>
       <link>https://www.xzywisdili.com/2021/06/2021-06-09-graduation/</link>
       <pubDate>Wed, 09 Jun 2021 00:00:00 +0000</pubDate>
@@ -148,48 +184,12 @@
     </item>
     
     <item>
-      <title>推荐且收藏的好网站</title>
-      <link>https://www.xzywisdili.com/2020/12/2020-12-28-recommendwebsite/</link>
-      <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
+      <title>对数据进行填补</title>
+      <link>https://www.xzywisdili.com/2021/06/2021-06-09-mergeandkeepdata/</link>
+      <pubDate>Wed, 09 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.xzywisdili.com/2020/12/2020-12-28-recommendwebsite/</guid>
-      <description>这篇博客计划持续更新。这里的网站或者是实用的工具，或者是收藏的实用知识，而且每一个都是我自己用过或者看过的。 其中不少还是我高频使用的，甚至域</description>
-    </item>
-    
-    <item>
-      <title>赵粤的《时尚COSMO》杂志翻译</title>
-      <link>https://www.xzywisdili.com/2020/09/2020-09-30-zhaoyuecosmo/</link>
-      <pubDate>Wed, 30 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.xzywisdili.com/2020/09/2020-09-30-zhaoyuecosmo/</guid>
-      <description>写在前面 A little words before 我的英语水平相当有限，但我想把赵粤接受《时尚COSMO》的采访内容分享给可能看不懂中文的海外粉丝朋友。 里面有一些专用的中文词</description>
-    </item>
-    
-    <item>
-      <title>R 语言计算空间距离</title>
-      <link>https://www.xzywisdili.com/2020/07/2020-07-16-rdistance/</link>
-      <pubDate>Thu, 16 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.xzywisdili.com/2020/07/2020-07-16-rdistance/</guid>
-      <description>最近在研究计算真实空间两个点的距离， 比如已知 A, B 两点的经纬度坐标，计算两点之间的距离。 在 R 语言中，已经有很多大神提供的空间地理数据包，经过搜</description>
-    </item>
-    
-    <item>
-      <title>聊聊《隐秘的角落》</title>
-      <link>https://www.xzywisdili.com/2020/06/2020-06-20-thebadkids/</link>
-      <pubDate>Sat, 20 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.xzywisdili.com/2020/06/2020-06-20-thebadkids/</guid>
-      <description>最近热播，也引起热议的电视剧无疑是秦昊主演的隐秘的角落。而该剧的原著小说——紫金陈的《坏小孩》也和剧一起霸占了近期的豆瓣书影音热度榜前二。我</description>
-    </item>
-    
-    <item>
-      <title>分享几篇统计相关好文</title>
-      <link>https://www.xzywisdili.com/2020/04/2020-04-28-papershare/</link>
-      <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.xzywisdili.com/2020/04/2020-04-28-papershare/</guid>
-      <description>最近在研究分段样条回归和线性混合效应模型，看到了几篇好文可以分享。 样条回归（附 python 代码） [分段回归的拐点连续性](https://yihui.</description>
+      <guid>https://www.xzywisdili.com/2021/06/2021-06-09-mergeandkeepdata/</guid>
+      <description>今天整理数据的时候，需要使用数据集 2 对数据集 1 里缺失的部分进行填补，而两者重复的部分，优先保留数据集 1 里的。 这个问题其实很简单，只需短短 2-3 行</description>
     </item>
     
   </channel>
