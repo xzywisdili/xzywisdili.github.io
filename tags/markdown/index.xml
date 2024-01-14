@@ -6,43 +6,28 @@
     <description>Recent content in Markdown on XZY&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 04 Jun 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.xzywisdili.com/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>简化我们的工具</title>
       <link>https://www.xzywisdili.com/post/2018-6-4-simplifytools/</link>
       <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://www.xzywisdili.com/post/2018-6-4-simplifytools/</guid>
-      <description>&lt;p&gt;现在的大学生不像十几年前，必定是人手一台笔记本电脑（有的人甚至有两台）。只要在自习室稍微留神观察一下
-专注学习的同学们，就会发现几乎 100% 的同学的电脑上停留的软件不是微软家的 powerpoint，就是 PDF 阅读器。&lt;/p&gt;</description>
+      <description>&lt;p&gt;现在的大学生不像十几年前，必定是人手一台笔记本电脑（有的人甚至有两台）。只要在自习室稍微留神观察一下&#xA;专注学习的同学们，就会发现几乎 100% 的同学的电脑上停留的软件不是微软家的 powerpoint，就是 PDF 阅读器。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>再吹一波 Rmarkdown</title>
       <link>https://www.xzywisdili.com/post/2018-04-11-rmarkdown02/</link>
       <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://www.xzywisdili.com/post/2018-04-11-rmarkdown02/</guid>
       <description>&lt;p&gt;既上次写过一篇关于 &lt;a href=&#34;http://www.xzywisdili.com/post/2017/12/23/%E8%BD%BB%E6%9D%BE%E6%84%89%E5%BF%AB%E5%9C%B0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8-rmarkdown/&#34;&gt;Rmarkdown 的安利&lt;/a&gt; 之后，我在实际使用过程中遇到了一些难题，就是关于中文的问题。如果只使用英文写作的话，完全没有问题；但是一旦使用中文，各级标题，加粗强调和引用都会变得非常奇怪。这也使我暂时搁置下了 Rmarkdown 不用。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>轻松愉快地开始使用 Rmarkdown</title>
       <link>https://www.xzywisdili.com/post/2017-12-23-rmarkdown/</link>
       <pubDate>Sat, 23 Dec 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://www.xzywisdili.com/post/2017-12-23-rmarkdown/</guid>
-      <description>R 语言世界里的一个大杀器。
-我想，在所有接触和学习 R 语言的初学者（当然包括我）眼里，有两个东西是相当酷的。一个是 shiny，可以轻松做出交互式的图表；而另一个就是 Rmarkdown 了。
-现如今我想 markdown 是何物已经不用过多介绍了，它语法简洁，门槛很低，已经到了一种是个人就会的地步。那 Rmarkdown 到底是什么呢？
-Rmarkdown 的官网上有这样几段介绍：
-Turn your analyses into high quality documents, reports, presentations and dashboards. Use a productive notebook interface to weave together narrative text and code to produce elegantly formatted output. Use multiple languages including R, Python, and SQL.
-简单来说，就是 Rmarkdown 能够使用 markdown 的语法，支持多种语言代码的运行和输出（R, Python 和 SQL），输出高质量的文档。
-这个所谓的「高质量」的文档到底是怎么样的呢？可以这么说，有不少的人都认为 Rmarkdown 可以成为科技写作的主流：
-为什么 Markdown + R 有叫大概率成为科技写作主流
-数据文档的革命
-既然说了这么多，我们就来简单看一看 Rmarkdown 的真正表现。我会将 markdown 里使用的大多数常用语法在 Rmarkdown 里展示出来。</description>
+      <description>R 语言世界里的一个大杀器。&#xA;我想，在所有接触和学习 R 语言的初学者（当然包括我）眼里，有两个东西是相当酷的。一个是 shiny，可以轻松做出交互式的图表；而另一个就是 Rmarkdown 了。&#xA;现如今我想 markdown 是何物已经不用过多介绍了，它语法简洁，门槛很低，已经到了一种是个人就会的地步。那 Rmarkdown 到底是什么呢？&#xA;Rmarkdown 的官网上有这样几段介绍：&#xA;Turn your analyses into high quality documents, reports, presentations and dashboards. Use a productive notebook interface to weave together narrative text and code to produce elegantly formatted output. Use multiple languages including R, Python, and SQL.&#xA;简单来说，就是 Rmarkdown 能够使用 markdown 的语法，支持多种语言代码的运行和输出（R, Python 和 SQL），输出高质量的文档。&#xA;这个所谓的「高质量」的文档到底是怎么样的呢？可以这么说，有不少的人都认为 Rmarkdown 可以成为科技写作的主流：&#xA;为什么 Markdown + R 有叫大概率成为科技写作主流&#xA;数据文档的革命&#xA;既然说了这么多，我们就来简单看一看 Rmarkdown 的真正表现。我会将 markdown 里使用的大多数常用语法在 Rmarkdown 里展示出来。</description>
     </item>
-    
   </channel>
 </rss>

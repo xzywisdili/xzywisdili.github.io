@@ -6,38 +6,21 @@
     <description>Recent content in 爬虫 on XZY&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 23 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/tags/%E7%88%AC%E8%99%AB/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.xzywisdili.com/tags/%E7%88%AC%E8%99%AB/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>数据挖掘的奇效——爬到网站没有显示的数据</title>
       <link>https://www.xzywisdili.com/post/2023-04-23-userjsonfindextradata/</link>
       <pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.xzywisdili.com/post/2023-04-23-userjsonfindextradata/</guid>
-      <description>有没有想过，有些网站的页面上展示的数据只有一部分的时候，通过稍微一点挖掘就能发现额外的数据，收获更多信息。
-这里就举一个最近发现的例子——云顶之弈公开赛“云巅赛道”的官方实时排名更新。 可以看到，这里只展示了云巅赛道前 60 名的用户昵称、段位、胜点、排位场数、登顶率和前四率。
-但是其实，只要扒到网站请求的数据，兴许可以看到更多的数据。
-发现网站请求返回的数据 这里其实没有想象中那么难。在「检查」中的「网络」选项卡查看网站的请求，一眼就能发现这个全是大写的请求返回的 json 数据。 稍微看一下，各类数据也都对的上，就是这个了：
-这里可以复制请求链接，再每隔一段时间请求一次，查看实时更新变化，我这里就不做了，有兴趣的可以查看我的另一篇文章。我就直接将 json 数据保存到了本地。
-使用 RJson 解析 json 格式数据 这里就使用一下 R 语言中的 RJson 包来解析一下 json 格式数据：
-library(rjson) result &amp;lt;- fromJSON(file=&amp;#34;云巅.json&amp;#34;) result 可以看到，直接使用 fromJSON 读取出来的是 list 格式的数据，还是多次嵌套的 list：
-第一层：每一个用户作为一层; 第二层：单个用户下的每一个变量数据作为第二层； 同时，可以看到，最关键的用户名 sName 变量用了 URL Code 编码，需要再使用 URLdecode 解一下。
-这就需要先进行多层 list 数据的解包，加上稍微一点预处理了：
-library(tidyverse) # 将 json 数据的每一层（每一个用户）转换成单行数据 row_results &amp;lt;- lapply(result[[2]], function(x) { as_tibble(x) }) # 对单行数据进行合并，得到最终数据 toc_rank_result &amp;lt;- do.call(&amp;#34;rbind&amp;#34;, row_results) # 使用 URLdecode 转换用户昵称 toc_rank_result &amp;lt;- toc_rank_result %&amp;gt;% mutate(nickname = URLdecode(sName)) %&amp;gt;% select(nickname, iTier, iRank, iPoints) # 查看转换后的数据 View(toc_rank_result) 大功告成！可以看到，相比于官网页面上的 60 条数据，这里分析的请求数据总共有 100 条，足足多了 40 条。 而且爬下来的数据想要做更多的查询和分析也更加方便了。 有时候，网页上没有显示的数据，可能还真需要扩展一下思路，看看能不能用其他方法得到。</description>
+      <description>有没有想过，有些网站的页面上展示的数据只有一部分的时候，通过稍微一点挖掘就能发现额外的数据，收获更多信息。&#xA;这里就举一个最近发现的例子——云顶之弈公开赛“云巅赛道”的官方实时排名更新。 可以看到，这里只展示了云巅赛道前 60 名的用户昵称、段位、胜点、排位场数、登顶率和前四率。&#xA;但是其实，只要扒到网站请求的数据，兴许可以看到更多的数据。&#xA;发现网站请求返回的数据 这里其实没有想象中那么难。在「检查」中的「网络」选项卡查看网站的请求，一眼就能发现这个全是大写的请求返回的 json 数据。 稍微看一下，各类数据也都对的上，就是这个了：&#xA;这里可以复制请求链接，再每隔一段时间请求一次，查看实时更新变化，我这里就不做了，有兴趣的可以查看我的另一篇文章。我就直接将 json 数据保存到了本地。&#xA;使用 RJson 解析 json 格式数据 这里就使用一下 R 语言中的 RJson 包来解析一下 json 格式数据：&#xA;library(rjson) result &amp;lt;- fromJSON(file=&amp;#34;云巅.json&amp;#34;) result 可以看到，直接使用 fromJSON 读取出来的是 list 格式的数据，还是多次嵌套的 list：&#xA;第一层：每一个用户作为一层; 第二层：单个用户下的每一个变量数据作为第二层； 同时，可以看到，最关键的用户名 sName 变量用了 URL Code 编码，需要再使用 URLdecode 解一下。&#xA;这就需要先进行多层 list 数据的解包，加上稍微一点预处理了：&#xA;library(tidyverse) # 将 json 数据的每一层（每一个用户）转换成单行数据 row_results &amp;lt;- lapply(result[[2]], function(x) { as_tibble(x) }) # 对单行数据进行合并，得到最终数据 toc_rank_result &amp;lt;- do.call(&amp;#34;rbind&amp;#34;, row_results) # 使用 URLdecode 转换用户昵称 toc_rank_result &amp;lt;- toc_rank_result %&amp;gt;% mutate(nickname = URLdecode(sName)) %&amp;gt;% select(nickname, iTier, iRank, iPoints) # 查看转换后的数据 View(toc_rank_result) 大功告成！可以看到，相比于官网页面上的 60 条数据，这里分析的请求数据总共有 100 条，足足多了 40 条。 而且爬下来的数据想要做更多的查询和分析也更加方便了。 有时候，网页上没有显示的数据，可能还真需要扩展一下思路，看看能不能用其他方法得到。</description>
     </item>
-    
     <item>
       <title>动态页面的爬虫示例一则：抓取微博粉丝列表</title>
       <link>https://www.xzywisdili.com/post/2022-10-05-dynamichtmlspider/</link>
       <pubDate>Wed, 05 Oct 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://www.xzywisdili.com/post/2022-10-05-dynamichtmlspider/</guid>
-      <description>在碰到一些网页，想通过爬虫抓取页面信息的时候，会发现网页采用了一些动态 HTML 的相关技术来展示信息。这样直接使用 requests 是无法直接获取想要的 HTML 元素内容的。比如我们查看微博网页端的粉丝列表：
-微博网页端的粉丝列表，在向下刷的时候是会动态加载和更新的。这种情况下，我们想要的元素是通过 js 事件动态请求和返回的。那么，就需要我们分析页面请求，找到那个发送的请求和对应返回的数据。在 F12 的「网络」选项卡下面进行刷新，可以比较轻松地找到对应发送的请求和返回的数据（json 格式）：
-可以看到，这个请求会返回 json 格式的数据。当用户下拉粉丝列表页面时，会触发一个 js 事件，项服务器发送这个请求获取数据，再通过一定的逻辑将这些 json 数据填充到 HTML 页面中。而我们的爬虫只要获取这些 json 数据，再进行整理就可以了。
-这样一来就比较轻松了：（当然需要注意一下，发出的相关请求需要你保持登录的 Cookie，不然返回会报错）
-import requests headers = { &amp;#39;cookie&amp;#39;: &amp;#39;Your Cookie&amp;#39;, &amp;#39;User-Agent&amp;#39;: &amp;#39;Your User Agent&amp;#39;, &amp;#39;referer&amp;#39;: &amp;#39;Your referer&amp;#39; } url = &amp;#34;https://weibo.com/ajax/friendships/friends?relate=fans&amp;amp;page=1&amp;amp;uid=3668829440&amp;amp;type=all&amp;amp;newFollowerCount=0&amp;#34; r = requests.get(url, headers=headers).json() for user in r[&amp;#39;users&amp;#39;]: print(&amp;#34;id: {} - name: {} = fans:{}&amp;#34;.format(user[&amp;#39;id&amp;#39;], user[&amp;#39;screen_name&amp;#39;], user[&amp;#39;followers_count&amp;#39;])) 当然，我们可以看到 url 里面的参数 page=1，那么我们可以修改这个参数就可以获得很多页面的粉丝列表信息了。再保存到准备好的数据库中：
-import requests import pymysql # 连接 MySQL 数据库 conn = pymysql.</description>
+      <description>在碰到一些网页，想通过爬虫抓取页面信息的时候，会发现网页采用了一些动态 HTML 的相关技术来展示信息。这样直接使用 requests 是无法直接获取想要的 HTML 元素内容的。比如我们查看微博网页端的粉丝列表：&#xA;微博网页端的粉丝列表，在向下刷的时候是会动态加载和更新的。这种情况下，我们想要的元素是通过 js 事件动态请求和返回的。那么，就需要我们分析页面请求，找到那个发送的请求和对应返回的数据。在 F12 的「网络」选项卡下面进行刷新，可以比较轻松地找到对应发送的请求和返回的数据（json 格式）：&#xA;可以看到，这个请求会返回 json 格式的数据。当用户下拉粉丝列表页面时，会触发一个 js 事件，项服务器发送这个请求获取数据，再通过一定的逻辑将这些 json 数据填充到 HTML 页面中。而我们的爬虫只要获取这些 json 数据，再进行整理就可以了。&#xA;这样一来就比较轻松了：（当然需要注意一下，发出的相关请求需要你保持登录的 Cookie，不然返回会报错）&#xA;import requests headers = { &amp;#39;cookie&amp;#39;: &amp;#39;Your Cookie&amp;#39;, &amp;#39;User-Agent&amp;#39;: &amp;#39;Your User Agent&amp;#39;, &amp;#39;referer&amp;#39;: &amp;#39;Your referer&amp;#39; } url = &amp;#34;https://weibo.com/ajax/friendships/friends?relate=fans&amp;amp;page=1&amp;amp;uid=3668829440&amp;amp;type=all&amp;amp;newFollowerCount=0&amp;#34; r = requests.get(url, headers=headers).json() for user in r[&amp;#39;users&amp;#39;]: print(&amp;#34;id: {} - name: {} = fans:{}&amp;#34;.format(user[&amp;#39;id&amp;#39;], user[&amp;#39;screen_name&amp;#39;], user[&amp;#39;followers_count&amp;#39;])) 当然，我们可以看到 url 里面的参数 page=1，那么我们可以修改这个参数就可以获得很多页面的粉丝列表信息了。再保存到准备好的数据库中：&#xA;import requests import pymysql # 连接 MySQL 数据库 conn = pymysql.</description>
     </item>
-    
   </channel>
 </rss>

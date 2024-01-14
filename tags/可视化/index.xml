@@ -6,71 +6,35 @@
     <description>Recent content in 可视化 on XZY&#39;s BLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 28 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.xzywisdili.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.xzywisdili.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>一天内数据分布的可视化</title>
       <link>https://www.xzywisdili.com/post/2022-07-28-timeseriesplot/</link>
       <pubDate>Thu, 28 Jul 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://www.xzywisdili.com/post/2022-07-28-timeseriesplot/</guid>
-      <description>我们在很多情况下都会想要可视化一天中的周期时间来探索发现可能存在的某种模式。 比如根据犯罪数据发现在一天中的高发时段，又或者某个app的用户活跃时段的表示，又或者患者在院外一天中的健康作息的可视化，都不可避免会碰到要把数据在周期性的时间上进行展示。 而目前这样的可视化方向大概有两个：线性展示和环形展示。
-线性展示 线性展示是目前使用方式相对比较多的可视化方式，如下图分别展示的对于人群购物时间的可视化和运动传感器回收数据时间分布的可视化：
-如此使用折线图和条形图来对数据在一天中的时间分布的优势显而易见：
-符合读者的直觉； 绘图比较简单； 但是这种方式也有一些局限性，即没有办法很好体现出时间的连续性。 它们的 X 轴出于限制，都不可避免地选择两个时间点作为图表的开始和结束。 而这个时间点的选取也需要根据数据的实际情况来进行。 比如通用的时间制会规定一天的24小时开始于 0:00，结束于 23:59，但对于很多活动并非如此（比如部分职业的加班或者犯罪往往在午夜时分保持连贯，甚至有可能延伸到凌晨2-3点）。 有时候图表所显示的内容强行断开有时候也会让部分想要探索该处连续性的读者没有办法直观看到。 此外，大众对于上午、下午、徬晚和晚上都在心里有一个普遍共识的观念，这也没有办法在线性图中直观看到，除非作图者显性标注出来。
-以上这些种种的问题想要解决其实比较棘手。曾有人使用双层时间图来进行展示：
-上半部分依然是正常的线性可视化，但是作者将上半部分反转再进行平移，想要以此来同时展示白天（上半部分）和夜间（下半部分）的时间趋势，从一定程度上解决连续性表现不足的问题。但是这样在一定程度牺牲了可视化的直观性，用户可能会觉得上下是两个系列的数据；另外也没有从根本解决问题。
-所以有些人开始尝试另一种可视化思路。
-环形展示 不知道环形展示方式的最初灵感是不是来自钟表的表盘。但钟表代表时间，使用钟表表盘式的圆形尝试来进行一天内趋势的可视化似乎也合情合理。 我自己也在 Excel 里面尝试了一下。 只要将数据转换合理，再使用 Excel 里面内置的雷达图，就能做出近似环形的可视化效果。 但是很快就发现了问题：传统的符合人类直觉的钟表表盘是 12 小时制的，而一天有 24 个小时。 如果强行将 24 个小时挤入一个环形圆盘也会显得非常怪异，比如 Magic Eye 的设计中，&amp;ldquo;Morning&amp;rdquo; 到了右下象限而 “Evening” 到了左上象限：
-这时候有人开始尝试这些妥协式的设计，即使用双表盘、在一个表盘中利用不同颜色来展示上12小时和下12小时、又或者用内圈和外圈来代表 AM 和 PM：
-甚至还有一种使用无限符号的可视化方式，想要表现完整的一天：
-可以看到，环形的方式进行可视化展示的优点包括：
-能够带给读者直观的“上午”、&amp;ldquo;下午&amp;quot;以及“晚上”这种结合生活时间段的感受； 部分解决了连续性的问题； 但是又带来了新的问题：
-AM 和 PM 本身需要颜色或内外圈多维展示，如果有更多维度或系列的数据，就会显得更加杂乱； 作图难度相对于线性方式来说更高； 数据映射到极坐标下，增长和减少的趋势可能也会随之扭曲。 综合以上，我觉得还是优先考虑使用线性的方式进行展示一天内的数据分布情况更为合理。 更为简便的作图方式，展示作图者想要展示的趋势或者模式，就已经足矣。 如果使用环形可视化很容易耗费更多的精力，反而只能做到华而不实的效果，也可能被误导，很难真正探索出数据背后真正的时间分布情况。</description>
+      <description>我们在很多情况下都会想要可视化一天中的周期时间来探索发现可能存在的某种模式。 比如根据犯罪数据发现在一天中的高发时段，又或者某个app的用户活跃时段的表示，又或者患者在院外一天中的健康作息的可视化，都不可避免会碰到要把数据在周期性的时间上进行展示。 而目前这样的可视化方向大概有两个：线性展示和环形展示。&#xA;线性展示 线性展示是目前使用方式相对比较多的可视化方式，如下图分别展示的对于人群购物时间的可视化和运动传感器回收数据时间分布的可视化：&#xA;如此使用折线图和条形图来对数据在一天中的时间分布的优势显而易见：&#xA;符合读者的直觉； 绘图比较简单； 但是这种方式也有一些局限性，即没有办法很好体现出时间的连续性。 它们的 X 轴出于限制，都不可避免地选择两个时间点作为图表的开始和结束。 而这个时间点的选取也需要根据数据的实际情况来进行。 比如通用的时间制会规定一天的24小时开始于 0:00，结束于 23:59，但对于很多活动并非如此（比如部分职业的加班或者犯罪往往在午夜时分保持连贯，甚至有可能延伸到凌晨2-3点）。 有时候图表所显示的内容强行断开有时候也会让部分想要探索该处连续性的读者没有办法直观看到。 此外，大众对于上午、下午、徬晚和晚上都在心里有一个普遍共识的观念，这也没有办法在线性图中直观看到，除非作图者显性标注出来。&#xA;以上这些种种的问题想要解决其实比较棘手。曾有人使用双层时间图来进行展示：&#xA;上半部分依然是正常的线性可视化，但是作者将上半部分反转再进行平移，想要以此来同时展示白天（上半部分）和夜间（下半部分）的时间趋势，从一定程度上解决连续性表现不足的问题。但是这样在一定程度牺牲了可视化的直观性，用户可能会觉得上下是两个系列的数据；另外也没有从根本解决问题。&#xA;所以有些人开始尝试另一种可视化思路。&#xA;环形展示 不知道环形展示方式的最初灵感是不是来自钟表的表盘。但钟表代表时间，使用钟表表盘式的圆形尝试来进行一天内趋势的可视化似乎也合情合理。 我自己也在 Excel 里面尝试了一下。 只要将数据转换合理，再使用 Excel 里面内置的雷达图，就能做出近似环形的可视化效果。 但是很快就发现了问题：传统的符合人类直觉的钟表表盘是 12 小时制的，而一天有 24 个小时。 如果强行将 24 个小时挤入一个环形圆盘也会显得非常怪异，比如 Magic Eye 的设计中，&amp;ldquo;Morning&amp;rdquo; 到了右下象限而 “Evening” 到了左上象限：&#xA;这时候有人开始尝试这些妥协式的设计，即使用双表盘、在一个表盘中利用不同颜色来展示上12小时和下12小时、又或者用内圈和外圈来代表 AM 和 PM：&#xA;甚至还有一种使用无限符号的可视化方式，想要表现完整的一天：&#xA;可以看到，环形的方式进行可视化展示的优点包括：&#xA;能够带给读者直观的“上午”、&amp;ldquo;下午&amp;quot;以及“晚上”这种结合生活时间段的感受； 部分解决了连续性的问题； 但是又带来了新的问题：&#xA;AM 和 PM 本身需要颜色或内外圈多维展示，如果有更多维度或系列的数据，就会显得更加杂乱； 作图难度相对于线性方式来说更高； 数据映射到极坐标下，增长和减少的趋势可能也会随之扭曲。 综合以上，我觉得还是优先考虑使用线性的方式进行展示一天内的数据分布情况更为合理。 更为简便的作图方式，展示作图者想要展示的趋势或者模式，就已经足矣。 如果使用环形可视化很容易耗费更多的精力，反而只能做到华而不实的效果，也可能被误导，很难真正探索出数据背后真正的时间分布情况。</description>
     </item>
-    
     <item>
       <title>最近我都做了些什么</title>
       <link>https://www.xzywisdili.com/post/2019-12-04-whathaveidone/</link>
       <pubDate>Wed, 04 Dec 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://www.xzywisdili.com/post/2019-12-04-whathaveidone/</guid>
-      <description>时间匆匆忙忙到了 2019 年的 12 月，我自己也是匆匆忙忙的事情。至于即将到来的年终总结什么的，就随缘了。 最近忙的事，既然暂时告一段落，就有必要开个博客总结一下。 所以这一篇可能内容会比较杂乱反复。
-地图和 shiny 玩出新花样 在 shiny 中，选择想要绘制的美国州名，再单独绘制这一个州的情况，达到如下图的效果：
-当然，在众多的美国地图文件中，如果选择边缘没有那么精细的版本，就能让渲染速度更快一点。 shiny 实在是一个好用好玩的东西。
-R 也能写简单的网络爬虫？ 有一个项目是需要整理 2015 到 16 赛季 nba 球员的场均得分、场均助攻等数据。 我们可以直接在 篮球数据网站 进行爬取。 这事本来比较适合直接拿 python 跑，但出于一些原因，还是得用 R。 但意外地发现，其实也不是特别复杂，解析，xpath 查找也都不在话下，核心爬取部分也就不到 30 行代码。
-library(tidyverse) library(xml2) # 得到某个球员的查询地址 # 举例，输入&amp;#34;Derrick Rose&amp;#34;，函数返回&amp;#34;/players/r/rosede01.html&amp;#34; get_player_url &amp;lt;- function(player_name) { query_url &amp;lt;- &amp;#34;https://www.basketball-reference.com/search/search.fcgi?hint=&amp;amp;search=&amp;#34; url &amp;lt;- paste0(query_url, str_replace(player_name, &amp;#34; &amp;#34;, &amp;#34;%20&amp;#34;)) player_url &amp;lt;- url %&amp;gt;% read_html() %&amp;gt;% html_nodes(xpath=&amp;#39;//div[contains(@class, &amp;#34;search-item-url&amp;#34;)]&amp;#39;) %&amp;gt;% html_text() return(player_url[1]) } # 得到某个球员的数据 # 举例：输入&amp;#34;Derrick Rose&amp;#34;，函数返回该球员相关的 Age, Tm等等数据 get_player_data &amp;lt;- function(player_name) { print(player_name) base_url &amp;lt;- &amp;#34;https://www.</description>
+      <description>时间匆匆忙忙到了 2019 年的 12 月，我自己也是匆匆忙忙的事情。至于即将到来的年终总结什么的，就随缘了。 最近忙的事，既然暂时告一段落，就有必要开个博客总结一下。 所以这一篇可能内容会比较杂乱反复。&#xA;地图和 shiny 玩出新花样 在 shiny 中，选择想要绘制的美国州名，再单独绘制这一个州的情况，达到如下图的效果：&#xA;当然，在众多的美国地图文件中，如果选择边缘没有那么精细的版本，就能让渲染速度更快一点。 shiny 实在是一个好用好玩的东西。&#xA;R 也能写简单的网络爬虫？ 有一个项目是需要整理 2015 到 16 赛季 nba 球员的场均得分、场均助攻等数据。 我们可以直接在 篮球数据网站 进行爬取。 这事本来比较适合直接拿 python 跑，但出于一些原因，还是得用 R。 但意外地发现，其实也不是特别复杂，解析，xpath 查找也都不在话下，核心爬取部分也就不到 30 行代码。&#xA;library(tidyverse) library(xml2) # 得到某个球员的查询地址 # 举例，输入&amp;#34;Derrick Rose&amp;#34;，函数返回&amp;#34;/players/r/rosede01.html&amp;#34; get_player_url &amp;lt;- function(player_name) { query_url &amp;lt;- &amp;#34;https://www.basketball-reference.com/search/search.fcgi?hint=&amp;amp;search=&amp;#34; url &amp;lt;- paste0(query_url, str_replace(player_name, &amp;#34; &amp;#34;, &amp;#34;%20&amp;#34;)) player_url &amp;lt;- url %&amp;gt;% read_html() %&amp;gt;% html_nodes(xpath=&amp;#39;//div[contains(@class, &amp;#34;search-item-url&amp;#34;)]&amp;#39;) %&amp;gt;% html_text() return(player_url[1]) } # 得到某个球员的数据 # 举例：输入&amp;#34;Derrick Rose&amp;#34;，函数返回该球员相关的 Age, Tm等等数据 get_player_data &amp;lt;- function(player_name) { print(player_name) base_url &amp;lt;- &amp;#34;https://www.</description>
     </item>
-    
     <item>
       <title>我在 R 里画地图（二）</title>
       <link>https://www.xzywisdili.com/post/2019-11-18-rmap2/</link>
       <pubDate>Mon, 18 Nov 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://www.xzywisdili.com/post/2019-11-18-rmap2/</guid>
-      <description>在R语言中绘制地图，尤其是可交互式的地图的另一个利器是 leaflet 包。 这次我会借着我刚刚完成的一个小项目来讲解这一内容，目标是仿制美国 CDC 官网上的一张图——是的，我们的「战场」从中国转移到了美国。
-数据准备 官网上有相关数据的下载。除此之外，我们还需要美国的 shapefile 文件。 一般来说，国外的地图文件去 GADM 上下载问题就不是很大。 接下来，对于这一任务来说，可以通过 ArcGis 方便地将包含各州数据 csv 文件 join 到地图文件上。 这一步唯一要注意的就是地图文件对应字段的类型（一般来说是 Text）要与各州数据类型一致。
-在这一系列的上一篇文章中，我当时将这一 merge 过程在 R 里用代码写了出来。 这两种方法都可以，如果需要批量绘制地图的话，当然还是之前代码的方法更好。
-leaflet 绘制地图 leaflet 实在是绘制地图的一大利器。它不仅强大，还足够简单。 在 Youtube 上面也有太多相关的教学视频，每一讲大概2-3分钟，看起来也不累。 使用 40 行左右的代码就可以生成我们需要的地图：
-library(leaflet) library(rgdal) library(sf) library(htmltools) library(htmlwidgets) USA_data &amp;lt;- st_read(&amp;#34;map2/USA_data.shp&amp;#34;) # 4个分类的配色定义 pal &amp;lt;- colorFactor( palette = c(&amp;#39;#fff5f0&amp;#39;, &amp;#39;#b4b4b4&amp;#39;, &amp;#39;#fb6a4a&amp;#39;, &amp;#39;#fcbba1&amp;#39;), domain = US$category ) # 每个州显示的标签内容 USA_data$label &amp;lt;- paste(&amp;#34;&amp;lt;p&amp;gt;&amp;lt;b&amp;gt;&amp;#34;, USA_data$NAME, &amp;#34;&amp;lt;/b&amp;gt;&amp;lt;/p&amp;gt;&amp;#34;, &amp;#34;Category: &amp;#34;, USA_data$category, &amp;#34;&amp;lt;br&amp;gt;&amp;#34;, &amp;#34;Percent Change From 2016-2017: &amp;#34;, USA_data$change, &amp;#34;&amp;lt;br&amp;gt;&amp;#34;, &amp;#34;Statistically ignificant: &amp;#34;,USA_data$significan, &amp;#34;&amp;lt;br&amp;gt;&amp;#34;, &amp;#34;2016 Number: &amp;#34;, USA_data$X2016number, &amp;#34;&amp;lt;br&amp;gt;&amp;#34;, &amp;#34;2016 Rate: &amp;#34;, USA_data$X2016rate, &amp;#34;&amp;lt;br&amp;gt;&amp;#34;, &amp;#34;2017 Number: &amp;#34;, USA_data$X2017number, &amp;#34;&amp;lt;br&amp;gt;&amp;#34;, &amp;#34;2017 Rate: &amp;#34;, USA_data$X2017rate) # 绘制地图并保存 my_map &amp;lt;- leaflet(USA_data) %&amp;gt;% addPolygons(color = &amp;#34;#444444&amp;#34;, weight = 1, smoothFactor = 0.</description>
+      <description>在R语言中绘制地图，尤其是可交互式的地图的另一个利器是 leaflet 包。 这次我会借着我刚刚完成的一个小项目来讲解这一内容，目标是仿制美国 CDC 官网上的一张图——是的，我们的「战场」从中国转移到了美国。&#xA;数据准备 官网上有相关数据的下载。除此之外，我们还需要美国的 shapefile 文件。 一般来说，国外的地图文件去 GADM 上下载问题就不是很大。 接下来，对于这一任务来说，可以通过 ArcGis 方便地将包含各州数据 csv 文件 join 到地图文件上。 这一步唯一要注意的就是地图文件对应字段的类型（一般来说是 Text）要与各州数据类型一致。&#xA;在这一系列的上一篇文章中，我当时将这一 merge 过程在 R 里用代码写了出来。 这两种方法都可以，如果需要批量绘制地图的话，当然还是之前代码的方法更好。&#xA;leaflet 绘制地图 leaflet 实在是绘制地图的一大利器。它不仅强大，还足够简单。 在 Youtube 上面也有太多相关的教学视频，每一讲大概2-3分钟，看起来也不累。 使用 40 行左右的代码就可以生成我们需要的地图：&#xA;library(leaflet) library(rgdal) library(sf) library(htmltools) library(htmlwidgets) USA_data &amp;lt;- st_read(&amp;#34;map2/USA_data.shp&amp;#34;) # 4个分类的配色定义 pal &amp;lt;- colorFactor( palette = c(&amp;#39;#fff5f0&amp;#39;, &amp;#39;#b4b4b4&amp;#39;, &amp;#39;#fb6a4a&amp;#39;, &amp;#39;#fcbba1&amp;#39;), domain = US$category ) # 每个州显示的标签内容 USA_data$label &amp;lt;- paste(&amp;#34;&amp;lt;p&amp;gt;&amp;lt;b&amp;gt;&amp;#34;, USA_data$NAME, &amp;#34;&amp;lt;/b&amp;gt;&amp;lt;/p&amp;gt;&amp;#34;, &amp;#34;Category: &amp;#34;, USA_data$category, &amp;#34;&amp;lt;br&amp;gt;&amp;#34;, &amp;#34;Percent Change From 2016-2017: &amp;#34;, USA_data$change, &amp;#34;&amp;lt;br&amp;gt;&amp;#34;, &amp;#34;Statistically ignificant: &amp;#34;,USA_data$significan, &amp;#34;&amp;lt;br&amp;gt;&amp;#34;, &amp;#34;2016 Number: &amp;#34;, USA_data$X2016number, &amp;#34;&amp;lt;br&amp;gt;&amp;#34;, &amp;#34;2016 Rate: &amp;#34;, USA_data$X2016rate, &amp;#34;&amp;lt;br&amp;gt;&amp;#34;, &amp;#34;2017 Number: &amp;#34;, USA_data$X2017number, &amp;#34;&amp;lt;br&amp;gt;&amp;#34;, &amp;#34;2017 Rate: &amp;#34;, USA_data$X2017rate) # 绘制地图并保存 my_map &amp;lt;- leaflet(USA_data) %&amp;gt;% addPolygons(color = &amp;#34;#444444&amp;#34;, weight = 1, smoothFactor = 0.</description>
     </item>
-    
     <item>
       <title>我在 R 里画地图（一）</title>
       <link>https://www.xzywisdili.com/post/2019-09-23-rmap/</link>
       <pubDate>Mon, 23 Sep 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://www.xzywisdili.com/post/2019-09-23-rmap/</guid>
-      <description>前言 大约一个月前，接到一个任务：绘制全国的患病率地图，就草草做了一个初版，当时还做了一个 ppt 和组里的小伙伴分享。 直到后来，才知道这种图有一个专业的称呼：choropleth maps，中文名字是分层设色图。 可以看到在 google 中检索 choropleth maps 得到的结果：
-单在画图这一方面讲，其实这是一个老生常谈的话题，也有数不胜数的工具和包。但问题的关键在于：绝大多数国外提供的中国地图并不规范。 关于中国地图的规范问题，在姜大伟的知乎专栏 使用中国地图的正确姿势 中有比较翔实的介绍。我也根据此做成了其中一张幻灯片：
-所以问题摆在了我们的面前：
-找到一张可供使用的规范的中国矢量地图； 根据这张地图绘制我们想要的分层设色图。 提前提醒：本文代码直接复制粘贴不能够运行，请到文末下载分享的全部程序和地图文件！
-寻找标准地图 在网络上，使用最多的是一份名为 bou2_4p.shp 的地图矢量文件，这份文件来自哪里已不可考，似乎是 2012 年国家提供的 1：400 万地理信息地图，但是后来又关闭了开放。 这份地图应该是目前问题最少的地图，藏南、台湾、南海诸岛也都存在。但是时间已经来到了 2019 年，这份 12 年的地图是否那么无懈可击呢？
-答案是否定的。根据 b 站 up 主“地理人_zxl”的视频 ArcGis更正老式中国基础地理信息数据错误，通过 天地图 和 bou2_4p 的比对，还是可以发现新疆的边界存在一些问题（红线为 bou2_4p，底图为标准地图）：
-同时，bou2_4p 的地图也没有澳门特别行政区。通过上面视频中提供的方法，在 ArcGis 中对 bou2_4p 进行修改，就可以得到修正版本的 bou2_4p 了。 这就是我们接下来要使用的标准地图。
-使用 R 绘制地图 首先要说明，在我个人使用过的工具和包里面，还是 ArcGis 这种专业 GIS 软件绘制地图最为顺滑快捷。 那为什么要使用 R 语言呢？其实还是出于以下这几个原因：
-不只我要出图，别人也要进行地图制作； 免费开源，安装便捷，上手简单； 只需改动患病率数据，运行代码就可出图 再次提醒，以下我不会贴出完整代码，只会贴出一些核心的重点代码。完整的代码会分享在文章末尾。
-基础绘图 首先，我们通过 rgdal::readOGR 读取修正过后的中国地图，然后对数据框进行转换，再和患病率数据 da 进行合并。</description>
+      <description>前言 大约一个月前，接到一个任务：绘制全国的患病率地图，就草草做了一个初版，当时还做了一个 ppt 和组里的小伙伴分享。 直到后来，才知道这种图有一个专业的称呼：choropleth maps，中文名字是分层设色图。 可以看到在 google 中检索 choropleth maps 得到的结果：&#xA;单在画图这一方面讲，其实这是一个老生常谈的话题，也有数不胜数的工具和包。但问题的关键在于：绝大多数国外提供的中国地图并不规范。 关于中国地图的规范问题，在姜大伟的知乎专栏 使用中国地图的正确姿势 中有比较翔实的介绍。我也根据此做成了其中一张幻灯片：&#xA;所以问题摆在了我们的面前：&#xA;找到一张可供使用的规范的中国矢量地图； 根据这张地图绘制我们想要的分层设色图。 提前提醒：本文代码直接复制粘贴不能够运行，请到文末下载分享的全部程序和地图文件！&#xA;寻找标准地图 在网络上，使用最多的是一份名为 bou2_4p.shp 的地图矢量文件，这份文件来自哪里已不可考，似乎是 2012 年国家提供的 1：400 万地理信息地图，但是后来又关闭了开放。 这份地图应该是目前问题最少的地图，藏南、台湾、南海诸岛也都存在。但是时间已经来到了 2019 年，这份 12 年的地图是否那么无懈可击呢？&#xA;答案是否定的。根据 b 站 up 主“地理人_zxl”的视频 ArcGis更正老式中国基础地理信息数据错误，通过 天地图 和 bou2_4p 的比对，还是可以发现新疆的边界存在一些问题（红线为 bou2_4p，底图为标准地图）：&#xA;同时，bou2_4p 的地图也没有澳门特别行政区。通过上面视频中提供的方法，在 ArcGis 中对 bou2_4p 进行修改，就可以得到修正版本的 bou2_4p 了。 这就是我们接下来要使用的标准地图。&#xA;使用 R 绘制地图 首先要说明，在我个人使用过的工具和包里面，还是 ArcGis 这种专业 GIS 软件绘制地图最为顺滑快捷。 那为什么要使用 R 语言呢？其实还是出于以下这几个原因：&#xA;不只我要出图，别人也要进行地图制作； 免费开源，安装便捷，上手简单； 只需改动患病率数据，运行代码就可出图 再次提醒，以下我不会贴出完整代码，只会贴出一些核心的重点代码。完整的代码会分享在文章末尾。&#xA;基础绘图 首先，我们通过 rgdal::readOGR 读取修正过后的中国地图，然后对数据框进行转换，再和患病率数据 da 进行合并。</description>
     </item>
-    
   </channel>
 </rss>
