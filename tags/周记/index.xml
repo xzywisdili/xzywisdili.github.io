@@ -1,40 +1,196 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>周记 on XZY&#39;s BLOG</title>
+    <title>周记 on Pure theme for Hugo</title>
     <link>https://www.xzywisdili.com/tags/%E5%91%A8%E8%AE%B0/</link>
-    <description>Recent content in 周记 on XZY&#39;s BLOG</description>
+    <description>Recent content in 周记 on Pure theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>en</language>
+    <copyright>CC BY 4.0 CN</copyright>
     <lastBuildDate>Tue, 24 Sep 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://www.xzywisdili.com/tags/%E5%91%A8%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    
+        <atom:link href="https://www.xzywisdili.com/tags/%E5%91%A8%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
-      <title>一周总结（9.16-9.22）</title>
-      <link>https://www.xzywisdili.com/post/2019-09-24-weeknote/</link>
-      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>https://www.xzywisdili.com/post/2019-09-24-weeknote/</guid>
-      <description>上一周如果用一个词来概括，那就是“荒废”。 感觉自己越来越难以控制自己的情绪，经常陷入到一种无来由的失落之中，脑子里胡思乱想。 这样似乎越来越难以集中精力，已经有点影响自己的工作和学习。 “生活就像巧克力”的比喻太温柔了，要我说倒像是“糖果”，打开糖果纸，你可能会吃到空气，吃到钢珠球，吃到臭蛋，吃到变质的糖果，就是不会吃到甜甜的糖。&#xA;总结一下上一周完成的工作：&#xA;继续修改问卷小程序，这就是一项不停返工，反复打磨的工作，至于打磨的结果如何，还得等个把月； 在之前绘制地图的基础上，更新了2.0版本，而且已经迫不及待地在昨天的 post 里面写清楚了整体的绘制思路； 整个周末，完成了系里奖学金答辩审核材料的所有工作； 马马虎虎地看了一些 QGis 的资料，GIS 之路任重道远； 继续坚持健身，继续坚持早睡早起，但一直也没戒掉含糖饮料； 很遗憾还是没抽出多少时间读书，也没怎么更新博客。 这一周继续努力吧。</description>
+      <title>ADSL 数据集的建立：练习示例</title>
+      <link>https://www.xzywisdili.com/2023/05/2023-05-08-adslexample/</link>
+      <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/05/2023-05-08-adslexample/</guid>
+      <description>总结 通过一则创立 ADSL 数据集的练习示例加深对 ADSL 数据集的理解； ADSL（Subject-Level Analysis Data Set） 是 ADaM 中的一种数据集，特点是每一行是一</description>
     </item>
+    
     <item>
-      <title>这一周（9.9-9.15）</title>
-      <link>https://www.xzywisdili.com/post/2019-09-16-weeknote/</link>
-      <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>https://www.xzywisdili.com/post/2019-09-16-weeknote/</guid>
-      <description>晚上在全屏看视频的时候，不小心按到了一个键，直接调用了电脑的前置摄像头， 满屏出现我的大脸，差点没把我吓到凳子下面。&#xA;过去的一周前半程处于期待中秋节的喜悦中，后半程就是一个人的中秋了。 当然也有不少值得总结的内容：&#xA;HPV 的地区分异和 ALT 的标准制定两个研究都完成了中期的分析，两位博士老师也有别的工作，就先告一段落了 动脉粥样斑块的相关危险因素的 cox 比例回归模型上周已经跑完，这周也能完成一个收尾 本来上周就要更新的“我在R里画地图”迟迟没有写完，中秋又发现旧的地图文件出现了一点问题，亟待修正 利用每天晚上过了一遍 matplotlib 包的内容，其实这种包学起来还可以，只要记住哪种图使用哪个函数，等到用的时候查文档就能解决绝大多数问题了 继续和服务器与小程序扯皮，成功在中秋之前更新了一版新的，但中秋期间就被小伙伴又提了不少问题，还好今天都已经总结反馈 假期重温了 蝙蝠侠：黑暗骑士 和 泰坦尼克号，又看了 出租车司机 和 亢奋，让我更热爱电影艺术了 这周在读 金雀花王朝，虽然才读了一半，但英格兰王室的宫斗大戏已经让人印象深刻，小说话的叙事也属实精彩 这也是健身的第二周，感觉并没有什么变化，全身上下依然酸痛，白天也还不是很有精神 经过一周的调整作息，每天都能在12点躺在床上，但是依然不能及时睡着，经常躺到快两点才能入眠 今天看到一个观点，说人一天的注意力是有限的，而且从项目A转移到项目B上会耗散很多精力，比如现代生活的罪魁祸首即时通讯软件。 我想要试一试抵制“即时”，只在每天的几个固定时间，比如8点，12点，16点，20点才看绿色聊天软件。&#xA;另外的疑惑是精力管理，每天顶着咖啡和红牛并非长远之计，规律作息和定期锻炼是必须的，但也需要寻找到别的方法。 最后给自己提一点要求，希望能保持博客的更新，哪怕忙的时候，每天写一二百字也好。&#xA;未来的一周，加油！</description>
+      <title>CDISC 标准（五）——ADaM 标准概述</title>
+      <link>https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes5/</link>
+      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes5/</guid>
+      <description>总结 ADaM 标准实为了让临床试验统计分析人员梗快速、标准准确地进行统计分析和制作报表的标准； ADaM 主要分为三类数据集：ADSL，BDS 和 OCCDS； 详</description>
     </item>
+    
     <item>
-      <title>这一周（9.2-9.8）</title>
-      <link>https://www.xzywisdili.com/post/2019-09-09-weeknote/</link>
-      <pubDate>Mon, 09 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>https://www.xzywisdili.com/post/2019-09-09-weeknote/</guid>
-      <description>“开学”这个词像一层乌云笼罩了我至少十余载的青春岁月，9月1日的到来也宣示着暑假的结束，对于学生来说自然苦不堪言。 但今年我却没有太大感觉，一是毕竟已经读研，暑假也在赶工干活，开学只是偶尔去上几次专业课，其余并无不同； 二是自己也不可能给自己放假，胆敢随意抽出一周时间去外地旅游散心，甚至回家看看。&#xA;这段时间真正聊以慰藉的就是高强度关注威尼斯电影节了。作为一个DC粉，看到期待已久的电影《小丑》的各种资讯一点点放出，更是对我心理的一次次撩拨。 昨天看到消息，《小丑》拿下了这次的金狮奖，自然非常欣喜，DC终于实现了翻身。 但是仔细一想，10月份这部电影就会在北美、港澳台，乃至越南上映，而无缘中国大陆，说不定还要眼巴巴地等待两个月的资源，实在又苦不堪言。 除此之外，《婚姻故事》《我控诉》《自助洗衣店》《星际探索》也加入了我的想看片单，也算是对自己耐心的一次极大考验了。&#xA;先总结总结上一周完成了什么工作吧。&#xA;继续和小程序、服务器、公司和项目组两方“扯头发”式扯头发，期间还经历了一次服务器的宕机，不过还好修复了； 初步完成了 HPV 的地区分异的项目研究，鲍博说要更替一下城市的相关指标，这一更又要此去经年了； 学习了一半 python 里面的 matplotlib； 继续学习 SAS 里面对于 sql 语句的使用方法； 读完了来自日本的工具书《为什么精英都是 Excel 控》，里面有一处着实好笑：说他们为了使用&amp;quot;F2&amp;quot;键检查公式不误触&amp;quot;F1&amp;quot;键弹出帮助浪费时间，把键盘上面的&amp;quot;F1&amp;quot;键都拔掉了，幸好我的电脑&amp;quot;F1&amp;quot;都是截图的快捷键； 终于看完了奈斯博的《焦渴》，也是见证了哈利再次出生入死，搏命拿下了吸血鬼罪犯； 购置了一把沙发椅，不贵也就130块，但是真还挺舒服的； 没有来由地去和几个高中同学喝了一顿酒，被曹总灌得人仰马翻； 我希望下周开始践行的几项，首先要在12点左右上床睡眠，戒掉含糖饮料（咖啡我是戒不掉了），尽量喝水，抽时间多锻炼身体。 接下来，尽量开始今早着手进行meta分析的相关分析，不要再继续拖延下去了，得加快学习节奏了。</description>
+      <title>CDISC 标准（四）——SDTM 数据集详细分类</title>
+      <link>https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes4/</link>
+      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes4/</guid>
+      <description>总结 本笔记的主要内容： 介绍 SDTM 标准下的七个大类别，以及主要包括的数据集； 梳理两个最重要的数据集：AE（副作用数据集）和 LB（实验室检测结果数据</description>
     </item>
+    
     <item>
-      <title>一周总结（8.26-9.1）</title>
-      <link>https://www.xzywisdili.com/post/2019-09-02-weeknote/</link>
-      <pubDate>Mon, 02 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>https://www.xzywisdili.com/post/2019-09-02-weeknote/</guid>
-      <description>今年已经步入了9月，也正式宣告这个“伪暑假”的落幕，新的学期就要开始了。之所以说是“伪暑假”，着实是因为自己没给自己放假，整整一个暑假都在实习。不过整个实习安排还好，从早上9点工作到下午5点半，倒不算特别辛苦，但是每天大部分时间也算投资在工作上面了。&#xA;工作纪实 回顾这一周，似乎也没有做太多事情：&#xA;过了一遍 python 的 numpy 和 pandas 包 和科研项目组里的服务器斗智斗勇，更新了一版小程序 整理了中国气象和污染物的数据 钻研出了绘制正规中国热力地图的画法 剩下时间都用来跑 SAS 代码了（这个 HPV 的项目已经让我整整心累了 3 周） 读了 1 本书，看了若干美剧和电影 庆祝曹老板考上清华，又欢迎马老板从东京归来 尝了一次味千家的葱油拌面（我感觉真的挺好吃的，里面的蛤挺鲜） 入手了 Sony 的 WH1000 XM3，第一次体会到了降噪耳机的强大之处 因为公司就在学校宿舍旁边，早上和晚上也就是骑车子往返，虽说方便，但倒是少了通勤时候安安静静看书的时间。这直接导致我这一周的第二本书拖拖拉拉，还没有读完。可能每天也只有在运行 SAS 代码和睡觉前能瞥上两眼，仔细想想这样的自己也是有点好笑。&#xA;审视与敲打 实话实说，每天去实习之前，我总要花费不少的时间浏览端传媒，少数派 和 自己订阅的 今日热榜。这些井喷式的新闻和八卦究竟对我们是否有所裨益这个问题我没有想明白，但是我知道的是我特别特别喜欢看，一天不看心里就会发痒。这样网站的设计者千方百计地延长我们的在线时间，我也不止一次再各处看到有人提倡“远离一切瀑布流的社交媒体”。虽然心里认同这样的理念，但我却从没有一次真正戒除过。我决心，至少完成一天额定的工作之后，再浏览各类咨询。说不定累了之后就不想看了。&#xA;在工作中比较困惑的地方在于，如何进行文件的存档管理。每天由于不停地重新跑程序，数据更新迭代也比较快。而数据又经常通过word文档和excel表格进行上交和分享。众所周知，git 是不适用于传统的word和excel的，因此就需要使用比较传统的方法：在文件名上标注作者、日期和版本号。这样下来，本地就会堆积不少的各种版本文件，实在令人难以处理。下周我要花一定的时间，哪怕抽出半天的时间好好检查和整理一下现在的文件。还要整理扔在有道云里面的各种来源的笔记。&#xA;另一点令我不满的是，现在的生活可以说几乎是 100% 的“坐立生活”。白天久坐一天之后，到了晚上也没有精力去运动，也是坐在宿舍里，这样导致我自己更没有精神。这样长久会形成一种恶性循环，加剧自己的腰背疼痛的问题。因此，我在考虑要不要购置一把更舒服的椅子或者靠垫，然后抽出时间开始运动。白天坐着不动一段时间之后一定要起身一段时间，舒展舒展。&#xA;新学期即将开学，不知道还能实习多久，不过珍惜每一天。</description>
+      <title>SAS 几个重要概念辨析</title>
+      <link>https://www.xzywisdili.com/2023/05/2023-05-01-sasnotes1/</link>
+      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/05/2023-05-01-sasnotes1/</guid>
+      <description>进行变量类型转换，用 input 还是 put 在 SAS 编程过程中，往往会遇到需要转换变量的需求。而转换变量，往往需要考虑使用 INPUT 还是 PUT。那么这时候就要想想几个变</description>
     </item>
+    
+    <item>
+      <title>CDISC 标准（三）——SDTM 标准初试</title>
+      <link>https://www.xzywisdili.com/2023/04/2023-04-30-cdiscnote3/</link>
+      <pubDate>Sun, 30 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/04/2023-04-30-cdiscnote3/</guid>
+      <description>总结 第一次尝试仔细阅读 SDTM IG 文件中的一个 domain 变量信息； 通过 SAS 代码初试按照 SDTM 标准输出标准化的数据集。 本章要开始使用 SAS，并结合 SDTM 标准，看看如何让</description>
+    </item>
+    
+    <item>
+      <title>CDISC 标准（二）——SDTM 标准概述</title>
+      <link>https://www.xzywisdili.com/2023/04/2023-04-29-cdiscnote2/</link>
+      <pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/04/2023-04-29-cdiscnote2/</guid>
+      <description>总结 介绍了 SDTM 和 IG 文件的基本概念； 通过阅读 SDTM IG 文件，了解 Domain 和 Variable 的各种信息； 重点是 Variable 的五种分类：Identifier, Topic, Qualifier, Timing, Rule。 SDTM 的基本概</description>
+    </item>
+    
+    <item>
+      <title>博客的新浪图床图片崩了？简单办法教你解决！（2023年4月有效）</title>
+      <link>https://www.xzywisdili.com/2023/04/2023-04-28-saveyourblogpics/</link>
+      <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/04/2023-04-28-saveyourblogpics/</guid>
+      <description>今天偶然翻看以前的博客，突然发现图片都显示不出来了，第一时间想到可能是以前用的图床出了问题。 果不其然，经过查找和检索网上信息，发现新浪图床从</description>
+    </item>
+    
+    <item>
+      <title>5 分钟简单生成指定形状的词云</title>
+      <link>https://www.xzywisdili.com/2023/04/2023-04-26-generatewordcloudin5minutes/</link>
+      <pubDate>Wed, 26 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/04/2023-04-26-generatewordcloudin5minutes/</guid>
+      <description>群里有人问，想要做一张这样的指定形状的词云： 我试了一下，其实很简单，基本上 5 分钟就搞定。这里的简单思路就是： 使用 jieba 包对原始文本进行分词处理;</description>
+    </item>
+    
+    <item>
+      <title>数据挖掘的奇效——爬到网站没有显示的数据</title>
+      <link>https://www.xzywisdili.com/2023/04/2023-04-23-userjsonfindextradata/</link>
+      <pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/04/2023-04-23-userjsonfindextradata/</guid>
+      <description>有没有想过，有些网站的页面上展示的数据只有一部分的时候，通过稍微一点挖掘就能发现额外的数据，收获更多信息。 这里就举一个最近发现的例子——云顶</description>
+    </item>
+    
+    <item>
+      <title>【学习笔记】实用统计学复习手册01——探索性数据分析</title>
+      <link>https://www.xzywisdili.com/2023/03/2023-03-23-dataanalysisnote01/</link>
+      <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/03/2023-03-23-dataanalysisnote01/</guid>
+      <description>总结 介绍了数据的分类（数值型、分类型）等； 单变量分析：位置度量（均值、中位数）、变异性度量（方差、标准差、百分位数）等； 单变量的可视化：箱线</description>
+    </item>
+    
+    <item>
+      <title>【学习笔记】保序回归——适用于单调递增数据的统计回归方法</title>
+      <link>https://www.xzywisdili.com/2023/03/2023-03-07-isotonicregression/</link>
+      <pubDate>Tue, 07 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/03/2023-03-07-isotonicregression/</guid>
+      <description>什么是保序回归？ 保序回归（Isotonic Regression）是一种适用于单调函数非参数统计回归方法，即在一个序列中，Xn ≥ Xn-1。通过</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄07】《所罗门的密码》：试图分析人工智能的信任问题却深度不足</title>
+      <link>https://www.xzywisdili.com/2023/03/2023-03-03-bookreview07/</link>
+      <pubDate>Fri, 03 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/03/2023-03-03-bookreview07/</guid>
+      <description>总结 《所罗门的密码》总结了人工智能在方方面面改变整个社会的同时，可能出现的问题和挑战，并倡议出版一份《全球人工智能经济大宪章》。 书中大篇内容</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄06】Excel 学习真的不适合借助书本了</title>
+      <link>https://www.xzywisdili.com/2023/01/2023-01-30-bookreview06/</link>
+      <pubDate>Mon, 30 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/01/2023-01-30-bookreview06/</guid>
+      <description>总结 《跟李锐学Excel数据分析》 名为「数据分析」，内容实则是 Excel 软件使用技巧，这点需要读者注意； 虽然页数看起来较多，但是大量篇幅均为各种实操</description>
+    </item>
+    
+    <item>
+      <title>（2022年11月过）SAS Advance 考试最新完全攻略！</title>
+      <link>https://www.xzywisdili.com/2022/11/2022-11-08-sasadvance/</link>
+      <pubDate>Tue, 08 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/11/2022-11-08-sasadvance/</guid>
+      <description>今天终于通过了 SAS Advance 的考试。有一些最新的备考和考试过程的经验可以跟大家分享一下。 这篇攻略我会从两个方面来说，分别是备考篇和考试篇。 备考篇 SAS Advance 的</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄05】向心城市：带你了解现代城市的发展规律</title>
+      <link>https://www.xzywisdili.com/2022/10/2022-10-19-bookreview05/</link>
+      <pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/10/2022-10-19-bookreview05/</guid>
+      <description>总结 《向心城市》中作者通过大量的数据分析实证，介绍了城市的发展规律、为什么“向心城市”是发展趋势，以及城市化带来的各种方面的内容分析； 评分：</description>
+    </item>
+    
+    <item>
+      <title>动态页面的爬虫示例一则：抓取微博粉丝列表</title>
+      <link>https://www.xzywisdili.com/2022/10/2022-10-05-dynamichtmlspider/</link>
+      <pubDate>Wed, 05 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/10/2022-10-05-dynamichtmlspider/</guid>
+      <description>在碰到一些网页，想通过爬虫抓取页面信息的时候，会发现网页采用了一些动态 HTML 的相关技术来展示信息。这样直接使用 requests 是无法直接获取想要的 HTML 元素内容的</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄04】一日两餐：找回身体代谢灵活性的新饮食理念</title>
+      <link>https://www.xzywisdili.com/2022/09/2022-09-26-bookreview04/</link>
+      <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/09/2022-09-26-bookreview04/</guid>
+      <description>总结 《一日两餐》想让我们通过限制碳水摄入和间歇性禁食这两个重要手段来摆脱未来的胰岛素抵抗； 书中的大量内容更像是别处观点的拼凑，同时时不时夹杂</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄03】锻炼：丹尼尔·利伯曼教授对健康迷思的一一解答</title>
+      <link>https://www.xzywisdili.com/2022/09/2022-9-21-bookreview03/</link>
+      <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/09/2022-9-21-bookreview03/</guid>
+      <description>总结 《锻炼》通过人类进化学和现代医学研究两方面，对广泛流传的各种健康迷思进行了验证和解释； 关于久坐、睡眠、运动损伤、运动与衰老等等话题，你一</description>
+    </item>
+    
+    <item>
+      <title>【医学预测01】Logistic 回归构建变量筛选：先单后多</title>
+      <link>https://www.xzywisdili.com/2022/09/2022-09-07-rlogistic01/</link>
+      <pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/09/2022-09-07-rlogistic01/</guid>
+      <description>总结 介绍了 Logistic 回归模型构建过程中的一种变量筛选方式——先单后多； 配合对应的代码实例和结果解释，让方法更加清楚，同时便于日后复习查看。 在 Logistic 回归模</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄02】开启高质量沟通的第1分钟</title>
+      <link>https://www.xzywisdili.com/2022/09/2022-09-05-bookreview02/</link>
+      <pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/09/2022-09-05-bookreview02/</guid>
+      <description>总结 《开启高质量沟通的第一分钟》目标是让职场工作沟通的双方可以通过一段简短的引言快速进入良好的沟通节奏； 书中凝练了一套沟通结构：沟通框架（背</description>
+    </item>
+    
   </channel>
 </rss>

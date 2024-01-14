@@ -1,26 +1,196 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>可视化 on XZY&#39;s BLOG</title>
+    <title>可视化 on Pure theme for Hugo</title>
     <link>https://www.xzywisdili.com/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/</link>
-    <description>Recent content in 可视化 on XZY&#39;s BLOG</description>
+    <description>Recent content in 可视化 on Pure theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>en</language>
+    <copyright>CC BY 4.0 CN</copyright>
     <lastBuildDate>Thu, 28 Jul 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://www.xzywisdili.com/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    
+        <atom:link href="https://www.xzywisdili.com/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
-      <title>一天内数据分布的可视化</title>
-      <link>https://www.xzywisdili.com/post/2022-07-28-timeseriesplot/</link>
-      <pubDate>Thu, 28 Jul 2022 00:00:00 +0000</pubDate>
-      <guid>https://www.xzywisdili.com/post/2022-07-28-timeseriesplot/</guid>
-      <description>我们在很多情况下都会想要可视化一天中的周期时间来探索发现可能存在的某种模式。 比如根据犯罪数据发现在一天中的高发时段，又或者某个app的用户活跃时段的表示，又或者患者在院外一天中的健康作息的可视化，都不可避免会碰到要把数据在周期性的时间上进行展示。 而目前这样的可视化方向大概有两个：线性展示和环形展示。&#xA;线性展示 线性展示是目前使用方式相对比较多的可视化方式，如下图分别展示的对于人群购物时间的可视化和运动传感器回收数据时间分布的可视化：&#xA;如此使用折线图和条形图来对数据在一天中的时间分布的优势显而易见：&#xA;符合读者的直觉； 绘图比较简单； 但是这种方式也有一些局限性，即没有办法很好体现出时间的连续性。 它们的 X 轴出于限制，都不可避免地选择两个时间点作为图表的开始和结束。 而这个时间点的选取也需要根据数据的实际情况来进行。 比如通用的时间制会规定一天的24小时开始于 0:00，结束于 23:59，但对于很多活动并非如此（比如部分职业的加班或者犯罪往往在午夜时分保持连贯，甚至有可能延伸到凌晨2-3点）。 有时候图表所显示的内容强行断开有时候也会让部分想要探索该处连续性的读者没有办法直观看到。 此外，大众对于上午、下午、徬晚和晚上都在心里有一个普遍共识的观念，这也没有办法在线性图中直观看到，除非作图者显性标注出来。&#xA;以上这些种种的问题想要解决其实比较棘手。曾有人使用双层时间图来进行展示：&#xA;上半部分依然是正常的线性可视化，但是作者将上半部分反转再进行平移，想要以此来同时展示白天（上半部分）和夜间（下半部分）的时间趋势，从一定程度上解决连续性表现不足的问题。但是这样在一定程度牺牲了可视化的直观性，用户可能会觉得上下是两个系列的数据；另外也没有从根本解决问题。&#xA;所以有些人开始尝试另一种可视化思路。&#xA;环形展示 不知道环形展示方式的最初灵感是不是来自钟表的表盘。但钟表代表时间，使用钟表表盘式的圆形尝试来进行一天内趋势的可视化似乎也合情合理。 我自己也在 Excel 里面尝试了一下。 只要将数据转换合理，再使用 Excel 里面内置的雷达图，就能做出近似环形的可视化效果。 但是很快就发现了问题：传统的符合人类直觉的钟表表盘是 12 小时制的，而一天有 24 个小时。 如果强行将 24 个小时挤入一个环形圆盘也会显得非常怪异，比如 Magic Eye 的设计中，&amp;ldquo;Morning&amp;rdquo; 到了右下象限而 “Evening” 到了左上象限：&#xA;这时候有人开始尝试这些妥协式的设计，即使用双表盘、在一个表盘中利用不同颜色来展示上12小时和下12小时、又或者用内圈和外圈来代表 AM 和 PM：&#xA;甚至还有一种使用无限符号的可视化方式，想要表现完整的一天：&#xA;可以看到，环形的方式进行可视化展示的优点包括：&#xA;能够带给读者直观的“上午”、&amp;ldquo;下午&amp;quot;以及“晚上”这种结合生活时间段的感受； 部分解决了连续性的问题； 但是又带来了新的问题：&#xA;AM 和 PM 本身需要颜色或内外圈多维展示，如果有更多维度或系列的数据，就会显得更加杂乱； 作图难度相对于线性方式来说更高； 数据映射到极坐标下，增长和减少的趋势可能也会随之扭曲。 综合以上，我觉得还是优先考虑使用线性的方式进行展示一天内的数据分布情况更为合理。 更为简便的作图方式，展示作图者想要展示的趋势或者模式，就已经足矣。 如果使用环形可视化很容易耗费更多的精力，反而只能做到华而不实的效果，也可能被误导，很难真正探索出数据背后真正的时间分布情况。</description>
+      <title>ADSL 数据集的建立：练习示例</title>
+      <link>https://www.xzywisdili.com/2023/05/2023-05-08-adslexample/</link>
+      <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/05/2023-05-08-adslexample/</guid>
+      <description>总结 通过一则创立 ADSL 数据集的练习示例加深对 ADSL 数据集的理解； ADSL（Subject-Level Analysis Data Set） 是 ADaM 中的一种数据集，特点是每一行是一</description>
     </item>
+    
     <item>
-      <title>「翻译」如何用 Python 画出像 FiveThirtyEight 那么棒的图表</title>
-      <link>https://www.xzywisdili.com/post/2017-10-15-trans01/</link>
-      <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
-      <guid>https://www.xzywisdili.com/post/2017-10-15-trans01/</guid>
-      <description>&lt;p&gt;如果你经常读数据科学领域的文章的话，你可能会偶然发现 &lt;a href=&#34;http://fivethirtyeight.com&#34;&gt;FiveThirtyEight&lt;/a&gt; 上的内容，然后被他们惊艳的图表迷住。于是你自己也想制作如此出色的可视化作品，于是去 Quora 和 Reddit 上问怎么做。你收到了几个回答，但是这些回答都很模糊。你还是不知道怎么搞定这样的图表。&lt;/p&gt;</description>
+      <title>CDISC 标准（五）——ADaM 标准概述</title>
+      <link>https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes5/</link>
+      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes5/</guid>
+      <description>总结 ADaM 标准实为了让临床试验统计分析人员梗快速、标准准确地进行统计分析和制作报表的标准； ADaM 主要分为三类数据集：ADSL，BDS 和 OCCDS； 详</description>
     </item>
+    
+    <item>
+      <title>CDISC 标准（四）——SDTM 数据集详细分类</title>
+      <link>https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes4/</link>
+      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes4/</guid>
+      <description>总结 本笔记的主要内容： 介绍 SDTM 标准下的七个大类别，以及主要包括的数据集； 梳理两个最重要的数据集：AE（副作用数据集）和 LB（实验室检测结果数据</description>
+    </item>
+    
+    <item>
+      <title>SAS 几个重要概念辨析</title>
+      <link>https://www.xzywisdili.com/2023/05/2023-05-01-sasnotes1/</link>
+      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/05/2023-05-01-sasnotes1/</guid>
+      <description>进行变量类型转换，用 input 还是 put 在 SAS 编程过程中，往往会遇到需要转换变量的需求。而转换变量，往往需要考虑使用 INPUT 还是 PUT。那么这时候就要想想几个变</description>
+    </item>
+    
+    <item>
+      <title>CDISC 标准（三）——SDTM 标准初试</title>
+      <link>https://www.xzywisdili.com/2023/04/2023-04-30-cdiscnote3/</link>
+      <pubDate>Sun, 30 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/04/2023-04-30-cdiscnote3/</guid>
+      <description>总结 第一次尝试仔细阅读 SDTM IG 文件中的一个 domain 变量信息； 通过 SAS 代码初试按照 SDTM 标准输出标准化的数据集。 本章要开始使用 SAS，并结合 SDTM 标准，看看如何让</description>
+    </item>
+    
+    <item>
+      <title>CDISC 标准（二）——SDTM 标准概述</title>
+      <link>https://www.xzywisdili.com/2023/04/2023-04-29-cdiscnote2/</link>
+      <pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/04/2023-04-29-cdiscnote2/</guid>
+      <description>总结 介绍了 SDTM 和 IG 文件的基本概念； 通过阅读 SDTM IG 文件，了解 Domain 和 Variable 的各种信息； 重点是 Variable 的五种分类：Identifier, Topic, Qualifier, Timing, Rule。 SDTM 的基本概</description>
+    </item>
+    
+    <item>
+      <title>博客的新浪图床图片崩了？简单办法教你解决！（2023年4月有效）</title>
+      <link>https://www.xzywisdili.com/2023/04/2023-04-28-saveyourblogpics/</link>
+      <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/04/2023-04-28-saveyourblogpics/</guid>
+      <description>今天偶然翻看以前的博客，突然发现图片都显示不出来了，第一时间想到可能是以前用的图床出了问题。 果不其然，经过查找和检索网上信息，发现新浪图床从</description>
+    </item>
+    
+    <item>
+      <title>5 分钟简单生成指定形状的词云</title>
+      <link>https://www.xzywisdili.com/2023/04/2023-04-26-generatewordcloudin5minutes/</link>
+      <pubDate>Wed, 26 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/04/2023-04-26-generatewordcloudin5minutes/</guid>
+      <description>群里有人问，想要做一张这样的指定形状的词云： 我试了一下，其实很简单，基本上 5 分钟就搞定。这里的简单思路就是： 使用 jieba 包对原始文本进行分词处理;</description>
+    </item>
+    
+    <item>
+      <title>数据挖掘的奇效——爬到网站没有显示的数据</title>
+      <link>https://www.xzywisdili.com/2023/04/2023-04-23-userjsonfindextradata/</link>
+      <pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/04/2023-04-23-userjsonfindextradata/</guid>
+      <description>有没有想过，有些网站的页面上展示的数据只有一部分的时候，通过稍微一点挖掘就能发现额外的数据，收获更多信息。 这里就举一个最近发现的例子——云顶</description>
+    </item>
+    
+    <item>
+      <title>【学习笔记】实用统计学复习手册01——探索性数据分析</title>
+      <link>https://www.xzywisdili.com/2023/03/2023-03-23-dataanalysisnote01/</link>
+      <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/03/2023-03-23-dataanalysisnote01/</guid>
+      <description>总结 介绍了数据的分类（数值型、分类型）等； 单变量分析：位置度量（均值、中位数）、变异性度量（方差、标准差、百分位数）等； 单变量的可视化：箱线</description>
+    </item>
+    
+    <item>
+      <title>【学习笔记】保序回归——适用于单调递增数据的统计回归方法</title>
+      <link>https://www.xzywisdili.com/2023/03/2023-03-07-isotonicregression/</link>
+      <pubDate>Tue, 07 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/03/2023-03-07-isotonicregression/</guid>
+      <description>什么是保序回归？ 保序回归（Isotonic Regression）是一种适用于单调函数非参数统计回归方法，即在一个序列中，Xn ≥ Xn-1。通过</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄07】《所罗门的密码》：试图分析人工智能的信任问题却深度不足</title>
+      <link>https://www.xzywisdili.com/2023/03/2023-03-03-bookreview07/</link>
+      <pubDate>Fri, 03 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/03/2023-03-03-bookreview07/</guid>
+      <description>总结 《所罗门的密码》总结了人工智能在方方面面改变整个社会的同时，可能出现的问题和挑战，并倡议出版一份《全球人工智能经济大宪章》。 书中大篇内容</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄06】Excel 学习真的不适合借助书本了</title>
+      <link>https://www.xzywisdili.com/2023/01/2023-01-30-bookreview06/</link>
+      <pubDate>Mon, 30 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/01/2023-01-30-bookreview06/</guid>
+      <description>总结 《跟李锐学Excel数据分析》 名为「数据分析」，内容实则是 Excel 软件使用技巧，这点需要读者注意； 虽然页数看起来较多，但是大量篇幅均为各种实操</description>
+    </item>
+    
+    <item>
+      <title>（2022年11月过）SAS Advance 考试最新完全攻略！</title>
+      <link>https://www.xzywisdili.com/2022/11/2022-11-08-sasadvance/</link>
+      <pubDate>Tue, 08 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/11/2022-11-08-sasadvance/</guid>
+      <description>今天终于通过了 SAS Advance 的考试。有一些最新的备考和考试过程的经验可以跟大家分享一下。 这篇攻略我会从两个方面来说，分别是备考篇和考试篇。 备考篇 SAS Advance 的</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄05】向心城市：带你了解现代城市的发展规律</title>
+      <link>https://www.xzywisdili.com/2022/10/2022-10-19-bookreview05/</link>
+      <pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/10/2022-10-19-bookreview05/</guid>
+      <description>总结 《向心城市》中作者通过大量的数据分析实证，介绍了城市的发展规律、为什么“向心城市”是发展趋势，以及城市化带来的各种方面的内容分析； 评分：</description>
+    </item>
+    
+    <item>
+      <title>动态页面的爬虫示例一则：抓取微博粉丝列表</title>
+      <link>https://www.xzywisdili.com/2022/10/2022-10-05-dynamichtmlspider/</link>
+      <pubDate>Wed, 05 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/10/2022-10-05-dynamichtmlspider/</guid>
+      <description>在碰到一些网页，想通过爬虫抓取页面信息的时候，会发现网页采用了一些动态 HTML 的相关技术来展示信息。这样直接使用 requests 是无法直接获取想要的 HTML 元素内容的</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄04】一日两餐：找回身体代谢灵活性的新饮食理念</title>
+      <link>https://www.xzywisdili.com/2022/09/2022-09-26-bookreview04/</link>
+      <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/09/2022-09-26-bookreview04/</guid>
+      <description>总结 《一日两餐》想让我们通过限制碳水摄入和间歇性禁食这两个重要手段来摆脱未来的胰岛素抵抗； 书中的大量内容更像是别处观点的拼凑，同时时不时夹杂</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄03】锻炼：丹尼尔·利伯曼教授对健康迷思的一一解答</title>
+      <link>https://www.xzywisdili.com/2022/09/2022-9-21-bookreview03/</link>
+      <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/09/2022-9-21-bookreview03/</guid>
+      <description>总结 《锻炼》通过人类进化学和现代医学研究两方面，对广泛流传的各种健康迷思进行了验证和解释； 关于久坐、睡眠、运动损伤、运动与衰老等等话题，你一</description>
+    </item>
+    
+    <item>
+      <title>【医学预测01】Logistic 回归构建变量筛选：先单后多</title>
+      <link>https://www.xzywisdili.com/2022/09/2022-09-07-rlogistic01/</link>
+      <pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/09/2022-09-07-rlogistic01/</guid>
+      <description>总结 介绍了 Logistic 回归模型构建过程中的一种变量筛选方式——先单后多； 配合对应的代码实例和结果解释，让方法更加清楚，同时便于日后复习查看。 在 Logistic 回归模</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄02】开启高质量沟通的第1分钟</title>
+      <link>https://www.xzywisdili.com/2022/09/2022-09-05-bookreview02/</link>
+      <pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/09/2022-09-05-bookreview02/</guid>
+      <description>总结 《开启高质量沟通的第一分钟》目标是让职场工作沟通的双方可以通过一段简短的引言快速进入良好的沟通节奏； 书中凝练了一套沟通结构：沟通框架（背</description>
+    </item>
+    
   </channel>
 </rss>

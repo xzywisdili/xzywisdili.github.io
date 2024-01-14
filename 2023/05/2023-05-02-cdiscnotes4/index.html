@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+        CDISC 标准（四）——SDTM 数据集详细分类 - Pure theme for Hugo
+      </title>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    
+    <meta name="theme-color" content="#000000" />
+    
+    <meta http-equiv="window-target" content="_top" />
+    
+    
+    <meta name="description" content="总结 本笔记的主要内容： 介绍 SDTM 标准下的七个大类别，以及主要包括的数据集； 梳理两个最重要的数据集：AE（副作用数据集）和 LB（实验室检测结果数据" />
+    <meta name="generator" content="Hugo 0.121.2 with theme pure" />
+    <title>CDISC 标准（四）——SDTM 数据集详细分类 - Pure theme for Hugo</title>
+    
+    
+    <link rel="stylesheet" href="https://www.xzywisdili.com/css/style.min.a85959a41e7abcc0db1f81f44bd264649303417f91b536e87dcde644340fea6d.css">
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
+    <meta property="og:title" content="CDISC 标准（四）——SDTM 数据集详细分类" />
+<meta property="og:description" content="总结 本笔记的主要内容： 介绍 SDTM 标准下的七个大类别，以及主要包括的数据集； 梳理两个最重要的数据集：AE（副作用数据集）和 LB（实验室检测结果数据" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes4/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-05-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-05-02T00:00:00+00:00" />
+
+<meta itemprop="name" content="CDISC 标准（四）——SDTM 数据集详细分类">
+<meta itemprop="description" content="总结 本笔记的主要内容： 介绍 SDTM 标准下的七个大类别，以及主要包括的数据集； 梳理两个最重要的数据集：AE（副作用数据集）和 LB（实验室检测结果数据"><meta itemprop="datePublished" content="2023-05-02T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-05-02T00:00:00+00:00" />
+<meta itemprop="wordCount" content="4356">
+<meta itemprop="keywords" content="分享,SAS," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="CDISC 标准（四）——SDTM 数据集详细分类"/>
+<meta name="twitter:description" content="总结 本笔记的主要内容： 介绍 SDTM 标准下的七个大类别，以及主要包括的数据集； 梳理两个最重要的数据集：AE（副作用数据集）和 LB（实验室检测结果数据"/>
+
+    <!--[if lte IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+      <![endif]-->
+
+    <!--[if lt IE 9]>
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+  </head>
+
+  
+  
+
+  <body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="https://github.com/xiaoheiAh" target="_blank">
+            <img class="img-circle img-rotate" src="https://www.xzywisdili.com/avatar.png" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">xiaoheiAh</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">author title</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>Shanghai, China</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="Type something..."
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-home">
+                <a href="/">
+                    <i class="icon icon-home-fill"></i>
+                  <span class="menu-title">Home</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-archives">
+                <a href="/posts/">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">Archives</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-categories">
+                <a href="/categories/">
+                    <i class="icon icon-folder"></i>
+                  <span class="menu-title">Categories</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-tags">
+                <a href="/tags/">
+                    <i class="icon icon-tags"></i>
+                  <span class="menu-title">Tags</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-about">
+                <a href="/about/">
+                    <i class="icon icon-cup-fill"></i>
+                  <span class="menu-title">About</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">Board</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content"><p>enjoy~</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+      <div class="widget">
+    <h3 class="widget-title"> Tags</h3>
+    <div id="tag-cloud-list" class="widget-body">
+            
+            
+            <a href="https://www.xzywisdili.com/tags/blog/" class="tag-list-link" rel="1">blog<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/cdisc/" class="tag-list-link" rel="4">cdisc<span
+               class="tag-list-count">4</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/excel/" class="tag-list-link" rel="1">excel<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/hexo/" class="tag-list-link" rel="1">hexo<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/latex/" class="tag-list-link" rel="1">latex<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/markdown/" class="tag-list-link" rel="3">markdown<span
+               class="tag-list-count">3</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/matplotlib/" class="tag-list-link" rel="1">matplotlib<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/python/" class="tag-list-link" rel="5">python<span
+               class="tag-list-count">5</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/r-%E8%AF%AD%E8%A8%80/" class="tag-list-link" rel="14">r-语言<span
+               class="tag-list-count">14</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/r%E8%AF%AD%E8%A8%80/" class="tag-list-link" rel="4">r语言<span
+               class="tag-list-count">4</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/sas/" class="tag-list-link" rel="9">sas<span
+               class="tag-list-count">9</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/tensorflow/" class="tag-list-link" rel="1">tensorflow<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E4%B8%B4%E5%BA%8A%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="tag-list-link" rel="1">临床数据分析<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="tag-list-link" rel="1">人工智能<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E4%BD%9C%E5%9B%BE/" class="tag-list-link" rel="1">作图<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E5%81%A5%E5%BA%B7%E7%A7%91%E6%99%AE/" class="tag-list-link" rel="2">健康科普<span
+               class="tag-list-count">2</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E5%88%86%E4%BA%AB/" class="tag-list-link" rel="37">分享<span
+               class="tag-list-count">37</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E5%8C%BB%E5%AD%A6%E9%A2%84%E6%B5%8B/" class="tag-list-link" rel="1">医学预测<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E5%8D%9A%E5%AE%A2/" class="tag-list-link" rel="1">博客<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" class="tag-list-link" rel="4">可视化<span
+               class="tag-list-count">4</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E5%91%A8%E8%AE%B0/" class="tag-list-link" rel="4">周记<span
+               class="tag-list-count">4</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E5%9F%8E%E5%B8%82/" class="tag-list-link" rel="1">城市<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E5%AD%A6%E4%B9%A0/" class="tag-list-link" rel="2">学习<span
+               class="tag-list-count">2</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E5%B7%A5%E4%BD%9C/" class="tag-list-link" rel="1">工作<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E5%BD%B1%E8%AF%84/" class="tag-list-link" rel="2">影评<span
+               class="tag-list-count">2</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E6%80%BB%E7%BB%93/" class="tag-list-link" rel="1">总结<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E6%83%B3%E6%B3%95/" class="tag-list-link" rel="1">想法<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E6%8E%A8%E7%90%86/" class="tag-list-link" rel="1">推理<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" class="tag-list-link" rel="1">数据处理<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="tag-list-link" rel="1">机器学习<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E6%B5%81%E8%A1%8C%E7%97%85%E5%AD%A6/" class="tag-list-link" rel="2">流行病学<span
+               class="tag-list-count">2</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E7%88%AC%E8%99%AB/" class="tag-list-link" rel="2">爬虫<span
+               class="tag-list-count">2</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E7%8B%AC%E7%AB%8B%E6%B8%B8%E6%88%8F/" class="tag-list-link" rel="1">独立游戏<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E7%94%B5%E5%BD%B1/" class="tag-list-link" rel="1">电影<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E7%AC%94%E8%AE%B0/" class="tag-list-link" rel="2">笔记<span
+               class="tag-list-count">2</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E7%AE%97%E6%B3%95/" class="tag-list-link" rel="1">算法<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E7%BB%9F%E8%AE%A1/" class="tag-list-link" rel="1">统计<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90/" class="tag-list-link" rel="2">统计分析<span
+               class="tag-list-count">2</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E7%BB%9F%E8%AE%A1%E5%9B%BE/" class="tag-list-link" rel="1">统计图<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/" class="tag-list-link" rel="1">统计学<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E7%BC%96%E7%A8%8B/" class="tag-list-link" rel="1">编程<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E7%BE%8E%E5%89%A7/" class="tag-list-link" rel="1">美剧<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E8%80%83%E8%AF%95/" class="tag-list-link" rel="1">考试<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E8%AE%B0%E5%BD%95/" class="tag-list-link" rel="25">记录<span
+               class="tag-list-count">25</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E8%AF%BB%E4%B9%A6/" class="tag-list-link" rel="1">读书<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="tag-list-link" rel="7">读书笔记<span
+               class="tag-list-count">7</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E8%BF%BD%E6%98%9F/" class="tag-list-link" rel="1">追星<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E9%98%85%E8%AF%BB/" class="tag-list-link" rel="9">阅读<span
+               class="tag-list-count">9</span></a>
+            
+            
+            <a href="https://www.xzywisdili.com/tags/%E9%9A%8F%E6%83%B3/" class="tag-list-link" rel="3">随想<span
+               class="tag-list-count">3</span></a>
+            
+    </div>
+<script>
+document.onreadystatechange = () => {
+  if (document.readyState === 'complete') {
+    tagCloud('#tag-cloud-list a',  8 ,  20 );
+  }
+};
+
+function tagCloud(where, min, max) {
+  let iMax = 0;
+  let iMin = 0;
+  $(where).each(function() {
+    let weight = Number($(this).attr("rel"));
+    if(iMax < weight) iMax = weight;
+    if(iMin > weight || iMin == 0) iMin = weight;
+  });
+  let step = (max - min)/(iMax - iMin);
+  $(where).each(function() {
+    let weight = $(this).attr("rel") - iMin;
+    $(this).css({"font-size": min + (weight * step) + 'px'});
+  });
+};
+</script>
+</div>
+
+      <div class="widget">
+    <h3 class="widget-title"> Categories</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+            <li class="category-list-item"><a href="https://www.xzywisdili.com/categories/hexo/" class="category-list-link">hexo</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://www.xzywisdili.com/categories/latex/" class="category-list-link">latex</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://www.xzywisdili.com/categories/python/" class="category-list-link">python</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://www.xzywisdili.com/categories/r-%E8%AF%AD%E8%A8%80/" class="category-list-link">r-语言</a><span class="category-list-count">14</span></li>
+            <li class="category-list-item"><a href="https://www.xzywisdili.com/categories/r%E8%AF%AD%E8%A8%80/" class="category-list-link">r语言</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://www.xzywisdili.com/categories/sas/" class="category-list-link">sas</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://www.xzywisdili.com/categories/%E5%88%86%E4%BA%AB/" class="category-list-link">分享</a><span class="category-list-count">12</span></li>
+            <li class="category-list-item"><a href="https://www.xzywisdili.com/categories/%E5%8D%9A%E5%AE%A2/" class="category-list-link">博客</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://www.xzywisdili.com/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/" class="category-list-link">可视化</a><span class="category-list-count">2</span></li>
+            <li class="category-list-item"><a href="https://www.xzywisdili.com/categories/%E5%AD%A6%E4%B9%A0/" class="category-list-link">学习</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://www.xzywisdili.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="category-list-link">学习笔记</a><span class="category-list-count">10</span></li>
+            <li class="category-list-item"><a href="https://www.xzywisdili.com/categories/%E5%BD%B1%E8%A7%86%E5%89%A7/" class="category-list-link">影视剧</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://www.xzywisdili.com/categories/%E5%BD%B1%E8%AF%84/" class="category-list-link">影评</a><span class="category-list-count">2</span></li>
+            <li class="category-list-item"><a href="https://www.xzywisdili.com/categories/%E6%83%B3%E6%B3%95/" class="category-list-link">想法</a><span class="category-list-count">13</span></li>
+            <li class="category-list-item"><a href="https://www.xzywisdili.com/categories/%E6%96%B0%E9%97%BB/" class="category-list-link">新闻</a><span class="category-list-count">2</span></li>
+            <li class="category-list-item"><a href="https://www.xzywisdili.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="category-list-link">机器学习</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://www.xzywisdili.com/categories/%E6%B5%81%E8%A1%8C%E7%97%85/" class="category-list-link">流行病</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://www.xzywisdili.com/categories/%E6%B5%81%E8%A1%8C%E7%97%85%E5%AD%A6/" class="category-list-link">流行病学</a><span class="category-list-count">2</span></li>
+            <li class="category-list-item"><a href="https://www.xzywisdili.com/categories/%E7%BB%9F%E8%AE%A1/" class="category-list-link">统计</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://www.xzywisdili.com/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6/" class="category-list-link">统计学</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://www.xzywisdili.com/categories/%E7%BF%BB%E8%AF%91/" class="category-list-link">翻译</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://www.xzywisdili.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="category-list-link">读书笔记</a><span class="category-list-count">8</span></li>
+            <li class="category-list-item"><a href="https://www.xzywisdili.com/categories/%E9%98%85%E8%AF%BB/" class="category-list-link">阅读</a><span class="category-list-count">2</span></li>
+            <li class="category-list-item"><a href="https://www.xzywisdili.com/categories/%E9%9A%8F%E6%83%B3/" class="category-list-link">随想</a><span class="category-list-count">1</span></li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> Tags</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/blog/" class="tag-list-link">blog</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/cdisc/" class="tag-list-link">cdisc</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/excel/" class="tag-list-link">excel</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/hexo/" class="tag-list-link">hexo</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/latex/" class="tag-list-link">latex</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/markdown/" class="tag-list-link">markdown</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/matplotlib/" class="tag-list-link">matplotlib</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/python/" class="tag-list-link">python</a><span
+                    class="tag-list-count">5</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/r-%E8%AF%AD%E8%A8%80/" class="tag-list-link">r-语言</a><span
+                    class="tag-list-count">14</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/r%E8%AF%AD%E8%A8%80/" class="tag-list-link">r语言</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/sas/" class="tag-list-link">sas</a><span
+                    class="tag-list-count">9</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/tensorflow/" class="tag-list-link">tensorflow</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E4%B8%B4%E5%BA%8A%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="tag-list-link">临床数据分析</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="tag-list-link">人工智能</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E4%BD%9C%E5%9B%BE/" class="tag-list-link">作图</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E5%81%A5%E5%BA%B7%E7%A7%91%E6%99%AE/" class="tag-list-link">健康科普</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E5%88%86%E4%BA%AB/" class="tag-list-link">分享</a><span
+                    class="tag-list-count">37</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E5%8C%BB%E5%AD%A6%E9%A2%84%E6%B5%8B/" class="tag-list-link">医学预测</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E5%8D%9A%E5%AE%A2/" class="tag-list-link">博客</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" class="tag-list-link">可视化</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E5%91%A8%E8%AE%B0/" class="tag-list-link">周记</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E5%9F%8E%E5%B8%82/" class="tag-list-link">城市</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E5%AD%A6%E4%B9%A0/" class="tag-list-link">学习</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E5%B7%A5%E4%BD%9C/" class="tag-list-link">工作</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E5%BD%B1%E8%AF%84/" class="tag-list-link">影评</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E6%80%BB%E7%BB%93/" class="tag-list-link">总结</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E6%83%B3%E6%B3%95/" class="tag-list-link">想法</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E6%8E%A8%E7%90%86/" class="tag-list-link">推理</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" class="tag-list-link">数据处理</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="tag-list-link">机器学习</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E6%B5%81%E8%A1%8C%E7%97%85%E5%AD%A6/" class="tag-list-link">流行病学</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E7%88%AC%E8%99%AB/" class="tag-list-link">爬虫</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E7%8B%AC%E7%AB%8B%E6%B8%B8%E6%88%8F/" class="tag-list-link">独立游戏</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E7%94%B5%E5%BD%B1/" class="tag-list-link">电影</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E7%AC%94%E8%AE%B0/" class="tag-list-link">笔记</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E7%AE%97%E6%B3%95/" class="tag-list-link">算法</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E7%BB%9F%E8%AE%A1/" class="tag-list-link">统计</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90/" class="tag-list-link">统计分析</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E7%BB%9F%E8%AE%A1%E5%9B%BE/" class="tag-list-link">统计图</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6/" class="tag-list-link">统计学</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E7%BC%96%E7%A8%8B/" class="tag-list-link">编程</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E7%BE%8E%E5%89%A7/" class="tag-list-link">美剧</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E8%80%83%E8%AF%95/" class="tag-list-link">考试</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E8%AE%B0%E5%BD%95/" class="tag-list-link">记录</a><span
+                    class="tag-list-count">25</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E8%AF%BB%E4%B9%A6/" class="tag-list-link">读书</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="tag-list-link">读书笔记</a><span
+                    class="tag-list-count">7</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E8%BF%BD%E6%98%9F/" class="tag-list-link">追星</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E9%98%85%E8%AF%BB/" class="tag-list-link">阅读</a><span
+                    class="tag-list-count">9</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://www.xzywisdili.com/tags/%E9%9A%8F%E6%83%B3/" class="tag-list-link">随想</a><span
+                    class="tag-list-count">3</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+      
+<div class="widget">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget-body">
+        <ul class="recent-post-list list-unstyled no-thumbnail">
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://www.xzywisdili.com/2023/05/2023-05-08-adslexample/" class="title">ADSL 数据集的建立：练习示例</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2023-05-07 00:00:00 &#43;0000 UTC" itemprop="datePublished">2023-05-07</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes5/" class="title">CDISC 标准（五）——ADaM 标准概述</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2023-05-02 00:00:00 &#43;0000 UTC" itemprop="datePublished">2023-05-02</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes4/" class="title">CDISC 标准（四）——SDTM 数据集详细分类</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2023-05-02 00:00:00 &#43;0000 UTC" itemprop="datePublished">2023-05-02</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://www.xzywisdili.com/2023/05/2023-05-01-sasnotes1/" class="title">SAS 几个重要概念辨析</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2023-05-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">2023-05-01</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://www.xzywisdili.com/2023/04/2023-04-30-cdiscnote3/" class="title">CDISC 标准（三）——SDTM 标准初试</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2023-04-30 00:00:00 &#43;0000 UTC" itemprop="datePublished">2023-04-30</time>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">Catalogue</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2023/05/2023-05-02-cdiscnotes4/"
+    >CDISC 标准（四）——SDTM 数据集详细分类</a
+  >
+</h1>
+
+      <div class="article-meta">
+        
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes4/" class="article-date">
+  <time datetime="2023-05-02 00:00:00 &#43;0000 UTC" itemprop="datePublished">2023-05-02</time>
+</a>
+</span>
+<span class="article-category">
+  <i class="icon icon-folder"></i>&nbsp;
+  <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"> 学习笔记 </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/%E5%88%86%E4%BA%AB/"> 分享 </a>
+    <a class="article-tag-link" href="/tags/sas/"> SAS </a>
+  </span>
+
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 4356 words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Time: 9 minutes </span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <h2 id="总结">总结</h2>
+<p>本笔记的主要内容：</p>
+<ul>
+<li>介绍 SDTM 标准下的七个大类别，以及主要包括的数据集；</li>
+<li>梳理两个最重要的数据集：AE（副作用数据集）和 LB（实验室检测结果数据集）。</li>
+</ul>
+<p>SDTM 的全称是 SDTM Standard dataset tabulation model，即实验数据标准化的模型，在之前的笔记中有一个<a href="https://www.xzywisdili.com/post/2023-04-29-cdiscnote2/">概述的介绍</a>。SDTM 标准力图能够尽可能覆盖在临床实验进行过程中所需要收集到的所有数据和相关信息，因此也详细地设计了各种不同分类的大类别和数据集。</p>
+<p>在这个分类下，总共包括<strong>七个大类别和 44 个数据集</strong>。每一种数据集都属于唯一一个类别。七个大类别“SIFEFTR”：</p>
+<ul>
+<li>特殊目的类：Special Purpose</li>
+<li>干涉类：Intervention</li>
+<li>发现类：Findings</li>
+<li>发现相关类：Findings About</li>
+<li>事件类：Events</li>
+<li>实验设计类：Study Trial</li>
+<li>关系类：Relationship</li>
+</ul>
+<p>下面分门别类介绍每一种类型。</p>
+<h2 id="特殊目的类-special-purpose">特殊目的类 Special Purpose</h2>
+<p>特殊目的类：包括和实验参与者本人相关的数据，无法归类到其他类别。主要包括以下几个数据集：</p>
+<ul>
+<li>CO：评价数据集，Comments**，医生手写或者补充的文本备注和记录，需要与其他数据集相连接；如果手写的记录超过 CDISC 规定的最长值长度 200 个字符，就需要创建新的 COVAL1，COVAL2 变量保存字符，以此类推，每个变量容纳 200 个字符；</li>
+<li>DM：人口统计学，Demographics，用于保存患者的基础信息，比如患者编号、性别、国籍、种族、实验开始时间等等，在之前的内容中有所记录；</li>
+<li>SV：患者来访数据，Subject Visit</li>
+<li>SE，患者时期元素，Subject Element
+<ul>
+<li>一个患者在整个临床实验过程中需要来访多次。一般是从 Screen 和纳入开始，之后的来访依次是基线，第一次来访，第二次来访等，直到实验结束。在服用药物过后，因为药物在人体内有残留期，也需要几次患者来访，来观察是否具有副作用和其他治疗效果。</li>
+<li><strong>患者来访的时间数据都需要记录在 SV 数据集中</strong>。每个患者<strong>在实验过程中经历的每个时期和元素的时间信息</strong>，这些数据被放在 SE 中。</li>
+</ul>
+</li>
+</ul>
+<h2 id="干涉类-interventions">干涉类 Interventions</h2>
+<p>干涉类主要包括<strong>对患者有影响的行为</strong>的相关数据，包括以下几个数据集：</p>
+<ul>
+<li><strong>CM：伴随用药 Concomitant and prior medications</strong>
+<ul>
+<li>参加临床实验的患者，如果有其他疾病，需要服用已经上市的药物，就需要在数据集中记录伴随用药的相关信息；如果是和癌症相关的临床实验，可能需要让受试者服用一种统计的抗癌药物，再服用待实验的药物，那么这个统一服用的药物也需要放置在 CM 数据集中；</li>
+<li>CM 数据集存放<strong>患者服用的其他药物（非本实验药物）的</strong>名称、类别、剂量、计量单位、频率、药物类型（胶囊/饮剂）等数据；</li>
+</ul>
+</li>
+<li><strong>EX：实验用药 Exposure</strong>
+<ul>
+<li><strong>实验计划中</strong>药物的使用情况；</li>
+<li>根据实验设计来确定，核心变量包括 EXTRT（药物的名称），EXDOSE（药物的剂量），EXDOSU（药物剂量的单位），EXDOSFRQ（药物按此剂量服用的频率） 和 EXDOSFRM（药物的形式，液体/胶囊/含服片）；</li>
+</ul>
+</li>
+<li><strong>EC：实际实验用药 Exposure as Collected</strong>
+<ul>
+<li>实际中**药物的使用情况</li>
+<li>由 ECOCCUR 变量指定该次是否服药，ECDOSE 记录剂量，ECDOSU 记录剂量单位；</li>
+<li><strong>EC 和 EX 数据集的结构基本相同，实际分析使用 EX 数据集</strong>，因为根据实验设计而来的</li>
+</ul>
+</li>
+<li><strong>PR：过程 Procedures</strong>
+<ul>
+<li>患者治疗和诊断相关的过程</li>
+<li>比如患者参与心血管相关的临床实验，中间去口腔科诊断并拔了智齿，这个过程无法判断是否与临床实验相关，所以也要记录下来。</li>
+<li>核心变量：PRTRT，记录做的手术名称</li>
+<li>PRSTDTC，PRENDTC，PRSTDY，PRENDY 分别对应手术开始的日期和结束的日期，以及对应的天数；</li>
+</ul>
+</li>
+<li>SU：物质使用 Substance Use
+<ul>
+<li>其他非药物的物质的使用情况，比如最常见的咖啡（含有咖啡因），吸烟、喝酒；</li>
+<li>主要包括以下几个变量：SUTRT（使用物质的名称，包括 CIGARETTES，COFFEE）、SUCAT（使用物质所属的大类）、SUDOSE（这些物质使用的数量）、SUDOSEU（使用物质的数量单位）、SUDOSFRQ（使用物质的频率）、SUSTAT，SUREASND（数值没有被记录和没有记录的原因）</li>
+</ul>
+</li>
+</ul>
+<h2 id="事件类-events">事件类 Events</h2>
+<p>事件类，代表计划之外的事件，总共包括 6 个数据集：</p>
+<ul>
+<li>AE：副作用，Adverse Events</li>
+<li>CE：临床事件，Clinical Events</li>
+<li>DS：处置，Disposition</li>
+<li>DV：实验计划偏差，Protocol Deviations</li>
+<li>HO：医疗事件，Healthcare Encounters</li>
+<li>MH：既往药史，Medical History</li>
+</ul>
+<p>其中最最重要的是 AE，也就是副作用数据集。</p>
+<p>AE 的主要变量包括四种类型：</p>
+<ul>
+<li>第一类：副作用的名称和类别
+<ul>
+<li>AE 中，每个副作用不仅要求记录它的名称，还需要记录所属的更高级身体组织和系统。基本上原始数据集会提供这些数据，如果需要查询，每个副作用的详细分类信息存在一个名为 MedDRA 的文档之中；</li>
+<li>AETERM（副作用名称）、AEDECOD（副作用标准名称）</li>
+</ul>
+</li>
+<li>第二类：属性类变量
+<ul>
+<li>相当于给每条副作用的属性进行记录，比如 AESEV（副作用严重程度），取值为 3 种，由轻到重分别是 MILD，MODERATE 和 SEVERE；</li>
+<li>AEACN（副作用发生后采取的行动，包括药量减少、暂时停药、退出实验等）、AEOUT（副作用的结果，包括解决中、已解决、甚至患者死亡）、AEREL（副作用是否与药物相关）；</li>
+</ul>
+</li>
+<li>第三类：评价类变量
+<ul>
+<li>往往用 Flag 来表示是否满足标量所描述的情况，Y 表示符合，N 表示不符合；</li>
+<li>比如 AESCONG 表示是否导致了胎儿先天性异常和缺陷；AESDISAB 表示是否导致了残疾，AESDTH 表示是否导致死亡，AESHOSP 表示是否导致住院等；</li>
+</ul>
+</li>
+<li>第四类：时间类变量
+<ul>
+<li>AESTDTC 和 AEENDTC 表示副作用开始和结束的时间；</li>
+<li>对应的 DY 类变量：AESTDY 和 AEENDY；</li>
+<li>AEDUR 表示副作用持续时间的变量。</li>
+</ul>
+</li>
+</ul>
+<h2 id="发现类-findings">发现类 Findings</h2>
+<p>发现类中包括最多数量的数据集。其中，大部分数据集只用于特殊疾病或者药物中，真正常用的发现类数据集如下：</p>
+<ul>
+<li>EG：心电图测试指标**，ECG Test Results</li>
+<li><strong>IE：每名患者纳入排除标准的情况</strong>，Inclusion/Exclusion Creterion Not Met</li>
+<li>**LB：血检尿检指标 Laboratory Test Results</li>
+<li>QS：调查问卷 Questionnaires**，在涉及生活质量的实验当中，QS 往往是最重要的数据集之一；</li>
+<li>**VS：记录人体的一些基本信息 Vital Signs，包括身高、体重、脉搏、血压等。</li>
+</ul>
+<p>而关于癌症的发现类数据集有下列几项：</p>
+<ul>
+<li>TU：Tumor Identification</li>
+<li>TR：Tumor Results</li>
+<li>RS：Disease Response</li>
+</ul>
+<p>发现类数据集一般有如下通用的结构，其中 XX 表示对应的数据集名字：</p>
+<ul>
+<li>检测的名称：XXTEST；</li>
+<li>检测名称的标准缩写：XXTESTCD，CDISC 中规定或者药厂自行规定；</li>
+<li>检测分类：XXCAT，XXSCAT；</li>
+<li>检测结果和对应的单位：XXORRES，XXORRESU；</li>
+<li>检测的标准化结果（取国际通用单位）：XXSTRESC：字符型结果，XXSTRESN：数值型结果，XXSTRESU：标准储存单位；</li>
+<li>患者来访的名称和次数：VISIT，VISITNUM（没有前缀）；</li>
+<li>时间类型变量：XXDTC/DY（检测时间和距离实验开始天数），比如 LBDTC 代表记录血检/尿检的检测时间，QSDTC 代表记录问卷填写的检测时间。</li>
+</ul>
+<h2 id="发现相关类数据集-findings-about">发现相关类数据集 Findings About</h2>
+<p>也算是发现类的一种类型，之所以叫发现相关类是因为收集的数据不像发现类那么标准，主要包括以下两类：</p>
+<ul>
+<li>FA：Findings About，除了 FATEST 以外还有一个 FAOBJ，表示实验的对象</li>
+<li>SR：Skin Response</li>
+</ul>
+<h2 id="实验设计类-trial-design">实验设计类 Trial design</h2>
+<p>实验设计类记录实验设计相关的内容。这些数据一般都是从统计分析计划的 SAP 中直接获得，查看这些数据集可以帮我们理解实验是如何设计的。主要包括如下 6 个数据集：</p>
+<ul>
+<li>TA：实验分组 Trial Arms</li>
+<li>TD：实验疾病数据 Trial Disease Assessment</li>
+<li>TE：实验时期元素 Trial Elements</li>
+<li>TV：实验来访计划 Trial Visits</li>
+<li>TI：实验纳入排除标准 Trial Inclusion / Exclusion Criteria</li>
+<li>TS：实验总结 Trial Summary</li>
+</ul>
+<h2 id="relationship-关系类">Relationship 关系类</h2>
+<p>主要包括以下 2 个数据集：</p>
+<ul>
+<li>RELREC：关系数据，比如一个患者的副作用被医生发现是由于伴随用药表引起的，那么应该有一个记录将副作用和伴随用药记录连接起来。</li>
+<li>SUPP：补充数据集，之前讲过，可以用于补充任何一个标准 SDTM 数据集，命名为 SUPP + XX（关联的数据集名字）；</li>
+</ul>
+<h2 id="其他内容">其他内容</h2>
+<h3 id="supp-补充数据集">SUPP 补充数据集</h3>
+<p>每一个 SDTM 数据集都可以用一个补充数据集，用来存放<strong>与主数据集相关的数据</strong>；</p>
+<ul>
+<li>名称是 SUPP + XX（原始数据集名字），比如 LB 对应的就是 SUPPLB；</li>
+<li>举例：
+<ul>
+<li>SUPPDM 中放置实验人口的 FLAG（包括 ITT，PPROT）;</li>
+<li>SUPPAE 放置是否是实验期间副作用和非实验期间副作用的标识 TRTEM；</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://s2.loli.net/2023/05/03/Kzeh2c3TsIyH4MN.png" alt="Snipaste_2023-05-03_14-28-22.png"></p>
+<p>SUPP 数据集下面总共有 10 个变量：</p>
+<ul>
+<li>STUDYID，USUBJID：通用变量，不赘述；</li>
+<li>RDOMAIN：对应的主数据集，举例，如果对应的是 AE，RDOMAIN 值为 AE；</li>
+<li>IDVAR，IDVARVAL：在每名患者有多条记录的时候使用，需要指出对应主数据集的哪条记录，比如如果需要对应 AE 中的 AESEQ，那么 IDVAR 的值就是 AESEQ，IDVARVAL 的值就是对应的记录条数（但需要注意转化为字符型）；</li>
+<li>QNAM：描述一下所定义的值是什么意思，但只能使用不长于 8 位数的字符；</li>
+<li>QLABEL：不超过 40 个字符来描述这个值是什么意思；</li>
+<li>QVAL：具体的数据值是多少；</li>
+<li>QORIG：这个值是如何获取的，比如 CRF（原始数据收集）、ASSIGNED（根据一些条件直接赋值）、DERIVED（通过计算和逻辑分类得到的）；</li>
+<li>QEVAL：Evaluator，表示谁来完成的这次变量；</li>
+</ul>
+<p>实战创建一个补充数据集 SUPPAE，以便加深理解：</p>
+<pre><code class="language-SAS">data ae;
+  set data.ae_trtem;
+  if input(rfstdtc, yyddmm10.) &lt;= input(substr(aestdtc, 1, 10), yymmdd10.) &lt;= input(rfendtc, yymmdd10.) + 14 then trtem='Y';
+  else trtem='N';
+run;
+
+options validvarname=upcase;
+data suppae;
+  retain studyid rdomain usubjid idvar idvarval qnam qlabel qval qorig qeval;
+  set ae;
+  rdomain = 'AE';
+  idvar = 'AESEQ';
+  idvarval = strip(put(aeseq, best.));
+  qnam = 'TRTEM';
+  qlabel = 'Treatment-Emergent Adverse Event';
+  qval = trtem;
+  qorig = 'DERIVED';
+  qeval = '';
+  keep studyid usubjid rdomain idvar idvarval qnam qlabel qval qorig qeval;
+run;
+</code></pre>
+<h3 id="自定义数据集">自定义数据集</h3>
+<p>CUSTOM DOMAIN 自定义数据集。因为临床试验毕竟有一些不同，为了保留自由度，SDTM 提供了自定义数据集允许创建一些需要定义的数据集。</p>
+<p>在创建自定义数据集时，需要遵守以下步骤：</p>
+<ul>
+<li><strong>仔细阅读 SDTM IG 文件</strong>，查看是否自己想要使用的变量内容确实无法归类到任何一个已经提供的标准数据集之中；</li>
+<li>确定自己的数据集类别，是干涉类，发现类还是事件类，给自定义数据集搭建一个基本的框架；</li>
+<li>找到每个类别中的几个数据集，找到共同存在的 required 变量，看看自己的数据如何放置在这些变量之中；如果实在无法容纳，就添加额外的变量。比如 LBFAST 变量表示是否空腹，如果你的数据集中也有需要表示是否空腹的变量，也需要使用 XXFAST 作为变量名。</li>
+</ul>
+<p>同时在创建自定义数据集需要注意：</p>
+<ul>
+<li><strong>数据集命名以 XYZ 开头+两位大写字母</strong>，可以保证在所有标准数据集之后；</li>
+<li><strong>部分变量的命名依然需要遵守标准</strong>，比如 STUDYID 和 USUBJID；</li>
+<li><strong>不同分类的数据集的变量命名规则不同</strong>，比如干涉类里干涉的名称放在 TRT 变量中、事件类里事件名称放置在 TERM 和 DECODE 这两个变量中，发现类所有的测试名放在 TEST 变量中，测量值和单位放在 ORRES 和 ORRESU 中。</li>
+</ul>
+<h3 id="控制术语-controlled-terminology">控制术语 Controlled Terminology</h3>
+<p>控制术语（Controlled Terminology） 是对 SDTM 里某些特定变量的值进行规范的一套规定。在查看 SDTM IG 的时候，经常会看到 Controlled Terms 这一项中有一些不为空的部分：</p>
+<p><img src="https://s2.loli.net/2023/05/03/Kzeh2c3TsIyH4MN.png" alt="Snipaste_2023-05-03_14-28-22.png"></p>
+<p>这就表示这个变量的值并不是我们想写什么就能写什么，<strong>必须按照给定的规范进行赋值</strong>。在 SDTM IG 文件中点击这些蓝色的链接，再结合搜索，就可以查看详细的规定：</p>
+<p><img src="https://s2.loli.net/2023/05/03/qWtvQJbNIZg14lH.png" alt="Snipaste_2023-05-03_15-02-18.png"></p>
+
+    </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>Permalink: </strong>
+      <a href="https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes4/" title="CDISC 标准（四）——SDTM 数据集详细分类" target="_blank" rel="external">https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes4/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License: </strong>
+        <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/xiaoheiAh" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="https://www.xzywisdili.com/avatar.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/xiaoheiAh" target="_blank"><span class="text-dark">xiaoheiAh</span><small class="ml-1x">author title</small></a></h3>
+        <div>Good Good Study, Day Day Up~</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+    </div>
+  </article>
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://www.xzywisdili.com/2023/05/2023-05-01-sasnotes1/" title="SAS 几个重要概念辨析"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+            </li>
+            <li class="next">
+                <a href="https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes5/"
+                    title="CDISC 标准（五）——ADaM 标准概述"><span>Newer&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="Catalogue" role="button">
+                    <span>[&nbsp;</span><span>Catalogue</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+            <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter"
+                data-mobile-sites="weibo,qq,qzone"></div>
+        </div>
+    </div>
+</nav>
+
+
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="https://github.com/xiaoheiAh" target="_blank" title="github" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-github"></i></a></li>
+    <li><a href="https://www.xzywisdili.com/index.xml" target="_blank" title="rss" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-rss"></i></a></li>
+</ul>
+  <div class="copyright">
+    &copy;2017  -
+    2024
+    <div class="publishby">
+        Theme by <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
+    </div>
+    
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('\x3Cscript src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js" defer></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script src="https://www.xzywisdili.com/js/application.min.e4989ab4dc212027af8773861b05b6bc333a1217f6b0a1b3377a3a3dbd454483.js"></script>
+<script src="https://www.xzywisdili.com/js/plugin.min.205a93e6f7e12cdcd620443b49db52d1101c7c761740d5bfbe9dbe279e61d11a.js"></script>
+
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            ROOT_URL: 'https:\/\/www.xzywisdili.com\/',
+            CONTENT_URL: 'https:\/\/www.xzywisdili.com\/\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script type="text/javascript" src="https://www.xzywisdili.com/js/insight.min.716b0c6a00b68ccc31a2b65345f3412f4246ffa94a90f8e25d525528b4504f9937880692bbe619023233caba5d0a17ebe23d7cfb57cd3a88f23ea337ad5e4d00.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
+
+
+  </body>
+</html>

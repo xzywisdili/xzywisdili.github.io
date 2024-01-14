@@ -1,82 +1,196 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>学习笔记 on XZY&#39;s BLOG</title>
+    <title>学习笔记 on Pure theme for Hugo</title>
     <link>https://www.xzywisdili.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
-    <description>Recent content in 学习笔记 on XZY&#39;s BLOG</description>
+    <description>Recent content in 学习笔记 on Pure theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>en</language>
+    <copyright>CC BY 4.0 CN</copyright>
     <lastBuildDate>Sun, 07 May 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://www.xzywisdili.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    
+        <atom:link href="https://www.xzywisdili.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>ADSL 数据集的建立：练习示例</title>
-      <link>https://www.xzywisdili.com/post/2023-05-08-adslexample/</link>
+      <link>https://www.xzywisdili.com/2023/05/2023-05-08-adslexample/</link>
       <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://www.xzywisdili.com/post/2023-05-08-adslexample/</guid>
-      <description>总结 通过一则创立 ADSL 数据集的练习示例加深对 ADSL 数据集的理解； ADSL（Subject-Level Analysis Data Set） 是 ADaM 中的一种数据集，特点是每一行是一个单独患者的记录（类似 SDTM 中的 DM 数据集），主要包括的变量有：&#xA;Demographic 相关的变量； 计划和实际的 Treatment 相关变量； 是否为 &amp;ldquo;Safety&amp;rdquo; 的患者标识 flag ADSL 的建立过程中，一般需要从 SDTM Domain 中的数个数据集合并而来：&#xA;DM 中的大部分变量 EX (Exposure)，DS (Disposition) 和其他 SDTM Domain ADSL 的结构 ADSL 的结构是一行记录代表一个患者，包括 Identifier，Demographics, Population flags, treatment, dose 和其他 subject-level 的变量。下面一一进行分析。&#xA;Identifier 变量 STUDYID, USUBJID, SUBJID, SITEID，在存在于 DM 中； Subject Demographics 变量 AGE：DM.AGE，如果分析需要 derive 一个 age 出来，需要添加 AAGE 变量； AGEU、SEX、RACE：都从 DM 中合并过来； Population Flag 变量 FASFL：全分析数据集的标识 SAFFL：Safety Population 的标识 Dose 变量 TRTSDT、TRTSDTM：分别是 Treatment 中第一次服药的日期和日期时间； TRTxxSDTF：xx一般是两位数字，代表第几个阶段，也就是第几个阶段的TRT； TRTSDTF：第一次服药的标识。 Subject-Level Trial Experience 变量 EOSDT：研究结束的日期 EOSSTT：研究结束的状态，比如取值“COMPLETED” 阅读和熟悉 ADSL 的 Spec 熟悉 ADSL 的 Spec，对于我们初学制作 ADSL 的合并数据集过程非常有帮助。</description>
+      
+      <guid>https://www.xzywisdili.com/2023/05/2023-05-08-adslexample/</guid>
+      <description>总结 通过一则创立 ADSL 数据集的练习示例加深对 ADSL 数据集的理解； ADSL（Subject-Level Analysis Data Set） 是 ADaM 中的一种数据集，特点是每一行是一</description>
     </item>
+    
     <item>
       <title>CDISC 标准（五）——ADaM 标准概述</title>
-      <link>https://www.xzywisdili.com/post/2023-05-02-cdiscnotes5/</link>
+      <link>https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes5/</link>
       <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://www.xzywisdili.com/post/2023-05-02-cdiscnotes5/</guid>
-      <description>总结 ADaM 标准实为了让临床试验统计分析人员梗快速、标准准确地进行统计分析和制作报表的标准； ADaM 主要分为三类数据集：ADSL，BDS 和 OCCDS； 详细梳理了三类数据集的特点以及对应的重点变量。 ADaM 数据集是做什么用的？ ADaM，Analysis Data Model，顾名思义，为了更加方便、标准且准确地进行统计分析，输出相关统计图表的标准模型。&#xA;临床实验的流程包括：实验设计，得到原始数据 → 经过 SDTM 标准化得到标准数据 → 将 SDTM 标准数据转化为 ADaM 标准数据 → 使用 ADaM 数据集生成统计图表 → 撰写药物上市申请文档。&#xA;在这个工作流程中：&#xA;SDTM 标准更偏向于数据标准化； 不同实验的数据集，结构内容和变量基本大部分相同； 如果直接从 SDTM 数据集创建统计图表，需要增加大量计算语句，非常冗杂并且容易出错； ADaM 标准更偏向于数据的可分析性； 数据集的变量可以根据实验的不同进行调整，更加灵活； 更加方便快捷、标准、准确地编写统计图表生成的语句。 跟 SDTM IG 文件类似，ADaM 也有对应的 IG（Implementation Guide） 文件，在 CDISC 的官网就可以找到。&#xA;ADaM 有五大基础原则 清晰且无歧义，Clearly adn unambiguously，有标准则需要与标准一致，如果没有标准就需要描述清晰； 可追溯性，Traceability，每个变量，每条记录的来源，都必须能从对应的 SDTM 数据集中找到； 能够被常用的统计软件 SAS 使用； 必须具备 metadata 元数据，即必须把 ADaM 中每个变量的意义放在一个元数据文件中； 即分析性 analysis-ready，使用最少的编程工作就可以完成分析任务；ADaM 数据可以只包含分析所需要的数据，如果收集了一些原始数据并不会用于分析中，那么就不需要纳入 ADaM 数据集中。 可追溯性 可追溯性非常重要，它要求所有数据有依可查，而不是凭空产生。这样可以方便分析人员和审阅者查看数据的产生过程，排除可能存在的异常数据。可追溯性分为以下两点：</description>
+      
+      <guid>https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes5/</guid>
+      <description>总结 ADaM 标准实为了让临床试验统计分析人员梗快速、标准准确地进行统计分析和制作报表的标准； ADaM 主要分为三类数据集：ADSL，BDS 和 OCCDS； 详</description>
     </item>
+    
     <item>
       <title>CDISC 标准（四）——SDTM 数据集详细分类</title>
-      <link>https://www.xzywisdili.com/post/2023-05-02-cdiscnotes4/</link>
+      <link>https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes4/</link>
       <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://www.xzywisdili.com/post/2023-05-02-cdiscnotes4/</guid>
-      <description>总结 本笔记的主要内容：&#xA;介绍 SDTM 标准下的七个大类别，以及主要包括的数据集； 梳理两个最重要的数据集：AE（副作用数据集）和 LB（实验室检测结果数据集）。 SDTM 的全称是 SDTM Standard dataset tabulation model，即实验数据标准化的模型，在之前的笔记中有一个概述的介绍。SDTM 标准力图能够尽可能覆盖在临床实验进行过程中所需要收集到的所有数据和相关信息，因此也详细地设计了各种不同分类的大类别和数据集。&#xA;在这个分类下，总共包括七个大类别和 44 个数据集。每一种数据集都属于唯一一个类别。七个大类别“SIFEFTR”：&#xA;特殊目的类：Special Purpose 干涉类：Intervention 发现类：Findings 发现相关类：Findings About 事件类：Events 实验设计类：Study Trial 关系类：Relationship 下面分门别类介绍每一种类型。&#xA;特殊目的类 Special Purpose 特殊目的类：包括和实验参与者本人相关的数据，无法归类到其他类别。主要包括以下几个数据集：&#xA;CO：评价数据集，Comments**，医生手写或者补充的文本备注和记录，需要与其他数据集相连接；如果手写的记录超过 CDISC 规定的最长值长度 200 个字符，就需要创建新的 COVAL1，COVAL2 变量保存字符，以此类推，每个变量容纳 200 个字符； DM：人口统计学，Demographics，用于保存患者的基础信息，比如患者编号、性别、国籍、种族、实验开始时间等等，在之前的内容中有所记录； SV：患者来访数据，Subject Visit SE，患者时期元素，Subject Element 一个患者在整个临床实验过程中需要来访多次。一般是从 Screen 和纳入开始，之后的来访依次是基线，第一次来访，第二次来访等，直到实验结束。在服用药物过后，因为药物在人体内有残留期，也需要几次患者来访，来观察是否具有副作用和其他治疗效果。 患者来访的时间数据都需要记录在 SV 数据集中。每个患者在实验过程中经历的每个时期和元素的时间信息，这些数据被放在 SE 中。 干涉类 Interventions 干涉类主要包括对患者有影响的行为的相关数据，包括以下几个数据集：&#xA;CM：伴随用药 Concomitant and prior medications 参加临床实验的患者，如果有其他疾病，需要服用已经上市的药物，就需要在数据集中记录伴随用药的相关信息；如果是和癌症相关的临床实验，可能需要让受试者服用一种统计的抗癌药物，再服用待实验的药物，那么这个统一服用的药物也需要放置在 CM 数据集中； CM 数据集存放患者服用的其他药物（非本实验药物）的名称、类别、剂量、计量单位、频率、药物类型（胶囊/饮剂）等数据； EX：实验用药 Exposure 实验计划中药物的使用情况； 根据实验设计来确定，核心变量包括 EXTRT（药物的名称），EXDOSE（药物的剂量），EXDOSU（药物剂量的单位），EXDOSFRQ（药物按此剂量服用的频率） 和 EXDOSFRM（药物的形式，液体/胶囊/含服片）； EC：实际实验用药 Exposure as Collected 实际中**药物的使用情况 由 ECOCCUR 变量指定该次是否服药，ECDOSE 记录剂量，ECDOSU 记录剂量单位； EC 和 EX 数据集的结构基本相同，实际分析使用 EX 数据集，因为根据实验设计而来的 PR：过程 Procedures 患者治疗和诊断相关的过程 比如患者参与心血管相关的临床实验，中间去口腔科诊断并拔了智齿，这个过程无法判断是否与临床实验相关，所以也要记录下来。 核心变量：PRTRT，记录做的手术名称 PRSTDTC，PRENDTC，PRSTDY，PRENDY 分别对应手术开始的日期和结束的日期，以及对应的天数； SU：物质使用 Substance Use 其他非药物的物质的使用情况，比如最常见的咖啡（含有咖啡因），吸烟、喝酒； 主要包括以下几个变量：SUTRT（使用物质的名称，包括 CIGARETTES，COFFEE）、SUCAT（使用物质所属的大类）、SUDOSE（这些物质使用的数量）、SUDOSEU（使用物质的数量单位）、SUDOSFRQ（使用物质的频率）、SUSTAT，SUREASND（数值没有被记录和没有记录的原因） 事件类 Events 事件类，代表计划之外的事件，总共包括 6 个数据集：</description>
+      
+      <guid>https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes4/</guid>
+      <description>总结 本笔记的主要内容： 介绍 SDTM 标准下的七个大类别，以及主要包括的数据集； 梳理两个最重要的数据集：AE（副作用数据集）和 LB（实验室检测结果数据</description>
     </item>
+    
     <item>
       <title>SAS 几个重要概念辨析</title>
-      <link>https://www.xzywisdili.com/post/2023-05-01-sasnotes1/</link>
+      <link>https://www.xzywisdili.com/2023/05/2023-05-01-sasnotes1/</link>
       <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://www.xzywisdili.com/post/2023-05-01-sasnotes1/</guid>
-      <description>进行变量类型转换，用 input 还是 put 在 SAS 编程过程中，往往会遇到需要转换变量的需求。而转换变量，往往需要考虑使用 INPUT 还是 PUT。那么这时候就要想想几个变量转换中的几个关键点：&#xA;源变量是字符型还是数值型？ 如果源变量是字符型，那么值是字符还是数字？ 想要转换后的变量是字符型还是数值型？ 那么，根据这三个问题的答案，就可以推出是使用 INPUT 还是 PUT，他们分别有以下几个特点：&#xA;PUT() 永远创建字符型变量； PUT() 中的格式参数必须和源变量类型匹配； INPUT() 的源变量必须为字符型变量； INPUT() 可以根据指定的格式，选择创建字符型或者数值型变量。 下面是几个例子：&#xA;需求 代码 源变量类型 源变量值 返回变量类型 返回变量值 PUT 将字符变量转换为字符变量 PUT(name, $10.); 字符型 &amp;lsquo;Richard&amp;rsquo; 永远是字符型 &amp;lsquo;Richard &#39; PUT 将数值变量转换为字符变量 PUT(age, 4.); 数值型 30 永远是字符型 &amp;rsquo; 30&amp;rsquo; PUT 将自定义格式转换为字符变量 PUT(name, $nickname.); 字符型 &amp;lsquo;Richard&amp;rsquo; 永远是字符型 &amp;lsquo;Rick&amp;rsquo; INPUT 将值为数字的字符型变量转换为数值变量 INPUT(agechar, 4.); 永远是字符型 &amp;lsquo;30&amp;rsquo; 数值型 30 INPUT 将值为数字的字符型变量转换为字符变量 INPUT(agechar, $4.); 永远是字符型 &amp;lsquo;30&amp;rsquo; 字符型 &amp;rsquo; 30&#39; 都用于分类变量：class 与 by 的辨析 SAS中的 BY 语句和 CLASS 语句都允许指定一个或多个分类变量。主要区别在于：</description>
+      
+      <guid>https://www.xzywisdili.com/2023/05/2023-05-01-sasnotes1/</guid>
+      <description>进行变量类型转换，用 input 还是 put 在 SAS 编程过程中，往往会遇到需要转换变量的需求。而转换变量，往往需要考虑使用 INPUT 还是 PUT。那么这时候就要想想几个变</description>
     </item>
+    
     <item>
       <title>CDISC 标准（三）——SDTM 标准初试</title>
-      <link>https://www.xzywisdili.com/post/2023-04-30-cdiscnote3/</link>
+      <link>https://www.xzywisdili.com/2023/04/2023-04-30-cdiscnote3/</link>
       <pubDate>Sun, 30 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>https://www.xzywisdili.com/post/2023-04-30-cdiscnote3/</guid>
-      <description>总结 第一次尝试仔细阅读 SDTM IG 文件中的一个 domain 变量信息； 通过 SAS 代码初试按照 SDTM 标准输出标准化的数据集。 本章要开始使用 SAS，并结合 SDTM 标准，看看如何让目标数据集符合 IG 文件里面的标准。&#xA;使用的目标 Domain 是 IG 文件 64-65 页介绍的，最重要的 Domain 之一—— DM Domain，具体变量说明表如下：&#xA;DM 是 Demographics 的缩写，代表人口统计学信息。所有人类参与的临床实验都需要 DM Domain，内容包括实验参与者的年龄、性别、种族、国籍、实验分组、实验开始日期和结束日期等等等等数据。&#xA;DM 数据集往往是接手某个项目最先阅读的数据集，可以查看和了解参与实验的患者的所有信息。在临床实验中，有几个患者参与，那么 DM 数据集中就需要包括几条观测数据。比如，有 10 名患者参与了临床实验，收集了原始数据，那么 DM Domain 中就应该包括 5 条观测。&#xA;接下来就是初学 SDTM 标准的学习方法：仔细阅读 SDTM IG 文件中对于每一条变量的说明，并且按照对应的要求，在 SAS 中处理数据集。处理过程中，需要注意以下几个重点：&#xA;注意每一条变量的 Type，字符型或者数值型，一定要在 SAS 中按照对应的格式存储，不符合的需要进行转换（INPUT 或者 PUT）； 日期型的变量一定要注意按照规定的 ISO8601 格式； 变量顺序和变量的 Label 要按照表中规定的要求； 多多检查。 从 SDTM IG 表慢慢看起：</description>
+      
+      <guid>https://www.xzywisdili.com/2023/04/2023-04-30-cdiscnote3/</guid>
+      <description>总结 第一次尝试仔细阅读 SDTM IG 文件中的一个 domain 变量信息； 通过 SAS 代码初试按照 SDTM 标准输出标准化的数据集。 本章要开始使用 SAS，并结合 SDTM 标准，看看如何让</description>
     </item>
+    
     <item>
       <title>CDISC 标准（二）——SDTM 标准概述</title>
-      <link>https://www.xzywisdili.com/post/2023-04-29-cdiscnote2/</link>
+      <link>https://www.xzywisdili.com/2023/04/2023-04-29-cdiscnote2/</link>
       <pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>https://www.xzywisdili.com/post/2023-04-29-cdiscnote2/</guid>
-      <description>总结 介绍了 SDTM 和 IG 文件的基本概念； 通过阅读 SDTM IG 文件，了解 Domain 和 Variable 的各种信息； 重点是 Variable 的五种分类：Identifier, Topic, Qualifier, Timing, Rule。 SDTM 的基本概念 SDTM（Study Data Tabulation Model）是一个服务于临床实验的标准数据指标模型，也是被业界和 FDA 广泛采用的标准。它规定了在临床实验中，原始数据收集之后的标准化的呈现方式。可能不同种类的药物，在实验中收集的数据样式是不一样的，但是经过 SDTM 标准化之后，相同类别的数据一定是相同的。&#xA;标准化的好处是，可以更好地服务于药物开发全链条中的各方人员，大大降低了沟通成本，提高审查部门的审核效率。经过多年的数次更新，SDTM 标准已经几乎可以涵盖所有类型的临床实验数据格式。&#xA;而 SDTM IG 文件（SDTM Implementation Guide）中就详细说明了所有 SDTM 标准化数据的方方面面的信息。想要了解 SDTM，就必须要从阅读 SDTM IG 文件开始。&#xA;从阅读 SDTM IG 文件开始 SDTM IG 文件可以从 CDISC 组织的官网中免费获得。官网下载得到的是英文版本，虽然民间存在个人翻译的中文版本，但还是推荐采用原汁原味的英文版本进行阅读。同时，官网还提供了 PDF 和 HTML 的多种格式，方便阅读。&#xA;Domain 域 在第二章 Fundamentals of the SDTM 中，向我们介绍了 SDTM 标准中的基础元素：Domain（域）。每个 Domain 可以理解为围绕一个主题，相关的所有观测和变量组成的数据集，其中有一些基础的通用要求：</description>
+      
+      <guid>https://www.xzywisdili.com/2023/04/2023-04-29-cdiscnote2/</guid>
+      <description>总结 介绍了 SDTM 和 IG 文件的基本概念； 通过阅读 SDTM IG 文件，了解 Domain 和 Variable 的各种信息； 重点是 Variable 的五种分类：Identifier, Topic, Qualifier, Timing, Rule。 SDTM 的基本概</description>
     </item>
+    
+    <item>
+      <title>博客的新浪图床图片崩了？简单办法教你解决！（2023年4月有效）</title>
+      <link>https://www.xzywisdili.com/2023/04/2023-04-28-saveyourblogpics/</link>
+      <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/04/2023-04-28-saveyourblogpics/</guid>
+      <description>今天偶然翻看以前的博客，突然发现图片都显示不出来了，第一时间想到可能是以前用的图床出了问题。 果不其然，经过查找和检索网上信息，发现新浪图床从</description>
+    </item>
+    
     <item>
       <title>5 分钟简单生成指定形状的词云</title>
-      <link>https://www.xzywisdili.com/post/2023-04-26-generatewordcloudin5minutes/</link>
+      <link>https://www.xzywisdili.com/2023/04/2023-04-26-generatewordcloudin5minutes/</link>
       <pubDate>Wed, 26 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>https://www.xzywisdili.com/post/2023-04-26-generatewordcloudin5minutes/</guid>
-      <description>群里有人问，想要做一张这样的指定形状的词云：&#xA;我试了一下，其实很简单，基本上 5 分钟就搞定。这里的简单思路就是：&#xA;使用 jieba 包对原始文本进行分词处理; 将分词之后的结果导入 wordcloud 包生成分词。 至于指定形状的需求，需要注意在 WordCloud() 中的 mask 参数导入指定的形状遮罩图片就好，具体的代码如下：&#xA;import jieba from wordcloud import WordCloud import numpy as np import PIL.Image as image # 对分析文本做分词处理 def cut(text): word_list = jieba.cut(text) result = &amp;#34; &amp;#34;.join(word_list) return result # 读取分析文本，进行分词 with open(&amp;#34;D:\\测试文章.txt&amp;#34;, &amp;#39;rb&amp;#39;) as fp: text = fp.read().decode(&amp;#39;utf-8&amp;#39;) words = cut(text) # 设置目标词云的遮罩 mask = np.array(image.open(&amp;#34;D:\\测试图片.png&amp;#34;)) # 进行词云分析并生成 test_cloud = WordCloud( mask = mask, background_color = &amp;#39;#FFFFFF&amp;#39;, font_path=&amp;#39;C:\\Windows\\Fonts\\方正聚珍新仿.</description>
+      
+      <guid>https://www.xzywisdili.com/2023/04/2023-04-26-generatewordcloudin5minutes/</guid>
+      <description>群里有人问，想要做一张这样的指定形状的词云： 我试了一下，其实很简单，基本上 5 分钟就搞定。这里的简单思路就是： 使用 jieba 包对原始文本进行分词处理;</description>
     </item>
+    
     <item>
       <title>数据挖掘的奇效——爬到网站没有显示的数据</title>
-      <link>https://www.xzywisdili.com/post/2023-04-23-userjsonfindextradata/</link>
+      <link>https://www.xzywisdili.com/2023/04/2023-04-23-userjsonfindextradata/</link>
       <pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>https://www.xzywisdili.com/post/2023-04-23-userjsonfindextradata/</guid>
-      <description>有没有想过，有些网站的页面上展示的数据只有一部分的时候，通过稍微一点挖掘就能发现额外的数据，收获更多信息。&#xA;这里就举一个最近发现的例子——云顶之弈公开赛“云巅赛道”的官方实时排名更新。 可以看到，这里只展示了云巅赛道前 60 名的用户昵称、段位、胜点、排位场数、登顶率和前四率。&#xA;但是其实，只要扒到网站请求的数据，兴许可以看到更多的数据。&#xA;发现网站请求返回的数据 这里其实没有想象中那么难。在「检查」中的「网络」选项卡查看网站的请求，一眼就能发现这个全是大写的请求返回的 json 数据。 稍微看一下，各类数据也都对的上，就是这个了：&#xA;这里可以复制请求链接，再每隔一段时间请求一次，查看实时更新变化，我这里就不做了，有兴趣的可以查看我的另一篇文章。我就直接将 json 数据保存到了本地。&#xA;使用 RJson 解析 json 格式数据 这里就使用一下 R 语言中的 RJson 包来解析一下 json 格式数据：&#xA;library(rjson) result &amp;lt;- fromJSON(file=&amp;#34;云巅.json&amp;#34;) result 可以看到，直接使用 fromJSON 读取出来的是 list 格式的数据，还是多次嵌套的 list：&#xA;第一层：每一个用户作为一层; 第二层：单个用户下的每一个变量数据作为第二层； 同时，可以看到，最关键的用户名 sName 变量用了 URL Code 编码，需要再使用 URLdecode 解一下。&#xA;这就需要先进行多层 list 数据的解包，加上稍微一点预处理了：&#xA;library(tidyverse) # 将 json 数据的每一层（每一个用户）转换成单行数据 row_results &amp;lt;- lapply(result[[2]], function(x) { as_tibble(x) }) # 对单行数据进行合并，得到最终数据 toc_rank_result &amp;lt;- do.call(&amp;#34;rbind&amp;#34;, row_results) # 使用 URLdecode 转换用户昵称 toc_rank_result &amp;lt;- toc_rank_result %&amp;gt;% mutate(nickname = URLdecode(sName)) %&amp;gt;% select(nickname, iTier, iRank, iPoints) # 查看转换后的数据 View(toc_rank_result) 大功告成！可以看到，相比于官网页面上的 60 条数据，这里分析的请求数据总共有 100 条，足足多了 40 条。 而且爬下来的数据想要做更多的查询和分析也更加方便了。 有时候，网页上没有显示的数据，可能还真需要扩展一下思路，看看能不能用其他方法得到。</description>
+      
+      <guid>https://www.xzywisdili.com/2023/04/2023-04-23-userjsonfindextradata/</guid>
+      <description>有没有想过，有些网站的页面上展示的数据只有一部分的时候，通过稍微一点挖掘就能发现额外的数据，收获更多信息。 这里就举一个最近发现的例子——云顶</description>
     </item>
+    
     <item>
       <title>【学习笔记】实用统计学复习手册01——探索性数据分析</title>
-      <link>https://www.xzywisdili.com/post/2023-03-23-dataanalysisnote01/</link>
+      <link>https://www.xzywisdili.com/2023/03/2023-03-23-dataanalysisnote01/</link>
       <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>https://www.xzywisdili.com/post/2023-03-23-dataanalysisnote01/</guid>
-      <description>总结 介绍了数据的分类（数值型、分类型）等； 单变量分析：位置度量（均值、中位数）、变异性度量（方差、标准差、百分位数）等； 单变量的可视化：箱线图、频数表、直方图等； 多变量分析：探索相关性。 多变量的可视化：散点图、热力图、列联表、分类箱线图等； 探索性数据分析（Exploratory Data Analysis，EDA）是数据科学项目的第一步。&#xA;数据的分类和主要形式 首先，需要了解数据的分类。在目前世界，数据来源非常丰富，而大多数数据是非结构化的，比如图像、文本、用户交互。这些“信息”，或者说非结构化的数据必须先转化为结构化的数据，才能够用于下一步的分析。&#xA;结构化数据的分类：&#xA;数值型数据 离散型数据：只能取整数； 连续型数据：在一个区间可以取任意值 分类型数据 二元数据：两个值中取其一，0 或 1 多元数据 特殊形式：有序数据，按照分类进行排序 需要强调的是，数据的分类对于后续可视化方法的选择、统计模型的选择都非常重要。&#xA;接下来需要说明的是数据科学中最经典的引用结构——矩形数据。最常见的就是我们经典的电子表格。其中每一行代表一条观测记录，每一列代表一个特征（变量）。在不同统计编程语言中也有对应的处理方式：&#xA;R语言: data.table Python Pandas: DataFrame 其他的几种非矩形的数据形式包括：时间序列数据、空间数据和图形或网络数据。他们都有对应的处理方法。&#xA;如何描述连续性变量？ 位置度量 变量代表了测量数据或者计数数据。探索数据的一个基本步骤，就是了解每个变量（特征）的特点。不同种类的数据，我们对其的主要关注点也不尽相同。统计学中主要关注以下数据特征值：&#xA;均值：基本的位置度量，对极值敏感 加权均值：将每个值乘一个权重值然后除以总和 切尾均值：消除极值之后的均值，比均值更加稳健 中位数：更加稳健，不易受均值影响 加权中位数：将数据集排序之后进行加权，加权中位数就是可以使数据集上下两部分的权重总和相同的值 离群值：并不一定是无效或错误的数据，但往往是由于数据的错误所导致的。 统计学家替换用估计量（estimate）来表示从手头已有数据计算得到的值，来描述数据情况与真实状态之间的差异。数据科学家和商业分析师更倾向于把这些值称为度量（metric）。因为统计学的核心在于如何解释不确定度，而数据科学则更关注如何解决一个具体的商业或企业目标。&#xA;变异性度量 变异性（variability），也称为离差（dispersion），是另外一个描述数据的视角，表示数据是紧密聚集的还是发散的。在分析中主要会考虑：&#xA;测量数据的变异性； 识别各种变异性的来源； 如何降低变异性 统计学中有以下数据特征描述变异性：&#xA;偏差：观测值和估计值之间的直接差异 方差 标准差：方差的平方根 平均绝对偏差：对偏差值取绝对值然后求平均 中位数绝对偏差 极差：最大值和最小值之间的差值 顺序统计量：又称为秩 百分位数 四分位距（IQR）：75 百分位数和 25 百分位数之间的差值 方差和标准偏差是最广泛使用的变异统计量，且都对离群值敏感。更稳健的度量包括百分位数、四分位距和中位数绝对偏差。&#xA;sd (state$Population) IQR(state$Population) mad (state$Population) quantile(state$Murder.Rate, p=c(.05, .25, .5, .75, .95)) 使用图表描述数据分布 箱线图 boxplot(state$Population/1000000, ylab=&amp;#34;Population (millions)&amp;#34;) 箱线图的顶部和底部分别是 75 百分位数和 25 百分位数。水平线代表的是中位数，虚线称为须（whisker） ，从最大值一直延伸到最小值，体现了数据的极差。</description>
+      
+      <guid>https://www.xzywisdili.com/2023/03/2023-03-23-dataanalysisnote01/</guid>
+      <description>总结 介绍了数据的分类（数值型、分类型）等； 单变量分析：位置度量（均值、中位数）、变异性度量（方差、标准差、百分位数）等； 单变量的可视化：箱线</description>
     </item>
+    
     <item>
       <title>【学习笔记】保序回归——适用于单调递增数据的统计回归方法</title>
-      <link>https://www.xzywisdili.com/post/2023-03-07-isotonicregression/</link>
+      <link>https://www.xzywisdili.com/2023/03/2023-03-07-isotonicregression/</link>
       <pubDate>Tue, 07 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>https://www.xzywisdili.com/post/2023-03-07-isotonicregression/</guid>
-      <description>什么是保序回归？ 保序回归（Isotonic Regression）是一种适用于单调函数非参数统计回归方法，即在一个序列中，Xn ≥ Xn-1。通过字面理解「Isotonic Regression」：&#xA;iso的意思就是「相等、相同」的意思； tonic 就是 tone 的意思，指的是「调」。 所以保序回归的核心还是在于单调递增的函数，当需要分析的数据资料符合单调递增的趋势可以用。 保序回归最常用的应用场景之一是探索药量和药效的关系，因为一般来说药物剂量越高，药效应该更强，因此通过保序回归的方式可以从药效和经济学的角度估计最合适的药量。&#xA;保序回归使用 weighted least-squares 来进行拟合： 怎么做保序回归？ 求解保序回归的一种最常用算法是 PAVA 算法（ Pool-Adjacent-Violators Algorithm，池相邻违规者算法）。PAVA 算法的直观形式只需要看下面这张图就行了：&#xA;这种算法是通过从左往右逐渐扫描数据序列，并且保证整个序列是单调递增的，以此来获得 Beta 值的结果。如果 Beta_i &amp;lt; Beta_i-1，那么就同时把这两个值替换为 (Beta_i + Beta_i-1) / 2。以此就能获得严格且平滑的保序回归。&#xA;通过 PAVA 算法，可以获得一个包括多个 Beta 参数组成的单调递增序列，用可视化的方法可以看到是由多条上升线和水平线组成的函数图：&#xA;如何使用 R 语言进行保序回归？ 在 R 中可以轻松进行保序回归，只需要使用 stats 包中的 isoreg 函数即可。下面的代码提供一个简单的示例，并将原始数据和拟合值（蓝点）绘制出来。注意，拟合后的蓝点是单调递增的。&#xA;# Generate Training Data set.seed(15) x &amp;lt;- sample(2 * 1:15) y &amp;lt;- 0.5 * x + rnorm(length(x)) # Isotonic Regression Model Fit reg.</description>
+      
+      <guid>https://www.xzywisdili.com/2023/03/2023-03-07-isotonicregression/</guid>
+      <description>什么是保序回归？ 保序回归（Isotonic Regression）是一种适用于单调函数非参数统计回归方法，即在一个序列中，Xn ≥ Xn-1。通过</description>
     </item>
+    
+    <item>
+      <title>【把书读薄07】《所罗门的密码》：试图分析人工智能的信任问题却深度不足</title>
+      <link>https://www.xzywisdili.com/2023/03/2023-03-03-bookreview07/</link>
+      <pubDate>Fri, 03 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/03/2023-03-03-bookreview07/</guid>
+      <description>总结 《所罗门的密码》总结了人工智能在方方面面改变整个社会的同时，可能出现的问题和挑战，并倡议出版一份《全球人工智能经济大宪章》。 书中大篇内容</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄06】Excel 学习真的不适合借助书本了</title>
+      <link>https://www.xzywisdili.com/2023/01/2023-01-30-bookreview06/</link>
+      <pubDate>Mon, 30 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/01/2023-01-30-bookreview06/</guid>
+      <description>总结 《跟李锐学Excel数据分析》 名为「数据分析」，内容实则是 Excel 软件使用技巧，这点需要读者注意； 虽然页数看起来较多，但是大量篇幅均为各种实操</description>
+    </item>
+    
+    <item>
+      <title>（2022年11月过）SAS Advance 考试最新完全攻略！</title>
+      <link>https://www.xzywisdili.com/2022/11/2022-11-08-sasadvance/</link>
+      <pubDate>Tue, 08 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/11/2022-11-08-sasadvance/</guid>
+      <description>今天终于通过了 SAS Advance 的考试。有一些最新的备考和考试过程的经验可以跟大家分享一下。 这篇攻略我会从两个方面来说，分别是备考篇和考试篇。 备考篇 SAS Advance 的</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄05】向心城市：带你了解现代城市的发展规律</title>
+      <link>https://www.xzywisdili.com/2022/10/2022-10-19-bookreview05/</link>
+      <pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/10/2022-10-19-bookreview05/</guid>
+      <description>总结 《向心城市》中作者通过大量的数据分析实证，介绍了城市的发展规律、为什么“向心城市”是发展趋势，以及城市化带来的各种方面的内容分析； 评分：</description>
+    </item>
+    
+    <item>
+      <title>动态页面的爬虫示例一则：抓取微博粉丝列表</title>
+      <link>https://www.xzywisdili.com/2022/10/2022-10-05-dynamichtmlspider/</link>
+      <pubDate>Wed, 05 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/10/2022-10-05-dynamichtmlspider/</guid>
+      <description>在碰到一些网页，想通过爬虫抓取页面信息的时候，会发现网页采用了一些动态 HTML 的相关技术来展示信息。这样直接使用 requests 是无法直接获取想要的 HTML 元素内容的</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄04】一日两餐：找回身体代谢灵活性的新饮食理念</title>
+      <link>https://www.xzywisdili.com/2022/09/2022-09-26-bookreview04/</link>
+      <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/09/2022-09-26-bookreview04/</guid>
+      <description>总结 《一日两餐》想让我们通过限制碳水摄入和间歇性禁食这两个重要手段来摆脱未来的胰岛素抵抗； 书中的大量内容更像是别处观点的拼凑，同时时不时夹杂</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄03】锻炼：丹尼尔·利伯曼教授对健康迷思的一一解答</title>
+      <link>https://www.xzywisdili.com/2022/09/2022-9-21-bookreview03/</link>
+      <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/09/2022-9-21-bookreview03/</guid>
+      <description>总结 《锻炼》通过人类进化学和现代医学研究两方面，对广泛流传的各种健康迷思进行了验证和解释； 关于久坐、睡眠、运动损伤、运动与衰老等等话题，你一</description>
+    </item>
+    
+    <item>
+      <title>【医学预测01】Logistic 回归构建变量筛选：先单后多</title>
+      <link>https://www.xzywisdili.com/2022/09/2022-09-07-rlogistic01/</link>
+      <pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/09/2022-09-07-rlogistic01/</guid>
+      <description>总结 介绍了 Logistic 回归模型构建过程中的一种变量筛选方式——先单后多； 配合对应的代码实例和结果解释，让方法更加清楚，同时便于日后复习查看。 在 Logistic 回归模</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄02】开启高质量沟通的第1分钟</title>
+      <link>https://www.xzywisdili.com/2022/09/2022-09-05-bookreview02/</link>
+      <pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/09/2022-09-05-bookreview02/</guid>
+      <description>总结 《开启高质量沟通的第一分钟》目标是让职场工作沟通的双方可以通过一段简短的引言快速进入良好的沟通节奏； 书中凝练了一套沟通结构：沟通框架（背</description>
+    </item>
+    
   </channel>
 </rss>

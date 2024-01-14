@@ -1,19 +1,196 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>读书 on XZY&#39;s BLOG</title>
+    <title>读书 on Pure theme for Hugo</title>
     <link>https://www.xzywisdili.com/tags/%E8%AF%BB%E4%B9%A6/</link>
-    <description>Recent content in 读书 on XZY&#39;s BLOG</description>
+    <description>Recent content in 读书 on Pure theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>en</language>
+    <copyright>CC BY 4.0 CN</copyright>
     <lastBuildDate>Mon, 28 Jun 2021 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://www.xzywisdili.com/tags/%E8%AF%BB%E4%B9%A6/index.xml" rel="self" type="application/rss+xml" />
+    
+        <atom:link href="https://www.xzywisdili.com/tags/%E8%AF%BB%E4%B9%A6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
-      <title>最近要开始啃书了</title>
-      <link>https://www.xzywisdili.com/post/2021-06-28-starttoreadbooks/</link>
-      <pubDate>Mon, 28 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>https://www.xzywisdili.com/post/2021-06-28-starttoreadbooks/</guid>
-      <description>最近开始关心 AI 技术在医疗领域的一些应用。 随着老龄化社会的进程，节省医疗系统的冗余成本，做到更好的健康管理势必更为重要。 而从现有积累的和未来获得的人群大数据势必也将把医疗探索和相关制药研发带入到一个新的时代。&#xA;但同时这个进程也有太多问题和阻碍：缺乏相关跨界人才的问题，数据隐私和伦理的问题，模型可解释性的问题和 人群对 AI 的信用度和接受度的问题等等……&#xA;不过，我还是相信，新技术的到来能帮助我们在医疗系统中解决更多的问题。&#xA;所以，最近搜罗了这个方向的一些书籍，准备开始爆啃：&#xA;当然，如果有更多的心得和收获也会在博客和大家及时分享。 可能唯一的遗憾是平时没有一起交流讨论的伙伴。</description>
+      <title>ADSL 数据集的建立：练习示例</title>
+      <link>https://www.xzywisdili.com/2023/05/2023-05-08-adslexample/</link>
+      <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/05/2023-05-08-adslexample/</guid>
+      <description>总结 通过一则创立 ADSL 数据集的练习示例加深对 ADSL 数据集的理解； ADSL（Subject-Level Analysis Data Set） 是 ADaM 中的一种数据集，特点是每一行是一</description>
     </item>
+    
+    <item>
+      <title>CDISC 标准（五）——ADaM 标准概述</title>
+      <link>https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes5/</link>
+      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes5/</guid>
+      <description>总结 ADaM 标准实为了让临床试验统计分析人员梗快速、标准准确地进行统计分析和制作报表的标准； ADaM 主要分为三类数据集：ADSL，BDS 和 OCCDS； 详</description>
+    </item>
+    
+    <item>
+      <title>CDISC 标准（四）——SDTM 数据集详细分类</title>
+      <link>https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes4/</link>
+      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes4/</guid>
+      <description>总结 本笔记的主要内容： 介绍 SDTM 标准下的七个大类别，以及主要包括的数据集； 梳理两个最重要的数据集：AE（副作用数据集）和 LB（实验室检测结果数据</description>
+    </item>
+    
+    <item>
+      <title>SAS 几个重要概念辨析</title>
+      <link>https://www.xzywisdili.com/2023/05/2023-05-01-sasnotes1/</link>
+      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/05/2023-05-01-sasnotes1/</guid>
+      <description>进行变量类型转换，用 input 还是 put 在 SAS 编程过程中，往往会遇到需要转换变量的需求。而转换变量，往往需要考虑使用 INPUT 还是 PUT。那么这时候就要想想几个变</description>
+    </item>
+    
+    <item>
+      <title>CDISC 标准（三）——SDTM 标准初试</title>
+      <link>https://www.xzywisdili.com/2023/04/2023-04-30-cdiscnote3/</link>
+      <pubDate>Sun, 30 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/04/2023-04-30-cdiscnote3/</guid>
+      <description>总结 第一次尝试仔细阅读 SDTM IG 文件中的一个 domain 变量信息； 通过 SAS 代码初试按照 SDTM 标准输出标准化的数据集。 本章要开始使用 SAS，并结合 SDTM 标准，看看如何让</description>
+    </item>
+    
+    <item>
+      <title>CDISC 标准（二）——SDTM 标准概述</title>
+      <link>https://www.xzywisdili.com/2023/04/2023-04-29-cdiscnote2/</link>
+      <pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/04/2023-04-29-cdiscnote2/</guid>
+      <description>总结 介绍了 SDTM 和 IG 文件的基本概念； 通过阅读 SDTM IG 文件，了解 Domain 和 Variable 的各种信息； 重点是 Variable 的五种分类：Identifier, Topic, Qualifier, Timing, Rule。 SDTM 的基本概</description>
+    </item>
+    
+    <item>
+      <title>博客的新浪图床图片崩了？简单办法教你解决！（2023年4月有效）</title>
+      <link>https://www.xzywisdili.com/2023/04/2023-04-28-saveyourblogpics/</link>
+      <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/04/2023-04-28-saveyourblogpics/</guid>
+      <description>今天偶然翻看以前的博客，突然发现图片都显示不出来了，第一时间想到可能是以前用的图床出了问题。 果不其然，经过查找和检索网上信息，发现新浪图床从</description>
+    </item>
+    
+    <item>
+      <title>5 分钟简单生成指定形状的词云</title>
+      <link>https://www.xzywisdili.com/2023/04/2023-04-26-generatewordcloudin5minutes/</link>
+      <pubDate>Wed, 26 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/04/2023-04-26-generatewordcloudin5minutes/</guid>
+      <description>群里有人问，想要做一张这样的指定形状的词云： 我试了一下，其实很简单，基本上 5 分钟就搞定。这里的简单思路就是： 使用 jieba 包对原始文本进行分词处理;</description>
+    </item>
+    
+    <item>
+      <title>数据挖掘的奇效——爬到网站没有显示的数据</title>
+      <link>https://www.xzywisdili.com/2023/04/2023-04-23-userjsonfindextradata/</link>
+      <pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/04/2023-04-23-userjsonfindextradata/</guid>
+      <description>有没有想过，有些网站的页面上展示的数据只有一部分的时候，通过稍微一点挖掘就能发现额外的数据，收获更多信息。 这里就举一个最近发现的例子——云顶</description>
+    </item>
+    
+    <item>
+      <title>【学习笔记】实用统计学复习手册01——探索性数据分析</title>
+      <link>https://www.xzywisdili.com/2023/03/2023-03-23-dataanalysisnote01/</link>
+      <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/03/2023-03-23-dataanalysisnote01/</guid>
+      <description>总结 介绍了数据的分类（数值型、分类型）等； 单变量分析：位置度量（均值、中位数）、变异性度量（方差、标准差、百分位数）等； 单变量的可视化：箱线</description>
+    </item>
+    
+    <item>
+      <title>【学习笔记】保序回归——适用于单调递增数据的统计回归方法</title>
+      <link>https://www.xzywisdili.com/2023/03/2023-03-07-isotonicregression/</link>
+      <pubDate>Tue, 07 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/03/2023-03-07-isotonicregression/</guid>
+      <description>什么是保序回归？ 保序回归（Isotonic Regression）是一种适用于单调函数非参数统计回归方法，即在一个序列中，Xn ≥ Xn-1。通过</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄07】《所罗门的密码》：试图分析人工智能的信任问题却深度不足</title>
+      <link>https://www.xzywisdili.com/2023/03/2023-03-03-bookreview07/</link>
+      <pubDate>Fri, 03 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/03/2023-03-03-bookreview07/</guid>
+      <description>总结 《所罗门的密码》总结了人工智能在方方面面改变整个社会的同时，可能出现的问题和挑战，并倡议出版一份《全球人工智能经济大宪章》。 书中大篇内容</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄06】Excel 学习真的不适合借助书本了</title>
+      <link>https://www.xzywisdili.com/2023/01/2023-01-30-bookreview06/</link>
+      <pubDate>Mon, 30 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/01/2023-01-30-bookreview06/</guid>
+      <description>总结 《跟李锐学Excel数据分析》 名为「数据分析」，内容实则是 Excel 软件使用技巧，这点需要读者注意； 虽然页数看起来较多，但是大量篇幅均为各种实操</description>
+    </item>
+    
+    <item>
+      <title>（2022年11月过）SAS Advance 考试最新完全攻略！</title>
+      <link>https://www.xzywisdili.com/2022/11/2022-11-08-sasadvance/</link>
+      <pubDate>Tue, 08 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/11/2022-11-08-sasadvance/</guid>
+      <description>今天终于通过了 SAS Advance 的考试。有一些最新的备考和考试过程的经验可以跟大家分享一下。 这篇攻略我会从两个方面来说，分别是备考篇和考试篇。 备考篇 SAS Advance 的</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄05】向心城市：带你了解现代城市的发展规律</title>
+      <link>https://www.xzywisdili.com/2022/10/2022-10-19-bookreview05/</link>
+      <pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/10/2022-10-19-bookreview05/</guid>
+      <description>总结 《向心城市》中作者通过大量的数据分析实证，介绍了城市的发展规律、为什么“向心城市”是发展趋势，以及城市化带来的各种方面的内容分析； 评分：</description>
+    </item>
+    
+    <item>
+      <title>动态页面的爬虫示例一则：抓取微博粉丝列表</title>
+      <link>https://www.xzywisdili.com/2022/10/2022-10-05-dynamichtmlspider/</link>
+      <pubDate>Wed, 05 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/10/2022-10-05-dynamichtmlspider/</guid>
+      <description>在碰到一些网页，想通过爬虫抓取页面信息的时候，会发现网页采用了一些动态 HTML 的相关技术来展示信息。这样直接使用 requests 是无法直接获取想要的 HTML 元素内容的</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄04】一日两餐：找回身体代谢灵活性的新饮食理念</title>
+      <link>https://www.xzywisdili.com/2022/09/2022-09-26-bookreview04/</link>
+      <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/09/2022-09-26-bookreview04/</guid>
+      <description>总结 《一日两餐》想让我们通过限制碳水摄入和间歇性禁食这两个重要手段来摆脱未来的胰岛素抵抗； 书中的大量内容更像是别处观点的拼凑，同时时不时夹杂</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄03】锻炼：丹尼尔·利伯曼教授对健康迷思的一一解答</title>
+      <link>https://www.xzywisdili.com/2022/09/2022-9-21-bookreview03/</link>
+      <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/09/2022-9-21-bookreview03/</guid>
+      <description>总结 《锻炼》通过人类进化学和现代医学研究两方面，对广泛流传的各种健康迷思进行了验证和解释； 关于久坐、睡眠、运动损伤、运动与衰老等等话题，你一</description>
+    </item>
+    
+    <item>
+      <title>【医学预测01】Logistic 回归构建变量筛选：先单后多</title>
+      <link>https://www.xzywisdili.com/2022/09/2022-09-07-rlogistic01/</link>
+      <pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/09/2022-09-07-rlogistic01/</guid>
+      <description>总结 介绍了 Logistic 回归模型构建过程中的一种变量筛选方式——先单后多； 配合对应的代码实例和结果解释，让方法更加清楚，同时便于日后复习查看。 在 Logistic 回归模</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄02】开启高质量沟通的第1分钟</title>
+      <link>https://www.xzywisdili.com/2022/09/2022-09-05-bookreview02/</link>
+      <pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/09/2022-09-05-bookreview02/</guid>
+      <description>总结 《开启高质量沟通的第一分钟》目标是让职场工作沟通的双方可以通过一段简短的引言快速进入良好的沟通节奏； 书中凝练了一套沟通结构：沟通框架（背</description>
+    </item>
+    
   </channel>
 </rss>

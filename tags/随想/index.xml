@@ -1,33 +1,196 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>随想 on XZY&#39;s BLOG</title>
+    <title>随想 on Pure theme for Hugo</title>
     <link>https://www.xzywisdili.com/tags/%E9%9A%8F%E6%83%B3/</link>
-    <description>Recent content in 随想 on XZY&#39;s BLOG</description>
+    <description>Recent content in 随想 on Pure theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>en</language>
+    <copyright>CC BY 4.0 CN</copyright>
     <lastBuildDate>Sat, 23 Feb 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://www.xzywisdili.com/tags/%E9%9A%8F%E6%83%B3/index.xml" rel="self" type="application/rss+xml" />
+    
+        <atom:link href="https://www.xzywisdili.com/tags/%E9%9A%8F%E6%83%B3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
-      <title>欲速则不达</title>
-      <link>https://www.xzywisdili.com/post/2019-02-23-speededucation/</link>
-      <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>https://www.xzywisdili.com/post/2019-02-23-speededucation/</guid>
-      <description>越来越多的速成教程出现在我们的视野中。高中时期，贴吧就有不少关于“如何在一个月内高考数学提高XX分”这样的内容。 而之后，像这样的内容越来越多，无论是程序相关，考研，摄影，视频后期，音乐制作等等领域，都出现了诸如此类的速成教程。 似乎跟着这些内容学完，就能在短时间内摇身一变，成功升级为这一领域的大神。&#xA;我以前也经常被这样的标题所迷惑，也在网盘或收藏夹存储了大量的这类教程。最近我开始反思这一类内容的真正用处。 这类内容一般有两类。第一类是真的可以在很短时间内速成学会，比如 Markdown 的语法，使用软件剪辑视频的操作， Office 软件的一些基础用法等等。但是这种技能不可能成为一个人的核心技能，你可以学会，别人也可以在短时间内学会。 如果只衡量一项技能的时间成本，这类技能等于是零门槛的。这不代表它们是没有价值的，但我们不应该把大量时间和精力花在搜寻和学习它们上，也不能因为自己会这类技能就沾沾自喜，自我满足。&#xA;另一类则是以这样的标题作为吸睛的鸡血，引诱读者而打开链接，而实际上仍需要大量的时间精进。比如我最近学习的 Python Web 编程内容，24 节课，每节课 2 小时，按 2 倍速播放需要 1 小时，再加上课前预习内容和课后作业，每节课也得至少 1 个半小时，这样总共算下来需要 60 个小时，就算每周能抽出 6 个小时时间学习，也需要 3 个月时间才能学完（我不相信有人能一天 10 小时高强度学习）。 这样也才是刚刚入门，还需要大量时间去练习，才能够算得上掌握了一项新的技能。别的领域我想也是如此，摄影、绘画大神才出彩前付出大量的时间，考研成功的人也一定是在所有参与者中相对努力的那批人。这才是一个人的核心竞争力，也是不可替代的。&#xA;经过在医院和疾控的实习，我也明白去分类工作业务内容，识别哪些工作业务是真正需要去学习的。像贴化验单，做心电图，按照模板补充资料的内容，简单讲一遍很多人都能上手。会做这些工作什么也说明不了。我们需要放下浮躁的心，抛弃那些短时间就能速成大神的错误思想，真正思考如何去培养自己的核心技能。</description>
+      <title>ADSL 数据集的建立：练习示例</title>
+      <link>https://www.xzywisdili.com/2023/05/2023-05-08-adslexample/</link>
+      <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/05/2023-05-08-adslexample/</guid>
+      <description>总结 通过一则创立 ADSL 数据集的练习示例加深对 ADSL 数据集的理解； ADSL（Subject-Level Analysis Data Set） 是 ADaM 中的一种数据集，特点是每一行是一</description>
     </item>
+    
     <item>
-      <title>我们怎么知道自己学会了？</title>
-      <link>https://www.xzywisdili.com/post/2018-12-8-learnthoughts/</link>
-      <pubDate>Fri, 07 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>https://www.xzywisdili.com/post/2018-12-8-learnthoughts/</guid>
-      <description>&lt;p&gt;本科生活即将结束了。最后的一周日子里，主要在复习职业病学和精神病学，准备考试，一边又不想落下 SAS 的学习，当然还有其他杂七杂八的任务。在学习的时候，自然会想到一个问题就是：我们怎么知道自己学会了？&lt;/p&gt;</description>
+      <title>CDISC 标准（五）——ADaM 标准概述</title>
+      <link>https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes5/</link>
+      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes5/</guid>
+      <description>总结 ADaM 标准实为了让临床试验统计分析人员梗快速、标准准确地进行统计分析和制作报表的标准； ADaM 主要分为三类数据集：ADSL，BDS 和 OCCDS； 详</description>
     </item>
+    
     <item>
-      <title>为什么要使用 LaTeX 呢？</title>
-      <link>https://www.xzywisdili.com/post/2017-10-23-why-latex/</link>
-      <pubDate>Mon, 23 Oct 2017 00:00:00 +0000</pubDate>
-      <guid>https://www.xzywisdili.com/post/2017-10-23-why-latex/</guid>
-      <description>&lt;p&gt;这个标题其实不是我对我自己的诘问。作为一个医学生，在习惯使用 LaTeX 完成日常的作业或是论文时，总会有几个同学凑上前来，好奇地问这是个什么样的写作工具。在我做一番简要的介绍后，他们或许会表露出感兴趣，或称赞的神情，然后问下一个重复了很多遍的问题：为什么要使用 LaTeX 呢？&lt;/p&gt;</description>
+      <title>CDISC 标准（四）——SDTM 数据集详细分类</title>
+      <link>https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes4/</link>
+      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes4/</guid>
+      <description>总结 本笔记的主要内容： 介绍 SDTM 标准下的七个大类别，以及主要包括的数据集； 梳理两个最重要的数据集：AE（副作用数据集）和 LB（实验室检测结果数据</description>
     </item>
+    
+    <item>
+      <title>SAS 几个重要概念辨析</title>
+      <link>https://www.xzywisdili.com/2023/05/2023-05-01-sasnotes1/</link>
+      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/05/2023-05-01-sasnotes1/</guid>
+      <description>进行变量类型转换，用 input 还是 put 在 SAS 编程过程中，往往会遇到需要转换变量的需求。而转换变量，往往需要考虑使用 INPUT 还是 PUT。那么这时候就要想想几个变</description>
+    </item>
+    
+    <item>
+      <title>CDISC 标准（三）——SDTM 标准初试</title>
+      <link>https://www.xzywisdili.com/2023/04/2023-04-30-cdiscnote3/</link>
+      <pubDate>Sun, 30 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/04/2023-04-30-cdiscnote3/</guid>
+      <description>总结 第一次尝试仔细阅读 SDTM IG 文件中的一个 domain 变量信息； 通过 SAS 代码初试按照 SDTM 标准输出标准化的数据集。 本章要开始使用 SAS，并结合 SDTM 标准，看看如何让</description>
+    </item>
+    
+    <item>
+      <title>CDISC 标准（二）——SDTM 标准概述</title>
+      <link>https://www.xzywisdili.com/2023/04/2023-04-29-cdiscnote2/</link>
+      <pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/04/2023-04-29-cdiscnote2/</guid>
+      <description>总结 介绍了 SDTM 和 IG 文件的基本概念； 通过阅读 SDTM IG 文件，了解 Domain 和 Variable 的各种信息； 重点是 Variable 的五种分类：Identifier, Topic, Qualifier, Timing, Rule。 SDTM 的基本概</description>
+    </item>
+    
+    <item>
+      <title>博客的新浪图床图片崩了？简单办法教你解决！（2023年4月有效）</title>
+      <link>https://www.xzywisdili.com/2023/04/2023-04-28-saveyourblogpics/</link>
+      <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/04/2023-04-28-saveyourblogpics/</guid>
+      <description>今天偶然翻看以前的博客，突然发现图片都显示不出来了，第一时间想到可能是以前用的图床出了问题。 果不其然，经过查找和检索网上信息，发现新浪图床从</description>
+    </item>
+    
+    <item>
+      <title>5 分钟简单生成指定形状的词云</title>
+      <link>https://www.xzywisdili.com/2023/04/2023-04-26-generatewordcloudin5minutes/</link>
+      <pubDate>Wed, 26 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/04/2023-04-26-generatewordcloudin5minutes/</guid>
+      <description>群里有人问，想要做一张这样的指定形状的词云： 我试了一下，其实很简单，基本上 5 分钟就搞定。这里的简单思路就是： 使用 jieba 包对原始文本进行分词处理;</description>
+    </item>
+    
+    <item>
+      <title>数据挖掘的奇效——爬到网站没有显示的数据</title>
+      <link>https://www.xzywisdili.com/2023/04/2023-04-23-userjsonfindextradata/</link>
+      <pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/04/2023-04-23-userjsonfindextradata/</guid>
+      <description>有没有想过，有些网站的页面上展示的数据只有一部分的时候，通过稍微一点挖掘就能发现额外的数据，收获更多信息。 这里就举一个最近发现的例子——云顶</description>
+    </item>
+    
+    <item>
+      <title>【学习笔记】实用统计学复习手册01——探索性数据分析</title>
+      <link>https://www.xzywisdili.com/2023/03/2023-03-23-dataanalysisnote01/</link>
+      <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/03/2023-03-23-dataanalysisnote01/</guid>
+      <description>总结 介绍了数据的分类（数值型、分类型）等； 单变量分析：位置度量（均值、中位数）、变异性度量（方差、标准差、百分位数）等； 单变量的可视化：箱线</description>
+    </item>
+    
+    <item>
+      <title>【学习笔记】保序回归——适用于单调递增数据的统计回归方法</title>
+      <link>https://www.xzywisdili.com/2023/03/2023-03-07-isotonicregression/</link>
+      <pubDate>Tue, 07 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/03/2023-03-07-isotonicregression/</guid>
+      <description>什么是保序回归？ 保序回归（Isotonic Regression）是一种适用于单调函数非参数统计回归方法，即在一个序列中，Xn ≥ Xn-1。通过</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄07】《所罗门的密码》：试图分析人工智能的信任问题却深度不足</title>
+      <link>https://www.xzywisdili.com/2023/03/2023-03-03-bookreview07/</link>
+      <pubDate>Fri, 03 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/03/2023-03-03-bookreview07/</guid>
+      <description>总结 《所罗门的密码》总结了人工智能在方方面面改变整个社会的同时，可能出现的问题和挑战，并倡议出版一份《全球人工智能经济大宪章》。 书中大篇内容</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄06】Excel 学习真的不适合借助书本了</title>
+      <link>https://www.xzywisdili.com/2023/01/2023-01-30-bookreview06/</link>
+      <pubDate>Mon, 30 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/01/2023-01-30-bookreview06/</guid>
+      <description>总结 《跟李锐学Excel数据分析》 名为「数据分析」，内容实则是 Excel 软件使用技巧，这点需要读者注意； 虽然页数看起来较多，但是大量篇幅均为各种实操</description>
+    </item>
+    
+    <item>
+      <title>（2022年11月过）SAS Advance 考试最新完全攻略！</title>
+      <link>https://www.xzywisdili.com/2022/11/2022-11-08-sasadvance/</link>
+      <pubDate>Tue, 08 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/11/2022-11-08-sasadvance/</guid>
+      <description>今天终于通过了 SAS Advance 的考试。有一些最新的备考和考试过程的经验可以跟大家分享一下。 这篇攻略我会从两个方面来说，分别是备考篇和考试篇。 备考篇 SAS Advance 的</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄05】向心城市：带你了解现代城市的发展规律</title>
+      <link>https://www.xzywisdili.com/2022/10/2022-10-19-bookreview05/</link>
+      <pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/10/2022-10-19-bookreview05/</guid>
+      <description>总结 《向心城市》中作者通过大量的数据分析实证，介绍了城市的发展规律、为什么“向心城市”是发展趋势，以及城市化带来的各种方面的内容分析； 评分：</description>
+    </item>
+    
+    <item>
+      <title>动态页面的爬虫示例一则：抓取微博粉丝列表</title>
+      <link>https://www.xzywisdili.com/2022/10/2022-10-05-dynamichtmlspider/</link>
+      <pubDate>Wed, 05 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/10/2022-10-05-dynamichtmlspider/</guid>
+      <description>在碰到一些网页，想通过爬虫抓取页面信息的时候，会发现网页采用了一些动态 HTML 的相关技术来展示信息。这样直接使用 requests 是无法直接获取想要的 HTML 元素内容的</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄04】一日两餐：找回身体代谢灵活性的新饮食理念</title>
+      <link>https://www.xzywisdili.com/2022/09/2022-09-26-bookreview04/</link>
+      <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/09/2022-09-26-bookreview04/</guid>
+      <description>总结 《一日两餐》想让我们通过限制碳水摄入和间歇性禁食这两个重要手段来摆脱未来的胰岛素抵抗； 书中的大量内容更像是别处观点的拼凑，同时时不时夹杂</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄03】锻炼：丹尼尔·利伯曼教授对健康迷思的一一解答</title>
+      <link>https://www.xzywisdili.com/2022/09/2022-9-21-bookreview03/</link>
+      <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/09/2022-9-21-bookreview03/</guid>
+      <description>总结 《锻炼》通过人类进化学和现代医学研究两方面，对广泛流传的各种健康迷思进行了验证和解释； 关于久坐、睡眠、运动损伤、运动与衰老等等话题，你一</description>
+    </item>
+    
+    <item>
+      <title>【医学预测01】Logistic 回归构建变量筛选：先单后多</title>
+      <link>https://www.xzywisdili.com/2022/09/2022-09-07-rlogistic01/</link>
+      <pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/09/2022-09-07-rlogistic01/</guid>
+      <description>总结 介绍了 Logistic 回归模型构建过程中的一种变量筛选方式——先单后多； 配合对应的代码实例和结果解释，让方法更加清楚，同时便于日后复习查看。 在 Logistic 回归模</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄02】开启高质量沟通的第1分钟</title>
+      <link>https://www.xzywisdili.com/2022/09/2022-09-05-bookreview02/</link>
+      <pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/09/2022-09-05-bookreview02/</guid>
+      <description>总结 《开启高质量沟通的第一分钟》目标是让职场工作沟通的双方可以通过一段简短的引言快速进入良好的沟通节奏； 书中凝练了一套沟通结构：沟通框架（背</description>
+    </item>
+    
   </channel>
 </rss>

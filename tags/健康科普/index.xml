@@ -1,26 +1,196 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>健康科普 on XZY&#39;s BLOG</title>
+    <title>健康科普 on Pure theme for Hugo</title>
     <link>https://www.xzywisdili.com/tags/%E5%81%A5%E5%BA%B7%E7%A7%91%E6%99%AE/</link>
-    <description>Recent content in 健康科普 on XZY&#39;s BLOG</description>
+    <description>Recent content in 健康科普 on Pure theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>en</language>
+    <copyright>CC BY 4.0 CN</copyright>
     <lastBuildDate>Mon, 26 Sep 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://www.xzywisdili.com/tags/%E5%81%A5%E5%BA%B7%E7%A7%91%E6%99%AE/index.xml" rel="self" type="application/rss+xml" />
+    
+        <atom:link href="https://www.xzywisdili.com/tags/%E5%81%A5%E5%BA%B7%E7%A7%91%E6%99%AE/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ADSL 数据集的建立：练习示例</title>
+      <link>https://www.xzywisdili.com/2023/05/2023-05-08-adslexample/</link>
+      <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/05/2023-05-08-adslexample/</guid>
+      <description>总结 通过一则创立 ADSL 数据集的练习示例加深对 ADSL 数据集的理解； ADSL（Subject-Level Analysis Data Set） 是 ADaM 中的一种数据集，特点是每一行是一</description>
+    </item>
+    
+    <item>
+      <title>CDISC 标准（五）——ADaM 标准概述</title>
+      <link>https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes5/</link>
+      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes5/</guid>
+      <description>总结 ADaM 标准实为了让临床试验统计分析人员梗快速、标准准确地进行统计分析和制作报表的标准； ADaM 主要分为三类数据集：ADSL，BDS 和 OCCDS； 详</description>
+    </item>
+    
+    <item>
+      <title>CDISC 标准（四）——SDTM 数据集详细分类</title>
+      <link>https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes4/</link>
+      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/05/2023-05-02-cdiscnotes4/</guid>
+      <description>总结 本笔记的主要内容： 介绍 SDTM 标准下的七个大类别，以及主要包括的数据集； 梳理两个最重要的数据集：AE（副作用数据集）和 LB（实验室检测结果数据</description>
+    </item>
+    
+    <item>
+      <title>SAS 几个重要概念辨析</title>
+      <link>https://www.xzywisdili.com/2023/05/2023-05-01-sasnotes1/</link>
+      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/05/2023-05-01-sasnotes1/</guid>
+      <description>进行变量类型转换，用 input 还是 put 在 SAS 编程过程中，往往会遇到需要转换变量的需求。而转换变量，往往需要考虑使用 INPUT 还是 PUT。那么这时候就要想想几个变</description>
+    </item>
+    
+    <item>
+      <title>CDISC 标准（三）——SDTM 标准初试</title>
+      <link>https://www.xzywisdili.com/2023/04/2023-04-30-cdiscnote3/</link>
+      <pubDate>Sun, 30 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/04/2023-04-30-cdiscnote3/</guid>
+      <description>总结 第一次尝试仔细阅读 SDTM IG 文件中的一个 domain 变量信息； 通过 SAS 代码初试按照 SDTM 标准输出标准化的数据集。 本章要开始使用 SAS，并结合 SDTM 标准，看看如何让</description>
+    </item>
+    
+    <item>
+      <title>CDISC 标准（二）——SDTM 标准概述</title>
+      <link>https://www.xzywisdili.com/2023/04/2023-04-29-cdiscnote2/</link>
+      <pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/04/2023-04-29-cdiscnote2/</guid>
+      <description>总结 介绍了 SDTM 和 IG 文件的基本概念； 通过阅读 SDTM IG 文件，了解 Domain 和 Variable 的各种信息； 重点是 Variable 的五种分类：Identifier, Topic, Qualifier, Timing, Rule。 SDTM 的基本概</description>
+    </item>
+    
+    <item>
+      <title>博客的新浪图床图片崩了？简单办法教你解决！（2023年4月有效）</title>
+      <link>https://www.xzywisdili.com/2023/04/2023-04-28-saveyourblogpics/</link>
+      <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/04/2023-04-28-saveyourblogpics/</guid>
+      <description>今天偶然翻看以前的博客，突然发现图片都显示不出来了，第一时间想到可能是以前用的图床出了问题。 果不其然，经过查找和检索网上信息，发现新浪图床从</description>
+    </item>
+    
+    <item>
+      <title>5 分钟简单生成指定形状的词云</title>
+      <link>https://www.xzywisdili.com/2023/04/2023-04-26-generatewordcloudin5minutes/</link>
+      <pubDate>Wed, 26 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/04/2023-04-26-generatewordcloudin5minutes/</guid>
+      <description>群里有人问，想要做一张这样的指定形状的词云： 我试了一下，其实很简单，基本上 5 分钟就搞定。这里的简单思路就是： 使用 jieba 包对原始文本进行分词处理;</description>
+    </item>
+    
+    <item>
+      <title>数据挖掘的奇效——爬到网站没有显示的数据</title>
+      <link>https://www.xzywisdili.com/2023/04/2023-04-23-userjsonfindextradata/</link>
+      <pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/04/2023-04-23-userjsonfindextradata/</guid>
+      <description>有没有想过，有些网站的页面上展示的数据只有一部分的时候，通过稍微一点挖掘就能发现额外的数据，收获更多信息。 这里就举一个最近发现的例子——云顶</description>
+    </item>
+    
+    <item>
+      <title>【学习笔记】实用统计学复习手册01——探索性数据分析</title>
+      <link>https://www.xzywisdili.com/2023/03/2023-03-23-dataanalysisnote01/</link>
+      <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/03/2023-03-23-dataanalysisnote01/</guid>
+      <description>总结 介绍了数据的分类（数值型、分类型）等； 单变量分析：位置度量（均值、中位数）、变异性度量（方差、标准差、百分位数）等； 单变量的可视化：箱线</description>
+    </item>
+    
+    <item>
+      <title>【学习笔记】保序回归——适用于单调递增数据的统计回归方法</title>
+      <link>https://www.xzywisdili.com/2023/03/2023-03-07-isotonicregression/</link>
+      <pubDate>Tue, 07 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/03/2023-03-07-isotonicregression/</guid>
+      <description>什么是保序回归？ 保序回归（Isotonic Regression）是一种适用于单调函数非参数统计回归方法，即在一个序列中，Xn ≥ Xn-1。通过</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄07】《所罗门的密码》：试图分析人工智能的信任问题却深度不足</title>
+      <link>https://www.xzywisdili.com/2023/03/2023-03-03-bookreview07/</link>
+      <pubDate>Fri, 03 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/03/2023-03-03-bookreview07/</guid>
+      <description>总结 《所罗门的密码》总结了人工智能在方方面面改变整个社会的同时，可能出现的问题和挑战，并倡议出版一份《全球人工智能经济大宪章》。 书中大篇内容</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄06】Excel 学习真的不适合借助书本了</title>
+      <link>https://www.xzywisdili.com/2023/01/2023-01-30-bookreview06/</link>
+      <pubDate>Mon, 30 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2023/01/2023-01-30-bookreview06/</guid>
+      <description>总结 《跟李锐学Excel数据分析》 名为「数据分析」，内容实则是 Excel 软件使用技巧，这点需要读者注意； 虽然页数看起来较多，但是大量篇幅均为各种实操</description>
+    </item>
+    
+    <item>
+      <title>（2022年11月过）SAS Advance 考试最新完全攻略！</title>
+      <link>https://www.xzywisdili.com/2022/11/2022-11-08-sasadvance/</link>
+      <pubDate>Tue, 08 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/11/2022-11-08-sasadvance/</guid>
+      <description>今天终于通过了 SAS Advance 的考试。有一些最新的备考和考试过程的经验可以跟大家分享一下。 这篇攻略我会从两个方面来说，分别是备考篇和考试篇。 备考篇 SAS Advance 的</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄05】向心城市：带你了解现代城市的发展规律</title>
+      <link>https://www.xzywisdili.com/2022/10/2022-10-19-bookreview05/</link>
+      <pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/10/2022-10-19-bookreview05/</guid>
+      <description>总结 《向心城市》中作者通过大量的数据分析实证，介绍了城市的发展规律、为什么“向心城市”是发展趋势，以及城市化带来的各种方面的内容分析； 评分：</description>
+    </item>
+    
+    <item>
+      <title>动态页面的爬虫示例一则：抓取微博粉丝列表</title>
+      <link>https://www.xzywisdili.com/2022/10/2022-10-05-dynamichtmlspider/</link>
+      <pubDate>Wed, 05 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/10/2022-10-05-dynamichtmlspider/</guid>
+      <description>在碰到一些网页，想通过爬虫抓取页面信息的时候，会发现网页采用了一些动态 HTML 的相关技术来展示信息。这样直接使用 requests 是无法直接获取想要的 HTML 元素内容的</description>
+    </item>
+    
     <item>
       <title>【把书读薄04】一日两餐：找回身体代谢灵活性的新饮食理念</title>
-      <link>https://www.xzywisdili.com/post/2022-09-26-bookreview04/</link>
+      <link>https://www.xzywisdili.com/2022/09/2022-09-26-bookreview04/</link>
       <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
-      <guid>https://www.xzywisdili.com/post/2022-09-26-bookreview04/</guid>
-      <description>总结 《一日两餐》想让我们通过限制碳水摄入和间歇性禁食这两个重要手段来摆脱未来的胰岛素抵抗； 书中的大量内容更像是别处观点的拼凑，同时时不时夹杂一些带货着实会令读者不悦； 评分：2.5/5.0，仅摘取前半部分的关键阅读即可，后半部分实在不推荐。 现代饮食理论提出的新观点认为，每日三餐的高碳水化合物的摄入，外加各种精制加工食品才是损害我们健康的元凶。《一日两餐》的作者想要为我们讲解这背后的理论原理「高胰岛素血症」，以及我们为什么需要「限制碳水」和「间歇性禁食」来帮助我们减掉身体多余的脂肪，降低糖尿病、心脏病的发生概率，获得一个健康、快乐和精力充沛的生活。&#xA;现代人类正在面临胰岛素抵抗的危机 胰岛素是胰腺分泌的一种代谢激素。在正常情况下，人体摄入的碳水化合物会转化为葡萄糖，这些糖少部分会直接消耗，绝大多数则会听从胰岛素的安排，从血液去往目的地。其中一部分会去肌肉或肝脏转化为糖原储存，另一部分则去往脂肪细胞转化为甘油三酯。&#xA;现代的食品工业和饮食让人们疯狂地摄入碳水化合物，导致胰岛素得持续地维持工作，来处理血糖的负担。而长时间地持续分泌胰岛素，会最终导致细胞上的受体对胰岛素不再敏感，这也就进入了胰岛素抵抗的状态。很多人也把这种状态称作代谢综合征，会带来一些显著的健康问题：高血压、高血糖、高血脂和腹部脂肪多。同时，还会导致氧化应激、慢性炎症和糖化，而这些被医学界认为是心血管疾病、癌症和衰老的关键驱动因素。&#xA;作者认为，当我们深陷“血糖-胰岛素过山车”的模式中，就会丢掉我们相当重要的一个能力——「代谢灵活性」，即可以根据身体的需要去燃烧各种能量来源的能力，尤其是储存的脂肪。拥有这种能力则让我们整日体感良好，后续的各种健康风险也会大大降低。&#xA;因此，简单地说，我们要避免胰岛素抵抗，重新获得代谢灵活性。&#xA;怎么重获代谢灵活性？ 现在，为了达成避免胰岛素抵抗，重获代谢灵活性的目标，我们当然需要改变日常饮食习惯。但是！可以忘掉计算热量等等的麻烦事，我们只需要关注以下几条：&#xA;避免缺乏营养的精加工食品（尤其是含糖饮料和精制碳水）； 减少进食，开始间歇性禁食； 第一步：从饮食中剔除现代的有害食品 作者认为，现代三大有害食品是添加糖、精制谷物和精炼种子油。这些碳水不仅缺乏营养，同时还大量刺激体内胰岛素分泌，诱导进入胰岛素抵抗的状态。&#xA;但可惜的是，我们现在的饮食文化中这些已经随处可见。米、面、饼等等已经成为绝大多数人家的主食必备，而商店的饮料货架上的绝大多数都是含糖或者代糖饮料，同时各种的甜品和零食也在刺激和引诱我们的食欲。想要完全摆脱这些真的有点难。&#xA;但我们需要好好反思一下这“三巨头”所带给我们的：&#xA;精制谷物：大量的、纯粹的碳水不仅缺乏营养，还增加了我们对糖类的代谢负担，分泌过量胰岛素的危害逐渐浮现； 加工糖和代糖：额外添加，只为满足口舌之欲，实质上摄入体内也在增加代谢负担，让胰岛素过量工作； 精制种子油：非天然的化学组成，通过与天然脂肪分子相似的特性蒙骗了身体，整合进了脂肪细胞中，导致脂肪很难作为燃料燃烧，阻碍了代谢灵活性； 那我们应该多吃什么呢？作者认为我们应该重视以下这些营养密度更高的食物：&#xA;肉、鱼、禽、蛋、海洋生物、动物肝脏、带骨肉、骨头汤 蔬菜：含有抗氧化剂、类黄酮、类胡萝卜素等植物营养素、维生素； 新鲜的应季浆果 坚果：含有蛋白质、脂肪酸、抗氧化剂、维生素及矿物质等； 天然乳制品：避开加工的含糖酸奶、风味酸奶等等； 黑巧克力：富含抗氧化剂和矿物质，尽量选择可可含量至少 70% 的产品，避开牛奶巧克力或半糖巧克力这些糖分炸弹 饮料：水、不加糖的茶和咖啡 以谷物为基础的饮食体系实质上是食品工业推销风行的一种不好的饮食习惯。&#xA;麸质和谷物中的反营养物质，作者认为日常司空见惯的嗳气、腹胀、便秘、短暂性腹痛和偶尔性腹泻其实都是身体对这些“非营养物质”中的毒素的不良反应。&#xA;精炼种子油、精制谷物和精制糖&#xA;通过日常禁食、规避精制碳水化合物和种子油这样的生活方式行为，来降低膳食导致的胰岛素产生，从而向你的基因发出“燃烧脂肪”而非“储存脂肪”的信号。当你成功降低胰岛素时，你就能将储存的身体脂肪作为首选的能量来源，而不是将你摄入的热量当作首选，进而燃烧脂肪。&#xA;第二步：开始间歇性禁食 间歇性禁食是一个比较新的进食理念，即我们人类其实无需早、中、晚三顿饭，甚至期间不停吃零食来满足全天能量。因此，我们可以空出一段完整的时间来减轻身体的消化负担，来让身体有选择地燃烧脂肪，获得代谢灵活性。&#xA;最自然的方式，就是等到饥饿感自然到来的时候才进行进食。通过尽可能长的时间，身体能够产生抗氧化剂（比如谷胱甘肽），同时对优化内部解毒过程，让大脑和身体燃烧脂肪和酮类物质，促进线粒体的功能，同时促进线粒体的合成和效率，可以说，从代谢、免疫和认知功能都有一定的好处。&#xA;更加推荐的初步间歇性禁食方式就是 16-8 禁食法，即每天在 8 小时的进食窗口完成所有食物摄入，然后在剩下的 16 个小时保持禁食状态。比如我就准备通过稍晚的早餐和午餐在 9：00-17：00 完成进食，剩下的时间则留给禁食状态。&#xA;除此之外，在执行过程中还要注意：&#xA;关注身体的饥饿和饱腹的信号，能够更好地筹划自己的饮食进程； 推迟第一顿饭的时间，直到饥饿的时候在再吃，不必拘泥于早餐的理念； 尽量少吃零食，吃零食会阻碍脂肪燃烧，增加胰岛素的波动，还会增加每日的总热量摄入； 在到达自己的消化窗口时间可以刷牙，让口腔保持清爽，不再受到食物的诱惑； 作者时时告诉我们，只要坚持这样的饮食方式 21 天，就会有明显的健康收获。我也打算开始践行作者提倡的方式，同时使用日志记录执行情况和感受，1个月后在此分享一下，间歇性禁食到底如何。&#xA;最后，聊一下为什么不推荐这本书 虽然作者想要传递一些新鲜的饮食理念，但是书中的一些部分实在令人不悦：&#xA;拼凑内容：书中使用了相当多的篇幅来讲解需要配套的运动、睡眠、习惯养成法，甚至冷暴露等等的健康生活方式，但是基本都是东拉西拽，从别人那里拿来的，比如小A的《A书》里讲了什么什么，小B的《B书》又说了什么什么，既然没有自己的东西，也就不用强行塞到书中充数； 强行带货：你会读到在讲解酒类的部分开始推荐 XX 牌的红酒，到了睡眠部分又在推荐 XX 牌的床垫，又让读者去油管检索 XX 教练的运动视频……这些内容的出现无疑降低了科普的说服力度。 这大概也是造成豆瓣评分偏低，短评不满的部分原因。因此，大可不必阅读此书，文中的相关理念也可以通过其他渠道继续深入了解。</description>
+      
+      <guid>https://www.xzywisdili.com/2022/09/2022-09-26-bookreview04/</guid>
+      <description>总结 《一日两餐》想让我们通过限制碳水摄入和间歇性禁食这两个重要手段来摆脱未来的胰岛素抵抗； 书中的大量内容更像是别处观点的拼凑，同时时不时夹杂</description>
     </item>
+    
     <item>
       <title>【把书读薄03】锻炼：丹尼尔·利伯曼教授对健康迷思的一一解答</title>
-      <link>https://www.xzywisdili.com/post/2022-9-21-bookreview03/</link>
+      <link>https://www.xzywisdili.com/2022/09/2022-9-21-bookreview03/</link>
       <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
-      <guid>https://www.xzywisdili.com/post/2022-9-21-bookreview03/</guid>
-      <description>总结 《锻炼》通过人类进化学和现代医学研究两方面，对广泛流传的各种健康迷思进行了验证和解释； 关于久坐、睡眠、运动损伤、运动与衰老等等话题，你一定能看到种种新奇的视角和极具说服力的验证； 评分：4.8/5.0，非常难得的健康科普阅读体验，部分章节之后会重新翻看。 社会上流传了许多健康迷思：「久坐会带来健康风险」、「每晚睡眠达到8小时才是最佳状态」、「仅靠步行，无法减肥」等等内容。我们有时候接受了这些理论，仅仅是因为很多人（包括专家）都这么讲，但却从来没有思考这些说法究竟有没有道理、原理是什么。而丹尼尔·利伯曼想用《锻炼》这本书尽量把这些健康迷思讲清楚。身为哈佛大学的进化生物学教授，他带来了进化生物学的视角，从人类的进化讲起，到现代医学研究阐释的原理。看完这本书，我是真的感觉自己打开了眼界，又被里面的原理和验证所说服。&#xA;避免非必要的身体活动才是进化的结果 首先有一个最基本的观点（当然可能各位已经在生物课上学习过），即「人体在静息状态下依然在消耗能量。」更重要的是，这部分能量并不低，静息代谢消耗的能量要占据每日总热量消耗的 60% 到 75% 之多。&#xA;静息状态的能量消耗主要来自于各个器官的辛勤工作。比如心脏在不停收缩、泵血当然需要能量；肠胃在消化，肝肾在调控和过滤血液当然需要能量；大脑在思考，更需要能量……静息状态，虽然我们看上去什么都没有做，但是各种维持生命的生理活动一直在进行，并且消耗能量。&#xA;而在进化过程中，人体也学会了怎么分配能量。在从类人猿进化到人类的过程中，我们深知能量的重要性（当然，没能量就会嗝屁）。而在能量有限的情况下，分配的优先级就很重要了。而人体实际上可以把能量花在以下5个方面：身体成长、生命维持（静息代谢）、能量存储（例如，以脂肪形式存储）、运动、繁衍。&#xA;在进化生物学的理论中，「生命维持」和「繁衍」是这五项里最最优先的两项，这也符合我们的认知：没了生命维持就嗝屁了，而繁衍是刻在基因里的种族任务……所以，其实作者想表达的结论就是：&#xA;「避免非必要的身体活动，才是进化的结果。」&#xA;换句话就是，「我们生而懒惰」。当然，在这个语境下，「懒惰」已经不是一个贬义词了，更象征着人类在漫漫进化长河中的一种实用的适应。&#xA;那么问题来了，既然所谓的「懒惰」是人类的正常选择，而「久坐非常不利于健康」的说法也流行已久了，这两个观点又该如何理解呢？&#xA;久坐是怎么带来健康风险的 其实关于久坐有两个已经公认的事实：&#xA;现代人每天久坐的时长要比过去更长。 统计显示现代人平均每天坐的时长占非睡眠时间的 55%-75%，即 9-13 个小时； 站姿或者其他活动要比坐姿消耗更多的能量。 很好理解，因为牵涉到肌肉的伸缩和协调。 这样一来，久坐和健康风险的关系链就呼之欲出了。久坐让“运动”这一部分的能量节省了下来，而能量不会凭空消失，就会存储成为脂肪的形式；脂肪细胞的膨胀招致了白细胞前来并向血液释放了大量炎症细胞因子，形成了慢性轻度炎症。简单一句话总结：久坐会让你变胖，而变胖会带来健康风险。&#xA;现在的问题是，怎么解决这样的健康风险？研究告诉我们，只要保持了久坐的习惯，哪怕你坚持在下班时间进行锻炼，也依然于事无补，这部分健康风险是无法抵消的。所以只剩下了两个选择：&#xA;间断性起身做轻量运动； 折中的方法：“不安分” 地坐着 这里的原理在于，保持这种“不安分”的活动会让肌肉保持收缩，然后燃烧掉血液中糖和脂肪的能量；另外，肌肉受到的刺激，能够带动抗炎反应，消除体内的炎症。&#xA;当然，这只是开胃菜，后续精彩纷呈 久坐只是作者论述的第一个话题，而从此篇也逐渐渐入佳境。在接下来，作者对于「8小时睡眠理论」、「步行减肥理论」、「奔跑的速度与耐力」、「锻炼如何延缓衰老」等等话题一一进行了讲述。而且你能明显地感觉到，每一个话题都并非泛泛而谈，而是经过了作者深入的思考。&#xA;让我印象最深，也最有趣的例子，莫过于「体育与人类自我驯化」。&#xA;体育其实是人类自我驯化的产物 这里先要理解两个概念：「应激性攻击」和「主动性攻击」&#xA;高应激性攻击：你只要惹我，我不过脑子立马就干你，行为不受控制； 低主动性攻击：完全由大脑主导和控制，通过策划行动、互相协作、谋求时机来进行攻击。 在还未完全进化的类人猿形态，其实就是高应激性攻击和低主动性攻击。但是进化过程中，拥有团队协作能力进行捕猎的人类和受到异性青睐的人类逐渐在自然选择中赢得胜利，慢慢地变成了低应激性攻击和高主动性攻击。&#xA;这个过程其实和野狗驯化成家狗的过程有一定相似性，换句话说，就是「人类的自我驯化」。&#xA;而早期的体育活动，很大程度上其实就是人类在训练自己的狩猎技巧、生存技巧和团队协作能力，这样又能使种族更好地生存和繁衍。你会发现，其实体育有一个非常关键的特征：就是对于应激性攻击行为的自我控制。绝大多数体育规则中，场上队员对对手的粗暴的应激性攻击都是违反规则的。&#xA;对锻炼有一个正确的认知 其实通读完本书的最大收获就在于，对「锻炼」这件事的理解更深刻了。&#xA;锻炼是近代诞生的产物，我们从没有进化出锻炼的本能，但是锻炼本身对我们身体是有益处的。规律性的身体活动是延缓衰老和延长寿命的最佳方式。当我们再回过头重新审视这一切，我们就不会对那些不喜欢锻炼的人进行苛责，同时喜欢锻炼的人也能明白锻炼到底给我们带来了什么。不过分夸大锻炼的功效，但也需要承认锻炼的益处，我认为这才是看待「锻炼」这件事最正确的态度了。</description>
+      
+      <guid>https://www.xzywisdili.com/2022/09/2022-9-21-bookreview03/</guid>
+      <description>总结 《锻炼》通过人类进化学和现代医学研究两方面，对广泛流传的各种健康迷思进行了验证和解释； 关于久坐、睡眠、运动损伤、运动与衰老等等话题，你一</description>
     </item>
+    
+    <item>
+      <title>【医学预测01】Logistic 回归构建变量筛选：先单后多</title>
+      <link>https://www.xzywisdili.com/2022/09/2022-09-07-rlogistic01/</link>
+      <pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/09/2022-09-07-rlogistic01/</guid>
+      <description>总结 介绍了 Logistic 回归模型构建过程中的一种变量筛选方式——先单后多； 配合对应的代码实例和结果解释，让方法更加清楚，同时便于日后复习查看。 在 Logistic 回归模</description>
+    </item>
+    
+    <item>
+      <title>【把书读薄02】开启高质量沟通的第1分钟</title>
+      <link>https://www.xzywisdili.com/2022/09/2022-09-05-bookreview02/</link>
+      <pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.xzywisdili.com/2022/09/2022-09-05-bookreview02/</guid>
+      <description>总结 《开启高质量沟通的第一分钟》目标是让职场工作沟通的双方可以通过一段简短的引言快速进入良好的沟通节奏； 书中凝练了一套沟通结构：沟通框架（背</description>
+    </item>
+    
   </channel>
 </rss>
