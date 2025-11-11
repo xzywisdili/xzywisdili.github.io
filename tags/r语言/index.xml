@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2025 Xzywisdili</copyright>
-    <lastBuildDate>Sun, 23 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/tags/r%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/tags/r%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>【可视化】使用 R 画图实现圆形网络布局的方法</title>
+      <link>https://xzywisdili.netlify.app/blog/network-layout-with-r/</link>
+      <pubDate>Tue, 11 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/network-layout-with-r/</guid>
+      <description>找到画出圆形网络布局的修改方法记录。</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xzywisdili.netlify.app/blog/network-layout-with-r/feature.png" />
+    </item>
     
     <item>
       <title>数据挖掘的奇效——爬到网站没有显示的数据</title>

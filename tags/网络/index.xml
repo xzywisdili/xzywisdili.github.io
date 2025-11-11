@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>网络 on XZY&#39;s Blog</title>
+    <link>https://xzywisdili.netlify.app/tags/%E7%BD%91%E7%BB%9C/</link>
+    <description>Recent content in 网络 on XZY&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2025 Xzywisdili</copyright>
+    <lastBuildDate>Tue, 11 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/tags/%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>【可视化】使用 R 画图实现圆形网络布局的方法</title>
+      <link>https://xzywisdili.netlify.app/blog/network-layout-with-r/</link>
+      <pubDate>Tue, 11 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/network-layout-with-r/</guid>
+      <description>找到画出圆形网络布局的修改方法记录。</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xzywisdili.netlify.app/blog/network-layout-with-r/feature.png" />
+    </item>
+    
+  </channel>
+</rss>

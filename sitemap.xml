@@ -3,6 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
+    <loc>https://xzywisdili.netlify.app/blog/network-layout-with-r/</loc>
+    <lastmod>2025-11-11T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://xzywisdili.netlify.app/blog/</loc>
     <lastmod>2025-11-11T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
