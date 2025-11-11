@@ -1,24 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>工作 on XZY&#39;s Blog</title>
-    <link>https://xzywisdili.netlify.app/tags/%E5%B7%A5%E4%BD%9C/</link>
-    <description>Recent content in 工作 on XZY&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <copyright>© 2025 Xzywisdili</copyright>
-    <lastBuildDate>Sun, 27 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/tags/%E5%B7%A5%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>推荐且收藏的好网站</title>
-      <link>https://xzywisdili.netlify.app/blog/20201228/2020-12-28-recommendwebsite/</link>
-      <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20201228/2020-12-28-recommendwebsite/</guid>
-      <description>&lt;p&gt;这篇博客计划持续更新。这里的网站或者是实用的工具，或者是收藏的实用知识，而且每一个都是我自己用过或者看过的。
-其中不少还是我高频使用的，甚至域名也已经背下来了。&lt;/p&gt;</description>
-      
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>工作 on XZY's Blog</title><link>https://xzywisdili.netlify.app/tags/%E5%B7%A5%E4%BD%9C/</link><description>Recent content in 工作 on XZY's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2025 Xzywisdili</copyright><lastBuildDate>Sun, 27 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/tags/%E5%B7%A5%E4%BD%9C/index.xml" rel="self" type="application/rss+xml"/><item><title>推荐且收藏的好网站</title><link>https://xzywisdili.netlify.app/blog/20201228/2020-12-28-recommendwebsite/</link><pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20201228/2020-12-28-recommendwebsite/</guid><description>&lt;p&gt;这篇博客计划持续更新。这里的网站或者是实用的工具，或者是收藏的实用知识，而且每一个都是我自己用过或者看过的。
+其中不少还是我高频使用的，甚至域名也已经背下来了。&lt;/p&gt;</description></item></channel></rss>

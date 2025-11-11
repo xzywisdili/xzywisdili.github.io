@@ -1,24 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>想法 on XZY&#39;s Blog</title>
-    <link>https://xzywisdili.netlify.app/tags/%E6%83%B3%E6%B3%95/</link>
-    <description>Recent content in 想法 on XZY&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <copyright>© 2025 Xzywisdili</copyright>
-    <lastBuildDate>Mon, 04 Jun 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/tags/%E6%83%B3%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>简化我们的工具</title>
-      <link>https://xzywisdili.netlify.app/blog/20180604/2018-6-4-simplifytools/</link>
-      <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20180604/2018-6-4-simplifytools/</guid>
-      <description>&lt;p&gt;现在的大学生不像十几年前，必定是人手一台笔记本电脑（有的人甚至有两台）。只要在自习室稍微留神观察一下
-专注学习的同学们，就会发现几乎 100% 的同学的电脑上停留的软件不是微软家的 powerpoint，就是 PDF 阅读器。&lt;/p&gt;</description>
-      
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>想法 on XZY's Blog</title><link>https://xzywisdili.netlify.app/tags/%E6%83%B3%E6%B3%95/</link><description>Recent content in 想法 on XZY's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2025 Xzywisdili</copyright><lastBuildDate>Mon, 04 Jun 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/tags/%E6%83%B3%E6%B3%95/index.xml" rel="self" type="application/rss+xml"/><item><title>简化我们的工具</title><link>https://xzywisdili.netlify.app/blog/20180604/2018-6-4-simplifytools/</link><pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20180604/2018-6-4-simplifytools/</guid><description>&lt;p&gt;现在的大学生不像十几年前，必定是人手一台笔记本电脑（有的人甚至有两台）。只要在自习室稍微留神观察一下
+专注学习的同学们，就会发现几乎 100% 的同学的电脑上停留的软件不是微软家的 powerpoint，就是 PDF 阅读器。&lt;/p&gt;</description></item></channel></rss>

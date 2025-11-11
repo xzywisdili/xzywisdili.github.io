@@ -1,38 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>R语言 on XZY&#39;s Blog</title>
-    <link>https://xzywisdili.netlify.app/tags/r%E8%AF%AD%E8%A8%80/</link>
-    <description>Recent content in R语言 on XZY&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <copyright>© 2025 Xzywisdili</copyright>
-    <lastBuildDate>Sun, 23 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/tags/r%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>数据挖掘的奇效——爬到网站没有显示的数据</title>
-      <link>https://xzywisdili.netlify.app/blog/20230423/2023-04-23-userjsonfindextradata/</link>
-      <pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20230423/2023-04-23-userjsonfindextradata/</guid>
-      <description>&lt;p&gt;有没有想过，有些网站的页面上展示的数据只有一部分的时候，通过稍微一点挖掘就能发现额外的数据，收获更多信息。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>【学习笔记】实用统计学复习手册01——探索性数据分析</title>
-      <link>https://xzywisdili.netlify.app/blog/20230323/2023-03-23-dataanalysisnote01/</link>
-      <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20230323/2023-03-23-dataanalysisnote01/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;总结
-    &lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>R语言 on XZY's Blog</title><link>https://xzywisdili.netlify.app/tags/r%E8%AF%AD%E8%A8%80/</link><description>Recent content in R语言 on XZY's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2025 Xzywisdili</copyright><lastBuildDate>Sun, 23 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/tags/r%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml"/><item><title>数据挖掘的奇效——爬到网站没有显示的数据</title><link>https://xzywisdili.netlify.app/blog/20230423/2023-04-23-userjsonfindextradata/</link><pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230423/2023-04-23-userjsonfindextradata/</guid><description>&lt;p&gt;有没有想过，有些网站的页面上展示的数据只有一部分的时候，通过稍微一点挖掘就能发现额外的数据，收获更多信息。&lt;/p&gt;</description></item><item><title>【学习笔记】实用统计学复习手册01——探索性数据分析</title><link>https://xzywisdili.netlify.app/blog/20230323/2023-03-23-dataanalysisnote01/</link><pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230323/2023-03-23-dataanalysisnote01/</guid><description>&lt;h2 class="relative group"&gt;总结
+&lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;介绍了数据的分类（数值型、分类型）等；&lt;/li&gt;
@@ -42,52 +13,23 @@
 &lt;li&gt;多变量的可视化：散点图、热力图、列联表、分类箱线图等；&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;探索性数据分析&lt;/strong&gt;（Exploratory Data Analysis，EDA）是数据科学项目的第一步。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>【学习笔记】保序回归——适用于单调递增数据的统计回归方法</title>
-      <link>https://xzywisdili.netlify.app/blog/20230307/2023-03-07-isotonicregression/</link>
-      <pubDate>Tue, 07 Mar 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20230307/2023-03-07-isotonicregression/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;什么是保序回归？
-    &lt;div id=&#34;什么是保序回归&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e4%bb%80%e4%b9%88%e6%98%af%e4%bf%9d%e5%ba%8f%e5%9b%9e%e5%bd%92&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+&lt;p&gt;&lt;strong&gt;探索性数据分析&lt;/strong&gt;（Exploratory Data Analysis，EDA）是数据科学项目的第一步。&lt;/p&gt;</description></item><item><title>【学习笔记】保序回归——适用于单调递增数据的统计回归方法</title><link>https://xzywisdili.netlify.app/blog/20230307/2023-03-07-isotonicregression/</link><pubDate>Tue, 07 Mar 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230307/2023-03-07-isotonicregression/</guid><description>&lt;h2 class="relative group"&gt;什么是保序回归？
+&lt;div id="什么是保序回归" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bb%80%e4%b9%88%e6%98%af%e4%bf%9d%e5%ba%8f%e5%9b%9e%e5%bd%92" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
-&lt;p&gt;保序回归（Isotonic Regression）是一种适用于&lt;strong&gt;单调函数&lt;/strong&gt;非参数统计回归方法，即在一个序列中，Xn ≥ Xn-1。通过字面理解「Isotonic Regression」：&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>【医学预测01】Logistic 回归构建变量筛选：先单后多</title>
-      <link>https://xzywisdili.netlify.app/blog/20220907/2022-09-07-rlogistic01/</link>
-      <pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20220907/2022-09-07-rlogistic01/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;总结
-    &lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+&lt;p&gt;保序回归（Isotonic Regression）是一种适用于&lt;strong&gt;单调函数&lt;/strong&gt;非参数统计回归方法，即在一个序列中，Xn ≥ Xn-1。通过字面理解「Isotonic Regression」：&lt;/p&gt;</description></item><item><title>【医学预测01】Logistic 回归构建变量筛选：先单后多</title><link>https://xzywisdili.netlify.app/blog/20220907/2022-09-07-rlogistic01/</link><pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20220907/2022-09-07-rlogistic01/</guid><description>&lt;h2 class="relative group"&gt;总结
+&lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;介绍了 Logistic 回归模型构建过程中的一种变量筛选方式——先单后多；&lt;/li&gt;
 &lt;li&gt;配合对应的代码实例和结果解释，让方法更加清楚，同时便于日后复习查看。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;在 Logistic 回归模型的构建过程中，面对的第一个问题是&lt;strong&gt;变量筛选&lt;/strong&gt;，即筛选哪些作为预测因子进入到最后构建的模型中。其中最为基础的方法是 &lt;strong&gt;「先单后多」&lt;/strong&gt;，顾名思义，即先进行单因素分析，再将单因素分析中具有统计学意义的变量再一起纳入多因素模型中。这样的方法最为简单和实用。&lt;/p&gt;</description>
-      
-    </item>
-    
-  </channel>
-</rss>
+&lt;p&gt;在 Logistic 回归模型的构建过程中，面对的第一个问题是&lt;strong&gt;变量筛选&lt;/strong&gt;，即筛选哪些作为预测因子进入到最后构建的模型中。其中最为基础的方法是 &lt;strong&gt;「先单后多」&lt;/strong&gt;，顾名思义，即先进行单因素分析，再将单因素分析中具有统计学意义的变量再一起纳入多因素模型中。这样的方法最为简单和实用。&lt;/p&gt;</description></item></channel></rss>

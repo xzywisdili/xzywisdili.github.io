@@ -1,48 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>XZY&#39;s Blog</title>
-    <link>https://xzywisdili.netlify.app/</link>
-    <description>Recent content on XZY&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <copyright>© 2025 Xzywisdili</copyright>
-    <lastBuildDate>Tue, 11 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>把博客整装更新了一下，再次启航</title>
-      <link>https://xzywisdili.netlify.app/blog/blog-new-release/</link>
-      <pubDate>Tue, 11 Nov 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/blog-new-release/</guid>
-      <description>2025年11月11日，把旧版的博客重新迁移了一下，然后更新了主题。准备依然是随缘持续性分享一些内容。</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xzywisdili.netlify.app/blog/blog-new-release/feature.png" />
-    </item>
-    
-    <item>
-      <title>营养干预的一点小思考</title>
-      <link>https://xzywisdili.netlify.app/blog/2023-09-16-%E8%90%A5%E5%85%BB%E5%B9%B2%E9%A2%84%E7%9A%84%E4%B8%80%E7%82%B9%E5%B0%8F%E6%80%9D%E8%80%83/</link>
-      <pubDate>Sat, 16 Sep 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/2023-09-16-%E8%90%A5%E5%85%BB%E5%B9%B2%E9%A2%84%E7%9A%84%E4%B8%80%E7%82%B9%E5%B0%8F%E6%80%9D%E8%80%83/</guid>
-      <description>&lt;p&gt;最近和朋友聊关于营养干预、补充的一些话题，而且关于营养相关的内容也经常上热搜，比如“防猝死套餐”等等。&lt;/p&gt;</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xzywisdili.netlify.app/blog/2023-09-16-%E8%90%A5%E5%85%BB%E5%B9%B2%E9%A2%84%E7%9A%84%E4%B8%80%E7%82%B9%E5%B0%8F%E6%80%9D%E8%80%83/feature.jpg" />
-    </item>
-    
-    <item>
-      <title>【把书读薄08】《一流工作者都在用的待办清单》：平平无奇的待办清单101</title>
-      <link>https://xzywisdili.netlify.app/blog/2023-06-29-%E6%8A%8A%E4%B9%A6%E8%AF%BB%E8%96%8408%E4%B8%80%E6%B5%81%E5%B7%A5%E4%BD%9C%E8%80%85%E9%83%BD%E5%9C%A8%E7%94%A8%E7%9A%84%E5%BE%85%E5%8A%9E%E6%B8%85%E5%8D%95%E5%B9%B3%E5%B9%B3%E6%97%A0%E5%A5%87%E7%9A%84%E5%BE%85%E5%8A%9E%E6%B8%85%E5%8D%95101/</link>
-      <pubDate>Thu, 29 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/2023-06-29-%E6%8A%8A%E4%B9%A6%E8%AF%BB%E8%96%8408%E4%B8%80%E6%B5%81%E5%B7%A5%E4%BD%9C%E8%80%85%E9%83%BD%E5%9C%A8%E7%94%A8%E7%9A%84%E5%BE%85%E5%8A%9E%E6%B8%85%E5%8D%95%E5%B9%B3%E5%B9%B3%E6%97%A0%E5%A5%87%E7%9A%84%E5%BE%85%E5%8A%9E%E6%B8%85%E5%8D%95101/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;总结
-    &lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>XZY's Blog</title><link>https://xzywisdili.netlify.app/</link><description>Recent content on XZY's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2025 Xzywisdili</copyright><lastBuildDate>Tue, 11 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/index.xml" rel="self" type="application/rss+xml"/><item><title>把博客整装更新了一下，再次启航</title><link>https://xzywisdili.netlify.app/blog/blog-new-release/</link><pubDate>Tue, 11 Nov 2025 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/blog-new-release/</guid><description>2025年11月11日，把旧版的博客重新迁移了一下，然后更新了主题。准备依然是随缘持续性分享一些内容。</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xzywisdili.netlify.app/blog/blog-new-release/feature.png"/></item><item><title>营养干预的一点小思考</title><link>https://xzywisdili.netlify.app/blog/2023-09-16-%E8%90%A5%E5%85%BB%E5%B9%B2%E9%A2%84%E7%9A%84%E4%B8%80%E7%82%B9%E5%B0%8F%E6%80%9D%E8%80%83/</link><pubDate>Sat, 16 Sep 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/2023-09-16-%E8%90%A5%E5%85%BB%E5%B9%B2%E9%A2%84%E7%9A%84%E4%B8%80%E7%82%B9%E5%B0%8F%E6%80%9D%E8%80%83/</guid><description>&lt;p&gt;最近和朋友聊关于营养干预、补充的一些话题，而且关于营养相关的内容也经常上热搜，比如“防猝死套餐”等等。&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xzywisdili.netlify.app/blog/2023-09-16-%E8%90%A5%E5%85%BB%E5%B9%B2%E9%A2%84%E7%9A%84%E4%B8%80%E7%82%B9%E5%B0%8F%E6%80%9D%E8%80%83/feature.jpg"/></item><item><title>【把书读薄08】《一流工作者都在用的待办清单》：平平无奇的待办清单101</title><link>https://xzywisdili.netlify.app/blog/2023-06-29-%E6%8A%8A%E4%B9%A6%E8%AF%BB%E8%96%8408%E4%B8%80%E6%B5%81%E5%B7%A5%E4%BD%9C%E8%80%85%E9%83%BD%E5%9C%A8%E7%94%A8%E7%9A%84%E5%BE%85%E5%8A%9E%E6%B8%85%E5%8D%95%E5%B9%B3%E5%B9%B3%E6%97%A0%E5%A5%87%E7%9A%84%E5%BE%85%E5%8A%9E%E6%B8%85%E5%8D%95101/</link><pubDate>Thu, 29 Jun 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/2023-06-29-%E6%8A%8A%E4%B9%A6%E8%AF%BB%E8%96%8408%E4%B8%80%E6%B5%81%E5%B7%A5%E4%BD%9C%E8%80%85%E9%83%BD%E5%9C%A8%E7%94%A8%E7%9A%84%E5%BE%85%E5%8A%9E%E6%B8%85%E5%8D%95%E5%B9%B3%E5%B9%B3%E6%97%A0%E5%A5%87%E7%9A%84%E5%BE%85%E5%8A%9E%E6%B8%85%E5%8D%95101/</guid><description>&lt;h2 class="relative group"&gt;总结
+&lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;《一流工作者都在用的待办清单》是一本不到200页的效率类小书，简单讲了使用待办清单的基础原则和推荐的使用方式；&lt;/li&gt;
@@ -51,279 +12,122 @@
 &lt;li&gt;推荐受众：想要使用清单系统，或者已经在用但用不好待办清单的学生和职场人群。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;figure&gt;&lt;img
-    class=&#34;my-0 rounded-md&#34;
-    loading=&#34;lazy&#34;
-    decoding=&#34;async&#34;
-    fetchpriority=&#34;low&#34;
-    alt=&#34;Snipaste_2023-06-29_11-17-47.png&#34;
-    src=&#34;https://s2.loli.net/2023/06/29/PNo5D9cIkZWnG1z.png&#34;
-    &gt;&lt;/figure&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;如何正确地使用待办清单系统？
-    &lt;div id=&#34;如何正确地使用待办清单系统&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e5%a6%82%e4%bd%95%e6%ad%a3%e7%a1%ae%e5%9c%b0%e4%bd%bf%e7%94%a8%e5%be%85%e5%8a%9e%e6%b8%85%e5%8d%95%e7%b3%bb%e7%bb%9f&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+class="my-0 rounded-md"
+loading="lazy"
+decoding="async"
+fetchpriority="low"
+alt="Snipaste_2023-06-29_11-17-47.png"
+src="https://s2.loli.net/2023/06/29/PNo5D9cIkZWnG1z.png"
+&gt;&lt;/figure&gt;
+&lt;h2 class="relative group"&gt;如何正确地使用待办清单系统？
+&lt;div id="如何正确地使用待办清单系统" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a6%82%e4%bd%95%e6%ad%a3%e7%a1%ae%e5%9c%b0%e4%bd%bf%e7%94%a8%e5%be%85%e5%8a%9e%e6%b8%85%e5%8d%95%e7%b3%bb%e7%bb%9f" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
-&lt;p&gt;书中介绍了几个在使用待办清单系统的基础要求：&lt;/p&gt;</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xzywisdili.netlify.app/blog/2023-06-29-%E6%8A%8A%E4%B9%A6%E8%AF%BB%E8%96%8408%E4%B8%80%E6%B5%81%E5%B7%A5%E4%BD%9C%E8%80%85%E9%83%BD%E5%9C%A8%E7%94%A8%E7%9A%84%E5%BE%85%E5%8A%9E%E6%B8%85%E5%8D%95%E5%B9%B3%E5%B9%B3%E6%97%A0%E5%A5%87%E7%9A%84%E5%BE%85%E5%8A%9E%E6%B8%85%E5%8D%95101/feature.jpg" />
-    </item>
-    
-    <item>
-      <title>Telegram 破解限制下载方法（2023年6月亲测可用）</title>
-      <link>https://xzywisdili.netlify.app/blog/2023-06-04-telegram-%E7%A0%B4%E8%A7%A3%E9%99%90%E5%88%B6%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95/</link>
-      <pubDate>Sun, 04 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/2023-06-04-telegram-%E7%A0%B4%E8%A7%A3%E9%99%90%E5%88%B6%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95/</guid>
-      <description>&lt;p&gt;Telegram 在早前推出了「限制下载」功能。只要群主在其群或者频道勾选了限制下载，那么用户是没有办法使用传统方法下载其中的文件的。当然，也有一些民间大神推出了一些方法，比如：&lt;/p&gt;</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xzywisdili.netlify.app/blog/2023-06-04-telegram-%E7%A0%B4%E8%A7%A3%E9%99%90%E5%88%B6%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95/feature.jpg" />
-    </item>
-    
-    <item>
-      <title>使用 R 完成一个小小的时间条可视化</title>
-      <link>https://xzywisdili.netlify.app/blog/2023-05-31-%E4%BD%BF%E7%94%A8-r-%E5%AE%8C%E6%88%90%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%B0%8F%E7%9A%84%E6%97%B6%E9%97%B4%E6%9D%A1%E5%8F%AF%E8%A7%86%E5%8C%96/</link>
-      <pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/2023-05-31-%E4%BD%BF%E7%94%A8-r-%E5%AE%8C%E6%88%90%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%B0%8F%E7%9A%84%E6%97%B6%E9%97%B4%E6%9D%A1%E5%8F%AF%E8%A7%86%E5%8C%96/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;任务背景
-    &lt;div id=&#34;任务背景&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e4%bb%bb%e5%8a%a1%e8%83%8c%e6%99%af&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+&lt;p&gt;书中介绍了几个在使用待办清单系统的基础要求：&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xzywisdili.netlify.app/blog/2023-06-29-%E6%8A%8A%E4%B9%A6%E8%AF%BB%E8%96%8408%E4%B8%80%E6%B5%81%E5%B7%A5%E4%BD%9C%E8%80%85%E9%83%BD%E5%9C%A8%E7%94%A8%E7%9A%84%E5%BE%85%E5%8A%9E%E6%B8%85%E5%8D%95%E5%B9%B3%E5%B9%B3%E6%97%A0%E5%A5%87%E7%9A%84%E5%BE%85%E5%8A%9E%E6%B8%85%E5%8D%95101/feature.jpg"/></item><item><title>Telegram 破解限制下载方法（2023年6月亲测可用）</title><link>https://xzywisdili.netlify.app/blog/2023-06-04-telegram-%E7%A0%B4%E8%A7%A3%E9%99%90%E5%88%B6%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95/</link><pubDate>Sun, 04 Jun 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/2023-06-04-telegram-%E7%A0%B4%E8%A7%A3%E9%99%90%E5%88%B6%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95/</guid><description>&lt;p&gt;Telegram 在早前推出了「限制下载」功能。只要群主在其群或者频道勾选了限制下载，那么用户是没有办法使用传统方法下载其中的文件的。当然，也有一些民间大神推出了一些方法，比如：&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xzywisdili.netlify.app/blog/2023-06-04-telegram-%E7%A0%B4%E8%A7%A3%E9%99%90%E5%88%B6%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95/feature.jpg"/></item><item><title>使用 R 完成一个小小的时间条可视化</title><link>https://xzywisdili.netlify.app/blog/2023-05-31-%E4%BD%BF%E7%94%A8-r-%E5%AE%8C%E6%88%90%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%B0%8F%E7%9A%84%E6%97%B6%E9%97%B4%E6%9D%A1%E5%8F%AF%E8%A7%86%E5%8C%96/</link><pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/2023-05-31-%E4%BD%BF%E7%94%A8-r-%E5%AE%8C%E6%88%90%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%B0%8F%E7%9A%84%E6%97%B6%E9%97%B4%E6%9D%A1%E5%8F%AF%E8%A7%86%E5%8C%96/</guid><description>&lt;h2 class="relative group"&gt;任务背景
+&lt;div id="任务背景" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bb%bb%e5%8a%a1%e8%83%8c%e6%99%af" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
-&lt;p&gt;在制作了一系列视频的时候，我们在每个视频的片头放置了一个渐显和渐隐的元素。但是不同的视频中，这个元素出现和消失的时间是不同的。我们需要统计一下每个视频中该元素出现和消失的时间点，并且发现在所有视频中共同存在的时间段。&lt;/p&gt;</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xzywisdili.netlify.app/blog/2023-05-31-%E4%BD%BF%E7%94%A8-r-%E5%AE%8C%E6%88%90%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%B0%8F%E7%9A%84%E6%97%B6%E9%97%B4%E6%9D%A1%E5%8F%AF%E8%A7%86%E5%8C%96/feature.png" />
-    </item>
-    
-    <item>
-      <title>Prompt 教程基础篇（一）</title>
-      <link>https://xzywisdili.netlify.app/blog/2023-05-15-prompt-%E6%95%99%E7%A8%8B%E5%9F%BA%E7%A1%80%E7%AF%87%E4%B8%80/</link>
-      <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/2023-05-15-prompt-%E6%95%99%E7%A8%8B%E5%9F%BA%E7%A1%80%E7%AF%87%E4%B8%80/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;总结
-    &lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+&lt;p&gt;在制作了一系列视频的时候，我们在每个视频的片头放置了一个渐显和渐隐的元素。但是不同的视频中，这个元素出现和消失的时间是不同的。我们需要统计一下每个视频中该元素出现和消失的时间点，并且发现在所有视频中共同存在的时间段。&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xzywisdili.netlify.app/blog/2023-05-31-%E4%BD%BF%E7%94%A8-r-%E5%AE%8C%E6%88%90%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%B0%8F%E7%9A%84%E6%97%B6%E9%97%B4%E6%9D%A1%E5%8F%AF%E8%A7%86%E5%8C%96/feature.png"/></item><item><title>Prompt 教程基础篇（一）</title><link>https://xzywisdili.netlify.app/blog/2023-05-15-prompt-%E6%95%99%E7%A8%8B%E5%9F%BA%E7%A1%80%E7%AF%87%E4%B8%80/</link><pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/2023-05-15-prompt-%E6%95%99%E7%A8%8B%E5%9F%BA%E7%A1%80%E7%AF%87%E4%B8%80/</guid><description>&lt;h2 class="relative group"&gt;总结
+&lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
-&lt;p&gt;本文介绍了 GPT 使用中编写 prompt 的三个基本用法和原则：清晰准确、提供示例、角色扮演。&lt;/p&gt;</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xzywisdili.netlify.app/blog/2023-05-15-prompt-%E6%95%99%E7%A8%8B%E5%9F%BA%E7%A1%80%E7%AF%87%E4%B8%80/feature.png" />
-    </item>
-    
-    <item>
-      <title>ADSL 数据集的建立：练习示例</title>
-      <link>https://xzywisdili.netlify.app/blog/20230508/2023-05-08-adslexample/</link>
-      <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20230508/2023-05-08-adslexample/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;总结
-    &lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+&lt;p&gt;本文介绍了 GPT 使用中编写 prompt 的三个基本用法和原则：清晰准确、提供示例、角色扮演。&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xzywisdili.netlify.app/blog/2023-05-15-prompt-%E6%95%99%E7%A8%8B%E5%9F%BA%E7%A1%80%E7%AF%87%E4%B8%80/feature.png"/></item><item><title>ADSL 数据集的建立：练习示例</title><link>https://xzywisdili.netlify.app/blog/20230508/2023-05-08-adslexample/</link><pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230508/2023-05-08-adslexample/</guid><description>&lt;h2 class="relative group"&gt;总结
+&lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;通过一则创立 ADSL 数据集的练习示例加深对 ADSL 数据集的理解；&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;ADSL（Subject-Level Analysis Data Set） 是 ADaM 中的一种数据集，特点是每一行是一个单独患者的记录（类似 SDTM 中的 DM 数据集），主要包括的变量有：&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>CDISC 标准（四）——SDTM 数据集详细分类</title>
-      <link>https://xzywisdili.netlify.app/blog/20230502-2/2023-05-02-cdiscnotes4/</link>
-      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20230502-2/2023-05-02-cdiscnotes4/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;总结
-    &lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+&lt;p&gt;ADSL（Subject-Level Analysis Data Set） 是 ADaM 中的一种数据集，特点是每一行是一个单独患者的记录（类似 SDTM 中的 DM 数据集），主要包括的变量有：&lt;/p&gt;</description></item><item><title>CDISC 标准（四）——SDTM 数据集详细分类</title><link>https://xzywisdili.netlify.app/blog/20230502-2/2023-05-02-cdiscnotes4/</link><pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230502-2/2023-05-02-cdiscnotes4/</guid><description>&lt;h2 class="relative group"&gt;总结
+&lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
-&lt;p&gt;本笔记的主要内容：&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>CDISC 标准（五）——ADaM 标准概述</title>
-      <link>https://xzywisdili.netlify.app/blog/20230502/2023-05-02-cdiscnotes5/</link>
-      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20230502/2023-05-02-cdiscnotes5/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;总结
-    &lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+&lt;p&gt;本笔记的主要内容：&lt;/p&gt;</description></item><item><title>CDISC 标准（五）——ADaM 标准概述</title><link>https://xzywisdili.netlify.app/blog/20230502/2023-05-02-cdiscnotes5/</link><pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230502/2023-05-02-cdiscnotes5/</guid><description>&lt;h2 class="relative group"&gt;总结
+&lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;ADaM 标准实为了让临床试验统计分析人员梗快速、标准准确地进行统计分析和制作报表的标准；&lt;/li&gt;
 &lt;li&gt;ADaM 主要分为三类数据集：ADSL，BDS 和 OCCDS；&lt;/li&gt;
 &lt;li&gt;详细梳理了三类数据集的特点以及对应的重点变量。&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;ADaM 数据集是做什么用的？
-    &lt;div id=&#34;adam-数据集是做什么用的&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#adam-%e6%95%b0%e6%8d%ae%e9%9b%86%e6%98%af%e5%81%9a%e4%bb%80%e4%b9%88%e7%94%a8%e7%9a%84&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+&lt;h2 class="relative group"&gt;ADaM 数据集是做什么用的？
+&lt;div id="adam-数据集是做什么用的" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#adam-%e6%95%b0%e6%8d%ae%e9%9b%86%e6%98%af%e5%81%9a%e4%bb%80%e4%b9%88%e7%94%a8%e7%9a%84" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;ADaM，Analysis Data Model&lt;/strong&gt;，顾名思义，为了更加方便、标准且准确地进行统计分析，输出相关统计图表的标准模型。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>SAS 几个重要概念辨析</title>
-      <link>https://xzywisdili.netlify.app/blog/20230501/2023-05-01-sasnotes1/</link>
-      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20230501/2023-05-01-sasnotes1/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;进行变量类型转换，用 input 还是 put
-    &lt;div id=&#34;进行变量类型转换用-input-还是-put&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e8%bf%9b%e8%a1%8c%e5%8f%98%e9%87%8f%e7%b1%bb%e5%9e%8b%e8%bd%ac%e6%8d%a2%e7%94%a8-input-%e8%bf%98%e6%98%af-put&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+&lt;p&gt;&lt;strong&gt;ADaM，Analysis Data Model&lt;/strong&gt;，顾名思义，为了更加方便、标准且准确地进行统计分析，输出相关统计图表的标准模型。&lt;/p&gt;</description></item><item><title>SAS 几个重要概念辨析</title><link>https://xzywisdili.netlify.app/blog/20230501/2023-05-01-sasnotes1/</link><pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230501/2023-05-01-sasnotes1/</guid><description>&lt;h2 class="relative group"&gt;进行变量类型转换，用 input 还是 put
+&lt;div id="进行变量类型转换用-input-还是-put" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%bf%9b%e8%a1%8c%e5%8f%98%e9%87%8f%e7%b1%bb%e5%9e%8b%e8%bd%ac%e6%8d%a2%e7%94%a8-input-%e8%bf%98%e6%98%af-put" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
-&lt;p&gt;在 SAS 编程过程中，往往会遇到需要转换变量的需求。而转换变量，往往需要考虑使用 &lt;code&gt;INPUT&lt;/code&gt; 还是 &lt;code&gt;PUT&lt;/code&gt;。那么这时候就要想想几个变量转换中的几个关键点：&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>CDISC 标准（三）——SDTM 标准初试</title>
-      <link>https://xzywisdili.netlify.app/blog/20230430/2023-04-30-cdiscnote3/</link>
-      <pubDate>Sun, 30 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20230430/2023-04-30-cdiscnote3/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;总结
-    &lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+&lt;p&gt;在 SAS 编程过程中，往往会遇到需要转换变量的需求。而转换变量，往往需要考虑使用 &lt;code&gt;INPUT&lt;/code&gt; 还是 &lt;code&gt;PUT&lt;/code&gt;。那么这时候就要想想几个变量转换中的几个关键点：&lt;/p&gt;</description></item><item><title>CDISC 标准（三）——SDTM 标准初试</title><link>https://xzywisdili.netlify.app/blog/20230430/2023-04-30-cdiscnote3/</link><pubDate>Sun, 30 Apr 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230430/2023-04-30-cdiscnote3/</guid><description>&lt;h2 class="relative group"&gt;总结
+&lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;第一次尝试仔细阅读 SDTM IG 文件中的一个 domain 变量信息；&lt;/li&gt;
 &lt;li&gt;通过 SAS 代码初试按照 SDTM 标准输出标准化的数据集。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;本章要开始使用 SAS，并结合 SDTM 标准，看看如何让目标数据集符合 IG 文件里面的标准。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>CDISC 标准（二）——SDTM 标准概述</title>
-      <link>https://xzywisdili.netlify.app/blog/20230429/2023-04-29-cdiscnote2/</link>
-      <pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20230429/2023-04-29-cdiscnote2/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;总结
-    &lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+&lt;p&gt;本章要开始使用 SAS，并结合 SDTM 标准，看看如何让目标数据集符合 IG 文件里面的标准。&lt;/p&gt;</description></item><item><title>CDISC 标准（二）——SDTM 标准概述</title><link>https://xzywisdili.netlify.app/blog/20230429/2023-04-29-cdiscnote2/</link><pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230429/2023-04-29-cdiscnote2/</guid><description>&lt;h2 class="relative group"&gt;总结
+&lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;介绍了 SDTM 和 IG 文件的基本概念；&lt;/li&gt;
 &lt;li&gt;通过阅读 SDTM IG 文件，了解 Domain 和 Variable 的各种信息；&lt;/li&gt;
 &lt;li&gt;重点是 Variable 的五种分类：Identifier, Topic, Qualifier, Timing, Rule。&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;SDTM 的基本概念
-    &lt;div id=&#34;sdtm-的基本概念&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#sdtm-%e7%9a%84%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+&lt;h2 class="relative group"&gt;SDTM 的基本概念
+&lt;div id="sdtm-的基本概念" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#sdtm-%e7%9a%84%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
-&lt;p&gt;SDTM（&lt;strong&gt;Study Data Tabulation Model&lt;/strong&gt;）是一个服务于临床实验的标准数据指标模型，也是被业界和 FDA 广泛采用的标准。它规定了在临床实验中，原始数据收集之后的标准化的呈现方式。可能不同种类的药物，在实验中收集的数据样式是不一样的，&lt;strong&gt;但是经过 SDTM 标准化之后，相同类别的数据一定是相同的。&lt;/strong&gt;&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>博客的新浪图床图片崩了？简单办法教你解决！（2023年4月有效）</title>
-      <link>https://xzywisdili.netlify.app/blog/20230428/2023-04-28-saveyourblogpics/</link>
-      <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20230428/2023-04-28-saveyourblogpics/</guid>
-      <description>&lt;p&gt;今天偶然翻看以前的博客，突然发现图片都显示不出来了，第一时间想到可能是以前用的图床出了问题。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>5 分钟简单生成指定形状的词云</title>
-      <link>https://xzywisdili.netlify.app/blog/20230426/2023-04-26-generatewordcloudin5minutes/</link>
-      <pubDate>Wed, 26 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20230426/2023-04-26-generatewordcloudin5minutes/</guid>
-      <description>&lt;p&gt;群里有人问，想要做一张这样的指定形状的词云：&lt;/p&gt;
+&lt;p&gt;SDTM（&lt;strong&gt;Study Data Tabulation Model&lt;/strong&gt;）是一个服务于临床实验的标准数据指标模型，也是被业界和 FDA 广泛采用的标准。它规定了在临床实验中，原始数据收集之后的标准化的呈现方式。可能不同种类的药物，在实验中收集的数据样式是不一样的，&lt;strong&gt;但是经过 SDTM 标准化之后，相同类别的数据一定是相同的。&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>博客的新浪图床图片崩了？简单办法教你解决！（2023年4月有效）</title><link>https://xzywisdili.netlify.app/blog/20230428/2023-04-28-saveyourblogpics/</link><pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230428/2023-04-28-saveyourblogpics/</guid><description>&lt;p&gt;今天偶然翻看以前的博客，突然发现图片都显示不出来了，第一时间想到可能是以前用的图床出了问题。&lt;/p&gt;</description></item><item><title>5 分钟简单生成指定形状的词云</title><link>https://xzywisdili.netlify.app/blog/20230426/2023-04-26-generatewordcloudin5minutes/</link><pubDate>Wed, 26 Apr 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230426/2023-04-26-generatewordcloudin5minutes/</guid><description>&lt;p&gt;群里有人问，想要做一张这样的指定形状的词云：&lt;/p&gt;
 &lt;figure&gt;&lt;img
-    class=&#34;my-0 rounded-md&#34;
-    loading=&#34;lazy&#34;
-    decoding=&#34;async&#34;
-    fetchpriority=&#34;low&#34;
-    alt=&#34;photo_2023-04-26_10-26-15.jpg&#34;
-    src=&#34;https://s2.loli.net/2023/04/26/6Sl3DX27eC4ZxiM.jpg&#34;
-    &gt;&lt;/figure&gt;
-&lt;p&gt;我试了一下，其实很简单，基本上 5 分钟就搞定。这里的简单思路就是：&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>数据挖掘的奇效——爬到网站没有显示的数据</title>
-      <link>https://xzywisdili.netlify.app/blog/20230423/2023-04-23-userjsonfindextradata/</link>
-      <pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20230423/2023-04-23-userjsonfindextradata/</guid>
-      <description>&lt;p&gt;有没有想过，有些网站的页面上展示的数据只有一部分的时候，通过稍微一点挖掘就能发现额外的数据，收获更多信息。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>【学习笔记】实用统计学复习手册01——探索性数据分析</title>
-      <link>https://xzywisdili.netlify.app/blog/20230323/2023-03-23-dataanalysisnote01/</link>
-      <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20230323/2023-03-23-dataanalysisnote01/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;总结
-    &lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+class="my-0 rounded-md"
+loading="lazy"
+decoding="async"
+fetchpriority="low"
+alt="photo_2023-04-26_10-26-15.jpg"
+src="https://s2.loli.net/2023/04/26/6Sl3DX27eC4ZxiM.jpg"
+&gt;&lt;/figure&gt;
+&lt;p&gt;我试了一下，其实很简单，基本上 5 分钟就搞定。这里的简单思路就是：&lt;/p&gt;</description></item><item><title>数据挖掘的奇效——爬到网站没有显示的数据</title><link>https://xzywisdili.netlify.app/blog/20230423/2023-04-23-userjsonfindextradata/</link><pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230423/2023-04-23-userjsonfindextradata/</guid><description>&lt;p&gt;有没有想过，有些网站的页面上展示的数据只有一部分的时候，通过稍微一点挖掘就能发现额外的数据，收获更多信息。&lt;/p&gt;</description></item><item><title>【学习笔记】实用统计学复习手册01——探索性数据分析</title><link>https://xzywisdili.netlify.app/blog/20230323/2023-03-23-dataanalysisnote01/</link><pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230323/2023-03-23-dataanalysisnote01/</guid><description>&lt;h2 class="relative group"&gt;总结
+&lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;介绍了数据的分类（数值型、分类型）等；&lt;/li&gt;
@@ -333,43 +137,19 @@
 &lt;li&gt;多变量的可视化：散点图、热力图、列联表、分类箱线图等；&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;探索性数据分析&lt;/strong&gt;（Exploratory Data Analysis，EDA）是数据科学项目的第一步。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>【学习笔记】保序回归——适用于单调递增数据的统计回归方法</title>
-      <link>https://xzywisdili.netlify.app/blog/20230307/2023-03-07-isotonicregression/</link>
-      <pubDate>Tue, 07 Mar 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20230307/2023-03-07-isotonicregression/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;什么是保序回归？
-    &lt;div id=&#34;什么是保序回归&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e4%bb%80%e4%b9%88%e6%98%af%e4%bf%9d%e5%ba%8f%e5%9b%9e%e5%bd%92&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+&lt;p&gt;&lt;strong&gt;探索性数据分析&lt;/strong&gt;（Exploratory Data Analysis，EDA）是数据科学项目的第一步。&lt;/p&gt;</description></item><item><title>【学习笔记】保序回归——适用于单调递增数据的统计回归方法</title><link>https://xzywisdili.netlify.app/blog/20230307/2023-03-07-isotonicregression/</link><pubDate>Tue, 07 Mar 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230307/2023-03-07-isotonicregression/</guid><description>&lt;h2 class="relative group"&gt;什么是保序回归？
+&lt;div id="什么是保序回归" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bb%80%e4%b9%88%e6%98%af%e4%bf%9d%e5%ba%8f%e5%9b%9e%e5%bd%92" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
-&lt;p&gt;保序回归（Isotonic Regression）是一种适用于&lt;strong&gt;单调函数&lt;/strong&gt;非参数统计回归方法，即在一个序列中，Xn ≥ Xn-1。通过字面理解「Isotonic Regression」：&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>【把书读薄07】《所罗门的密码》：试图分析人工智能的信任问题却深度不足</title>
-      <link>https://xzywisdili.netlify.app/blog/20230303/2023-03-03-bookreview07/</link>
-      <pubDate>Fri, 03 Mar 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20230303/2023-03-03-bookreview07/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;总结
-    &lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+&lt;p&gt;保序回归（Isotonic Regression）是一种适用于&lt;strong&gt;单调函数&lt;/strong&gt;非参数统计回归方法，即在一个序列中，Xn ≥ Xn-1。通过字面理解「Isotonic Regression」：&lt;/p&gt;</description></item><item><title>【把书读薄07】《所罗门的密码》：试图分析人工智能的信任问题却深度不足</title><link>https://xzywisdili.netlify.app/blog/20230303/2023-03-03-bookreview07/</link><pubDate>Fri, 03 Mar 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230303/2023-03-03-bookreview07/</guid><description>&lt;h2 class="relative group"&gt;总结
+&lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;《所罗门的密码》总结了人工智能在方方面面改变整个社会的同时，可能出现的问题和挑战，并倡议出版一份《全球人工智能经济大宪章》。&lt;/li&gt;
@@ -379,152 +159,84 @@
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;figure&gt;&lt;img
-    class=&#34;my-0 rounded-md&#34;
-    loading=&#34;lazy&#34;
-    decoding=&#34;async&#34;
-    fetchpriority=&#34;low&#34;
-    alt=&#34;Snipaste_2023-03-02_14-52-44.png&#34;
-    src=&#34;https://s2.loli.net/2023/03/02/sQ8BGHIC9bNF1iR.png&#34;
-    &gt;&lt;/figure&gt;
+class="my-0 rounded-md"
+loading="lazy"
+decoding="async"
+fetchpriority="low"
+alt="Snipaste_2023-03-02_14-52-44.png"
+src="https://s2.loli.net/2023/03/02/sQ8BGHIC9bNF1iR.png"
+&gt;&lt;/figure&gt;
 &lt;p&gt;作者借用了所罗门的故事，想要寓言人类社会不善用人工智能的未来。[所罗门王](&lt;a
-  href=&#34;https://zh.wikipedia.org/zh-tw/%E6%89%80%E7%BE%85%E9%96%80&#34;
-    target=&#34;_blank&#34;
-  &gt;所羅門 - 維基百科，自由的百科全書 (wikipedia.org)&lt;/a&gt;)是《圣经》中的一个人物，代表着智慧。他最出名的一个故事就是&lt;a
-  href=&#34;https://zh.wikipedia.org/zh-tw/%E6%89%80%E7%BD%97%E9%97%A8%E7%9A%84%E5%AE%A1%E5%88%A4&#34;
-    target=&#34;_blank&#34;
-  &gt;“所罗门的审判”&lt;/a&gt;。 但拥有智慧的他误入歧途，让他建立和统治的王国深陷衰落和动荡。天才的智慧得到了浪费，并为此付出了沉痛的代价。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>【把书读薄06】Excel 学习真的不适合借助书本了</title>
-      <link>https://xzywisdili.netlify.app/blog/20230130/2023-01-30-bookreview06/</link>
-      <pubDate>Mon, 30 Jan 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20230130/2023-01-30-bookreview06/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;总结
-    &lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+href="https://zh.wikipedia.org/zh-tw/%E6%89%80%E7%BE%85%E9%96%80"
+target="_blank"
+&gt;所羅門 - 維基百科，自由的百科全書 (wikipedia.org)&lt;/a&gt;)是《圣经》中的一个人物，代表着智慧。他最出名的一个故事就是&lt;a
+href="https://zh.wikipedia.org/zh-tw/%E6%89%80%E7%BD%97%E9%97%A8%E7%9A%84%E5%AE%A1%E5%88%A4"
+target="_blank"
+&gt;“所罗门的审判”&lt;/a&gt;。 但拥有智慧的他误入歧途，让他建立和统治的王国深陷衰落和动荡。天才的智慧得到了浪费，并为此付出了沉痛的代价。&lt;/p&gt;</description></item><item><title>【把书读薄06】Excel 学习真的不适合借助书本了</title><link>https://xzywisdili.netlify.app/blog/20230130/2023-01-30-bookreview06/</link><pubDate>Mon, 30 Jan 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230130/2023-01-30-bookreview06/</guid><description>&lt;h2 class="relative group"&gt;总结
+&lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a
-  href=&#34;https://book.douban.com/subject/35646192/&#34;
-    target=&#34;_blank&#34;
-  &gt;《跟李锐学Excel数据分析》&lt;/a&gt; 名为「数据分析」，内容实则是 Excel 软件使用技巧，这点需要读者注意；&lt;/li&gt;
+href="https://book.douban.com/subject/35646192/"
+target="_blank"
+&gt;《跟李锐学Excel数据分析》&lt;/a&gt; 名为「数据分析」，内容实则是 Excel 软件使用技巧，这点需要读者注意；&lt;/li&gt;
 &lt;li&gt;虽然页数看起来较多，但是大量篇幅均为各种实操步骤截图，伴随每一个步骤讲解，友好度不如视频；&lt;/li&gt;
 &lt;li&gt;评分：2.0/5.0，更建议想要学习 Excel 工具的读者去寻找视频教程；想学习数据分析相关内容的读者就更不用看了。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;最近读完了《跟李锐学Excel数据分析》。可惜的是，书名有点误导性质，全书和「数据分析」关系不大，更多是介绍 Excel 的使用方式和进阶技巧。但多多少少还是跟着看完了全书，并且把对自己有点用的部分记录了下来，权当给自己复习巩固。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>（2022年11月过）SAS Advance 考试最新完全攻略！</title>
-      <link>https://xzywisdili.netlify.app/blog/20221108/2022-11-08-sasadvance/</link>
-      <pubDate>Tue, 08 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20221108/2022-11-08-sasadvance/</guid>
-      <description>&lt;p&gt;今天终于通过了 SAS Advance 的考试。有一些最新的备考和考试过程的经验可以跟大家分享一下。
-这篇攻略我会从两个方面来说，分别是&lt;strong&gt;备考篇&lt;/strong&gt;和&lt;strong&gt;考试篇&lt;/strong&gt;。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>【把书读薄05】向心城市：带你了解现代城市的发展规律</title>
-      <link>https://xzywisdili.netlify.app/blog/20221019/2022-10-19-bookreview05/</link>
-      <pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20221019/2022-10-19-bookreview05/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;总结
-    &lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+&lt;p&gt;最近读完了《跟李锐学Excel数据分析》。可惜的是，书名有点误导性质，全书和「数据分析」关系不大，更多是介绍 Excel 的使用方式和进阶技巧。但多多少少还是跟着看完了全书，并且把对自己有点用的部分记录了下来，权当给自己复习巩固。&lt;/p&gt;</description></item><item><title>（2022年11月过）SAS Advance 考试最新完全攻略！</title><link>https://xzywisdili.netlify.app/blog/20221108/2022-11-08-sasadvance/</link><pubDate>Tue, 08 Nov 2022 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20221108/2022-11-08-sasadvance/</guid><description>&lt;p&gt;今天终于通过了 SAS Advance 的考试。有一些最新的备考和考试过程的经验可以跟大家分享一下。
+这篇攻略我会从两个方面来说，分别是&lt;strong&gt;备考篇&lt;/strong&gt;和&lt;strong&gt;考试篇&lt;/strong&gt;。&lt;/p&gt;</description></item><item><title>【把书读薄05】向心城市：带你了解现代城市的发展规律</title><link>https://xzywisdili.netlify.app/blog/20221019/2022-10-19-bookreview05/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20221019/2022-10-19-bookreview05/</guid><description>&lt;h2 class="relative group"&gt;总结
+&lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a
-  href=&#34;https://book.douban.com/subject/36035486/&#34;
-    target=&#34;_blank&#34;
-  &gt;《向心城市》&lt;/a&gt;中作者通过&lt;strong&gt;大量的数据分析实证&lt;/strong&gt;，介绍了&lt;strong&gt;城市的发展规律、为什么“向心城市”是发展趋势&lt;/strong&gt;，以及城市化带来的各种方面的内容分析；&lt;/li&gt;
+href="https://book.douban.com/subject/36035486/"
+target="_blank"
+&gt;《向心城市》&lt;/a&gt;中作者通过&lt;strong&gt;大量的数据分析实证&lt;/strong&gt;，介绍了&lt;strong&gt;城市的发展规律、为什么“向心城市”是发展趋势&lt;/strong&gt;，以及城市化带来的各种方面的内容分析；&lt;/li&gt;
 &lt;li&gt;评分：3.8/5.0，书中的大量内容更加面向&lt;strong&gt;城市的规划者&lt;/strong&gt;，感兴趣的可以细读；至于想要在书中找到未来人生的抉择，其实可以跳读，内容不算太多。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;figure&gt;&lt;img
-    class=&#34;my-0 rounded-md&#34;
-    loading=&#34;lazy&#34;
-    decoding=&#34;async&#34;
-    fetchpriority=&#34;low&#34;
-    alt=&#34;Snipaste_2022-10-18_15-57-20.png&#34;
-    src=&#34;https://s2.loli.net/2022/10/18/YB4RQFPO9XidyZr.png&#34;
-    &gt;&lt;/figure&gt;
+class="my-0 rounded-md"
+loading="lazy"
+decoding="async"
+fetchpriority="low"
+alt="Snipaste_2022-10-18_15-57-20.png"
+src="https://s2.loli.net/2022/10/18/YB4RQFPO9XidyZr.png"
+&gt;&lt;/figure&gt;
 &lt;p&gt;城市的本质是什么？城市的未来会怎么发展？&lt;a
-  href=&#34;https://book.douban.com/subject/36035486/&#34;
-    target=&#34;_blank&#34;
-  &gt;《向心城市》&lt;/a&gt;中通过对大城市的各种数据的实证分析，为我们揭示了城市的发展规律。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>动态页面的爬虫示例一则：抓取微博粉丝列表</title>
-      <link>https://xzywisdili.netlify.app/blog/20221005/2022-10-05-dynamichtmlspider/</link>
-      <pubDate>Wed, 05 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20221005/2022-10-05-dynamichtmlspider/</guid>
-      <description>&lt;p&gt;在碰到一些网页，想通过爬虫抓取页面信息的时候，会发现网页采用了一些动态 HTML 的相关技术来展示信息。这样直接使用 requests 是无法直接获取想要的 HTML 元素内容的。比如我们查看微博网页端的粉丝列表：&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>【把书读薄04】一日两餐：找回身体代谢灵活性的新饮食理念</title>
-      <link>https://xzywisdili.netlify.app/blog/20220926/2022-09-26-bookreview04/</link>
-      <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20220926/2022-09-26-bookreview04/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;总结
-    &lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+href="https://book.douban.com/subject/36035486/"
+target="_blank"
+&gt;《向心城市》&lt;/a&gt;中通过对大城市的各种数据的实证分析，为我们揭示了城市的发展规律。&lt;/p&gt;</description></item><item><title>动态页面的爬虫示例一则：抓取微博粉丝列表</title><link>https://xzywisdili.netlify.app/blog/20221005/2022-10-05-dynamichtmlspider/</link><pubDate>Wed, 05 Oct 2022 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20221005/2022-10-05-dynamichtmlspider/</guid><description>&lt;p&gt;在碰到一些网页，想通过爬虫抓取页面信息的时候，会发现网页采用了一些动态 HTML 的相关技术来展示信息。这样直接使用 requests 是无法直接获取想要的 HTML 元素内容的。比如我们查看微博网页端的粉丝列表：&lt;/p&gt;</description></item><item><title>【把书读薄04】一日两餐：找回身体代谢灵活性的新饮食理念</title><link>https://xzywisdili.netlify.app/blog/20220926/2022-09-26-bookreview04/</link><pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20220926/2022-09-26-bookreview04/</guid><description>&lt;h2 class="relative group"&gt;总结
+&lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a
-  href=&#34;https://book.douban.com/subject/36062667/&#34;
-    target=&#34;_blank&#34;
-  &gt;《一日两餐》&lt;/a&gt;想让我们通过&lt;strong&gt;限制碳水摄入&lt;/strong&gt;和&lt;strong&gt;间歇性禁食&lt;/strong&gt;这两个重要手段来摆脱未来的&lt;strong&gt;胰岛素抵抗&lt;/strong&gt;；&lt;/li&gt;
+href="https://book.douban.com/subject/36062667/"
+target="_blank"
+&gt;《一日两餐》&lt;/a&gt;想让我们通过&lt;strong&gt;限制碳水摄入&lt;/strong&gt;和&lt;strong&gt;间歇性禁食&lt;/strong&gt;这两个重要手段来摆脱未来的&lt;strong&gt;胰岛素抵抗&lt;/strong&gt;；&lt;/li&gt;
 &lt;li&gt;书中的大量内容更像是别处观点的拼凑，同时时不时夹杂一些带货着实会令读者不悦；&lt;/li&gt;
 &lt;li&gt;评分：2.5/5.0，仅摘取前半部分的关键阅读即可，后半部分实在不推荐。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;现代饮食理论提出的新观点认为，每日三餐的高碳水化合物的摄入，外加各种精制加工食品才是损害我们健康的元凶。《一日两餐》的作者想要为我们讲解这背后的理论原理「高胰岛素血症」，以及我们为什么需要「限制碳水」和「间歇性禁食」来帮助我们减掉身体多余的脂肪，降低糖尿病、心脏病的发生概率，获得一个健康、快乐和精力充沛的生活。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>【把书读薄03】锻炼：丹尼尔·利伯曼教授对健康迷思的一一解答</title>
-      <link>https://xzywisdili.netlify.app/blog/20220921/2022-09-21-bookreview03/</link>
-      <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20220921/2022-09-21-bookreview03/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;总结
-    &lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+&lt;p&gt;现代饮食理论提出的新观点认为，每日三餐的高碳水化合物的摄入，外加各种精制加工食品才是损害我们健康的元凶。《一日两餐》的作者想要为我们讲解这背后的理论原理「高胰岛素血症」，以及我们为什么需要「限制碳水」和「间歇性禁食」来帮助我们减掉身体多余的脂肪，降低糖尿病、心脏病的发生概率，获得一个健康、快乐和精力充沛的生活。&lt;/p&gt;</description></item><item><title>【把书读薄03】锻炼：丹尼尔·利伯曼教授对健康迷思的一一解答</title><link>https://xzywisdili.netlify.app/blog/20220921/2022-09-21-bookreview03/</link><pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20220921/2022-09-21-bookreview03/</guid><description>&lt;h2 class="relative group"&gt;总结
+&lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;《锻炼》通过&lt;strong&gt;人类进化学&lt;/strong&gt;和&lt;strong&gt;现代医学研究&lt;/strong&gt;两方面，对广泛流传的各种健康迷思进行了验证和解释；&lt;/li&gt;
@@ -532,48 +244,24 @@
 &lt;li&gt;评分：4.8/5.0，非常难得的健康科普阅读体验，部分章节之后会重新翻看。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;社会上流传了许多&lt;strong&gt;健康迷思&lt;/strong&gt;：「久坐会带来健康风险」、「每晚睡眠达到8小时才是最佳状态」、「仅靠步行，无法减肥」等等内容。我们有时候接受了这些理论，仅仅是因为很多人（包括专家）都这么讲，但却从来没有思考这些说法究竟有没有道理、原理是什么。而丹尼尔·利伯曼想用《锻炼》这本书尽量把这些健康迷思讲清楚。身为哈佛大学的进化生物学教授，他带来了进化生物学的视角，从人类的进化讲起，到现代医学研究阐释的原理。看完这本书，我是真的感觉自己打开了眼界，又被里面的原理和验证所说服。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>【医学预测01】Logistic 回归构建变量筛选：先单后多</title>
-      <link>https://xzywisdili.netlify.app/blog/20220907/2022-09-07-rlogistic01/</link>
-      <pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20220907/2022-09-07-rlogistic01/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;总结
-    &lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+&lt;p&gt;社会上流传了许多&lt;strong&gt;健康迷思&lt;/strong&gt;：「久坐会带来健康风险」、「每晚睡眠达到8小时才是最佳状态」、「仅靠步行，无法减肥」等等内容。我们有时候接受了这些理论，仅仅是因为很多人（包括专家）都这么讲，但却从来没有思考这些说法究竟有没有道理、原理是什么。而丹尼尔·利伯曼想用《锻炼》这本书尽量把这些健康迷思讲清楚。身为哈佛大学的进化生物学教授，他带来了进化生物学的视角，从人类的进化讲起，到现代医学研究阐释的原理。看完这本书，我是真的感觉自己打开了眼界，又被里面的原理和验证所说服。&lt;/p&gt;</description></item><item><title>【医学预测01】Logistic 回归构建变量筛选：先单后多</title><link>https://xzywisdili.netlify.app/blog/20220907/2022-09-07-rlogistic01/</link><pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20220907/2022-09-07-rlogistic01/</guid><description>&lt;h2 class="relative group"&gt;总结
+&lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;介绍了 Logistic 回归模型构建过程中的一种变量筛选方式——先单后多；&lt;/li&gt;
 &lt;li&gt;配合对应的代码实例和结果解释，让方法更加清楚，同时便于日后复习查看。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;在 Logistic 回归模型的构建过程中，面对的第一个问题是&lt;strong&gt;变量筛选&lt;/strong&gt;，即筛选哪些作为预测因子进入到最后构建的模型中。其中最为基础的方法是 &lt;strong&gt;「先单后多」&lt;/strong&gt;，顾名思义，即先进行单因素分析，再将单因素分析中具有统计学意义的变量再一起纳入多因素模型中。这样的方法最为简单和实用。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>【把书读薄02】开启高质量沟通的第1分钟</title>
-      <link>https://xzywisdili.netlify.app/blog/20220905/2022-09-05-bookreview02/</link>
-      <pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20220905/2022-09-05-bookreview02/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;总结
-    &lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+&lt;p&gt;在 Logistic 回归模型的构建过程中，面对的第一个问题是&lt;strong&gt;变量筛选&lt;/strong&gt;，即筛选哪些作为预测因子进入到最后构建的模型中。其中最为基础的方法是 &lt;strong&gt;「先单后多」&lt;/strong&gt;，顾名思义，即先进行单因素分析，再将单因素分析中具有统计学意义的变量再一起纳入多因素模型中。这样的方法最为简单和实用。&lt;/p&gt;</description></item><item><title>【把书读薄02】开启高质量沟通的第1分钟</title><link>https://xzywisdili.netlify.app/blog/20220905/2022-09-05-bookreview02/</link><pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20220905/2022-09-05-bookreview02/</guid><description>&lt;h2 class="relative group"&gt;总结
+&lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;《开启高质量沟通的第一分钟》目标是让&lt;strong&gt;职场工作沟通&lt;/strong&gt;的双方可以通过一段简短的&lt;strong&gt;引言&lt;/strong&gt;快速进入良好的沟通节奏；&lt;/li&gt;
@@ -582,356 +270,116 @@
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;figure&gt;&lt;img
-    class=&#34;my-0 rounded-md&#34;
-    loading=&#34;lazy&#34;
-    decoding=&#34;async&#34;
-    fetchpriority=&#34;low&#34;
-    alt=&#34;Snipaste_2022-09-05_09-10-28.png&#34;
-    src=&#34;https://s2.loli.net/2022/09/05/Bz57NFOxl1wum83.png&#34;
-    &gt;&lt;/figure&gt;
-&lt;p&gt;职场工作交流中，最希望的对话方式是简明扼要，沟通双方同时理解背景，并且谈话目的清晰。但是现实中往往出现谈话者讲了很久，聆听者却始终不明白其意图和表达主题的情况。因此，本书提炼了一个在正式交谈前的引言框架，用大约 1 分钟的时间，让职场沟通进入一个良好且高效的沟通节奏。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>【把书读薄01】拼凑真相：指导读者如何面对各种诡计多端的媒体把戏</title>
-      <link>https://xzywisdili.netlify.app/blog/20220829/2022-08-29-bookreview01/</link>
-      <pubDate>Mon, 29 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20220829/2022-08-29-bookreview01/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;总结
-    &lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+class="my-0 rounded-md"
+loading="lazy"
+decoding="async"
+fetchpriority="low"
+alt="Snipaste_2022-09-05_09-10-28.png"
+src="https://s2.loli.net/2022/09/05/Bz57NFOxl1wum83.png"
+&gt;&lt;/figure&gt;
+&lt;p&gt;职场工作交流中，最希望的对话方式是简明扼要，沟通双方同时理解背景，并且谈话目的清晰。但是现实中往往出现谈话者讲了很久，聆听者却始终不明白其意图和表达主题的情况。因此，本书提炼了一个在正式交谈前的引言框架，用大约 1 分钟的时间，让职场沟通进入一个良好且高效的沟通节奏。&lt;/p&gt;</description></item><item><title>【把书读薄01】拼凑真相：指导读者如何面对各种诡计多端的媒体把戏</title><link>https://xzywisdili.netlify.app/blog/20220829/2022-08-29-bookreview01/</link><pubDate>Mon, 29 Aug 2022 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20220829/2022-08-29-bookreview01/</guid><description>&lt;h2 class="relative group"&gt;总结
+&lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a
-  href=&#34;https://book.douban.com/subject/36003588/&#34;
-    target=&#34;_blank&#34;
-  &gt;《拼凑真相》&lt;/a&gt;提出了 10 条所谓的数据法则，在我看来只有 6 条比较实用；&lt;/li&gt;
+href="https://book.douban.com/subject/36003588/"
+target="_blank"
+&gt;《拼凑真相》&lt;/a&gt;提出了 10 条所谓的数据法则，在我看来只有 6 条比较实用；&lt;/li&gt;
 &lt;li&gt;书中使用了很多历史上的事例作为论据，但是对于每种观点的详细论证不够；&lt;/li&gt;
 &lt;li&gt;《拼凑真相》评分：3.0/5.0，不推荐专门抽时间阅读。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;p&gt;在现今的网络时代，各种传统媒体和自媒体生产的观点层出不穷。这其中的大多数都是为了调动读者情绪，进而博取流量的错误观点。低端一点的可能仅仅是利用聊天记录和阴谋论炮制观点。高端一点的就是通过参杂数据和统计分析，看似在理，实际上则通过部分手段营造假象。&lt;a
-  href=&#34;https://book.douban.com/subject/36003588/&#34;
-    target=&#34;_blank&#34;
-  &gt;《拼凑真相》这本书&lt;/a&gt;就是在引导读者，在面对这些纷繁的数据观点时，如何做到距离真相更近一些。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>一天内数据分布的可视化</title>
-      <link>https://xzywisdili.netlify.app/blog/20220728/2022-07-28-timeseriesplot/</link>
-      <pubDate>Thu, 28 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20220728/2022-07-28-timeseriesplot/</guid>
-      <description>&lt;p&gt;我们在很多情况下都会想要可视化一天中的周期时间来探索发现可能存在的某种模式。
+href="https://book.douban.com/subject/36003588/"
+target="_blank"
+&gt;《拼凑真相》这本书&lt;/a&gt;就是在引导读者，在面对这些纷繁的数据观点时，如何做到距离真相更近一些。&lt;/p&gt;</description></item><item><title>一天内数据分布的可视化</title><link>https://xzywisdili.netlify.app/blog/20220728/2022-07-28-timeseriesplot/</link><pubDate>Thu, 28 Jul 2022 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20220728/2022-07-28-timeseriesplot/</guid><description>&lt;p&gt;我们在很多情况下都会想要可视化一天中的周期时间来探索发现可能存在的某种模式。
 比如根据犯罪数据发现在一天中的高发时段，又或者某个app的用户活跃时段的表示，又或者患者在院外一天中的健康作息的可视化，都不可避免会碰到要把数据在周期性的时间上进行展示。
-而目前这样的可视化方向大概有两个：线性展示和环形展示。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>2022 跨年快乐</title>
-      <link>https://xzywisdili.netlify.app/blog/20220104/2022-01-04-happynewyear/</link>
-      <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20220104/2022-01-04-happynewyear/</guid>
-      <description>&lt;p&gt;感谢 CXW 同学的邀请，能一起在跨年那天晚上看一场现场的爵士大乐团演出。超棒的音乐，超棒的食物和环境，送走 2021 的最后一天和新的 2022 年（当然今天才发，一定不是因为我太懒哈哈）。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>读完一本应试方法书的碎碎念</title>
-      <link>https://xzywisdili.netlify.app/blog/20211218/2021-12-18-bookthoughts/</link>
-      <pubDate>Sat, 18 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20211218/2021-12-18-bookthoughts/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;从一本书说起
-    &lt;div id=&#34;从一本书说起&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e4%bb%8e%e4%b8%80%e6%9c%ac%e4%b9%a6%e8%af%b4%e8%b5%b7&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+而目前这样的可视化方向大概有两个：线性展示和环形展示。&lt;/p&gt;</description></item><item><title>2022 跨年快乐</title><link>https://xzywisdili.netlify.app/blog/20220104/2022-01-04-happynewyear/</link><pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20220104/2022-01-04-happynewyear/</guid><description>&lt;p&gt;感谢 CXW 同学的邀请，能一起在跨年那天晚上看一场现场的爵士大乐团演出。超棒的音乐，超棒的食物和环境，送走 2021 的最后一天和新的 2022 年（当然今天才发，一定不是因为我太懒哈哈）。&lt;/p&gt;</description></item><item><title>读完一本应试方法书的碎碎念</title><link>https://xzywisdili.netlify.app/blog/20211218/2021-12-18-bookthoughts/</link><pubDate>Sat, 18 Dec 2021 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20211218/2021-12-18-bookthoughts/</guid><description>&lt;h2 class="relative group"&gt;从一本书说起
+&lt;div id="从一本书说起" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bb%8e%e4%b8%80%e6%9c%ac%e4%b9%a6%e8%af%b4%e8%b5%b7" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
 &lt;p&gt;最近的机缘巧合之下读到一本书，叫&lt;a
-  href=&#34;https://book.douban.com/subject/35297655/&#34;
-    target=&#34;_blank&#34;
-  &gt;《如何成为一个会学习的人》&lt;/a&gt;。
+href="https://book.douban.com/subject/35297655/"
+target="_blank"
+&gt;《如何成为一个会学习的人》&lt;/a&gt;。
 一来每隔一段时间就需要读一读这种方法书打打鸡血，二来也听说日本人写这种书是有一手的。
-但读完还是比较失望的，除了作者一句话一段的叙述方法和他缺少论证某种方法有效的逻辑之外，最大的缺点还是介绍的绝大部分方法基本还是陈词滥调。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>最近在尝试的一种新的减重饮食法</title>
-      <link>https://xzywisdili.netlify.app/blog/20211129/2021-11-29-newdietmethod/</link>
-      <pubDate>Mon, 29 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20211129/2021-11-29-newdietmethod/</guid>
-      <description>&lt;p&gt;最近看到了一种新的减重饮食方法（本身不是很新，只是我最近才看到），感觉容易执行且负担并不是很大，所以打算开始试试。这种饮食方法是间歇性断食，简称「轻断食」。其主要分为两种类型：&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>听完数字疗法产业峰会北京站的一些想法</title>
-      <link>https://xzywisdili.netlify.app/blog/20211018/2021-10-18-thoughtsofdtx/</link>
-      <pubDate>Mon, 18 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20211018/2021-10-18-thoughtsofdtx/</guid>
-      <description>&lt;p&gt;上周五的时候，我去旁听了数字疗法峰会北京站的一些分享。&lt;a
-  href=&#34;http://vcbeat.top/50864&#34;
-    target=&#34;_blank&#34;
-  &gt;数字疗法&lt;/a&gt;是今年兴起的一个新的行业，蕴藏着无数的机会和可能，当然也已经有很多的公司已经投身于此，做出了一些产品。听完了这次的分享，我有以下三点感想：&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>看看一些现代“媒体”是怎么愚弄大众的</title>
-      <link>https://xzywisdili.netlify.app/blog/20210813/2021-08-13-seehowmediafoolus/</link>
-      <pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20210813/2021-08-13-seehowmediafoolus/</guid>
-      <description>&lt;p&gt;见识到了有人如何通过玩文字游戏吸引流量了。&lt;/p&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;从一则新闻说起
-    &lt;div id=&#34;从一则新闻说起&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e4%bb%8e%e4%b8%80%e5%88%99%e6%96%b0%e9%97%bb%e8%af%b4%e8%b5%b7&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+但读完还是比较失望的，除了作者一句话一段的叙述方法和他缺少论证某种方法有效的逻辑之外，最大的缺点还是介绍的绝大部分方法基本还是陈词滥调。&lt;/p&gt;</description></item><item><title>最近在尝试的一种新的减重饮食法</title><link>https://xzywisdili.netlify.app/blog/20211129/2021-11-29-newdietmethod/</link><pubDate>Mon, 29 Nov 2021 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20211129/2021-11-29-newdietmethod/</guid><description>&lt;p&gt;最近看到了一种新的减重饮食方法（本身不是很新，只是我最近才看到），感觉容易执行且负担并不是很大，所以打算开始试试。这种饮食方法是间歇性断食，简称「轻断食」。其主要分为两种类型：&lt;/p&gt;</description></item><item><title>听完数字疗法产业峰会北京站的一些想法</title><link>https://xzywisdili.netlify.app/blog/20211018/2021-10-18-thoughtsofdtx/</link><pubDate>Mon, 18 Oct 2021 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20211018/2021-10-18-thoughtsofdtx/</guid><description>&lt;p&gt;上周五的时候，我去旁听了数字疗法峰会北京站的一些分享。&lt;a
+href="http://vcbeat.top/50864"
+target="_blank"
+&gt;数字疗法&lt;/a&gt;是今年兴起的一个新的行业，蕴藏着无数的机会和可能，当然也已经有很多的公司已经投身于此，做出了一些产品。听完了这次的分享，我有以下三点感想：&lt;/p&gt;</description></item><item><title>看看一些现代“媒体”是怎么愚弄大众的</title><link>https://xzywisdili.netlify.app/blog/20210813/2021-08-13-seehowmediafoolus/</link><pubDate>Fri, 13 Aug 2021 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20210813/2021-08-13-seehowmediafoolus/</guid><description>&lt;p&gt;见识到了有人如何通过玩文字游戏吸引流量了。&lt;/p&gt;
+&lt;h2 class="relative group"&gt;从一则新闻说起
+&lt;div id="从一则新闻说起" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bb%8e%e4%b8%80%e5%88%99%e6%96%b0%e9%97%bb%e8%af%b4%e8%b5%b7" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
-&lt;p&gt;昨天半夜在微博上看到了这么一则新闻：巴黎奥运会将削减一些项目，帆船、竞走、棒球、空手道和拳击都将面临删减和调整，同样也包括4个举重项目。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>在 2021 年寄一封平信</title>
-      <link>https://xzywisdili.netlify.app/blog/20210705/2021-07-05-writesendletter/</link>
-      <pubDate>Mon, 05 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20210705/2021-07-05-writesendletter/</guid>
-      <description>&lt;p&gt;昨天因为一些原因，也体验了一把在 2021 年寄一封平信的整套流程。
+&lt;p&gt;昨天半夜在微博上看到了这么一则新闻：巴黎奥运会将削减一些项目，帆船、竞走、棒球、空手道和拳击都将面临删减和调整，同样也包括4个举重项目。&lt;/p&gt;</description></item><item><title>在 2021 年寄一封平信</title><link>https://xzywisdili.netlify.app/blog/20210705/2021-07-05-writesendletter/</link><pubDate>Mon, 05 Jul 2021 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20210705/2021-07-05-writesendletter/</guid><description>&lt;p&gt;昨天因为一些原因，也体验了一把在 2021 年寄一封平信的整套流程。
 正好值此毕业之际，给家里的爸爸妈妈写一封感恩家书。
 先找了一张信纸然后按照打好的草稿誊抄了一遍（写字练字养成正确的书写姿势实在是太重要了，
-不然就会像我一样写三四行，手便会非常酸痛）。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>我个人不会再买的东西</title>
-      <link>https://xzywisdili.netlify.app/blog/20210702/2021-07-02-thingsneverbuy/</link>
-      <pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20210702/2021-07-02-thingsneverbuy/</guid>
-      <description>&lt;p&gt;我平时算是&lt;a
-  href=&#34;https://sspai.com&#34;
-    target=&#34;_blank&#34;
-  &gt;少数派&lt;/a&gt;的忠实读者，但仍觉得
+不然就会像我一样写三四行，手便会非常酸痛）。&lt;/p&gt;</description></item><item><title>我个人不会再买的东西</title><link>https://xzywisdili.netlify.app/blog/20210702/2021-07-02-thingsneverbuy/</link><pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20210702/2021-07-02-thingsneverbuy/</guid><description>&lt;p&gt;我平时算是&lt;a
+href="https://sspai.com"
+target="_blank"
+&gt;少数派&lt;/a&gt;的忠实读者，但仍觉得
 少数派的&lt;a
-  href=&#34;https://sspai.com/post/67510&#34;
-    target=&#34;_blank&#34;
-  &gt;编辑好物推荐栏目&lt;/a&gt;有过度倡导消费主义的嫌疑。
+href="https://sspai.com/post/67510"
+target="_blank"
+&gt;编辑好物推荐栏目&lt;/a&gt;有过度倡导消费主义的嫌疑。
 当然，这绝不是对少数派本身立场的任何批评，因为&lt;a
-  href=&#34;https://www.douban.com/group/644670/&#34;
-    target=&#34;_blank&#34;
-  &gt;豆瓣消费降级小组&lt;/a&gt;和
+href="https://www.douban.com/group/644670/"
+target="_blank"
+&gt;豆瓣消费降级小组&lt;/a&gt;和
 &lt;a
-  href=&#34;https://www.douban.com/group/708794/&#34;
-    target=&#34;_blank&#34;
-  &gt;豆瓣不要买小组&lt;/a&gt;也都是从该网站接触到并受益良多。
+href="https://www.douban.com/group/708794/"
+target="_blank"
+&gt;豆瓣不要买小组&lt;/a&gt;也都是从该网站接触到并受益良多。
 抵抗消费主义，只购买自己需要的东西是我个人坚信并践行的生活方式。
-接下来也简单列出我个人不要购买的一些物件，顺便也使用一下久违的 Markdown 表格。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>最近要开始啃书了</title>
-      <link>https://xzywisdili.netlify.app/blog/20210628/2021-06-28-starttoreadbooks/</link>
-      <pubDate>Mon, 28 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20210628/2021-06-28-starttoreadbooks/</guid>
-      <description>&lt;p&gt;最近开始关心 AI 技术在医疗领域的一些应用。
+接下来也简单列出我个人不要购买的一些物件，顺便也使用一下久违的 Markdown 表格。&lt;/p&gt;</description></item><item><title>最近要开始啃书了</title><link>https://xzywisdili.netlify.app/blog/20210628/2021-06-28-starttoreadbooks/</link><pubDate>Mon, 28 Jun 2021 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20210628/2021-06-28-starttoreadbooks/</guid><description>&lt;p&gt;最近开始关心 AI 技术在医疗领域的一些应用。
 随着老龄化社会的进程，节省医疗系统的冗余成本，做到更好的健康管理势必更为重要。
-而从现有积累的和未来获得的人群大数据势必也将把医疗探索和相关制药研发带入到一个新的时代。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>如何从 NASA 下载气象数据</title>
-      <link>https://xzywisdili.netlify.app/blog/20210616/2021-06-16-downloadclimate/</link>
-      <pubDate>Wed, 16 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20210616/2021-06-16-downloadclimate/</guid>
-      <description>&lt;p&gt;如果大家有从 NASA 获取气象数据的需求的话，只要在某度搜索，一定会看到下面的这些链接：&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>从电子病历提取数据</title>
-      <link>https://xzywisdili.netlify.app/blog/20210615-2/2021-06-15-extractnumbers/</link>
-      <pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20210615-2/2021-06-15-extractnumbers/</guid>
-      <description>&lt;p&gt;电子病历的普及度已经很高。但如何从电子病历中提取信息还是比较令人头疼。
+而从现有积累的和未来获得的人群大数据势必也将把医疗探索和相关制药研发带入到一个新的时代。&lt;/p&gt;</description></item><item><title>如何从 NASA 下载气象数据</title><link>https://xzywisdili.netlify.app/blog/20210616/2021-06-16-downloadclimate/</link><pubDate>Wed, 16 Jun 2021 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20210616/2021-06-16-downloadclimate/</guid><description>&lt;p&gt;如果大家有从 NASA 获取气象数据的需求的话，只要在某度搜索，一定会看到下面的这些链接：&lt;/p&gt;</description></item><item><title>从电子病历提取数据</title><link>https://xzywisdili.netlify.app/blog/20210615-2/2021-06-15-extractnumbers/</link><pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20210615-2/2021-06-15-extractnumbers/</guid><description>&lt;p&gt;电子病历的普及度已经很高。但如何从电子病历中提取信息还是比较令人头疼。
 首先病历内容众多，从主诉到体格检查，从家族史到用药史，一份完整的病历涵盖的信息众多。
-其次，病历内容是由医生按照段落填写的，很难在数以万计的病历中找到通用的标准进行提取。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>新发现的 R 里关于 data.table 的一些神奇用法</title>
-      <link>https://xzywisdili.netlify.app/blog/20210615/2021-06-15-newrtips/</link>
-      <pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20210615/2021-06-15-newrtips/</guid>
-      <description>&lt;p&gt;R 语言中的 &lt;code&gt;data.table&lt;/code&gt; 包可以理解为 &lt;code&gt;data.frame&lt;/code&gt; 的高级版本，它比较适合适合用来处理大型数据集。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>毕业流程之不吐不快</title>
-      <link>https://xzywisdili.netlify.app/blog/20210609-2/2021-06-09-graduation/</link>
-      <pubDate>Wed, 09 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20210609-2/2021-06-09-graduation/</guid>
-      <description>&lt;p&gt;终于在今年经历了毕业季，虽然坎坎坷坷，但也还算顺利，即将要从北京大学医学部毕业了。
+其次，病历内容是由医生按照段落填写的，很难在数以万计的病历中找到通用的标准进行提取。&lt;/p&gt;</description></item><item><title>新发现的 R 里关于 data.table 的一些神奇用法</title><link>https://xzywisdili.netlify.app/blog/20210615/2021-06-15-newrtips/</link><pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20210615/2021-06-15-newrtips/</guid><description>&lt;p&gt;R 语言中的 &lt;code&gt;data.table&lt;/code&gt; 包可以理解为 &lt;code&gt;data.frame&lt;/code&gt; 的高级版本，它比较适合适合用来处理大型数据集。&lt;/p&gt;</description></item><item><title>毕业流程之不吐不快</title><link>https://xzywisdili.netlify.app/blog/20210609-2/2021-06-09-graduation/</link><pubDate>Wed, 09 Jun 2021 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20210609-2/2021-06-09-graduation/</guid><description>&lt;p&gt;终于在今年经历了毕业季，虽然坎坎坷坷，但也还算顺利，即将要从北京大学医学部毕业了。
 然而在这之间走的各种流程和细节着实让人无比心累，实在是不吐不快。
-明明有很大的提升空间，却还是抱残守缺，实在是与北大医学部的名校形象不太相符。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>对数据进行填补</title>
-      <link>https://xzywisdili.netlify.app/blog/20210609/2021-06-09-mergeandkeepdata/</link>
-      <pubDate>Wed, 09 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20210609/2021-06-09-mergeandkeepdata/</guid>
-      <description>&lt;p&gt;今天整理数据的时候，需要使用数据集 2 对数据集 1 里缺失的部分进行填补，而两者重复的部分，优先保留数据集 1 里的。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>推荐且收藏的好网站</title>
-      <link>https://xzywisdili.netlify.app/blog/20201228/2020-12-28-recommendwebsite/</link>
-      <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20201228/2020-12-28-recommendwebsite/</guid>
-      <description>&lt;p&gt;这篇博客计划持续更新。这里的网站或者是实用的工具，或者是收藏的实用知识，而且每一个都是我自己用过或者看过的。
-其中不少还是我高频使用的，甚至域名也已经背下来了。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>赵粤的《时尚COSMO》杂志翻译</title>
-      <link>https://xzywisdili.netlify.app/blog/20200930/2020-09-30-zhaoyuecosmo/</link>
-      <pubDate>Wed, 30 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20200930/2020-09-30-zhaoyuecosmo/</guid>
-      <description>&lt;figure&gt;&lt;img
-    class=&#34;my-0 rounded-md&#34;
-    loading=&#34;lazy&#34;
-    decoding=&#34;async&#34;
-    fetchpriority=&#34;low&#34;
-    alt=&#34;007S8ZIlgy1gj8rny80naj31120kub29.jpg&#34;
-    src=&#34;https://s2.loli.net/2023/04/28/VbD1tQqWOnRmlxk.webp&#34;
-    &gt;&lt;/figure&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;写在前面 A little words before
-    &lt;div id=&#34;写在前面-a-little-words-before&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e5%86%99%e5%9c%a8%e5%89%8d%e9%9d%a2-a-little-words-before&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+明明有很大的提升空间，却还是抱残守缺，实在是与北大医学部的名校形象不太相符。&lt;/p&gt;</description></item><item><title>对数据进行填补</title><link>https://xzywisdili.netlify.app/blog/20210609/2021-06-09-mergeandkeepdata/</link><pubDate>Wed, 09 Jun 2021 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20210609/2021-06-09-mergeandkeepdata/</guid><description>&lt;p&gt;今天整理数据的时候，需要使用数据集 2 对数据集 1 里缺失的部分进行填补，而两者重复的部分，优先保留数据集 1 里的。&lt;/p&gt;</description></item><item><title>推荐且收藏的好网站</title><link>https://xzywisdili.netlify.app/blog/20201228/2020-12-28-recommendwebsite/</link><pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20201228/2020-12-28-recommendwebsite/</guid><description>&lt;p&gt;这篇博客计划持续更新。这里的网站或者是实用的工具，或者是收藏的实用知识，而且每一个都是我自己用过或者看过的。
+其中不少还是我高频使用的，甚至域名也已经背下来了。&lt;/p&gt;</description></item><item><title>赵粤的《时尚COSMO》杂志翻译</title><link>https://xzywisdili.netlify.app/blog/20200930/2020-09-30-zhaoyuecosmo/</link><pubDate>Wed, 30 Sep 2020 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20200930/2020-09-30-zhaoyuecosmo/</guid><description>&lt;figure&gt;&lt;img
+class="my-0 rounded-md"
+loading="lazy"
+decoding="async"
+fetchpriority="low"
+alt="007S8ZIlgy1gj8rny80naj31120kub29.jpg"
+src="https://s2.loli.net/2023/04/28/VbD1tQqWOnRmlxk.webp"
+&gt;&lt;/figure&gt;
+&lt;h2 class="relative group"&gt;写在前面 A little words before
+&lt;div id="写在前面-a-little-words-before" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%86%99%e5%9c%a8%e5%89%8d%e9%9d%a2-a-little-words-before" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
 &lt;p&gt;我的英语水平相当有限，但我想把赵粤接受《时尚COSMO》的采访内容分享给可能看不懂中文的海外粉丝朋友。
 里面有一些专用的中文词汇，如果你不明白的话，可以点击我附上的链接查看这些词语的具体含义。
-如果您发现了我翻译中的问题，或者您能提供更高质量的翻译，我非常感谢。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>R 语言计算空间距离</title>
-      <link>https://xzywisdili.netlify.app/blog/20200716/2020-07-16-rdistance/</link>
-      <pubDate>Thu, 16 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20200716/2020-07-16-rdistance/</guid>
-      <description>&lt;p&gt;最近在研究计算真实空间两个点的距离，
+如果您发现了我翻译中的问题，或者您能提供更高质量的翻译，我非常感谢。&lt;/p&gt;</description></item><item><title>R 语言计算空间距离</title><link>https://xzywisdili.netlify.app/blog/20200716/2020-07-16-rdistance/</link><pubDate>Thu, 16 Jul 2020 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20200716/2020-07-16-rdistance/</guid><description>&lt;p&gt;最近在研究计算真实空间两个点的距离，
 比如已知 A, B 两点的经纬度坐标，计算两点之间的距离。
-在 R 语言中，已经有很多大神提供的空间地理数据包，经过搜索发现最备受推崇的是 &lt;code&gt;geosphere&lt;/code&gt; 包。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>聊聊《隐秘的角落》</title>
-      <link>https://xzywisdili.netlify.app/blog/20200620/2020-06-20-thebadkids/</link>
-      <pubDate>Sat, 20 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20200620/2020-06-20-thebadkids/</guid>
-      <description>&lt;p&gt;最近热播，也引起热议的电视剧无疑是秦昊主演的&lt;a
-  href=&#34;https://movie.douban.com/subject/33404425/&#34;
-    target=&#34;_blank&#34;
-  &gt;隐秘的角落&lt;/a&gt;。而该剧的原著小说——紫金陈的&lt;a
-  href=&#34;https://book.douban.com/subject/25955474/&#34;
-    target=&#34;_blank&#34;
-  &gt;《坏小孩》&lt;/a&gt;也和剧一起霸占了近期的豆瓣书影音热度榜前二。我作为一个紫金陈的读者，曾经对其改编剧作《无证之罪》抱以极高的评价。于是也第一时间观看了该剧，又在今天读完了他的原著小说，心情也从原先的惊喜和期待变成了失望。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>分享几篇统计相关好文</title>
-      <link>https://xzywisdili.netlify.app/blog/20200428/2020-04-28-papershare/</link>
-      <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20200428/2020-04-28-papershare/</guid>
-      <description>&lt;p&gt;最近在研究分段样条回归和线性混合效应模型，看到了几篇好文可以分享。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>一个最推荐的预防流行病的方法</title>
-      <link>https://xzywisdili.netlify.app/blog/20200229/2020-02-29-commonwaytoprevent/</link>
-      <pubDate>Fri, 28 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20200229/2020-02-29-commonwaytoprevent/</guid>
-      <description>&lt;p&gt;这一次新冠肺炎，大众们也被迫接受了各种流行病学的知识教育。
+在 R 语言中，已经有很多大神提供的空间地理数据包，经过搜索发现最备受推崇的是 &lt;code&gt;geosphere&lt;/code&gt; 包。&lt;/p&gt;</description></item><item><title>聊聊《隐秘的角落》</title><link>https://xzywisdili.netlify.app/blog/20200620/2020-06-20-thebadkids/</link><pubDate>Sat, 20 Jun 2020 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20200620/2020-06-20-thebadkids/</guid><description>&lt;p&gt;最近热播，也引起热议的电视剧无疑是秦昊主演的&lt;a
+href="https://movie.douban.com/subject/33404425/"
+target="_blank"
+&gt;隐秘的角落&lt;/a&gt;。而该剧的原著小说——紫金陈的&lt;a
+href="https://book.douban.com/subject/25955474/"
+target="_blank"
+&gt;《坏小孩》&lt;/a&gt;也和剧一起霸占了近期的豆瓣书影音热度榜前二。我作为一个紫金陈的读者，曾经对其改编剧作《无证之罪》抱以极高的评价。于是也第一时间观看了该剧，又在今天读完了他的原著小说，心情也从原先的惊喜和期待变成了失望。&lt;/p&gt;</description></item><item><title>分享几篇统计相关好文</title><link>https://xzywisdili.netlify.app/blog/20200428/2020-04-28-papershare/</link><pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20200428/2020-04-28-papershare/</guid><description>&lt;p&gt;最近在研究分段样条回归和线性混合效应模型，看到了几篇好文可以分享。&lt;/p&gt;</description></item><item><title>一个最推荐的预防流行病的方法</title><link>https://xzywisdili.netlify.app/blog/20200229/2020-02-29-commonwaytoprevent/</link><pubDate>Fri, 28 Feb 2020 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20200229/2020-02-29-commonwaytoprevent/</guid><description>&lt;p&gt;这一次新冠肺炎，大众们也被迫接受了各种流行病学的知识教育。
 但生活中不仅仅是新冠病毒，还有很多种其他病毒、细菌以及他们所引起的流行病。
-对于大众来说，也有迫切的需求想要很好地预防流行病，或者在面对流行病时能够做到合适的处置。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>大家是怎么展现疫情的</title>
-      <link>https://xzywisdili.netlify.app/blog/20200222/2020-02-22-convirusgraph/</link>
-      <pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20200222/2020-02-22-convirusgraph/</guid>
-      <description>&lt;p&gt;一个简单地汇总。&lt;/p&gt;
+对于大众来说，也有迫切的需求想要很好地预防流行病，或者在面对流行病时能够做到合适的处置。&lt;/p&gt;</description></item><item><title>大家是怎么展现疫情的</title><link>https://xzywisdili.netlify.app/blog/20200222/2020-02-22-convirusgraph/</link><pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20200222/2020-02-22-convirusgraph/</guid><description>&lt;p&gt;一个简单地汇总。&lt;/p&gt;
 &lt;p&gt;这次疫情，以&lt;a
-  href=&#34;https://ncov.dxy.cn/ncovh5/view/pneumonia&#34;
-    target=&#34;_blank&#34;
-  &gt;丁香园&lt;/a&gt;为代表，微博，支付宝和腾讯跟上，都建立了自己的疫情实时播报页面。布局也都大同小异，最上面是确诊、疑似、重症、死亡和治愈五个最为重要的数字。下面是表现各个省份地区的疫情地图，和治愈情况、新增情况等的时间趋势。再下面是最新的新闻通报。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>记录自己用一天时间完成的成果</title>
-      <link>https://xzywisdili.netlify.app/blog/20200110/2020-01-10-newwork/</link>
-      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20200110/2020-01-10-newwork/</guid>
-      <description>&lt;p&gt;这次最大的收获是完全过了一遍文本分析，其中包括：&lt;/p&gt;
+href="https://ncov.dxy.cn/ncovh5/view/pneumonia"
+target="_blank"
+&gt;丁香园&lt;/a&gt;为代表，微博，支付宝和腾讯跟上，都建立了自己的疫情实时播报页面。布局也都大同小异，最上面是确诊、疑似、重症、死亡和治愈五个最为重要的数字。下面是表现各个省份地区的疫情地图，和治愈情况、新增情况等的时间趋势。再下面是最新的新闻通报。&lt;/p&gt;</description></item><item><title>记录自己用一天时间完成的成果</title><link>https://xzywisdili.netlify.app/blog/20200110/2020-01-10-newwork/</link><pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20200110/2020-01-10-newwork/</guid><description>&lt;p&gt;这次最大的收获是完全过了一遍文本分析，其中包括：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;文本清洗&lt;/li&gt;
 &lt;li&gt;词频分析&lt;/li&gt;
@@ -941,529 +389,130 @@
 &lt;p&gt;我无意在博客中写出我是怎么做的或是贴出任何代码，因为网络上有太多太多相关的教程了，文本的，视频的。
 当今世界，只要不是特别冷门的知识，想学习还是特别方便的。再一次歌颂互联网。
 当然，虽然只是很粗浅地了解和实践，但至少自己能在一天之内做完一整套出来，还是比较有成就感的。
-于是权且把最后的成果贴在这里。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>新型冠状病毒</title>
-      <link>https://xzywisdili.netlify.app/blog/20200109/2020-01-09-virus/</link>
-      <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20200109/2020-01-09-virus/</guid>
-      <description>&lt;p&gt;今天，官方公布了此次「武汉肺炎」的&lt;a
-  href=&#34;https://mp.weixin.qq.com/s/qwxUESCLjFGEeqIUFjtigQ&#34;
-    target=&#34;_blank&#34;
-  &gt;病毒病原体检测结果&lt;/a&gt;，
-结论是这是一种新型的冠状病毒。那么，现在广大普通群众最关注的重点应该有两个：&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>别向小徐学习</title>
-      <link>https://xzywisdili.netlify.app/blog/20200102/2020-01-02-pathetic/</link>
-      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20200102/2020-01-02-pathetic/</guid>
-      <description>&lt;p&gt;2020 年新年伊始，本应是好好鼓走干劲，大展宏图的一年。
-没想到刚开年，就对自己失望至极。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>别做「十里坡剑神」</title>
-      <link>https://xzywisdili.netlify.app/blog/20191230/2019-12-30-bestoftheyear/</link>
-      <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20191230/2019-12-30-bestoftheyear/</guid>
-      <description>&lt;p&gt;看到一条来自@peekaboo的&lt;a
-  href=&#34;https://twitter.com/peekabo7749/status/1210940883677278214&#34;
-    target=&#34;_blank&#34;
-  &gt;推特&lt;/a&gt;：&lt;/p&gt;
+于是权且把最后的成果贴在这里。&lt;/p&gt;</description></item><item><title>新型冠状病毒</title><link>https://xzywisdili.netlify.app/blog/20200109/2020-01-09-virus/</link><pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20200109/2020-01-09-virus/</guid><description>&lt;p&gt;今天，官方公布了此次「武汉肺炎」的&lt;a
+href="https://mp.weixin.qq.com/s/qwxUESCLjFGEeqIUFjtigQ"
+target="_blank"
+&gt;病毒病原体检测结果&lt;/a&gt;，
+结论是这是一种新型的冠状病毒。那么，现在广大普通群众最关注的重点应该有两个：&lt;/p&gt;</description></item><item><title>别向小徐学习</title><link>https://xzywisdili.netlify.app/blog/20200102/2020-01-02-pathetic/</link><pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20200102/2020-01-02-pathetic/</guid><description>&lt;p&gt;2020 年新年伊始，本应是好好鼓走干劲，大展宏图的一年。
+没想到刚开年，就对自己失望至极。&lt;/p&gt;</description></item><item><title>别做「十里坡剑神」</title><link>https://xzywisdili.netlify.app/blog/20191230/2019-12-30-bestoftheyear/</link><pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20191230/2019-12-30-bestoftheyear/</guid><description>&lt;p&gt;看到一条来自@peekaboo的&lt;a
+href="https://twitter.com/peekabo7749/status/1210940883677278214"
+target="_blank"
+&gt;推特&lt;/a&gt;：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;對李逍遙來說，一直留在十里坡，就算讓你學會劍神好了，你付出最大的代價是什麼？&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>2019 年度总结</title>
-      <link>https://xzywisdili.netlify.app/blog/20191229/2019-12-29-annualsummary/</link>
-      <pubDate>Sun, 29 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20191229/2019-12-29-annualsummary/</guid>
-      <description>&lt;p&gt;想来懒狗如我已经20天没有更新博客，对于之前每周一更的规划也已经食言了。
+&lt;p&gt;對李逍遙來說，一直留在十里坡，就算讓你學會劍神好了，你付出最大的代價是什麼？&lt;/p&gt;</description></item><item><title>2019 年度总结</title><link>https://xzywisdili.netlify.app/blog/20191229/2019-12-29-annualsummary/</link><pubDate>Sun, 29 Dec 2019 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20191229/2019-12-29-annualsummary/</guid><description>&lt;p&gt;想来懒狗如我已经20天没有更新博客，对于之前每周一更的规划也已经食言了。
 转眼想到博客的时候，就已经离2020年只剩3天。
-不如写一个年度总结来送走离开的这一年，这次比较简单，就分为收获和遗憾两点来写。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>工具人时刻</title>
-      <link>https://xzywisdili.netlify.app/blog/20191209/2019-12-09-smalltool/</link>
-      <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20191209/2019-12-09-smalltool/</guid>
-      <description>&lt;p&gt;昨天晚上师姐速报：「师弟，帮忙算个东西，用SAS写」。&lt;/p&gt;
+不如写一个年度总结来送走离开的这一年，这次比较简单，就分为收获和遗憾两点来写。&lt;/p&gt;</description></item><item><title>工具人时刻</title><link>https://xzywisdili.netlify.app/blog/20191209/2019-12-09-smalltool/</link><pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20191209/2019-12-09-smalltool/</guid><description>&lt;p&gt;昨天晚上师姐速报：「师弟，帮忙算个东西，用SAS写」。&lt;/p&gt;
 &lt;p&gt;一开始对我来说可能不是什么难事，打开文件一看，陷入了深深的沉思。
-用一个截图说明：&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>最近我都做了些什么</title>
-      <link>https://xzywisdili.netlify.app/blog/20191204/2019-12-04-whathaveidone/</link>
-      <pubDate>Wed, 04 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20191204/2019-12-04-whathaveidone/</guid>
-      <description>&lt;p&gt;时间匆匆忙忙到了 2019 年的 12 月，我自己也是匆匆忙忙的事情。至于即将到来的年终总结什么的，就随缘了。
+用一个截图说明：&lt;/p&gt;</description></item><item><title>最近我都做了些什么</title><link>https://xzywisdili.netlify.app/blog/20191204/2019-12-04-whathaveidone/</link><pubDate>Wed, 04 Dec 2019 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20191204/2019-12-04-whathaveidone/</guid><description>&lt;p&gt;时间匆匆忙忙到了 2019 年的 12 月，我自己也是匆匆忙忙的事情。至于即将到来的年终总结什么的，就随缘了。
 最近忙的事，既然暂时告一段落，就有必要开个博客总结一下。
-所以这一篇可能内容会比较杂乱反复。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>我在 R 里画地图（二）</title>
-      <link>https://xzywisdili.netlify.app/blog/20191118/2019-11-18-rmap2/</link>
-      <pubDate>Mon, 18 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20191118/2019-11-18-rmap2/</guid>
-      <description>&lt;p&gt;在R语言中绘制地图，尤其是可交互式的地图的另一个利器是 &lt;code&gt;leaflet&lt;/code&gt; 包。
+所以这一篇可能内容会比较杂乱反复。&lt;/p&gt;</description></item><item><title>我在 R 里画地图（二）</title><link>https://xzywisdili.netlify.app/blog/20191118/2019-11-18-rmap2/</link><pubDate>Mon, 18 Nov 2019 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20191118/2019-11-18-rmap2/</guid><description>&lt;p&gt;在R语言中绘制地图，尤其是可交互式的地图的另一个利器是 &lt;code&gt;leaflet&lt;/code&gt; 包。
 这次我会借着我刚刚完成的一个小项目来讲解这一内容，目标是仿制&lt;a
-  href=&#34;https://www.cdc.gov/drugoverdose/data/heroin.html#overdose-deaths&#34;
-    target=&#34;_blank&#34;
-  &gt;美国 CDC 官网&lt;/a&gt;上的一张图——是的，我们的「战场」从中国转移到了美国。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>政客生活 101</title>
-      <link>https://xzywisdili.netlify.app/blog/20191026/2019-10-26-politicians/</link>
-      <pubDate>Sat, 26 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20191026/2019-10-26-politicians/</guid>
-      <description>&lt;p&gt;netflix 推出了一款新剧 &lt;a
-  href=&#34;https://movie.douban.com/subject/30140761/&#34;
-    target=&#34;_blank&#34;
-  &gt;政客（The Politician）&lt;/a&gt;。
-这部剧在国内并未激起太多波澜，也几乎未见有人对其讨论。得益于昨晚好友山神推荐，我打开了第一集竟没有停下来，一口气看完了第一季。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>一周总结（9.16-9.22）</title>
-      <link>https://xzywisdili.netlify.app/blog/20190924/2019-09-24-weeknote/</link>
-      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20190924/2019-09-24-weeknote/</guid>
-      <description>&lt;p&gt;上一周如果用一个词来概括，那就是“荒废”。
+href="https://www.cdc.gov/drugoverdose/data/heroin.html#overdose-deaths"
+target="_blank"
+&gt;美国 CDC 官网&lt;/a&gt;上的一张图——是的，我们的「战场」从中国转移到了美国。&lt;/p&gt;</description></item><item><title>政客生活 101</title><link>https://xzywisdili.netlify.app/blog/20191026/2019-10-26-politicians/</link><pubDate>Sat, 26 Oct 2019 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20191026/2019-10-26-politicians/</guid><description>&lt;p&gt;netflix 推出了一款新剧 &lt;a
+href="https://movie.douban.com/subject/30140761/"
+target="_blank"
+&gt;政客（The Politician）&lt;/a&gt;。
+这部剧在国内并未激起太多波澜，也几乎未见有人对其讨论。得益于昨晚好友山神推荐，我打开了第一集竟没有停下来，一口气看完了第一季。&lt;/p&gt;</description></item><item><title>一周总结（9.16-9.22）</title><link>https://xzywisdili.netlify.app/blog/20190924/2019-09-24-weeknote/</link><pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20190924/2019-09-24-weeknote/</guid><description>&lt;p&gt;上一周如果用一个词来概括，那就是“荒废”。
 感觉自己越来越难以控制自己的情绪，经常陷入到一种无来由的失落之中，脑子里胡思乱想。
 这样似乎越来越难以集中精力，已经有点影响自己的工作和学习。
-“生活就像巧克力”的比喻太温柔了，要我说倒像是“糖果”，打开糖果纸，你可能会吃到空气，吃到钢珠球，吃到臭蛋，吃到变质的糖果，就是不会吃到甜甜的糖。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>我在 R 里画地图（一）</title>
-      <link>https://xzywisdili.netlify.app/blog/20190923/2019-09-23-rmap/</link>
-      <pubDate>Mon, 23 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20190923/2019-09-23-rmap/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;前言
-    &lt;div id=&#34;前言&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e5%89%8d%e8%a8%80&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+“生活就像巧克力”的比喻太温柔了，要我说倒像是“糖果”，打开糖果纸，你可能会吃到空气，吃到钢珠球，吃到臭蛋，吃到变质的糖果，就是不会吃到甜甜的糖。&lt;/p&gt;</description></item><item><title>我在 R 里画地图（一）</title><link>https://xzywisdili.netlify.app/blog/20190923/2019-09-23-rmap/</link><pubDate>Mon, 23 Sep 2019 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20190923/2019-09-23-rmap/</guid><description>&lt;h2 class="relative group"&gt;前言
+&lt;div id="前言" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%89%8d%e8%a8%80" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
 &lt;p&gt;大约一个月前，接到一个任务：绘制全国的患病率地图，就草草做了一个初版，当时还做了一个 ppt 和组里的小伙伴分享。
 直到后来，才知道这种图有一个专业的称呼：&lt;a
-  href=&#34;https://en.wikipedia.org/wiki/Choropleth_map&#34;
-    target=&#34;_blank&#34;
-  &gt;choropleth maps&lt;/a&gt;，中文名字是&lt;strong&gt;分层设色图&lt;/strong&gt;。
-可以看到在 google 中检索 choropleth maps 得到的结果：&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>这一周（9.9-9.15）</title>
-      <link>https://xzywisdili.netlify.app/blog/20190916/2019-09-16-weeknote/</link>
-      <pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20190916/2019-09-16-weeknote/</guid>
-      <description>&lt;p&gt;晚上在全屏看视频的时候，不小心按到了一个键，直接调用了电脑的前置摄像头，
-满屏出现我的大脸，差点没把我吓到凳子下面。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>计程车人生</title>
-      <link>https://xzywisdili.netlify.app/blog/20190915/2019-09-15-taxidriver/</link>
-      <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20190915/2019-09-15-taxidriver/</guid>
-      <description>&lt;blockquote&gt;
+href="https://en.wikipedia.org/wiki/Choropleth_map"
+target="_blank"
+&gt;choropleth maps&lt;/a&gt;，中文名字是&lt;strong&gt;分层设色图&lt;/strong&gt;。
+可以看到在 google 中检索 choropleth maps 得到的结果：&lt;/p&gt;</description></item><item><title>这一周（9.9-9.15）</title><link>https://xzywisdili.netlify.app/blog/20190916/2019-09-16-weeknote/</link><pubDate>Mon, 16 Sep 2019 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20190916/2019-09-16-weeknote/</guid><description>&lt;p&gt;晚上在全屏看视频的时候，不小心按到了一个键，直接调用了电脑的前置摄像头，
+满屏出现我的大脸，差点没把我吓到凳子下面。&lt;/p&gt;</description></item><item><title>计程车人生</title><link>https://xzywisdili.netlify.app/blog/20190915/2019-09-15-taxidriver/</link><pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20190915/2019-09-15-taxidriver/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;You talking to me（你在和我说话吗）？&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;看过 &lt;a
-  href=&#34;https://movie.douban.com/subject/1292222/&#34;
-    target=&#34;_blank&#34;
-  &gt;出租车司机&lt;/a&gt; 之后，我本想把朋友圈的封面换成
-坐在出租车内的德尼罗，但奈何绿色聊天软件对于图片糟糕的裁剪只能作罢。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>好一个中秋</title>
-      <link>https://xzywisdili.netlify.app/blog/20190913/2019-09-13-midautumn/</link>
-      <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20190913/2019-09-13-midautumn/</guid>
-      <description>&lt;p&gt;悲报：2019年的我，只能做6个标准俯卧撑了。&lt;/p&gt;
+href="https://movie.douban.com/subject/1292222/"
+target="_blank"
+&gt;出租车司机&lt;/a&gt; 之后，我本想把朋友圈的封面换成
+坐在出租车内的德尼罗，但奈何绿色聊天软件对于图片糟糕的裁剪只能作罢。&lt;/p&gt;</description></item><item><title>好一个中秋</title><link>https://xzywisdili.netlify.app/blog/20190913/2019-09-13-midautumn/</link><pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20190913/2019-09-13-midautumn/</guid><description>&lt;p&gt;悲报：2019年的我，只能做6个标准俯卧撑了。&lt;/p&gt;
 &lt;p&gt;对，没错，在中秋节这天晚上，如此适合聚会的日子，我去健身了。
 还好回来的路上抬了头，没有错过月亮。
 十五的月亮没有辜负这个日子，云也适时地散开。
 一个人走在安静的校园里独享这一份静谧与美好，说实话有一点奢侈。
-(原谅月亮被我的 ip8 拍糊了)&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>一点碎碎念</title>
-      <link>https://xzywisdili.netlify.app/blog/20190912/2019-09-12-thoughts/</link>
-      <pubDate>Thu, 12 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20190912/2019-09-12-thoughts/</guid>
-      <description>&lt;p&gt;刚刚以老年人的配速跑完了2km，不过实在太喜欢这种在雨后大口呼吸空气的感觉了。
+(原谅月亮被我的 ip8 拍糊了)&lt;/p&gt;</description></item><item><title>一点碎碎念</title><link>https://xzywisdili.netlify.app/blog/20190912/2019-09-12-thoughts/</link><pubDate>Thu, 12 Sep 2019 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20190912/2019-09-12-thoughts/</guid><description>&lt;p&gt;刚刚以老年人的配速跑完了2km，不过实在太喜欢这种在雨后大口呼吸空气的感觉了。
 清新的空气确实能让人头脑更加清醒，整个身体也更有活力。
-也不知是不是古人也有同感，如此推崇“气”的概念。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>再也敏感不起来</title>
-      <link>https://xzywisdili.netlify.app/blog/20190911/2019-09-11-thoughts/</link>
-      <pubDate>Wed, 11 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20190911/2019-09-11-thoughts/</guid>
-      <description>&lt;p&gt;今天本来想总结一下这阵子使用 R 代码画地图的一些心得，但写到半夜 12 点半才写到一半，无奈今天无法更新。
+也不知是不是古人也有同感，如此推崇“气”的概念。&lt;/p&gt;</description></item><item><title>再也敏感不起来</title><link>https://xzywisdili.netlify.app/blog/20190911/2019-09-11-thoughts/</link><pubDate>Wed, 11 Sep 2019 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20190911/2019-09-11-thoughts/</guid><description>&lt;p&gt;今天本来想总结一下这阵子使用 R 代码画地图的一些心得，但写到半夜 12 点半才写到一半，无奈今天无法更新。
 眼睛打架之时开始翻看 &lt;a
-  href=&#34;https://t.me/what_youread&#34;
-    target=&#34;_blank&#34;
-  &gt;eBooksPlan 的 Telegram群组&lt;/a&gt;。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>这一周（9.2-9.8）</title>
-      <link>https://xzywisdili.netlify.app/blog/20190909/2019-09-09-weeknote/</link>
-      <pubDate>Mon, 09 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20190909/2019-09-09-weeknote/</guid>
-      <description>&lt;p&gt;“开学”这个词像一层乌云笼罩了我至少十余载的青春岁月，9月1日的到来也宣示着暑假的结束，对于学生来说自然苦不堪言。
+href="https://t.me/what_youread"
+target="_blank"
+&gt;eBooksPlan 的 Telegram群组&lt;/a&gt;。&lt;/p&gt;</description></item><item><title>这一周（9.2-9.8）</title><link>https://xzywisdili.netlify.app/blog/20190909/2019-09-09-weeknote/</link><pubDate>Mon, 09 Sep 2019 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20190909/2019-09-09-weeknote/</guid><description>&lt;p&gt;“开学”这个词像一层乌云笼罩了我至少十余载的青春岁月，9月1日的到来也宣示着暑假的结束，对于学生来说自然苦不堪言。
 但今年我却没有太大感觉，一是毕竟已经读研，暑假也在赶工干活，开学只是偶尔去上几次专业课，其余并无不同；
-二是自己也不可能给自己放假，胆敢随意抽出一周时间去外地旅游散心，甚至回家看看。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>一周总结（8.26-9.1）</title>
-      <link>https://xzywisdili.netlify.app/blog/20190902/2019-09-02-weeknote/</link>
-      <pubDate>Mon, 02 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20190902/2019-09-02-weeknote/</guid>
-      <description>&lt;p&gt;今年已经步入了9月，也正式宣告这个“伪暑假”的落幕，新的学期就要开始了。之所以说是“伪暑假”，着实是因为自己没给自己放假，整整一个暑假都在实习。不过整个实习安排还好，从早上9点工作到下午5点半，倒不算特别辛苦，但是每天大部分时间也算投资在工作上面了。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>哲瑞·雷恩：悲剧系列终章</title>
-      <link>https://xzywisdili.netlify.app/blog/20190422/2019-04-22-drurylane/</link>
-      <pubDate>Mon, 22 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20190422/2019-04-22-drurylane/</guid>
-      <description>&lt;p&gt;很早就读过埃勒里·奎因的悲剧系列，始终以为该系列仅 X, Y, Z 三本。
+二是自己也不可能给自己放假，胆敢随意抽出一周时间去外地旅游散心，甚至回家看看。&lt;/p&gt;</description></item><item><title>一周总结（8.26-9.1）</title><link>https://xzywisdili.netlify.app/blog/20190902/2019-09-02-weeknote/</link><pubDate>Mon, 02 Sep 2019 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20190902/2019-09-02-weeknote/</guid><description>&lt;p&gt;今年已经步入了9月，也正式宣告这个“伪暑假”的落幕，新的学期就要开始了。之所以说是“伪暑假”，着实是因为自己没给自己放假，整整一个暑假都在实习。不过整个实习安排还好，从早上9点工作到下午5点半，倒不算特别辛苦，但是每天大部分时间也算投资在工作上面了。&lt;/p&gt;</description></item><item><title>哲瑞·雷恩：悲剧系列终章</title><link>https://xzywisdili.netlify.app/blog/20190422/2019-04-22-drurylane/</link><pubDate>Mon, 22 Apr 2019 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20190422/2019-04-22-drurylane/</guid><description>&lt;p&gt;很早就读过埃勒里·奎因的悲剧系列，始终以为该系列仅 X, Y, Z 三本。
 没想到偶然得知还有一本&lt;a
-  href=&#34;https://book.douban.com/subject/3608352/&#34;
-    target=&#34;_blank&#34;
-  &gt;《哲瑞·雷恩的最后一案》&lt;/a&gt;，果断花了一天时间读完。
-合上书时，感受到了无比的震撼，心情难以平静。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>流行病学学习笔记（二）：队列研究（cohort study）</title>
-      <link>https://xzywisdili.netlify.app/blog/20190228/2019-02-28-cohortstudy/</link>
-      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20190228/2019-02-28-cohortstudy/</guid>
-      <description>&lt;script type=&#34;text/javascript&#34; src=&#39;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML&#39; async&gt;&lt;/script&gt;
+href="https://book.douban.com/subject/3608352/"
+target="_blank"
+&gt;《哲瑞·雷恩的最后一案》&lt;/a&gt;，果断花了一天时间读完。
+合上书时，感受到了无比的震撼，心情难以平静。&lt;/p&gt;</description></item><item><title>流行病学学习笔记（二）：队列研究（cohort study）</title><link>https://xzywisdili.netlify.app/blog/20190228/2019-02-28-cohortstudy/</link><pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20190228/2019-02-28-cohortstudy/</guid><description>&lt;script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async&gt;&lt;/script&gt;
 &lt;p&gt;本文是流行病学学习笔记的第一篇，上课时间为 2019 年 2 月 25 日。&lt;/p&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;基本原理
-    &lt;div id=&#34;基本原理&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e5%9f%ba%e6%9c%ac%e5%8e%9f%e7%90%86&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+&lt;h2 class="relative group"&gt;基本原理
+&lt;div id="基本原理" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%9f%ba%e6%9c%ac%e5%8e%9f%e7%90%86" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
 &lt;p&gt;队列（cohort）在流行病学中指有共同经历或有共同状态的一群人。
 队列研究（Cohort study）指选定暴露于及未暴露于某因素的两组人群，随访观察一定的时间，
-比较两组人群某种时间的结局（一般指疾病的发病率或死亡率），从而判断该暴露因素与发病或死亡有无关联及关联大小的一种观察性研究方法。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>欲速则不达</title>
-      <link>https://xzywisdili.netlify.app/blog/20190223/2019-02-23-speededucation/</link>
-      <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20190223/2019-02-23-speededucation/</guid>
-      <description>&lt;p&gt;越来越多的速成教程出现在我们的视野中。高中时期，贴吧就有不少关于“如何在一个月内高考数学提高XX分”这样的内容。
+比较两组人群某种时间的结局（一般指疾病的发病率或死亡率），从而判断该暴露因素与发病或死亡有无关联及关联大小的一种观察性研究方法。&lt;/p&gt;</description></item><item><title>欲速则不达</title><link>https://xzywisdili.netlify.app/blog/20190223/2019-02-23-speededucation/</link><pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20190223/2019-02-23-speededucation/</guid><description>&lt;p&gt;越来越多的速成教程出现在我们的视野中。高中时期，贴吧就有不少关于“如何在一个月内高考数学提高XX分”这样的内容。
 而之后，像这样的内容越来越多，无论是程序相关，考研，摄影，视频后期，音乐制作等等领域，都出现了诸如此类的速成教程。
-似乎跟着这些内容学完，就能在短时间内摇身一变，成功升级为这一领域的大神。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>流行病学学习笔记（一）：描述性研究（descriptive study）</title>
-      <link>https://xzywisdili.netlify.app/blog/20190221/2019-02-21-descriptive-study/</link>
-      <pubDate>Thu, 21 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20190221/2019-02-21-descriptive-study/</guid>
-      <description>&lt;script src=&#39;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML&#39; async&gt;&lt;/script&gt;
+似乎跟着这些内容学完，就能在短时间内摇身一变，成功升级为这一领域的大神。&lt;/p&gt;</description></item><item><title>流行病学学习笔记（一）：描述性研究（descriptive study）</title><link>https://xzywisdili.netlify.app/blog/20190221/2019-02-21-descriptive-study/</link><pubDate>Thu, 21 Feb 2019 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20190221/2019-02-21-descriptive-study/</guid><description>&lt;script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async&gt;&lt;/script&gt;
 &lt;p&gt;本文是流行病学学习笔记的第一篇，上课时间为 2019 年 2 月 20 日。&lt;/p&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;概述
-    &lt;div id=&#34;概述&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%a6%82%e8%bf%b0&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+&lt;h2 class="relative group"&gt;概述
+&lt;div id="概述" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%a6%82%e8%bf%b0" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
-
-&lt;h3 class=&#34;relative group&#34;&gt;概念
-    &lt;div id=&#34;概念&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%a6%82%e5%bf%b5&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+&lt;h3 class="relative group"&gt;概念
+&lt;div id="概念" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%a6%82%e5%bf%b5" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h3&gt;
 &lt;p&gt;描述性研究是利用常规检测记录或通过专门调查获得数据资料，按&lt;strong&gt;不同地区、不同时间及不同人群&lt;/strong&gt;特征分组，
 描述人群中疾病或健康状态分布状况或暴露因素的分布情况，在此基础上进行比较分析，获得疾病&lt;strong&gt;三间分布&lt;/strong&gt;特征，
-进而提出&lt;strong&gt;病因假设和线索&lt;/strong&gt;。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>我们怎么知道自己学会了？</title>
-      <link>https://xzywisdili.netlify.app/blog/20181208/2018-12-8-learnthoughts/</link>
-      <pubDate>Fri, 07 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20181208/2018-12-8-learnthoughts/</guid>
-      <description>&lt;p&gt;本科生活即将结束了。最后的一周日子里，主要在复习职业病学和精神病学，准备考试，一边又不想落下 SAS 的学习，当然还有其他杂七杂八的任务。在学习的时候，自然会想到一个问题就是：我们怎么知道自己学会了？&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>2018年，中国独立游戏，和他们</title>
-      <link>https://xzywisdili.netlify.app/blog/20180903/2018-9-3-indiagames/</link>
-      <pubDate>Mon, 03 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20180903/2018-9-3-indiagames/</guid>
-      <description>&lt;p&gt;强烈推荐纪录片《独行》。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>简化我们的工具</title>
-      <link>https://xzywisdili.netlify.app/blog/20180604/2018-6-4-simplifytools/</link>
-      <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20180604/2018-6-4-simplifytools/</guid>
-      <description>&lt;p&gt;现在的大学生不像十几年前，必定是人手一台笔记本电脑（有的人甚至有两台）。只要在自习室稍微留神观察一下
-专注学习的同学们，就会发现几乎 100% 的同学的电脑上停留的软件不是微软家的 powerpoint，就是 PDF 阅读器。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>卫生统计学第九周作业</title>
-      <link>https://xzywisdili.netlify.app/blog/20180425/2018-04-25-statistichomework/</link>
-      <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20180425/2018-04-25-statistichomework/</guid>
-      <description>&lt;script src=&#39;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML&#39; async&gt;&lt;/script&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;前言
-    &lt;div id=&#34;前言&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e5%89%8d%e8%a8%80&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+进而提出&lt;strong&gt;病因假设和线索&lt;/strong&gt;。&lt;/p&gt;</description></item><item><title>我们怎么知道自己学会了？</title><link>https://xzywisdili.netlify.app/blog/20181208/2018-12-8-learnthoughts/</link><pubDate>Fri, 07 Dec 2018 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20181208/2018-12-8-learnthoughts/</guid><description>&lt;p&gt;本科生活即将结束了。最后的一周日子里，主要在复习职业病学和精神病学，准备考试，一边又不想落下 SAS 的学习，当然还有其他杂七杂八的任务。在学习的时候，自然会想到一个问题就是：我们怎么知道自己学会了？&lt;/p&gt;</description></item><item><title>2018年，中国独立游戏，和他们</title><link>https://xzywisdili.netlify.app/blog/20180903/2018-9-3-indiagames/</link><pubDate>Mon, 03 Sep 2018 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20180903/2018-9-3-indiagames/</guid><description>&lt;p&gt;强烈推荐纪录片《独行》。&lt;/p&gt;</description></item><item><title>简化我们的工具</title><link>https://xzywisdili.netlify.app/blog/20180604/2018-6-4-simplifytools/</link><pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20180604/2018-6-4-simplifytools/</guid><description>&lt;p&gt;现在的大学生不像十几年前，必定是人手一台笔记本电脑（有的人甚至有两台）。只要在自习室稍微留神观察一下
+专注学习的同学们，就会发现几乎 100% 的同学的电脑上停留的软件不是微软家的 powerpoint，就是 PDF 阅读器。&lt;/p&gt;</description></item><item><title>卫生统计学第九周作业</title><link>https://xzywisdili.netlify.app/blog/20180425/2018-04-25-statistichomework/</link><pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20180425/2018-04-25-statistichomework/</guid><description>&lt;script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async&gt;&lt;/script&gt;
+&lt;h2 class="relative group"&gt;前言
+&lt;div id="前言" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%89%8d%e8%a8%80" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
-&lt;p&gt;这几天读到一个观点，论文的发表在很久之前抛弃了写在纸上的模式，现在也到了抛弃 PDF 或 Word 格式的时候了。其实一直以来，论文核心呈现的，我们所关注的都是它的内容所在。既然这样，我们为什么不能把论文呈现为 HTML 格式呢？&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>再吹一波 Rmarkdown</title>
-      <link>https://xzywisdili.netlify.app/blog/20180411/2018-04-11-rmarkdown02/</link>
-      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20180411/2018-04-11-rmarkdown02/</guid>
-      <description>&lt;p&gt;既上次写过一篇关于 &lt;a
-  href=&#34;http://www.xzywisdili.com/post/2017/12/23/%E8%BD%BB%E6%9D%BE%E6%84%89%E5%BF%AB%E5%9C%B0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8-rmarkdown/&#34;
-    target=&#34;_blank&#34;
-  &gt;Rmarkdown 的安利&lt;/a&gt; 之后，我在实际使用过程中遇到了一些难题，就是关于中文的问题。如果只使用英文写作的话，完全没有问题；但是一旦使用中文，各级标题，加粗强调和引用都会变得非常奇怪。这也使我暂时搁置下了 Rmarkdown 不用。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>R 语言基础入门</title>
-      <link>https://xzywisdili.netlify.app/blog/20180402-2/2018-04-02-rlearningnote/</link>
-      <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20180402-2/2018-04-02-rlearningnote/</guid>
-      <description>&lt;p&gt;这篇《R 语言基础入门》是我在别人的博客上看到的，完成时间不会晚于 2011 年。觉得总结得相当不错，于是搬运到我的博客上。需要提到，有些链接可能已经失效。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>学习 R 语言里的 subset</title>
-      <link>https://xzywisdili.netlify.app/blog/20180402/2018-04-02-rsubset/</link>
-      <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20180402/2018-04-02-rsubset/</guid>
-      <description>&lt;p&gt;主要内容：&lt;/p&gt;
+&lt;p&gt;这几天读到一个观点，论文的发表在很久之前抛弃了写在纸上的模式，现在也到了抛弃 PDF 或 Word 格式的时候了。其实一直以来，论文核心呈现的，我们所关注的都是它的内容所在。既然这样，我们为什么不能把论文呈现为 HTML 格式呢？&lt;/p&gt;</description></item><item><title>再吹一波 Rmarkdown</title><link>https://xzywisdili.netlify.app/blog/20180411/2018-04-11-rmarkdown02/</link><pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20180411/2018-04-11-rmarkdown02/</guid><description>&lt;p&gt;既上次写过一篇关于 &lt;a
+href="http://www.xzywisdili.com/post/2017/12/23/%E8%BD%BB%E6%9D%BE%E6%84%89%E5%BF%AB%E5%9C%B0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8-rmarkdown/"
+target="_blank"
+&gt;Rmarkdown 的安利&lt;/a&gt; 之后，我在实际使用过程中遇到了一些难题，就是关于中文的问题。如果只使用英文写作的话，完全没有问题；但是一旦使用中文，各级标题，加粗强调和引用都会变得非常奇怪。这也使我暂时搁置下了 Rmarkdown 不用。&lt;/p&gt;</description></item><item><title>R 语言基础入门</title><link>https://xzywisdili.netlify.app/blog/20180402-2/2018-04-02-rlearningnote/</link><pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20180402-2/2018-04-02-rlearningnote/</guid><description>&lt;p&gt;这篇《R 语言基础入门》是我在别人的博客上看到的，完成时间不会晚于 2011 年。觉得总结得相当不错，于是搬运到我的博客上。需要提到，有些链接可能已经失效。&lt;/p&gt;</description></item><item><title>学习 R 语言里的 subset</title><link>https://xzywisdili.netlify.app/blog/20180402/2018-04-02-rsubset/</link><pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20180402/2018-04-02-rsubset/</guid><description>&lt;p&gt;主要内容：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;三种 subset 操作&lt;/li&gt;
 &lt;li&gt;六类 subset&lt;/li&gt;
 &lt;li&gt;不同对象的的重要区别&lt;/li&gt;
-&lt;/ul&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>R 语言基础数据结构</title>
-      <link>https://xzywisdili.netlify.app/blog/20180328/2018-03-28-rstructure/</link>
-      <pubDate>Wed, 28 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20180328/2018-03-28-rstructure/</guid>
-      <description>&lt;p&gt;介绍了 R 语言中的内置基础数据结构。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>2017 读书印象</title>
-      <link>https://xzywisdili.netlify.app/blog/20171230-2/2017-12-30-reading/</link>
-      <pubDate>Sat, 30 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20171230-2/2017-12-30-reading/</guid>
-      <description>&lt;p&gt;自从 2016 年起，我逼自己养成一个习惯，每年准备一个记录阅读情况的 Excel 表格。一开始的时候，满怀热情，又是搞了图表，又是自学了 VBA 编程，然后模仿 Github 代码记录写了一个玩意儿——365 天对应 365 个小方格，每天读的页数越多，这天就越绿。当时熬夜完成的时候还特兴奋，但后来证明，没多大蛋用。当然读书记录这方法成效斐然，我在 2016 年读完了整整 40 本书！（要知道我以前一年可能翻不完一本书）&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>轻松愉快地开始使用 Rmarkdown</title>
-      <link>https://xzywisdili.netlify.app/blog/20171223/2017-12-23-rmarkdown/</link>
-      <pubDate>Sat, 23 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20171223/2017-12-23-rmarkdown/</guid>
-      <description>&lt;p&gt;R 语言世界里的一个大杀器。&lt;/p&gt;
+&lt;/ul&gt;</description></item><item><title>R 语言基础数据结构</title><link>https://xzywisdili.netlify.app/blog/20180328/2018-03-28-rstructure/</link><pubDate>Wed, 28 Mar 2018 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20180328/2018-03-28-rstructure/</guid><description>&lt;p&gt;介绍了 R 语言中的内置基础数据结构。&lt;/p&gt;</description></item><item><title>2017 读书印象</title><link>https://xzywisdili.netlify.app/blog/20171230-2/2017-12-30-reading/</link><pubDate>Sat, 30 Dec 2017 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20171230-2/2017-12-30-reading/</guid><description>&lt;p&gt;自从 2016 年起，我逼自己养成一个习惯，每年准备一个记录阅读情况的 Excel 表格。一开始的时候，满怀热情，又是搞了图表，又是自学了 VBA 编程，然后模仿 Github 代码记录写了一个玩意儿——365 天对应 365 个小方格，每天读的页数越多，这天就越绿。当时熬夜完成的时候还特兴奋，但后来证明，没多大蛋用。当然读书记录这方法成效斐然，我在 2016 年读完了整整 40 本书！（要知道我以前一年可能翻不完一本书）&lt;/p&gt;</description></item><item><title>轻松愉快地开始使用 Rmarkdown</title><link>https://xzywisdili.netlify.app/blog/20171223/2017-12-23-rmarkdown/</link><pubDate>Sat, 23 Dec 2017 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20171223/2017-12-23-rmarkdown/</guid><description>&lt;p&gt;R 语言世界里的一个大杀器。&lt;/p&gt;
 &lt;p&gt;我想，在所有接触和学习 R 语言的初学者（当然包括我）眼里，有两个东西是相当酷的。一个是 &lt;a
-  href=&#34;http://shiny.rstudio.com/tutorial/&#34;
-    target=&#34;_blank&#34;
-  &gt;shiny&lt;/a&gt;，可以轻松做出交互式的图表；而另一个就是 &lt;a
-  href=&#34;http://rmarkdown.rstudio.com/&#34;
-    target=&#34;_blank&#34;
-  &gt;Rmarkdown&lt;/a&gt; 了。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>dplyr 包里面必会的处理数据方法</title>
-      <link>https://xzywisdili.netlify.app/blog/20171219/2017-12-19-datatransform/</link>
-      <pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20171219/2017-12-19-datatransform/</guid>
-      <description>&lt;p&gt;最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看。最近学习的很简单，就是 &lt;code&gt;dplyr&lt;/code&gt; 包里面最基础的 5 种数据处理方法。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>R 语言的那些最最最基础</title>
-      <link>https://xzywisdili.netlify.app/blog/20171121/2017-11-21-rbasic/</link>
-      <pubDate>Tue, 21 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20171121/2017-11-21-rbasic/</guid>
-      <description>&lt;p&gt;在 &lt;a
-  href=&#34;https://www.r-project.org/&#34;
-    target=&#34;_blank&#34;
-  &gt;R 语言&lt;/a&gt; 的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么就一定不能错过 R。本文只总结了 R 语言里面的那些最最最基础，想用好 R 必须要背过的内容。话不多说，赶紧上车。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>光棍节初探 TensorFlow（一）：数据集的预处理</title>
-      <link>https://xzywisdili.netlify.app/blog/20171112/2017-11-12-tensorflow01/</link>
-      <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20171112/2017-11-12-tensorflow01/</guid>
-      <description>&lt;p&gt;11 月 11 日这天注定对我具有了一定的意义。不是因为它是购物狂欢节或光棍节，而是因为在这一天，我第一次尝试使用 TensorFlow 搭建了一个简单的神经网络。我希望用几篇文章记录这个过程。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>为什么要使用 LaTeX 呢？</title>
-      <link>https://xzywisdili.netlify.app/blog/20171023/2017-10-23-why-latex/</link>
-      <pubDate>Mon, 23 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20171023/2017-10-23-why-latex/</guid>
-      <description>&lt;p&gt;这个标题其实不是我对我自己的诘问。作为一个医学生，在习惯使用 LaTeX 完成日常的作业或是论文时，总会有几个同学凑上前来，好奇地问这是个什么样的写作工具。在我做一番简要的介绍后，他们或许会表露出感兴趣，或称赞的神情，然后问下一个重复了很多遍的问题：为什么要使用 LaTeX 呢？&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>「翻译」如何用 Python 画出像 FiveThirtyEight 那么棒的图表</title>
-      <link>https://xzywisdili.netlify.app/blog/20171015/2017-10-15-trans01/</link>
-      <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20171015/2017-10-15-trans01/</guid>
-      <description>&lt;p&gt;如果你经常读数据科学领域的文章的话，你可能会偶然发现 &lt;a
-  href=&#34;http://fivethirtyeight.com&#34;
-    target=&#34;_blank&#34;
-  &gt;FiveThirtyEight&lt;/a&gt; 上的内容，然后被他们惊艳的图表迷住。于是你自己也想制作如此出色的可视化作品，于是去 Quora 和 Reddit 上问怎么做。你收到了几个回答，但是这些回答都很模糊。你还是不知道怎么搞定这样的图表。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>用 Python 解决数据结构与算法题 01</title>
-      <link>https://xzywisdili.netlify.app/blog/20171005/2017-10-05-algorithm01/</link>
-      <pubDate>Thu, 05 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20171005/2017-10-05-algorithm01/</guid>
-      <description>&lt;p&gt;这是 Python 解决算法问题的第一期。我想以后每期写出三道题。本人是医学生，没有上过任何数据结构和算法课，对于解决算法题也纯属个人的课余兴趣爱好。还希望各位真正的大牛不吝赐教。我会继续坚持下去的。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Hello World</title>
-      <link>https://xzywisdili.netlify.app/blog/20171004/2017-10-04-helloworld/</link>
-      <pubDate>Wed, 04 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20171004/2017-10-04-helloworld/</guid>
-      <description>&lt;p&gt;在国庆放假的期间，花了大概半个晚上的时间，使用 hexo 配置好了自己的个人博客。我觉得博客是一个很好的刺激自己不断学习和保持记录习惯的帮手。我也是在身边同学里第一个开通博客的。&lt;/p&gt;</description>
-      
-    </item>
-    
-  </channel>
-</rss>
+href="http://shiny.rstudio.com/tutorial/"
+target="_blank"
+&gt;shiny&lt;/a&gt;，可以轻松做出交互式的图表；而另一个就是 &lt;a
+href="http://rmarkdown.rstudio.com/"
+target="_blank"
+&gt;Rmarkdown&lt;/a&gt; 了。&lt;/p&gt;</description></item><item><title>dplyr 包里面必会的处理数据方法</title><link>https://xzywisdili.netlify.app/blog/20171219/2017-12-19-datatransform/</link><pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20171219/2017-12-19-datatransform/</guid><description>&lt;p&gt;最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看。最近学习的很简单，就是 &lt;code&gt;dplyr&lt;/code&gt; 包里面最基础的 5 种数据处理方法。&lt;/p&gt;</description></item><item><title>R 语言的那些最最最基础</title><link>https://xzywisdili.netlify.app/blog/20171121/2017-11-21-rbasic/</link><pubDate>Tue, 21 Nov 2017 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20171121/2017-11-21-rbasic/</guid><description>&lt;p&gt;在 &lt;a
+href="https://www.r-project.org/"
+target="_blank"
+&gt;R 语言&lt;/a&gt; 的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么就一定不能错过 R。本文只总结了 R 语言里面的那些最最最基础，想用好 R 必须要背过的内容。话不多说，赶紧上车。&lt;/p&gt;</description></item><item><title>光棍节初探 TensorFlow（一）：数据集的预处理</title><link>https://xzywisdili.netlify.app/blog/20171112/2017-11-12-tensorflow01/</link><pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20171112/2017-11-12-tensorflow01/</guid><description>&lt;p&gt;11 月 11 日这天注定对我具有了一定的意义。不是因为它是购物狂欢节或光棍节，而是因为在这一天，我第一次尝试使用 TensorFlow 搭建了一个简单的神经网络。我希望用几篇文章记录这个过程。&lt;/p&gt;</description></item><item><title>为什么要使用 LaTeX 呢？</title><link>https://xzywisdili.netlify.app/blog/20171023/2017-10-23-why-latex/</link><pubDate>Mon, 23 Oct 2017 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20171023/2017-10-23-why-latex/</guid><description>&lt;p&gt;这个标题其实不是我对我自己的诘问。作为一个医学生，在习惯使用 LaTeX 完成日常的作业或是论文时，总会有几个同学凑上前来，好奇地问这是个什么样的写作工具。在我做一番简要的介绍后，他们或许会表露出感兴趣，或称赞的神情，然后问下一个重复了很多遍的问题：为什么要使用 LaTeX 呢？&lt;/p&gt;</description></item><item><title>「翻译」如何用 Python 画出像 FiveThirtyEight 那么棒的图表</title><link>https://xzywisdili.netlify.app/blog/20171015/2017-10-15-trans01/</link><pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20171015/2017-10-15-trans01/</guid><description>&lt;p&gt;如果你经常读数据科学领域的文章的话，你可能会偶然发现 &lt;a
+href="http://fivethirtyeight.com"
+target="_blank"
+&gt;FiveThirtyEight&lt;/a&gt; 上的内容，然后被他们惊艳的图表迷住。于是你自己也想制作如此出色的可视化作品，于是去 Quora 和 Reddit 上问怎么做。你收到了几个回答，但是这些回答都很模糊。你还是不知道怎么搞定这样的图表。&lt;/p&gt;</description></item><item><title>用 Python 解决数据结构与算法题 01</title><link>https://xzywisdili.netlify.app/blog/20171005/2017-10-05-algorithm01/</link><pubDate>Thu, 05 Oct 2017 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20171005/2017-10-05-algorithm01/</guid><description>&lt;p&gt;这是 Python 解决算法问题的第一期。我想以后每期写出三道题。本人是医学生，没有上过任何数据结构和算法课，对于解决算法题也纯属个人的课余兴趣爱好。还希望各位真正的大牛不吝赐教。我会继续坚持下去的。&lt;/p&gt;</description></item><item><title>Hello World</title><link>https://xzywisdili.netlify.app/blog/20171004/2017-10-04-helloworld/</link><pubDate>Wed, 04 Oct 2017 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20171004/2017-10-04-helloworld/</guid><description>&lt;p&gt;在国庆放假的期间，花了大概半个晚上的时间，使用 hexo 配置好了自己的个人博客。我觉得博客是一个很好的刺激自己不断学习和保持记录习惯的帮手。我也是在身边同学里第一个开通博客的。&lt;/p&gt;</description></item></channel></rss>

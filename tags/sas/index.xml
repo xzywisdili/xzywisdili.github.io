@@ -1,197 +1,77 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>SAS on XZY&#39;s Blog</title>
-    <link>https://xzywisdili.netlify.app/tags/sas/</link>
-    <description>Recent content in SAS on XZY&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <copyright>© 2025 Xzywisdili</copyright>
-    <lastBuildDate>Sun, 07 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/tags/sas/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>ADSL 数据集的建立：练习示例</title>
-      <link>https://xzywisdili.netlify.app/blog/20230508/2023-05-08-adslexample/</link>
-      <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20230508/2023-05-08-adslexample/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;总结
-    &lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SAS on XZY's Blog</title><link>https://xzywisdili.netlify.app/tags/sas/</link><description>Recent content in SAS on XZY's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2025 Xzywisdili</copyright><lastBuildDate>Sun, 07 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/tags/sas/index.xml" rel="self" type="application/rss+xml"/><item><title>ADSL 数据集的建立：练习示例</title><link>https://xzywisdili.netlify.app/blog/20230508/2023-05-08-adslexample/</link><pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230508/2023-05-08-adslexample/</guid><description>&lt;h2 class="relative group"&gt;总结
+&lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;通过一则创立 ADSL 数据集的练习示例加深对 ADSL 数据集的理解；&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;ADSL（Subject-Level Analysis Data Set） 是 ADaM 中的一种数据集，特点是每一行是一个单独患者的记录（类似 SDTM 中的 DM 数据集），主要包括的变量有：&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>CDISC 标准（四）——SDTM 数据集详细分类</title>
-      <link>https://xzywisdili.netlify.app/blog/20230502-2/2023-05-02-cdiscnotes4/</link>
-      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20230502-2/2023-05-02-cdiscnotes4/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;总结
-    &lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+&lt;p&gt;ADSL（Subject-Level Analysis Data Set） 是 ADaM 中的一种数据集，特点是每一行是一个单独患者的记录（类似 SDTM 中的 DM 数据集），主要包括的变量有：&lt;/p&gt;</description></item><item><title>CDISC 标准（四）——SDTM 数据集详细分类</title><link>https://xzywisdili.netlify.app/blog/20230502-2/2023-05-02-cdiscnotes4/</link><pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230502-2/2023-05-02-cdiscnotes4/</guid><description>&lt;h2 class="relative group"&gt;总结
+&lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
-&lt;p&gt;本笔记的主要内容：&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>CDISC 标准（五）——ADaM 标准概述</title>
-      <link>https://xzywisdili.netlify.app/blog/20230502/2023-05-02-cdiscnotes5/</link>
-      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20230502/2023-05-02-cdiscnotes5/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;总结
-    &lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+&lt;p&gt;本笔记的主要内容：&lt;/p&gt;</description></item><item><title>CDISC 标准（五）——ADaM 标准概述</title><link>https://xzywisdili.netlify.app/blog/20230502/2023-05-02-cdiscnotes5/</link><pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230502/2023-05-02-cdiscnotes5/</guid><description>&lt;h2 class="relative group"&gt;总结
+&lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;ADaM 标准实为了让临床试验统计分析人员梗快速、标准准确地进行统计分析和制作报表的标准；&lt;/li&gt;
 &lt;li&gt;ADaM 主要分为三类数据集：ADSL，BDS 和 OCCDS；&lt;/li&gt;
 &lt;li&gt;详细梳理了三类数据集的特点以及对应的重点变量。&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;ADaM 数据集是做什么用的？
-    &lt;div id=&#34;adam-数据集是做什么用的&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#adam-%e6%95%b0%e6%8d%ae%e9%9b%86%e6%98%af%e5%81%9a%e4%bb%80%e4%b9%88%e7%94%a8%e7%9a%84&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+&lt;h2 class="relative group"&gt;ADaM 数据集是做什么用的？
+&lt;div id="adam-数据集是做什么用的" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#adam-%e6%95%b0%e6%8d%ae%e9%9b%86%e6%98%af%e5%81%9a%e4%bb%80%e4%b9%88%e7%94%a8%e7%9a%84" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;ADaM，Analysis Data Model&lt;/strong&gt;，顾名思义，为了更加方便、标准且准确地进行统计分析，输出相关统计图表的标准模型。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>SAS 几个重要概念辨析</title>
-      <link>https://xzywisdili.netlify.app/blog/20230501/2023-05-01-sasnotes1/</link>
-      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20230501/2023-05-01-sasnotes1/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;进行变量类型转换，用 input 还是 put
-    &lt;div id=&#34;进行变量类型转换用-input-还是-put&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e8%bf%9b%e8%a1%8c%e5%8f%98%e9%87%8f%e7%b1%bb%e5%9e%8b%e8%bd%ac%e6%8d%a2%e7%94%a8-input-%e8%bf%98%e6%98%af-put&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+&lt;p&gt;&lt;strong&gt;ADaM，Analysis Data Model&lt;/strong&gt;，顾名思义，为了更加方便、标准且准确地进行统计分析，输出相关统计图表的标准模型。&lt;/p&gt;</description></item><item><title>SAS 几个重要概念辨析</title><link>https://xzywisdili.netlify.app/blog/20230501/2023-05-01-sasnotes1/</link><pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230501/2023-05-01-sasnotes1/</guid><description>&lt;h2 class="relative group"&gt;进行变量类型转换，用 input 还是 put
+&lt;div id="进行变量类型转换用-input-还是-put" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%bf%9b%e8%a1%8c%e5%8f%98%e9%87%8f%e7%b1%bb%e5%9e%8b%e8%bd%ac%e6%8d%a2%e7%94%a8-input-%e8%bf%98%e6%98%af-put" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
-&lt;p&gt;在 SAS 编程过程中，往往会遇到需要转换变量的需求。而转换变量，往往需要考虑使用 &lt;code&gt;INPUT&lt;/code&gt; 还是 &lt;code&gt;PUT&lt;/code&gt;。那么这时候就要想想几个变量转换中的几个关键点：&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>CDISC 标准（三）——SDTM 标准初试</title>
-      <link>https://xzywisdili.netlify.app/blog/20230430/2023-04-30-cdiscnote3/</link>
-      <pubDate>Sun, 30 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20230430/2023-04-30-cdiscnote3/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;总结
-    &lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+&lt;p&gt;在 SAS 编程过程中，往往会遇到需要转换变量的需求。而转换变量，往往需要考虑使用 &lt;code&gt;INPUT&lt;/code&gt; 还是 &lt;code&gt;PUT&lt;/code&gt;。那么这时候就要想想几个变量转换中的几个关键点：&lt;/p&gt;</description></item><item><title>CDISC 标准（三）——SDTM 标准初试</title><link>https://xzywisdili.netlify.app/blog/20230430/2023-04-30-cdiscnote3/</link><pubDate>Sun, 30 Apr 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230430/2023-04-30-cdiscnote3/</guid><description>&lt;h2 class="relative group"&gt;总结
+&lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;第一次尝试仔细阅读 SDTM IG 文件中的一个 domain 变量信息；&lt;/li&gt;
 &lt;li&gt;通过 SAS 代码初试按照 SDTM 标准输出标准化的数据集。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;本章要开始使用 SAS，并结合 SDTM 标准，看看如何让目标数据集符合 IG 文件里面的标准。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>CDISC 标准（二）——SDTM 标准概述</title>
-      <link>https://xzywisdili.netlify.app/blog/20230429/2023-04-29-cdiscnote2/</link>
-      <pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20230429/2023-04-29-cdiscnote2/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;总结
-    &lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+&lt;p&gt;本章要开始使用 SAS，并结合 SDTM 标准，看看如何让目标数据集符合 IG 文件里面的标准。&lt;/p&gt;</description></item><item><title>CDISC 标准（二）——SDTM 标准概述</title><link>https://xzywisdili.netlify.app/blog/20230429/2023-04-29-cdiscnote2/</link><pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230429/2023-04-29-cdiscnote2/</guid><description>&lt;h2 class="relative group"&gt;总结
+&lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;介绍了 SDTM 和 IG 文件的基本概念；&lt;/li&gt;
 &lt;li&gt;通过阅读 SDTM IG 文件，了解 Domain 和 Variable 的各种信息；&lt;/li&gt;
 &lt;li&gt;重点是 Variable 的五种分类：Identifier, Topic, Qualifier, Timing, Rule。&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;SDTM 的基本概念
-    &lt;div id=&#34;sdtm-的基本概念&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#sdtm-%e7%9a%84%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
+&lt;h2 class="relative group"&gt;SDTM 的基本概念
+&lt;div id="sdtm-的基本概念" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#sdtm-%e7%9a%84%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
 &lt;/h2&gt;
-&lt;p&gt;SDTM（&lt;strong&gt;Study Data Tabulation Model&lt;/strong&gt;）是一个服务于临床实验的标准数据指标模型，也是被业界和 FDA 广泛采用的标准。它规定了在临床实验中，原始数据收集之后的标准化的呈现方式。可能不同种类的药物，在实验中收集的数据样式是不一样的，&lt;strong&gt;但是经过 SDTM 标准化之后，相同类别的数据一定是相同的。&lt;/strong&gt;&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>（2022年11月过）SAS Advance 考试最新完全攻略！</title>
-      <link>https://xzywisdili.netlify.app/blog/20221108/2022-11-08-sasadvance/</link>
-      <pubDate>Tue, 08 Nov 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20221108/2022-11-08-sasadvance/</guid>
-      <description>&lt;p&gt;今天终于通过了 SAS Advance 的考试。有一些最新的备考和考试过程的经验可以跟大家分享一下。
-这篇攻略我会从两个方面来说，分别是&lt;strong&gt;备考篇&lt;/strong&gt;和&lt;strong&gt;考试篇&lt;/strong&gt;。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>工具人时刻</title>
-      <link>https://xzywisdili.netlify.app/blog/20191209/2019-12-09-smalltool/</link>
-      <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20191209/2019-12-09-smalltool/</guid>
-      <description>&lt;p&gt;昨天晚上师姐速报：「师弟，帮忙算个东西，用SAS写」。&lt;/p&gt;
+&lt;p&gt;SDTM（&lt;strong&gt;Study Data Tabulation Model&lt;/strong&gt;）是一个服务于临床实验的标准数据指标模型，也是被业界和 FDA 广泛采用的标准。它规定了在临床实验中，原始数据收集之后的标准化的呈现方式。可能不同种类的药物，在实验中收集的数据样式是不一样的，&lt;strong&gt;但是经过 SDTM 标准化之后，相同类别的数据一定是相同的。&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>（2022年11月过）SAS Advance 考试最新完全攻略！</title><link>https://xzywisdili.netlify.app/blog/20221108/2022-11-08-sasadvance/</link><pubDate>Tue, 08 Nov 2022 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20221108/2022-11-08-sasadvance/</guid><description>&lt;p&gt;今天终于通过了 SAS Advance 的考试。有一些最新的备考和考试过程的经验可以跟大家分享一下。
+这篇攻略我会从两个方面来说，分别是&lt;strong&gt;备考篇&lt;/strong&gt;和&lt;strong&gt;考试篇&lt;/strong&gt;。&lt;/p&gt;</description></item><item><title>工具人时刻</title><link>https://xzywisdili.netlify.app/blog/20191209/2019-12-09-smalltool/</link><pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20191209/2019-12-09-smalltool/</guid><description>&lt;p&gt;昨天晚上师姐速报：「师弟，帮忙算个东西，用SAS写」。&lt;/p&gt;
 &lt;p&gt;一开始对我来说可能不是什么难事，打开文件一看，陷入了深深的沉思。
-用一个截图说明：&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>我们怎么知道自己学会了？</title>
-      <link>https://xzywisdili.netlify.app/blog/20181208/2018-12-8-learnthoughts/</link>
-      <pubDate>Fri, 07 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20181208/2018-12-8-learnthoughts/</guid>
-      <description>&lt;p&gt;本科生活即将结束了。最后的一周日子里，主要在复习职业病学和精神病学，准备考试，一边又不想落下 SAS 的学习，当然还有其他杂七杂八的任务。在学习的时候，自然会想到一个问题就是：我们怎么知道自己学会了？&lt;/p&gt;</description>
-      
-    </item>
-    
-  </channel>
-</rss>
+用一个截图说明：&lt;/p&gt;</description></item><item><title>我们怎么知道自己学会了？</title><link>https://xzywisdili.netlify.app/blog/20181208/2018-12-8-learnthoughts/</link><pubDate>Fri, 07 Dec 2018 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20181208/2018-12-8-learnthoughts/</guid><description>&lt;p&gt;本科生活即将结束了。最后的一周日子里，主要在复习职业病学和精神病学，准备考试，一边又不想落下 SAS 的学习，当然还有其他杂七杂八的任务。在学习的时候，自然会想到一个问题就是：我们怎么知道自己学会了？&lt;/p&gt;</description></item></channel></rss>

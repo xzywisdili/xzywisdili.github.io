@@ -1,37 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>影评 on XZY&#39;s Blog</title>
-    <link>https://xzywisdili.netlify.app/categories/%E5%BD%B1%E8%AF%84/</link>
-    <description>Recent content in 影评 on XZY&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <copyright>© 2025 Xzywisdili</copyright>
-    <lastBuildDate>Sat, 26 Oct 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/categories/%E5%BD%B1%E8%AF%84/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>政客生活 101</title>
-      <link>https://xzywisdili.netlify.app/blog/20191026/2019-10-26-politicians/</link>
-      <pubDate>Sat, 26 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20191026/2019-10-26-politicians/</guid>
-      <description>&lt;p&gt;netflix 推出了一款新剧 &lt;a
-  href=&#34;https://movie.douban.com/subject/30140761/&#34;
-    target=&#34;_blank&#34;
-  &gt;政客（The Politician）&lt;/a&gt;。
-这部剧在国内并未激起太多波澜，也几乎未见有人对其讨论。得益于昨晚好友山神推荐，我打开了第一集竟没有停下来，一口气看完了第一季。&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>2018年，中国独立游戏，和他们</title>
-      <link>https://xzywisdili.netlify.app/blog/20180903/2018-9-3-indiagames/</link>
-      <pubDate>Mon, 03 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://xzywisdili.netlify.app/blog/20180903/2018-9-3-indiagames/</guid>
-      <description>&lt;p&gt;强烈推荐纪录片《独行》。&lt;/p&gt;</description>
-      
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>影评 on XZY's Blog</title><link>https://xzywisdili.netlify.app/categories/%E5%BD%B1%E8%AF%84/</link><description>Recent content in 影评 on XZY's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2025 Xzywisdili</copyright><lastBuildDate>Sat, 26 Oct 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/categories/%E5%BD%B1%E8%AF%84/index.xml" rel="self" type="application/rss+xml"/><item><title>政客生活 101</title><link>https://xzywisdili.netlify.app/blog/20191026/2019-10-26-politicians/</link><pubDate>Sat, 26 Oct 2019 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20191026/2019-10-26-politicians/</guid><description>&lt;p&gt;netflix 推出了一款新剧 &lt;a
+href="https://movie.douban.com/subject/30140761/"
+target="_blank"
+&gt;政客（The Politician）&lt;/a&gt;。
+这部剧在国内并未激起太多波澜，也几乎未见有人对其讨论。得益于昨晚好友山神推荐，我打开了第一集竟没有停下来，一口气看完了第一季。&lt;/p&gt;</description></item><item><title>2018年，中国独立游戏，和他们</title><link>https://xzywisdili.netlify.app/blog/20180903/2018-9-3-indiagames/</link><pubDate>Mon, 03 Sep 2018 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20180903/2018-9-3-indiagames/</guid><description>&lt;p&gt;强烈推荐纪录片《独行》。&lt;/p&gt;</description></item></channel></rss>
