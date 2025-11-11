@@ -1,0 +1,1511 @@
+<!doctype html>
+<html
+  lang="zh-cn"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="zh-cn">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>CDISC 标准（四）——SDTM 数据集详细分类 &middot; XZY&#39;s Blog</title>
+    <meta name="title" content="CDISC 标准（四）——SDTM 数据集详细分类 &middot; XZY&#39;s Blog">
+  
+
+  
+  
+  
+    <meta name="keywords" content="分享,SAS,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/blog/2023-05-02-cdiscnotes4/">
+  
+
+  
+  
+    <meta name="author" content="Xzywisdili">
+  
+  
+    
+      
+        
+          <link href="455358130@qq.com" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://github.com/xzywisdili" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://weibo.com/u/5253413750" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/blog/2023-05-02-cdiscnotes4/">
+  <meta property="og:site_name" content="XZY&#39;s Blog">
+  <meta property="og:title" content="CDISC 标准（四）——SDTM 数据集详细分类">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2023-05-02T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-05-02T00:00:00+00:00">
+    <meta property="article:tag" content="分享">
+    <meta property="article:tag" content="SAS">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="CDISC 标准（四）——SDTM 数据集详细分类">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.c6872292afd217c3fec21a497812c297f820816f69a0a5a62e374d9404d977d9843a95591a1b550b15b96f149868e92758f3108e31411fa4e199074654ef72db.css"
+    integrity="sha512-xocikq/SF8P&#43;whpJeBLCl/gggW9poKWmLjdNlATZd9mEOpVZGhtVCxW5bxSYaOknWPMQjjFBH6ThmQdGVO9y2w==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+    
+    <script src="/js/a11y.min.d9acff2dc1bb4b339c2f60872250621042d0b39aca5db850c177787830ac6287bac6ae82e4d148444576ffa8f3dbc1d0e1ef813822faa515639657c3c605d63d.js" integrity="sha512-2az/LcG7SzOcL2CHIlBiEELQs5rKXbhQwXd4eDCsYoe6xq6C5NFIREV2/6jz28HQ4e&#43;BOCL6pRVjllfDxgXWPQ=="></script>
+  
+  
+  
+  
+    
+    <script
+      type="text/javascript"
+      src="/js/zen-mode.min.9814dee9614d32aeb56239d118edfe20acd6231424f9b19c2dd48835038414130a5e946c0d1c9087d60e60e31840c9babfd217e3d4b95643dc8d651a71ccdf4a.js"
+      integrity="sha512-mBTe6WFNMq61YjnRGO3&#43;IKzWIxQk&#43;bGcLdSINQOEFBMKXpRsDRyQh9YOYOMYQMm6v9IX49S5VkPcjWUacczfSg=="></script>
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.b4b722fcb5d42f34f52b30a92f3521b69f403ca9d96d0d6179eb537cb870f5d83fdf1fe836688d95d5c99fefbda4170487711006e56051fa67ea00da10521721.js" integrity="sha512-tLci/LXULzT1KzCpLzUhtp9APKnZbQ1heetTfLhw9dg/3x/oNmiNldXJn&#43;&#43;9pBcEh3EQBuVgUfpn6gDaEFIXIQ=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.f16cf48651044bc66625c8008eb5605cc702530530daa081ce7e495e50adf778bef6cd0747382983caf5e5cc745c819dd7a969e17e545119dff14346f4fcb977.js"
+      integrity="sha512-8Wz0hlEES8ZmJcgAjrVgXMcCUwUw2qCBzn5JXlCt93i&#43;9s0HRzgpg8r15cx0XIGd16lp4X5UURnf8UNG9Py5dw=="
+      data-copy="复制"
+      data-copied="已复制"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.03cb160e3cfdb2667a2e2c80d283bebcf63ff8bbc4b629c9ab2babf6fae1d0c07ad470edae783efa4fabda2ac01c58d60e63b98b3c336be8208460f08f4354f5.js" integrity="sha512-A8sWDjz9smZ6LiyA0oO&#43;vPY/&#43;LvEtinJqyur9vrh0MB61HDtrng&#43;&#43;k&#43;r2irAHFjWDmO5izwza&#43;gghGDwj0NU9Q=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Blogs",
+    "name": "CDISC 标准（四）——SDTM 数据集详细分类",
+    "headline": "CDISC 标准（四）——SDTM 数据集详细分类",
+    
+    
+    "inLanguage": "zh-cn",
+    "url" : "http:\/\/localhost:1313\/blog\/2023-05-02-cdiscnotes4\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Xzywisdili"
+    },
+    "copyrightYear": "2023",
+    "dateCreated": "2023-05-02T00:00:00\u002b00:00",
+    "datePublished": "2023-05-02T00:00:00\u002b00:00",
+    
+    "dateModified": "2023-05-02T00:00:00\u002b00:00",
+    
+    "keywords": ["分享","SAS"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "454"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        跳过正文
+      </a>
+    </div>
+    
+    
+      <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 z-100">
+  <div
+    id="menu-blur"
+    class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom bg-neutral dark:bg-neutral-800"></div>
+  <div class="relative m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between py-6 md:justify-start gap-x-3 pt-[2px] pr-2 md:pr-4 pb-[3px] pl-0">
+  
+  
+    
+    
+      <div>
+        <a href="/" class="flex">
+          <span class="sr-only">XZY&rsquo;s Blog</span>
+          
+            <img
+              src="/images/logo.png"
+              width="357"
+              height="357"
+              class="logo max-h-[5rem] max-w-[5rem] object-scale-down object-left nozoom"
+              alt="">
+          
+        </a>
+      </div>
+    
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+        <a href="/" class="text-base font-medium">
+          XZY&rsquo;s Blog
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="/blog/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="博客"
+  title="Blogs">
+  
+  
+    <p class="text-base font-medium">
+      博客
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href=""
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="关于"
+  title="">
+  
+  
+    <p class="text-base font-medium">
+      关于
+    </p>
+  
+</a>
+
+
+
+      
+    
+
+    
+
+    
+      <div class="flex items-center">
+    <button
+      id="desktop-a11y-toggle"
+      aria-label="Open accessibility panel"
+      aria-expanded="false"
+      type="button"
+      class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+      role="button"
+      aria-pressed="false">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm161.5-86.1c-12.2-5.2-26.3 .4-31.5 12.6s.4 26.3 12.6 31.5l11.9 5.1c17.3 7.4 35.2 12.9 53.6 16.3l0 50.1c0 4.3-.7 8.6-2.1 12.6l-28.7 86.1c-4.2 12.6 2.6 26.2 15.2 30.4s26.2-2.6 30.4-15.2l24.4-73.2c1.3-3.8 4.8-6.4 8.8-6.4s7.6 2.6 8.8 6.4l24.4 73.2c4.2 12.6 17.8 19.4 30.4 15.2s19.4-17.8 15.2-30.4l-28.7-86.1c-1.4-4.1-2.1-8.3-2.1-12.6l0-50.1c18.4-3.5 36.3-8.9 53.6-16.3l11.9-5.1c12.2-5.2 17.8-19.3 12.6-31.5s-19.3-17.8-31.5-12.6L338.7 175c-26.1 11.2-54.2 17-82.7 17s-56.5-5.8-82.7-17l-11.9-5.1zM256 160a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></svg>
+</span>
+    </button>
+
+    <div id="desktop-a11y-overlay" class="fixed inset-0 z-500 hidden"></div>
+
+    <div
+      id="desktop-a11y-panel"
+      role="dialog"
+      aria-labelledby="desktop-a11y-panel-title"
+      class="a11y-panel-enter fixed hidden z-500 p-6 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 rounded-lg shadow-xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700"
+      style="min-width: 20rem;">
+      <div class="flex items-center justify-between mb-6">
+        <h3
+          id="desktop-a11y-panel-title"
+          class="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
+          无障碍设定
+        </h3>
+        <button
+          id="desktop-a11y-close"
+          class="text-neutral-500 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200"
+          aria-label="Close a11y panel">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="space-y-5">
+        
+        
+        
+        
+          
+        
+        
+          <div class="flex items-center justify-between">
+            <label for="desktop-disable-blur" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+              禁用模糊效果
+            </label>
+            <div class="ios-toggle">
+              <input type="checkbox" id="desktop-disable-blur">
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <label for="desktop-underline-links" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+              显示链接下划线
+            </label>
+            <div class="ios-toggle">
+              <input type="checkbox" id="desktop-underline-links">
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <label for="desktop-zen-mode" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+              啟用阅读模式
+            </label>
+            <div class="ios-toggle">
+              <input type="checkbox" id="desktop-zen-mode">
+            </div>
+          </div>
+
+
+        <div class="flex items-center justify-between">
+          <label
+            for="desktop-font-size-select"
+            class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+            字体大小
+          </label>
+          <select
+            id="desktop-font-size-select"
+            class="border rounded-lg px-3 py-1.5 pr-8 text-neutral-900 text-sm dark:bg-neutral-700 dark:text-neutral-200 focus:ring-primary-500 focus:border-primary-500">
+            
+            
+              <option value="default">default</option>
+            
+              <option value="12px">12px</option>
+            
+              <option value="14px">14px</option>
+            
+              <option value="16px">16px</option>
+            
+              <option value="18px">18px</option>
+            
+              <option value="20px">20px</option>
+            
+              <option value="22px">22px</option>
+            
+              <option value="24px">24px</option>
+            
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="搜索 (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+      <div class="flex items-center">
+    <button
+      id="mobile-a11y-toggle"
+      aria-label="Open accessibility panel"
+      aria-expanded="false"
+      type="button"
+      class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+      role="button"
+      aria-pressed="false">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm161.5-86.1c-12.2-5.2-26.3 .4-31.5 12.6s.4 26.3 12.6 31.5l11.9 5.1c17.3 7.4 35.2 12.9 53.6 16.3l0 50.1c0 4.3-.7 8.6-2.1 12.6l-28.7 86.1c-4.2 12.6 2.6 26.2 15.2 30.4s26.2-2.6 30.4-15.2l24.4-73.2c1.3-3.8 4.8-6.4 8.8-6.4s7.6 2.6 8.8 6.4l24.4 73.2c4.2 12.6 17.8 19.4 30.4 15.2s19.4-17.8 15.2-30.4l-28.7-86.1c-1.4-4.1-2.1-8.3-2.1-12.6l0-50.1c18.4-3.5 36.3-8.9 53.6-16.3l11.9-5.1c12.2-5.2 17.8-19.3 12.6-31.5s-19.3-17.8-31.5-12.6L338.7 175c-26.1 11.2-54.2 17-82.7 17s-56.5-5.8-82.7-17l-11.9-5.1zM256 160a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></svg>
+</span>
+    </button>
+
+    <div id="mobile-a11y-overlay" class="fixed inset-0 z-500 hidden"></div>
+
+    <div
+      id="mobile-a11y-panel"
+      role="dialog"
+      aria-labelledby="mobile-a11y-panel-title"
+      class="a11y-panel-enter fixed hidden z-500 p-6 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 rounded-lg shadow-xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700"
+      style="min-width: 20rem;">
+      <div class="flex items-center justify-between mb-6">
+        <h3
+          id="mobile-a11y-panel-title"
+          class="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
+          无障碍设定
+        </h3>
+        <button
+          id="mobile-a11y-close"
+          class="text-neutral-500 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200"
+          aria-label="Close a11y panel">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="space-y-5">
+        
+        
+        
+        
+          
+        
+        
+          <div class="flex items-center justify-between">
+            <label for="mobile-disable-blur" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+              禁用模糊效果
+            </label>
+            <div class="ios-toggle">
+              <input type="checkbox" id="mobile-disable-blur">
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <label for="mobile-underline-links" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+              显示链接下划线
+            </label>
+            <div class="ios-toggle">
+              <input type="checkbox" id="mobile-underline-links">
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <label for="mobile-zen-mode" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+              啟用阅读模式
+            </label>
+            <div class="ios-toggle">
+              <input type="checkbox" id="mobile-zen-mode">
+            </div>
+          </div>
+
+
+        <div class="flex items-center justify-between">
+          <label
+            for="mobile-font-size-select"
+            class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+            字体大小
+          </label>
+          <select
+            id="mobile-font-size-select"
+            class="border rounded-lg px-3 py-1.5 pr-8 text-neutral-900 text-sm dark:bg-neutral-700 dark:text-neutral-200 focus:ring-primary-500 focus:border-primary-500">
+            
+            
+              <option value="default">default</option>
+            
+              <option value="12px">12px</option>
+            
+              <option value="14px">14px</option>
+            
+              <option value="16px">16px</option>
+            
+              <option value="18px">18px</option>
+            
+              <option value="20px">20px</option>
+            
+              <option value="22px">22px</option>
+            
+              <option value="24px">24px</option>
+            
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="搜索 (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 me-1">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none text-end max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/blog/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="博客"
+    title="Blogs">
+    
+    
+      <p class="text-bg font-bg">
+        博客
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href=""
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="关于"
+    title="">
+    
+    
+      <p class="text-bg font-bg">
+        关于
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+  <script>
+    (function () {
+      var $mainmenu = $(".main-menu");
+      var path = window.location.pathname;
+      $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
+        $(e).children("p").addClass("active");
+      });
+    })();
+  </script>
+
+
+  </div>
+</div>
+
+
+<script
+  type="text/javascript"
+  src="/js/background-blur.min.00a57c73ea12f2cab2980c3c3d649e89f6d82f190f74bbe2b67f2f5e39ab7d032ece47086400ca05396758aace13299da49aca43ea643d2625e62c506267a169.js"
+  integrity="sha512-AKV8c&#43;oS8sqymAw8PWSeifbYLxkPdLvitn8vXjmrfQMuzkcIZADKBTlnWKrOEymdpJrKQ&#43;pkPSYl5ixQYmehaQ=="
+  data-blur-id="menu-blur"></script>
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        CDISC 标准（四）——SDTM 数据集详细分类
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2023-05-02T00:00:00&#43;00:00">May 2, 2023</time><span class="px-2 text-primary-500">&middot;</span><span>454 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">3 分钟</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="Xzywisdili"
+        src="/images/logo_hu_f5df3f2aa4a371d1.png"
+        data-zoom-src="/images/logo.png">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        作者
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Xzywisdili
+      </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="455358130@qq.com"
+          target="_blank"
+          aria-label="Email"
+          title="Email"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/xzywisdili"
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://weibo.com/u/5253413750"
+          target="_blank"
+          aria-label="Weibo"
+          title="Weibo"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">总结
+    <div id="总结" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>本笔记的主要内容：</p>
+<ul>
+<li>介绍 SDTM 标准下的七个大类别，以及主要包括的数据集；</li>
+<li>梳理两个最重要的数据集：AE（副作用数据集）和 LB（实验室检测结果数据集）。</li>
+</ul>
+<p>SDTM 的全称是 SDTM Standard dataset tabulation model，即实验数据标准化的模型，在之前的笔记中有一个<a
+  href="https://www.xzywisdili.com/post/2023-04-29-cdiscnote2/"
+    target="_blank"
+  >概述的介绍</a>。SDTM 标准力图能够尽可能覆盖在临床实验进行过程中所需要收集到的所有数据和相关信息，因此也详细地设计了各种不同分类的大类别和数据集。</p>
+<p>在这个分类下，总共包括<strong>七个大类别和 44 个数据集</strong>。每一种数据集都属于唯一一个类别。七个大类别“SIFEFTR”：</p>
+<ul>
+<li>特殊目的类：Special Purpose</li>
+<li>干涉类：Intervention</li>
+<li>发现类：Findings</li>
+<li>发现相关类：Findings About</li>
+<li>事件类：Events</li>
+<li>实验设计类：Study Trial</li>
+<li>关系类：Relationship</li>
+</ul>
+<p>下面分门别类介绍每一种类型。</p>
+
+<h2 class="relative group">特殊目的类 Special Purpose
+    <div id="特殊目的类-special-purpose" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%89%b9%e6%ae%8a%e7%9b%ae%e7%9a%84%e7%b1%bb-special-purpose" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>特殊目的类：包括和实验参与者本人相关的数据，无法归类到其他类别。主要包括以下几个数据集：</p>
+<ul>
+<li>CO：评价数据集，Comments**，医生手写或者补充的文本备注和记录，需要与其他数据集相连接；如果手写的记录超过 CDISC 规定的最长值长度 200 个字符，就需要创建新的 COVAL1，COVAL2 变量保存字符，以此类推，每个变量容纳 200 个字符；</li>
+<li>DM：人口统计学，Demographics，用于保存患者的基础信息，比如患者编号、性别、国籍、种族、实验开始时间等等，在之前的内容中有所记录；</li>
+<li>SV：患者来访数据，Subject Visit</li>
+<li>SE，患者时期元素，Subject Element
+<ul>
+<li>一个患者在整个临床实验过程中需要来访多次。一般是从 Screen 和纳入开始，之后的来访依次是基线，第一次来访，第二次来访等，直到实验结束。在服用药物过后，因为药物在人体内有残留期，也需要几次患者来访，来观察是否具有副作用和其他治疗效果。</li>
+<li><strong>患者来访的时间数据都需要记录在 SV 数据集中</strong>。每个患者<strong>在实验过程中经历的每个时期和元素的时间信息</strong>，这些数据被放在 SE 中。</li>
+</ul>
+</li>
+</ul>
+
+<h2 class="relative group">干涉类 Interventions
+    <div id="干涉类-interventions" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%b9%b2%e6%b6%89%e7%b1%bb-interventions" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>干涉类主要包括<strong>对患者有影响的行为</strong>的相关数据，包括以下几个数据集：</p>
+<ul>
+<li><strong>CM：伴随用药 Concomitant and prior medications</strong>
+<ul>
+<li>参加临床实验的患者，如果有其他疾病，需要服用已经上市的药物，就需要在数据集中记录伴随用药的相关信息；如果是和癌症相关的临床实验，可能需要让受试者服用一种统计的抗癌药物，再服用待实验的药物，那么这个统一服用的药物也需要放置在 CM 数据集中；</li>
+<li>CM 数据集存放<strong>患者服用的其他药物（非本实验药物）的</strong>名称、类别、剂量、计量单位、频率、药物类型（胶囊/饮剂）等数据；</li>
+</ul>
+</li>
+<li><strong>EX：实验用药 Exposure</strong>
+<ul>
+<li><strong>实验计划中</strong>药物的使用情况；</li>
+<li>根据实验设计来确定，核心变量包括 EXTRT（药物的名称），EXDOSE（药物的剂量），EXDOSU（药物剂量的单位），EXDOSFRQ（药物按此剂量服用的频率） 和 EXDOSFRM（药物的形式，液体/胶囊/含服片）；</li>
+</ul>
+</li>
+<li><strong>EC：实际实验用药 Exposure as Collected</strong>
+<ul>
+<li>实际中**药物的使用情况</li>
+<li>由 ECOCCUR 变量指定该次是否服药，ECDOSE 记录剂量，ECDOSU 记录剂量单位；</li>
+<li><strong>EC 和 EX 数据集的结构基本相同，实际分析使用 EX 数据集</strong>，因为根据实验设计而来的</li>
+</ul>
+</li>
+<li><strong>PR：过程 Procedures</strong>
+<ul>
+<li>患者治疗和诊断相关的过程</li>
+<li>比如患者参与心血管相关的临床实验，中间去口腔科诊断并拔了智齿，这个过程无法判断是否与临床实验相关，所以也要记录下来。</li>
+<li>核心变量：PRTRT，记录做的手术名称</li>
+<li>PRSTDTC，PRENDTC，PRSTDY，PRENDY 分别对应手术开始的日期和结束的日期，以及对应的天数；</li>
+</ul>
+</li>
+<li>SU：物质使用 Substance Use
+<ul>
+<li>其他非药物的物质的使用情况，比如最常见的咖啡（含有咖啡因），吸烟、喝酒；</li>
+<li>主要包括以下几个变量：SUTRT（使用物质的名称，包括 CIGARETTES，COFFEE）、SUCAT（使用物质所属的大类）、SUDOSE（这些物质使用的数量）、SUDOSEU（使用物质的数量单位）、SUDOSFRQ（使用物质的频率）、SUSTAT，SUREASND（数值没有被记录和没有记录的原因）</li>
+</ul>
+</li>
+</ul>
+
+<h2 class="relative group">事件类 Events
+    <div id="事件类-events" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%ba%8b%e4%bb%b6%e7%b1%bb-events" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>事件类，代表计划之外的事件，总共包括 6 个数据集：</p>
+<ul>
+<li>AE：副作用，Adverse Events</li>
+<li>CE：临床事件，Clinical Events</li>
+<li>DS：处置，Disposition</li>
+<li>DV：实验计划偏差，Protocol Deviations</li>
+<li>HO：医疗事件，Healthcare Encounters</li>
+<li>MH：既往药史，Medical History</li>
+</ul>
+<p>其中最最重要的是 AE，也就是副作用数据集。</p>
+<p>AE 的主要变量包括四种类型：</p>
+<ul>
+<li>第一类：副作用的名称和类别
+<ul>
+<li>AE 中，每个副作用不仅要求记录它的名称，还需要记录所属的更高级身体组织和系统。基本上原始数据集会提供这些数据，如果需要查询，每个副作用的详细分类信息存在一个名为 MedDRA 的文档之中；</li>
+<li>AETERM（副作用名称）、AEDECOD（副作用标准名称）</li>
+</ul>
+</li>
+<li>第二类：属性类变量
+<ul>
+<li>相当于给每条副作用的属性进行记录，比如 AESEV（副作用严重程度），取值为 3 种，由轻到重分别是 MILD，MODERATE 和 SEVERE；</li>
+<li>AEACN（副作用发生后采取的行动，包括药量减少、暂时停药、退出实验等）、AEOUT（副作用的结果，包括解决中、已解决、甚至患者死亡）、AEREL（副作用是否与药物相关）；</li>
+</ul>
+</li>
+<li>第三类：评价类变量
+<ul>
+<li>往往用 Flag 来表示是否满足标量所描述的情况，Y 表示符合，N 表示不符合；</li>
+<li>比如 AESCONG 表示是否导致了胎儿先天性异常和缺陷；AESDISAB 表示是否导致了残疾，AESDTH 表示是否导致死亡，AESHOSP 表示是否导致住院等；</li>
+</ul>
+</li>
+<li>第四类：时间类变量
+<ul>
+<li>AESTDTC 和 AEENDTC 表示副作用开始和结束的时间；</li>
+<li>对应的 DY 类变量：AESTDY 和 AEENDY；</li>
+<li>AEDUR 表示副作用持续时间的变量。</li>
+</ul>
+</li>
+</ul>
+
+<h2 class="relative group">发现类 Findings
+    <div id="发现类-findings" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8f%91%e7%8e%b0%e7%b1%bb-findings" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>发现类中包括最多数量的数据集。其中，大部分数据集只用于特殊疾病或者药物中，真正常用的发现类数据集如下：</p>
+<ul>
+<li>EG：心电图测试指标**，ECG Test Results</li>
+<li><strong>IE：每名患者纳入排除标准的情况</strong>，Inclusion/Exclusion Creterion Not Met</li>
+<li>**LB：血检尿检指标 Laboratory Test Results</li>
+<li>QS：调查问卷 Questionnaires**，在涉及生活质量的实验当中，QS 往往是最重要的数据集之一；</li>
+<li>**VS：记录人体的一些基本信息 Vital Signs，包括身高、体重、脉搏、血压等。</li>
+</ul>
+<p>而关于癌症的发现类数据集有下列几项：</p>
+<ul>
+<li>TU：Tumor Identification</li>
+<li>TR：Tumor Results</li>
+<li>RS：Disease Response</li>
+</ul>
+<p>发现类数据集一般有如下通用的结构，其中 XX 表示对应的数据集名字：</p>
+<ul>
+<li>检测的名称：XXTEST；</li>
+<li>检测名称的标准缩写：XXTESTCD，CDISC 中规定或者药厂自行规定；</li>
+<li>检测分类：XXCAT，XXSCAT；</li>
+<li>检测结果和对应的单位：XXORRES，XXORRESU；</li>
+<li>检测的标准化结果（取国际通用单位）：XXSTRESC：字符型结果，XXSTRESN：数值型结果，XXSTRESU：标准储存单位；</li>
+<li>患者来访的名称和次数：VISIT，VISITNUM（没有前缀）；</li>
+<li>时间类型变量：XXDTC/DY（检测时间和距离实验开始天数），比如 LBDTC 代表记录血检/尿检的检测时间，QSDTC 代表记录问卷填写的检测时间。</li>
+</ul>
+
+<h2 class="relative group">发现相关类数据集 Findings About
+    <div id="发现相关类数据集-findings-about" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8f%91%e7%8e%b0%e7%9b%b8%e5%85%b3%e7%b1%bb%e6%95%b0%e6%8d%ae%e9%9b%86-findings-about" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>也算是发现类的一种类型，之所以叫发现相关类是因为收集的数据不像发现类那么标准，主要包括以下两类：</p>
+<ul>
+<li>FA：Findings About，除了 FATEST 以外还有一个 FAOBJ，表示实验的对象</li>
+<li>SR：Skin Response</li>
+</ul>
+
+<h2 class="relative group">实验设计类 Trial design
+    <div id="实验设计类-trial-design" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%ae%9e%e9%aa%8c%e8%ae%be%e8%ae%a1%e7%b1%bb-trial-design" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>实验设计类记录实验设计相关的内容。这些数据一般都是从统计分析计划的 SAP 中直接获得，查看这些数据集可以帮我们理解实验是如何设计的。主要包括如下 6 个数据集：</p>
+<ul>
+<li>TA：实验分组 Trial Arms</li>
+<li>TD：实验疾病数据 Trial Disease Assessment</li>
+<li>TE：实验时期元素 Trial Elements</li>
+<li>TV：实验来访计划 Trial Visits</li>
+<li>TI：实验纳入排除标准 Trial Inclusion / Exclusion Criteria</li>
+<li>TS：实验总结 Trial Summary</li>
+</ul>
+
+<h2 class="relative group">Relationship 关系类
+    <div id="relationship-关系类" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#relationship-%e5%85%b3%e7%b3%bb%e7%b1%bb" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>主要包括以下 2 个数据集：</p>
+<ul>
+<li>RELREC：关系数据，比如一个患者的副作用被医生发现是由于伴随用药表引起的，那么应该有一个记录将副作用和伴随用药记录连接起来。</li>
+<li>SUPP：补充数据集，之前讲过，可以用于补充任何一个标准 SDTM 数据集，命名为 SUPP + XX（关联的数据集名字）；</li>
+</ul>
+
+<h2 class="relative group">其他内容
+    <div id="其他内容" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%85%b6%e4%bb%96%e5%86%85%e5%ae%b9" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">SUPP 补充数据集
+    <div id="supp-补充数据集" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#supp-%e8%a1%a5%e5%85%85%e6%95%b0%e6%8d%ae%e9%9b%86" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>每一个 SDTM 数据集都可以用一个补充数据集，用来存放<strong>与主数据集相关的数据</strong>；</p>
+<ul>
+<li>名称是 SUPP + XX（原始数据集名字），比如 LB 对应的就是 SUPPLB；</li>
+<li>举例：
+<ul>
+<li>SUPPDM 中放置实验人口的 FLAG（包括 ITT，PPROT）;</li>
+<li>SUPPAE 放置是否是实验期间副作用和非实验期间副作用的标识 TRTEM；</li>
+</ul>
+</li>
+</ul>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Snipaste_2023-05-03_14-28-22.png"
+    src="https://s2.loli.net/2023/05/03/Kzeh2c3TsIyH4MN.png"
+    ></figure>
+<p>SUPP 数据集下面总共有 10 个变量：</p>
+<ul>
+<li>STUDYID，USUBJID：通用变量，不赘述；</li>
+<li>RDOMAIN：对应的主数据集，举例，如果对应的是 AE，RDOMAIN 值为 AE；</li>
+<li>IDVAR，IDVARVAL：在每名患者有多条记录的时候使用，需要指出对应主数据集的哪条记录，比如如果需要对应 AE 中的 AESEQ，那么 IDVAR 的值就是 AESEQ，IDVARVAL 的值就是对应的记录条数（但需要注意转化为字符型）；</li>
+<li>QNAM：描述一下所定义的值是什么意思，但只能使用不长于 8 位数的字符；</li>
+<li>QLABEL：不超过 40 个字符来描述这个值是什么意思；</li>
+<li>QVAL：具体的数据值是多少；</li>
+<li>QORIG：这个值是如何获取的，比如 CRF（原始数据收集）、ASSIGNED（根据一些条件直接赋值）、DERIVED（通过计算和逻辑分类得到的）；</li>
+<li>QEVAL：Evaluator，表示谁来完成的这次变量；</li>
+</ul>
+<p>实战创建一个补充数据集 SUPPAE，以便加深理解：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-SAS" data-lang="SAS"><span class="line"><span class="cl"><span class="kr">data </span>ae;
+</span></span><span class="line"><span class="cl">  <span class="k">set</span> data<span class="m">.</span>ae_trtem;
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="k">input</span>(rfstdtc, yyddmm10.) &lt;= <span class="k">input</span>(<span class="nb">substr(</span>aestdtc, <span class="m">1</span>, <span class="m">10</span>), yymmdd10.) &lt;= <span class="k">input</span>(rfendtc, yymmdd10.) + <span class="m">14</span> <span class="k">then</span> trtem=<span class="s">&#39;Y&#39;</span>;
+</span></span><span class="line"><span class="cl">  <span class="k">else</span> trtem=<span class="s">&#39;N&#39;</span><span class="kr">;
+</span></span></span><span class="line"><span class="cl"><span class="kr">run;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">options</span> validvarname=upcase<span class="kr">;
+</span></span></span><span class="line"><span class="cl"><span class="kr">data </span>suppae;
+</span></span><span class="line"><span class="cl">  <span class="k">retain</span> studyid rdomain usubjid idvar idvarval qnam qlabel qval qorig qeval;
+</span></span><span class="line"><span class="cl">  <span class="k">set</span> ae;
+</span></span><span class="line"><span class="cl">  rdomain = <span class="s">&#39;AE&#39;</span>;
+</span></span><span class="line"><span class="cl">  idvar = <span class="s">&#39;AESEQ&#39;</span>;
+</span></span><span class="line"><span class="cl">  idvarval = strip(<span class="k">put</span>(aeseq, best.));
+</span></span><span class="line"><span class="cl">  qnam = <span class="s">&#39;TRTEM&#39;</span>;
+</span></span><span class="line"><span class="cl">  qlabel = <span class="s">&#39;Treatment-Emergent Adverse Event&#39;</span>;
+</span></span><span class="line"><span class="cl">  qval = trtem;
+</span></span><span class="line"><span class="cl">  qorig = <span class="s">&#39;DERIVED&#39;</span>;
+</span></span><span class="line"><span class="cl">  qeval = <span class="s">&#39;&#39;</span>;
+</span></span><span class="line"><span class="cl">  <span class="k">keep</span> studyid usubjid rdomain idvar idvarval qnam qlabel qval qorig qeval<span class="kr">;
+</span></span></span><span class="line"><span class="cl"><span class="kr">run;</span>
+</span></span></code></pre></div>
+<h3 class="relative group">自定义数据集
+    <div id="自定义数据集" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%87%aa%e5%ae%9a%e4%b9%89%e6%95%b0%e6%8d%ae%e9%9b%86" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>CUSTOM DOMAIN 自定义数据集。因为临床试验毕竟有一些不同，为了保留自由度，SDTM 提供了自定义数据集允许创建一些需要定义的数据集。</p>
+<p>在创建自定义数据集时，需要遵守以下步骤：</p>
+<ul>
+<li><strong>仔细阅读 SDTM IG 文件</strong>，查看是否自己想要使用的变量内容确实无法归类到任何一个已经提供的标准数据集之中；</li>
+<li>确定自己的数据集类别，是干涉类，发现类还是事件类，给自定义数据集搭建一个基本的框架；</li>
+<li>找到每个类别中的几个数据集，找到共同存在的 required 变量，看看自己的数据如何放置在这些变量之中；如果实在无法容纳，就添加额外的变量。比如 LBFAST 变量表示是否空腹，如果你的数据集中也有需要表示是否空腹的变量，也需要使用 XXFAST 作为变量名。</li>
+</ul>
+<p>同时在创建自定义数据集需要注意：</p>
+<ul>
+<li><strong>数据集命名以 XYZ 开头+两位大写字母</strong>，可以保证在所有标准数据集之后；</li>
+<li><strong>部分变量的命名依然需要遵守标准</strong>，比如 STUDYID 和 USUBJID；</li>
+<li><strong>不同分类的数据集的变量命名规则不同</strong>，比如干涉类里干涉的名称放在 TRT 变量中、事件类里事件名称放置在 TERM 和 DECODE 这两个变量中，发现类所有的测试名放在 TEST 变量中，测量值和单位放在 ORRES 和 ORRESU 中。</li>
+</ul>
+
+<h3 class="relative group">控制术语 Controlled Terminology
+    <div id="控制术语-controlled-terminology" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%8e%a7%e5%88%b6%e6%9c%af%e8%af%ad-controlled-terminology" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>控制术语（Controlled Terminology） 是对 SDTM 里某些特定变量的值进行规范的一套规定。在查看 SDTM IG 的时候，经常会看到 Controlled Terms 这一项中有一些不为空的部分：</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Snipaste_2023-05-03_14-28-22.png"
+    src="https://s2.loli.net/2023/05/03/Kzeh2c3TsIyH4MN.png"
+    ></figure>
+<p>这就表示这个变量的值并不是我们想写什么就能写什么，<strong>必须按照给定的规范进行赋值</strong>。在 SDTM IG 文件中点击这些蓝色的链接，再结合搜索，就可以查看详细的规定：</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Snipaste_2023-05-03_15-02-18.png"
+    src="https://s2.loli.net/2023/05/03/qWtvQJbNIZg14lH.png"
+    ></figure>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_blog\2023-05-02-CDISCnotes4.md"
+          data-oid-likes="likes_blog\2023-05-02-CDISCnotes4.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/blog/2023-05-02-cdiscnotes5/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;CDISC 标准（五）——ADaM 标准概述
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2023-05-02T00:00:00&#43;00:00">May 2, 2023</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/blog/2023-05-08-adslexample/">
+              <span class="leading-6">
+                ADSL 数据集的建立：练习示例&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2023-05-07T00:00:00&#43;00:00">May 7, 2023</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部"
+    title="返回顶部">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2025
+          Xzywisdili
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        由 <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a> 强力驱动
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="搜索"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="关闭 (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

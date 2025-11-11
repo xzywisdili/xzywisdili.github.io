@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>随想 on XZY&#39;s Blog</title>
+    <link>https://xzywisdili.netlify.app/categories/%E9%9A%8F%E6%83%B3/</link>
+    <description>Recent content in 随想 on XZY&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2025 Xzywisdili</copyright>
+    <lastBuildDate>Sat, 23 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/categories/%E9%9A%8F%E6%83%B3/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>欲速则不达</title>
+      <link>https://xzywisdili.netlify.app/blog/20190223/2019-02-23-speededucation/</link>
+      <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20190223/2019-02-23-speededucation/</guid>
+      <description>&lt;p&gt;越来越多的速成教程出现在我们的视野中。高中时期，贴吧就有不少关于“如何在一个月内高考数学提高XX分”这样的内容。
+而之后，像这样的内容越来越多，无论是程序相关，考研，摄影，视频后期，音乐制作等等领域，都出现了诸如此类的速成教程。
+似乎跟着这些内容学完，就能在短时间内摇身一变，成功升级为这一领域的大神。&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

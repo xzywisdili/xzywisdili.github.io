@@ -1,0 +1,1668 @@
+<!doctype html>
+<html
+  lang="zh-cn"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="zh-cn">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>R 语言基础入门 &middot; XZY&#39;s Blog</title>
+    <meta name="title" content="R 语言基础入门 &middot; XZY&#39;s Blog">
+  
+
+  
+  
+  
+    <meta name="keywords" content="R 语言,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/blog/2018-04-02-rlearningnote/">
+  
+
+  
+  
+    <meta name="author" content="Xzywisdili">
+  
+  
+    
+      
+        
+          <link href="455358130@qq.com" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://github.com/xzywisdili" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://weibo.com/u/5253413750" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/blog/2018-04-02-rlearningnote/">
+  <meta property="og:site_name" content="XZY&#39;s Blog">
+  <meta property="og:title" content="R 语言基础入门">
+  <meta property="og:description" content="这篇《R 语言基础入门》是我在别人的博客上看到的，完成时间不会晚于 2011 年。觉得总结得相当不错，于是搬运到我的博客上。需要提到，有些链接可能已经失效。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2018-04-02T00:00:00+00:00">
+    <meta property="article:modified_time" content="2018-04-02T00:00:00+00:00">
+    <meta property="article:tag" content="R 语言">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="R 语言基础入门">
+  <meta name="twitter:description" content="这篇《R 语言基础入门》是我在别人的博客上看到的，完成时间不会晚于 2011 年。觉得总结得相当不错，于是搬运到我的博客上。需要提到，有些链接可能已经失效。">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.c6872292afd217c3fec21a497812c297f820816f69a0a5a62e374d9404d977d9843a95591a1b550b15b96f149868e92758f3108e31411fa4e199074654ef72db.css"
+    integrity="sha512-xocikq/SF8P&#43;whpJeBLCl/gggW9poKWmLjdNlATZd9mEOpVZGhtVCxW5bxSYaOknWPMQjjFBH6ThmQdGVO9y2w==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+    
+    <script src="/js/a11y.min.d9acff2dc1bb4b339c2f60872250621042d0b39aca5db850c177787830ac6287bac6ae82e4d148444576ffa8f3dbc1d0e1ef813822faa515639657c3c605d63d.js" integrity="sha512-2az/LcG7SzOcL2CHIlBiEELQs5rKXbhQwXd4eDCsYoe6xq6C5NFIREV2/6jz28HQ4e&#43;BOCL6pRVjllfDxgXWPQ=="></script>
+  
+  
+  
+  
+    
+    <script
+      type="text/javascript"
+      src="/js/zen-mode.min.9814dee9614d32aeb56239d118edfe20acd6231424f9b19c2dd48835038414130a5e946c0d1c9087d60e60e31840c9babfd217e3d4b95643dc8d651a71ccdf4a.js"
+      integrity="sha512-mBTe6WFNMq61YjnRGO3&#43;IKzWIxQk&#43;bGcLdSINQOEFBMKXpRsDRyQh9YOYOMYQMm6v9IX49S5VkPcjWUacczfSg=="></script>
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.b4b722fcb5d42f34f52b30a92f3521b69f403ca9d96d0d6179eb537cb870f5d83fdf1fe836688d95d5c99fefbda4170487711006e56051fa67ea00da10521721.js" integrity="sha512-tLci/LXULzT1KzCpLzUhtp9APKnZbQ1heetTfLhw9dg/3x/oNmiNldXJn&#43;&#43;9pBcEh3EQBuVgUfpn6gDaEFIXIQ=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.f16cf48651044bc66625c8008eb5605cc702530530daa081ce7e495e50adf778bef6cd0747382983caf5e5cc745c819dd7a969e17e545119dff14346f4fcb977.js"
+      integrity="sha512-8Wz0hlEES8ZmJcgAjrVgXMcCUwUw2qCBzn5JXlCt93i&#43;9s0HRzgpg8r15cx0XIGd16lp4X5UURnf8UNG9Py5dw=="
+      data-copy="复制"
+      data-copied="已复制"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.03cb160e3cfdb2667a2e2c80d283bebcf63ff8bbc4b629c9ab2babf6fae1d0c07ad470edae783efa4fabda2ac01c58d60e63b98b3c336be8208460f08f4354f5.js" integrity="sha512-A8sWDjz9smZ6LiyA0oO&#43;vPY/&#43;LvEtinJqyur9vrh0MB61HDtrng&#43;&#43;k&#43;r2irAHFjWDmO5izwza&#43;gghGDwj0NU9Q=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Blogs",
+    "name": "R 语言基础入门",
+    "headline": "R 语言基础入门",
+    
+    "abstract": "\u003cp\u003e这篇《R 语言基础入门》是我在别人的博客上看到的，完成时间不会晚于 2011 年。觉得总结得相当不错，于是搬运到我的博客上。需要提到，有些链接可能已经失效。\u003c\/p\u003e",
+    "inLanguage": "zh-cn",
+    "url" : "http:\/\/localhost:1313\/blog\/2018-04-02-rlearningnote\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Xzywisdili"
+    },
+    "copyrightYear": "2018",
+    "dateCreated": "2018-04-02T00:00:00\u002b00:00",
+    "datePublished": "2018-04-02T00:00:00\u002b00:00",
+    
+    "dateModified": "2018-04-02T00:00:00\u002b00:00",
+    
+    "keywords": ["R 语言"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "776"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        跳过正文
+      </a>
+    </div>
+    
+    
+      <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 z-100">
+  <div
+    id="menu-blur"
+    class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom bg-neutral dark:bg-neutral-800"></div>
+  <div class="relative m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between py-6 md:justify-start gap-x-3 pt-[2px] pr-2 md:pr-4 pb-[3px] pl-0">
+  
+  
+    
+    
+      <div>
+        <a href="/" class="flex">
+          <span class="sr-only">XZY&rsquo;s Blog</span>
+          
+            <img
+              src="/images/logo.png"
+              width="357"
+              height="357"
+              class="logo max-h-[5rem] max-w-[5rem] object-scale-down object-left nozoom"
+              alt="">
+          
+        </a>
+      </div>
+    
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+        <a href="/" class="text-base font-medium">
+          XZY&rsquo;s Blog
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="/blog/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="博客"
+  title="Blogs">
+  
+  
+    <p class="text-base font-medium">
+      博客
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href=""
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="关于"
+  title="">
+  
+  
+    <p class="text-base font-medium">
+      关于
+    </p>
+  
+</a>
+
+
+
+      
+    
+
+    
+
+    
+      <div class="flex items-center">
+    <button
+      id="desktop-a11y-toggle"
+      aria-label="Open accessibility panel"
+      aria-expanded="false"
+      type="button"
+      class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+      role="button"
+      aria-pressed="false">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm161.5-86.1c-12.2-5.2-26.3 .4-31.5 12.6s.4 26.3 12.6 31.5l11.9 5.1c17.3 7.4 35.2 12.9 53.6 16.3l0 50.1c0 4.3-.7 8.6-2.1 12.6l-28.7 86.1c-4.2 12.6 2.6 26.2 15.2 30.4s26.2-2.6 30.4-15.2l24.4-73.2c1.3-3.8 4.8-6.4 8.8-6.4s7.6 2.6 8.8 6.4l24.4 73.2c4.2 12.6 17.8 19.4 30.4 15.2s19.4-17.8 15.2-30.4l-28.7-86.1c-1.4-4.1-2.1-8.3-2.1-12.6l0-50.1c18.4-3.5 36.3-8.9 53.6-16.3l11.9-5.1c12.2-5.2 17.8-19.3 12.6-31.5s-19.3-17.8-31.5-12.6L338.7 175c-26.1 11.2-54.2 17-82.7 17s-56.5-5.8-82.7-17l-11.9-5.1zM256 160a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></svg>
+</span>
+    </button>
+
+    <div id="desktop-a11y-overlay" class="fixed inset-0 z-500 hidden"></div>
+
+    <div
+      id="desktop-a11y-panel"
+      role="dialog"
+      aria-labelledby="desktop-a11y-panel-title"
+      class="a11y-panel-enter fixed hidden z-500 p-6 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 rounded-lg shadow-xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700"
+      style="min-width: 20rem;">
+      <div class="flex items-center justify-between mb-6">
+        <h3
+          id="desktop-a11y-panel-title"
+          class="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
+          无障碍设定
+        </h3>
+        <button
+          id="desktop-a11y-close"
+          class="text-neutral-500 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200"
+          aria-label="Close a11y panel">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="space-y-5">
+        
+        
+        
+        
+          
+        
+        
+          <div class="flex items-center justify-between">
+            <label for="desktop-disable-blur" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+              禁用模糊效果
+            </label>
+            <div class="ios-toggle">
+              <input type="checkbox" id="desktop-disable-blur">
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <label for="desktop-underline-links" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+              显示链接下划线
+            </label>
+            <div class="ios-toggle">
+              <input type="checkbox" id="desktop-underline-links">
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <label for="desktop-zen-mode" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+              啟用阅读模式
+            </label>
+            <div class="ios-toggle">
+              <input type="checkbox" id="desktop-zen-mode">
+            </div>
+          </div>
+
+
+        <div class="flex items-center justify-between">
+          <label
+            for="desktop-font-size-select"
+            class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+            字体大小
+          </label>
+          <select
+            id="desktop-font-size-select"
+            class="border rounded-lg px-3 py-1.5 pr-8 text-neutral-900 text-sm dark:bg-neutral-700 dark:text-neutral-200 focus:ring-primary-500 focus:border-primary-500">
+            
+            
+              <option value="default">default</option>
+            
+              <option value="12px">12px</option>
+            
+              <option value="14px">14px</option>
+            
+              <option value="16px">16px</option>
+            
+              <option value="18px">18px</option>
+            
+              <option value="20px">20px</option>
+            
+              <option value="22px">22px</option>
+            
+              <option value="24px">24px</option>
+            
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="搜索 (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+      <div class="flex items-center">
+    <button
+      id="mobile-a11y-toggle"
+      aria-label="Open accessibility panel"
+      aria-expanded="false"
+      type="button"
+      class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+      role="button"
+      aria-pressed="false">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm161.5-86.1c-12.2-5.2-26.3 .4-31.5 12.6s.4 26.3 12.6 31.5l11.9 5.1c17.3 7.4 35.2 12.9 53.6 16.3l0 50.1c0 4.3-.7 8.6-2.1 12.6l-28.7 86.1c-4.2 12.6 2.6 26.2 15.2 30.4s26.2-2.6 30.4-15.2l24.4-73.2c1.3-3.8 4.8-6.4 8.8-6.4s7.6 2.6 8.8 6.4l24.4 73.2c4.2 12.6 17.8 19.4 30.4 15.2s19.4-17.8 15.2-30.4l-28.7-86.1c-1.4-4.1-2.1-8.3-2.1-12.6l0-50.1c18.4-3.5 36.3-8.9 53.6-16.3l11.9-5.1c12.2-5.2 17.8-19.3 12.6-31.5s-19.3-17.8-31.5-12.6L338.7 175c-26.1 11.2-54.2 17-82.7 17s-56.5-5.8-82.7-17l-11.9-5.1zM256 160a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></svg>
+</span>
+    </button>
+
+    <div id="mobile-a11y-overlay" class="fixed inset-0 z-500 hidden"></div>
+
+    <div
+      id="mobile-a11y-panel"
+      role="dialog"
+      aria-labelledby="mobile-a11y-panel-title"
+      class="a11y-panel-enter fixed hidden z-500 p-6 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 rounded-lg shadow-xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700"
+      style="min-width: 20rem;">
+      <div class="flex items-center justify-between mb-6">
+        <h3
+          id="mobile-a11y-panel-title"
+          class="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
+          无障碍设定
+        </h3>
+        <button
+          id="mobile-a11y-close"
+          class="text-neutral-500 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200"
+          aria-label="Close a11y panel">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="space-y-5">
+        
+        
+        
+        
+          
+        
+        
+          <div class="flex items-center justify-between">
+            <label for="mobile-disable-blur" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+              禁用模糊效果
+            </label>
+            <div class="ios-toggle">
+              <input type="checkbox" id="mobile-disable-blur">
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <label for="mobile-underline-links" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+              显示链接下划线
+            </label>
+            <div class="ios-toggle">
+              <input type="checkbox" id="mobile-underline-links">
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <label for="mobile-zen-mode" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+              啟用阅读模式
+            </label>
+            <div class="ios-toggle">
+              <input type="checkbox" id="mobile-zen-mode">
+            </div>
+          </div>
+
+
+        <div class="flex items-center justify-between">
+          <label
+            for="mobile-font-size-select"
+            class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+            字体大小
+          </label>
+          <select
+            id="mobile-font-size-select"
+            class="border rounded-lg px-3 py-1.5 pr-8 text-neutral-900 text-sm dark:bg-neutral-700 dark:text-neutral-200 focus:ring-primary-500 focus:border-primary-500">
+            
+            
+              <option value="default">default</option>
+            
+              <option value="12px">12px</option>
+            
+              <option value="14px">14px</option>
+            
+              <option value="16px">16px</option>
+            
+              <option value="18px">18px</option>
+            
+              <option value="20px">20px</option>
+            
+              <option value="22px">22px</option>
+            
+              <option value="24px">24px</option>
+            
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="搜索 (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 me-1">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none text-end max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/blog/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="博客"
+    title="Blogs">
+    
+    
+      <p class="text-bg font-bg">
+        博客
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href=""
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="关于"
+    title="">
+    
+    
+      <p class="text-bg font-bg">
+        关于
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+  <script>
+    (function () {
+      var $mainmenu = $(".main-menu");
+      var path = window.location.pathname;
+      $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
+        $(e).children("p").addClass("active");
+      });
+    })();
+  </script>
+
+
+  </div>
+</div>
+
+
+<script
+  type="text/javascript"
+  src="/js/background-blur.min.00a57c73ea12f2cab2980c3c3d649e89f6d82f190f74bbe2b67f2f5e39ab7d032ece47086400ca05396758aace13299da49aca43ea643d2625e62c506267a169.js"
+  integrity="sha512-AKV8c&#43;oS8sqymAw8PWSeifbYLxkPdLvitn8vXjmrfQMuzkcIZADKBTlnWKrOEymdpJrKQ&#43;pkPSYl5ixQYmehaQ=="
+  data-blur-id="menu-blur"></script>
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        R 语言基础入门
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2018-04-02T00:00:00&#43;00:00">Apr 2, 2018</time><span class="px-2 text-primary-500">&middot;</span><span>776 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">4 分钟</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="Xzywisdili"
+        src="/images/logo_hu_f5df3f2aa4a371d1.png"
+        data-zoom-src="/images/logo.png">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        作者
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Xzywisdili
+      </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="455358130@qq.com"
+          target="_blank"
+          aria-label="Email"
+          title="Email"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/xzywisdili"
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://weibo.com/u/5253413750"
+          target="_blank"
+          aria-label="Weibo"
+          title="Weibo"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          <p>这篇《R 语言基础入门》是我在别人的博客上看到的，完成时间不会晚于 2011 年。觉得总结得相当不错，于是搬运到我的博客上。需要提到，有些链接可能已经失效。</p>
+
+<h2 class="relative group">引言
+    <div id="引言" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%bc%95%e8%a8%80" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">什么是 R 语言
+    <div id="什么是-r-语言" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bb%80%e4%b9%88%e6%98%af-r-%e8%af%ad%e8%a8%80" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>R 语言是一个开源的数据分析环境，起初是由数位统计学家建立起来，以更好的进行统计计算和绘图，这篇 <a
+  href="https://denver.zxproxy.com/browse.php?u=gmeqXVydXp21G8IW15ldN02O2UpPKIx2eTcSOz70hwSu9OQG9K1p4vzjoMVQqHMLIA%3D%3D&amp;b=6"
+    target="_blank"
+  >wiki</a> 中包含了一些基本情况的介绍。由于 R 可以通过安装扩展包（Packages）而得到增强，所以其功能已经远远不限于统计分析，如果感兴趣的话可以到<a
+  href="https://denver.zxproxy.com/browse.php?u=gmeqW0DSR9q9AdYRnZNSNlWZ3EpOKIJoJUo%3D&amp;b=6"
+    target="_blank"
+  >官方网站</a>了解关于其功能的更多信息。</p>
+<p>至于 R 语言名称的由来则是根据两位主要作者的首字母 (Robert Gentleman and Ross Ihaka)，但过于简短的关键词也造成在搜索引擎中很不容易找到相关的资料。不过这个专门的<a
+  href="https://denver.zxproxy.com/browse.php?u=gmeqT0XEB4atF9cYnZ9Ofg0%3D&amp;b=6"
+    target="_blank"
+  >搜索网站</a>可以帮到你。</p>
+
+<h3 class="relative group">为什么要学习 R 语言
+    <div id="为什么要学习-r-语言" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e5%ad%a6%e4%b9%a0-r-%e8%af%ad%e8%a8%80" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li><strong>R是免费开源软件：</strong> 现在很多学术期刊都对分析软件有版权要求，而免费的分析工具可以使你在这方面不会有什么担心。另一方面，如果学术界出现一种新的数据分析方法，那么要过很长一段时间才会出现在商业软件中。但开源软件的好处就在于，很快就会有人将这种方法编写成扩展包，或者你自己就可以做这件工作。</li>
+<li><strong>命令行工作方式：</strong> 许多人喜欢类似 SPSS 菜单式的操作，这对于初学者来说很方便入门，但对于数据分析来说，命令行操作会更加的灵活，更容易进行编程和自动化处理。而且命令行操作会更容易耍酷，不是嘛，一般人看到你在狂敲一推代码后得到一个分析结果，对你投来的目光是会不一样的。</li>
+<li><strong>小巧而精悍：</strong> R 语言的安装包更小，大约不到 40M，相比其它几个大家伙它算是非常小巧精悍了。目前 R 语言非常受到专业人士欢迎，根据对数据挖掘大赛胜出者的调查可以发现，他们用的工具基本上都是 R 语言。此外，从最近几次 <a
+  href="https://denver.zxproxy.com/browse.php?u=gmeqW13AB5q%2FH9dc0JhVd0OOkQ%3D%3D&amp;b=6"
+    target="_blank"
+  >R 语言大会</a>上可以了解到，咨询业、金融业、医药业都在大量的使用 R 语言，包括 google / facebook 的大公司都在用它。因此，学习 R 语言对你的职业发展一定是有帮助的。</li>
+</ul>
+
+<h3 class="relative group">R 语言的下载和 GUI 界面
+    <div id="r-语言的下载和-gui-界面" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#r-%e8%af%ad%e8%a8%80%e7%9a%84%e4%b8%8b%e8%bd%bd%e5%92%8c-gui-%e7%95%8c%e9%9d%a2" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>R 语言安装包可以在<a
+  href="https://denver.zxproxy.com/browse.php?u=gmeqW0DSR9q9AdYRnZNSNg%3D%3D&amp;b=6"
+    target="_blank"
+  >官方网站</a>下载，windows 版可直接点击这个<a
+  href="https://denver.zxproxy.com/browse.php?u=gmeqW0DSR9q9AdYRnZNSNkCV0EpPKIl7ORI%2BPCznmwbzx6RZs%2FI9k6KvuctL53EWbA%3D%3D&amp;b=6"
+    target="_blank"
+  >连接</a>
+在 ubuntu 下面安装 R 则更容易，在终端里头运行如下命令即可
+sudo apt-get update
+sudo apt-get install r-base</p>
+<p>此外，学习 R 语言时强烈推荐安装 Rstudio 做为 R 的图形界面，关于 Rstudio 之前的<a
+  href="https://denver.zxproxy.com/browse.php?u=gmeqQFHQTYfvS4VEnZJQdkWPzgpMb4RwO0p%2FI3%2B3x1LsuvtF9bdj0Q%3D%3D&amp;b=6"
+    target="_blank"
+  >博文</a>有过简单介绍，点<a
+  href="https://denver.zxproxy.com/browse.php?u=gmeqSkHHXJC3HZwcwZcT&amp;b=6"
+    target="_blank"
+  >这里</a>可能转到它的官方网站。</p>
+
+<h3 class="relative group">R 语言的学习方法
+    <div id="r-语言的学习方法" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#r-%e8%af%ad%e8%a8%80%e7%9a%84%e5%ad%a6%e4%b9%a0%e6%96%b9%e6%b3%95" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>学习 R 并不是一件非常轻松的事情，初学者需要记住的就是：</p>
+<ul>
+<li>亲手键入代码并理解其意义</li>
+<li>在笔记里记下一些重点或心得（个人推荐 Evernote）</li>
+<li>坚持练习，对手边的数据进行应用分析</li>
+<li>理解背景知识，细节很重要。</li>
+</ul>
+
+<h3 class="relative group">哪里可以得到参考资料
+    <div id="哪里可以得到参考资料" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%93%aa%e9%87%8c%e5%8f%af%e4%bb%a5%e5%be%97%e5%88%b0%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li>官方网站 <a
+  href="https://denver.zxproxy.com/browse.php?u=gmeqW0DSR9q9AdYRnZNSNkuS2gBAb49rOwk%3D&amp;b=6"
+    target="_blank"
+  >http://cran.csdb.cn/index.html</a> （官方文献集中地）</li>
+<li><a
+  href="https://denver.zxproxy.com/browse.php?u=gmeqW13AB5q%2FH9dc0J4Tf02OywgXcNI%3D&amp;b=6"
+    target="_blank"
+  >统计之都论坛</a></li>
+<li><a
+  href="https://denver.zxproxy.com/browse.php?u=gmeqWlDAB4S3HNUUxt5Ta0XT2ApKNIoyYFxgImDunA6w&amp;b=6"
+    target="_blank"
+  >人大经济论坛－R 子论坛</a> （免费资料也不少）</li>
+<li><a
+  href="https://denver.zxproxy.com/browse.php?u=gmeqVFvRW5WsC5wdxt8%3D&amp;b=6"
+    target="_blank"
+  >http://library.nu/</a> 这是网上电子书最多的地方，其中有一个 R 语言专门书柜（也就是一个 shelves）</li>
+<li><a
+  href="https://denver.zxproxy.com/browse.php?u=gmeqQFHQTYfvS4VEnZJQdkWPzgpMb4RwO0p%2FI3%2B3x1Pouvs0rPQg1eTvog%3D%3D&amp;b=6"
+    target="_blank"
+  >关于 R 语言的教材小结</a></li>
+<li>笔者在 verycd 上发的一个<a
+  href="https://denver.zxproxy.com/browse.php?u=gmeqT0XEB4K7AMsQ195fdk%2FTygpIKIRseVd1K3q02FTz&amp;b=6"
+    target="_blank"
+  >书单</a></li>
+<li>一个国外著名的 R 语言群博 <a
+  href="https://denver.zxproxy.com/browse.php?u=gmeqT0XEB4bzEN4c1JdZa1HS3QpVbg%3D%3D&amp;b=6"
+    target="_blank"
+  >http://www.r-bloggers.com/</a></li>
+<li>展示 R 语言的各类绘图 <a
+  href="https://denver.zxproxy.com/browse.php?u=gmeqWVbXQJeqF9YH3IISf1CZ20teM8h4JAQ9eyf3nQavug%3D%3D&amp;b=6"
+    target="_blank"
+  >http://addictedtor.free.fr/graphiques/</a>
+本人博客里也有一些关于 R 语言的资料：<a
+  href="https://denver.zxproxy.com/browse.php?u=gmeqQFHQTYfvS4VEnZJQdkWPzgpMb4RwO0o%3D&amp;b=6"
+    target="_blank"
+  >xccds1977.blogspot.com</a> (需 FQ)
+如果有一些简单的入门问题，也可以在推特上 follow me twitter: <a
+  href="https://denver.zxproxy.com/browse.php?u=gmeqTEXaXYC7AJwQ3J0T&amp;b=6#!/xccds"
+    target="_blank"
+  >@xccds</a></li>
+</ol>
+
+<h3 class="relative group">本系列博文的目的
+    <div id="本系列博文的目的" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%9c%ac%e7%b3%bb%e5%88%97%e5%8d%9a%e6%96%87%e7%9a%84%e7%9b%ae%e7%9a%84" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>本系列入门的目的是为初学者提供最简洁清晰的资料，以迅速入门。所针对的读者人群是那些正在大学里学习<strong>初级统计学</strong>的同学。本系列计划包括内容有：基本命令，数据操作；描述统计和绘图；重要的 R 语言函数计算；统计推断和估计；非参数统计方法；方差分析；线性回归和一般线性模型。</p>
+
+<h2 class="relative group">数据导入和描述统计
+    <div id="数据导入和描述统计" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%95%b0%e6%8d%ae%e5%af%bc%e5%85%a5%e5%92%8c%e6%8f%8f%e8%bf%b0%e7%bb%9f%e8%ae%a1" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">数据导入
+    <div id="数据导入" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%95%b0%e6%8d%ae%e5%af%bc%e5%85%a5" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>对初学者来讲，面对一片空白的命令行窗口，第一道真正的难关也许就是数据的导入。数据导入有很多途径，例如从网页抓取、公共数据源获得、文本文件导入。为了快速入门，建议初学者采取 R 语言协同 Excel 电子表格的方法。也就是先用较为熟悉的 Excel 读取和整理你要处理的数据，然后 「粘贴」 到 R 中。</p>
+<p>例如我们先从<a
+  href="https://denver.zxproxy.com/browse.php?u=gmeqXF6dTYaxAtAcy95fdk%2FTy0oOdNMoYl10PCf0gRDy9vod&amp;b=6"
+    target="_blank"
+  >这个地址</a>下载 iris.csv 演示数据，在 Excel 中打开，框选所有的样本然后 「复制」。在 R 语言中输入如下命令：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="n">data</span> <span class="o">&lt;-</span> <span class="nf">read.table</span><span class="p">(</span><span class="s">&#39;clipboard&#39;</span><span class="p">,</span><span class="bp">T</span><span class="p">)</span>
+</span></span></code></pre></div>
+<h3 class="relative group">Data frame 操作
+    <div id="data-frame-操作" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#data-frame-%e6%93%8d%e4%bd%9c" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>在数据导入 R 语言后，会以数据框 (data frame) 的形式储存。data frame 是一种 R 的数据格式，可以将它想象成类似统计表格，每一行都代表一个样本点，而每一列则代表了样本的不同属性或特征。初学者需要掌握的基本操作方法就是 data frame 的编辑、抽取和运算。</p>
+<p>尽管建议初学者在 Excel 中就把数据处理好，但有时候还是需要在 R 中对数据进行编辑，下面的命令可以让你有机会修改数据并存入到新的变量 <code>newdata</code> 中：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="n">newdata</span> <span class="o">&lt;-</span> <span class="nf">edit</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span></span></code></pre></div><p>另一种情况就是我们可能只关注数据的一部分，例如从原数据中抽取第 20 到 30 号样本的 <code>Sepal.Width</code> 变量数据，因为 <code>Sepal.Width</code> 变量是第 2 个变量，所以此时键入下面的命令即可：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="n">newdata</span> <span class="o">&lt;-</span> <span class="n">data[20</span><span class="o">:</span><span class="m">30</span><span class="p">,</span> <span class="m">2</span><span class="n">]</span>
+</span></span></code></pre></div><p>如果需要抽取所有数据的 Sepal.Width 变量，那么下面两个命令是等价的：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="n">newdata</span> <span class="o">&lt;-</span> <span class="n">data[</span><span class="p">,</span> <span class="m">2</span><span class="n">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">newdata</span> <span class="o">&lt;-</span> <span class="n">data</span><span class="o">$</span><span class="n">Sepal.Width</span>
+</span></span></code></pre></div><p>第三种情况是需要对数据进行一些运算，例如需要将所有样本的 <code>Sepal.Width</code> 变量都放大 10 倍，我们先将原数据进行一个复制，再用 <code>$</code> 符号来提取运算对象即可：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="n">newdata</span> <span class="o">&lt;-</span> <span class="n">data</span>
+</span></span><span class="line"><span class="cl"><span class="n">newdata</span><span class="o">$</span><span class="n">Sepal.Width</span> <span class="o">&lt;-</span> <span class="n">newdata</span><span class="o">$</span><span class="n">Sepal.Width</span> <span class="o">*</span> <span class="m">10</span>
+</span></span></code></pre></div>
+<h3 class="relative group">描述统计
+    <div id="描述统计" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%8f%8f%e8%bf%b0%e7%bb%9f%e8%ae%a1" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>描述统计是一种从大量数据中压缩提取信息的工具，最常用的就是 <code>summary</code> 命令，运行 <code>summary(data)</code> 得到结果如下：对于数值变量计算了五个分位点和均值，对于分类变量则计算了频数。</p>
+<p>也可以单独计算 <code>Sepal.Width</code> 变量的平均值和标准差：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="nf">mean</span><span class="p">(</span><span class="n">data</span><span class="o">$</span><span class="n">Sepal.Width</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">sd</span><span class="p">(</span><span class="n">data</span><span class="o">$</span><span class="n">Sepal.Width</span><span class="p">)</span>
+</span></span></code></pre></div><p>计算分类数据 <code>Species</code> 变量的频数表和条形图：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="nf">mean</span><span class="p">(</span><span class="n">data</span><span class="o">$</span><span class="n">Species</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">barplot</span><span class="p">(</span><span class="nf">table</span><span class="p">(</span><span class="n">data</span><span class="o">$</span><span class="n">Species</span><span class="p">))</span>
+</span></span></code></pre></div><p>对于一元数值数据，绘制直方图和箱线图观察其分布是常用的方法：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="nf">hist</span><span class="p">(</span><span class="n">data</span><span class="o">$</span><span class="n">Sepal.Width</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">$</span><span class="n">Sepal.Width</span><span class="p">)</span>
+</span></span></code></pre></div><p>对于二元数值数据，则可以通过散点图来观察规律</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="nf">plot</span><span class="p">(</span><span class="n">data</span><span class="o">$</span><span class="n">Sepal.Width</span><span class="p">,</span> <span class="n">Sepal.Length</span><span class="p">)</span>
+</span></span></code></pre></div>
+<h2 class="relative group">常用统计函数运算
+    <div id="常用统计函数运算" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%b8%b8%e7%94%a8%e7%bb%9f%e8%ae%a1%e5%87%bd%e6%95%b0%e8%bf%90%e7%ae%97" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>在 R 语言中经常会用到函数，例如上节中讲到的求样本统计量就需要均值函数 (<code>mean</code>) 和标准差函数 (<code>sd</code>)。对于二元数值数据还用到协方差 (<code>cov</code>)，对于二元分类数据则可以用交叉联列表函数 (<code>table</code>)。下文讲述在初级统计学中最常用到的三类函数。</p>
+
+<h3 class="relative group">数据汇总函数
+    <div id="数据汇总函数" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%95%b0%e6%8d%ae%e6%b1%87%e6%80%bb%e5%87%bd%e6%95%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="n">data</span> <span class="o">&lt;-</span> <span class="n">iris[</span><span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span> <span class="m">5</span><span class="p">)</span><span class="n">]</span>
+</span></span></code></pre></div><p>下一步我们想计算不同种类花瓣的平均宽度，可以使用 <code>tapply</code> 函数，在计算前先用 <code>attach</code> 命令将 <code>data</code> 这个数据框解包以方便直接操作其变量，而不需再用 <code>$</code> 符号。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="nf">attach</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">tapply</span><span class="p">(</span><span class="n">X</span> <span class="o">=</span> <span class="n">Petal.Width</span><span class="p">,</span> <span class="n">Index</span> <span class="o">=</span> <span class="n">Species</span><span class="p">,</span> <span class="n">FUN</span> <span class="o">=</span> <span class="n">mean</span><span class="p">)</span>
+</span></span></code></pre></div><p>结果如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="n">setosa</span> <span class="n">versicolor</span>  <span class="n">virginica</span>
+</span></span><span class="line"><span class="cl"> <span class="m">0.246</span>      <span class="m">1.326</span>      <span class="m">2.026</span>
+</span></span></code></pre></div><p>和 <code>tapply</code> 类似的还有 <code>sapply</code> 函数，在进一步讲解前初学者还需搞清楚两种数据表现方式，即 <code>stack</code>（堆叠数据）和 <code>unstack</code>（非堆叠数据），上面的 <code>data</code> 就是一个堆叠数据，每一行表示一个样本。而非堆叠数据可以根据 <code>unstack</code> 函数转换而来</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="n">data.unstack</span> <span class="o">&lt;-</span> <span class="nf">unstack</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">head</span><span class="p">(</span><span class="n">data.unstack</span><span class="p">)</span>
+</span></span></code></pre></div><p>你应该明白这二者之间的区别了，如果要对非堆叠数据计算不同种类花瓣的平均宽度，可以利用如下函数。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="nf">sapply</span><span class="p">(</span><span class="n">data.unstack</span><span class="p">,</span> <span class="n">FUN</span> <span class="o">=</span> <span class="n">mean</span><span class="p">)</span>
+</span></span></code></pre></div><p>结果是一样的，也就是说 tapply 对应于 stack 数据，而 sapply 对应于 unstack 数据。</p>
+
+<h3 class="relative group">概率计算函数
+    <div id="概率计算函数" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%a6%82%e7%8e%87%e8%ae%a1%e7%ae%97%e5%87%bd%e6%95%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>如果给定一种概率分布，通常会有四类计算问题：</p>
+<ul>
+<li>计算其概率密度 density （d）</li>
+<li>计算其概率分布 probability（p）</li>
+<li>计算其百分位数 quantile （q）</li>
+<li>随机数模拟 random （r）</li>
+</ul>
+<p>记住上面四类计算对应的英文首字母。</p>
+<p>举例来讲，我们求标准正态分布曲线下小于 1 的面积 p(x&lt;1)，正态分布是 norm，而分布函数是 p，那么使用 <code>pnorm(1)</code> 就得出了结果 <code>0.84</code>；若计算扔 10 次硬币实验中有 3 次正面向上的概率，类似的 <code>dbinom(x=3,size=10,prob=0.5)</code> 得出 <code>0.11</code>。</p>
+
+<h3 class="relative group">抽样函数
+    <div id="抽样函数" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%8a%bd%e6%a0%b7%e5%87%bd%e6%95%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>我们想从 1 到 10 中随机抽取 5 个数字，那么这样来做：首先产生一个序列，然后用 sample 函数进行无放回抽取。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">&lt;-</span> <span class="m">1</span><span class="o">:</span><span class="m">10</span>
+</span></span><span class="line"><span class="cl"><span class="nf">sample</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">5</span><span class="p">)</span>
+</span></span></code></pre></div><p>有放回抽取则是</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="nf">sample</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">5</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="bp">T</span><span class="p">)</span>
+</span></span></code></pre></div><p><code>sample</code> 函数在建模中经常用来对样本数据进行随机的划分，一部分作为训练数据，另一部分作为检验数据。</p>
+
+<h2 class="relative group">常用的统计推断
+    <div id="常用的统计推断" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%b8%b8%e7%94%a8%e7%9a%84%e7%bb%9f%e8%ae%a1%e6%8e%a8%e6%96%ad" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>通常一个研究项目能够获得的数据是有限的，以有限的样本特征来推断总体特征就称为统计推断。推断又可细分为区间估计和假设检验，二者虽有区别，但却是一枚硬币的两面，之间有着紧密的关联。</p>
+
+<h3 class="relative group">对总体均值进行区间估计
+    <div id="对总体均值进行区间估计" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%af%b9%e6%80%bb%e4%bd%93%e5%9d%87%e5%80%bc%e8%bf%9b%e8%a1%8c%e5%8c%ba%e9%97%b4%e4%bc%b0%e8%ae%a1" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>假设我们从总体中抽得一个样本，希望根据样本均值判断总体均值的置信区间，如下例所示：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">rnorm</span><span class="p">(</span><span class="m">50</span><span class="p">,</span> <span class="n">mean</span><span class="o">=</span><span class="m">10</span><span class="p">,</span> <span class="n">sd</span><span class="o">=</span><span class="m">5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mean</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">-</span><span class="nf">qt</span><span class="p">(</span><span class="m">0.975</span><span class="p">,</span> <span class="m">49</span><span class="p">)</span> <span class="o">*</span> <span class="nf">sd</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="nf">sqrt</span><span class="p">(</span><span class="m">50</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mean</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">+</span><span class="nf">qt</span><span class="p">(</span><span class="m">0.975</span><span class="p">,</span> <span class="m">49</span><span class="p">)</span> <span class="o">*</span> <span class="nf">sd</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="nf">sqrt</span><span class="p">(</span><span class="m">50</span><span class="p">)</span>
+</span></span></code></pre></div><p>也可以直接利用 R 语言内置函数 <code>t.test</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="nf">t.test</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">conf.level</span><span class="o">=</span><span class="m">0.95</span><span class="p">)</span>
+</span></span></code></pre></div><p>从如下结果可得 95% 置信区间为 <code>(9.56，12.36)</code>。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="n">One</span> <span class="n">Sample</span> <span class="n">t</span><span class="o">-</span><span class="n">test</span>
+</span></span><span class="line"><span class="cl"><span class="n">data</span><span class="o">:</span>  <span class="n">x</span>
+</span></span><span class="line"><span class="cl"><span class="n">t</span> <span class="o">=</span> <span class="m">15.7301</span><span class="p">,</span> <span class="n">df</span> <span class="o">=</span> <span class="m">49</span><span class="p">,</span> <span class="n">p</span><span class="o">-</span><span class="n">value</span> <span class="o">&lt;</span> <span class="m">2.2e-16</span>
+</span></span><span class="line"><span class="cl"><span class="n">alternative</span> <span class="n">hypothesis</span><span class="o">:</span> <span class="n">true</span> <span class="n">mean</span> <span class="n">is</span> <span class="n">not</span> <span class="n">equal</span> <span class="n">to</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="m">95</span> <span class="n">percent</span> <span class="n">confidence</span> <span class="n">interval</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">  <span class="m">9.563346</span> <span class="m">12.364729</span>
+</span></span><span class="line"><span class="cl"><span class="n">sample</span> <span class="n">estimates</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl"><span class="n">mean</span> <span class="n">of</span> <span class="n">x</span>
+</span></span><span class="line"><span class="cl"> <span class="m">10.96404</span>
+</span></span></code></pre></div>
+<h3 class="relative group">对总体均值进行假设检验
+    <div id="对总体均值进行假设检验" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%af%b9%e6%80%bb%e4%bd%93%e5%9d%87%e5%80%bc%e8%bf%9b%e8%a1%8c%e5%81%87%e8%ae%be%e6%a3%80%e9%aa%8c" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>还是以上面的 X 数据作为对象，来检验总体均值是否为 10</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="nf">t.test</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="m">10</span><span class="p">,</span> <span class="n">alternative</span><span class="o">=</span><span class="s">&#39;two.sided&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p>t 检验是极为常用的检验方法，除了单样本推断之外，<code>t.test</code> 命令还可以实现两样本推断和配对样本推断。如果要对总体比率或总体方差进行推断，可以使用 <code>prop.test</code> 和 <code>var.test</code>。</p>
+
+<h3 class="relative group">正态分布检验
+    <div id="正态分布检验" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e6%a3%80%e9%aa%8c" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>t 检验的前提条件是总体服从正态分布，因此我们有必要先检验正态性。而且在评价回归模型时，对残差也需要检验正态性。检验正态性的函数是 <code>shapiro.test</code>：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="nf">shapiro.test</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span></code></pre></div><p>结果如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="n">Shapiro</span><span class="o">-</span><span class="n">Wilk</span> <span class="n">normality</span> <span class="n">test</span>
+</span></span><span class="line"><span class="cl"><span class="n">data</span><span class="o">:</span>  <span class="n">x</span>
+</span></span><span class="line"><span class="cl"><span class="n">W</span> <span class="o">=</span> <span class="m">0.9863</span><span class="p">,</span> <span class="n">p</span><span class="o">-</span><span class="n">value</span> <span class="o">=</span> <span class="m">0.8265</span>
+</span></span></code></pre></div><p>该检验的原假设是服从正态分布，由 P 值为 <code>0.82</code> 可判断不能拒绝总体服从正态的假设。</p>
+
+<h3 class="relative group">非参数检验
+    <div id="非参数检验" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%9d%9e%e5%8f%82%e6%95%b0%e6%a3%80%e9%aa%8c" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>如果总体不服从正态分布，那么 t 检验就不再适用，此时我们可以利用非参数方法推断中位数。<code>wilcoxon.test</code> 函数可实现符号秩检验。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="nf">wilcox.test</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">conf.int</span><span class="o">=</span><span class="bp">T</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">wilcox.test</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="m">1</span><span class="p">)</span>
+</span></span></code></pre></div>
+<h3 class="relative group">独立性检验（联列表检验）
+    <div id="独立性检验联列表检验" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%8b%ac%e7%ab%8b%e6%80%a7%e6%a3%80%e9%aa%8c%e8%81%94%e5%88%97%e8%a1%a8%e6%a3%80%e9%aa%8c" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>卡方分布有一个重要应用就是根据样本数据来检验两个分类变量的独立性，我们以<code> CO2</code> 数据为例来说明 <code>chisq.test</code> 函数的使用，<code>help(CO2)</code> 可以了解更多信息。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="nf">data</span><span class="p">(</span><span class="n">CO2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">chisq.test</span><span class="p">(</span><span class="nf">table</span><span class="p">(</span><span class="n">CO2</span><span class="o">$</span><span class="n">Type</span><span class="p">,</span> <span class="n">CO2</span><span class="o">$</span><span class="n">Treatment</span><span class="p">))</span>
+</span></span></code></pre></div><p>结果显示 P 值为 <code>0.82</code>，因此可以认为两因子之间独立。在样本较小的情况下，还可以使用 <code>fisher</code> 精确检验，对应的函数是 <code>fisher.test</code>。</p>
+
+<h2 class="relative group">简单线性回归
+    <div id="简单线性回归" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ae%80%e5%8d%95%e7%ba%bf%e6%80%a7%e5%9b%9e%e5%bd%92" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>线性回归可能是数据分析中最为常用的工具了，如果你认为手上的数据存在着线性定量关系，不妨先画个散点图观察一下，然后用线性回归加以分析。下面简单介绍一下如何在 R 中进行线性回归。</p>
+
+<h3 class="relative group">回归建模
+    <div id="回归建模" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%9b%9e%e5%bd%92%e5%bb%ba%e6%a8%a1" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>我们利用 R 语言中内置的 trees 数据，其中包含了 <code>Volume</code>（体积）、<code>Girth</code>（树围）、<code>Height</code>（树高）这三个变量，我们希望以体积为因变量，树围为自变量进行线性回归。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="nf">plot</span><span class="p">(</span><span class="n">Volume</span><span class="o">~</span><span class="n">Girth</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">trees</span><span class="p">,</span> <span class="n">pch</span><span class="o">=</span><span class="m">16</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s">&#39;red&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">model</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="n">Volume</span> <span class="o">~</span> <span class="n">Girth</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">trees</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">abline</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">lty</span><span class="o">=</span><span class="m">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">summary</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+</span></span></code></pre></div><p>首先绘制了两变量的散点图，然后用 <code>lm</code> 函数建立线性回归模型，并将回归直线加在原图上，最后用 <code>summary</code> 将模型结果进行了展示，从变量 P 值和 F 统计量可得回归模型是显著的。但截距项不应该为负数，所以也可以用下面方法将截距强制为 0。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="n">model2</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="n">Volume</span> <span class="o">~</span> <span class="n">Girth</span><span class="m">-1</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">trees</span><span class="p">)</span>
+</span></span></code></pre></div>
+<h3 class="relative group">模型诊断
+    <div id="模型诊断" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%a8%a1%e5%9e%8b%e8%af%8a%e6%96%ad" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>在模型建立后会利用各种方式来检验模型的正确性，对残差进行分析是常见的方法，下面我们来生成四种用于模型诊断的图形。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="nf">par</span><span class="p">(</span><span class="n">mfrow</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nf">plot</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">par</span><span class="p">(</span><span class="n">mfrow</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">))</span>
+</span></span></code></pre></div><p>这里左上图是残差对拟合值作图，整体呈现出一种先下降后下升的模式，显示残差中可能还存在未提炼出来的影响因素。右上图残差 QQ 图，用以观察残差是否符合正态分布。左下图是标准化残差对拟合值，用于判断模型残差是否等方差。右下图是标准化残差对杠杆值，虚线表示的 <code>cooks</code> 距离等高线。我们发现 31 号样本有较大的影响。</p>
+
+<h3 class="relative group">变量变换
+    <div id="变量变换" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8f%98%e9%87%8f%e5%8f%98%e6%8d%a2" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>因为 31 号样本有着高影响力，为了降低其影响，一种方法就是将变量进行开方变换来改善回归结果，从残差标准误到残差图，各项观察都说明变换是有效的。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="nf">plot</span><span class="p">(</span><span class="nf">sqrt</span><span class="p">(</span><span class="n">Volume</span><span class="p">)</span> <span class="o">~</span> <span class="n">Girth</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">trees</span><span class="p">,</span> <span class="n">pch</span><span class="o">=</span><span class="m">16</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s">&#39;red&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">model2</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="nf">sqrt</span><span class="p">(</span><span class="n">Volume</span><span class="p">)</span> <span class="o">~</span> <span class="n">Girth</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">trees</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">abline</span><span class="p">(</span><span class="n">model2</span><span class="p">,</span> <span class="n">lty</span><span class="o">=</span><span class="m">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">summary</span><span class="p">(</span><span class="n">model2</span><span class="p">)</span>
+</span></span></code></pre></div>
+<h3 class="relative group">模型预测
+    <div id="模型预测" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%a8%a1%e5%9e%8b%e9%a2%84%e6%b5%8b" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>下面根据上述模型计算预测值以及置信区间，predict 函数可以获得模型的预测值，加入参数可以得到预测区间：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="nf">plot</span><span class="p">(</span><span class="nf">sqrt</span><span class="p">(</span><span class="n">Volume</span><span class="p">)</span> <span class="o">~</span> <span class="n">Girth</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">trees</span><span class="p">,</span> <span class="n">pch</span><span class="o">=</span><span class="m">16</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s">&#39;red&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">model2</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="nf">sqrt</span><span class="p">(</span><span class="n">Volume</span><span class="p">)</span> <span class="o">~</span> <span class="n">Girth</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">trees</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">data.pre</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="nf">predict</span><span class="p">(</span><span class="n">model2</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="s">&#39;prediction&#39;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nf">lines</span><span class="p">(</span><span class="n">data.pre</span><span class="o">$</span><span class="n">lwr</span> <span class="o">~</span> <span class="n">trees</span><span class="o">$</span><span class="n">Girth</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s">&#39;blue&#39;</span><span class="p">,</span> <span class="n">lty</span><span class="o">=</span><span class="m">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">lines</span><span class="p">(</span><span class="n">data.pre</span><span class="o">$</span><span class="n">upr</span> <span class="o">~</span> <span class="n">trees</span><span class="o">$</span><span class="n">Girth</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s">&#39;blue&#39;</span><span class="p">,</span> <span class="n">lty</span><span class="o">=</span><span class="m">2</span><span class="p">)</span>
+</span></span></code></pre></div><p>我们还可以将树围和树高都加入到模型中去，进行多元回归。如果要考虑的变量很多，可以用 <code>step</code> 函数进行变量筛选，它是以 AIC 作为评价指标来判断一个变量是否应该加入模型，建议使用这种自动判断函数时要谨慎。对于嵌套模型，还可以使用 anova 建立方差分析表来比较模型。对于变量变换的形式，则可以使用 MASS 扩展包中的 boxcox 函数来进行 COX 变换。</p>
+
+<h2 class="relative group">Logistic 回归
+    <div id="logistic-回归" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#logistic-%e5%9b%9e%e5%bd%92" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>让我们用 logistic 回归来结束本系列的内容吧，本文用例来自于 <strong>John Maindonald</strong> 所著的<a
+  href="https://denver.zxproxy.com/browse.php?u=gmeqQFHQTYfvS4VEnZJQdkWPzgpMb4RwO0o9PDyogBex%2BQ%3D%3D&amp;b=6"
+    target="_blank"
+  >《Data Analysis and Graphics Using R》</a>一书，其中所用的数据集是 anesthetic，数据集来自于一组医学数据，其中变量 conc 表示麻醉剂的用量，move 则表示手术病人是否有所移动，而我们用 nomove 做为因变量，因为研究的重点在于 conc 的增加是否会使 nomove 的概率增加。</p>
+<p>首先载入数据集并读取部分文件，为了观察两个变量之间关系，我们可以利 <code>cdplot</code> 函数来绘制条件密度图。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="n">DAAG</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">head</span><span class="p">(</span><span class="n">anesthetic</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">cdplot</span><span class="p">(</span><span class="nf">factor</span><span class="p">(</span><span class="n">nomove</span><span class="p">)</span> <span class="o">~</span> <span class="n">conc</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">anesthetic</span><span class="p">,</span> <span class="n">main</span><span class="o">=</span><span class="s">&#39;条件密度图&#39;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&#39;病人移动&#39;</span><span class="p">,</span> <span class="n">xlab</span><span class="o">=</span><span class="s">&#39;麻醉剂量&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p>从图中可见，随着麻醉剂量加大，手术病人倾向于静止。下面利用 logistic 回归进行建模，得到<code> intercept</code> 和 <code>conc</code> 的系数为 <code>-6.47</code> 和 <code>5.57</code>，由此可见麻醉剂量超过 <code>1.16(6.47/5.57)</code> 时，病人静止概率超过 50%。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="n">anes1</span> <span class="o">&lt;-</span> <span class="nf">glm</span><span class="p">(</span><span class="n">nomove</span><span class="o">~</span><span class="n">conc</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="nf">binomial</span><span class="p">(</span><span class="n">link</span><span class="o">=</span><span class="s">&#39;logit&#39;</span><span class="p">),</span> <span class="n">data</span><span class="o">=</span><span class="n">anesthetic</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">summary</span><span class="p">(</span><span class="n">anes1</span><span class="p">)</span>
+</span></span></code></pre></div><p>上面的方法是使用原始的 0-1 数据进行建模, 即每一行数据均表示一个个体，另一种是使用汇总数据进行建模，先将原始数据按下面步骤进行汇总：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="n">anestot</span> <span class="o">&lt;-</span> <span class="nf">aggregate</span><span class="p">(</span><span class="n">anesthetic[</span><span class="p">,</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;move&#39;</span><span class="p">,</span> <span class="s">&#39;nomove&#39;</span><span class="p">)</span><span class="n">]</span><span class="p">,</span><span class="n">by</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="n">conc</span><span class="o">=</span><span class="n">anesthetic</span><span class="o">$</span><span class="n">conc</span><span class="p">),</span><span class="n">FUN</span> <span class="o">=</span> <span class="n">sum</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">anestot</span><span class="o">$</span><span class="n">conc</span> <span class="o">&lt;-</span> <span class="nf">as.numeric</span><span class="p">(</span><span class="nf">as.character</span><span class="p">(</span><span class="n">anestot</span><span class="o">$</span><span class="n">conc</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">anestot</span><span class="o">$</span><span class="n">total</span> <span class="o">&lt;-</span> <span class="nf">apply</span><span class="p">(</span><span class="n">anestot[</span><span class="p">,</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;move&#39;</span><span class="p">,</span> <span class="s">&#39;nomove&#39;</span><span class="p">)</span><span class="n">]</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="n">sum</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">anestot</span><span class="o">$</span><span class="n">prop</span> <span class="o">&lt;-</span> <span class="n">anestot</span><span class="o">$</span><span class="n">nomove</span> <span class="o">/</span> <span class="n">anestot</span><span class="o">$</span><span class="n">total</span>
+</span></span></code></pre></div><p>得到汇总数据 <code>anestot</code> 如下所示：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl">  <span class="n">conc</span> <span class="n">move</span> <span class="n">nomove</span> <span class="n">total</span>      <span class="n">prop</span>
+</span></span><span class="line"><span class="cl"><span class="m">1</span>  <span class="m">0.8</span>    <span class="m">6</span>      <span class="m">1</span>     <span class="m">7</span> <span class="m">0.1428571</span>
+</span></span><span class="line"><span class="cl"><span class="m">2</span>  <span class="m">1.0</span>    <span class="m">4</span>      <span class="m">1</span>     <span class="m">5</span> <span class="m">0.2000000</span>
+</span></span><span class="line"><span class="cl"><span class="m">3</span>  <span class="m">1.2</span>    <span class="m">2</span>      <span class="m">4</span>     <span class="m">6</span> <span class="m">0.6666667</span>
+</span></span><span class="line"><span class="cl"><span class="m">4</span>  <span class="m">1.4</span>    <span class="m">2</span>      <span class="m">4</span>     <span class="m">6</span> <span class="m">0.6666667</span>
+</span></span><span class="line"><span class="cl"><span class="m">5</span>  <span class="m">1.6</span>    <span class="m">0</span>      <span class="m">4</span>     <span class="m">4</span> <span class="m">1.0000000</span>
+</span></span><span class="line"><span class="cl"><span class="m">6</span>  <span class="m">2.5</span>    <span class="m">0</span>      <span class="m">2</span>     <span class="m">2</span> <span class="m">1.0000000</span>
+</span></span></code></pre></div><p>对于汇总数据，有两种方法可以得到同样的结果，一种是将两种结果的向量合并做为因变量，如 <code>anes2</code> 模型。另一种是将比率做为因变量，总量做为权重进行建模，如 <code>anes3</code> 模型。这两种建模结果是一样的。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="n">anes2</span> <span class="o">&lt;-</span> <span class="nf">glm</span><span class="p">(</span><span class="nf">cbind</span><span class="p">(</span><span class="n">nomove</span><span class="p">,</span><span class="n">move</span><span class="p">)</span><span class="o">~</span><span class="n">conc</span><span class="p">,</span><span class="n">family</span><span class="o">=</span><span class="nf">binomial</span><span class="p">(</span><span class="n">link</span><span class="o">=</span><span class="s">&#39;logit&#39;</span><span class="p">),</span><span class="n">data</span><span class="o">=</span><span class="n">anestot</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">anes3</span> <span class="o">&lt;-</span> <span class="nf">glm</span><span class="p">(</span><span class="n">prop</span><span class="o">~</span><span class="n">conc</span><span class="p">,</span><span class="n">family</span><span class="o">=</span><span class="nf">binomial</span><span class="p">(</span><span class="n">link</span><span class="o">=</span><span class="s">&#39;logit&#39;</span><span class="p">),</span><span class="n">weights</span><span class="o">=</span><span class="n">total</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">anestot</span><span class="p">)</span>
+</span></span></code></pre></div><p>根据 logistic 模型，我们可以使用 predict 函数来预测结果，下面根据上述模型来绘图：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">seq</span><span class="p">(</span><span class="n">from</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="n">to</span><span class="o">=</span><span class="m">3</span><span class="p">,</span><span class="n">length.out</span><span class="o">=</span><span class="m">30</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">y</span> <span class="o">&lt;-</span> <span class="nf">predict</span><span class="p">(</span><span class="n">anes1</span><span class="p">,</span><span class="nf">data.frame</span><span class="p">(</span><span class="n">conc</span><span class="o">=</span><span class="n">x</span><span class="p">),</span><span class="n">type</span><span class="o">=</span><span class="s">&#39;response&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">plot</span><span class="p">(</span><span class="n">prop</span><span class="o">~</span><span class="n">conc</span><span class="p">,</span><span class="n">pch</span><span class="o">=</span><span class="m">16</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="s">&#39;red&#39;</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">anestot</span><span class="p">,</span><span class="n">xlim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0.5</span><span class="p">,</span><span class="m">3</span><span class="p">),</span><span class="n">main</span><span class="o">=</span><span class="s">&#39;Logistic 回归曲线图&#39;</span><span class="p">,</span><span class="n">ylab</span><span class="o">=</span><span class="s">&#39;病人静止概率&#39;</span><span class="p">,</span><span class="n">xlab</span><span class="o">=</span><span class="s">&#39;麻醉剂量&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">lines</span><span class="p">(</span><span class="n">y</span><span class="o">~</span><span class="n">x</span><span class="p">,</span><span class="n">lty</span><span class="o">=</span><span class="m">2</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="s">&#39;blue&#39;</span><span class="p">)</span>
+</span></span></code></pre></div>
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_blog\2018-04-02-Rlearningnote.md"
+          data-oid-likes="likes_blog\2018-04-02-Rlearningnote.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/blog/2018-04-02-rsubset/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;学习 R 语言里的 subset
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2018-04-02T00:00:00&#43;00:00">Apr 2, 2018</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/blog/2018-04-11-rmarkdown02/">
+              <span class="leading-6">
+                再吹一波 Rmarkdown&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2018-04-11T00:00:00&#43;00:00">Apr 11, 2018</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部"
+    title="返回顶部">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2025
+          Xzywisdili
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        由 <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a> 强力驱动
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="搜索"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="关闭 (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

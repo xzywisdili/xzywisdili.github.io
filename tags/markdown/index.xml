@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Markdown on XZY&#39;s Blog</title>
+    <link>https://xzywisdili.netlify.app/tags/markdown/</link>
+    <description>Recent content in Markdown on XZY&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2025 Xzywisdili</copyright>
+    <lastBuildDate>Tue, 11 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>把博客整装更新了一下，再次启航</title>
+      <link>https://xzywisdili.netlify.app/blog/blog-new-release/</link>
+      <pubDate>Tue, 11 Nov 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/blog-new-release/</guid>
+      <description>2025年11月11日，把旧版的博客重新迁移了一下，然后更新了主题。准备依然是随缘持续性分享一些内容。</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xzywisdili.netlify.app/blog/blog-new-release/feature.png" />
+    </item>
+    
+    <item>
+      <title>简化我们的工具</title>
+      <link>https://xzywisdili.netlify.app/blog/20180604/2018-6-4-simplifytools/</link>
+      <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20180604/2018-6-4-simplifytools/</guid>
+      <description>&lt;p&gt;现在的大学生不像十几年前，必定是人手一台笔记本电脑（有的人甚至有两台）。只要在自习室稍微留神观察一下
+专注学习的同学们，就会发现几乎 100% 的同学的电脑上停留的软件不是微软家的 powerpoint，就是 PDF 阅读器。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>再吹一波 Rmarkdown</title>
+      <link>https://xzywisdili.netlify.app/blog/20180411/2018-04-11-rmarkdown02/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20180411/2018-04-11-rmarkdown02/</guid>
+      <description>&lt;p&gt;既上次写过一篇关于 &lt;a
+  href=&#34;http://www.xzywisdili.com/post/2017/12/23/%E8%BD%BB%E6%9D%BE%E6%84%89%E5%BF%AB%E5%9C%B0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8-rmarkdown/&#34;
+    target=&#34;_blank&#34;
+  &gt;Rmarkdown 的安利&lt;/a&gt; 之后，我在实际使用过程中遇到了一些难题，就是关于中文的问题。如果只使用英文写作的话，完全没有问题；但是一旦使用中文，各级标题，加粗强调和引用都会变得非常奇怪。这也使我暂时搁置下了 Rmarkdown 不用。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>轻松愉快地开始使用 Rmarkdown</title>
+      <link>https://xzywisdili.netlify.app/blog/20171223/2017-12-23-rmarkdown/</link>
+      <pubDate>Sat, 23 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20171223/2017-12-23-rmarkdown/</guid>
+      <description>&lt;p&gt;R 语言世界里的一个大杀器。&lt;/p&gt;
+&lt;p&gt;我想，在所有接触和学习 R 语言的初学者（当然包括我）眼里，有两个东西是相当酷的。一个是 &lt;a
+  href=&#34;http://shiny.rstudio.com/tutorial/&#34;
+    target=&#34;_blank&#34;
+  &gt;shiny&lt;/a&gt;，可以轻松做出交互式的图表；而另一个就是 &lt;a
+  href=&#34;http://rmarkdown.rstudio.com/&#34;
+    target=&#34;_blank&#34;
+  &gt;Rmarkdown&lt;/a&gt; 了。&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

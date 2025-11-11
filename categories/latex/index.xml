@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LaTeX on XZY&#39;s Blog</title>
+    <link>https://xzywisdili.netlify.app/categories/latex/</link>
+    <description>Recent content in LaTeX on XZY&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2025 Xzywisdili</copyright>
+    <lastBuildDate>Mon, 23 Oct 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/categories/latex/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>为什么要使用 LaTeX 呢？</title>
+      <link>https://xzywisdili.netlify.app/blog/20171023/2017-10-23-why-latex/</link>
+      <pubDate>Mon, 23 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20171023/2017-10-23-why-latex/</guid>
+      <description>&lt;p&gt;这个标题其实不是我对我自己的诘问。作为一个医学生，在习惯使用 LaTeX 完成日常的作业或是论文时，总会有几个同学凑上前来，好奇地问这是个什么样的写作工具。在我做一番简要的介绍后，他们或许会表露出感兴趣，或称赞的神情，然后问下一个重复了很多遍的问题：为什么要使用 LaTeX 呢？&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

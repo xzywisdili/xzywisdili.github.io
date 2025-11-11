@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>可视化 on XZY&#39;s Blog</title>
+    <link>https://xzywisdili.netlify.app/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/</link>
+    <description>Recent content in 可视化 on XZY&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2025 Xzywisdili</copyright>
+    <lastBuildDate>Thu, 28 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>一天内数据分布的可视化</title>
+      <link>https://xzywisdili.netlify.app/blog/20220728/2022-07-28-timeseriesplot/</link>
+      <pubDate>Thu, 28 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20220728/2022-07-28-timeseriesplot/</guid>
+      <description>&lt;p&gt;我们在很多情况下都会想要可视化一天中的周期时间来探索发现可能存在的某种模式。
+比如根据犯罪数据发现在一天中的高发时段，又或者某个app的用户活跃时段的表示，又或者患者在院外一天中的健康作息的可视化，都不可避免会碰到要把数据在周期性的时间上进行展示。
+而目前这样的可视化方向大概有两个：线性展示和环形展示。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>最近我都做了些什么</title>
+      <link>https://xzywisdili.netlify.app/blog/20191204/2019-12-04-whathaveidone/</link>
+      <pubDate>Wed, 04 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20191204/2019-12-04-whathaveidone/</guid>
+      <description>&lt;p&gt;时间匆匆忙忙到了 2019 年的 12 月，我自己也是匆匆忙忙的事情。至于即将到来的年终总结什么的，就随缘了。
+最近忙的事，既然暂时告一段落，就有必要开个博客总结一下。
+所以这一篇可能内容会比较杂乱反复。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>我在 R 里画地图（二）</title>
+      <link>https://xzywisdili.netlify.app/blog/20191118/2019-11-18-rmap2/</link>
+      <pubDate>Mon, 18 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20191118/2019-11-18-rmap2/</guid>
+      <description>&lt;p&gt;在R语言中绘制地图，尤其是可交互式的地图的另一个利器是 &lt;code&gt;leaflet&lt;/code&gt; 包。
+这次我会借着我刚刚完成的一个小项目来讲解这一内容，目标是仿制&lt;a
+  href=&#34;https://www.cdc.gov/drugoverdose/data/heroin.html#overdose-deaths&#34;
+    target=&#34;_blank&#34;
+  &gt;美国 CDC 官网&lt;/a&gt;上的一张图——是的，我们的「战场」从中国转移到了美国。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>我在 R 里画地图（一）</title>
+      <link>https://xzywisdili.netlify.app/blog/20190923/2019-09-23-rmap/</link>
+      <pubDate>Mon, 23 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20190923/2019-09-23-rmap/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;前言
+    &lt;div id=&#34;前言&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
+        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e5%89%8d%e8%a8%80&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;
+    
+&lt;/h2&gt;
+&lt;p&gt;大约一个月前，接到一个任务：绘制全国的患病率地图，就草草做了一个初版，当时还做了一个 ppt 和组里的小伙伴分享。
+直到后来，才知道这种图有一个专业的称呼：&lt;a
+  href=&#34;https://en.wikipedia.org/wiki/Choropleth_map&#34;
+    target=&#34;_blank&#34;
+  &gt;choropleth maps&lt;/a&gt;，中文名字是&lt;strong&gt;分层设色图&lt;/strong&gt;。
+可以看到在 google 中检索 choropleth maps 得到的结果：&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

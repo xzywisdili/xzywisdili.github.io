@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>阅读 on XZY&#39;s Blog</title>
+    <link>https://xzywisdili.netlify.app/categories/%E9%98%85%E8%AF%BB/</link>
+    <description>Recent content in 阅读 on XZY&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2025 Xzywisdili</copyright>
+    <lastBuildDate>Mon, 22 Apr 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/categories/%E9%98%85%E8%AF%BB/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>哲瑞·雷恩：悲剧系列终章</title>
+      <link>https://xzywisdili.netlify.app/blog/20190422/2019-04-22-drurylane/</link>
+      <pubDate>Mon, 22 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20190422/2019-04-22-drurylane/</guid>
+      <description>&lt;p&gt;很早就读过埃勒里·奎因的悲剧系列，始终以为该系列仅 X, Y, Z 三本。
+没想到偶然得知还有一本&lt;a
+  href=&#34;https://book.douban.com/subject/3608352/&#34;
+    target=&#34;_blank&#34;
+  &gt;《哲瑞·雷恩的最后一案》&lt;/a&gt;，果断花了一天时间读完。
+合上书时，感受到了无比的震撼，心情难以平静。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>2017 读书印象</title>
+      <link>https://xzywisdili.netlify.app/blog/20171230-2/2017-12-30-reading/</link>
+      <pubDate>Sat, 30 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20171230-2/2017-12-30-reading/</guid>
+      <description>&lt;p&gt;自从 2016 年起，我逼自己养成一个习惯，每年准备一个记录阅读情况的 Excel 表格。一开始的时候，满怀热情，又是搞了图表，又是自学了 VBA 编程，然后模仿 Github 代码记录写了一个玩意儿——365 天对应 365 个小方格，每天读的页数越多，这天就越绿。当时熬夜完成的时候还特兴奋，但后来证明，没多大蛋用。当然读书记录这方法成效斐然，我在 2016 年读完了整整 40 本书！（要知道我以前一年可能翻不完一本书）&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

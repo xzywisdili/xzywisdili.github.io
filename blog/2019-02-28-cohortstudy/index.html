@@ -1,0 +1,1662 @@
+<!doctype html>
+<html
+  lang="zh-cn"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="zh-cn">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>流行病学学习笔记（二）：队列研究（cohort study） &middot; XZY&#39;s Blog</title>
+    <meta name="title" content="流行病学学习笔记（二）：队列研究（cohort study） &middot; XZY&#39;s Blog">
+  
+
+  
+  
+  
+    <meta name="keywords" content="流行病学,笔记,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/blog/2019-02-28-cohortstudy/">
+  
+
+  
+  
+    <meta name="author" content="Xzywisdili">
+  
+  
+    
+      
+        
+          <link href="455358130@qq.com" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://github.com/xzywisdili" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://weibo.com/u/5253413750" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/blog/2019-02-28-cohortstudy/">
+  <meta property="og:site_name" content="XZY&#39;s Blog">
+  <meta property="og:title" content="流行病学学习笔记（二）：队列研究（cohort study）">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2019-02-28T00:00:00+00:00">
+    <meta property="article:modified_time" content="2019-02-28T00:00:00+00:00">
+    <meta property="article:tag" content="流行病学">
+    <meta property="article:tag" content="笔记">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="流行病学学习笔记（二）：队列研究（cohort study）">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.c6872292afd217c3fec21a497812c297f820816f69a0a5a62e374d9404d977d9843a95591a1b550b15b96f149868e92758f3108e31411fa4e199074654ef72db.css"
+    integrity="sha512-xocikq/SF8P&#43;whpJeBLCl/gggW9poKWmLjdNlATZd9mEOpVZGhtVCxW5bxSYaOknWPMQjjFBH6ThmQdGVO9y2w==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+    
+    <script src="/js/a11y.min.d9acff2dc1bb4b339c2f60872250621042d0b39aca5db850c177787830ac6287bac6ae82e4d148444576ffa8f3dbc1d0e1ef813822faa515639657c3c605d63d.js" integrity="sha512-2az/LcG7SzOcL2CHIlBiEELQs5rKXbhQwXd4eDCsYoe6xq6C5NFIREV2/6jz28HQ4e&#43;BOCL6pRVjllfDxgXWPQ=="></script>
+  
+  
+  
+  
+    
+    <script
+      type="text/javascript"
+      src="/js/zen-mode.min.9814dee9614d32aeb56239d118edfe20acd6231424f9b19c2dd48835038414130a5e946c0d1c9087d60e60e31840c9babfd217e3d4b95643dc8d651a71ccdf4a.js"
+      integrity="sha512-mBTe6WFNMq61YjnRGO3&#43;IKzWIxQk&#43;bGcLdSINQOEFBMKXpRsDRyQh9YOYOMYQMm6v9IX49S5VkPcjWUacczfSg=="></script>
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.b4b722fcb5d42f34f52b30a92f3521b69f403ca9d96d0d6179eb537cb870f5d83fdf1fe836688d95d5c99fefbda4170487711006e56051fa67ea00da10521721.js" integrity="sha512-tLci/LXULzT1KzCpLzUhtp9APKnZbQ1heetTfLhw9dg/3x/oNmiNldXJn&#43;&#43;9pBcEh3EQBuVgUfpn6gDaEFIXIQ=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.f16cf48651044bc66625c8008eb5605cc702530530daa081ce7e495e50adf778bef6cd0747382983caf5e5cc745c819dd7a969e17e545119dff14346f4fcb977.js"
+      integrity="sha512-8Wz0hlEES8ZmJcgAjrVgXMcCUwUw2qCBzn5JXlCt93i&#43;9s0HRzgpg8r15cx0XIGd16lp4X5UURnf8UNG9Py5dw=="
+      data-copy="复制"
+      data-copied="已复制"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.03cb160e3cfdb2667a2e2c80d283bebcf63ff8bbc4b629c9ab2babf6fae1d0c07ad470edae783efa4fabda2ac01c58d60e63b98b3c336be8208460f08f4354f5.js" integrity="sha512-A8sWDjz9smZ6LiyA0oO&#43;vPY/&#43;LvEtinJqyur9vrh0MB61HDtrng&#43;&#43;k&#43;r2irAHFjWDmO5izwza&#43;gghGDwj0NU9Q=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Blogs",
+    "name": "流行病学学习笔记（二）：队列研究（cohort study）",
+    "headline": "流行病学学习笔记（二）：队列研究（cohort study）",
+    
+    
+    "inLanguage": "zh-cn",
+    "url" : "http:\/\/localhost:1313\/blog\/2019-02-28-cohortstudy\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Xzywisdili"
+    },
+    "copyrightYear": "2019",
+    "dateCreated": "2019-02-28T00:00:00\u002b00:00",
+    "datePublished": "2019-02-28T00:00:00\u002b00:00",
+    
+    "dateModified": "2019-02-28T00:00:00\u002b00:00",
+    
+    "keywords": ["流行病学","笔记"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "420"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        跳过正文
+      </a>
+    </div>
+    
+    
+      <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 z-100">
+  <div
+    id="menu-blur"
+    class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom bg-neutral dark:bg-neutral-800"></div>
+  <div class="relative m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between py-6 md:justify-start gap-x-3 pt-[2px] pr-2 md:pr-4 pb-[3px] pl-0">
+  
+  
+    
+    
+      <div>
+        <a href="/" class="flex">
+          <span class="sr-only">XZY&rsquo;s Blog</span>
+          
+            <img
+              src="/images/logo.png"
+              width="357"
+              height="357"
+              class="logo max-h-[5rem] max-w-[5rem] object-scale-down object-left nozoom"
+              alt="">
+          
+        </a>
+      </div>
+    
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+        <a href="/" class="text-base font-medium">
+          XZY&rsquo;s Blog
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="/blog/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="博客"
+  title="Blogs">
+  
+  
+    <p class="text-base font-medium">
+      博客
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href=""
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="关于"
+  title="">
+  
+  
+    <p class="text-base font-medium">
+      关于
+    </p>
+  
+</a>
+
+
+
+      
+    
+
+    
+
+    
+      <div class="flex items-center">
+    <button
+      id="desktop-a11y-toggle"
+      aria-label="Open accessibility panel"
+      aria-expanded="false"
+      type="button"
+      class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+      role="button"
+      aria-pressed="false">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm161.5-86.1c-12.2-5.2-26.3 .4-31.5 12.6s.4 26.3 12.6 31.5l11.9 5.1c17.3 7.4 35.2 12.9 53.6 16.3l0 50.1c0 4.3-.7 8.6-2.1 12.6l-28.7 86.1c-4.2 12.6 2.6 26.2 15.2 30.4s26.2-2.6 30.4-15.2l24.4-73.2c1.3-3.8 4.8-6.4 8.8-6.4s7.6 2.6 8.8 6.4l24.4 73.2c4.2 12.6 17.8 19.4 30.4 15.2s19.4-17.8 15.2-30.4l-28.7-86.1c-1.4-4.1-2.1-8.3-2.1-12.6l0-50.1c18.4-3.5 36.3-8.9 53.6-16.3l11.9-5.1c12.2-5.2 17.8-19.3 12.6-31.5s-19.3-17.8-31.5-12.6L338.7 175c-26.1 11.2-54.2 17-82.7 17s-56.5-5.8-82.7-17l-11.9-5.1zM256 160a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></svg>
+</span>
+    </button>
+
+    <div id="desktop-a11y-overlay" class="fixed inset-0 z-500 hidden"></div>
+
+    <div
+      id="desktop-a11y-panel"
+      role="dialog"
+      aria-labelledby="desktop-a11y-panel-title"
+      class="a11y-panel-enter fixed hidden z-500 p-6 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 rounded-lg shadow-xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700"
+      style="min-width: 20rem;">
+      <div class="flex items-center justify-between mb-6">
+        <h3
+          id="desktop-a11y-panel-title"
+          class="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
+          无障碍设定
+        </h3>
+        <button
+          id="desktop-a11y-close"
+          class="text-neutral-500 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200"
+          aria-label="Close a11y panel">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="space-y-5">
+        
+        
+        
+        
+          
+        
+        
+          <div class="flex items-center justify-between">
+            <label for="desktop-disable-blur" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+              禁用模糊效果
+            </label>
+            <div class="ios-toggle">
+              <input type="checkbox" id="desktop-disable-blur">
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <label for="desktop-underline-links" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+              显示链接下划线
+            </label>
+            <div class="ios-toggle">
+              <input type="checkbox" id="desktop-underline-links">
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <label for="desktop-zen-mode" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+              啟用阅读模式
+            </label>
+            <div class="ios-toggle">
+              <input type="checkbox" id="desktop-zen-mode">
+            </div>
+          </div>
+
+
+        <div class="flex items-center justify-between">
+          <label
+            for="desktop-font-size-select"
+            class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+            字体大小
+          </label>
+          <select
+            id="desktop-font-size-select"
+            class="border rounded-lg px-3 py-1.5 pr-8 text-neutral-900 text-sm dark:bg-neutral-700 dark:text-neutral-200 focus:ring-primary-500 focus:border-primary-500">
+            
+            
+              <option value="default">default</option>
+            
+              <option value="12px">12px</option>
+            
+              <option value="14px">14px</option>
+            
+              <option value="16px">16px</option>
+            
+              <option value="18px">18px</option>
+            
+              <option value="20px">20px</option>
+            
+              <option value="22px">22px</option>
+            
+              <option value="24px">24px</option>
+            
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="搜索 (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+      <div class="flex items-center">
+    <button
+      id="mobile-a11y-toggle"
+      aria-label="Open accessibility panel"
+      aria-expanded="false"
+      type="button"
+      class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+      role="button"
+      aria-pressed="false">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm161.5-86.1c-12.2-5.2-26.3 .4-31.5 12.6s.4 26.3 12.6 31.5l11.9 5.1c17.3 7.4 35.2 12.9 53.6 16.3l0 50.1c0 4.3-.7 8.6-2.1 12.6l-28.7 86.1c-4.2 12.6 2.6 26.2 15.2 30.4s26.2-2.6 30.4-15.2l24.4-73.2c1.3-3.8 4.8-6.4 8.8-6.4s7.6 2.6 8.8 6.4l24.4 73.2c4.2 12.6 17.8 19.4 30.4 15.2s19.4-17.8 15.2-30.4l-28.7-86.1c-1.4-4.1-2.1-8.3-2.1-12.6l0-50.1c18.4-3.5 36.3-8.9 53.6-16.3l11.9-5.1c12.2-5.2 17.8-19.3 12.6-31.5s-19.3-17.8-31.5-12.6L338.7 175c-26.1 11.2-54.2 17-82.7 17s-56.5-5.8-82.7-17l-11.9-5.1zM256 160a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></svg>
+</span>
+    </button>
+
+    <div id="mobile-a11y-overlay" class="fixed inset-0 z-500 hidden"></div>
+
+    <div
+      id="mobile-a11y-panel"
+      role="dialog"
+      aria-labelledby="mobile-a11y-panel-title"
+      class="a11y-panel-enter fixed hidden z-500 p-6 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 rounded-lg shadow-xl bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700"
+      style="min-width: 20rem;">
+      <div class="flex items-center justify-between mb-6">
+        <h3
+          id="mobile-a11y-panel-title"
+          class="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
+          无障碍设定
+        </h3>
+        <button
+          id="mobile-a11y-close"
+          class="text-neutral-500 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200"
+          aria-label="Close a11y panel">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="space-y-5">
+        
+        
+        
+        
+          
+        
+        
+          <div class="flex items-center justify-between">
+            <label for="mobile-disable-blur" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+              禁用模糊效果
+            </label>
+            <div class="ios-toggle">
+              <input type="checkbox" id="mobile-disable-blur">
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <label for="mobile-underline-links" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+              显示链接下划线
+            </label>
+            <div class="ios-toggle">
+              <input type="checkbox" id="mobile-underline-links">
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <label for="mobile-zen-mode" class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+              啟用阅读模式
+            </label>
+            <div class="ios-toggle">
+              <input type="checkbox" id="mobile-zen-mode">
+            </div>
+          </div>
+
+
+        <div class="flex items-center justify-between">
+          <label
+            for="mobile-font-size-select"
+            class="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+            字体大小
+          </label>
+          <select
+            id="mobile-font-size-select"
+            class="border rounded-lg px-3 py-1.5 pr-8 text-neutral-900 text-sm dark:bg-neutral-700 dark:text-neutral-200 focus:ring-primary-500 focus:border-primary-500">
+            
+            
+              <option value="default">default</option>
+            
+              <option value="12px">12px</option>
+            
+              <option value="14px">14px</option>
+            
+              <option value="16px">16px</option>
+            
+              <option value="18px">18px</option>
+            
+              <option value="20px">20px</option>
+            
+              <option value="22px">22px</option>
+            
+              <option value="24px">24px</option>
+            
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="搜索 (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 me-1">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none text-end max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/blog/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="博客"
+    title="Blogs">
+    
+    
+      <p class="text-bg font-bg">
+        博客
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href=""
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="关于"
+    title="">
+    
+    
+      <p class="text-bg font-bg">
+        关于
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+  <script>
+    (function () {
+      var $mainmenu = $(".main-menu");
+      var path = window.location.pathname;
+      $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
+        $(e).children("p").addClass("active");
+      });
+    })();
+  </script>
+
+
+  </div>
+</div>
+
+
+<script
+  type="text/javascript"
+  src="/js/background-blur.min.00a57c73ea12f2cab2980c3c3d649e89f6d82f190f74bbe2b67f2f5e39ab7d032ece47086400ca05396758aace13299da49aca43ea643d2625e62c506267a169.js"
+  integrity="sha512-AKV8c&#43;oS8sqymAw8PWSeifbYLxkPdLvitn8vXjmrfQMuzkcIZADKBTlnWKrOEymdpJrKQ&#43;pkPSYl5ixQYmehaQ=="
+  data-blur-id="menu-blur"></script>
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        流行病学学习笔记（二）：队列研究（cohort study）
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2019-02-28T00:00:00&#43;00:00">Feb 28, 2019</time><span class="px-2 text-primary-500">&middot;</span><span>420 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">2 分钟</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="Xzywisdili"
+        src="/images/logo_hu_f5df3f2aa4a371d1.png"
+        data-zoom-src="/images/logo.png">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        作者
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Xzywisdili
+      </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="455358130@qq.com"
+          target="_blank"
+          aria-label="Email"
+          title="Email"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/xzywisdili"
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://weibo.com/u/5253413750"
+          target="_blank"
+          aria-label="Weibo"
+          title="Weibo"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
+<p>本文是流行病学学习笔记的第一篇，上课时间为 2019 年 2 月 25 日。</p>
+
+<h2 class="relative group">基本原理
+    <div id="基本原理" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%9f%ba%e6%9c%ac%e5%8e%9f%e7%90%86" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>队列（cohort）在流行病学中指有共同经历或有共同状态的一群人。
+队列研究（Cohort study）指选定暴露于及未暴露于某因素的两组人群，随访观察一定的时间，
+比较两组人群某种时间的结局（一般指疾病的发病率或死亡率），从而判断该暴露因素与发病或死亡有无关联及关联大小的一种观察性研究方法。</p>
+<p>病因和危险因素研究是流行病学研究的重要任务，病因研究的逻辑顺序应该是先有病因存在，然后又疾病发生。
+所以队列研究的特点是<strong>由因到果</strong>。</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="006tKfTcly1g0mfnk19bbj316a0o4765.jpg"
+    src="https://s2.loli.net/2023/04/27/aH8qJZnkXNhP6sV.webp"
+    ></figure>
+<p>危险因素（risk factor）指能隐去某特定不良结局，或使其发生的概率增加的因子，包括个人行为等等。
+危险因素的反面称为保护因素，两者统称决定因素。而这个概念在流行病学中逐渐淡化，将以前所谓的「危险因素」等概念统称为「暴露」。</p>
+<p>暴露是研究对象接触过某种待研究的物质或具有某种研究的特征或行为，是本研究需要探讨的因素。</p>
+<p>队列有固定队列（fixed cohort）和动态队列（dynamic cohort）之分。</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="006tKfTcly1g0mfmo8ynij313w0o4whz.jpg"
+    src="https://s2.loli.net/2023/04/27/OtL7nsJSfWXGwz8.webp"
+    ></figure>
+<p>动态队列由于开始时间的不统一和失访等退出队列的情况存在，所以存在不同样本对于队列的贡献无法统一衡量。
+因此出现了一种新的衡量方法：<strong>「人年」</strong>，即用样本的数量乘以该样本进入队列的时间。</p>
+
+<h2 class="relative group">队列研究的历史
+    <div id="队列研究的历史" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%98%9f%e5%88%97%e7%a0%94%e7%a9%b6%e7%9a%84%e5%8e%86%e5%8f%b2" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>从 Jone Snowl 的伦敦霍乱调查开始，奠定了队列研究的雏形。
+最早的队列研究一词出现是美国流行病学家 1935 年提出，但是该概念与今天含义不同。
+现代队列研究作为一种流行病学研究的方法，得到广泛的应用，相关论文数量变化十年翻一番，著名的研究包括：</p>
+<ul>
+<li>doll 关于医生吸烟与肺癌的队列研究</li>
+<li>美国佛明汉的心脏病研究</li>
+<li>原子弹爆炸的幸存者研究</li>
+</ul>
+<p>现在，「超大型队列」的概念突破了传统队列研究，摒弃了一因一果的概念。
+世界最大的 50 到 55 万人超大型队列，总共有 3 个。</p>
+
+<h2 class="relative group">特点
+    <div id="特点" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%89%b9%e7%82%b9" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>队列研究有以下几个特点：</p>
+<ul>
+<li>观察性研究</li>
+<li>设立对照组</li>
+<li>由因及果，时序合理</li>
+<li>检验暴露于疾病的因果联系科学性强</li>
+</ul>
+
+<h2 class="relative group">用途
+    <div id="用途" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%94%a8%e9%80%94" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>队列研究可以用来：</p>
+<ol>
+<li><strong>检验病因假设</strong>：验证某种暴露因素对某种疾病发病率或死亡率的影响，也可以同时观察某种暴露因素对人群健康的系统影响；</li>
+<li><strong>描述疾病的自然史</strong>：疾病的自然发展过程，包括疾病的起病（病理发生期）、潜伏期（隐伏期）、临床前期、临床期到结局的全过程；</li>
+<li><strong>评价预防措施效果</strong>：验证某种行为或习惯变化产生的健康影响，如戒烟或使用大量蔬菜对肠癌的影响；</li>
+<li><strong>药物的上市后监测</strong>：对于通过临床三期的临床试验的治疗药物，上市后，监测人群用药的安全性、有效性。</li>
+</ol>
+
+<h2 class="relative group">类型
+    <div id="类型" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%b1%bb%e5%9e%8b" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>队列研究根据研究方法可以分为：前瞻性队列研究、历史性队列研究、双向性队列研究。
+历史性队列回顾性地收集已有的历史资料，而前瞻性队列从此时开始收集资料，双向性则是两者的结合，即向后收集历史资料，也向前收集未知资料。</p>
+
+<h3 class="relative group">前瞻性队列研究
+    <div id="前瞻性队列研究" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%89%8d%e7%9e%bb%e6%80%a7%e9%98%9f%e5%88%97%e7%a0%94%e7%a9%b6" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>研究对象的分组是根据目前的暴露情况，研究的结局需要随访观察一段时间才能得到。这是队列言情剧的基本形式。
+该类的最大优点是可以获取相对真实可靠的资料，但是如果观察大量人群花费太大。如果疾病的潜伏期很长，则需要观察的时间很长。</p>
+<p>前瞻性研究需要研究的检验假设明确，疾病的率至少不低于 5%，暴露因素明确，且能有效测量；结局明确，可以可靠方式确定；有足够的研究人群；
+队列能够有效随访；有足够的物质、人力和资金的保证。</p>
+
+<h3 class="relative group">历史性队列研究
+    <div id="历史性队列研究" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8e%86%e5%8f%b2%e6%80%a7%e9%98%9f%e5%88%97%e7%a0%94%e7%a9%b6" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>研究工作时现在开始的，研究对象的分组是过去某个时间，研究的结局在研究开始时已经发生，暴露到结局的方向是前瞻性的。</p>
+<p>历史性队列研究的特点包括节省时间、人力和物力，出结果快，因而适宜于长诱导期和长潜伏期的疾病；
+常用于具有特殊暴露的职业人群的研究；研究常常缺乏影响暴露与疾病关系的混杂因素的资料，以至影响暴露组与未暴露组的可比性。</p>
+<p>历史性队列研究的条件除了要具备前瞻性队列条件外，还应具备足够数量的、完整可靠的、在过去时段的研究对象的暴露和结局的历史记录。</p>
+
+<h3 class="relative group">双向性队列研究 ambispective cohort study
+    <div id="双向性队列研究-ambispective-cohort-study" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8f%8c%e5%90%91%e6%80%a7%e9%98%9f%e5%88%97%e7%a0%94%e7%a9%b6-ambispective-cohort-study" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>在历史性队列研究之后，继续进行前瞻性队列研究叫做双向性队列研究（ambispective cohort study）。
+这种研究具有上述两种研究的优点，在一定程度上弥补了它们的不足。</p>
+<p>双向性研究需要基本具备历史性队列研究条件，如果暴露到现在的观察时间不足，且有条件继续进行观察，可以采用双向性队列。</p>
+
+<h2 class="relative group">队列研究的实施
+    <div id="队列研究的实施" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%98%9f%e5%88%97%e7%a0%94%e7%a9%b6%e7%9a%84%e5%ae%9e%e6%96%bd" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">确定设计方法的原则
+    <div id="确定设计方法的原则" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%a1%ae%e5%ae%9a%e8%ae%be%e8%ae%a1%e6%96%b9%e6%b3%95%e7%9a%84%e5%8e%9f%e5%88%99" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>根据上述各种研究类型的条件选择合适的研究类型，设计研究方法。</p>
+
+<h3 class="relative group">确定暴露因素
+    <div id="确定暴露因素" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%a1%ae%e5%ae%9a%e6%9a%b4%e9%9c%b2%e5%9b%a0%e7%b4%a0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>暴露因素通常是在描述性研究或病例对照研究的基础上确定的。尽量对暴露因素进行定量处理，除了暴露剂量水平外，
+还应考虑暴露的时间长度，以及暴露是否连续。除了要确定主要的暴露因素外，也应同时手机其它次要的暴露因素资料及一般特征资料。</p>
+<p>对暴露的测量可以是定性或定量测量，具体测量方法一般包括访谈、实验室检查和查阅记录。随着科技的进步，暴露水平的测量已经从
+宏观群体水平发展到个体水平，分子水平。</p>
+
+<h3 class="relative group">确定结局
+    <div id="确定结局" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%a1%ae%e5%ae%9a%e7%bb%93%e5%b1%80" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>结局不仅限于发病，还有死亡和各种化验指标，如血清抗体的滴度，血脂、血糖等等。结局事件指研究对象个体而言，与观察期的终点不是一个概念。
+判断结局的标准应当尽量采用国际或国内统一标准。</p>
+
+<h3 class="relative group">确定研究现场与研究人群
+    <div id="确定研究现场与研究人群" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%a1%ae%e5%ae%9a%e7%a0%94%e7%a9%b6%e7%8e%b0%e5%9c%ba%e4%b8%8e%e7%a0%94%e7%a9%b6%e4%ba%ba%e7%be%a4" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>尽量选择领导重视、群众支持，有足够符合条件的研究对象，医疗条件好，交通便利，发病率较高，有代表性的研究现场。
+研究人群从目标人群中抽出的具有代表性的人，未患所研究疾病的人，并分为暴露人群和非暴露人群。</p>
+<p>暴露人群主要类型有：特殊暴露人群、一般人群、有组织的人群团体和志愿者。
+其中特殊暴露人群指对某因素有高的暴露水平的人群。如果暴露因素与疾病有关，则高度暴露的人群中疾病的发病率或死亡率有可能高于其他人群。
+某些职业中存在特殊暴露因素，可以作为特殊暴露人群。选择特殊暴露人群做队列研究时，常使用历史性队列研究。</p>
+<p>对照人群为排除未暴露于研究的因素外，其他各种因素或人群特征尽可能与暴露人群相同。
+对照人群类型包括：内对照、外对照、总人口对照和多重对照。</p>
+<p>内对照是在同一研究人群中，采用没有暴露或暴露水平最低的人员作为对照。选择内对照，对照人群与暴露人群的可比性好。但研究环境或职业暴露时难以实施。
+外对照是职业人群或特殊暴露人群常需要在该人群之外特设对照组，可以避免“污染”，但缺点是可比性受到影响，且工作量加大。</p>
+<p>一般人群对照，即不设立特殊对照，暴露人群发病率与一般人群进行比较。这样可以节省大量经费和时间，但资料不够全面，且可比性较差。</p>
+<p>多种对照就是对上述对照方法的综合，进行多重比较。</p>
+
+<h3 class="relative group">确定样本大小
+    <div id="确定样本大小" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%a1%ae%e5%ae%9a%e6%a0%b7%e6%9c%ac%e5%a4%a7%e5%b0%8f" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>队列研究的样本量大小主要取决于 4 个参数：</p>
+<ol>
+<li>一般人群中研究疾病的发病率</li>
+<li>暴露人群的发病率：与一般人群发病率差距越大，所需观察人数越少</li>
+<li>显著性水平</li>
+<li>把握度</li>
+</ol>
+<p>样本大小可以通过以下公式计算：</p>
+$$ N = \frac { \left( Z _ { a } \times \sqrt { 2 \overline { P } ( 1 - \overline { P } ) } + Z _ { \beta } \times \sqrt { P _ { 1 } \left( 1 - P _ { 1 } \right) + P _ { 0 } \left( 1 - P _ { 0 } \right) } \right) ^ { 2 } } { \left( P _ { 1 } - P _ { 0 } \right) ^ { 2 } } $$<p>其中：</p>
+<ul>
+<li>P 代表两个发病率的平均值</li>
+<li>P_1 代表暴露组预期发病率</li>
+<li>P_0 代表对照组预期发病率</li>
+</ul>
+
+<h3 class="relative group">资料的收集
+    <div id="资料的收集" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%b5%84%e6%96%99%e7%9a%84%e6%94%b6%e9%9b%86" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>需要收集暴露、结局、可能产生混杂的因素等种类的资料。前期对队列进行基线调查的资料，以及之后随访观察的资料收集。
+收集资料按如下四格表进行整理：</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center"></th>
+          <th style="text-align: center">病例</th>
+          <th style="text-align: center">非病例</th>
+          <th style="text-align: center">合计</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">暴露组</td>
+          <td style="text-align: center">a</td>
+          <td style="text-align: center">b</td>
+          <td style="text-align: center">a+b = n1</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">非暴露组</td>
+          <td style="text-align: center">c</td>
+          <td style="text-align: center">d</td>
+          <td style="text-align: center">c+d = n0</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">合计</td>
+          <td style="text-align: center">a+c=m1</td>
+          <td style="text-align: center">b+d=m0</td>
+          <td style="text-align: center">a+b+c+d=t</td>
+      </tr>
+  </tbody>
+</table>
+<p>暴露组发病率为 a/n1，非暴露组发病率为 c/n0。</p>
+
+<h2 class="relative group">资料的整理和分析
+    <div id="资料的整理和分析" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%b5%84%e6%96%99%e7%9a%84%e6%95%b4%e7%90%86%e5%92%8c%e5%88%86%e6%9e%90" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">率的计算
+    <div id="率的计算" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%8e%87%e7%9a%84%e8%ae%a1%e7%ae%97" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>累积发病率（cumulative incidence, CI）：当观察人口比较稳定时，不论观察时间长短，
+以开始观察时的人口数为分母，整个观察期内发病人数为分子，得到累积发病率。</p>
+$$ 累积发病率 = \frac{观察期间发病人数}{观察队列人数} $$<p>发病密度（incidence density）适用于观察时间长，人口不稳定，存在失访的情况。计算方法为：</p>
+$$ ID = \frac{观察期内发病人数}{观察人时} $$<p>其中观察人时即观察人数乘观察时间，最常用的时间单位是年，即以人年为单位计算发病率或死亡率。</p>
+<p>标化死亡比（standardized mortality ratio, SMR）适用于结局时间的发病率低的情况，计算方法是：</p>
+$$ SMR = \frac{研究人群观察发病（死亡）数}{标准人口预期发病（死亡）数} $$<p>SMR 代表被研究人群发生某病的危险性是标准人群的多少倍。</p>
+
+<h3 class="relative group">暴露于疾病关联的指标
+    <div id="暴露于疾病关联的指标" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%9a%b4%e9%9c%b2%e4%ba%8e%e7%96%be%e7%97%85%e5%85%b3%e8%81%94%e7%9a%84%e6%8c%87%e6%a0%87" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center"></th>
+          <th style="text-align: center">病例</th>
+          <th style="text-align: center">非病例</th>
+          <th style="text-align: center">合计</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">暴露组</td>
+          <td style="text-align: center">a</td>
+          <td style="text-align: center">b</td>
+          <td style="text-align: center">a+b = n1</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">非暴露组</td>
+          <td style="text-align: center">c</td>
+          <td style="text-align: center">d</td>
+          <td style="text-align: center">c+d = n0</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">合计</td>
+          <td style="text-align: center">a+c=m1</td>
+          <td style="text-align: center">b+d=m0</td>
+          <td style="text-align: center">a+b+c+d=t</td>
+      </tr>
+  </tbody>
+</table>
+<p>再次借用上面提到的四格表形式。
+队列研究的效应估计包括相对危险度、归因危险度、归因危险度百分比、人群归因危险度、人群归因危险度百分比等。</p>
+
+<h4 class="relative group">相对危险度 relative risk, RR
+    <div id="相对危险度-relative-risk-rr" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%9b%b8%e5%af%b9%e5%8d%b1%e9%99%a9%e5%ba%a6-relative-risk-rr" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<p>相对危险度反映暴露与发病或死亡关联强度的指标，也叫危险比（risk ratio, RR），其本质是率比，为暴露组的率与非暴露组的率之比。</p>
+$$ RR = \frac{I_e}{I_0} = \frac{a/n_1}{c/n_0} $$<p>RR 值所代表的关联强度如下表：</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center">RR</th>
+          <th style="text-align: center">关联强度</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">0.9<del>1.0 或 1.0</del>1.1</td>
+          <td style="text-align: center">无</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">0.7<del>0.8 或 1.2</del>1.4</td>
+          <td style="text-align: center">弱</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">0.4<del>0.6 或 1.5</del>2.9</td>
+          <td style="text-align: center">中</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">0.1<del>0.3 或 3.0</del>9.9</td>
+          <td style="text-align: center">强</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">＜0.1 或 10~</td>
+          <td style="text-align: center">很强</td>
+      </tr>
+  </tbody>
+</table>
+
+<h4 class="relative group">归因危险度 attributable risk, AR
+    <div id="归因危险度-attributable-risk-ar" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%bd%92%e5%9b%a0%e5%8d%b1%e9%99%a9%e5%ba%a6-attributable-risk-ar" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<p>又叫特异危险度，本质为差率，即暴露组的率与非暴露组的率之差，说明由于暴露增加或减少的率的大小。</p>
+$$ AR = I_e - I_0 = \frac{a}{n_1} - \frac{c}{n_0} $$<p>RR 说明的是暴露对于个体增加发生危险的倍数，而 AR 是对人群来说，暴露增加的超额风险的比例。</p>
+
+<h4 class="relative group">归因危险度百分比 AR%
+    <div id="归因危险度百分比-ar" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%bd%92%e5%9b%a0%e5%8d%b1%e9%99%a9%e5%ba%a6%e7%99%be%e5%88%86%e6%af%94-ar" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+$$ AR\% = \frac{I_e - I_0}{I_e} \times 100\% $$<p>归因危险度百分比代表暴露人群中的发病或死亡归因于暴露的部分占全部发病或死亡的百分比。</p>
+
+<h4 class="relative group">人群归因危险度 population attributable risk, PAR
+    <div id="人群归因危险度-population-attributable-risk-par" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%ba%ba%e7%be%a4%e5%bd%92%e5%9b%a0%e5%8d%b1%e9%99%a9%e5%ba%a6-population-attributable-risk-par" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<p>计算方法为总人群率减去非暴露组率：</p>
+$$ PAR = I_t - I_0 $$<p>人群归因危险度代表暴露人群与一般人群比较，所增加的疾病发生率的大小。
+PAR 值越大，暴露因素消除后减少的疾病数量越多。</p>
+
+<h2 class="relative group">队列研究相关偏倚
+    <div id="队列研究相关偏倚" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%98%9f%e5%88%97%e7%a0%94%e7%a9%b6%e7%9b%b8%e5%85%b3%e5%81%8f%e5%80%9a" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">选择偏倚 selection bias
+    <div id="选择偏倚-selection-bias" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%80%89%e6%8b%a9%e5%81%8f%e5%80%9a-selection-bias" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>由于选择的研究对象有人不能参加，可能都为志愿者，早期病人早研究开始时未能发现等等原因，都可能会造成选择偏倚。
+在队列研究的过程中，不可避免会出现失访，因此而造成的偏倚叫做失访偏倚。失访所产生的偏倚大小主要取决于失访率的大小和失访者的特征。</p>
+<p>选择偏倚可以通过以下措施控制：严格按照规定的标准选择研究对象；查明愿意加入和不愿意加入研究人员差异；尽可能提高研究对象的依从性；
+对于失访可能的影响应当做进一步估计，从各种途径了解失访者的最后结局，与被随访到的人群的阶矩进行比较，以推测失访的影响。</p>
+
+<h3 class="relative group">信息偏倚 information bias
+    <div id="信息偏倚-information-bias" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bf%a1%e6%81%af%e5%81%8f%e5%80%9a-information-bias" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>主要为错分偏倚，包括暴露错分和疾病错分以及暴露于疾病的联合错分。错分主要原因可能是检验技术出现问题，诊断标准定义不明确或掌握不当等。
+若这种错分偏倚以同样的程度发生于观察的各组，则结果可能不会对各组之间的相对关系产生太大影响，但会低估相对危险度，这种情况叫做非特异性错分。</p>
+<p>控制信息偏倚，可以通过提高设计水平和调查质量，做好质量控制；明确各项标准，严格按照规定执行，定期抽取一定比例的样本复查。</p>
+
+<h3 class="relative group">混杂偏倚 confounding bias
+    <div id="混杂偏倚-confounding-bias" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%b7%b7%e6%9d%82%e5%81%8f%e5%80%9a-confounding-bias" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>混杂、混杂因素和混杂偏倚的概念和控制方法都与病例对照研究相似。</p>
+
+<h2 class="relative group">优缺点
+    <div id="优缺点" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bc%98%e7%bc%ba%e7%82%b9" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>队列研究的优点包括，可以直接获得暴露组与非暴露组的发病率或死亡率。
+且由于原因发生在前，结局发生在后，检验病因假说的能力比较强。这样就有助于了解疾病的自然史，并可以获得暴露于疾病结局的关系。
+队列研究样本量大，结果稳定，收集的资料完整可靠，不存在回忆偏倚。</p>
+<p>缺点则是不适于发病率很低的疾病的病因研究，由于长期的研究与随访，因为死亡、退出、搬迁等造成的失访难以避免。
+且研究耗费时间、人力和花费。随着时间推移，未知的变量引入人群可能导致结局收到影响。</p>
+
+<h2 class="relative group">作业
+    <div id="作业" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bd%9c%e4%b8%9a" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+<p>找一个队列研究的文献，对它的暴露和结局，从暴露和结局测量有效性的角度进行评述。</p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_blog\2019-02-28-cohortstudy.md"
+          data-oid-likes="likes_blog\2019-02-28-cohortstudy.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/blog/2019-02-23-speededucation/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;欲速则不达
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2019-02-23T00:00:00&#43;00:00">Feb 23, 2019</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/blog/2019-04-22-drurylane/">
+              <span class="leading-6">
+                哲瑞·雷恩：悲剧系列终章&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2019-04-22T00:00:00&#43;00:00">Apr 22, 2019</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部"
+    title="返回顶部">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2025
+          Xzywisdili
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        由 <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a> 强力驱动
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="搜索"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="关闭 (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

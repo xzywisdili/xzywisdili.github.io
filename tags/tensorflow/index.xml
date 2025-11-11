@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TensorFlow on XZY&#39;s Blog</title>
+    <link>https://xzywisdili.netlify.app/tags/tensorflow/</link>
+    <description>Recent content in TensorFlow on XZY&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2025 Xzywisdili</copyright>
+    <lastBuildDate>Sun, 12 Nov 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/tags/tensorflow/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>光棍节初探 TensorFlow（一）：数据集的预处理</title>
+      <link>https://xzywisdili.netlify.app/blog/20171112/2017-11-12-tensorflow01/</link>
+      <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20171112/2017-11-12-tensorflow01/</guid>
+      <description>&lt;p&gt;11 月 11 日这天注定对我具有了一定的意义。不是因为它是购物狂欢节或光棍节，而是因为在这一天，我第一次尝试使用 TensorFlow 搭建了一个简单的神经网络。我希望用几篇文章记录这个过程。&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on XZY&#39;s Blog</title>
+    <link>https://xzywisdili.netlify.app/tags/python/</link>
+    <description>Recent content in Python on XZY&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2025 Xzywisdili</copyright>
+    <lastBuildDate>Wed, 26 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>5 分钟简单生成指定形状的词云</title>
+      <link>https://xzywisdili.netlify.app/blog/20230426/2023-04-26-generatewordcloudin5minutes/</link>
+      <pubDate>Wed, 26 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20230426/2023-04-26-generatewordcloudin5minutes/</guid>
+      <description>&lt;p&gt;群里有人问，想要做一张这样的指定形状的词云：&lt;/p&gt;
+&lt;figure&gt;&lt;img
+    class=&#34;my-0 rounded-md&#34;
+    loading=&#34;lazy&#34;
+    decoding=&#34;async&#34;
+    fetchpriority=&#34;low&#34;
+    alt=&#34;photo_2023-04-26_10-26-15.jpg&#34;
+    src=&#34;https://s2.loli.net/2023/04/26/6Sl3DX27eC4ZxiM.jpg&#34;
+    &gt;&lt;/figure&gt;
+&lt;p&gt;我试了一下，其实很简单，基本上 5 分钟就搞定。这里的简单思路就是：&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>动态页面的爬虫示例一则：抓取微博粉丝列表</title>
+      <link>https://xzywisdili.netlify.app/blog/20221005/2022-10-05-dynamichtmlspider/</link>
+      <pubDate>Wed, 05 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20221005/2022-10-05-dynamichtmlspider/</guid>
+      <description>&lt;p&gt;在碰到一些网页，想通过爬虫抓取页面信息的时候，会发现网页采用了一些动态 HTML 的相关技术来展示信息。这样直接使用 requests 是无法直接获取想要的 HTML 元素内容的。比如我们查看微博网页端的粉丝列表：&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>光棍节初探 TensorFlow（一）：数据集的预处理</title>
+      <link>https://xzywisdili.netlify.app/blog/20171112/2017-11-12-tensorflow01/</link>
+      <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20171112/2017-11-12-tensorflow01/</guid>
+      <description>&lt;p&gt;11 月 11 日这天注定对我具有了一定的意义。不是因为它是购物狂欢节或光棍节，而是因为在这一天，我第一次尝试使用 TensorFlow 搭建了一个简单的神经网络。我希望用几篇文章记录这个过程。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>「翻译」如何用 Python 画出像 FiveThirtyEight 那么棒的图表</title>
+      <link>https://xzywisdili.netlify.app/blog/20171015/2017-10-15-trans01/</link>
+      <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20171015/2017-10-15-trans01/</guid>
+      <description>&lt;p&gt;如果你经常读数据科学领域的文章的话，你可能会偶然发现 &lt;a
+  href=&#34;http://fivethirtyeight.com&#34;
+    target=&#34;_blank&#34;
+  &gt;FiveThirtyEight&lt;/a&gt; 上的内容，然后被他们惊艳的图表迷住。于是你自己也想制作如此出色的可视化作品，于是去 Quora 和 Reddit 上问怎么做。你收到了几个回答，但是这些回答都很模糊。你还是不知道怎么搞定这样的图表。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>用 Python 解决数据结构与算法题 01</title>
+      <link>https://xzywisdili.netlify.app/blog/20171005/2017-10-05-algorithm01/</link>
+      <pubDate>Thu, 05 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20171005/2017-10-05-algorithm01/</guid>
+      <description>&lt;p&gt;这是 Python 解决算法问题的第一期。我想以后每期写出三道题。本人是医学生，没有上过任何数据结构和算法课，对于解决算法题也纯属个人的课余兴趣爱好。还希望各位真正的大牛不吝赐教。我会继续坚持下去的。&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>
