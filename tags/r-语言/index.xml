@@ -1,41 +1,195 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>R 语言 on XZY's Blog</title><link>https://xzywisdili.netlify.app/tags/r-%E8%AF%AD%E8%A8%80/</link><description>Recent content in R 语言 on XZY's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2025 Xzywisdili</copyright><lastBuildDate>Tue, 15 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/tags/r-%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml"/><item><title>从电子病历提取数据</title><link>https://xzywisdili.netlify.app/blog/20210615-2/2021-06-15-extractnumbers/</link><pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20210615-2/2021-06-15-extractnumbers/</guid><description>&lt;p&gt;电子病历的普及度已经很高。但如何从电子病历中提取信息还是比较令人头疼。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R 语言 on XZY&#39;s Blog</title>
+    <link>https://xzywisdili.netlify.app/tags/r-%E8%AF%AD%E8%A8%80/</link>
+    <description>Recent content in R 语言 on XZY&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2025 Xzywisdili</copyright>
+    <lastBuildDate>Tue, 15 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/tags/r-%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>从电子病历提取数据</title>
+      <link>https://xzywisdili.netlify.app/blog/20210615-2/2021-06-15-extractnumbers/</link>
+      <pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20210615-2/2021-06-15-extractnumbers/</guid>
+      <description>&lt;p&gt;电子病历的普及度已经很高。但如何从电子病历中提取信息还是比较令人头疼。
 首先病历内容众多，从主诉到体格检查，从家族史到用药史，一份完整的病历涵盖的信息众多。
-其次，病历内容是由医生按照段落填写的，很难在数以万计的病历中找到通用的标准进行提取。&lt;/p&gt;</description></item><item><title>新发现的 R 里关于 data.table 的一些神奇用法</title><link>https://xzywisdili.netlify.app/blog/20210615/2021-06-15-newrtips/</link><pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20210615/2021-06-15-newrtips/</guid><description>&lt;p&gt;R 语言中的 &lt;code&gt;data.table&lt;/code&gt; 包可以理解为 &lt;code&gt;data.frame&lt;/code&gt; 的高级版本，它比较适合适合用来处理大型数据集。&lt;/p&gt;</description></item><item><title>对数据进行填补</title><link>https://xzywisdili.netlify.app/blog/20210609/2021-06-09-mergeandkeepdata/</link><pubDate>Wed, 09 Jun 2021 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20210609/2021-06-09-mergeandkeepdata/</guid><description>&lt;p&gt;今天整理数据的时候，需要使用数据集 2 对数据集 1 里缺失的部分进行填补，而两者重复的部分，优先保留数据集 1 里的。&lt;/p&gt;</description></item><item><title>R 语言计算空间距离</title><link>https://xzywisdili.netlify.app/blog/20200716/2020-07-16-rdistance/</link><pubDate>Thu, 16 Jul 2020 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20200716/2020-07-16-rdistance/</guid><description>&lt;p&gt;最近在研究计算真实空间两个点的距离，
+其次，病历内容是由医生按照段落填写的，很难在数以万计的病历中找到通用的标准进行提取。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>新发现的 R 里关于 data.table 的一些神奇用法</title>
+      <link>https://xzywisdili.netlify.app/blog/20210615/2021-06-15-newrtips/</link>
+      <pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20210615/2021-06-15-newrtips/</guid>
+      <description>&lt;p&gt;R 语言中的 &lt;code&gt;data.table&lt;/code&gt; 包可以理解为 &lt;code&gt;data.frame&lt;/code&gt; 的高级版本，它比较适合适合用来处理大型数据集。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>对数据进行填补</title>
+      <link>https://xzywisdili.netlify.app/blog/20210609/2021-06-09-mergeandkeepdata/</link>
+      <pubDate>Wed, 09 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20210609/2021-06-09-mergeandkeepdata/</guid>
+      <description>&lt;p&gt;今天整理数据的时候，需要使用数据集 2 对数据集 1 里缺失的部分进行填补，而两者重复的部分，优先保留数据集 1 里的。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>R 语言计算空间距离</title>
+      <link>https://xzywisdili.netlify.app/blog/20200716/2020-07-16-rdistance/</link>
+      <pubDate>Thu, 16 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20200716/2020-07-16-rdistance/</guid>
+      <description>&lt;p&gt;最近在研究计算真实空间两个点的距离，
 比如已知 A, B 两点的经纬度坐标，计算两点之间的距离。
-在 R 语言中，已经有很多大神提供的空间地理数据包，经过搜索发现最备受推崇的是 &lt;code&gt;geosphere&lt;/code&gt; 包。&lt;/p&gt;</description></item><item><title>最近我都做了些什么</title><link>https://xzywisdili.netlify.app/blog/20191204/2019-12-04-whathaveidone/</link><pubDate>Wed, 04 Dec 2019 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20191204/2019-12-04-whathaveidone/</guid><description>&lt;p&gt;时间匆匆忙忙到了 2019 年的 12 月，我自己也是匆匆忙忙的事情。至于即将到来的年终总结什么的，就随缘了。
+在 R 语言中，已经有很多大神提供的空间地理数据包，经过搜索发现最备受推崇的是 &lt;code&gt;geosphere&lt;/code&gt; 包。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>最近我都做了些什么</title>
+      <link>https://xzywisdili.netlify.app/blog/20191204/2019-12-04-whathaveidone/</link>
+      <pubDate>Wed, 04 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20191204/2019-12-04-whathaveidone/</guid>
+      <description>&lt;p&gt;时间匆匆忙忙到了 2019 年的 12 月，我自己也是匆匆忙忙的事情。至于即将到来的年终总结什么的，就随缘了。
 最近忙的事，既然暂时告一段落，就有必要开个博客总结一下。
-所以这一篇可能内容会比较杂乱反复。&lt;/p&gt;</description></item><item><title>我在 R 里画地图（二）</title><link>https://xzywisdili.netlify.app/blog/20191118/2019-11-18-rmap2/</link><pubDate>Mon, 18 Nov 2019 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20191118/2019-11-18-rmap2/</guid><description>&lt;p&gt;在R语言中绘制地图，尤其是可交互式的地图的另一个利器是 &lt;code&gt;leaflet&lt;/code&gt; 包。
+所以这一篇可能内容会比较杂乱反复。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>我在 R 里画地图（二）</title>
+      <link>https://xzywisdili.netlify.app/blog/20191118/2019-11-18-rmap2/</link>
+      <pubDate>Mon, 18 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20191118/2019-11-18-rmap2/</guid>
+      <description>&lt;p&gt;在R语言中绘制地图，尤其是可交互式的地图的另一个利器是 &lt;code&gt;leaflet&lt;/code&gt; 包。
 这次我会借着我刚刚完成的一个小项目来讲解这一内容，目标是仿制&lt;a
-href="https://www.cdc.gov/drugoverdose/data/heroin.html#overdose-deaths"
-target="_blank"
-&gt;美国 CDC 官网&lt;/a&gt;上的一张图——是的，我们的「战场」从中国转移到了美国。&lt;/p&gt;</description></item><item><title>我在 R 里画地图（一）</title><link>https://xzywisdili.netlify.app/blog/20190923/2019-09-23-rmap/</link><pubDate>Mon, 23 Sep 2019 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20190923/2019-09-23-rmap/</guid><description>&lt;h2 class="relative group"&gt;前言
-&lt;div id="前言" class="anchor"&gt;&lt;/div&gt;
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
-&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%89%8d%e8%a8%80" aria-label="锚点"&gt;#&lt;/a&gt;
-&lt;/span&gt;
+  href=&#34;https://www.cdc.gov/drugoverdose/data/heroin.html#overdose-deaths&#34;
+    target=&#34;_blank&#34;
+  &gt;美国 CDC 官网&lt;/a&gt;上的一张图——是的，我们的「战场」从中国转移到了美国。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>我在 R 里画地图（一）</title>
+      <link>https://xzywisdili.netlify.app/blog/20190923/2019-09-23-rmap/</link>
+      <pubDate>Mon, 23 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20190923/2019-09-23-rmap/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;前言
+    &lt;div id=&#34;前言&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
+        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e5%89%8d%e8%a8%80&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;
+    
 &lt;/h2&gt;
 &lt;p&gt;大约一个月前，接到一个任务：绘制全国的患病率地图，就草草做了一个初版，当时还做了一个 ppt 和组里的小伙伴分享。
 直到后来，才知道这种图有一个专业的称呼：&lt;a
-href="https://en.wikipedia.org/wiki/Choropleth_map"
-target="_blank"
-&gt;choropleth maps&lt;/a&gt;，中文名字是&lt;strong&gt;分层设色图&lt;/strong&gt;。
-可以看到在 google 中检索 choropleth maps 得到的结果：&lt;/p&gt;</description></item><item><title>再吹一波 Rmarkdown</title><link>https://xzywisdili.netlify.app/blog/20180411/2018-04-11-rmarkdown02/</link><pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20180411/2018-04-11-rmarkdown02/</guid><description>&lt;p&gt;既上次写过一篇关于 &lt;a
-href="http://www.xzywisdili.com/post/2017/12/23/%E8%BD%BB%E6%9D%BE%E6%84%89%E5%BF%AB%E5%9C%B0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8-rmarkdown/"
-target="_blank"
-&gt;Rmarkdown 的安利&lt;/a&gt; 之后，我在实际使用过程中遇到了一些难题，就是关于中文的问题。如果只使用英文写作的话，完全没有问题；但是一旦使用中文，各级标题，加粗强调和引用都会变得非常奇怪。这也使我暂时搁置下了 Rmarkdown 不用。&lt;/p&gt;</description></item><item><title>R 语言基础入门</title><link>https://xzywisdili.netlify.app/blog/20180402-2/2018-04-02-rlearningnote/</link><pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20180402-2/2018-04-02-rlearningnote/</guid><description>&lt;p&gt;这篇《R 语言基础入门》是我在别人的博客上看到的，完成时间不会晚于 2011 年。觉得总结得相当不错，于是搬运到我的博客上。需要提到，有些链接可能已经失效。&lt;/p&gt;</description></item><item><title>学习 R 语言里的 subset</title><link>https://xzywisdili.netlify.app/blog/20180402/2018-04-02-rsubset/</link><pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20180402/2018-04-02-rsubset/</guid><description>&lt;p&gt;主要内容：&lt;/p&gt;
+  href=&#34;https://en.wikipedia.org/wiki/Choropleth_map&#34;
+    target=&#34;_blank&#34;
+  &gt;choropleth maps&lt;/a&gt;，中文名字是&lt;strong&gt;分层设色图&lt;/strong&gt;。
+可以看到在 google 中检索 choropleth maps 得到的结果：&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>再吹一波 Rmarkdown</title>
+      <link>https://xzywisdili.netlify.app/blog/20180411/2018-04-11-rmarkdown02/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20180411/2018-04-11-rmarkdown02/</guid>
+      <description>&lt;p&gt;既上次写过一篇关于 &lt;a
+  href=&#34;http://www.xzywisdili.com/post/2017/12/23/%E8%BD%BB%E6%9D%BE%E6%84%89%E5%BF%AB%E5%9C%B0%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8-rmarkdown/&#34;
+    target=&#34;_blank&#34;
+  &gt;Rmarkdown 的安利&lt;/a&gt; 之后，我在实际使用过程中遇到了一些难题，就是关于中文的问题。如果只使用英文写作的话，完全没有问题；但是一旦使用中文，各级标题，加粗强调和引用都会变得非常奇怪。这也使我暂时搁置下了 Rmarkdown 不用。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>R 语言基础入门</title>
+      <link>https://xzywisdili.netlify.app/blog/20180402-2/2018-04-02-rlearningnote/</link>
+      <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20180402-2/2018-04-02-rlearningnote/</guid>
+      <description>&lt;p&gt;这篇《R 语言基础入门》是我在别人的博客上看到的，完成时间不会晚于 2011 年。觉得总结得相当不错，于是搬运到我的博客上。需要提到，有些链接可能已经失效。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>学习 R 语言里的 subset</title>
+      <link>https://xzywisdili.netlify.app/blog/20180402/2018-04-02-rsubset/</link>
+      <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20180402/2018-04-02-rsubset/</guid>
+      <description>&lt;p&gt;主要内容：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;三种 subset 操作&lt;/li&gt;
 &lt;li&gt;六类 subset&lt;/li&gt;
 &lt;li&gt;不同对象的的重要区别&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>R 语言基础数据结构</title><link>https://xzywisdili.netlify.app/blog/20180328/2018-03-28-rstructure/</link><pubDate>Wed, 28 Mar 2018 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20180328/2018-03-28-rstructure/</guid><description>&lt;p&gt;介绍了 R 语言中的内置基础数据结构。&lt;/p&gt;</description></item><item><title>轻松愉快地开始使用 Rmarkdown</title><link>https://xzywisdili.netlify.app/blog/20171223/2017-12-23-rmarkdown/</link><pubDate>Sat, 23 Dec 2017 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20171223/2017-12-23-rmarkdown/</guid><description>&lt;p&gt;R 语言世界里的一个大杀器。&lt;/p&gt;
+&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>R 语言基础数据结构</title>
+      <link>https://xzywisdili.netlify.app/blog/20180328/2018-03-28-rstructure/</link>
+      <pubDate>Wed, 28 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20180328/2018-03-28-rstructure/</guid>
+      <description>&lt;p&gt;介绍了 R 语言中的内置基础数据结构。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>轻松愉快地开始使用 Rmarkdown</title>
+      <link>https://xzywisdili.netlify.app/blog/20171223/2017-12-23-rmarkdown/</link>
+      <pubDate>Sat, 23 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20171223/2017-12-23-rmarkdown/</guid>
+      <description>&lt;p&gt;R 语言世界里的一个大杀器。&lt;/p&gt;
 &lt;p&gt;我想，在所有接触和学习 R 语言的初学者（当然包括我）眼里，有两个东西是相当酷的。一个是 &lt;a
-href="http://shiny.rstudio.com/tutorial/"
-target="_blank"
-&gt;shiny&lt;/a&gt;，可以轻松做出交互式的图表；而另一个就是 &lt;a
-href="http://rmarkdown.rstudio.com/"
-target="_blank"
-&gt;Rmarkdown&lt;/a&gt; 了。&lt;/p&gt;</description></item><item><title>dplyr 包里面必会的处理数据方法</title><link>https://xzywisdili.netlify.app/blog/20171219/2017-12-19-datatransform/</link><pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20171219/2017-12-19-datatransform/</guid><description>&lt;p&gt;最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看。最近学习的很简单，就是 &lt;code&gt;dplyr&lt;/code&gt; 包里面最基础的 5 种数据处理方法。&lt;/p&gt;</description></item><item><title>R 语言的那些最最最基础</title><link>https://xzywisdili.netlify.app/blog/20171121/2017-11-21-rbasic/</link><pubDate>Tue, 21 Nov 2017 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20171121/2017-11-21-rbasic/</guid><description>&lt;p&gt;在 &lt;a
-href="https://www.r-project.org/"
-target="_blank"
-&gt;R 语言&lt;/a&gt; 的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么就一定不能错过 R。本文只总结了 R 语言里面的那些最最最基础，想用好 R 必须要背过的内容。话不多说，赶紧上车。&lt;/p&gt;</description></item></channel></rss>
+  href=&#34;http://shiny.rstudio.com/tutorial/&#34;
+    target=&#34;_blank&#34;
+  &gt;shiny&lt;/a&gt;，可以轻松做出交互式的图表；而另一个就是 &lt;a
+  href=&#34;http://rmarkdown.rstudio.com/&#34;
+    target=&#34;_blank&#34;
+  &gt;Rmarkdown&lt;/a&gt; 了。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>dplyr 包里面必会的处理数据方法</title>
+      <link>https://xzywisdili.netlify.app/blog/20171219/2017-12-19-datatransform/</link>
+      <pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20171219/2017-12-19-datatransform/</guid>
+      <description>&lt;p&gt;最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看。最近学习的很简单，就是 &lt;code&gt;dplyr&lt;/code&gt; 包里面最基础的 5 种数据处理方法。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>R 语言的那些最最最基础</title>
+      <link>https://xzywisdili.netlify.app/blog/20171121/2017-11-21-rbasic/</link>
+      <pubDate>Tue, 21 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20171121/2017-11-21-rbasic/</guid>
+      <description>&lt;p&gt;在 &lt;a
+  href=&#34;https://www.r-project.org/&#34;
+    target=&#34;_blank&#34;
+  &gt;R 语言&lt;/a&gt; 的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么就一定不能错过 R。本文只总结了 R 语言里面的那些最最最基础，想用好 R 必须要背过的内容。话不多说，赶紧上车。&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

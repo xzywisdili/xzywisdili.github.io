@@ -1,6 +1,38 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>可视化 on XZY's Blog</title><link>https://xzywisdili.netlify.app/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/</link><description>Recent content in 可视化 on XZY's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2025 Xzywisdili</copyright><lastBuildDate>Thu, 28 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/index.xml" rel="self" type="application/rss+xml"/><item><title>一天内数据分布的可视化</title><link>https://xzywisdili.netlify.app/blog/20220728/2022-07-28-timeseriesplot/</link><pubDate>Thu, 28 Jul 2022 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20220728/2022-07-28-timeseriesplot/</guid><description>&lt;p&gt;我们在很多情况下都会想要可视化一天中的周期时间来探索发现可能存在的某种模式。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>可视化 on XZY&#39;s Blog</title>
+    <link>https://xzywisdili.netlify.app/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/</link>
+    <description>Recent content in 可视化 on XZY&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2025 Xzywisdili</copyright>
+    <lastBuildDate>Thu, 28 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>一天内数据分布的可视化</title>
+      <link>https://xzywisdili.netlify.app/blog/20220728/2022-07-28-timeseriesplot/</link>
+      <pubDate>Thu, 28 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20220728/2022-07-28-timeseriesplot/</guid>
+      <description>&lt;p&gt;我们在很多情况下都会想要可视化一天中的周期时间来探索发现可能存在的某种模式。
 比如根据犯罪数据发现在一天中的高发时段，又或者某个app的用户活跃时段的表示，又或者患者在院外一天中的健康作息的可视化，都不可避免会碰到要把数据在周期性的时间上进行展示。
-而目前这样的可视化方向大概有两个：线性展示和环形展示。&lt;/p&gt;</description></item><item><title>「翻译」如何用 Python 画出像 FiveThirtyEight 那么棒的图表</title><link>https://xzywisdili.netlify.app/blog/20171015/2017-10-15-trans01/</link><pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20171015/2017-10-15-trans01/</guid><description>&lt;p&gt;如果你经常读数据科学领域的文章的话，你可能会偶然发现 &lt;a
-href="http://fivethirtyeight.com"
-target="_blank"
-&gt;FiveThirtyEight&lt;/a&gt; 上的内容，然后被他们惊艳的图表迷住。于是你自己也想制作如此出色的可视化作品，于是去 Quora 和 Reddit 上问怎么做。你收到了几个回答，但是这些回答都很模糊。你还是不知道怎么搞定这样的图表。&lt;/p&gt;</description></item></channel></rss>
+而目前这样的可视化方向大概有两个：线性展示和环形展示。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>「翻译」如何用 Python 画出像 FiveThirtyEight 那么棒的图表</title>
+      <link>https://xzywisdili.netlify.app/blog/20171015/2017-10-15-trans01/</link>
+      <pubDate>Sun, 15 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20171015/2017-10-15-trans01/</guid>
+      <description>&lt;p&gt;如果你经常读数据科学领域的文章的话，你可能会偶然发现 &lt;a
+  href=&#34;http://fivethirtyeight.com&#34;
+    target=&#34;_blank&#34;
+  &gt;FiveThirtyEight&lt;/a&gt; 上的内容，然后被他们惊艳的图表迷住。于是你自己也想制作如此出色的可视化作品，于是去 Quora 和 Reddit 上问怎么做。你收到了几个回答，但是这些回答都很模糊。你还是不知道怎么搞定这样的图表。&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

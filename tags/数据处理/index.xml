@@ -1,1 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>数据处理 on XZY's Blog</title><link>https://xzywisdili.netlify.app/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/</link><description>Recent content in 数据处理 on XZY's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2025 Xzywisdili</copyright><lastBuildDate>Tue, 19 Dec 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/index.xml" rel="self" type="application/rss+xml"/><item><title>dplyr 包里面必会的处理数据方法</title><link>https://xzywisdili.netlify.app/blog/20171219/2017-12-19-datatransform/</link><pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20171219/2017-12-19-datatransform/</guid><description>&lt;p&gt;最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看。最近学习的很简单，就是 &lt;code&gt;dplyr&lt;/code&gt; 包里面最基础的 5 种数据处理方法。&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数据处理 on XZY&#39;s Blog</title>
+    <link>https://xzywisdili.netlify.app/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/</link>
+    <description>Recent content in 数据处理 on XZY&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2025 Xzywisdili</copyright>
+    <lastBuildDate>Tue, 19 Dec 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>dplyr 包里面必会的处理数据方法</title>
+      <link>https://xzywisdili.netlify.app/blog/20171219/2017-12-19-datatransform/</link>
+      <pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20171219/2017-12-19-datatransform/</guid>
+      <description>&lt;p&gt;最近沉迷于手游，导致博客久久没有更新。其实博客就是个自己阶段学习的总结，把自己学会的东西写成博客，算是自己复习了一遍，将来忘了的时候也有的看。最近学习的很简单，就是 &lt;code&gt;dplyr&lt;/code&gt; 包里面最基础的 5 种数据处理方法。&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

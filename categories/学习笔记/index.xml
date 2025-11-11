@@ -1,98 +1,237 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>学习笔记 on XZY's Blog</title><link>https://xzywisdili.netlify.app/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link><description>Recent content in 学习笔记 on XZY's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2025 Xzywisdili</copyright><lastBuildDate>Sun, 04 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml"/><item><title>Telegram 破解限制下载方法（2023年6月亲测可用）</title><link>https://xzywisdili.netlify.app/blog/2023-06-04-telegram-%E7%A0%B4%E8%A7%A3%E9%99%90%E5%88%B6%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95/</link><pubDate>Sun, 04 Jun 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/2023-06-04-telegram-%E7%A0%B4%E8%A7%A3%E9%99%90%E5%88%B6%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95/</guid><description>&lt;p&gt;Telegram 在早前推出了「限制下载」功能。只要群主在其群或者频道勾选了限制下载，那么用户是没有办法使用传统方法下载其中的文件的。当然，也有一些民间大神推出了一些方法，比如：&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xzywisdili.netlify.app/blog/2023-06-04-telegram-%E7%A0%B4%E8%A7%A3%E9%99%90%E5%88%B6%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95/feature.jpg"/></item><item><title>使用 R 完成一个小小的时间条可视化</title><link>https://xzywisdili.netlify.app/blog/2023-05-31-%E4%BD%BF%E7%94%A8-r-%E5%AE%8C%E6%88%90%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%B0%8F%E7%9A%84%E6%97%B6%E9%97%B4%E6%9D%A1%E5%8F%AF%E8%A7%86%E5%8C%96/</link><pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/2023-05-31-%E4%BD%BF%E7%94%A8-r-%E5%AE%8C%E6%88%90%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%B0%8F%E7%9A%84%E6%97%B6%E9%97%B4%E6%9D%A1%E5%8F%AF%E8%A7%86%E5%8C%96/</guid><description>&lt;h2 class="relative group"&gt;任务背景
-&lt;div id="任务背景" class="anchor"&gt;&lt;/div&gt;
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
-&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bb%bb%e5%8a%a1%e8%83%8c%e6%99%af" aria-label="锚点"&gt;#&lt;/a&gt;
-&lt;/span&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>学习笔记 on XZY&#39;s Blog</title>
+    <link>https://xzywisdili.netlify.app/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 学习笔记 on XZY&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2025 Xzywisdili</copyright>
+    <lastBuildDate>Sun, 04 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Telegram 破解限制下载方法（2023年6月亲测可用）</title>
+      <link>https://xzywisdili.netlify.app/blog/2023-06-04-telegram-%E7%A0%B4%E8%A7%A3%E9%99%90%E5%88%B6%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Sun, 04 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/2023-06-04-telegram-%E7%A0%B4%E8%A7%A3%E9%99%90%E5%88%B6%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95/</guid>
+      <description>&lt;p&gt;Telegram 在早前推出了「限制下载」功能。只要群主在其群或者频道勾选了限制下载，那么用户是没有办法使用传统方法下载其中的文件的。当然，也有一些民间大神推出了一些方法，比如：&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xzywisdili.netlify.app/blog/2023-06-04-telegram-%E7%A0%B4%E8%A7%A3%E9%99%90%E5%88%B6%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>使用 R 完成一个小小的时间条可视化</title>
+      <link>https://xzywisdili.netlify.app/blog/2023-05-31-%E4%BD%BF%E7%94%A8-r-%E5%AE%8C%E6%88%90%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%B0%8F%E7%9A%84%E6%97%B6%E9%97%B4%E6%9D%A1%E5%8F%AF%E8%A7%86%E5%8C%96/</link>
+      <pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/2023-05-31-%E4%BD%BF%E7%94%A8-r-%E5%AE%8C%E6%88%90%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%B0%8F%E7%9A%84%E6%97%B6%E9%97%B4%E6%9D%A1%E5%8F%AF%E8%A7%86%E5%8C%96/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;任务背景
+    &lt;div id=&#34;任务背景&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
+        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e4%bb%bb%e5%8a%a1%e8%83%8c%e6%99%af&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;
+    
 &lt;/h2&gt;
-&lt;p&gt;在制作了一系列视频的时候，我们在每个视频的片头放置了一个渐显和渐隐的元素。但是不同的视频中，这个元素出现和消失的时间是不同的。我们需要统计一下每个视频中该元素出现和消失的时间点，并且发现在所有视频中共同存在的时间段。&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xzywisdili.netlify.app/blog/2023-05-31-%E4%BD%BF%E7%94%A8-r-%E5%AE%8C%E6%88%90%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%B0%8F%E7%9A%84%E6%97%B6%E9%97%B4%E6%9D%A1%E5%8F%AF%E8%A7%86%E5%8C%96/feature.png"/></item><item><title>ADSL 数据集的建立：练习示例</title><link>https://xzywisdili.netlify.app/blog/20230508/2023-05-08-adslexample/</link><pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230508/2023-05-08-adslexample/</guid><description>&lt;h2 class="relative group"&gt;总结
-&lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
-&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
-&lt;/span&gt;
+&lt;p&gt;在制作了一系列视频的时候，我们在每个视频的片头放置了一个渐显和渐隐的元素。但是不同的视频中，这个元素出现和消失的时间是不同的。我们需要统计一下每个视频中该元素出现和消失的时间点，并且发现在所有视频中共同存在的时间段。&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xzywisdili.netlify.app/blog/2023-05-31-%E4%BD%BF%E7%94%A8-r-%E5%AE%8C%E6%88%90%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%B0%8F%E7%9A%84%E6%97%B6%E9%97%B4%E6%9D%A1%E5%8F%AF%E8%A7%86%E5%8C%96/feature.png" />
+    </item>
+    
+    <item>
+      <title>ADSL 数据集的建立：练习示例</title>
+      <link>https://xzywisdili.netlify.app/blog/20230508/2023-05-08-adslexample/</link>
+      <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20230508/2023-05-08-adslexample/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;总结
+    &lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
+        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;
+    
 &lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;通过一则创立 ADSL 数据集的练习示例加深对 ADSL 数据集的理解；&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;ADSL（Subject-Level Analysis Data Set） 是 ADaM 中的一种数据集，特点是每一行是一个单独患者的记录（类似 SDTM 中的 DM 数据集），主要包括的变量有：&lt;/p&gt;</description></item><item><title>CDISC 标准（四）——SDTM 数据集详细分类</title><link>https://xzywisdili.netlify.app/blog/20230502-2/2023-05-02-cdiscnotes4/</link><pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230502-2/2023-05-02-cdiscnotes4/</guid><description>&lt;h2 class="relative group"&gt;总结
-&lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
-&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
-&lt;/span&gt;
+&lt;p&gt;ADSL（Subject-Level Analysis Data Set） 是 ADaM 中的一种数据集，特点是每一行是一个单独患者的记录（类似 SDTM 中的 DM 数据集），主要包括的变量有：&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>CDISC 标准（四）——SDTM 数据集详细分类</title>
+      <link>https://xzywisdili.netlify.app/blog/20230502-2/2023-05-02-cdiscnotes4/</link>
+      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20230502-2/2023-05-02-cdiscnotes4/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;总结
+    &lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
+        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;
+    
 &lt;/h2&gt;
-&lt;p&gt;本笔记的主要内容：&lt;/p&gt;</description></item><item><title>CDISC 标准（五）——ADaM 标准概述</title><link>https://xzywisdili.netlify.app/blog/20230502/2023-05-02-cdiscnotes5/</link><pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230502/2023-05-02-cdiscnotes5/</guid><description>&lt;h2 class="relative group"&gt;总结
-&lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
-&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
-&lt;/span&gt;
+&lt;p&gt;本笔记的主要内容：&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>CDISC 标准（五）——ADaM 标准概述</title>
+      <link>https://xzywisdili.netlify.app/blog/20230502/2023-05-02-cdiscnotes5/</link>
+      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20230502/2023-05-02-cdiscnotes5/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;总结
+    &lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
+        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;
+    
 &lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;ADaM 标准实为了让临床试验统计分析人员梗快速、标准准确地进行统计分析和制作报表的标准；&lt;/li&gt;
 &lt;li&gt;ADaM 主要分为三类数据集：ADSL，BDS 和 OCCDS；&lt;/li&gt;
 &lt;li&gt;详细梳理了三类数据集的特点以及对应的重点变量。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 class="relative group"&gt;ADaM 数据集是做什么用的？
-&lt;div id="adam-数据集是做什么用的" class="anchor"&gt;&lt;/div&gt;
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
-&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#adam-%e6%95%b0%e6%8d%ae%e9%9b%86%e6%98%af%e5%81%9a%e4%bb%80%e4%b9%88%e7%94%a8%e7%9a%84" aria-label="锚点"&gt;#&lt;/a&gt;
-&lt;/span&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;ADaM 数据集是做什么用的？
+    &lt;div id=&#34;adam-数据集是做什么用的&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
+        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#adam-%e6%95%b0%e6%8d%ae%e9%9b%86%e6%98%af%e5%81%9a%e4%bb%80%e4%b9%88%e7%94%a8%e7%9a%84&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;
+    
 &lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;ADaM，Analysis Data Model&lt;/strong&gt;，顾名思义，为了更加方便、标准且准确地进行统计分析，输出相关统计图表的标准模型。&lt;/p&gt;</description></item><item><title>SAS 几个重要概念辨析</title><link>https://xzywisdili.netlify.app/blog/20230501/2023-05-01-sasnotes1/</link><pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230501/2023-05-01-sasnotes1/</guid><description>&lt;h2 class="relative group"&gt;进行变量类型转换，用 input 还是 put
-&lt;div id="进行变量类型转换用-input-还是-put" class="anchor"&gt;&lt;/div&gt;
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
-&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%bf%9b%e8%a1%8c%e5%8f%98%e9%87%8f%e7%b1%bb%e5%9e%8b%e8%bd%ac%e6%8d%a2%e7%94%a8-input-%e8%bf%98%e6%98%af-put" aria-label="锚点"&gt;#&lt;/a&gt;
-&lt;/span&gt;
+&lt;p&gt;&lt;strong&gt;ADaM，Analysis Data Model&lt;/strong&gt;，顾名思义，为了更加方便、标准且准确地进行统计分析，输出相关统计图表的标准模型。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>SAS 几个重要概念辨析</title>
+      <link>https://xzywisdili.netlify.app/blog/20230501/2023-05-01-sasnotes1/</link>
+      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20230501/2023-05-01-sasnotes1/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;进行变量类型转换，用 input 还是 put
+    &lt;div id=&#34;进行变量类型转换用-input-还是-put&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
+        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e8%bf%9b%e8%a1%8c%e5%8f%98%e9%87%8f%e7%b1%bb%e5%9e%8b%e8%bd%ac%e6%8d%a2%e7%94%a8-input-%e8%bf%98%e6%98%af-put&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;
+    
 &lt;/h2&gt;
-&lt;p&gt;在 SAS 编程过程中，往往会遇到需要转换变量的需求。而转换变量，往往需要考虑使用 &lt;code&gt;INPUT&lt;/code&gt; 还是 &lt;code&gt;PUT&lt;/code&gt;。那么这时候就要想想几个变量转换中的几个关键点：&lt;/p&gt;</description></item><item><title>CDISC 标准（三）——SDTM 标准初试</title><link>https://xzywisdili.netlify.app/blog/20230430/2023-04-30-cdiscnote3/</link><pubDate>Sun, 30 Apr 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230430/2023-04-30-cdiscnote3/</guid><description>&lt;h2 class="relative group"&gt;总结
-&lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
-&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
-&lt;/span&gt;
+&lt;p&gt;在 SAS 编程过程中，往往会遇到需要转换变量的需求。而转换变量，往往需要考虑使用 &lt;code&gt;INPUT&lt;/code&gt; 还是 &lt;code&gt;PUT&lt;/code&gt;。那么这时候就要想想几个变量转换中的几个关键点：&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>CDISC 标准（三）——SDTM 标准初试</title>
+      <link>https://xzywisdili.netlify.app/blog/20230430/2023-04-30-cdiscnote3/</link>
+      <pubDate>Sun, 30 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20230430/2023-04-30-cdiscnote3/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;总结
+    &lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
+        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;
+    
 &lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;第一次尝试仔细阅读 SDTM IG 文件中的一个 domain 变量信息；&lt;/li&gt;
 &lt;li&gt;通过 SAS 代码初试按照 SDTM 标准输出标准化的数据集。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;本章要开始使用 SAS，并结合 SDTM 标准，看看如何让目标数据集符合 IG 文件里面的标准。&lt;/p&gt;</description></item><item><title>CDISC 标准（二）——SDTM 标准概述</title><link>https://xzywisdili.netlify.app/blog/20230429/2023-04-29-cdiscnote2/</link><pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230429/2023-04-29-cdiscnote2/</guid><description>&lt;h2 class="relative group"&gt;总结
-&lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
-&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
-&lt;/span&gt;
+&lt;p&gt;本章要开始使用 SAS，并结合 SDTM 标准，看看如何让目标数据集符合 IG 文件里面的标准。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>CDISC 标准（二）——SDTM 标准概述</title>
+      <link>https://xzywisdili.netlify.app/blog/20230429/2023-04-29-cdiscnote2/</link>
+      <pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20230429/2023-04-29-cdiscnote2/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;总结
+    &lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
+        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;
+    
 &lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;介绍了 SDTM 和 IG 文件的基本概念；&lt;/li&gt;
 &lt;li&gt;通过阅读 SDTM IG 文件，了解 Domain 和 Variable 的各种信息；&lt;/li&gt;
 &lt;li&gt;重点是 Variable 的五种分类：Identifier, Topic, Qualifier, Timing, Rule。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 class="relative group"&gt;SDTM 的基本概念
-&lt;div id="sdtm-的基本概念" class="anchor"&gt;&lt;/div&gt;
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
-&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#sdtm-%e7%9a%84%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5" aria-label="锚点"&gt;#&lt;/a&gt;
-&lt;/span&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;SDTM 的基本概念
+    &lt;div id=&#34;sdtm-的基本概念&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
+        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#sdtm-%e7%9a%84%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;
+    
 &lt;/h2&gt;
-&lt;p&gt;SDTM（&lt;strong&gt;Study Data Tabulation Model&lt;/strong&gt;）是一个服务于临床实验的标准数据指标模型，也是被业界和 FDA 广泛采用的标准。它规定了在临床实验中，原始数据收集之后的标准化的呈现方式。可能不同种类的药物，在实验中收集的数据样式是不一样的，&lt;strong&gt;但是经过 SDTM 标准化之后，相同类别的数据一定是相同的。&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>5 分钟简单生成指定形状的词云</title><link>https://xzywisdili.netlify.app/blog/20230426/2023-04-26-generatewordcloudin5minutes/</link><pubDate>Wed, 26 Apr 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230426/2023-04-26-generatewordcloudin5minutes/</guid><description>&lt;p&gt;群里有人问，想要做一张这样的指定形状的词云：&lt;/p&gt;
+&lt;p&gt;SDTM（&lt;strong&gt;Study Data Tabulation Model&lt;/strong&gt;）是一个服务于临床实验的标准数据指标模型，也是被业界和 FDA 广泛采用的标准。它规定了在临床实验中，原始数据收集之后的标准化的呈现方式。可能不同种类的药物，在实验中收集的数据样式是不一样的，&lt;strong&gt;但是经过 SDTM 标准化之后，相同类别的数据一定是相同的。&lt;/strong&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>5 分钟简单生成指定形状的词云</title>
+      <link>https://xzywisdili.netlify.app/blog/20230426/2023-04-26-generatewordcloudin5minutes/</link>
+      <pubDate>Wed, 26 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20230426/2023-04-26-generatewordcloudin5minutes/</guid>
+      <description>&lt;p&gt;群里有人问，想要做一张这样的指定形状的词云：&lt;/p&gt;
 &lt;figure&gt;&lt;img
-class="my-0 rounded-md"
-loading="lazy"
-decoding="async"
-fetchpriority="low"
-alt="photo_2023-04-26_10-26-15.jpg"
-src="https://s2.loli.net/2023/04/26/6Sl3DX27eC4ZxiM.jpg"
-&gt;&lt;/figure&gt;
-&lt;p&gt;我试了一下，其实很简单，基本上 5 分钟就搞定。这里的简单思路就是：&lt;/p&gt;</description></item><item><title>数据挖掘的奇效——爬到网站没有显示的数据</title><link>https://xzywisdili.netlify.app/blog/20230423/2023-04-23-userjsonfindextradata/</link><pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230423/2023-04-23-userjsonfindextradata/</guid><description>&lt;p&gt;有没有想过，有些网站的页面上展示的数据只有一部分的时候，通过稍微一点挖掘就能发现额外的数据，收获更多信息。&lt;/p&gt;</description></item><item><title>【学习笔记】实用统计学复习手册01——探索性数据分析</title><link>https://xzywisdili.netlify.app/blog/20230323/2023-03-23-dataanalysisnote01/</link><pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230323/2023-03-23-dataanalysisnote01/</guid><description>&lt;h2 class="relative group"&gt;总结
-&lt;div id="总结" class="anchor"&gt;&lt;/div&gt;
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
-&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%bb%e7%bb%93" aria-label="锚点"&gt;#&lt;/a&gt;
-&lt;/span&gt;
+    class=&#34;my-0 rounded-md&#34;
+    loading=&#34;lazy&#34;
+    decoding=&#34;async&#34;
+    fetchpriority=&#34;low&#34;
+    alt=&#34;photo_2023-04-26_10-26-15.jpg&#34;
+    src=&#34;https://s2.loli.net/2023/04/26/6Sl3DX27eC4ZxiM.jpg&#34;
+    &gt;&lt;/figure&gt;
+&lt;p&gt;我试了一下，其实很简单，基本上 5 分钟就搞定。这里的简单思路就是：&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>数据挖掘的奇效——爬到网站没有显示的数据</title>
+      <link>https://xzywisdili.netlify.app/blog/20230423/2023-04-23-userjsonfindextradata/</link>
+      <pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20230423/2023-04-23-userjsonfindextradata/</guid>
+      <description>&lt;p&gt;有没有想过，有些网站的页面上展示的数据只有一部分的时候，通过稍微一点挖掘就能发现额外的数据，收获更多信息。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>【学习笔记】实用统计学复习手册01——探索性数据分析</title>
+      <link>https://xzywisdili.netlify.app/blog/20230323/2023-03-23-dataanalysisnote01/</link>
+      <pubDate>Thu, 23 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20230323/2023-03-23-dataanalysisnote01/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;总结
+    &lt;div id=&#34;总结&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
+        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%80%bb%e7%bb%93&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;
+    
 &lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;介绍了数据的分类（数值型、分类型）等；&lt;/li&gt;
@@ -102,11 +241,28 @@ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-
 &lt;li&gt;多变量的可视化：散点图、热力图、列联表、分类箱线图等；&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;探索性数据分析&lt;/strong&gt;（Exploratory Data Analysis，EDA）是数据科学项目的第一步。&lt;/p&gt;</description></item><item><title>【学习笔记】保序回归——适用于单调递增数据的统计回归方法</title><link>https://xzywisdili.netlify.app/blog/20230307/2023-03-07-isotonicregression/</link><pubDate>Tue, 07 Mar 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20230307/2023-03-07-isotonicregression/</guid><description>&lt;h2 class="relative group"&gt;什么是保序回归？
-&lt;div id="什么是保序回归" class="anchor"&gt;&lt;/div&gt;
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
-&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bb%80%e4%b9%88%e6%98%af%e4%bf%9d%e5%ba%8f%e5%9b%9e%e5%bd%92" aria-label="锚点"&gt;#&lt;/a&gt;
-&lt;/span&gt;
+&lt;p&gt;&lt;strong&gt;探索性数据分析&lt;/strong&gt;（Exploratory Data Analysis，EDA）是数据科学项目的第一步。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>【学习笔记】保序回归——适用于单调递增数据的统计回归方法</title>
+      <link>https://xzywisdili.netlify.app/blog/20230307/2023-03-07-isotonicregression/</link>
+      <pubDate>Tue, 07 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20230307/2023-03-07-isotonicregression/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;什么是保序回归？
+    &lt;div id=&#34;什么是保序回归&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
+        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e4%bb%80%e4%b9%88%e6%98%af%e4%bf%9d%e5%ba%8f%e5%9b%9e%e5%bd%92&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;
+    
 &lt;/h2&gt;
-&lt;p&gt;保序回归（Isotonic Regression）是一种适用于&lt;strong&gt;单调函数&lt;/strong&gt;非参数统计回归方法，即在一个序列中，Xn ≥ Xn-1。通过字面理解「Isotonic Regression」：&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;保序回归（Isotonic Regression）是一种适用于&lt;strong&gt;单调函数&lt;/strong&gt;非参数统计回归方法，即在一个序列中，Xn ≥ Xn-1。通过字面理解「Isotonic Regression」：&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

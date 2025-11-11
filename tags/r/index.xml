@@ -1,8 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>R on XZY's Blog</title><link>https://xzywisdili.netlify.app/tags/r/</link><description>Recent content in R on XZY's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2025 Xzywisdili</copyright><lastBuildDate>Wed, 31 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/tags/r/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 R 完成一个小小的时间条可视化</title><link>https://xzywisdili.netlify.app/blog/2023-05-31-%E4%BD%BF%E7%94%A8-r-%E5%AE%8C%E6%88%90%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%B0%8F%E7%9A%84%E6%97%B6%E9%97%B4%E6%9D%A1%E5%8F%AF%E8%A7%86%E5%8C%96/</link><pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/2023-05-31-%E4%BD%BF%E7%94%A8-r-%E5%AE%8C%E6%88%90%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%B0%8F%E7%9A%84%E6%97%B6%E9%97%B4%E6%9D%A1%E5%8F%AF%E8%A7%86%E5%8C%96/</guid><description>&lt;h2 class="relative group"&gt;任务背景
-&lt;div id="任务背景" class="anchor"&gt;&lt;/div&gt;
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
-&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bb%bb%e5%8a%a1%e8%83%8c%e6%99%af" aria-label="锚点"&gt;#&lt;/a&gt;
-&lt;/span&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on XZY&#39;s Blog</title>
+    <link>https://xzywisdili.netlify.app/tags/r/</link>
+    <description>Recent content in R on XZY&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2025 Xzywisdili</copyright>
+    <lastBuildDate>Wed, 31 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>使用 R 完成一个小小的时间条可视化</title>
+      <link>https://xzywisdili.netlify.app/blog/2023-05-31-%E4%BD%BF%E7%94%A8-r-%E5%AE%8C%E6%88%90%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%B0%8F%E7%9A%84%E6%97%B6%E9%97%B4%E6%9D%A1%E5%8F%AF%E8%A7%86%E5%8C%96/</link>
+      <pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/2023-05-31-%E4%BD%BF%E7%94%A8-r-%E5%AE%8C%E6%88%90%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%B0%8F%E7%9A%84%E6%97%B6%E9%97%B4%E6%9D%A1%E5%8F%AF%E8%A7%86%E5%8C%96/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;任务背景
+    &lt;div id=&#34;任务背景&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
+        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e4%bb%bb%e5%8a%a1%e8%83%8c%e6%99%af&#34; aria-label=&#34;锚点&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;
+    
 &lt;/h2&gt;
-&lt;p&gt;在制作了一系列视频的时候，我们在每个视频的片头放置了一个渐显和渐隐的元素。但是不同的视频中，这个元素出现和消失的时间是不同的。我们需要统计一下每个视频中该元素出现和消失的时间点，并且发现在所有视频中共同存在的时间段。&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xzywisdili.netlify.app/blog/2023-05-31-%E4%BD%BF%E7%94%A8-r-%E5%AE%8C%E6%88%90%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%B0%8F%E7%9A%84%E6%97%B6%E9%97%B4%E6%9D%A1%E5%8F%AF%E8%A7%86%E5%8C%96/feature.png"/></item></channel></rss>
+&lt;p&gt;在制作了一系列视频的时候，我们在每个视频的片头放置了一个渐显和渐隐的元素。但是不同的视频中，这个元素出现和消失的时间是不同的。我们需要统计一下每个视频中该元素出现和消失的时间点，并且发现在所有视频中共同存在的时间段。&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xzywisdili.netlify.app/blog/2023-05-31-%E4%BD%BF%E7%94%A8-r-%E5%AE%8C%E6%88%90%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%B0%8F%E7%9A%84%E6%97%B6%E9%97%B4%E6%9D%A1%E5%8F%AF%E8%A7%86%E5%8C%96/feature.png" />
+    </item>
+    
+  </channel>
+</rss>

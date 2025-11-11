@@ -1,3 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>读书 on XZY's Blog</title><link>https://xzywisdili.netlify.app/tags/%E8%AF%BB%E4%B9%A6/</link><description>Recent content in 读书 on XZY's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2025 Xzywisdili</copyright><lastBuildDate>Mon, 28 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/tags/%E8%AF%BB%E4%B9%A6/index.xml" rel="self" type="application/rss+xml"/><item><title>最近要开始啃书了</title><link>https://xzywisdili.netlify.app/blog/20210628/2021-06-28-starttoreadbooks/</link><pubDate>Mon, 28 Jun 2021 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20210628/2021-06-28-starttoreadbooks/</guid><description>&lt;p&gt;最近开始关心 AI 技术在医疗领域的一些应用。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>读书 on XZY&#39;s Blog</title>
+    <link>https://xzywisdili.netlify.app/tags/%E8%AF%BB%E4%B9%A6/</link>
+    <description>Recent content in 读书 on XZY&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2025 Xzywisdili</copyright>
+    <lastBuildDate>Mon, 28 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/tags/%E8%AF%BB%E4%B9%A6/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>最近要开始啃书了</title>
+      <link>https://xzywisdili.netlify.app/blog/20210628/2021-06-28-starttoreadbooks/</link>
+      <pubDate>Mon, 28 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20210628/2021-06-28-starttoreadbooks/</guid>
+      <description>&lt;p&gt;最近开始关心 AI 技术在医疗领域的一些应用。
 随着老龄化社会的进程，节省医疗系统的冗余成本，做到更好的健康管理势必更为重要。
-而从现有积累的和未来获得的人群大数据势必也将把医疗探索和相关制药研发带入到一个新的时代。&lt;/p&gt;</description></item></channel></rss>
+而从现有积累的和未来获得的人群大数据势必也将把医疗探索和相关制药研发带入到一个新的时代。&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

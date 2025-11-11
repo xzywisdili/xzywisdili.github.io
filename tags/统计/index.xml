@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>统计 on XZY's Blog</title><link>https://xzywisdili.netlify.app/tags/%E7%BB%9F%E8%AE%A1/</link><description>Recent content in 统计 on XZY's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2025 Xzywisdili</copyright><lastBuildDate>Tue, 21 Nov 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/tags/%E7%BB%9F%E8%AE%A1/index.xml" rel="self" type="application/rss+xml"/><item><title>R 语言的那些最最最基础</title><link>https://xzywisdili.netlify.app/blog/20171121/2017-11-21-rbasic/</link><pubDate>Tue, 21 Nov 2017 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20171121/2017-11-21-rbasic/</guid><description>&lt;p&gt;在 &lt;a
-href="https://www.r-project.org/"
-target="_blank"
-&gt;R 语言&lt;/a&gt; 的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么就一定不能错过 R。本文只总结了 R 语言里面的那些最最最基础，想用好 R 必须要背过的内容。话不多说，赶紧上车。&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>统计 on XZY&#39;s Blog</title>
+    <link>https://xzywisdili.netlify.app/tags/%E7%BB%9F%E8%AE%A1/</link>
+    <description>Recent content in 统计 on XZY&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2025 Xzywisdili</copyright>
+    <lastBuildDate>Tue, 21 Nov 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/tags/%E7%BB%9F%E8%AE%A1/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>R 语言的那些最最最基础</title>
+      <link>https://xzywisdili.netlify.app/blog/20171121/2017-11-21-rbasic/</link>
+      <pubDate>Tue, 21 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20171121/2017-11-21-rbasic/</guid>
+      <description>&lt;p&gt;在 &lt;a
+  href=&#34;https://www.r-project.org/&#34;
+    target=&#34;_blank&#34;
+  &gt;R 语言&lt;/a&gt; 的官方网址标题上写着「The R Project for Statistical Computing」，直接点明了 R 语言是一门主要用于统计计算的程序语言。如果你对统计感兴趣，那么就一定不能错过 R。本文只总结了 R 语言里面的那些最最最基础，想用好 R 必须要背过的内容。话不多说，赶紧上车。&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

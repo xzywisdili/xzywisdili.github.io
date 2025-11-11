@@ -1,4 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>学习 on XZY's Blog</title><link>https://xzywisdili.netlify.app/categories/%E5%AD%A6%E4%B9%A0/</link><description>Recent content in 学习 on XZY's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2025 Xzywisdili</copyright><lastBuildDate>Fri, 10 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/categories/%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml"/><item><title>记录自己用一天时间完成的成果</title><link>https://xzywisdili.netlify.app/blog/20200110/2020-01-10-newwork/</link><pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate><guid>https://xzywisdili.netlify.app/blog/20200110/2020-01-10-newwork/</guid><description>&lt;p&gt;这次最大的收获是完全过了一遍文本分析，其中包括：&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>学习 on XZY&#39;s Blog</title>
+    <link>https://xzywisdili.netlify.app/categories/%E5%AD%A6%E4%B9%A0/</link>
+    <description>Recent content in 学习 on XZY&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2025 Xzywisdili</copyright>
+    <lastBuildDate>Fri, 10 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://xzywisdili.netlify.app/categories/%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>记录自己用一天时间完成的成果</title>
+      <link>https://xzywisdili.netlify.app/blog/20200110/2020-01-10-newwork/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://xzywisdili.netlify.app/blog/20200110/2020-01-10-newwork/</guid>
+      <description>&lt;p&gt;这次最大的收获是完全过了一遍文本分析，其中包括：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;文本清洗&lt;/li&gt;
 &lt;li&gt;词频分析&lt;/li&gt;
@@ -8,4 +25,9 @@
 &lt;p&gt;我无意在博客中写出我是怎么做的或是贴出任何代码，因为网络上有太多太多相关的教程了，文本的，视频的。
 当今世界，只要不是特别冷门的知识，想学习还是特别方便的。再一次歌颂互联网。
 当然，虽然只是很粗浅地了解和实践，但至少自己能在一天之内做完一整套出来，还是比较有成就感的。
-于是权且把最后的成果贴在这里。&lt;/p&gt;</description></item></channel></rss>
+于是权且把最后的成果贴在这里。&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>
